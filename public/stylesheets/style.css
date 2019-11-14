@@ -3,6 +3,7 @@ body {
   padding: 0px;
   margin: 0px;
   color: #2d132c;
+  box-sizing: border-box;
 }
 
 .navbar-brand {
@@ -22,23 +23,63 @@ body {
   width: 100%;
 }
 
-.image-bg{
-  background-image: url("/images/library-438389_1920.jpg");
+.image-slider {
+  position: relative !;
+  font-family: 'Crimson Text', serif;
+  padding:0 !important;
+  margin:0 !important;
+}
+.content-image{
+  height:600px !important;
+  display:table;
+  /* position:absolute;
+  top:0;
+  left:0; */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/library-438389_1920.jpg");
   width: 100%;
   height: 600px;
   background-size: cover !important;
   background-position: center;
+  overflow: hidden;
 }
 
-.image-bg::after{
-  content: "";
-  position: absolute;
+.content-image::after{
   width:100%;
   height:600px;
-  z-index:1;
-  background-color: rgba(0,0,0.5);
-  opacity:0.6;
+  background-color: #2d132c;
+  z-index: 3;
 }
-.navbar {
-  margin-bottom: 0px !important;
+
+.content{
+  z-index: 2;
+  color:white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blockquote-footer{
+  font-size: 2rem !important;
+}
+
+.card-header{
+  padding: 0 !important;
+}
+
+.card{
+  margin:2rem !important;
+}
+
+.button-article{
+  margin:0 !important;
+}
+.card-body{
+  padding-top: 0 !important;
+}
+
+.card-title{
+  font-family: 'Merriweather', serif;
+  font-weight: 600;
+  font-size:2rem;
 }
