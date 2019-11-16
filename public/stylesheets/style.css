@@ -69,6 +69,7 @@ body {
 
 .card{
   margin:2rem !important;
+  box-sizing: border-box !important;
 }
 
 .button-article{
@@ -82,4 +83,34 @@ body {
   font-family: 'Merriweather', serif;
   font-weight: 600;
   font-size:2rem;
+}
+
+.btn-reading{
+  background-color: #5f6769;
+  color: #fff;
+}
+
+/* Footer */
+.footer{
+  background-color: #1b2a49;
+  padding:4rem;
+  font-family: 'Merriweather', serif;
+  color: #c9d1d3;
+}
+
+.icon-footer{
+  width: 50px;
+  height:50px;
+  border: 1px solid #c9d1d3;
+  font-size:1.5rem !important;
+  margin-right: 2rem;
+  text-align:center;
+  line-height: 50px !important;
+  border-radius: 50%;
+}
+
+.icon-footer:hover{
+  background-color: #c9d1d3;
+  color:#1b2a49;
+  cursor: pointer;
 }
