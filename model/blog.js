@@ -5,10 +5,14 @@ mongoose.connect('mongodb+srv://admin:Nhatlk241095@cluster0-nrygr.mongodb.net/te
 true });
 var blogSchema = new Schema({
     title:  String,
-    body:   String,
+    content:   String,
+    subTitle: String,
     comments: [{ body: String, date: Date }],
     date: { type: Date, default: Date.now },
+    file: String
   });
+
+ 
 
   var Blog =  module.exports =  mongoose.model('Blog', blogSchema);
 
