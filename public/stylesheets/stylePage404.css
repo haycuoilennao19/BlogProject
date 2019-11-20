@@ -1,0 +1,57 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    color: #2d132c;
+  }
+
+
+  html, body {
+    width: 100vw;
+    height: 100vh;
+  }
+  
+
+  
+  .e404 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .e404 h1 {
+    font-size: 202px;
+    font-weight: normal;
+    text-align: center;
+  }
+  .e404 h1 img {
+    display: inline;
+    padding: 10px;
+    animation: spin 10s linear infinite;
+  }
+  .e404 p {
+    text-align: center;
+    color: #ccc;
+  }
+  .e404 a {
+      width: 50%;
+        margin: 45px auto;
+      text-decoration: none;
+      background-color: #000;
+        padding: 7px 10px;
+      color: #FFF;
+        text-align: center;
+        display: block;
+      text-transform: capitalize;
+      border-radius: 5px;
+  }
+  
+  @keyframes spin{
+      0%{
+          transform: rotate(0deg);
+      }
+      100%{
+          transform: rotate(359deg);
+      }
+  }

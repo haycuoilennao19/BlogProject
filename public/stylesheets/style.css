@@ -118,3 +118,9 @@ body {
 .form-title{
   color: #1b2a49;
 }
+
+
+
+.form-login{
+  border: 2px solid #ccc;
+}

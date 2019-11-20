@@ -6,7 +6,7 @@ true });
 var blogSchema = new Schema({
     title:  String,
     content:   String,
-    subTitle: String,
+    subtitle: String,
     comments: [{ body: String, date: Date }],
     date: { type: Date, default: Date.now },
     file: String
