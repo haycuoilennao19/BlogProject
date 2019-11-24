@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
 var Blog = require('../model/blog')
+var Categories = require('../model/categories')
 var db = require('../model/mongo_connect')
 var multer = require('multer')
 var upload = multer({
@@ -12,7 +13,7 @@ var LocalStrategy = require('passport-local').Strategy;
 var User = require('../model/User')
 var bcrypt = require('bcryptjs')
 
-/* GET home page. */
+/* GET Passport post page. */
 
 passport.use('login', new LocalStrategy({
         passReqToCallback: true
@@ -111,35 +112,86 @@ passport.deserializeUser(function (id, done) {
 })
 
 /************************************************************************** */
-router.get('/', function(req, res) {
+//get login with post
+router.get('/', function (req, res) {
     // Display the Login page with any flash message, if any
     res.render('login');
-  });
+});
 
 
-router.post('/', passport.authenticate('login', {
-    failureRedirect: '/',
-    failureFlash : true 
-  }), function(req, res, next) {
-    res.send("Login Success")
-  });
+//Authenticate when login
+router.post('/', passport.authenticate('login'), function (req, res, next) {
+    var posts = '';
+    Blog.find(function (err, data) {
+        if (err) return console.error(err)
+        res.render('postadmin', {
+            posts: data
+        })
+    })
+});
 
-  /************************************************************************** */
+/************************************************************************** */
 
+router.get('/editpost/:id', function (req, res, ) {
+    if (req.isAuthenticated()) {
+        var id = req.params.id;
+        Blog.findOne({
+            _id: id
+        }, function (err, data) {
+            res.render('editpost', {
+                post: data
+            })
+        })
+    } else {
+        res.render("404page")
+    }
 
+})
 
+router.post('/editpost/:id', upload.single('file'), function (req, res) {
+    var title = req.body.title;
+    var content = req.body.content;
+    var file = req.file;
+    var subtitle = req.body.subtitle;
+    
+    Blog.findOneAndUpdate({
+        _id: req.params.id
+    }, {
+        title: title,
+        content: content,
+        subtitle: subtitle,
+        file: file.filename,
+    }, function (err, doc) {
+        if (err) throw (err)
+        res.redirect('/')
+    });
+
+})
+
+router.post('/deletepost/:id', function (req, res) {
+    if (req.isAuthenticated()) {
+        Blog.deleteOne({
+            _id: req.params.id
+        }, function (err, done) {
+            if (err) console.log(err);
+            res.redirect('/')
+        })
+    } else {
+        res.render("404page")
+    }
+})
 
 
 
 router.get('/addpost', function (req, res, next) {
-    if(req.isAuthenticated()){
-    // var blog = new Blog({title:'Article1', content:'lorem With supporting text below as a natural lead-in to additional content. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt culpa nisi porro dignissimos ab a debitis officiis consequatur. Animi, corrupti aliquid. Labore nisi impedit aperiam atque voluptatem dolore sed deleniti.'})
-    // blog.save(function (err, fluffy) {
-    //     if (err) return console.error(err);
-    //     console.log("Save database success")
-    //   });
-    res.render('postadmin')
-    } else{
+    if (req.isAuthenticated()) {
+        Categories.find({}, function(err, data) {
+            if (err) return console.error(err)
+            res.render('addpost', {
+                categories: data
+            })
+        })
+    } else {
         res.render("404page")
     }
 });
@@ -149,12 +201,22 @@ router.post('/addpost', upload.single('file'), function (req, res) {
     var content = req.body.content;
     var file = req.file;
     var subtitle = req.body.subtitle;
-    console.log(file)
+    var categoryID = req.body.category;
+    var time = new Date();
+    var date = `Ngày ${time.getDate().toString()} Tháng ${(time.getMonth() + 1).toString()}  Năm ${time.getFullYear().toString()}`
+    var category;
+    Categories.findOne({_id: categoryID}, function(err, data){
+        if(err) console.log(err)
+        category = data.category;
+  
+    console.log(category)
     var blog = new Blog({
         title: title,
         content: content,
         subtitle: subtitle,
         file: file.filename,
+        category: category,
+        date: date
     })
     blog.save(function (err, success) {
         if (err) return console.error(error)
@@ -162,5 +224,44 @@ router.post('/addpost', upload.single('file'), function (req, res) {
     })
     res.redirect('../')
 })
+})
+router.get('/logout', function(req, res) {
+    req.logout();
+    res.redirect('/')
+})
 
+router.get('/addcategories', function(req, res) {
+    if (req.isAuthenticated()) {
+        // var blog = new Blog({title:'Article1', content:'lorem With supporting text below as a natural lead-in to additional content. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt culpa nisi porro dignissimos ab a debitis officiis consequatur. Animi, corrupti aliquid. Labore nisi impedit aperiam atque voluptatem dolore sed deleniti.'})
+        // blog.save(function (err, fluffy) {
+        //     if (err) return console.error(err);
+        //     console.log("Save database success")
+        //   });
+        res.render('addcategory')
+    } else {
+        res.render("404page")
+    }
+})
+
+router.post('/addcategories', function(req, res) {
+    if (req.isAuthenticated()) {
+        var category1 = req.body.category;
+        console.log(category1)
+        var categories = new Categories({
+            category: category1
+        })
+        categories.save(function (err, success) {
+            if (err) return console.error(error)
+            console.log("Save to database success")
+        })
+        res.redirect('../')
+        // var blog = new Blog({title:'Article1', content:'lorem With supporting text below as a natural lead-in to additional content. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt culpa nisi porro dignissimos ab a debitis officiis consequatur. Animi, corrupti aliquid. Labore nisi impedit aperiam atque voluptatem dolore sed deleniti.'})
+        // blog.save(function (err, fluffy) {
+        //     if (err) return console.error(err);
+        //     console.log("Save database success")
+        //   });
+    } else {
+        res.render("404page")
+    }
+})
 module.exports = router;

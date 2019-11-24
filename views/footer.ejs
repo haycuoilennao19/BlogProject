@@ -18,12 +18,22 @@
           </div>
         </div>
       </div>
-    
+   
+<!--End mc_embed_signup-->
       <!--Footer-->
+    <script>
+      $(function () {
+        $(window).on('scroll', function () {
+          if( $(window).scrollTop() > 10) {
+            $('.navbar').addClass('active shadow');
+          } else {
+            $('.navbar').removeClass('active shadow')
+          }
+        })
+      })
+    </script>
     
-    
-      <script src="/javascripts/bootstrap.min.js"></script>
-      <script scr="/javascripts/bootstrap.bundle.min.js"></script>
+
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
       </script>

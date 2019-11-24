@@ -1,11 +1,13 @@
 body {
   font-family: 'Roboto', sans-serif;
-  padding: 0px;
-  margin: 0px;
+  padding: 0px !important;
+  margin: 0px !important;
   color: #2d132c;
   box-sizing: border-box;
 }
 
+/*Navbar*/
+/**************************************************************************************************************/
 .navbar-brand {
   color: #fe5f55 !important
 }
@@ -23,6 +25,61 @@ body {
   width: 100%;
 }
 
+.navbar {
+  transition: all 0.1s;
+  background-color: transparent !important;
+}
+
+.navbar .nav-link {
+  color: #fff !important;
+  font-size:1rem;
+  font-family: Roboto, Helvetica, sans-serif;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar .navbar-brand {
+  color: #fff !important;
+}
+
+
+/* Change navbar styling on scroll */
+.navbar.active {
+  background: #E65100 !important;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar.active .nav-link {
+  color: #fff !important;
+}
+
+.navbar.active .nav-link:hover,
+.navbar.active .nav-link:focus {
+  color: #555;
+  text-decoration: none;
+}
+
+.navbar.active .navbar-brand {
+  color: #555;
+}
+
+
+/* Change navbar styling on small viewports */
+@media (max-width: 991.98px) {
+  .navbar {
+      background: #fff;
+  }
+
+  .navbar .navbar-brand, .navbar .nav-link {
+      color: #555;
+  }
+}
+
+/**************************************************************************************************************/
 .image-slider {
   position: relative !;
   font-family: 'Crimson Text', serif;
@@ -119,8 +176,80 @@ body {
   color: #1b2a49;
 }
 
-
-
 .form-login{
   border: 2px solid #ccc;
+}
+
+/*Header Text*/
+.header-text{
+  font-family: 'Merriweather', serif;
+font-weight: 700;
+}
+
+.header-content{
+  font-size: 2rem;
+  border-top: 2px solid #fe5f55;
+  border-bottom: 2px solid #fe5f55;
+  padding:0.5rem;
+}
+
+/*Article*/
+.CSS{
+  background-color: #0091EA !important;
+  border-color: #0091EA !important;
+}
+
+.HTML{
+  background-color: #E65100 !important;
+  border-color: #E65100 !important;
+}
+
+/*card*/
+.card{
+  margin:1rem !important;
+}
+/*card-header-search*/
+.card-header-search{
+  font-size:1.5rem;
+  background-color: #fff !important;
+}
+
+.form-seacrh .form-control-underlined {
+  border-width: 0;
+  border-bottom-width: 1px;
+  border-radius: 0;
+  padding-left: 0;
+}
+
+.form-seacrh .form-control::placeholder  {
+  border-width: 0;
+  border-bottom-width: 1px;
+  border-radius: 0;
+  padding-left: 0;
+}
+
+.form-seacrh .form-control:focus {
+  box-shadow: none;
+}
+
+.card-search{
+  border: none !important;
+}
+.card-body-search{
+  padding: 0 !important;
+}
+
+
+/*Category*/
+
+.card-header-category{
+  background-color: #fff !important;
+  font-size: 1.5rem;
+}
+
+/*Email subscribe*/
+.text-email-subscribe{
+  border-left: 3.5px solid #5f6769;
+  padding-left: 0.5rem;
+  margin-left:0.5rem;
 }

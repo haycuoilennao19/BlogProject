@@ -1,0 +1,48 @@
+<%- include('header') -%>
+<!--Content-->
+
+<div class="container-fluid">
+  <table class="table">
+    <h1 class="text-center mb-5 mt-5">Admin Chia Sẻ Lập Trình</h1>
+    <div class="text-right mb-5">
+    <a href="/post/logout"><button type="submit" class="btn btn-secondary">Đăng Xuất</button></a>
+    </div>
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Sub Title</th>
+        <th scope="col">Image</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <% posts.forEach(function(post){ %>
+      <tr>
+        <th scope="row"><%=post.id%></th>
+        <td><%=post.title%></td>
+        <td><img src="/images/<%-post.file%>" alt="..." width="100px" height="100px"></td>
+        <td><a href="/post/editpost/<%-post.id%>"><button type="button" class="btn btn-info"><i class="fa fa-pencil"
+                aria-hidden="true"></i></button></a></td>
+        <td>
+            <form method="POST" action="/post/deletepost/<%-post.id%>">
+              <button type="submit" class="btn btn-danger"><i
+                class="fa fa-eraser" aria-hidden="true"></i></button>
+            </form>
+         
+        </td>
+      </tr>
+      <% })%>
+    </tbody>
+  </table>
+
+  <div class="mb-5 mt-5">
+    <hr />
+  </div>
+  <h3>Thêm Bài Viết: </h3>
+  <h5>Xin truy cập cào link này để thêm bài viết: <a href="/post/addpost">Add Post</a></h5>
+</div>
+
+
+<%- include('footer') -%>

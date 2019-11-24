@@ -6,6 +6,7 @@ var logger = require('morgan');
 var mongoose = require('mongoose');
 var passport = require('passport');
 var session = require('express-session')
+var flash = require('connect-flash')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -23,6 +24,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({secret: 'ketboard cat', cookie: { maxAge: 60000 }, resave: false, saveUninitialized: false}));
+app.use(flash())
 app.use(passport.initialize());
 app.use(passport.session())
 

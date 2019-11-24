@@ -1,0 +1,19 @@
+<%- include('header') -%>
+  <!--Content-->
+
+  <div class="container mt-5 mb-5">
+    <div class="form-title text-center">
+      <h2>Add Article</h2>
+    </div>
+    <form method="POST" action="/post/addcategories">
+      <div class="form-group">
+        <label for="exampleInputEmail1"><h4>Category</h4></label>
+        <input type="text" class="form-control" name="category"
+          placeholder="Enter Category">
+      </div>
+      <button type="submit" id="submit" class="btn btn-success">Add Category</button>
+    </div>
+      
+    </form>
+  </div>
+  <%- include('footer') -%>
