@@ -113,14 +113,14 @@ passport.deserializeUser(function (id, done) {
 
 /************************************************************************** */
 //get login with post
-router.get('/', function (req, res) {
+router.get('/login', function (req, res) {
     // Display the Login page with any flash message, if any
     res.render('login');
 });
 
 
 //Authenticate when login
-router.post('/', passport.authenticate('login'), function (req, res, next) {
+router.post('/login', passport.authenticate('login'), function (req, res, next) {
     var posts = '';
     Blog.find(function (err, data) {
         if (err) return console.error(err)

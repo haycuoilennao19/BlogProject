@@ -5,6 +5,9 @@ var Blog = require('../model/blog')
 var db = require('../model/mongo_connect')
 
 
+router.get('/about', function(req, res, next) {
+    res.render('about')
+ });
 /* GET home page. */
 router.get('/', function(req, res, next) {
     // var blog = new Blog({title:'Article1', content:'lorem With supporting text below as a natural lead-in to additional content. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt culpa nisi porro dignissimos ab a debitis officiis consequatur. Animi, corrupti aliquid. Labore nisi impedit aperiam atque voluptatem dolore sed deleniti.'})
@@ -12,17 +15,35 @@ router.get('/', function(req, res, next) {
     //     if (err) return console.error(err);
     //     console.log("Save database success")
     //   });
-    var posts = '';
-    Blog.find(function(err, data){
-        if (err) return console.error(err)
-        res.render('index', {posts:data})
-    })
+    var perpage = 5;
+    var page = req.params.page || 1
+    Blog
+        .find({})
+        .skip((perpage * page) - perpage)
+        .limit(perpage)
+        .exec(function(err, products) {
+            Blog.count().exec(function(err, count) {
+                if(err) return next(err)
+                res.render('products',{posts: products, current:page, pages: Math.ceil(count / perpage)})
+            })
+        })
  
 });
 
-router.get('/', function(req, res, next) {
-   res.render('about')
-});
+router.get('/:page', function(req, res, next) {
+    var perpage = 5;
+    var page = req.params.page || 1
+    Blog
+        .find({})
+        .skip((perpage * page) - perpage)
+        .limit(perpage)
+        .exec(function(err, products) {
+            Blog.count().exec(function(err, count) {
+                if(err) return next(err)
+                res.render('products',{posts: products, current:page, pages: Math.ceil(count / perpage)})
+            })
+        })
+})
 
 
 

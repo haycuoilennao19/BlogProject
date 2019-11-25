@@ -71,11 +71,16 @@ body {
 /* Change navbar styling on small viewports */
 @media (max-width: 991.98px) {
   .navbar {
-      background: #fff;
+      background: #E65100 !important;
   }
 
   .navbar .navbar-brand, .navbar .nav-link {
-      color: #555;
+      color: #fff !important;
+      padding: 1.2rem ;
+      font-size:1.2rem;
+  }
+  .nav-link::after{
+    background: #fff !important;
   }
 }
 
@@ -87,7 +92,7 @@ body {
   margin:0 !important;
 }
 .content-image{
-  height:600px !important;
+  height:400px !important;
   display:table;
   /* position:absolute;
   top:0;
@@ -249,7 +254,33 @@ font-weight: 700;
 
 /*Email subscribe*/
 .text-email-subscribe{
+
   border-left: 3.5px solid #5f6769;
   padding-left: 0.5rem;
   margin-left:0.5rem;
+}
+#mc_embed_signup{
+  font-family: 'Roboto', sans-serif !important; 
+}
+.label-email{
+  font-size: 1rem !important;
+}
+#mc_embed_signup .mc-field-group input{
+  padding: 12px 0px !important;
+}
+#mc_embed_signup .button{
+  background-color: #5f6769 !important;
+}
+.mce_inline_error{
+  margin-bottom: 0 !important;
+  padding-bottom:0 !important;
+  color:#fe5f55 !important;
+}
+
+.response{
+ font-size: 1rem;
+ font-weight: normal !important;
+ margin: 0 !important;
+ padding: 0 !important;
+ margin-bottom:0.5rem !important;
 }

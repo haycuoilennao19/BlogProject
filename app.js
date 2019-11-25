@@ -9,7 +9,7 @@ var session = require('express-session')
 var flash = require('connect-flash')
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var articlesRouter = require('./routes/article');
 var postsRouter = require('./routes/post');
 
 var app = express();
@@ -29,7 +29,7 @@ app.use(passport.initialize());
 app.use(passport.session())
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/article', articlesRouter);
 app.use('/post', postsRouter);
 
 // catch 404 and forward to error handler
