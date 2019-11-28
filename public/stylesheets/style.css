@@ -84,6 +84,10 @@ body {
   }
 }
 
+.card-title a{
+  text-decoration: none !important;
+  color: #1b2a49 !important;
+}
 /**************************************************************************************************************/
 .image-slider {
   position: relative !;
@@ -283,4 +287,69 @@ font-weight: 700;
  margin: 0 !important;
  padding: 0 !important;
  margin-bottom:0.5rem !important;
+}
+
+
+/*About*/
+.about-content{
+  background: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
+  background-size: cover;
+  padding: 2rem;
+  color:#fff;
+  
+}
+.about-content-title {
+  font-family: 'Crimson Text', serif;
+}
+.about-content-p{
+  border-left: 2px solid #fff;
+  margin-left: 2rem;
+  padding-left: 1rem;
+}
+
+.description::first-letter {
+  float: left;
+    font-size: 45px;
+    line-height: 1;
+    font-weight: bold;
+    margin-right: 9px;
+}
+
+.send-email-header{
+  background: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114)) !important;
+  width:100%;
+  height:100%;
+  background-size: cover;
+  
+}
+
+.send-email-header-text{
+  line-height: 2rem !important;
+  text-align: center;
+  font-size:1.2rem;
+}
+
+.send-email-content{
+  padding: 3rem !important;
+}
+
+.send-email-content label{
+  color: #6ba8a9;
+  font-size:1rem;
+} 
+
+.input-style{
+    border-radius: 50px !important;
+    padding: 12px 15px 12px 15px !important;
+    width: 100%;
+    box-sizing: border-box;
+    border: none !important;
+    border: 1px solid #F3E5F5 !important;
+    font-size: 16px !important;
+    /* color: #000 !important; */
+    font-weight: 400
+}
+
+.text-area-style{
+  border-radius: 25px !important;
 }

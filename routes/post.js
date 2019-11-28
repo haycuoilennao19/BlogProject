@@ -13,6 +13,16 @@ var LocalStrategy = require('passport-local').Strategy;
 var User = require('../model/User')
 var bcrypt = require('bcryptjs')
 
+var cloudinary = require('cloudinary').v2;
+
+
+cloudinary.config({
+    cloud_name: 'dn4nxz7f0',
+    api_key: '282914394867582',
+    api_secret: 'EouS3IxRufrItXLaY4uIHyHTsK4'
+})
+
+
 /* GET Passport post page. */
 
 passport.use('login', new LocalStrategy({
@@ -153,18 +163,23 @@ router.post('/editpost/:id', upload.single('file'), function (req, res) {
     var content = req.body.content;
     var file = req.file;
     var subtitle = req.body.subtitle;
-    
-    Blog.findOneAndUpdate({
-        _id: req.params.id
-    }, {
-        title: title,
-        content: content,
-        subtitle: subtitle,
-        file: file.filename,
-    }, function (err, doc) {
-        if (err) throw (err)
-        res.redirect('/')
-    });
+    cloudinary.uploader.upload(file.path, function(err, result) {
+        if(err) {console.log(error)}
+        console.log(result)
+        Blog.findOneAndUpdate({
+            _id: req.params.id
+        }, {
+            title: title,
+            content: content,
+            subtitle: subtitle,
+            file: result.url,
+        }, function (err, doc) {
+            if (err) throw (err)
+            res.redirect('/')
+        });
+    })
+
+
 
 })
 
@@ -205,24 +220,35 @@ router.post('/addpost', upload.single('file'), function (req, res) {
     var time = new Date();
     var date = `Ngày ${time.getDate().toString()} Tháng ${(time.getMonth() + 1).toString()}  Năm ${time.getFullYear().toString()}`
     var category;
+    cloudinary.uploader.upload(file.path, function(err, result) {
     Categories.findOne({_id: categoryID}, function(err, data){
         if(err) console.log(err)
         category = data.category;
-  
+        
     console.log(category)
-    var blog = new Blog({
-        title: title,
-        content: content,
-        subtitle: subtitle,
-        file: file.filename,
-        category: category,
-        date: date
-    })
-    blog.save(function (err, success) {
-        if (err) return console.error(error)
-        console.log("Save to database success")
-    })
-    res.redirect('../')
+      var blog = new Blog({
+                title: title,
+                content: content,
+                subtitle: subtitle,
+                file: result.url,
+                category: category,
+                date: date
+            })
+            blog.save(function (err, success) {
+                if (err) return console.error(error)
+                console.log("Save to database success")
+            })
+            res.redirect('../')
+    // var blog = new Blog({
+    //     title: title,
+    //     content: content,
+    //     subtitle: subtitle,
+    //     file: file.filename,
+    //     category: category,
+    //     date: date
+    // })
+ 
+})
 })
 })
 router.get('/logout', function(req, res) {

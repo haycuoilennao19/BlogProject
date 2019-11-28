@@ -3,11 +3,15 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var Blog = require('../model/blog')
 var db = require('../model/mongo_connect')
+const nodemailer = require("nodemailer");
 
 
 router.get('/about', function(req, res, next) {
     res.render('about')
  });
+
+
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
     // var blog = new Blog({title:'Article1', content:'lorem With supporting text below as a natural lead-in to additional content. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt culpa nisi porro dignissimos ab a debitis officiis consequatur. Animi, corrupti aliquid. Labore nisi impedit aperiam atque voluptatem dolore sed deleniti.'})
@@ -18,7 +22,8 @@ router.get('/', function(req, res, next) {
     var perpage = 5;
     var page = req.params.page || 1
     Blog
-        .find({})
+        .find()
+        .sort({_id: -1})
         .skip((perpage * page) - perpage)
         .limit(perpage)
         .exec(function(err, products) {
@@ -34,7 +39,8 @@ router.get('/:page', function(req, res, next) {
     var perpage = 5;
     var page = req.params.page || 1
     Blog
-        .find({})
+        .find()
+        .sort({_id: -1})
         .skip((perpage * page) - perpage)
         .limit(perpage)
         .exec(function(err, products) {

@@ -22,16 +22,16 @@
     <div class="col-lg-8 col-md-12 col-xs-12">
       <% posts.forEach(function(post){ %>
       <div class="card border-0 shadow">
-        <h5 class="card-header"> <img src="/images/<%-post.file%>" class="card-img-top" alt="..."></h5>
+        <h5 class="card-header"> <img src="<%-post.file%>" class="card-img-top" alt="..."></h5>
         <h3 class="button-article"><button type="button"
             class="<%-post.category%> btn shadow-sm rounded btn-success m-3 pl-5 pr-5"><%=post.category%></button></h3>
         <div class="card-body">
-          <h5 class="card-title"><%=post.title%></h5>
+          <h5 class="card-title"><a href="/article/<%-post.id%>"><%=post.title%></a></h5>
           <hr />
           <p class="card-text text-justify"><%-post.subtitle%></p>
           <p class="text-muted"><i class="fa fa-clock-o" aria-hidden="true"></i> <%=post.date%></p>
           <div class="d-flex justify-content-end">
-            <a href="/article/<%-post.id%>" class="btn shadow-sm rounded btn-reading">Continue Reading</a>
+            <a href="/article/<%-post.id%>" class="btn shadow-sm rounded btn-reading">Tiếp tục đọc</a>
           </div>
         </div>
       </div>

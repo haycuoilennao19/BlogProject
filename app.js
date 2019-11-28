@@ -7,7 +7,7 @@ var mongoose = require('mongoose');
 var passport = require('passport');
 var session = require('express-session')
 var flash = require('connect-flash')
-
+const nodemailer = require("nodemailer");
 var indexRouter = require('./routes/index');
 var articlesRouter = require('./routes/article');
 var postsRouter = require('./routes/post');
@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(session({secret: 'ketboard cat', cookie: { maxAge: 60000 }, resave: false, saveUninitialized: false}));
+app.use(session({secret: 'ketboard cat', cookie: { maxAge: 600000 }, resave: false, saveUninitialized: false}));
 app.use(flash())
 app.use(passport.initialize());
 app.use(passport.session())
