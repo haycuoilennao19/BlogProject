@@ -152,10 +152,13 @@ body {
 }
 
 .btn-reading{
-  background-color: #5f6769;
+  background-color: #000;
   color: #fff;
 }
-
+.btn-reading:hover{
+  background-color:#E65100 !important;
+  color:#fff !important;
+}
 /* Footer */
 .footer{
   background-color: #1b2a49;
@@ -352,4 +355,13 @@ font-weight: 700;
 
 .text-area-style{
   border-radius: 25px !important;
+}
+
+.fb-page{
+  width:500 !important;
+}
+
+.icon-social{
+  text-decoration: none !important;
+  color: #c9d1d3 !important;
 }

@@ -1,21 +1,19 @@
 <!--Footer-->
 <div class="container-fluid footer">
         <div class="row">
-          <div class="col-lg-4 col-md-4 col-xs-12">
+          <div class="col-lg-6 col-md-6 col-xs-12">
             <div class="content-footer">
               <h5>Góc trả lời</h5>
               <p>Nếu các bạn có gì thắc mắc thì liên hệ mình qua những mạng xã hội sau đây nhé!</p>
-              <a href="https://www.facebook.com/Chia-S%E1%BA%BB-L%E1%BA%ADp-Tr%C3%ACnh-100797921404016/"><i class="fa fa-facebook icon-footer" aria-hidden="true"></i></a>
+              <a class="icon-social" href="https://www.facebook.com/Chia-S%E1%BA%BB-L%E1%BA%ADp-Tr%C3%ACnh-100797921404016/"><i class="fa fa-facebook icon-footer" aria-hidden="true"></i></a>
               <i class="fa fa-google icon-footer" aria-hidden="true"></i>
               <i class="fa fa-twitter icon-footer" aria-hidden="true"></i>
             </div>
           </div>
-          <div class="col-lg-4 col-md-4 col-xs-12">
+          <div class="col-lg-6 col-md-6 col-xs-12">
     
           </div>
-          <div class="col-lg-4 col-md-4 col-xs-12">
-    
-          </div>
+         
         </div>
       </div>
    
@@ -43,6 +41,17 @@
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
       </script>
+      <script>
+
+          var container = document.getElementById('content-box');
+          let widthWindow = window.innerWidth;
+          if(widthWindow <= 768) {
+            container.classList.remove('container');
+            container.classList.add('container-fluid')
+          }
+        
+        
+        </script>
       <script>hljs.initHighlightingOnLoad();</script>
     </body>
     

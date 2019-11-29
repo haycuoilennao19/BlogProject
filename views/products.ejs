@@ -17,7 +17,7 @@
 <div class="header-text text-center mt-5 ">
   <span class="header-content">Bài Viết Mới Nhất</span>
 </div>
-<div class="container mt-5">
+<div class="container mt-5" id="content-box">
   <div class="row">
     <div class="col-lg-8 col-md-12 col-xs-12">
       <% posts.forEach(function(post){ %>
@@ -101,6 +101,19 @@
                   </div>
             </div>
 
+        
+
+            <div class="card card-search">
+             
+                <div style="width: 340px;">
+                <div class="fb-page justify-content-center card-body card-body-search mt-4 shadow p-3 mb-5 bg-white rounded" 
+                data-href="https://www.facebook.com/Chia-S%E1%BA%BB-L%E1%BA%ADp-Tr%C3%ACnh-100797921404016/?eid=ARC6-cNeDtnKw9sKDP7y1Uj1c3hVQIl-DxFi3Jo7q-F6EdfSQ3ulZN5jpn-yHbsgTZ30KsdlbHHnzvJN"
+                data-width="500" 
+                data-hide-cover="false"
+                data-show-facepile="false"></div>
+                    </div>
+              </div>
+
             <div class="card card-search">
                 <div class="card-header card-header-search">
                   Đăng kí Email
@@ -145,7 +158,7 @@
     </div>
   </div>
 
-  <script>
 
-  </script>
+ 
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v5.0&appId=2121975281235443&autoLogAppEvents=1"></script>
   <%- include('footer') -%>
