@@ -164,7 +164,7 @@ router.post('/editpost/:id', upload.single('file'), function (req, res) {
     var file = req.file;
     var subtitle = req.body.subtitle;
     cloudinary.uploader.upload(file.path, function(err, result) {
-        if(err) {console.log(error)}
+        if(err) {console.log(err)}
         console.log(result)
         Blog.findOneAndUpdate({
             _id: req.params.id
@@ -220,35 +220,34 @@ router.post('/addpost', upload.single('file'), function (req, res) {
     var time = new Date();
     var date = `Ngày ${time.getDate().toString()} Tháng ${(time.getMonth() + 1).toString()}  Năm ${time.getFullYear().toString()}`
     var category;
-    cloudinary.uploader.upload(file.path, function(err, result) {
+   
     Categories.findOne({_id: categoryID}, function(err, data){
-        if(err) console.log(err)
-        category = data.category;
-        
-    console.log(category)
-      var blog = new Blog({
-                title: title,
-                content: content,
-                subtitle: subtitle,
-                file: result.url,
-                category: category,
-                date: date
-            })
-            blog.save(function (err, success) {
-                if (err) return console.error(error)
-                console.log("Save to database success")
-            })
-            res.redirect('../')
-    // var blog = new Blog({
-    //     title: title,
-    //     content: content,
-    //     subtitle: subtitle,
-    //     file: file.filename,
-    //     category: category,
-    //     date: date
-    // })
- 
-})
+    if(err) console.log(err)
+    category = data.category;
+    cloudinary.uploader.upload(file.path, function(err, result) {
+        var blog = new Blog({
+            title: title,
+            content: content,
+            subtitle: subtitle,
+            file: result.url,
+            category: category,
+            date: date
+        })
+        blog.save(function (err, success) {
+            if (err) return console.error(error)
+            console.log("Save to database success")
+        })
+        res.redirect('../')
+    })
+// var blog = new Blog({
+//     title: title,
+//     content: content,
+//     subtitle: subtitle,
+//     file: file.filename,
+//     category: category,
+//     date: date
+// })
+
 })
 })
 router.get('/logout', function(req, res) {

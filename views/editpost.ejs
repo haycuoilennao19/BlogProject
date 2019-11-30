@@ -18,11 +18,11 @@
       </div>
       <div class="form-group">
         <label for="exampleInputPassword1"><h4>Content</h4></label>
-        <textarea class="form-control" id="editor" value="<%=post.content%>" name="content" placeholder="Add Content" rows="5"></textarea>
+        <input class="form-control" type="text" value="<%=post.content%>" name="content1" placeholder="Add Content" rows="5">
       </div>
       <div class="form-group">
         <label for="exampleInputPassword1"><h4>Content</h4></label>
-        <input class="form-control" type="text" value="<%=post.content%>" name="contentcopy" placeholder="Add Content" rows="5"></textarea>
+        <textarea class="form-control" type="text" value="<%=post.content%>" name="content" placeholder="Add Content" rows="5"></textarea>
       </div>
       <div class="form-group">
       <h4>File Image</h4>
@@ -36,13 +36,13 @@
     </div>
     </form>
   </div>
-  <script src="/javascripts/ckeditor/ckeditor.js"></script>
   
   <script>
       CKEDITOR.plugins.addExternal('codesnippet', '/javascripts/ckeditor/plugins/codesnippet/')
       //CKEDITOR.config.codesnippet_theme = 'school_book'
       CKEDITOR.replace( 'editor', {
-        extraPlugins: 'codesnippet'
+        extraPlugins: 'codesnippet',
+        extraPlugins: 'image2'
       });
   </script>
 <%- include('footer') -%>
