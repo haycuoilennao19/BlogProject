@@ -26,12 +26,17 @@
         <h3 class="button-article"><button type="button"
             class="<%-post.category%> btn shadow-sm rounded btn-success m-3 pl-5 pr-5"><%=post.category%></button></h3>
         <div class="card-body">
-          <h5 class="card-title"><a href="/article/<%-post.id%>"><%=post.title%></a></h5>
+          <h5 class="card-title"><a class="hvr-underline-from-center pt-2 pb-2" href="/article/<%-post.id%>"><%=post.title%></a></h5>
           <hr />
           <p class="card-text text-justify"><%-post.subtitle%></p>
           <p class="text-muted"><i class="fa fa-clock-o" aria-hidden="true"></i> <%=post.date%></p>
           <div class="d-flex justify-content-end">
-            <a href="/article/<%-post.id%>" class="btn shadow-sm rounded btn-reading">Tiếp tục đọc</a>
+            <button class="learn-more">
+              <span class="circle">
+                <span class="icon arrow"></span>
+              </span>
+              <a href="/article/<%-post.id%>"><span class="button-text">Tiếp tục đọc</span></a>
+            </button>
           </div>
         </div>
       </div>
@@ -40,9 +45,9 @@
       <% if (pages > 0) { %>
         <ul class="pagination  justify-content-center">
             <% if (current == 1) { %>
-                <li class="page-item" class="disabled"><a class="page-link">Đầu Trang</a></li>
+                <li class="page-item " class="disabled"><a class="page-link">Đầu Trang</a></li>
             <% } else { %>
-                <li class="page-item"><a class="page-link" href="/1">Đầu Trang</a></li>
+                <li class="page-item "><a class="page-link" href="/1">Đầu Trang</a></li>
             <% } %>
             <% var i = (Number(current) > 5 ? Number(current) - 4 : 1) %>
             <% if (i !== 1) { %>
@@ -70,6 +75,7 @@
       <!-- <div class="card card-search">
         <div class="card-header card-header-search">
           Tìm Kiếm
+         
         </div>
         <div class="card-body card-body-search">
           <form class="mt-4 form-seacrh">
@@ -91,18 +97,15 @@
             </div>
             <div class="card-body card-body-search mt-4">
                 <h3 class="button-article"><a href="/article/css"><button type="button"
-                  class="CSS btn shadow-sm rounded btn-success m-2 pl-3 pr-3">CSS</button></a>
+                  class="CSS btn shadow-sm rounded btn-success m-1 pl-2 pr-2 hvr-shrink"><i class="fa fa-tag" aria-hidden="true"></i> CSS</button></a>
                   <a href="/article/html"><button type="button"
-                  class="HTML btn shadow-sm rounded btn-success m-2 pl-3 pr-3">HTML</button></a>
+                  class="HTML btn shadow-sm rounded btn-success m-1 pl-2 pr-2 hvr-shrink"><i class="fa fa-tag" aria-hidden="true"></i> HTML</button></a>
                   <a href="/article/nodejs">
                   <button type="button"
-                  class="btn shadow-sm rounded btn-success m-2 pl-3 pr-3">NodeJS</button></a>
+                  class="btn shadow-sm rounded btn-success m-1 pl-2 pr-2 hvr-shrink"><i class="fa fa-tag" aria-hidden="true"></i> NodeJS</button></a>
                 </h3>
                   </div>
             </div>
-
-        
-
             <div class="card card-search">
              
                 <div style="width: 340px;">
@@ -158,13 +161,17 @@
     </div>
   </div>
 
+
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v5.0&appId=2121975281235443&autoLogAppEvents=1"></script>
 <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 <script>
-ScrollReveal().reveal('.context-box-scroll', {duration: 1500, origin: 'left', distance: '800px',easing: 'ease-in-out'});
-ScrollReveal().reveal('.context-box-scroll-right', {duration: 1500, origin: 'right', distance: '800px',easing: 'ease-in-out'});
-ScrollReveal().reveal('.header-text', {duration: 1500, origin: 'bottom', distance: '1500px',easing: 'ease-in-out'});
-ScrollReveal().reveal('.content', {duration: 1500, origin: 'top', distance: '800px',easing: 'ease-in-out'});
+ScrollReveal().reveal('.context-box-scroll', {duration: 1200, origin: 'left', distance: '800px',easing: 'ease-in-out'});
+ScrollReveal().reveal('.context-box-scroll-right', {duration: 1200, origin: 'right', distance: '800px',easing: 'ease-in-out'});
+ScrollReveal().reveal('.header-text', {duration: 1200, origin: 'bottom', distance: '1000px',easing: 'ease-in-out'});
+ScrollReveal().reveal('.content', {duration: 1200, origin: 'top', distance: '800px',easing: 'ease-in-out'});
 
+$(document).ready(function() {
+  $('.page-link').addClass('hvr-underline-from-left');
+})
 </script>
   <%- include('footer') -%>
