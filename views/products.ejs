@@ -6,7 +6,7 @@
     <div class="content-image">
       <div class="content">
         <blockquote class="blockquote">
-          <h1 class="mb-0">Tôi không có tài năng gì cả. Tôi chỉ đam mê hiểu biết</h1>
+          <h1 class="mb-2 content-header">Tôi không có tài năng gì cả. Tôi chỉ đam mê hiểu biết</h1>
           <footer class="blockquote-footer text-right text-white">Albert Einstein</footer>
         </blockquote>
       </div>
@@ -17,7 +17,7 @@
 <div class="header-text text-center mt-5 ">
   <span class="header-content">Bài Viết Mới Nhất</span>
 </div>
-<div class="container mt-5" id="content-box">
+<div class="container mt-5 mx-auto justify-content-center" id="content-box">
   <div class="row">
     <div class="col-lg-8  context-box-scroll col-md-12 col-xs-12">
       <% posts.forEach(function(post){ %>
@@ -35,7 +35,7 @@
               <span class="circle">
                 <span class="icon arrow"></span>
               </span>
-              <a href="/article/<%-post.id%>"><span class="button-text">Tiếp tục đọc</span></a>
+              <a class="button-text" href="/article/<%-post.id%>"><span">Tiếp tục đọc</span></a>
             </button>
           </div>
         </div>

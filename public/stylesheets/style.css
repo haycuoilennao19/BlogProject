@@ -57,16 +57,23 @@ body {
 /* Change navbar styling on small viewports */
 @media (max-width: 991.98px) {
   .navbar {
-      background: #E65100 !important;
+    background: #3e64ff !important;
   }
 
   .navbar .navbar-brand, .navbar .nav-link {
       color: #fff !important;
-      padding: 1.2rem ;
-      font-size:1.2rem;
+      padding: 1rem ;
+      font-size:1rem;
   }
   .nav-link::after{
     background: #fff !important;
+  }
+  .fa-navicon{
+    color:#fff;
+    font-size:1.5 rem;
+  }
+  .fa-navicon:hover{
+    cursor: pointer;
   }
 }
 
@@ -76,10 +83,13 @@ body {
 }
 /**************************************************************************************************************/
 .image-slider {
-  position: relative !;
+  position: relative;
   font-family: 'Montserrat', sans-serif;
   padding:0 !important;
   margin:0 !important;
+}
+.content-header{
+  font-size: 2rem !important;
 }
 .content-image{
   height:400px !important;
@@ -106,7 +116,7 @@ body {
   transform: translate(-50%, -50%);
 }
 .blockquote-footer{
-  font-size: 2rem !important;
+  font-size: 1.5rem !important;
 }
 .card-header{
   padding: 0 !important;
@@ -138,7 +148,7 @@ body {
 .footer{
   background-color: #1b2a49;
   padding:4rem;
-  font-family: 'Montserrat', sans-serif
+  font-family: 'Montserrat', sans-serif;
   color: #c9d1d3;
 }
 .icon-footer{
@@ -164,7 +174,7 @@ body {
 }
 /*Header Text*/
 .header-text{
-  font-family: 'Montserrat', sans-serif
+  font-family: 'Montserrat', sans-serif;
 font-weight: 700;
 }
 .header-content{
@@ -400,7 +410,6 @@ button.learn-more .button-text {
 }
 button:hover .circle {
   width: 100%;
-  cursor: pointer !important;
 }
 button:hover .circle .icon.arrow {
   background: #fff;
@@ -408,6 +417,10 @@ button:hover .circle .icon.arrow {
 }
 button:hover .button-text {
   color: #fff;
+  cursor: pointer !important;
+}
+.button-text:hover{
+  cursor: pointer !important;
 }
 
 :root {
@@ -500,7 +513,7 @@ progress::-ms-fill {
   box-shadow: 0 2px 5px rgba(0,0,0,0.3) !important;
 }
 .social-meadia-icon-item a .fa {
-  widht: 100%;
+  width: 100%;
   height:100%;
   display:block;
   background: linear-gradient(0deg, #fff, #ddd);
@@ -528,4 +541,8 @@ progress::-ms-fill {
 
 .social-meadia-icon-item:nth-child(5) a:hover .fa {
   color: #e4405f;
+}
+
+a:hover{
+  cursor: pointer !important;
 }
