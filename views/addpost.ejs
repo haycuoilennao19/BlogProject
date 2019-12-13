@@ -18,7 +18,7 @@
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1"><h4>Content</h4></label>
-      <textarea class="form-control" id="editor" name="content" placeholder="Add Content" rows="5"></textarea>
+      <textarea class="form-control" id ="trumbowyg-demo" type="text" name="content" placeholder="Add Content"></textarea>
     </div>
     <div class="form-group">
     <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Category</label>
@@ -43,14 +43,13 @@
     
   </form>
 </div>
-<script src="/javascripts/ckeditor/ckeditor.js"></script>
 
-<script>
-    CKEDITOR.plugins.addExternal('codesnippet', '/javascripts/ckeditor/plugins/codesnippet/')
-    //CKEDITOR.config.codesnippet_theme = 'school_book'
-    CKEDITOR.replace( 'editor', {
-      extraPlugins: 'codesnippet'
-    });
-</script>
+script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+<script src="/Trumbowyg-master/dist/trumbowyg.min.js"></script>
+  <script>
+    $('#trumbowyg-demo').trumbowyg();
+  </script>
+
 
 <%- include('footer') -%>

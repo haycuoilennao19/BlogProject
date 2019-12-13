@@ -22,7 +22,7 @@
     <div class="col-lg-8  context-box-scroll col-md-12 col-xs-12">
       <% posts.forEach(function(post){ %>
       <div class="card border-0 shadow">
-        <h5 class="card-header"> <img src="<%-post.file%>" class="card-img-top" alt="..."></h5>
+        <h5 class="card-header"> <img src="<%-post.file%>" class="card-img-top header-img" alt="..."></h5>
         <h3 class="button-article"><button type="button"
             class="<%-post.category%> btn shadow-sm rounded btn-success m-3 pl-5 pr-5"><%=post.category%></button></h3>
         <div class="card-body">
@@ -173,10 +173,6 @@ ScrollReveal().reveal('.content', {duration: 1200, origin: 'top', distance: '800
 $(document).ready(function() {
   $('.page-link').addClass('hvr-underline-from-left');
 })
-
-$(function(){
-  $(".js-lookforward").lookforward();
-});
 </script>
 
 

@@ -10,6 +10,11 @@ router.get('/about', function(req, res, next) {
     res.render('about')
  });
 
+ router.get('/example', function(req, res, next) {
+    res.render('html')
+ });
+
+
 
 
 /* GET home page. */

@@ -546,3 +546,83 @@ progress::-ms-fill {
 a:hover{
   cursor: pointer !important;
 }
+
+/*mail to*/
+
+
+.mailtoui-modal {
+  background-color:#5edfff;
+  color: #fff;
+}
+
+.mailtoui-modal-head {
+  background-color: #21262C;
+}
+
+.mailtoui-modal-title {
+  color: #fff;
+}
+
+.mailtoui-modal-close:focus,
+.mailtoui-modal-close:hover {
+  color: #fff;
+}
+
+.mailtoui-modal-body {
+  background-color: #3e64ff;
+}
+
+.mailtoui-button:focus .mailtoui-button-content {
+  background-color: #3e64ff;
+  color: #fff;
+}
+
+.mailtoui-button-content,
+.mailtoui-button-copy {
+  background-color: #3e64ff;
+  color: #fff;
+}
+
+.mailtoui-button-content:hover,
+.mailtoui-button-content:focus,
+.mailtoui-button-copy:hover,
+.mailtoui-button-copy:focus {
+  background-color: #fff;
+  color: #3e64ff;
+}
+
+.mailtoui-button-copy-clicked,
+.mailtoui-button-copy-clicked:hover,
+.mailtoui-button-copy-clicked:focus {
+  background-color: #1F9D55;
+  color: #fff;
+}
+
+.mailtoui-email-address {
+  background-color: #ffff;
+  color: #21262c;
+}
+
+.content-detail-text{
+  line-height: 2rem !important;
+}
+
+.circle{
+  counter-reset: list-counter !important;
+  list-style: none;
+  float:left;
+}
+
+.fa-arrow-right{
+  padding: 0.8rem !important;
+}
+
+.text-content-article{
+  line-height: 1.8rem !important;
+}
+
+@media (max-width: 991.98px) {
+  .progress-label{
+    display: none;
+  }
+}
