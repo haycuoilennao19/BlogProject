@@ -175,5 +175,27 @@ $(document).ready(function() {
 })
 </script>
 
+<script>
+  var container = document.getElementById('content-box');
+  
+  $(window).on('load resize', (function() {
+    windowsize = $(window).width();
+    
+    if((windowsize <= 992)  && (screen.height>=768)) {
+      container.classList.remove('container');
+      container.classList.add('container-fluid')
+
+      //navbar
+      $('.nav-item').addClass('hvr-underline-from-left')
+    } else{
+      container.classList.add('container');
+      container.classList.remove('container-fluid')
+
+      //navbar
+      $('.nav-item').removeClass('hvr-underline-from-left')
+    }
+  }));
+  
+</script>
 
   <%- include('footer') -%>

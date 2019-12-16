@@ -17,7 +17,7 @@
 <div class="header-text text-center mt-5 ">
   <span class="header-content"><%=article.title%></span>
 </div>
-<div class="container mt-5">
+<div class="container mt-5" id="content-box">
   <div class="row">
     <div class="col-lg-12 col-md-12 col-xs-12">
      
@@ -96,6 +96,28 @@
     </div>
   </div>
 
+  <script>
+    var container = document.getElementById('content-box');
+    
+    $(window).on('load resize', (function() {
+      windowsize = $(window).width();
+      
+      if((windowsize <= 992)  && (screen.height>=768)) {
+        container.classList.remove('container');
+        container.classList.add('container-fluid')
+  
+        //navbar
+        $('.nav-item').addClass('hvr-underline-from-left')
+      } else{
+        container.classList.add('container');
+        container.classList.remove('container-fluid')
+  
+        //navbar
+        $('.nav-item').removeClass('hvr-underline-from-left')
+      }
+    }));
+    
+  </script>
   <script src='/javascripts/highlight.pack.js'></script>
   <script>hljs.initHighlightingOnLoad();</script>
   <script>
