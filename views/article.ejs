@@ -1,4 +1,52 @@
-<%- include('header') -%>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='/stylesheets/normalizes.css' />
+  <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+  <link rel='stylesheet' href='/stylesheets/darcula.css' />
+  <link rel='stylesheet' href='/stylesheets/hover-min.css' />
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <!-- <meta property="og:image" content="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576511394/Niemvuilaptrinh_jgc0rn.png"> -->
+  <meta property="og:url"                content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" />
+  <meta property="og:type"               content="article" />
+  <meta property="og:title"              content="<%-article.title%>" />
+  <meta property="og:description"        content="<%-article.subtitle%>" />
+  <meta property="og:image"              content="<%-article.file%>" />
+  <!--Font Logo-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:400,700,800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/stylesheets/font-awesome/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top p-2">
+    <a class="navbar-brand" href="/">Niềm Vui Lập Trình</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span><i class="fa fa-navicon"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link mr-5 hvr-underline-from-left" href="/">Trang Chủ <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link hvr-underline-from-left mr-5" href="/about">Giới Thiệu</a>
+        </li>
+   
+
+    </div>
+  </nav>
 <!--Content-->
 <div class="jumbotron jumbotron-fluid image-slider">
     <div class="row">
