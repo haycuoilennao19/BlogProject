@@ -16,7 +16,7 @@
 </div>
 <div class="header-text text-center mt-5 ">
 </div>
-<div class="container mt-5">
+<div class="container mt-5" id="content-box">
   <div class="row">
     <div class="col-lg-12 col-md-12 col-xs-12">
 
@@ -33,30 +33,95 @@
             <p><i>Xin chào các bạn quay lại blog của mình. Trong bài này thì minh xin giới thiệu cách cài đặt Visual 
               Studio Code để tạo được một file HTML và giới thiệu cấu trúc cần có trong một file HTML.</i>
             </p>
-            <h4>Cài đặt Visual Studio Code: </h4>
+            <h4><b><i class="fa fa-cog" aria-hidden="true"></i> Cài đặt Visual Studio Code: </b></h4>
             <p>Mình chọn phần mềm này vì nó rất hữu ích và nhiều tiện ích mở rộng trong việc các bạn học lên cao hơn.
               Sau đây chúng ta sẽ đi vào phần cài đặt nhé!
             </p>
-            <p>Đầu tiên mình sẽ đưa link để các bạn tải phần mềm về: <br />
-              <a href="https://code.visualstudio.com/Download">Link tải Visual Studio Code</a>
+            <p>Đây là link để các bạn tải phần mềm về: <br />
+              <i class="fa fa-arrow-down" aria-hidden="true"></i> <a href="https://code.visualstudio.com/Download">Link tải Visual Studio Code</a></p>
+              <p>Và các bạn cần lưu ý là nếu tải và cài đặt mà chạy không được thì có thể do các bạn thiếu 
+              .Net Framework. Phần mềm này yêu cầu là phải từ <mark>.Net Framework  4.5.2</mark> trở lên:<br />
+              <i class="fa fa-arrow-down" aria-hidden="true"></i> <a href="https://www.microsoft.com/en-us/download/details.aspx?id=42643">Link tải .Net Framework</a>
             </p>
-            <h4><u>Tạo một file HTML:</u></h4>
-            <p>Sau đây mình sẽ cùng nhau tạo một file HTML nhé! 
+            <h4><b><i class="fa fa-code" aria-hidden="true"></i> Tạo một file HTML:</b></h4>
+            <p>Sau đây mình sẽ cùng nhau tạo một file HTML nhé!
+                Sau khi cài đặt xong thì mình mở Visual Studio Code lên và tạo thư mục với tên là <b>"HTML bài 2"</b>. Dưới đây là từng bước hướng dẫn các bạn
+                thực hiện:
             </p>
-            
-                Đầu tiên thì mình mở Visual Studio Code lên và tạo thư mục với tên là "HTML bài 2": <br />
-                <p class="mb-2 mt-2">Khi các bạn mở Visual Studio Code thì các bạn sẽ thấ hiện thấy như thế này: </p>
-                <img  class="img-fluid" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576162980/bai%202/Screenshot_3_flsnf0.png" />
-              <p class="mb-2 mt-2">Tiếp theo chúng ta chọn "Open Folder" để xác định thư mục mà mình sẽ tạo file HTML (Các bạn có thể dặt tên thư mục tùy theo sở thích của mọi người còn 
-                mình ở đây đặt là "HTML bài  2"): </p>
-                <img  class="img-fluid" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576166563/bai%202/Screenshot_1_txi397.png" />
-                <p class="mb-2 mt-2">Sau khi chọn xong thư mục thì các bạn tạo một file HTML dùm mình với tên là <b>htmlBai2.html</b>(Các bạn nhớ có đuôi <b>html</b>.
-                  Nếu không thì trình soạn thảo sẽ không xác định được loại file và có thể gây ra lỗi khi chúng ta mở file) </p>
-                    <img  class="img-fluid" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576167376/bai%202/Screenshot_4_lm3ubw.png" />
+               <p><i class="fa fa-chevron-right" aria-hidden="true"></i> Khi mình mở Visual Studio Code thì trình soạn thảo sẽ hiện thị như hình bên dưới: </p>
+                <img  class="img-fluid shadow-sm rounded" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576162980/bai%202/Screenshot_3_flsnf0.png" />
+              <p class="mt-4 mb-4"><i class="fa fa-chevron-right" aria-hidden="true"></i> Tiếp theo chúng ta chọn <mark>"File" -> "Open Folder"</mark> để xác định thư mục mà mình sẽ tạo file HTML (Các bạn phải tạo thư mục này 
+                trong ổ đĩa của máy tính và có thể đặt tên thư mục tùy theo sở thích của các bạn còn mình ở đây đặt là "HTML bài  2"): </p>
+                <img  class="img-fluid shadow-sm rounded" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576166563/bai%202/Screenshot_1_txi397.png" />
+                <p class="mt-4 mb-4"> <i class="fa fa-chevron-right" aria-hidden="true"></i>  Sau khi chọn xong thư mục thì các bạn tạo một file HTML dùm mình với tên là <b>htmlBai2.html</b>.
+                  Mình có nhiều cách để tạo một file là <mark>"File" -> "New File"(hoặc Ctrl + N)</mark> thì nó sẽ tạo một file với tên mặc định
+                  thì sau đó mình cần đổi tên lại nữa nên hơi mắc công tí nhé.Cách hai là mình làm như hình bên dưới 
+                  nhấp vào biểu tượng và đặt tên cho file HTML. Khi đặt tên thi các bạn nhớ có đuôi <b>html</b>,
+                  nếu không thì trình soạn thảo sẽ không xác định được loại file và có thể gây ra lỗi khi chúng ta mở file:</p>
+                    <img  class="img-fluid shadow-sm rounded" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576167376/bai%202/Screenshot_4_lm3ubw.png" />
 
-                    <p class="mb-2 mt-2">Khi các bạn đã tạo xong thì mình sẽ có một thư mục HTML bài 2 chứa file là htmlBai2.html. Nếu như các bạn khó hiểu hay không làm được
+                    <p class="mb-4 mt-4"> <i class="fa fa-chevron-right" aria-hidden="true"></i> Khi các bạn đã tạo xong thì mình sẽ có một thư mục HTML bài 2 chứa file là <b>htmlBai2.html</b>. Nếu như các bạn khó hiểu hay không làm được
                        chỗ nào thì liên hệ để mình xem giúp được gì không nhé! </p>
-                        <img  class="img-fluid" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576167734/bai%202/Screenshot_6_g3mqo6.png" />
+                        <img  class="img-fluid shadow-sm rounded" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576167734/bai%202/Screenshot_6_g3mqo6.png" />
+              <h4 class="mt-4"> <b><i class="fa fa-code" aria-hidden="true"></i> Cấu trúc file HTML: </b></h4>
+              <p>
+                Các bạn có thể hình dung <b>cấu trúc HTML</b> như một căn nhà thì các <b>thẻ HTML</b> đóng vai trò như là những
+                viên gạch góp phần tạo nên căn nhà. Do vậy  chúng ta cùng nhau đi tìm hiểu thành phần cấu tạo của một thẻ
+                HTML nhé:
+              </p>
+              <img  class="img-fluid shadow-sm rounded" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576394155/bai%202/elementHTML_bzdihr.svg" />
+               <p class="mt-4 mb-4">
+                Đa số các thẻ trong HTML thì sẽ có cấu tạo như hình trên nhưng còn một số thẻ đặc biệt không theo định dạng
+                này như là <b>thẻ hình ảnh (&#60;img&#62;)</b>... và cũng có những thẻ không cần có nội dung chứa bên 
+                trong nó như <b>thẻ nhập liệu (&#60;input /&#62;)...</b> thì mình sẽ nói sau.Tên thẻ thì không phân biệt
+                chữ hoa và chữ thường vì vậy dù mình có ghi là <b>&#60;img&#62;, &#60;Img&#62;, &#60;IMG&#62;</b> thì trình
+                duyệt đều có thể hiểu được. Nhưng các bạn nên dùng chữ thường cho tất cả tên thẻ như là <b>&#60;html&#62;, 
+                &#60;img&#62;, &#60;p&#62;...</b> để tạo tính nhất quán cho trang web của bạn.<br />
+                Tiếp theo mình sẽ giới thiệu tới cấu trúc của một file html ta cần những thẻ nào nhé!
+              </p>
+              <img  class="img-fluid shadow-sm rounded" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576395905/bai%202/Cau_truc_HTML_fgthbz.svg" />
+              <p class="mt-4 mb-4">
+                Như các bạn đã thấy được cấu trúc thì dưới đây mình có giới thiệu đến các bạn một đoạn code của cấu
+                trúc HTML:<pre><code class="html">&#60;!DOCTYPE html&#62;<br />&#60;html&#62;<br />&#60;head&#62;<br />&#60;meta charset="utf-8"&#62;<br />&#60;title&#62;HTML bài 2&#60;/title&#62;<br />&#60;/head&#62;<br />&#60;body&#62;<br />Nội dung<br />&#60;/body&#62;<br />&#60;/html&#62;</code></pre>
+              </p>
+              <p>Đây là ví dụ về hiển thị nội dung khi người dùng truy cập vào web của chúng ta:</p>
+              <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="PowGBKq" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Cau truc File HTML">
+                <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/PowGBKq">
+                Cau truc File HTML</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+              </p>
+              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+              <h4 class="mt-4"> <b><i class="fa fa-question-circle-o" aria-hidden="true"></i> Bài tập HTML: </b></h4>
+              <p>Sau đây mình sẽ có bài tập nhỏ giúp các bạn nhớ những gì mà mình đã học trong ngày hôm nay.<br />
+                <ol>
+                  <li>Các bạn tạo một file tên là <b>HTML2baitap.html</b></li>
+                  <li>Các bạn bắt đầu nhập <b>cấu trúc</b> của một file HTML.</li>
+                  <li>Các bạn chèn nội dung vào trang web của mình trong thẻ <b>&#60;body&#62;</b>:<br />
+                    <i>Vào vụ Đông Xuân, chim én bay về đây nhiều vô kể, có những thửa ruộng cùng một lúc có đến hàng trăm con én chao liệng trên tấm thảm nhung xanh. Dọc những bờ ruộng, cò trắng đứng thành hàng, im phăng phắc.
+                    Nhưng chỉ cần nghe tiếng động nào đó như tiếng khua đuổi cá của dân chài lưới thì những chấm trắng ấy vội bốc mình lên không trung, dang rộng hai cánh, trôi thành từng đàn về tận tít trời xa... Đứng ở giữa cánh đồng vào thời điểm lúa đang thì con gái, mới thưởng thức được vẻ đẹp rất nên thơ của cánh đồng. Đẹp nhất là ngắm nhìn những đợt sóng lúa đuổi nhau vội vàng, nhấp nhô lên xuống, giống hệt như một tấm thảm nhung xanh mà ai đó đang tung lên hạ xuống.
+                    Người làng em đi xa, mỗi lần về quê, không ai không dừng lại để ngắm đồng lúa quê mình, để tìm lại ở đây những kỉ niệm của một thời thơ ấu: đẹp, hồn nhiên và ấm áp hương đồng.</i>
+                  </li>
+                </ol>
+              </p>
+              <p>Đây là file lời giải của bài tập các bạn tham khảo. Nhưng trước khi xem hãy cố gắng hoàn thành bài tập để mình nhớ lâu hơn nhé!</p>
+              <p>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                  Lời giải bài tập
+                </button>
+              </p>
+              <div class="collapse" id="collapseExample">
+            
+                  <pre><code class="html">&#60;!DOCTYPE html&#62;<br />&#60;html&#62;<br />&#60;head&#62;<br />&#60;meta charset="utf-8"&#62;<br />&#60;title&#62;HTML bài 2&#60;/title&#62;<br />&#60;/head&#62;<br />&#60;body&#62;<br />Vào vụ Đông Xuân, chim én bay về đây nhiều vô kể, có những thửa ruộng cùng một lúc có đến hàng trăm con én chao liệng trên tấm thảm nhung xanh. Dọc những bờ ruộng, cò trắng đứng thành hàng, im phăng phắc. Nhưng chỉ cần nghe tiếng động nào đó như tiếng khua đuổi cá của dân chài lưới thì những chấm trắng ấy vội bốc mình lên không trung, dang rộng hai cánh, trôi thành từng đàn về tận tít trời xa...<br />Đứng ở giữa cánh đồng vào thời điểm lúa đang thì con gái, mới thưởng thức được vẻ đẹp rất nên thơ của cánh đồng. Đẹp nhất là ngắm nhìn những đợt sóng lúa đuổi nhau vội vàng, nhấp nhô lên xuống, giống hệt như một tấm thảm nhung xanh mà ai đó đang tung lên hạ xuống. Người làng em đi xa, mỗi lần về quê, không ai không dừng lại để ngắm đồng lúa quê mình, để tìm lại ở đây những kỉ niệm của một thời thơ ấu: đẹp, hồn nhiên và ấm áp hương đồng.<br />&#60;/body&#62;<br />&#60;/html&#62;</code></pre>
+              
+              </div>
+              <p>Còn điều này mình quên nói là khi các bạn làm xong và lưu vào <b>HTML2baitap.html</b>. Thì để mở mình vào thư mục đã lưu file và nhấn trực tiếp vào thì 
+              trình duyệt sẽ tự động chạy file đó nhé.</p>
+              <img  class="img-fluid shadow-sm rounded" src=" https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576500256/bai%202/Open_file_html_vulqku.png" />
+              <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
+              <p>Qua bài này chúng mình đã hiểu sơ lược cấu trúc và tạo được một file HTML. Bài tiếp theo mình sẽ hướng dẫn các bạn các thẻ HTML cơ bản làm việc với
+                văn bản, chữ... Nếu các bạn có gì thì cứ liên hệ mình sẽ liên lạc vói các bạn sớm nhất có thể!
+              </p>
         </div>
         </article>
         </div>
