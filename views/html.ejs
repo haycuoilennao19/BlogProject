@@ -23,205 +23,384 @@
       <hr />
       <div class="card-text text-justify">
         <article>
-          <h2 class="bg-primary mb-4 text-white rounded p-2 shadow"><i class="fa fa-cube" aria-hidden="true"></i> HTML Bài  2</h2>
+          <h2 class="bg-primary mb-4 text-white rounded p-2 shadow"><i class="fa fa-cube" aria-hidden="true"></i> HTML
+            Bài 5</h2>
           <div class="article-title">
             <div class="progress-wrapper">
               <div class="progress-label"></div><progress></progress>
             </div>
           </div>
           <div class="text-content-article mt-5">
-            <p><i>Xin chào các bạn quay lại blog của mình. Trong bài này thì minh xin giới thiệu cách cài đặt Visual 
-              Studio Code để tạo được một file HTML và giới thiệu cấu trúc cần có trong một file HTML.</i>
+            <p><i>Xin chào các bạn quay lại blog của mình. Trong bài này mình sẽ giới thiệu các bạn về <b>thẻ
+                  &#60;img&#62; và thẻ &#60;a&#62;</b>.Sau này làm web thì các bạn sẽ tiếp xúc rất nhiều
+                về hai thẻ này. Bây giờ hãy cùng nhau tìm hiểu nhé!</i>
             </p>
-            <h4><b><i class="fa fa-cog" aria-hidden="true"></i> Cài đặt Visual Studio Code: </b></h4>
-            <p>Mình chọn phần mềm này vì nó rất hữu ích và nhiều tiện ích mở rộng trong việc các bạn học lên cao hơn.
-              Sau đây chúng ta sẽ đi vào phần cài đặt nhé!
+            <h4><b><i class="fa fa-book" aria-hidden="true"></i> 1) Thẻ Hình ảnh : </b></h4>
+            <p>Hình ảnh được xem như là nội dung phổ biến trong web nó xuất hiện hầu như ở mọi trang web. Các bạn hãy
+              hình dung một trang web toàn chữ thì thật không bắt mắt và cũng như không
+              có gì minh họa cho những nội dung của chúng ta. Theo mình được biết thì ngày nay các trang web hầu như sử
+              dụng hình ảnh để làm nội dung và chữ thì sẽ càng ít càng tốt do cuộc
+              sống ngày nay bận rộn nên hầu như mọi người xem web chỉ chú ý những ý chính và thường không xem chữ
+              nhiều.<br />
+              Thẻ hình ảnh được tạo bởi thẻ <b>&#60;img&#62;</b>. Đây là thẻ <b>không có thẻ đóng</b> nhé các bạn. Để mà
+              hiển thị được hình ảnh thì chúng ta bắt buộc phải gán
+              thuộc tính <b>src</b> và cộng thêm thuộc tính <b>alt</b> cho thẻ.
+            </p><img
+              src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576996163/B%C3%A0i%205/the_imge_oki8qf.svg"
+              class="mb-4 mt-4" />
+            <p>Như các bạn thấy thì thẻ hình ảnh có thuộc tính <b>src</b> để xác định nơi mà chúng ta chứa hình ảnh (Có
+              thể là trên web hoặc có thể trên máy tính của mình).
+              Thuộc tính <b>alt</b> thì xác định thêm thông tin về hình ảnh (Nếu như hình ảnh không hiện thị thì những
+              dòng chữ trong thuộc tính này sẽ xuất hiện). Bây giờ hãy xem ví dụ
+              để hiểu rõ hơn nhé:</p>
+           <p><i><u>Đầu tiên các bạn tạo cho mình 1 thư mục có cấu trúc như sau:</u></i> </p>
+       
+              <img  width="200" height="200" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576995966/B%C3%A0i%205/folder_hp6uhn.svg" />
+        
+           <p>Ở đây thì các bạn có thể lấy bất cứ hình ảnh nào cũng được nhưng quan trọng là phải đúng đường dẫn thì trình duyệt mới hiện thị hình ảnh được nhé.</p>
+           <p><i><u>Bước tiếp theo là mình tạo cấu trúc cho file HTML bài 5: </u></i> </p>
+           <pre><code class="html">&#60;!DOCTYPE html&#62;<br />&#60;html&#62;<br />&#60;head&#62;<br />&#60;meta charset="utf-8"&#62;<br />&#60;title&#62;HTML bài 5&#60;/title&#62;<br />&#60;/head&#62;<br />&#60;body&#62;<br />&#60;h4&#62;Thẻ Hình Ảnh&#60;/h4&#62;<br />&#60;/body&#62;<br />&#60;/html&#62;</code></pre>
+           <p><i><u>Sau đó các bạn tạo chèn thẻ <b>&#60;img&#62;</b> vào trong file <b>bai5.html</b>:</u></i> </p>
+           <pre><code class="html">&#60;!DOCTYPE html&#62;<br />&#60;html&#62;<br />&#60;head&#62;<br />&#60;meta charset="utf-8"&#62;<br />&#60;title&#62;HTML bài 5&#60;/title&#62;<br />&#60;/head&#62;<br />&#60;body&#62;<br />&#60;h4&#62;Thẻ Hình Ảnh&#60;/h4&#62;<br />&#60;img src="nui.jpg" alt="Đồi núi tuyết" /&#62;<br />&#60;/body&#62;<br />&#60;/html&#62;</code></pre>
+           <p><i><u>Cuối cùng chúng ta sẽ có kết quả như sau:</b></u></i> </p>
+            <img class="shadow p-3" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576934159/B%C3%A0i%205/FireShot_Pro_Screen_Capture_003_-_HTML_b%C3%A0i_5_-_http_bwgkqd.png" />
+            <p  class="mt-4">Ngoài 2 thuộc tính <b>src</b> và <b>alt</b> của thẻ <b>&#60;img&#62;</b> thì mình sẽ giới thiệu thêm một số thuộc tính khác của thẻ hình ảnh. Đó là thuộc tính <b>height</b> và <b>width</b> giúp chúng ta điều chỉnh độ cao và độ dài của hình ảnh sao
+            cho phù hợp với nội dung của trang web. Các bạn xem ví dụ để nắm rõ hơn nhé!</p>
+            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="WNbpqmb" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Thẻ hình ảnh với chiều cao va chieu dài">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/WNbpqmb">
+              Thẻ hình ảnh với chiều cao va chieu dài</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
             </p>
-            <p>Đây là link để các bạn tải phần mềm về: <br />
-              <i class="fa fa-arrow-down" aria-hidden="true"></i> <a href="https://code.visualstudio.com/Download">Link tải Visual Studio Code</a></p>
-              <p>Và các bạn cần lưu ý là nếu tải và cài đặt mà chạy không được thì có thể do các bạn thiếu 
-              .Net Framework. Phần mềm này yêu cầu là phải từ <mark>.Net Framework  4.5.2</mark> trở lên:<br />
-              <i class="fa fa-arrow-down" aria-hidden="true"></i> <a href="https://www.microsoft.com/en-us/download/details.aspx?id=42643">Link tải .Net Framework</a>
-            </p>
-            <h4><b><i class="fa fa-code" aria-hidden="true"></i> Tạo một file HTML:</b></h4>
-            <p>Sau đây mình sẽ cùng nhau tạo một file HTML nhé!
-                Sau khi cài đặt xong thì mình mở Visual Studio Code lên và tạo thư mục với tên là <b>"HTML bài 2"</b>. Dưới đây là từng bước hướng dẫn các bạn
-                thực hiện:
-            </p>
-               <p><i class="fa fa-chevron-right" aria-hidden="true"></i> Khi mình mở Visual Studio Code thì trình soạn thảo sẽ hiện thị như hình bên dưới: </p>
-                <img  class="img-fluid shadow-sm rounded" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576162980/bai%202/Screenshot_3_flsnf0.png" />
-              <p class="mt-4 mb-4"><i class="fa fa-chevron-right" aria-hidden="true"></i> Tiếp theo chúng ta chọn <mark>"File" -> "Open Folder"</mark> để xác định thư mục mà mình sẽ tạo file HTML (Các bạn phải tạo thư mục này 
-                trong ổ đĩa của máy tính và có thể đặt tên thư mục tùy theo sở thích của các bạn còn mình ở đây đặt là "HTML bài  2"): </p>
-                <img  class="img-fluid shadow-sm rounded" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576166563/bai%202/Screenshot_1_txi397.png" />
-                <p class="mt-4 mb-4"> <i class="fa fa-chevron-right" aria-hidden="true"></i>  Sau khi chọn xong thư mục thì các bạn tạo một file HTML dùm mình với tên là <b>htmlBai2.html</b>.
-                  Mình có nhiều cách để tạo một file là <mark>"File" -> "New File"(hoặc Ctrl + N)</mark> thì nó sẽ tạo một file với tên mặc định
-                  thì sau đó mình cần đổi tên lại nữa nên hơi mắc công tí nhé.Cách hai là mình làm như hình bên dưới 
-                  nhấp vào biểu tượng và đặt tên cho file HTML. Khi đặt tên thi các bạn nhớ có đuôi <b>html</b>,
-                  nếu không thì trình soạn thảo sẽ không xác định được loại file và có thể gây ra lỗi khi chúng ta mở file:</p>
-                    <img  class="img-fluid shadow-sm rounded" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576167376/bai%202/Screenshot_4_lm3ubw.png" />
-
-                    <p class="mb-4 mt-4"> <i class="fa fa-chevron-right" aria-hidden="true"></i> Khi các bạn đã tạo xong thì mình sẽ có một thư mục HTML bài 2 chứa file là <b>htmlBai2.html</b>. Nếu như các bạn khó hiểu hay không làm được
-                       chỗ nào thì liên hệ để mình xem giúp được gì không nhé! </p>
-                        <img  class="img-fluid shadow-sm rounded" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576167734/bai%202/Screenshot_6_g3mqo6.png" />
-              <h4 class="mt-4"> <b><i class="fa fa-code" aria-hidden="true"></i> Cấu trúc file HTML: </b></h4>
-              <p>
-                Các bạn có thể hình dung <b>cấu trúc HTML</b> như một căn nhà thì các <b>thẻ HTML</b> đóng vai trò như là những
-                viên gạch góp phần tạo nên căn nhà. Do vậy  chúng ta cùng nhau đi tìm hiểu thành phần cấu tạo của một thẻ
-                HTML nhé:
-              </p>
-              <img  class="img-fluid shadow-sm rounded" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576394155/bai%202/elementHTML_bzdihr.svg" />
-               <p class="mt-4 mb-4">
-                Đa số các thẻ trong HTML thì sẽ có cấu tạo như hình trên nhưng còn một số thẻ đặc biệt không theo định dạng
-                này như là <b>thẻ hình ảnh (&#60;img&#62;)</b>... và cũng có những thẻ không cần có nội dung chứa bên 
-                trong nó như <b>thẻ nhập liệu (&#60;input /&#62;)...</b> thì mình sẽ nói sau.Tên thẻ thì không phân biệt
-                chữ hoa và chữ thường vì vậy dù mình có ghi là <b>&#60;img&#62;, &#60;Img&#62;, &#60;IMG&#62;</b> thì trình
-                duyệt đều có thể hiểu được. Nhưng các bạn nên dùng chữ thường cho tất cả tên thẻ như là <b>&#60;html&#62;, 
-                &#60;img&#62;, &#60;p&#62;...</b> để tạo tính nhất quán cho trang web của bạn.<br />
-                Tiếp theo mình sẽ giới thiệu tới cấu trúc của một file html ta cần những thẻ nào nhé!
-              </p>
-              <img  class="img-fluid shadow-sm rounded" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576395905/bai%202/Cau_truc_HTML_fgthbz.svg" />
-              <p class="mt-4 mb-4">
-                Như các bạn đã thấy được cấu trúc thì dưới đây mình có giới thiệu đến các bạn một đoạn code của cấu
-                trúc HTML:<pre><code class="html">&#60;!DOCTYPE html&#62;<br />&#60;html&#62;<br />&#60;head&#62;<br />&#60;meta charset="utf-8"&#62;<br />&#60;title&#62;HTML bài 2&#60;/title&#62;<br />&#60;/head&#62;<br />&#60;body&#62;<br />Nội dung<br />&#60;/body&#62;<br />&#60;/html&#62;</code></pre>
-              </p>
-              <p>Đây là ví dụ về hiển thị nội dung khi người dùng truy cập vào web của chúng ta:</p>
-              <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="PowGBKq" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Cau truc File HTML">
-                <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/PowGBKq">
-                Cau truc File HTML</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-              </p>
-              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-
-              <h4 class="mt-4"> <b><i class="fa fa-question-circle-o" aria-hidden="true"></i> Bài tập HTML: </b></h4>
-              <p>Sau đây mình sẽ có bài tập nhỏ giúp các bạn nhớ những gì mà mình đã học trong ngày hôm nay.<br />
-                <ol>
-                  <li>Các bạn tạo một file tên là <b>HTML2baitap.html</b></li>
-                  <li>Các bạn bắt đầu nhập <b>cấu trúc</b> của một file HTML.</li>
-                  <li>Các bạn chèn nội dung vào trang web của mình trong thẻ <b>&#60;body&#62;</b>:<br />
-                    <i>Vào vụ Đông Xuân, chim én bay về đây nhiều vô kể, có những thửa ruộng cùng một lúc có đến hàng trăm con én chao liệng trên tấm thảm nhung xanh. Dọc những bờ ruộng, cò trắng đứng thành hàng, im phăng phắc.
-                    Nhưng chỉ cần nghe tiếng động nào đó như tiếng khua đuổi cá của dân chài lưới thì những chấm trắng ấy vội bốc mình lên không trung, dang rộng hai cánh, trôi thành từng đàn về tận tít trời xa... Đứng ở giữa cánh đồng vào thời điểm lúa đang thì con gái, mới thưởng thức được vẻ đẹp rất nên thơ của cánh đồng. Đẹp nhất là ngắm nhìn những đợt sóng lúa đuổi nhau vội vàng, nhấp nhô lên xuống, giống hệt như một tấm thảm nhung xanh mà ai đó đang tung lên hạ xuống.
-                    Người làng em đi xa, mỗi lần về quê, không ai không dừng lại để ngắm đồng lúa quê mình, để tìm lại ở đây những kỉ niệm của một thời thơ ấu: đẹp, hồn nhiên và ấm áp hương đồng.</i>
-                  </li>
-                </ol>
-              </p>
-              <p>Đây là file lời giải của bài tập các bạn tham khảo. Nhưng trước khi xem hãy cố gắng hoàn thành bài tập để mình nhớ lâu hơn nhé!</p>
-              <p>
-                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                  Lời giải bài tập
-                </button>
-              </p>
-              <div class="collapse" id="collapseExample">
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
             
-                  <pre><code class="html">&#60;!DOCTYPE html&#62;<br />&#60;html&#62;<br />&#60;head&#62;<br />&#60;meta charset="utf-8"&#62;<br />&#60;title&#62;HTML bài 2&#60;/title&#62;<br />&#60;/head&#62;<br />&#60;body&#62;<br />Vào vụ Đông Xuân, chim én bay về đây nhiều vô kể, có những thửa ruộng cùng một lúc có đến hàng trăm con én chao liệng trên tấm thảm nhung xanh. Dọc những bờ ruộng, cò trắng đứng thành hàng, im phăng phắc. Nhưng chỉ cần nghe tiếng động nào đó như tiếng khua đuổi cá của dân chài lưới thì những chấm trắng ấy vội bốc mình lên không trung, dang rộng hai cánh, trôi thành từng đàn về tận tít trời xa...<br />Đứng ở giữa cánh đồng vào thời điểm lúa đang thì con gái, mới thưởng thức được vẻ đẹp rất nên thơ của cánh đồng. Đẹp nhất là ngắm nhìn những đợt sóng lúa đuổi nhau vội vàng, nhấp nhô lên xuống, giống hệt như một tấm thảm nhung xanh mà ai đó đang tung lên hạ xuống. Người làng em đi xa, mỗi lần về quê, không ai không dừng lại để ngắm đồng lúa quê mình, để tìm lại ở đây những kỉ niệm của một thời thơ ấu: đẹp, hồn nhiên và ấm áp hương đồng.<br />&#60;/body&#62;<br />&#60;/html&#62;</code></pre>
+            <p class="mt-4">
+              Có một chú ý nhỏ là không nhất thiết các bạn phải lưu hình ảnh vào máy tính  rồi sau đó mới có thể sử dụng. Ví dụ dưới đây giúp các bạn hiểu rõ hơn cách lấy hình ảnh từ đường dẫn trên trang web để chèn vào file HTML của mình :  
+            </p>
+            <div class="row">
               
+              <div class="col-md-6 col-sm-12">
+                <div class="shadow p-2">
+                <h5 class="text-center bg-primary text-white p-2">Mã Code HTML</h5>
+                <pre><code class="html">&#60;img src="https://www.dl.dropboxusercontent.com/s/tsy249ore8fnjzm/lake-4697441_1280.jpg?dl=0 /&#62;</code></pre>
               </div>
-              <p>Còn điều này mình quên nói là khi các bạn làm xong và lưu vào <b>HTML2baitap.html</b>. Thì để mở mình vào thư mục đã lưu file và nhấn trực tiếp vào thì 
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <div class="shadow p-2">
+                <h5 class="text-center bg-primary text-white p-2">Hiện thị trên Web</h5>
+                <img src="https://www.dl.dropboxusercontent.com/s/tsy249ore8fnjzm/lake-4697441_1280.jpg?dl=0" />
+             </div>
+              </div>
+            </div>
+        
+           <p class="mt-4"><b>Một số lưu ý khi sử dụng hình ảnh cho trang web:</b></p>
+           <ul>
+             <li>Đa số những web thông dụng thì thường lưu hình ảnh dưới dạng là <b>jpeg , gif, png và svg</b>. Các bạn cũng thể chọn những định dạng khác nhưng như vậy nhiều  khi sẽ làm 
+            kích thước hình ảnh của chúng ta lớn làm ảnh hưởng đến quá trình tải trang. </li>
+            <li>Dùng thuộc tính <b>alt</b> trong thẻ hình ảnh sẽ giúp cho trang web của các bạn được Goole dễ tìm thấy hơn. Nhưng đừng vì vậy mà ghi dài dòng nhằm để 
+           SEO tốt hơn. Hình ảnh với miêu tả như vậy sẽ bị cho là đánh giá không tốt. Các bạn cứ nhớ khi dùng thẻ <b>&#60;img&#62;</b> thì luôn kèm theo thuộc tính <b>alt</b> với miêu tả ngắn gọn xúc tích.  </li>
+              <li>Khi sử dụng hình ảnh các bạn nên cân nhắc bản quyền. Nhiều hình ảnh phải có quyền thì mình mới sử dụng được, nên mình sẽ giới thiệu các bạn một số trang giúp sử dụng hình ảnh chất lượng cao miễn phí như là:
+                <ul>
+                  <li><a href="https://www.pexels.com/vi-vn/" target="_blank">Pexels</a>:  cung cấp kho ảnh chất lượng cao và hoàn toàn miễn phí có giấy phép Pexels.</li>
+                  <li><a href="https://pixabay.com/" target="_blank">Pixabay</a>: Cung cấp những hình ảnh chất lượng với nhiều dạng định dạng khác nhau.</li>
+                  <li><a href="https://unsplash.com/" target="_blank">Unsplash</a>: Cung cấp nhiều hình ảnh miễn phí chất lượng tốt.</li>
+                  <li><a href="https://www.freepik.com/" target="_blank">Freepik</a>: Cung cấp những hình ảnh định svg chất lượng cao. (Các bạn có thể dùng miễn phí hoặc trả phí)</li>
+                </ul>
+              </li>
+              <li>Các bạn nên giảm kích thước hình ảnh để giúp trang web có thể tải và chạy nhanh hơn với một số trang web sau đây:
+                <ul>
+                  <li><a href="https://imagecompressor.com/" target="_blank">Imagecompressor</a></li>
+                  <li><a href="https://tinypng.com/" target="_blank">Tinypng</a></li>
+                  <li><a href="https://compressor.io/" target="_blank">compressor</a></li>
+                </ul>
+              </li>
+          </ul>
+          
+           <p>Mình đã giới thiệu sơ lược qua cách đưa hình ảnh vào trang web. Khi học CSS mình sẽ giới thiệu chi tiết hơn về cách dùng hình ảnh cho nội dung của mình. Tiếp theo chúng ta sẽ tiếp tục tìm hiểu về thẻ 
+             đường dẫn được sử dụng đa số trong các trang web.
+           </p>
+           <h4><b><i class="fa fa-book" aria-hidden="true"></i> 2) Thẻ đường dẫn : </b></h4>
+          <p>Chúng ta có thể viết những đường dẫn tới những trang web khác hoặc một phần nội dung trong trang web bằng thẻ <b>&#60;a&#62;</b>. Thẻ này cũng có những thuộc tính bắt buộc như thẻ hình ảnh (<b>src</b>). Đó là thuộc tính 
+           <b>href</b> với giá trị thuộc tính dùng để xác định đường dẫn mà chúng ta muốn hướng tới. Chữ nội dung nằm giữa thẻ <b>&#60;a&#62;</b> là nơi mà người dùng nhấp vào để chuyển tiếp đến trang web khác. Để 
+           dễ hình dung hơn thì mình sẽ có hình ảnh minh họa cấu trúc như sau:</p>
+           <img src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576943748/B%C3%A0i%205/the_duong_dan3_yrc6au.svg" />
+            <p>Với thuộc tính <b>href</b> thì chúng ta có thể chèn nhiều loại đường dẫn khác nhau (Cái này mình sẽ nói rõ hơn ở phần sau). Chữ đại diện cho đường dẫn có thể là chữ hoặc hình ảnh
+            . Để làm rõ hơn chúng ta cùng đi vào ví dụ nhé:</p>
+            <div class="row">
+              <div class="col-md-12 col-sm-12">
+                <div class=" shadow p-2">
+                <h5 class="text-center bg-primary text-white p-2">Mã Code HTML</h5>
+                <p><b><u>Đại diện đường dẫn là chữ: </u></b></p>
+                <pre><code class="html">&#60;a href="https://www.google.com.vn/"&#62;Google&#60;/a&#62;</code></pre>
+                <p><b><u>Đại diện đường dẫn là hình ảnh: </u></b></p>
+                <pre><code class="html">&#60;a href="https://www.google.com.vn/"&#62;&#60;img src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576991629/B%C3%A0i%205/search_1_li5c4h.svg" />&#60;/a&#62;</code></pre>
+              </div>
+              </div>
+              <div class="col-md-12 col-sm-12 mt-4">
+                <div class=" shadow p-2">
+                <h5 class="text-center bg-primary text-white p-2">Hiện thị trên Web</h5>
+                <p><b><u>Đại diện đường dẫn là chữ: </u></b></p>
+                <a href="https://www.google.com.vn/">Google</a>
+                <p><b><u>Đại diện đường dẫn là hình ảnh: </u></b></p>
+                <div class="w-25 p-3" style="background-color: #eee;">
+                  <a class="img-fluid" href="https://www.google.com.vn/"><img src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576991629/B%C3%A0i%205/search_1_li5c4h.svg" width="64" height="64" alt="image google icon"/></a> 
+                </div>
+                
+                  </div>
+              </div>
+              </div>
+              <p class="mt-4"><b><u>Tiếp theo mình sẽ cùng nhau tìm hiểu về cách tạo đường dẫn liên kết với các trang HTML trong thư mục.</u></b></p>
+              <p>Chúng ta sẽ tạo một thư mục chứa hai file HTML là <b>trangchinh.html và gioithieu.html</b>.</p>
+              <img src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576995723/B%C3%A0i%205/folderlink_jrqdd7.svg" width="200" height="200"/>
+              <p class="mt-4">Sau đó chúng ta thêm đường dẫn từ trang <b>trangchinh.html</b> đến trang <b>gioithieu.html</b> bằng cách chèn đoạn code sau đây:</p>
+              <p class="text-primary"><b>trangchinh.html</b></p>
+              <pre><code class="html">&#60;!DOCTYPE html&#62;<br/>&#60;html&#62;<br/>&#60;head&#62;<br/>&#60;meta charset="utf-8"&#62;<br/>&#60;title&#62;HTML bài 5&#60;/title&#62;<br/>&#60;/head&#62;<br/>&#60;body&#62;<br/>&#60;h4&#62;Đường dẫn đến trang giới thiệu&#60;/h4&#62;<br/>&#60;a href="gioithieu.html"&#62;Giới thiệu&#60;/a&#62;<br/>&#60;/body&#62;<br/>&#60;/html&#62;</code></pre>
+              <p class="text-primary"><b>gioithieu.html</b></p>
+              <pre><code class="html">&#60;!DOCTYPE html&#62;<br/>&#60;html&#62;<br/>&#60;head&#62;<br/>&#60;meta charset="utf-8"&#62;<br/>&#60;title&#62;HTML bài 5&#60;/title&#62;<br/>&#60;/head&#62;<br/>&#60;body&#62;<br/>&#60;p&#62;Xin chào các bạn đến với trang web của mình. Chúc các bạn học tập thật tốt nhé!&#60;/p&#62;<br/>&#60;/body&#62;<br/>&#60;/html&#62;</code></pre>
+
+              <p class="mt-4 mb-4">Khi các bạn nhấn vào đường dẫn liên kết <span class="text-primary"><u>Giới thiệu</u></span> ở <b>trangchinh.html</b> thì trình duyệt sẽ tự động chuyển sang trang <b>gioithieu.html</b> như hình ở dưới đây: </p>
+              <img src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576999715/B%C3%A0i%205/h%C3%ACnhanhlienket_smxjcb.png" />
+
+              <h5 class="mt-4"><b><i class="fa fa-external-link-square" aria-hidden="true"></i> Một số thuộc tính của thẻ đường dẫn:</b></h5>
+              <h6 class="ml-4"><u>Thuộc tính <b>target</b> trong thẻ đường dẫn:</u></h6>
+              <p>Thuộc tính này có tác dụng khi người dùng nhấp vào đường dẫn liên kết của chúng ta thì trình duyệt sẽ hiển thị trang web được liên kết bằng một cửa sổ hoặc một thẻ mới.</p>
+              <div class="row">
+                <div class="col-md-12 col-sm-12">
+                  <div class=" shadow p-2">
+                  <h5 class="text-center bg-primary text-white p-2">Mã Code HTML</h5> 
+                  <pre><code class="html">&#60;a href="https://www.google.com.vn/" target="_blank"&#62;Mở cửa sổ mới tới trang Google&#60;/a&#62;</code></pre>
+                </div>
+                </div>
+                <div class="col-md-12 col-sm-12 mt-4">
+                  <div class=" shadow p-2">
+                  <h5 class="text-center bg-primary text-white p-2">Hiện thị trên Web</h5>
+                  <a href="https://www.google.com.vn/" target="_blank">Mở cửa sổ mới tới trang Google</a>
+                    </div>
+                </div>
+                </div>
+                <p class="ml-4 mt-4"><u>Giá trị <b>mailto:</b> trong thuộc tính <b>href</b>:</u></p>
+                <p>Khi người dùng nhấp vào liên kết có giá trị thuộc tính này thì nó sẽ khởi động chương trình email có sẵn trong trong máy và tự động điền địa chỉ gửi mail được lấy trong
+                  giá trị thuộc tính. Các bạn xem ví dụ để nắm rõ hơn nhé:
+                </p>
+                <div class="row">
+                  <div class="col-md-12 col-sm-12">
+                    <div class=" shadow p-2">
+                    <h5 class="text-center bg-primary text-white p-2">Mã Code HTML</h5> 
+                    <pre><code class="html">&#60;a href="mailto:niemvuilaptrinh2410@gmail.com" &#62;Gửi mail tới niềm vui lập trình&#60;/a&#62;</code></pre>
+                  </div>
+                  </div>
+                  <div class="col-md-12 col-sm-12 mt-4">
+                    <div class=" shadow p-2">
+                    <h5 class="text-center bg-primary text-white p-2">Hiện thị trên Web</h5>
+                    <a href="mailto:niemvuilaptrinh2410@gmail.com">Gửi mail tới niềm vui lập trình</a>
+                      </div>
+                  </div>
+                  </div>
+                  <h6 class="ml-4 mt-4"><u>Giá trị <b>tel:</b> trong thuộc tính <b>href</b>:</u></h6>
+                  <p>Khi người dùng nhấp vào liên kết có giá trị thuộc tính này thì nó sẽ tự động gọi đến số mà chúng ta đã chèn vào liên kết. Cái này thì mình thấy thường sử dụng trên điện thoại là chủ yếu. Các bạn xem ví dụ để nắm rõ hơn nhé:
+                  </p>
+                  <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                      <div class=" shadow p-2">
+                      <h5 class="text-center bg-primary text-white p-2">Mã Code HTML</h5> 
+                      <pre><code class="html">&#60;a href="tel:+84.123.456789" &#62;Gửi mail tới niềm vui lập trình&#60;/a&#62;</code></pre>
+                    </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 mt-4">
+                      <div class=" shadow p-2">
+                      <h5 class="text-center bg-primary text-white p-2">Hiện thị trên Web</h5>
+                      <a href="tel:+84.123.456789">Gọi điện tới niềm vui lập trình</a>
+                        </div>
+                    </div>
+                    </div>
+                    <h6 class="ml-4 mt-4"><u>Thuộc tính <b>download</b> :</u></h6>
+                    <p>Khi chúng ta có những hình ảnh, văn bản, pdf... cho phép người dùng tải xuống để sử dụng thì thuộc tính này có tác dụng là khi người dùng nhấp vào đường dẫn  vào thì nó sẽ tự động tải xuống máy của họ. Các bạn xem ví dụ để nắm rõ hơn nhé:
+                    </p>
+                    <div class="row">
+                      <div class="col-md-12 col-sm-12">
+                        <div class=" shadow p-2">
+                        <h5 class="text-center bg-primary text-white p-2">Mã Code HTML</h5> 
+                        <pre><code class="html">&#60;a href="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576917325/B%C3%A0i%205/nui_aeo3ec.jpg" download&#62;Gửi mail tới niềm vui lập trình&#60;/a&#62;</code></pre>
+                      </div>
+                      </div>
+                      <div class="col-md-12 col-sm-12 mt-4">
+                        <div class=" shadow p-2">
+                        <h5 class="text-center bg-primary text-white p-2">Hiện thị trên Web</h5>
+                        <a href="" download="https://images.pexels.com/photos/245535/pexels-photo-245535.jpeg?cs=srgb&dl=gh-ng-i-m-c-m-c-nha-hang-nhieu-cai-ghe-245535.jpg" >Gọi điện tới niềm vui lập trình</a>
+                          </div>
+                      </div>
+                      </div>
+
+            <h5 class="ml-5 mt-4"><b>4) Cách lồng thẻ vào với nhau:</b></h5>
+            <p>Đôi lúc các bạn cần lồng những danh sách vào với nhau thì các bạn xem mình ví dụ dưới đây để có thể nắm
+              rõ hơn nhé:</p>
+            <div class="row">
+              <div class="col-md-6 col-sm-12">
+                <h5 class="text-center bg-primary text-white p-2">Mã Code HTML</h5>
+                <p><b>&#60;ul&#62;<br />
+                    &#60;li&#62;Trứng<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#60;ul&#62;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;Trứng gà&#60;/li&#62;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;Trứng vịt&#60;/li&#62;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#60;/ul&#62;<br />
+                    &#60;/li&#62;<br />
+                    &#60;li&#62;Sữa&#60;/li&#62;<br />
+                    &#60;li&#62;Thịt&#60;/li&#62;<br />
+                    &#60;/ul&#62;</b>
+                </p>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <h5 class="text-center bg-primary text-white p-2">Hiện thị trên Web</h5>
+                <ol>
+                  <li>Trứng
+                    <ul>
+                      <li>Trứng gà</li>
+                      <li>Trứng vịt</li>
+                    </ul>
+                  </li>
+                  <li>Sữa</li>
+                  <li>Thịt</li>
+                </ol>
+              </div>
+            </div>
+
+
+            <h4 class="mt-4"> <b><i class="fa fa-question-circle-o" aria-hidden="true"></i> Bài tập HTML: </b></h4>
+            <p>Sau đây mình sẽ có bài tập nhỏ giúp các bạn nhớ những gì mà mình đã học trong ngày hôm nay.<br />
+              <ol>
+                <li>Các bạn tạo một file tên là <b>HTML4baitap.html</b></li>
+                <li>Các bạn bắt đầu nhập <b>cấu trúc</b> của một file HTML.</li>
+                <li>Các bạn chèn nội dung vào trang web của mình trong thẻ <b>&#60;body&#62;</b>:<br />
+
+                  <div class="bg-light mt-4 mb-4 shadow p-3 bg-white rounded">
+                    <img
+                      src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576831485/b%C3%A0i%204/FireShot_Pro_Screen_Capture_002_-_HTML_b%C3%A0i_2_-_file_ti0no6.png" />
+                  </div>
+                </li>
+              </ol>
+            </p>
+            <p>Đây là file lời giải của bài tập các bạn tham khảo. Nhưng trước khi xem hãy cố gắng hoàn thành bài tập để
+              mình nhớ lâu hơn nhé!</p>
+            <p>
+              <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
+                aria-expanded="false" aria-controls="collapseExample">
+                Lời giải bài tập
+              </button>
+            </p>
+            <div class="collapse" id="collapseExample">
+
+              <pre><code class="html">&#60;!DOCTYPE html&#62;<br />&#60;html&#62;<br />&#60;head&#62;<br />&#60;meta charset="utf-8"&#62;<br />&#60;title&#62;HTML bài 4&#60;/title&#62;<br />&#60;/head&#62;<br />&#60;body&#62;<br />&#60;h4&#62;Cách nấu thịt kho&#60;/h4&#62;<br />&#60;p&#62;Nguyên Liệu&#60;/p&#62;<br />&#60;ul &#62;<br/>&#60;li&#62; Thị ba chỉ &#60;/li&#62;<br/>&#60;li&#62; Hành khô &#60;/li&#62;<br />&#60;li&#62; Hành lá &#60;/li&#62;<br />&#60;li&#62;Gia vị<br />   &#60;ul&#62;<br />        &#60;li&#62;Đường&#60;/li&#62;<br />         &#60;li&#62;Bột ngọt&#60;/li&#62;<br />        &#60;li&#62;Tiêu&#60;/li&#62;<br />         &#60;li&#62;Mắm&#60;/li&#62;<br />   &#60;/ul&#62;<br />&#60;/li&#62;<br />&#60;/ul&#62;<br />&#60;h4&#62;Cách nấu&#60;/h4&#62;<br />&#60;ol&#62;<br />&#60;li&#62;Rửa thịt&#60;/li&#62;<br />&#60;li&#62;Ướp thịt với mắm đường và bột ngọt&#60;/li&#62;<br />&#60;li&#62;Đổ dầu và nấu thịt&#60;/li&#62;<br />&#60;/ol&#62;<br />&#60;p&#62;Các bạn đã có món thành phẩm là món thịt kho!&#60;/p&#62;<br />&#60;/body&#62;<br />&#60;html&#62;</code></pre>
+
+            </div>
+            <p>Còn điều này mình quên nói là khi các bạn làm xong và lưu vào <b>HTML4baitap.html</b>. Thì để mở mình vào
+              thư mục đã lưu file và nhấn trực tiếp vào thì
               trình duyệt sẽ tự động chạy file đó nhé.</p>
-              <img  class="img-fluid shadow-sm rounded" src=" https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576500256/bai%202/Open_file_html_vulqku.png" />
-              <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
-              <p>Qua bài này chúng mình đã hiểu sơ lược cấu trúc và tạo được một file HTML. Bài tiếp theo mình sẽ hướng dẫn các bạn các thẻ HTML cơ bản làm việc với
-                văn bản, chữ... Nếu các bạn có gì thì cứ liên hệ mình sẽ liên lạc vói các bạn sớm nhất có thể!
-              </p>
-        </div>
+            <img class="img-fluid shadow-sm rounded"
+              src=" https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576500256/bai%202/Open_file_html_vulqku.png" />
+            <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
+            <p>Qua bài này chúng mình đã hiểu và nắm được thẻ danh sách và thuộc tính của thẻ trong HTML. Bài tiếp theo
+              mình sẽ
+              hướng dẫn các bạn học về liên kết và thẻ hình ảnh trong HTML.
+              Nếu các bạn có gì thì cứ liên hệ mình sẽ liên lạc với các bạn sớm nhất có thể!
+            </p>
+          </div>
         </article>
-        </div>
       </div>
-
-
-
-
-      <div class="mb-5"></div>
     </div>
-    <div class="col-lg-12 col-md-12 col-xs-12">
-      <div class="mt-5"></div>
-      <div class="card card-search">
-        <div class="card-header card-header-category">
-          Từ Khóa
-        </div>
-        <div class="card-body card-body-search mt-4">
-          <h3 class="button-article"><a href="/article/css"><button type="button"
-                class="CSS btn shadow-sm rounded btn-success m-2 pl-3 pr-3">CSS</button></a>
-            <a href="/article/html"><button type="button"
-                class="HTML btn shadow-sm rounded btn-success m-2 pl-3 pr-3">HTML</button></a>
-            <a href="/article/nodejs">
-              <button type="button" class="btn shadow-sm rounded btn-success m-2 pl-3 pr-3">NodeJS</button></a>
-          </h3>
-        </div>
+
+
+
+
+    <div class="mb-5"></div>
+  </div>
+  <div class="col-lg-12 col-md-12 col-xs-12">
+    <div class="mt-5"></div>
+    <div class="card card-search">
+      <div class="card-header card-header-category">
+        Từ Khóa
       </div>
+      <div class="card-body card-body-search mt-4">
+        <h3 class="button-article"><a href="/article/css"><button type="button"
+              class="CSS btn shadow-sm rounded btn-success m-2 pl-3 pr-3">CSS</button></a>
+          <a href="/article/html"><button type="button"
+              class="HTML btn shadow-sm rounded btn-success m-2 pl-3 pr-3">HTML</button></a>
+          <a href="/article/nodejs">
+            <button type="button" class="btn shadow-sm rounded btn-success m-2 pl-3 pr-3">NodeJS</button></a>
+        </h3>
+      </div>
+    </div>
 
-      <div class="card card-search">
-        <div class="card-header card-header-search">
-          Đăng kí Email
+    <div class="card card-search">
+      <div class="card-header card-header-search">
+        Đăng kí Email
 
+      </div>
+      <div class="card-body card-body-search">
+        <div class="text-email-subscribe">
+          <p class="text-justify mt-4">Các bạn nhấp subscribe để nhận bài viết mới nhất từ mình nhé!</p>
         </div>
-        <div class="card-body card-body-search">
-          <div class="text-email-subscribe">
-            <p class="text-justify mt-4">Các bạn nhấp subscribe để nhận bài viết mới nhất từ mình nhé!</p>
-          </div>
-          <!-- Begin Mailchimp Signup Form -->
-          <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-          <style type="text/css">
-            #mc_embed_signup {
-              background: #fff;
-              clear: left;
-              font: 14px Helvetica, Arial, sans-serif;
-            }
+        <!-- Begin Mailchimp Signup Form -->
+        <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+        <style type="text/css">
+          #mc_embed_signup {
+            background: #fff;
+            clear: left;
+            font: 14px Helvetica, Arial, sans-serif;
+          }
 
-            /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+          /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
                          We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-          </style>
-          <div id="mc_embed_signup">
-            <form
-              action="https://gmail.us20.list-manage.com/subscribe/post?u=02f033de83f488a359d24bc9f&amp;id=85d0d8697c"
-              method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
-              target="_blank" novalidate>
-              <div id="mc_embed_signup_scroll">
+        </style>
+        <div id="mc_embed_signup">
+          <form action="https://gmail.us20.list-manage.com/subscribe/post?u=02f033de83f488a359d24bc9f&amp;id=85d0d8697c"
+            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+            target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
 
-                <div class="mc-field-group">
-                  <label for="mce-EMAIL" class="label-email mb-2">Email:
-                  </label>
-                  <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL"
-                    placeholder="Hãy nhập địa chỉ email của bạn">
+              <div class="mc-field-group">
+                <label for="mce-EMAIL" class="label-email mb-2">Email:
+                </label>
+                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL"
+                  placeholder="Hãy nhập địa chỉ email của bạn">
 
-                </div>
-                <div id="mce-responses" class="clear">
-                  <div class="response text-justify" id="mce-error-response" style="display:none"></div>
-                  <div class="response text-justify" id="mce-success-response" style="display:none"></div>
-                </div>
-                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-                    name="b_02f033de83f488a359d24bc9f_85d0d8697c" tabindex="-1" value=""></div>
-                <div class="clear"><input type="submit" value="Đăng Kí Email" name="subscribe"
-                    id="mc-embedded-subscribe" class="button"></div>
               </div>
-            </form>
-          </div>
-          <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-          <script type='text/javascript'>
-            (function ($) {
-              window.fnames = new Array();
-              window.ftypes = new Array();
-              fnames[0] = 'EMAIL';
-              ftypes[0] = 'email';
-              fnames[1] = 'FNAME';
-              ftypes[1] = 'text';
-              fnames[2] = 'LNAME';
-              ftypes[2] = 'text';
-              fnames[3] = 'ADDRESS';
-              ftypes[3] = 'address';
-              fnames[4] = 'PHONE';
-              ftypes[4] = 'phone';
-              fnames[5] = 'BIRTHDAY';
-              ftypes[5] = 'birthday';
-            }(jQuery));
-            var $mcj = jQuery.noConflict(true);
-          </script>
-          <!--End mc_embed_signup-->
-
+              <div id="mce-responses" class="clear">
+                <div class="response text-justify" id="mce-error-response" style="display:none"></div>
+                <div class="response text-justify" id="mce-success-response" style="display:none"></div>
+              </div>
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                  name="b_02f033de83f488a359d24bc9f_85d0d8697c" tabindex="-1" value=""></div>
+              <div class="clear"><input type="submit" value="Đăng Kí Email" name="subscribe" id="mc-embedded-subscribe"
+                  class="button"></div>
+            </div>
+          </form>
         </div>
+        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+        <script type='text/javascript'>
+          (function ($) {
+            window.fnames = new Array();
+            window.ftypes = new Array();
+            fnames[0] = 'EMAIL';
+            ftypes[0] = 'email';
+            fnames[1] = 'FNAME';
+            ftypes[1] = 'text';
+            fnames[2] = 'LNAME';
+            ftypes[2] = 'text';
+            fnames[3] = 'ADDRESS';
+            ftypes[3] = 'address';
+            fnames[4] = 'PHONE';
+            ftypes[4] = 'phone';
+            fnames[5] = 'BIRTHDAY';
+            ftypes[5] = 'birthday';
+          }(jQuery));
+          var $mcj = jQuery.noConflict(true);
+        </script>
+        <!--End mc_embed_signup-->
+
       </div>
     </div>
   </div>
+</div>
 </div>
 
 <script src='/javascripts/highlight.pack.js'></script>
@@ -259,5 +438,26 @@
       });
     })
   });
+</script>
+<script>
+  var container = document.getElementById('content-box');
+
+  $(window).on('load resize', (function () {
+    windowsize = $(window).width();
+
+    if ((windowsize <= 992) && (screen.height >= 768)) {
+      container.classList.remove('container');
+      container.classList.add('container-fluid')
+
+      //navbar
+      $('.nav-item').addClass('hvr-underline-from-left')
+    } else {
+      container.classList.add('container');
+      container.classList.remove('container-fluid')
+
+      //navbar
+      $('.nav-item').removeClass('hvr-underline-from-left')
+    }
+  }));
 </script>
 <%- include('footer') -%>
