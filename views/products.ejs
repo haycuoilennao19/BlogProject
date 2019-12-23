@@ -1,4 +1,50 @@
-<%- include('header') -%>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='/stylesheets/normalizes.css' />
+  <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+  <link rel='stylesheet' href='/stylesheets/darcula.css' />
+  <link rel='stylesheet' href='/stylesheets/hover-min.css' />
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <meta property="og:image" content="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576511394/Niemvuilaptrinh_jgc0rn.png">
+  <meta property="og:description" content="Xin Chào các bạn mình tạo trang này muốn chia sẻ những điều mà mình học được.
+  Chúng ta hãy cùng nhau tiến bộ nhé! Nếu có gì không hiểu cứ liên lạc với mình qua fanpage mình sẽ trả lời sớm nhất có thể.">
+  <meta property="og:title" content="Niềm Vui Lập Trình">
+  <!--Font Logo-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:400,700,800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/stylesheets/font-awesome/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top p-2">
+    <a class="navbar-brand" href="/">Niềm Vui Lập Trình</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span><i class="fa fa-navicon"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link mr-5 hvr-underline-from-left" href="/">Trang Chủ <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link hvr-underline-from-left mr-5" href="/about">Giới Thiệu</a>
+        </li>
+   
+
+    </div>
+  </nav>
 <!--Content-->
 <div class="jumbotron jumbotron-fluid image-slider">
     <div class="row">
@@ -72,24 +118,6 @@
     <% } %>
     </div>
     <div class="col-lg-4 context-box-scroll-right col-md-12 col-xs-12">
-      <!-- <div class="card card-search">
-        <div class="card-header card-header-search">
-          Tìm Kiếm
-         
-        </div>
-        <div class="card-body card-body-search">
-          <form class="mt-4 form-seacrh">
-            <div class="p-1 bg-light rounded rounded-pill shadow-sm">
-                <div class="input-group">
-                  <input type="search" placeholder="Bạn hãy nhập từ khóa!" aria-describedby="button-addon1" class="form-control border-0 bg-light">
-                  <div class="input-group-append">
-                    <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
-                  </div>
-                </div>
-              </div>
-              </form>
-              </div>
-        </div> -->
         <div class="mt-5"></div>
         <div class="card card-search">
             <div class="card-header card-header-category">
@@ -159,37 +187,63 @@
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v5.0&appId=2121975281235443&autoLogAppEvents=1"></script>
 <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 <script>
-ScrollReveal().reveal('.context-box-scroll', {duration: 1200, origin: 'left', distance: '800px',easing: 'ease-in-out'});
-ScrollReveal().reveal('.context-box-scroll-right', {duration: 1200, origin: 'right', distance: '800px',easing: 'ease-in-out'});
-ScrollReveal().reveal('.header-text', {duration: 1200, origin: 'bottom', distance: '1000px',easing: 'ease-in-out'});
-ScrollReveal().reveal('.content', {duration: 1200, origin: 'top', distance: '800px',easing: 'ease-in-out'});
+
 
 $(document).ready(function() {
   $('.page-link').addClass('hvr-underline-from-left');
 })
 </script>
 
-<script>
-  var container = document.getElementById('content-box');
-  
-  $(window).on('load resize', (function() {
-    windowsize = $(window).width();
+
+<!--Footer-->
+<div class="container-fluid footer">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-xs-12">
+            <div class="content-footer">
+              <h5>Góc trả lời</h5>
+              <p>Nếu các bạn có gì thắc mắc thì liên hệ mình qua những mạng xã hội sau đây nhé!</p>
+              <ul class="social-meadia-icon">
+                <li class="social-meadia-icon-item"><a href="https://www.facebook.com/Chia-S%E1%BA%BB-L%E1%BA%ADp-Tr%C3%ACnh-100797921404016/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li class="social-meadia-icon-item"><a href="https://twitter.com/ThaiVietNhat4?s=07"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li class="social-meadia-icon-item"><a href="mailto:niemvuilaptrinh2410@gmail.com" class="mailtoui"><i class="fa fa-google" aria-hidden="true"></i></a></li>     
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-xs-12">
     
-    if((windowsize <= 992)  && (screen.height>=768)) {
-      container.classList.remove('container');
-      container.classList.add('container-fluid')
+          </div>
+         
+        </div>
+      </div>
+   
+<!--End mc_embed_signup-->
+      <!--Footer-->
 
-      //navbar
-      $('.nav-item').addClass('hvr-underline-from-left')
-    } else{
-      container.classList.add('container');
-      container.classList.remove('container-fluid')
+    <script>
+      $(function () {
+        $(window).on('scroll', function () {
+          if( $(window).scrollTop() > 10) {
+            $('.navbar').addClass('active shadow');
+          } else {
+            $('.navbar').removeClass('active shadow')
+          }
+        })
+      })
+    </script>
+    
 
-      //navbar
-      $('.nav-item').removeClass('hvr-underline-from-left')
-    }
-  }));
-  
-</script>
-
-  <%- include('footer') -%>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+      </script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+      </script>
+     
+        <script src="https://cdn.jsdelivr.net/npm/mailtoui@1.0.3/dist/mailtoui-min.js" data-options='{ "buttonText2": "Gửi email bằng Outlook", "buttonText1": "Gửi email bằng Gmail" ,
+        "buttonText3": "Gửi email bằng Yahoo", "buttonText4": "Gửi email bằng Email app window", "title": "Gửi Email cho mình nhé!"}'></script>
+    </body>
+    
+    </html>
