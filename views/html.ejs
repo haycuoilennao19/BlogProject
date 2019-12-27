@@ -24,259 +24,342 @@
       <div class="card-text text-justify">
         <article>
           <h2 class="bg-primary mb-4 text-white rounded p-2 shadow"><i class="fa fa-cube" aria-hidden="true"></i> HTML
-            Bài 5</h2>
+            Bài 6</h2>
           <div class="article-title">
             <div class="progress-wrapper">
               <div class="progress-label"></div><progress></progress>
             </div>
           </div>
           <div class="text-content-article mt-5">
-            <p><i>Xin chào các bạn quay lại blog của mình. Trong bài này mình sẽ giới thiệu các bạn về <b>thẻ
-                  &#60;img&#62; và thẻ &#60;a&#62;</b>.Sau này làm web thì các bạn sẽ tiếp xúc rất nhiều
-                về hai thẻ này. Bây giờ hãy cùng nhau tìm hiểu nhé!</i>
+            <p><i>Xin chào các bạn quay lại blog của mình. Trong bài này mình sẽ giới thiệu các bạn về cấu trúc và cách
+                tạo bảng bằng thẻ HTML cho trang web của mình. Bây giờ hãy cùng nhau tìm hiểu nhé!</i>
             </p>
-            <h4><b><i class="fa fa-book" aria-hidden="true"></i> 1) Thẻ Hình ảnh : </b></h4>
-            <p>Hình ảnh được xem như là nội dung phổ biến trong web nó xuất hiện hầu như ở mọi trang web. Các bạn hãy
-              hình dung một trang web toàn chữ thì thật không bắt mắt và cũng như không
-              có gì minh họa cho những nội dung của chúng ta. Theo mình được biết thì ngày nay các trang web hầu như sử
-              dụng hình ảnh để làm nội dung và chữ thì sẽ càng ít càng tốt do cuộc
-              sống ngày nay bận rộn nên hầu như mọi người xem web chỉ chú ý những ý chính và thường không xem chữ
-              nhiều.<br />
-              Thẻ hình ảnh được tạo bởi thẻ <b>&#60;img&#62;</b>. Đây là thẻ <b>không có thẻ đóng</b> nhé các bạn. Để mà
-              hiển thị được hình ảnh thì chúng ta bắt buộc phải gán
-              thuộc tính <b>src</b> và cộng thêm thuộc tính <b>alt</b> cho thẻ.
-            </p><img
-              src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576996163/B%C3%A0i%205/the_imge_oki8qf.svg"
-              class="mb-4 mt-4" />
-            <p>Như các bạn thấy thì thẻ hình ảnh có thuộc tính <b>src</b> để xác định nơi mà chúng ta chứa hình ảnh (Có
-              thể là trên web hoặc có thể trên máy tính của mình).
-              Thuộc tính <b>alt</b> thì xác định thêm thông tin về hình ảnh (Nếu như hình ảnh không hiện thị thì những
-              dòng chữ trong thuộc tính này sẽ xuất hiện). Bây giờ hãy xem ví dụ
-              để hiểu rõ hơn nhé:</p>
-           <p><i><u>Đầu tiên các bạn tạo cho mình 1 thư mục có cấu trúc như sau:</u></i> </p>
-       
-              <img  width="200" height="200" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576995966/B%C3%A0i%205/folder_hp6uhn.svg" />
-        
-           <p>Ở đây thì các bạn có thể lấy bất cứ hình ảnh nào cũng được nhưng quan trọng là phải đúng đường dẫn thì trình duyệt mới hiện thị hình ảnh được nhé.</p>
-           <p><i><u>Bước tiếp theo là mình tạo cấu trúc cho file HTML bài 5: </u></i> </p>
-           <pre><code class="html">&#60;!DOCTYPE html&#62;<br />&#60;html&#62;<br />&#60;head&#62;<br />&#60;meta charset="utf-8"&#62;<br />&#60;title&#62;HTML bài 5&#60;/title&#62;<br />&#60;/head&#62;<br />&#60;body&#62;<br />&#60;h4&#62;Thẻ Hình Ảnh&#60;/h4&#62;<br />&#60;/body&#62;<br />&#60;/html&#62;</code></pre>
-           <p><i><u>Sau đó các bạn tạo chèn thẻ <b>&#60;img&#62;</b> vào trong file <b>bai5.html</b>:</u></i> </p>
-           <pre><code class="html">&#60;!DOCTYPE html&#62;<br />&#60;html&#62;<br />&#60;head&#62;<br />&#60;meta charset="utf-8"&#62;<br />&#60;title&#62;HTML bài 5&#60;/title&#62;<br />&#60;/head&#62;<br />&#60;body&#62;<br />&#60;h4&#62;Thẻ Hình Ảnh&#60;/h4&#62;<br />&#60;img src="nui.jpg" alt="Đồi núi tuyết" /&#62;<br />&#60;/body&#62;<br />&#60;/html&#62;</code></pre>
-           <p><i><u>Cuối cùng chúng ta sẽ có kết quả như sau:</b></u></i> </p>
-            <img class="shadow p-3" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576934159/B%C3%A0i%205/FireShot_Pro_Screen_Capture_003_-_HTML_b%C3%A0i_5_-_http_bwgkqd.png" />
-            <p  class="mt-4">Ngoài 2 thuộc tính <b>src</b> và <b>alt</b> của thẻ <b>&#60;img&#62;</b> thì mình sẽ giới thiệu thêm một số thuộc tính khác của thẻ hình ảnh. Đó là thuộc tính <b>height</b> và <b>width</b> giúp chúng ta điều chỉnh độ cao và độ dài của hình ảnh sao
-            cho phù hợp với nội dung của trang web. Các bạn xem ví dụ để nắm rõ hơn nhé!</p>
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="WNbpqmb" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Thẻ hình ảnh với chiều cao va chieu dài">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/WNbpqmb">
-              Thẻ hình ảnh với chiều cao va chieu dài</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
+            <h4><b><i class="fa fa-book" aria-hidden="true"></i> 1) Bảng trong HTML: </b></h4>
+            <p>Đầu tiên mình xin nói sơ qua một tí về bảng. Bảng được tạo thành bằng cách sắp xếp dữ liệu theo <b>hàng
+                và cột</b> giúp chúng ta tra cứu giá trị một cách nhanh chóng hoặc so sánh giá trị của nhiều dạng dữ
+              liệu khác nhau...
+              Để làm rõ hơn các bạn hãy xem ví dụ minh họa của mình về bảng :</p>
+            <img
+              src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1577176598/B%C3%A0i%206/bang_trong_HTML_nbeopo.svg"
+              width="400" height="400" />
+            <p>Như các bạn thấy thì mình có thể dễ dàng tìm ra những người trong lớp thích môn thể thao nào một cách
+              nhanh chóng thông qua bảng số liệu này. Các bạn cũng cần lưu ý là
+              tên của bảng phải khái quát được chức năng và dữ liệu của bảng mang lại cho người dùng. Vậy cách tạo bảng
+              trong HTML như thế nào?<br />
+              Bảng được tạo bởi thẻ <b>&#60;table&#62;</b> trong HTML với dữ liệu dòng được tạo bởi thẻ
+              <b>&#60;tr&#62;</b>, dữ liệu trong ô được tạo bởi thẻ <b>&#60;td&#62;</b> và
+              ô tiêu đề được tạo bởi thẻ <b>&#60;th&#62;</b>.
+              Ở đây mình lưu ý đến những từ viết tắt tiếng anh trong tên thẻ của bảng giúp các bạn dễ nhớ hơn:
+              <ul>
+                <li><b>Thẻ &#60;tr&#62;</b>: Đây là từ viết tắt của <b>table row</b> có nghĩa là dòng trong bảng</li>
+                <li><b>Thẻ &#60;td&#62;</b>: Đây là từ viết tắt của <b>table data</b> có nghĩa là dữ liệu trong bảng
+                </li>
+                <li><b>Thẻ &#60;th&#62;</b>: Đây là từ viết tắt của <b>table headers</b> có nghĩa là tiêu đề trong bảng
+                </li>
+              </ul>
             </p>
-            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-            
-            <p class="mt-4">
-              Có một chú ý nhỏ là không nhất thiết các bạn phải lưu hình ảnh vào máy tính  rồi sau đó mới có thể sử dụng. Ví dụ dưới đây giúp các bạn hiểu rõ hơn cách lấy hình ảnh từ đường dẫn trên trang web để chèn vào file HTML của mình :  
+            <p>Các bạn xem ví dụ minh họa của mình về cấu trúc của bảng nhé:</p>
+            <img
+              src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1577198451/B%C3%A0i%206/bang_chi_tiet_trong_HTML_ymgpng.svg" />
+            <p>Như các bạn thấy thì bên trong thẻ <b>&#60;table&#62;</b> thì sẽ chứa thẻ con là <b>&#60;tr&#62;</b> là
+              để hiện thị số hàng có trong bảng và <b>&#60;td&#62;</b> hiển thị số ô có trong một dòng.
+              Để cho do hiểu thì chúng mình hãy cùng nhau đi vào chi tiết cấu trúc một bảng nhé:
             </p>
-            <div class="row">
-              
-              <div class="col-md-6 col-sm-12">
-                <div class="shadow p-2">
-                <h5 class="text-center bg-primary text-white p-2">Mã Code HTML</h5>
-                <pre><code class="html">&#60;img src="https://www.dl.dropboxusercontent.com/s/tsy249ore8fnjzm/lake-4697441_1280.jpg?dl=0 /&#62;</code></pre>
-              </div>
-              </div>
-              <div class="col-md-6 col-sm-12">
-                <div class="shadow p-2">
-                <h5 class="text-center bg-primary text-white p-2">Hiện thị trên Web</h5>
-                <img src="https://www.dl.dropboxusercontent.com/s/tsy249ore8fnjzm/lake-4697441_1280.jpg?dl=0" />
-             </div>
-              </div>
-            </div>
-        
-           <p class="mt-4"><b>Một số lưu ý khi sử dụng hình ảnh cho trang web:</b></p>
-           <ul>
-             <li>Đa số những web thông dụng thì thường lưu hình ảnh dưới dạng là <b>jpeg , gif, png và svg</b>. Các bạn cũng thể chọn những định dạng khác nhưng như vậy nhiều  khi sẽ làm 
-            kích thước hình ảnh của chúng ta lớn làm ảnh hưởng đến quá trình tải trang. </li>
-            <li>Dùng thuộc tính <b>alt</b> trong thẻ hình ảnh sẽ giúp cho trang web của các bạn được Goole dễ tìm thấy hơn. Nhưng đừng vì vậy mà ghi dài dòng nhằm để 
-           SEO tốt hơn. Hình ảnh với miêu tả như vậy sẽ bị cho là đánh giá không tốt. Các bạn cứ nhớ khi dùng thẻ <b>&#60;img&#62;</b> thì luôn kèm theo thuộc tính <b>alt</b> với miêu tả ngắn gọn xúc tích.  </li>
-              <li>Khi sử dụng hình ảnh các bạn nên cân nhắc bản quyền. Nhiều hình ảnh phải có quyền thì mình mới sử dụng được, nên mình sẽ giới thiệu các bạn một số trang giúp sử dụng hình ảnh chất lượng cao miễn phí như là:
-                <ul>
-                  <li><a href="https://www.pexels.com/vi-vn/" target="_blank">Pexels</a>:  cung cấp kho ảnh chất lượng cao và hoàn toàn miễn phí có giấy phép Pexels.</li>
-                  <li><a href="https://pixabay.com/" target="_blank">Pixabay</a>: Cung cấp những hình ảnh chất lượng với nhiều dạng định dạng khác nhau.</li>
-                  <li><a href="https://unsplash.com/" target="_blank">Unsplash</a>: Cung cấp nhiều hình ảnh miễn phí chất lượng tốt.</li>
-                  <li><a href="https://www.freepik.com/" target="_blank">Freepik</a>: Cung cấp những hình ảnh định svg chất lượng cao. (Các bạn có thể dùng miễn phí hoặc trả phí)</li>
-                </ul>
-              </li>
-              <li>Các bạn nên giảm kích thước hình ảnh để giúp trang web có thể tải và chạy nhanh hơn với một số trang web sau đây:
-                <ul>
-                  <li><a href="https://imagecompressor.com/" target="_blank">Imagecompressor</a></li>
-                  <li><a href="https://tinypng.com/" target="_blank">Tinypng</a></li>
-                  <li><a href="https://compressor.io/" target="_blank">compressor</a></li>
-                </ul>
-              </li>
-          </ul>
-          
-           <p>Mình đã giới thiệu sơ lược qua cách đưa hình ảnh vào trang web. Khi học CSS mình sẽ giới thiệu chi tiết hơn về cách dùng hình ảnh cho nội dung của mình. Tiếp theo chúng ta sẽ tiếp tục tìm hiểu về thẻ 
-             đường dẫn được sử dụng đa số trong các trang web.
-           </p>
-           <h4><b><i class="fa fa-book" aria-hidden="true"></i> 2) Thẻ đường dẫn : </b></h4>
-          <p>Chúng ta có thể viết những đường dẫn tới những trang web khác hoặc một phần nội dung trong trang web bằng thẻ <b>&#60;a&#62;</b>. Thẻ này cũng có những thuộc tính bắt buộc như thẻ hình ảnh (<b>src</b>). Đó là thuộc tính 
-           <b>href</b> với giá trị thuộc tính dùng để xác định đường dẫn mà chúng ta muốn hướng tới. Chữ nội dung nằm giữa thẻ <b>&#60;a&#62;</b> là nơi mà người dùng nhấp vào để chuyển tiếp đến trang web khác. Để 
-           dễ hình dung hơn thì mình sẽ có hình ảnh minh họa cấu trúc như sau:</p>
-           <img src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576943748/B%C3%A0i%205/the_duong_dan3_yrc6au.svg" />
-            <p>Với thuộc tính <b>href</b> thì chúng ta có thể chèn nhiều loại đường dẫn khác nhau (Cái này mình sẽ nói rõ hơn ở phần sau). Chữ đại diện cho đường dẫn có thể là chữ hoặc hình ảnh
-            . Để làm rõ hơn chúng ta cùng đi vào ví dụ nhé:</p>
             <div class="row">
               <div class="col-md-12 col-sm-12">
                 <div class=" shadow p-2">
-                <h5 class="text-center bg-primary text-white p-2">Mã Code HTML</h5>
-                <p><b><u>Đại diện đường dẫn là chữ: </u></b></p>
-                <pre><code class="html">&#60;a href="https://www.google.com.vn/"&#62;Google&#60;/a&#62;</code></pre>
-                <p><b><u>Đại diện đường dẫn là hình ảnh: </u></b></p>
-                <pre><code class="html">&#60;a href="https://www.google.com.vn/"&#62;&#60;img src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576991629/B%C3%A0i%205/search_1_li5c4h.svg" />&#60;/a&#62;</code></pre>
-              </div>
+                  <h5 class="text-center bg-primary text-white p-2 mb-4">Mã Code HTML</h5>
+                  <pre><code class="html">&#60;table&#62;<br /> &#60;tr&#62;<br /> &#60;th&#62;Tên học sinh&#60;/th&#62;<br /> &#60;th&#62;Môn thể thao&#60;/th&#62;<br /> &#60;/tr&#62;<br /> &#60;tr&#62;<br /> &#60;td&#62;Nguyễn Văn A&#60;/td&#62;<br /> &#60;td&#62;Đá banh&#60;/td&#62;<br /> &#60;/tr&#62;<br /> &#60;tr&#62;<br /> &#60;td&#62;Nguyễn Văn B&#60;/td&#62;<br /> &#60;td&#62;Cầu lông&#60;/td&#62;<br /> &#60;/tr&#62;<br /> &#60;tr&#62;<br /> &#60;td&#62;Nguyễn Văn C&#60;/td&#62;<br /> &#60;td&#62;Bóng chuyền&#60;/td&#62;<br /> &#60;/tr&#62;<br /> &#60;/table&#62;<br /></code></pre>
+                </div>
               </div>
               <div class="col-md-12 col-sm-12 mt-4">
                 <div class=" shadow p-2">
-                <h5 class="text-center bg-primary text-white p-2">Hiện thị trên Web</h5>
-                <p><b><u>Đại diện đường dẫn là chữ: </u></b></p>
-                <a href="https://www.google.com.vn/">Google</a>
-                <p><b><u>Đại diện đường dẫn là hình ảnh: </u></b></p>
-                <div class="w-25 p-3" style="background-color: #eee;">
-                  <a class="img-fluid" href="https://www.google.com.vn/"><img src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576991629/B%C3%A0i%205/search_1_li5c4h.svg" width="64" height="64" alt="image google icon"/></a> 
+                  <h5 class="text-center bg-primary text-white p-2 mb-4">Hiện thị trên Web</h5>
+<table>
+ <tr>
+ <th>Tên học sinh</th>
+ <th>Môn thể thao</th>
+ </tr>
+ <tr>
+ <td>Nguyễn Văn A</td>
+ <td>Đá banh</td>
+ </tr>
+ <tr>
+ <td>Nguyễn Văn B</td>
+ <td>Cầu lông</td>
+ </tr>
+ <tr>
+ <td>Nguyễn Văn C</td>
+ <td>Bóng chuyền</td>
+ </tr>
+ </table>
                 </div>
-                
-                  </div>
               </div>
-              </div>
-              <p class="mt-4"><b><u>Tiếp theo mình sẽ cùng nhau tìm hiểu về cách tạo đường dẫn liên kết với các trang HTML trong thư mục.</u></b></p>
-              <p>Chúng ta sẽ tạo một thư mục chứa hai file HTML là <b>trangchinh.html và gioithieu.html</b>.</p>
-              <img src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576995723/B%C3%A0i%205/folderlink_jrqdd7.svg" width="200" height="200"/>
-              <p class="mt-4">Sau đó chúng ta thêm đường dẫn từ trang <b>trangchinh.html</b> đến trang <b>gioithieu.html</b> bằng cách chèn đoạn code sau đây:</p>
-              <p class="text-primary"><b>trangchinh.html</b></p>
-              <pre><code class="html">&#60;!DOCTYPE html&#62;<br/>&#60;html&#62;<br/>&#60;head&#62;<br/>&#60;meta charset="utf-8"&#62;<br/>&#60;title&#62;HTML bài 5&#60;/title&#62;<br/>&#60;/head&#62;<br/>&#60;body&#62;<br/>&#60;h4&#62;Đường dẫn đến trang giới thiệu&#60;/h4&#62;<br/>&#60;a href="gioithieu.html"&#62;Giới thiệu&#60;/a&#62;<br/>&#60;/body&#62;<br/>&#60;/html&#62;</code></pre>
-              <p class="text-primary"><b>gioithieu.html</b></p>
-              <pre><code class="html">&#60;!DOCTYPE html&#62;<br/>&#60;html&#62;<br/>&#60;head&#62;<br/>&#60;meta charset="utf-8"&#62;<br/>&#60;title&#62;HTML bài 5&#60;/title&#62;<br/>&#60;/head&#62;<br/>&#60;body&#62;<br/>&#60;p&#62;Xin chào các bạn đến với trang web của mình. Chúc các bạn học tập thật tốt nhé!&#60;/p&#62;<br/>&#60;/body&#62;<br/>&#60;/html&#62;</code></pre>
-
-              <p class="mt-4 mb-4">Khi các bạn nhấn vào đường dẫn liên kết <span class="text-primary"><u>Giới thiệu</u></span> ở <b>trangchinh.html</b> thì trình duyệt sẽ tự động chuyển sang trang <b>gioithieu.html</b> như hình ở dưới đây: </p>
-              <img src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576999715/B%C3%A0i%205/h%C3%ACnhanhlienket_smxjcb.png" />
-
-              <h5 class="mt-4"><b><i class="fa fa-external-link-square" aria-hidden="true"></i> Một số thuộc tính của thẻ đường dẫn:</b></h5>
-              <h6 class="ml-4"><u>Thuộc tính <b>target</b> trong thẻ đường dẫn:</u></h6>
-              <p>Thuộc tính này có tác dụng khi người dùng nhấp vào đường dẫn liên kết của chúng ta thì trình duyệt sẽ hiển thị trang web được liên kết bằng một cửa sổ hoặc một thẻ mới.</p>
-              <div class="row">
-                <div class="col-md-12 col-sm-12">
-                  <div class=" shadow p-2">
-                  <h5 class="text-center bg-primary text-white p-2">Mã Code HTML</h5> 
-                  <pre><code class="html">&#60;a href="https://www.google.com.vn/" target="_blank"&#62;Mở cửa sổ mới tới trang Google&#60;/a&#62;</code></pre>
-                </div>
-                </div>
-                <div class="col-md-12 col-sm-12 mt-4">
-                  <div class=" shadow p-2">
-                  <h5 class="text-center bg-primary text-white p-2">Hiện thị trên Web</h5>
-                  <a href="https://www.google.com.vn/" target="_blank">Mở cửa sổ mới tới trang Google</a>
-                    </div>
-                </div>
-                </div>
-                <p class="ml-4 mt-4"><u>Giá trị <b>mailto:</b> trong thuộc tính <b>href</b>:</u></p>
-                <p>Khi người dùng nhấp vào liên kết có giá trị thuộc tính này thì nó sẽ khởi động chương trình email có sẵn trong trong máy và tự động điền địa chỉ gửi mail được lấy trong
-                  giá trị thuộc tính. Các bạn xem ví dụ để nắm rõ hơn nhé:
-                </p>
+            </div>
+<p class="mt-4">Các bạn có thể thấy một bảng trong HTML khá là đơn giản và rất khó nhìn vì vậy bây giờ chúng ta sẽ đi vào các thuộc tính trong bảng giúp cho nó sinh động và hữu ích hơn.</p>
+            <h5 class="ml-5"><b>Thuộc tính style trong bảng:</b></h5>
+            <p>Giá trị thuộc tính <b>border</b> trong thuộc tính <b>style</b> giúp chúng ta có thể tạo đường viền xung quanh bảng giúp cho nó dễ nhìn hơn. Chúng ta đã học thuộc tính <b>style</b> trong bài 
+            đoạn văn với cấu trúc như sau:</p>
+            <pre><code class="html">&#60;p style="color:red"&#62;Nội dung&#60;/p&#62;</code></pre>
+            <p>Thì các bạn thấy là thuộc tính này được đặt trực tiếp vào thẻ HTML. Nhiều khi có quá nhiều giá trị thuộc tính CSS trong thuộc tính <b>style</b> sẽ làm cho chúng ta sau này nhìn vào code dễ bị rối và khó khăn trong việc sữa lỗi.
+            Vậy nên chúng ta có một cách nữa là đặt thẻ này nằm ở trong thẻ <b>&#60;head&#62;</b>. Cũng với ví dụ thẻ <b>&#60;p&#62;</b> nhưng mình sẽ đặt thuộc tính <b>style</b> nằm trong thẻ <b>&#60;head&#62;</b>: </p>
+            <pre><code class="html">&#60;!DOCTYPE html&#62;<br /> &#60;html&#62;<br /> &#60;head&#62;<br /> &#60;style&#62;<br /> p {color:red;}<br /> &#60;/style&#62;<br /> &#60;/head&#62;<br /> &#60;body&#62;<br /> &#60;p&#62;Nội Dung&#60;/p&#62;<br /> &#60;/body&#62;<br /> &#60;/html&#62;<br /></code></pre>
+              <p>Ta có thể thấy là ở trong thẻ  <b>&#60;head&#62;</b> thì thuộc tính style đã được chuyển sang thẻ  <b>&#60;style&#62;</b>. Trong thẻ này thì ta sẽ có cú pháp như sau:
+                <p class="text-center mt-4 mb-4"><span class="p-3 bg-primary text-white" style="font-size:1rem">Tên Thẻ</span><span class="p-3 text-white bg-success">{ giá trị thuộc tính CSS }</span></p>
+                <p>Sau này các bạn học sâu hơn thì ta  ngoài lựa chọn phần tử theo <b>tên thẻ</b> thì mình cũng có thể chọn theo <b>Class hay Id</b>. Mình sẽ có một bài nói riêng về vấn đề này nhé.<b><br />
+                  Lưu ý là khi ta dùng phương pháp chọn tên thẻ này thì nó sẽ chọn tất cả các thẻ &#60;p&#62; có trong file HTML hiện tại và như ví dụ trên là tất cả thẻ này đều có chữ màu đỏ nhé!
+                </b></p>
+                <p>Bây giờ thì chúng ta thử tạo đường viền cho bảng bằng đoạn code sau nhé: </p>
                 <div class="row">
                   <div class="col-md-12 col-sm-12">
                     <div class=" shadow p-2">
-                    <h5 class="text-center bg-primary text-white p-2">Mã Code HTML</h5> 
-                    <pre><code class="html">&#60;a href="mailto:niemvuilaptrinh2410@gmail.com" &#62;Gửi mail tới niềm vui lập trình&#60;/a&#62;</code></pre>
-                  </div>
+                      <h5 class="text-center bg-primary text-white p-2 mb-4">Mã Code HTML</h5>
+                      <pre><code class="html">&#60;!DOCTYPE html><br /> &#60;html><br /> &#60;title>HTML bài 6&#60;/title><br /> &#60;head><br /> &#60;style><br /> td, th {<br /> border: 1px solid black;<br /> padding: 16px; <br />}<br /> &#60;/style><br /> &#60;/head><br /> &#60;body><br /> &#60;table><br /> &#60;tr><br /> &#60;th>Tên học sinh&#60;/th><br /> &#60;th>Môn thể thao&#60;/th><br /> &#60;/tr><br /> &#60;tr><br /> &#60;td>Nguyễn Văn A&#60;/td><br /> &#60;td>Đá banh&#60;/td><br /> &#60;/tr><br /> &#60;tr><br /> &#60;td>Nguyễn Văn B&#60;/td><br /> &#60;td>Cầu lông&#60;/td><br /> &#60;/tr><br /> &#60;tr><br /> &#60;td>Nguyễn Văn C&#60;/td><br /> &#60;td>Bóng chuyền&#60;/td><br /> &#60;/tr><br /> &#60;/table><br /> &#60;/body><br /> &#60;/html><br /></code></pre>
+                    </div>
                   </div>
                   <div class="col-md-12 col-sm-12 mt-4">
                     <div class=" shadow p-2">
-                    <h5 class="text-center bg-primary text-white p-2">Hiện thị trên Web</h5>
-                    <a href="mailto:niemvuilaptrinh2410@gmail.com">Gửi mail tới niềm vui lập trình</a>
-                      </div>
+                      <h5 class="text-center bg-primary text-white p-2 mb-4">Hiện thị trên Web</h5>
+    <table>
+     <tr>
+     <th style="border:1px solid black; padding:16px;">Tên học sinh</th>
+     <th style="border:1px solid black; padding:16px;">Môn thể thao</th>
+     </tr>
+     <tr>
+     <td style="border:1px solid black; padding:16px;">Nguyễn Văn A</td>
+     <td style="border:1px solid black; padding:16px;">Đá banh</td>
+     </tr>
+     <tr>
+     <td style="border:1px solid black; padding:16px;">Nguyễn Văn B</td>
+     <td style="border:1px solid black; padding:16px;">Cầu lông</td>
+     </tr>
+     <tr>
+     <td style="border:1px solid black; padding:16px;">Nguyễn Văn C</td>
+     <td style="border:1px solid black; padding:16px;">Bóng chuyền</td>
+     </tr>
+     </table>
+                    </div>
                   </div>
-                  </div>
-                  <h6 class="ml-4 mt-4"><u>Giá trị <b>tel:</b> trong thuộc tính <b>href</b>:</u></h6>
-                  <p>Khi người dùng nhấp vào liên kết có giá trị thuộc tính này thì nó sẽ tự động gọi đến số mà chúng ta đã chèn vào liên kết. Cái này thì mình thấy thường sử dụng trên điện thoại là chủ yếu. Các bạn xem ví dụ để nắm rõ hơn nhé:
-                  </p>
-                  <div class="row">
-                    <div class="col-md-12 col-sm-12">
-                      <div class=" shadow p-2">
-                      <h5 class="text-center bg-primary text-white p-2">Mã Code HTML</h5> 
-                      <pre><code class="html">&#60;a href="tel:+84.123.456789" &#62;Gửi mail tới niềm vui lập trình&#60;/a&#62;</code></pre>
-                    </div>
-                    </div>
-                    <div class="col-md-12 col-sm-12 mt-4">
-                      <div class=" shadow p-2">
-                      <h5 class="text-center bg-primary text-white p-2">Hiện thị trên Web</h5>
-                      <a href="tel:+84.123.456789">Gọi điện tới niềm vui lập trình</a>
-                        </div>
-                    </div>
-                    </div>
-                    <h6 class="ml-4 mt-4"><u>Thuộc tính <b>download</b> :</u></h6>
-                    <p>Khi chúng ta có những hình ảnh, văn bản, pdf... cho phép người dùng tải xuống để sử dụng thì thuộc tính này có tác dụng là khi người dùng nhấp vào đường dẫn  vào thì nó sẽ tự động tải xuống máy của họ. Các bạn xem ví dụ để nắm rõ hơn nhé:
-                    </p>
-                    <div class="row">
-                      <div class="col-md-12 col-sm-12">
-                        <div class=" shadow p-2">
-                        <h5 class="text-center bg-primary text-white p-2">Mã Code HTML</h5> 
-                        <pre><code class="html">&#60;a href="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576917325/B%C3%A0i%205/nui_aeo3ec.jpg" download&#62;Gửi mail tới niềm vui lập trình&#60;/a&#62;</code></pre>
-                      </div>
-                      </div>
-                      <div class="col-md-12 col-sm-12 mt-4">
-                        <div class=" shadow p-2">
-                        <h5 class="text-center bg-primary text-white p-2">Hiện thị trên Web</h5>
-                        <a href="" download="https://images.pexels.com/photos/245535/pexels-photo-245535.jpeg?cs=srgb&dl=gh-ng-i-m-c-m-c-nha-hang-nhieu-cai-ghe-245535.jpg" >Gọi điện tới niềm vui lập trình</a>
-                          </div>
-                      </div>
-                      </div>
-
-            <h5 class="ml-5 mt-4"><b>4) Cách lồng thẻ vào với nhau:</b></h5>
-            <p>Đôi lúc các bạn cần lồng những danh sách vào với nhau thì các bạn xem mình ví dụ dưới đây để có thể nắm
-              rõ hơn nhé:</p>
-            <div class="row">
-              <div class="col-md-6 col-sm-12">
-                <h5 class="text-center bg-primary text-white p-2">Mã Code HTML</h5>
-                <p><b>&#60;ul&#62;<br />
-                    &#60;li&#62;Trứng<br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#60;ul&#62;<br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;Trứng gà&#60;/li&#62;<br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;Trứng vịt&#60;/li&#62;<br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#60;/ul&#62;<br />
-                    &#60;/li&#62;<br />
-                    &#60;li&#62;Sữa&#60;/li&#62;<br />
-                    &#60;li&#62;Thịt&#60;/li&#62;<br />
-                    &#60;/ul&#62;</b>
-                </p>
-              </div>
-              <div class="col-md-6 col-sm-12">
-                <h5 class="text-center bg-primary text-white p-2">Hiện thị trên Web</h5>
-                <ol>
-                  <li>Trứng
-                    <ul>
-                      <li>Trứng gà</li>
-                      <li>Trứng vịt</li>
-                    </ul>
-                  </li>
-                  <li>Sữa</li>
-                  <li>Thịt</li>
-                </ol>
-              </div>
-            </div>
+                </div>
+<p class="mt-4">Như các bạn thấy thì mình đã có đường viền cho bảng. Còn các giá trị thuộc tính  CSS trong thẻ <b>style</b> này thì mình sẽ nói rõ hơn trong khi học CSS nhé. Sẽ có vài bạn học qua thì 
+sẽ nói tại sao mình phải làm rắc rối như vậy vì thẻ <b>&#60;table&#62;</b> cũng có thuộc tính <b>border</b> cho phép tạo ra đường viền như ví dụ sau đây: </p>
 
 
-            <h4 class="mt-4"> <b><i class="fa fa-question-circle-o" aria-hidden="true"></i> Bài tập HTML: </b></h4>
+<div class="row">
+  <div class="col-md-12 col-sm-12">
+    <div class=" shadow p-2">
+      <h5 class="text-center bg-primary text-white p-2 mb-4">Mã Code HTML</h5>
+      <pre><code class="html">&#60;table  border="2"&#62;<br /> &#60;tr&#62;<br /> &#60;th&#62;Tên học sinh&#60;/th&#62;<br /> &#60;th&#62;Môn thể thao&#60;/th&#62;<br /> &#60;/tr&#62;<br /> &#60;tr&#62;<br /> &#60;td&#62;Nguyễn Văn A&#60;/td&#62;<br /> &#60;td&#62;Đá banh&#60;/td&#62;<br /> &#60;/tr&#62;<br /> &#60;tr&#62;<br /> &#60;td&#62;Nguyễn Văn B&#60;/td&#62;<br /> &#60;td&#62;Cầu lông&#60;/td&#62;<br /> &#60;/tr&#62;<br /> &#60;tr&#62;<br /> &#60;td&#62;Nguyễn Văn C&#60;/td&#62;<br /> &#60;td&#62;Bóng chuyền&#60;/td&#62;<br /> &#60;/tr&#62;<br /> &#60;/table&#62;<br /></code></pre>
+    </div>
+  </div>
+  <div class="col-md-12 col-sm-12 mt-4">
+    <div class=" shadow p-2">
+      <h5 class="text-center bg-primary text-white p-2 mb-4">Hiện thị trên Web</h5>
+<table border="2">
+<tr>
+<th >Tên học sinh</th>
+<th >Môn thể thao</th>
+</tr>
+<tr>
+<td >Nguyễn Văn A</td>
+<td >Đá banh</td>
+</tr>
+<tr>
+<td >Nguyễn Văn B</td>
+<td >Cầu lông</td>
+</tr>
+<tr>
+<td >Nguyễn Văn C</td>
+<td >Bóng chuyền</td>
+</tr>
+</table>
+    </div>
+  </div>
+</div>
+<p class="mt-4">Các thuộc tính như vậy trong bảng HTML thì <b>không khuyến khích sử dụng</b> vì bây giờ thì nó <b>không được hỗ trợ</b> trong HTML5. Nên chúng ta phải dùng giá trị thuộc tính CSS để xét đường viền cho bảng.
+Cũng có các thuộc tính khác mà cũng không được sử dụng trong bảng  nữa là <mark>align</mark>, <mark>bgcolor</mark>, <mark>cellpadding</mark>, <mark>cellspacing</mark>, <mark>width</mark>... Các thuộc tính này nếu các bạn muốn tìm hiểu để đọc và hiểu các thuộc tính bảng trong HTML cũ thì có thế 
+truy cập vào đây xem nhé <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table" target="_blank" title="Thuộc tính bảng" >Thuộc tính cũ trong table</a>.</p>
+<h5 class="ml-5"><b>Cách gộp cột trong bảng HTML:</b></h5>
+Trong bảng có thuộc tính cho phép chúng ta gộp cột có tên là <b>colspan</b> được sử dụng trong hai thẻ là <b>&#60;th&#62; và &#60;td&#62;</b>. Như tên gọi thì chức năng của nó giúp chúng ta 
+gộp hai hay nhiều ô theo chiều từ trái sang phải lại với nhau. Bây giờ thì chúng ta hãy cùng nhau đi tìm hiểu thông qua ví dụ sau đây nhé:
+
+<div class="row">
+  <div class="col-md-12 col-sm-12">
+    <div class=" shadow p-2">
+      <h5 class="text-center bg-primary text-white p-2 mb-4">Mã Code HTML</h5>
+      <pre><code class="html">&#60;table&#62;<br /> &#60;tr&#62;<br /> &#60;th style="border:1px solid black; padding:16px;"&#62;&#60;/th&#62;<br /> &#60;th style="border:1px solid black; padding:16px;"&#62;7h đến 8h&#60;/th&#62;<br /> &#60;th style="border:1px solid black; padding:16px;"&#62;8h đến 9h&#60;/th&#62;<br /> &#60;th style="border:1px solid black; padding:16px;"&#62;9h đến 10h&#60;/th&#62;<br /> &#60;/tr&#62;<br /> &#60;tr&#62;<br /> &#60;td style="border:1px solid black; padding:16px;"&#62;Thứ hai&#60;/td&#62;<br /> &#60;td style="border:1px solid black; padding:16px;"&#62;Toán&#60;/td&#62;<br /> &#60;td style="border:1px solid black; padding:16px;"&#62;Văn&#60;/td&#62;<br /> &#60;td style="border:1px solid black; padding:16px;"&#62;Anh&#60;/td&#62;<br /> &#60;/tr&#62;<br /> &#60;tr&#62;<br /> &#60;td style="border:1px solid black; padding:16px;"&#62;Thứ ba&#60;/td&#62;<br /> &#60;td colspan="2" style="border:1px solid black; padding:16px;"&#62;Thể Dục&#60;/td&#62;<br /> &#60;td style="border:1px solid black; padding:16px;"&#62;Lịch Sử&#60;/td&#62;<br /> &#60;/tr&#62;<br /> &#60;/table&#62;</code></pre>
+    </div>
+  </div>
+  <div class="col-md-12 col-sm-12 mt-4">
+    <div class=" shadow p-2">
+      <h5 class="text-center bg-primary text-white p-2 mb-4">Hiện thị trên Web</h5>
+      <table>
+        <tr>
+          <th style="border:1px solid black; padding:16px;"></th>
+        <th style="border:1px solid black; padding:16px;">7h đến 8h</th>
+        <th style="border:1px solid black; padding:16px;">8h đến 9h</th>
+        <th style="border:1px solid black; padding:16px;">9h đến 10h</th>
+        </tr>
+        <tr>
+        <td style="border:1px solid black; padding:16px;">Thứ hai</td>
+        <td style="border:1px solid black; padding:16px;">Toán</td>
+        <td style="border:1px solid black; padding:16px;">Văn</td>
+        <td style="border:1px solid black; padding:16px;">Anh</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid black; padding:16px;">Thứ ba</td>
+          <td colspan="2" style="border:1px solid black; padding:16px;">Thể Dục</td>
+          <td style="border:1px solid black; padding:16px;">Lịch Sử</td>
+        </tr>
+       
+        </table>
+    </div>
+  </div>
+</div>
+<p class="mt-4">
+  Ở đây thì các bạn thấy ở <b>ô thể dục</b> thì mình đã gộp hai cột với nhau bằng thuộc tính là <b>colspan="2"</b>. Bằng cách thay đổi giá trị thuộc tính này thì có thể gộp được hai hay nhiều cột như
+  <i>colspan="3",colspan="4"...</i> Nhưng các bạn phải để ý là giá trị thuộc tính gộp cột lúc nào cũng nhỏ hơn so với số cột có trong bảng nhé. Một lưu ý nhỏ nữa là mình ghi trực tiếp thuộc tính <b>style</b>
+  vào  các thẻ <b>th, td</b> để các bạn dễ nhìn và đỡ mất công phải ghi thêm một file HTML để cài đặt thẻ <b>&#60;style&#62;</b> trong <b>&#60;head&#62;</b>.
+</p>
+<h5 class="ml-5"><b>Cách gộp dòng trong bảng HTML:</b></h5>
+<p>Thì cũng như gộp cột thì trong bảng HTML cho phép chúng ta có thể gộp nhiều dòng lại với nhau bằng thuộc tính <b>rowspan</b> được sử dụng trong hai thẻ <b>&#60;th&#62; và &#60;td&#62;</b>rowspan</b>>. Nó giúp chúng ta gộp hai 
+hay nhiều ô lại với nhau theo chiều từ trên xuống dưới. Bây giờ thì chúng ta hãy cùng nhau đi tìm hiểu thông qua ví dụ sau đây nhé:</p>
+<div class="row">
+  <div class="col-md-12 col-sm-12">
+    <div class=" shadow p-2">
+      <h5 class="text-center bg-primary text-white p-2 mb-4">Mã Code HTML</h5>
+      <pre><code class="html">&#60;table&#62;<br /> &#60;tr&#62;<br /> &#60;th style="border:1px solid black; padding:16px;"&#62;&#60;/th&#62;<br /> &#60;th style="border:1px solid black; padding:16px;"&#62;Đài VTV2&#60;/th&#62;<br /> &#60;th style="border:1px solid black; padding:16px;"&#62;Đài VTV3&#60;/th&#62;<br /> &#60;/tr&#62;<br /> &#60;tr&#62;<br /> &#60;td style="border:1px solid black; padding:16px;"&#62;7h đến 8h&#60;/td&#62;<br /> &#60;td style="border:1px solid black; padding:16px;" rowspan="2" &#62;Phim tài liệu&#60;/td&#62;<br /> &#60;td style="border:1px solid black; padding:16px;"&#62;Ca nhạc&#60;/td&#62;<br /> &#60;/tr&#62;<br /> &#60;tr&#62;<br /> &#60;td style="border:1px solid black; padding:16px;"&#62;8h đến 9h&#60;/td&#62;<br /> &#60;td style="border:1px solid black; padding:16px;"&#62;Phim truyền hình&#60;/td&#62;<br /> &#60;/tr&#62;<br /> &#60;/table&#62;<br /></code></pre>
+    </div>
+  </div>
+  <div class="col-md-12 col-sm-12 mt-4">
+    <div class=" shadow p-2">
+      <h5 class="text-center bg-primary text-white p-2 mb-4">Hiện thị trên Web</h5>
+      <table>
+        <tr>
+          <th style="border:1px solid black; padding:16px;"></th>
+        <th style="border:1px solid black; padding:16px;">Đài VTV2</th>
+        <th style="border:1px solid black; padding:16px;">Đài VTV3</th>
+        </tr>
+        <tr>
+        <td style="border:1px solid black; padding:16px;">7h đến 8h</td>
+        <td style="border:1px solid black; padding:16px;" rowspan="2" >Phim tài liệu</td>
+        <td style="border:1px solid black; padding:16px;">Ca nhạc</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid black; padding:16px;">8h đến 9h</td>
+          <td style="border:1px solid black; padding:16px;">Phim truyền hình</td>
+        </tr>
+       
+        </table>
+    </div>
+  </div>
+</div>
+<p class="mt-4">Mình đã gắn thuộc tính <b>rowspan="2"</b> vào ô <b>Phim tài liệu</b> các bạn cũng có thể thay đổi số ô được gộp như trong tính chất của gộp cột vậy.</p>
+<h5 class="ml-5"><b>Chú thích trong bảng HTML:</b></h5>
+<p>Khi nhìn vào một bảng thì người dùng cũng khó có thể hiểu được dữ liệu của nó thể hiện mục đích gì ? Vì thế HTML cung cấp cho chúng ta một tiêu đề chú thích cho bảng 
+  với thẻ là <b>&#60;caption&#62;</b>. Cái này thì mình cũng có thể dùng các thẻ tiêu đề để chú thích bảng  nhưng để SEO tốt hơn thì mình khuyên các bạn nên dùng thẻ này. Thẻ chú thích 
+  luôn được đặt nằm đầu tiên trong các thẻ của  bảng HTML. Bây giờ mình hãy tìm hiểu thông qua ví dụ nhé: </p>
+  <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="YzPxyjQ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="HTML caption bảng">
+    <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/YzPxyjQ">
+    HTML caption bảng</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+    on <a href="https://codepen.io">CodePen</a>.</span>
+  </p>
+  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+  <h5 class="ml-5 mt-4"><b>Thành Phần đầy đủ trong bảng HTML:</b></h5>
+  <p>Nãy giờ chúng ta đã tìm hiểu được cách xây dựng bảng trong HTML nhưng đối với người lập trình thì ngoài việc tạo ra và hiển thị bảng trên trình duyệt thì họ cũng quan tâm đến khuôn mẫu <b>cách hiện thị code</b>
+  làm sao cho người lập trình khác khi nhìn vào code của chúng ta thì có thể hiểu được và dễ sửa chữa. Thì cũng <b>giống như</b> cấu trúc file HTML thì bảng cũng cung cấp cho chúng ta một cấu trúc để xây dựng bảng 
+  làm cho việc quản lý code dễ dàng hơn, còn về khả năng hiển thị theo mình thấy nó cũng giống như những bảng mình đã tạo ở trên. Để rõ hơn thì mình đi vào tìm hiểu ví dụ sau đây nhé các bạn: </p>
+            
+  <div class="row">
+    <div class="col-md-12 col-sm-12">
+      <div class=" shadow p-2">
+        <h5 class="text-center bg-primary text-white p-2 mb-4">Mã Code HTML</h5>
+        <pre><code class="html">&#60;table&#62;<br /> &#60;thead&#62;<br /> &#60;tr&#62;<br /> &#60;th style="border:1px solid black; padding:16px;"&#62;Tên Trái Cây&#60;/th&#62;<br /> &#60;th style="border:1px solid black; padding:16px;"&#62;Số Tiền&#60;/th&#62;<br /> &#60;/tr&#62;<br /> &#60;/thead&#62;<br /> &#60;tbody&#62;<br /> &#60;tr&#62;<br /> &#60;td style="border:1px solid black; padding:16px;"&#62;Táo&#60;/td&#62;<br /> &#60;td style="border:1px solid black; padding:16px;"&#62;15.000&#60;/td&#62;<br /> &#60;/tr&#62;<br /> &#60;tr&#62;<br /> &#60;td style="border:1px solid black; padding:16px;"&#62;Ổi&#60;/td&#62;<br /> &#60;td style="border:1px solid black; padding:16px;"&#62;10.000&#60;/td&#62;<br /> &#60;/tr&#62;<br /> &#60;/tbody&#62;<br /> &#60;tfoot&#62;<br /> &#60;tr&#62;<br /> &#60;td style="border:1px solid black; padding:16px;"&#62;Tổng&#60;/td&#62;<br /> &#60;td style="border:1px solid black; padding:16px;"&#62;25.000&#60;/td&#62;<br /> &#60;/tr&#62;<br /> &#60;/tfoot&#62;<br /> &#60;/table&#62;<br /></code></pre>
+      </div>
+    </div>
+    <div class="col-md-12 col-sm-12 mt-4">
+      <div class=" shadow p-2">
+        <h5 class="text-center bg-primary text-white p-2 mb-4">Hiện thị trên Web</h5>
+        <table>
+          <thead>
+          <tr>
+          <th style="border:1px solid black; padding:16px;">Tên Trái Cây</th>
+          <th style="border:1px solid black; padding:16px;">Số Tiền</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+          <td style="border:1px solid black; padding:16px;">Táo</td>
+          <td style="border:1px solid black; padding:16px;">15.000</td>
+          </tr>
+          <tr>
+          <td style="border:1px solid black; padding:16px;">Ổi</td>
+          <td style="border:1px solid black; padding:16px;">10.000</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td style="border:1px solid black; padding:16px;">Tổng</td>
+            <td style="border:1px solid black; padding:16px;">25.000</td>
+            </tr>
+        </tfoot>
+          </table>
+      </div>
+    </div>
+  </div>
+  
+  <p class="mt-4">Như các bạn thấy thì mình đã tạo ra một bảng với cấu trúc file là :
+    <ul>
+      <li><b>Header (Tiêu đề) của bảng tương ứng với thẻ &#60;thead&#62;</b></p></li>
+      <li><b>Body (Nội Dung) của bảng tương ứng với thẻ &#60;tbody&#62;</b></p></li>
+      <li><b>Footer (Tổng kết các cột) của bảng tương ứng với thẻ &#60;tfoot&#62;</b></p></li>
+    </ul>
+  
+  <h4 class="mt-4"> <b><i class="fa fa-question-circle-o" aria-hidden="true"></i> Bài tập HTML: </b></h4>
             <p>Sau đây mình sẽ có bài tập nhỏ giúp các bạn nhớ những gì mà mình đã học trong ngày hôm nay.<br />
-              <ol>
-                <li>Các bạn tạo một file tên là <b>HTML4baitap.html</b></li>
-                <li>Các bạn bắt đầu nhập <b>cấu trúc</b> của một file HTML.</li>
-                <li>Các bạn chèn nội dung vào trang web của mình trong thẻ <b>&#60;body&#62;</b>:<br />
 
-                  <div class="bg-light mt-4 mb-4 shadow p-3 bg-white rounded">
-                    <img
-                      src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576831485/b%C3%A0i%204/FireShot_Pro_Screen_Capture_002_-_HTML_b%C3%A0i_2_-_file_ti0no6.png" />
+              <ol>
+                <li>
+                  Các bạn tạo một cấu trúc file HTML với tên là <b>HTML6baitap.html</b>
+                </li>
+                <li>
+                  Sau đó các bạn nhập bảng bảng có nội dung như sau đây nha:
+                  <div class="row mt-4 mb-4">
+                  <div class=" shadow p-2 col-xs-12 col-md-12">
+                    <p>Tiền Tiết Kiệm Tháng</p>
+                    <table>
+                      <thead>
+                      <tr>
+                      <th style="border:1px solid black; padding:16px;" colspan="2">Tiền Tiết Kiệm</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                      <td style="border:1px solid black; padding:16px;">Tháng 1</td>
+                      <td style="border:1px solid black; padding:16px;">1.000.000</td>
+                      </tr>
+                      <tr>
+                      <td style="border:1px solid black; padding:16px;">Tháng 2</td>
+                      <td style="border:1px solid black; padding:16px;">2.000.000</td>
+                      </tr>
+                      <tr>
+                        <td style="border:1px solid black; padding:16px;">Tháng 3</td>
+                        <td style="border:1px solid black; padding:16px;">3.000.000</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td style="border:1px solid black; padding:16px;">Tổng</td>
+                        <td style="border:1px solid black; padding:16px;">5.000.000</td>
+                        </tr>
+                    </tfoot>
+                      </table>
+                  </div>
                   </div>
                 </li>
               </ol>
+
+
             </p>
             <p>Đây là file lời giải của bài tập các bạn tham khảo. Nhưng trước khi xem hãy cố gắng hoàn thành bài tập để
               mình nhớ lâu hơn nhé!</p>
@@ -287,19 +370,16 @@
               </button>
             </p>
             <div class="collapse" id="collapseExample">
-
-              <pre><code class="html">&#60;!DOCTYPE html&#62;<br />&#60;html&#62;<br />&#60;head&#62;<br />&#60;meta charset="utf-8"&#62;<br />&#60;title&#62;HTML bài 4&#60;/title&#62;<br />&#60;/head&#62;<br />&#60;body&#62;<br />&#60;h4&#62;Cách nấu thịt kho&#60;/h4&#62;<br />&#60;p&#62;Nguyên Liệu&#60;/p&#62;<br />&#60;ul &#62;<br/>&#60;li&#62; Thị ba chỉ &#60;/li&#62;<br/>&#60;li&#62; Hành khô &#60;/li&#62;<br />&#60;li&#62; Hành lá &#60;/li&#62;<br />&#60;li&#62;Gia vị<br />   &#60;ul&#62;<br />        &#60;li&#62;Đường&#60;/li&#62;<br />         &#60;li&#62;Bột ngọt&#60;/li&#62;<br />        &#60;li&#62;Tiêu&#60;/li&#62;<br />         &#60;li&#62;Mắm&#60;/li&#62;<br />   &#60;/ul&#62;<br />&#60;/li&#62;<br />&#60;/ul&#62;<br />&#60;h4&#62;Cách nấu&#60;/h4&#62;<br />&#60;ol&#62;<br />&#60;li&#62;Rửa thịt&#60;/li&#62;<br />&#60;li&#62;Ướp thịt với mắm đường và bột ngọt&#60;/li&#62;<br />&#60;li&#62;Đổ dầu và nấu thịt&#60;/li&#62;<br />&#60;/ol&#62;<br />&#60;p&#62;Các bạn đã có món thành phẩm là món thịt kho!&#60;/p&#62;<br />&#60;/body&#62;<br />&#60;html&#62;</code></pre>
-
+              <pre><code class="html">&#60;table&#62;<br /> &#60;caption&#62;Tiền Tiết Kiệm Tháng&#60;/caption&#62;<br /> &#60;thead&#62;<br /> &#60;tr&#62;<br /> &#60;th style="border:1px solid black; padding:16px;" colspan="2"&#62;Tiền Tiết Kiệm&#60;/th&#62;<br /> &#60;/tr&#62;<br /> &#60;/thead&#62;<br /> &#60;tbody&#62;<br /> &#60;tr&#62;<br /> &#60;td style="border:1px solid black; padding:16px;"&#62;Tháng 1&#60;/td&#62;<br /> &#60;td style="border:1px solid black; padding:16px;"&#62;1.000.000&#60;/td&#62;<br /> &#60;/tr&#62;<br /> &#60;tr&#62;<br /> &#60;td style="border:1px solid black; padding:16px;"&#62;Tháng 2&#60;/td&#62;<br /> &#60;td style="border:1px solid black; padding:16px;"&#62;2.000.000&#60;/td&#62;<br /> &#60;/tr&#62;<br /> &#60;tr&#62;<br /> &#60;td style="border:1px solid black; padding:16px;"&#62;Tháng 3&#60;/td&#62;<br /> &#60;td style="border:1px solid black; padding:16px;"&#62;3.000.000&#60;/td&#62;<br /> &#60;/tr&#62;<br /> &#60;/tbody&#62;<br /> &#60;tfoot&#62;<br /> &#60;tr&#62;<br /> &#60;td style="border:1px solid black; padding:16px;"&#62;Tổng&#60;/td&#62;<br /> &#60;td style="border:1px solid black; padding:16px;"&#62;5.000.000&#60;/td&#62;<br /> &#60;/tr&#62;<br /> &#60;/tfoot&#62;<br /> &#60;/table&#62;<br /></code></pre>
             </div>
-            <p>Còn điều này mình quên nói là khi các bạn làm xong và lưu vào <b>HTML4baitap.html</b>. Thì để mở mình vào
+            <p>Còn điều này mình quên nói là khi các bạn làm xong và lưu vào <b>HTML6baitap.html</b>. Thì để mở mình vào
               thư mục đã lưu file và nhấn trực tiếp vào thì
               trình duyệt sẽ tự động chạy file đó nhé.</p>
             <img class="img-fluid shadow-sm rounded"
               src=" https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576500256/bai%202/Open_file_html_vulqku.png" />
             <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
-            <p>Qua bài này chúng mình đã hiểu và nắm được thẻ danh sách và thuộc tính của thẻ trong HTML. Bài tiếp theo
-              mình sẽ
-              hướng dẫn các bạn học về liên kết và thẻ hình ảnh trong HTML.
+            <p>Qua bài này chúng mình đã hiểu và nắm được cách tạo một bảng trong HTML. Sau này học về <b>CSS</b> thì mình sẽ nói tiếp về cách chỉnh sửa trang trí cho bảng kĩ hơn. Phần này các 
+              bạn lưu ý giúp mình các thẻ có trong bảng và cấu trúc bảng nhé. Bài sau mình sẽ học về bảng mẫu hay đơn mà giúp chúng ta thu thập thông tin người dùng, khảo sát người dùng...
               Nếu các bạn có gì thì cứ liên hệ mình sẽ liên lạc với các bạn sớm nhất có thể!
             </p>
           </div>

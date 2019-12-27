@@ -65,9 +65,10 @@ body {
       padding: 1rem ;
       font-size:1rem;
   }
-  .nav-link::after{
+  /* .nav-link::after{
     background: #fff !important;
-  }
+  } */
+
   .fa-navicon{
     color:#fff;
     font-size:1.5 rem;
@@ -195,6 +196,8 @@ font-weight: 700;
   background-color: #E65100 !important;
   border-color: #E65100 !important;
 }
+
+
 /*card*/
 .card{
   margin:1rem !important;
@@ -270,7 +273,9 @@ font-weight: 700;
 
 /*About*/
 .about-content{
-  background: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
+  background: #2c3e50;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #3498db, #2c3e50);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #3498db, #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: cover;
   padding: 2rem;
   color:#fff;
@@ -625,4 +630,12 @@ a:hover{
   .progress-label{
     display: none;
   }
+}
+
+.dropdown-menu{
+  padding: 0 !important;
+}
+.dropdown-item:hover{
+  background-color: #5edfff !important;
+  color:white;
 }

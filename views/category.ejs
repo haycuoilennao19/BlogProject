@@ -31,7 +31,12 @@
           <p class="card-text text-justify"><%-post.subtitle%></p>
           <p class="text-muted"><i class="fa fa-clock-o" aria-hidden="true"></i> <%=post.date%></p>
           <div class="d-flex justify-content-end">
-            <a href="/article/<%-post.id%>" class="btn shadow-sm rounded btn-reading">Continue Reading</a>
+            <button class="learn-more">
+              <span class="circle">
+                <span class="icon arrow"></span>
+              </span>
+              <a class="button-text" href="/article/<%-post.id%>"><span>Tiếp tục đọc</span></a>
+            </button>
           </div>
         </div>
       </div>
@@ -39,23 +44,7 @@
       <% }) %>
     </div>
     <div class="col-lg-4 col-md-12 col-xs-12">
-      <!-- <div class="card card-search">
-        <div class="card-header card-header-search">
-          Tìm Kiếm
-        </div>
-        <div class="card-body card-body-search">
-          <form class="mt-4 form-seacrh">
-            <div class="p-1 bg-light rounded rounded-pill shadow-sm">
-                <div class="input-group">
-                  <input type="search" placeholder="Bạn hãy nhập từ khóa!" aria-describedby="button-addon1" class="form-control border-0 bg-light">
-                  <div class="input-group-append">
-                    <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
-                  </div>
-                </div>
-              </div>
-              </form>
-              </div>
-        </div> -->
+     
         <div class="mt-5"></div>
         <div class="card card-search">
             <div class="card-header card-header-category">
