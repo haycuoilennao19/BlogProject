@@ -21,6 +21,7 @@
 
   <link rel="stylesheet" href="/stylesheets/font-awesome/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <meta name="google-site-verification" content="SXEFa5YhgCrmAOJhBwsuDms_fUALYxrM8ZUql8KHgNM" />
 </head>
 
 <body>
@@ -69,12 +70,12 @@
 <div class="header-text text-center mt-5 ">
   <span class="header-content">Bài Viết Mới Nhất</span>
 </div>
-<div class="container mt-5 mx-auto justify-content-center" id="content-box">
+<div class="container mt-5 mx-auto justify-content-center">
   <div class="row">
     <div class="col-lg-8  context-box-scroll col-md-12 col-xs-12">
       <% posts.forEach(function(post){ %>
       <div class="card border-0 shadow">
-        <h5 class="card-header"> <img src="<%-post.file%>" class="card-img-top header-img" alt="..."></h5>
+        <h5 class="card-header"> <img src="<%-post.file%>" class="card-img-top header-img" alt="<%-post.subtitle%>"></h5>
         <h3 class="button-article"><button type="button"
             class="<%-post.category%> btn shadow-sm rounded btn-success m-3 pl-5 pr-5"><%=post.category%></button></h3>
         <div class="card-body">
@@ -226,7 +227,7 @@ $(document).ready(function() {
    
 <!--End mc_embed_signup-->
       <!--Footer-->
-
+  
     <script>
       $(function () {
         $(window).on('scroll', function () {
