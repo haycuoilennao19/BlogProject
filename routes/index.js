@@ -18,6 +18,10 @@ router.get('/about', function(req, res, next) {
     res.render('table2excel')
 })
 
+router.get('/superplaceholer', function(req, res, next) {
+    res.render('superplaceholer')
+})
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

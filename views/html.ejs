@@ -23,80 +23,59 @@
       <hr />
       <div class="card-text text-justify">
         <article>
-          <h2 class="bg-primary mb-4 text-white rounded p-2 shadow"><i class="fa fa-cube" aria-hidden="true"></i> Chuyển đổi từ bảng HTML sang File Excel</h2>
+          <h2 class="bg-primary mb-4 text-white rounded p-2 shadow"><i class="fa fa-cube" aria-hidden="true"></i> Super Place Holder trong thẻ Input</h2>
           <div class="article-title">
             <div class="progress-wrapper">
               <div class="progress-label"></div><progress></progress>
             </div>
           </div>
           <div class="text-content-article mt-5">
-            <p><i>Xin chào các bạn quay lại blog của mình. Trong bài này mình sẽ giới thiệu cho các bạn đến một ứng dụng Jquery để chuyển đổi một bảng 
-              trong HTML sang một file Excel. Bây giờ hãy cùng nhau tìm hiểu nhé!</i>
+            <p><i>Xin chào các bạn quay lại blog của mình. Trong bài này mình sẽ giới thiệu cho các bạn đến một ứng dụng Javascript có tên là <b>superplaceholder.js</b> để làm phong phú thêm
+              cho thẻ input. Bây giờ hãy cùng nhau tìm hiểu nhé!</i>
             </p>
-            <p>Chúng ta sẽ sử dụng plugin <b>Table2Excel</b> để chuyển đổi từ bảng sang file Excel. Các bạn nhấp vào đường dẫn 
+            <p>Chúng ta sẽ sử dụng plugin <b>superplaceholder.js</b> để tạo ra hiệu ứng cho thẻ input. Các bạn nhấp vào đường dẫn 
             bên dưới để tải file Javascript về nhé! <br />
-            <i class="fa fa-download" aria-hidden="true"></i> <a href="https://res.cloudinary.com/dn4nxz7f0/raw/upload/v1580485796/HTML%20table%20to%20excel/jquery.table2excel.min_bdjf5z.rar" download>Download File Table2Excel</a></p>
+            <i class="fa fa-download" aria-hidden="true"></i> <a href="https://res.cloudinary.com/dn4nxz7f0/raw/upload/v1580570690/superplaceholderjs/superplaceholder.min_zr6qyu.rar" download>Tải File Super Place Holder JS</a></p>
   
             <p>Sau đó các bạn sẽ giải nén file và tạo ra cấu trúc thư mục cây như sau: </p>
-            <img src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1580486733/HTML%20table%20to%20excel/table2excel_twjj79.svg"  width="200" height="200" alt="Table2Excel">
+            <img src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1580570887/superplaceholderjs/table2excel_ticecz.svg"  width="200" height="200" alt="Table2Excel">
             <p>Các bạn nhập đoạn code này vào <b>trangchinh.html</b>: </p>
-            <pre><code class="html">&#60;!doctype html&#62; <br /> &#60;html lang="en"&#62; <br /> &#60;head&#62; <br /> &#60;title&#62;Trang Chính&#60;/title&#62; <br />&#60;meta charset="utf-8"&#62; <br /> &#60;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&#62; <br />&#60;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"&#62; <br /> &#60;/head&#62; <br /> &#60;body&#62; <br />&#60;script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"&#62;&#60;/script&#62; <br /> &#60;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"&#62;&#60;/script&#62; <br /> &#60;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"&#62;&#60;/script&#62; <br /> &#60;script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"&#62;&#60;/script&#62; <br /> &#60;script src="./jquery.table2excel.min.js"&#62;&#60;/script&#62;<br />&#60;/body&#62; <br />&#60;/html&#62;<br /></code></pre>
-          <p>Sau khi đã thêm được file jquery.table2excel.min.js vào trang HTML thì bạn nhập một bảng như ví dụ sau đây: </p>
-          <table class="table" id="table2excel">
-            <thead class="thead-dark">
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table>
-          <button class="btn btn-success">Xuất File Excel</button>
+            <pre><code class="html">&#60;!doctype html&#62; <br /> &#60;html lang="en"&#62; <br /> &#60;head&#62; <br /> &#60;title&#62;Trang Chính&#60;/title&#62; <br />&#60;meta charset="utf-8"&#62; <br /> &#60;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&#62; <br />&#60;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"&#62; <br /> &#60;/head&#62; <br /> &#60;body&#62; <br />&#60;script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"&#62;&#60;/script&#62; <br /> &#60;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"&#62;&#60;/script&#62; <br /> &#60;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"&#62;&#60;/script&#62; <br /> &#60;script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"&#62;&#60;/script&#62; <br /> &#60;script src="./superplaceholder.min.js"&#62;&#60;/script&#62;<br />&#60;/body&#62; <br />&#60;/html&#62;<br /></code></pre>
+          <p>Sau khi đã thêm được file superplaceholder.min.js vào trang HTML thì bạn nhập ba thẻ input như ví dụ sau đây: </p>
+          <label>Tên</label><br />
+          <input type="text" id="ten"><br /><br />
+          <label>Email</label><br />
+          <input type="email" id="email"><br /><br />
+          <label>Mật Khẩu</label><br />
+          <input type="password" id="matkhau">
+        
           <br /><br />
-          <p>Với đoạn code như hình dưới đây và các bạn cần lưu ý là đặt id cho bảng là <b>id="table2excel"</b> :</p>
-          <pre><code class="html">&#60;table class="table" id="table2excel"&#62;<br /> &#60;thead class="thead-dark"&#62;<br /> &#60;tr&#62;<br /> &#60;th scope="col"&#62;#&#60;/th&#62;<br /> &#60;th scope="col"&#62;First&#60;/th&#62;<br /> &#60;th scope="col"&#62;Last&#60;/th&#62;<br /> &#60;th scope="col"&#62;Handle&#60;/th&#62;<br /> &#60;/tr&#62;<br /> &#60;/thead&#62;<br /> &#60;tbody&#62;<br /> &#60;tr&#62;<br /> &#60;th scope="row"&#62;1&#60;/th&#62;<br /> &#60;td&#62;Mark&#60;/td&#62;<br /> &#60;td&#62;Otto&#60;/td&#62;<br /> &#60;td&#62;@mdo&#60;/td&#62;<br /> &#60;/tr&#62;<br /> &#60;tr&#62;<br /> &#60;th scope="row"&#62;2&#60;/th&#62;<br /> &#60;td&#62;Jacob&#60;/td&#62;<br /> &#60;td&#62;Thornton&#60;/td&#62;<br /> &#60;td&#62;@fat&#60;/td&#62;<br /> &#60;/tr&#62;<br /> &#60;tr&#62;<br /> &#60;th scope="row"&#62;3&#60;/th&#62;<br /> &#60;td&#62;Larry&#60;/td&#62;<br /> &#60;td&#62;the Bird&#60;/td&#62;<br /> &#60;td&#62;@twitter&#60;/td&#62;<br /> &#60;/tr&#62;<br /> &#60;/tbody&#62;<br /> &#60;/table&#62;<br />&#60; button class="btn btn-success"&#62;Xuất File Excel&#60;button&#62;</code></pre>
-        <p>Sau khi đã thiết lập bảng xong thì bạn bắt đầu nhập code để chuyển đổi từ Bảng sang Excel:</p>  
-        <pre><code class="html">&#60;script&#62;<br /> $("button").click(function(){<br /> $("#table2excel").table2excel({<br /> name: "Worksheet Name",<br /> filename: "FileExcel",<br /> fileext: ".xls"<br /> }) <br /> });<br /> &#60;/script&#62;<br /></code></pre>
+          <p>Với đoạn code như hình dưới đây và các bạn cần lưu ý là đặt id cho từng thẻ input nhé :</p>
+          <pre><code class="html">&#60;label&#62;Tên&#60;/label&#62;&#60;br /&#62;<br /> &#60;input type="text" id="ten"&#62;&#60;br /&#62;&#60;br /&#62;<br /> &#60;label&#62;Email&#60;/label&#62;&#60;br /&#62;<br /> &#60;input type="email" id="email"&#62;&#60;br /&#62;&#60;br /&#62;<br /> &#60;label&#62;Mật Khẩu&#60;/label&#62;&#60;br /&#62;<br /> &#60;input type="password" id="matkhau"&#62;&#60;br /&#62;&#60;br /&#62;<br /></code></pre>
+        <p>Sau khi đã tạo các thẻ input thì bạn bắt đầu nhập code để tạo hiệu ứng cho những thẻ input đó:</p>  
+        <pre><code class="html">&#60;script&#62; <br />superplaceholder({<br /> el: document.getElementById('ten'),<br /> sentences: [ 'Họ và Tên Của Bạn'],<br /> options: {<br /> letterDelay: 100,<br /> sentenceDelay: 1000,<br /> startOnFocus: false, <br /> loop: true,<br /> shuffle: false,<br /> showCursor: true,<br /> cursor: '|',<br /> }<br /> });<br />&#60;/script&#62;</code></pre>
         <p>
-          <p><b>Một số mà bạn cần lưu ý trong đoạn code trên: </b></p>
+          <p><b>Một số thuộc tính mà bạn cần lưu ý trong đoạn code trên: </b></p>
           <ul>
-            <li>filename là tên để đặt cho Tên của File Excel</li>
-            <li>fileext là đuôi mà chúng ta muốn xuất dưới dạng Excel</li>
+            <li><b>letterDelay</b> là thời gian giãn cách xuất hiện của từng từ.</li>
+            <li><b>sentenceDelay</b> là thời gian giãn cách xuất hiện của từng câu.</li>
+            <li><b>startOnFocus:false</b> là nó sẽ tự động chạy khi ta mở trang còn <b>startOnFocus:true</b> thì khi ta nhập vào thẻ input thì nó mới chạy.</li>
+            <li><b>loop: true</b> là khi nó chạy hết nội dung mong muốn thì nó sẽ tiếp tục chạy còn <b>loop: false</b> thì nó sẽ chạy hết nội dung và ngừng lại.</li>
+            <li><b>showCursor: true</b> là hiện thị con trỏ chạy sau chữ ngược lại thì sẽ bị ẩn.</li>
           </ul>
         </p>
-        <p>Sau khi đã nhập thành công thì bạn thử nhấn vào nút <b>Xem Kết Quả</b> để thấy thành quả nhé! <br />
-          <a href="/table2excel" target="_blank"><button class="btn btn-success" ><i class="fa fa-eye" aria-hidden="true"></i> Xem Kết Quả</button></a></p>
+        <p>Các thẻ input còn lại bạn thử thay đổi một vài thuộc tính để hiểu rõ hơn. Sau khi đã nhập thành công thì bạn thử nhấn vào nút <b>Xem Kết Quả</b> để thấy thành quả nhé! <br />
+          <a href="/superplaceholer" target="_blank"><button class="btn btn-success" ><i class="fa fa-eye" aria-hidden="true"></i> Xem Kết Quả</button></a></p>
          
     
-        <p>Mình cũng gửi các bạn đường dẫn để tải về những file trong thư mục table2excel để bạn đễ hình dung và có thể xem lại! <br />
-          <i class="fa fa-download" aria-hidden="true"></i> <a href="https://res.cloudinary.com/dn4nxz7f0/raw/upload/v1580556095/HTML%20table%20to%20excel/Table2Excel_x9rhhk.rar" download>Đường dẫn tải File Source Code</a>
+        <p>Mình cũng gửi các bạn đường dẫn để tải về những file trong thư mục <b>sourcesuperplcaeholderjs</b> để bạn đễ hình dung và có thể xem lại! <br />
+          <i class="fa fa-download" aria-hidden="true"></i> <a href="https://res.cloudinary.com/dn4nxz7f0/raw/upload/v1580574081/superplaceholderjs/sourcesuperplcaeholderjs_cyaqfw.rar" download>Đường dẫn tải File Source Code</a>
         </p>
         <p>Các bạn có thể tìm hiểu thêm thông qua đường dẫn dưới đây nhé! <br />
-          <i class="fa fa-info" aria-hidden="true"></i> <a href="https://www.jqueryscript.net/table/Export-Html-Table-To-Excel-Spreadsheet-using-jQuery-table2excel.html" target="_blank">Đường dẫn để bạn tìm hiểu thêm</a>
+          <i class="fa fa-info" aria-hidden="true"></i> <a href="https://github.com/chinchang/superplaceholder.js" target="_blank">Đường dẫn để bạn tìm hiểu thêm</a>
         </p>
         <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
-        <p>Qua đây bạn đã có thể tạo được một File Excel từ một bảng HTML. Rất mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
+        <p>Qua đây bạn đã có thể tạo được hiệu ứng giúp cho thẻ input của mình thêm sinh động hơn. Rất mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
       </div>
         </article>
       </div>
