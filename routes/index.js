@@ -14,7 +14,9 @@ router.get('/about', function(req, res, next) {
     res.render('html')
  });
 
-
+ router.get('/table2excel', function(req, res, next) {
+    res.render('table2excel')
+})
 
 
 /* GET home page. */
@@ -24,7 +26,7 @@ router.get('/', function(req, res, next) {
     //     if (err) return console.error(err);
     //     console.log("Save database success")
     //   });
-    var perpage = 5;
+    var perpage = 6;
     var page = req.params.page || 1
     Blog
         .find()
@@ -41,7 +43,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/:page', function(req, res, next) {
-    var perpage = 5;
+    var perpage = 6;
     var page = req.params.page || 1
     Blog
         .find()

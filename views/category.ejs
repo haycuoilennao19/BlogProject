@@ -1,4 +1,57 @@
-<%- include('header') -%>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='/stylesheets/normalizes.css' />
+  <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+  <link rel='stylesheet' href='/stylesheets/darcula.css' />
+  <link rel='stylesheet' href='/stylesheets/hover-min.css' />
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <meta property="og:image" content="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576511394/Niemvuilaptrinh_jgc0rn.png">
+  <meta property="og:description" content="Xin Chào các bạn mình tạo trang này muốn chia sẻ những điều mà mình học được.
+  Chúng ta hãy cùng nhau tiến bộ nhé! Nếu có gì không hiểu cứ liên lạc với mình qua fanpage mình sẽ trả lời sớm nhất có thể.">
+  <meta property="og:title" content="Niềm Vui Lập Trình">
+  <!--Font Logo-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:400,700,800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/stylesheets/font-awesome/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <meta name="google-site-verification" content="SXEFa5YhgCrmAOJhBwsuDms_fUALYxrM8ZUql8KHgNM" />
+</head>
+
+<body>
+    
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top p-2">
+    <a class="navbar-brand" href="/">Niềm Vui Lập Trình</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span><i class="fa fa-navicon"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link mr-5 hvr-underline-from-left" href="/">Trang Chủ <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown ">
+          <a class="nav-link dropdown-toggle  mr-5 hvr-underline-from-left" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Thủ Thuật</a>
+          <div class="dropdown-menu mt-2">
+            <a class="dropdown-item" href="/article/html">Thủ Thuật CSS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link hvr-underline-from-left mr-5" href="/about">Giới Thiệu</a>
+        </li>
+        
+   
+
+    </div>
+  </nav>
 <!--Content-->
 <div class="jumbotron jumbotron-fluid image-slider">
     <div class="row">
@@ -6,7 +59,7 @@
     <div class="content-image">
       <div class="content">
         <blockquote class="blockquote">
-          <h1 class="mb-0">Tôi không có tài năng gì cả. Tôi chỉ đam mê hiểu biết</h1>
+          <h1 class="mb-2 content-header">Tôi không có tài năng gì cả. Tôi chỉ đam mê hiểu biết</h1>
           <footer class="blockquote-footer text-right text-white">Albert Einstein</footer>
         </blockquote>
       </div>
@@ -17,96 +70,198 @@
 <div class="header-text text-center mt-5 ">
   <span class="header-content">Bài Viết Mới Nhất</span>
 </div>
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-lg-8 col-md-12 col-xs-12">
-      <% data.forEach(function(post){ %>
-      <div class="card border-0 shadow">
-        <h5 class="card-header"> <img src="<%-post.file%>" class="card-img-top" alt="..."></h5>
-        <h3 class="button-article"><button type="button"
-            class="<%-post.category%> btn shadow-sm rounded btn-success m-3 pl-5 pr-5"><%=post.category%></button></h3>
-        <div class="card-body">
-          <h5 class="card-title"><%=post.title%></h5>
-          <hr />
-          <p class="card-text text-justify"><%-post.subtitle%></p>
-          <p class="text-muted"><i class="fa fa-clock-o" aria-hidden="true"></i> <%=post.date%></p>
-          <div class="d-flex justify-content-end">
-            <button class="learn-more">
-              <span class="circle">
-                <span class="icon arrow"></span>
-              </span>
-              <a class="button-text" href="/article/<%-post.id%>"><span>Tiếp tục đọc</span></a>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="mb-5"></div>
-      <% }) %>
-    </div>
-    <div class="col-lg-4 col-md-12 col-xs-12">
-     
-        <div class="mt-5"></div>
-        <div class="card card-search">
-            <div class="card-header card-header-category">
-              Từ Khóa
-            </div>
-            <div class="card-body card-body-search mt-4">
-                <h3 class="button-article"><a href="/article/css"><button type="button"
-                  class="CSS btn shadow-sm rounded btn-success m-2 pl-3 pr-3">CSS</button></a>
-                  <a href="/article/html"><button type="button"
-                  class="HTML btn shadow-sm rounded btn-success m-2 pl-3 pr-3">HTML</button></a>
-                  <a href="/article/nodejs">
-                  <button type="button"
-                  class="btn shadow-sm rounded btn-success m-2 pl-3 pr-3">NodeJS</button></a>
-                </h3>
-                  </div>
-            </div>
+<div class="container-fluid mt-5">
+<div class="row justify-content-center" >
+  <% data.forEach(function(post){ %>
+  <div class="card border-0 shadow card-row-article">
 
-            <div class="card card-search">
-                <div class="card-header card-header-search">
-                  Đăng kí Email
-                 
-                </div>
-                <div class="card-body card-body-search">
-                  <div class="text-email-subscribe">
-                    <p class="text-justify mt-4">Các bạn nhấp subscribe để nhận bài viết mới nhất từ mình nhé!</p>
-                    </div>
-                    <!-- Begin Mailchimp Signup Form -->
-                    <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-                    <style type="text/css">
-                      #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-                      /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-                         We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-                    </style>
-                    <div id="mc_embed_signup">
-                    <form action="https://gmail.us20.list-manage.com/subscribe/post?u=02f033de83f488a359d24bc9f&amp;id=85d0d8697c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                        <div id="mc_embed_signup_scroll">
-                  
-                    <div class="mc-field-group">                
-                      <label for="mce-EMAIL" class="label-email mb-2">Email:
-                    </label>
-                      <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Hãy nhập địa chỉ email của bạn">
-
-                    </div>
-                      <div id="mce-responses" class="clear">
-                        <div class="response text-justify" id="mce-error-response" style="display:none"></div>
-                        <div class="response text-justify" id="mce-success-response" style="display:none"></div>
-                      </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_02f033de83f488a359d24bc9f_85d0d8697c" tabindex="-1" value=""></div>
-                        <div class="clear"><input type="submit" value="Đăng Kí Email" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                        </div>
-                    </form>
-                    </div>
-                    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-                    <!--End mc_embed_signup-->
-                                                         
-                      </div>
-                </div>
+    <h5 class="card-header"> <img src="<%-post.file%>" class="card-img-top header-img" alt="<%-post.subtitle%>"></h5>
+    <h3 class="button-article"><button type="button"
+        class="<%-post.category%> btn shadow-sm rounded btn-success m-3 pl-5 pr-5"><%=post.category%></button></h3>
+    <div class="card-body">
+      <h5 class="card-title"><a class="hvr-underline-from-center pt-1 pb-1" href="/article/<%-post.id%>"><%=post.title%></a></h5>
+      <hr />
+      <p class="card-text text-justify"><%-post.subtitle%></p>
+      <p class="text-muted"><i class="fa fa-clock-o" aria-hidden="true"></i> <%=post.date%></p>
+      <div class="d-flex justify-content-end">
+        <button class="learn-more">
+          <span class="circle">
+            <span class="icon arrow"></span>
+          </span>
+          <a class="button-text" href="/article/<%-post.id%>"><span">Tiếp tục đọc</span></a>
+        </button>
       </div>
     </div>
   </div>
+  <div class="mb-5"></div>
+  <% }) %>
+</div>
+</div>
+<div class="container mt-5 mx-auto justify-content-center">
+  <div class="row">
+<div class="col-sm-12">
+      <% if (pages > 0) { %>
+        <ul class="pagination  justify-content-center">
+            <% if (current == 1) { %>
+                <li class="page-item " class="disabled"><a class="page-link">Đầu Trang</a></li>
+            <% } else { %>
+                <li class="page-item "><a class="page-link" href="/1">Đầu Trang</a></li>
+            <% } %>
+            <% var i = (Number(current) > 5 ? Number(current) - 4 : 1) %>
+            <% if (i !== 1) { %>
+                <li class="page-item" class="disabled"><a class="page-link">...</a></li>
+            <% } %>
+            <% for (; i <= (Number(current) + 4) && i <= pages; i++) { %>
+                <% if (i == current) { %>
+                    <li class="page-item" class="active"><a class="page-link"><%= i %></a></li>
+                <% } else { %>
+                    <li class="page-item"><a class="page-link" href="/<%= i %>"><%= i %></a></li>
+                <% } %>
+                <% if (i == Number(current) + 4 && i < pages) { %>
+                    <li class="page-item" class="disabled"><a class="page-link">...</a></li>
+                <% } %>
+            <% } %>
+            <% if (current == pages) { %>
+                <li class="page-item" class="disabled"><a class="page-link">Cuối Trang</a></li>
+            <% } else { %>
+                <li class="page-item"><a class="page-link" href="/<%= pages %>">Cuối Trang</a></li>
+            <% } %>
+        </ul>
+    <% } %>
+    </div>
+    
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+  <div class="col-lg-12 context-box-scroll-right col-md-12 col-xs-12">
+      <div class="mt-5"></div>
+      <div class="card card-search">
+          <div class="card-header card-header-category">
+            Từ Khóa
+          </div>
+          <div class="card-body card-body-search mt-4">
+              <h3 class="button-article"><a href="/article/css"><button type="button"
+                class="CSS btn shadow-sm rounded btn-success m-1 pl-2 pr-2 hvr-shrink"><i class="fa fa-tag" aria-hidden="true"></i> CSS</button></a>
+                <a href="/article/html"><button type="button"
+                class="HTML btn shadow-sm rounded btn-success m-1 pl-2 pr-2 hvr-shrink"><i class="fa fa-tag" aria-hidden="true"></i> HTML</button></a>
+                <a href="/article/ThuthuatCSS">
+                <button type="button"
+                class="btn shadow-sm rounded btn-success m-1 pl-2 pr-2 hvr-shrink"><i class="fa fa-tag" aria-hidden="true"></i> Javscript</button></a>
+              </h3>
+                </div>
+          </div>
+          <div class="card card-search">
+           
+            <div class="fb-page" data-href="https://www.facebook.com/Ni&#x1ec1;m-Vui-L&#x1ead;p-Tr&#xec;nh-103123311194043/" data-tabs="" data-width="500" data-height="340" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/Ni&#x1ec1;m-Vui-L&#x1ead;p-Tr&#xec;nh-103123311194043/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Ni&#x1ec1;m-Vui-L&#x1ead;p-Tr&#xec;nh-103123311194043/">Niềm Vui Lập Trình</a></blockquote></div>
+            </div>
 
-  <script>
+          <div class="card card-search">
+              <div class="card-header card-header-search">
+                Đăng kí Email
+                
+              </div>
+              <div class="card-body card-body-search">
+                <div class="text-email-subscribe">
+                  <p class="text-justify mt-4">Các bạn nhấp subscribe để nhận bài viết mới nhất từ mình nhé!</p>
+                  </div>
+                  <!-- Begin Mailchimp Signup Form -->
+                  <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+                  <style type="text/css">
+                    #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+                    /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+                       We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+                  </style>
+                  <div id="mc_embed_signup">
+                  <form action="https://gmail.us20.list-manage.com/subscribe/post?u=02f033de83f488a359d24bc9f&amp;id=85d0d8697c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                      <div id="mc_embed_signup_scroll">
+                
+                  <div class="mc-field-group">                
+                    <label for="mce-EMAIL" class="label-email mb-2">Email:
+                  </label>
+                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Hãy nhập địa chỉ email của bạn">
 
-  </script>
-  <%- include('footer') -%>
+                  </div>
+                    <div id="mce-responses" class="clear">
+                      <div class="response text-justify" id="mce-error-response" style="display:none"></div>
+                      <div class="response text-justify" id="mce-success-response" style="display:none"></div>
+                    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_02f033de83f488a359d24bc9f_85d0d8697c" tabindex="-1" value=""></div>
+                      <div class="clear"><input type="submit" value="Đăng Kí Email" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                      </div>
+                  </form>
+                  </div>
+                  <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+                  <!--End mc_embed_signup-->
+                                                       
+                    </div>
+              </div>
+    </div>
+    </div>
+    </div>
+
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v5.0&appId=2121975281235443&autoLogAppEvents=1"></script>
+<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+<script>
+
+
+$(document).ready(function() {
+  $('.page-link').addClass('hvr-underline-from-left');
+})
+</script>
+
+
+<!--Footer-->
+<div class="container-fluid footer">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-xs-12">
+            <div class="content-footer">
+              <h5>Góc trả lời</h5>
+              <p>Nếu các bạn có gì thắc mắc thì liên hệ mình qua những mạng xã hội sau đây nhé!</p>
+              <ul class="social-meadia-icon">
+                <li class="social-meadia-icon-item"><a href="https://www.facebook.com/Chia-S%E1%BA%BB-L%E1%BA%ADp-Tr%C3%ACnh-100797921404016/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li class="social-meadia-icon-item"><a href="https://twitter.com/ThaiVietNhat4?s=07"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li class="social-meadia-icon-item"><a href="mailto:niemvuilaptrinh2410@gmail.com" class="mailtoui"><i class="fa fa-google" aria-hidden="true"></i></a></li>     
+              </ul>
+              <hr />
+             <p> © 2019  Copyrigh: Niềm Vui Lập Trình (Thái Viết Nhật).</p>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-xs-12">
+    
+          </div>
+         
+        </div>
+      </div>
+   
+<!--End mc_embed_signup-->
+      <!--Footer-->
+  
+    <script>
+      $(function () {
+        $(window).on('scroll', function () {
+          if( $(window).scrollTop() > 10) {
+            $('.navbar').addClass('active shadow');
+          } else {
+            $('.navbar').removeClass('active shadow')
+          }
+        })
+      })
+    </script>
+    
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+      </script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+      </script>
+     
+        <script src="https://cdn.jsdelivr.net/npm/mailtoui@1.0.3/dist/mailtoui-min.js" data-options='{ "buttonText2": "Gửi email bằng Outlook", "buttonText1": "Gửi email bằng Gmail" ,
+        "buttonText3": "Gửi email bằng Yahoo", "buttonText4": "Gửi email bằng Email app window", "title": "Gửi Email cho mình nhé!"}'></script>
+    </body>
+    
+    </html>

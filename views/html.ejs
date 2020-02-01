@@ -23,382 +23,81 @@
       <hr />
       <div class="card-text text-justify">
         <article>
-          <h2 class="bg-primary mb-4 text-white rounded p-2 shadow"><i class="fa fa-cube" aria-hidden="true"></i> HTML
-            Bài 7</h2>
+          <h2 class="bg-primary mb-4 text-white rounded p-2 shadow"><i class="fa fa-cube" aria-hidden="true"></i> Chuyển đổi từ bảng HTML sang File Excel</h2>
           <div class="article-title">
             <div class="progress-wrapper">
               <div class="progress-label"></div><progress></progress>
             </div>
           </div>
           <div class="text-content-article mt-5">
-            <p><i>Xin chào các bạn quay lại blog của mình. Trong bài này mình sẽ giới thiệu các bạn về cấu trúc và cách
-                tạo một bảng mẫu để người dùng có thể điền thông tin cá nhân ở  trong HTML cho trang web của mình. Bây giờ hãy cùng nhau tìm hiểu nhé!</i>
+            <p><i>Xin chào các bạn quay lại blog của mình. Trong bài này mình sẽ giới thiệu cho các bạn đến một ứng dụng Jquery để chuyển đổi một bảng 
+              trong HTML sang một file Excel. Bây giờ hãy cùng nhau tìm hiểu nhé!</i>
             </p>
-            <h4><b><i class="fa fa-book" aria-hidden="true"></i> 1) Biểu mẫu trong HTML: </b></h4>
-            <p>Để dễ gọi hơn mình sẽ dùng từ <b>form</b> nhé! Thì mục đích của form là giúp chúng ta tạo sự tương tác giữa người dùng với trang web. Nó cho phép người dùng nhập và gửi dữ liệu đến <b>web server</b>
-              (theo mình hiểu thì đây là nơi mà nó lưu trữ trang web và xử lý thông tin). Form được sử dụng rất là nhiều trong các trang web  như đăng kí thành viên, tìm kiếm, người dùng đăng nhập... Để dễ hiểu thì các bạn xem một <b>form</b> ở dưới đây nhé!
-              
-            </p>
-            <img class="img-thumbnail shadow" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1577711146/b%C3%A0i%207/FireShot_Capture_038_-_Google_-_www.google.com_lhzpmn.png" alt="Form Goole" title="Ví dụ về một form HTML" />
-            <p class="mt-4 mb-4">Sau đây là hình ảnh về cách hoạt động của một <b>form</b> để giúp các bạn có thể dễ hình dung hơn:</p>
-            <img class="img-thumbnail shadow" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1577716673/b%C3%A0i%207/cau_truc_form_s74l17.svg" alt="Cấu trúc một form HTML" title="Hoạt Động của Form HTML"/>
-            <p class="mt-4 mb-4">Như các bạn thấy khi người dùng nhập thông tin và nhấp vào đăng ký thì  dữ liệu sẽ được gửi đến Web Server để xử lý với thông tin là yêu cầu đăng kí của người dùng. Sau khi xử lý xong,
-              sẽ trả về một thông báo bằng HTML để cho người dùng biết là mình đã đăng ký thành công và tùy vào những mục đích khác nhau thì ta sẽ có những form tương ứng. Bây giờ chúng ta hãy tìm hiểu cấu trúc của thẻ <b>form</b> qua hình ảnh sau đây:
-            </p>
-            <img class="img-thumbnail shadow" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1577716643/b%C3%A0i%207/The_form_jpcarp.svg" alt="Cấu trúc thẻ form HTML" title="thẻ Form HTML"/>
-            <p class="mt-4 mb-4">Do chúng ta  mới chỉ học HTML nên mình không cần ghi hai thuộc tính này nhé! Nhưng giúp các bạn hiểu thêm để sau này có học về <b>Web Back-End</b> thì cũng dễ hình dung hơn.<br />
-            Các bạn để ý thuộc tính <b>action="/dangky.php"</b> thì đuôi <b>.php</b>  ở đây chính là ngôn ngữ PHP dùng để xử lý thông thông tin người dùng gửi đến Web Server. Và khi xây dựng web thì các bạn có thể dùng những ngôn 
-            ngữ khác để xử lý. Ở đây mình có liệt kê qua một vài ngôn ngữ để các bạn có thể tham khảo:
-            <table class="table">
-              <thead>
-                <tr>                
-                  <th scope="col">Tên</th>
-                  <th scope="col">Thông Tin Thêm</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">PHP </th>
-                  <td>Đây có thể được xem là ngôn ngữ phổ biến và được sử dụng rộng rải trong lập trình web. Nó có những framwork nổi tiếng xây dựng website dễ dàng như Wordpress... 
-                    để xem thêm chi tiết các bạn xem ở đây nhé : <a href="https://www.php.net/" target="_blank" title="Ngôn ngữ lập trình PHP">PHP</a>
-                  </td>
-             
-                </tr>
-                <tr>
-                  <th scope="row">Node JS</th>
-                  <td>Ngôn ngữ này cho phép chúng ta viết ở phía Front-End và cả Back-End. Cái này rất thích hợp cho những trang web thời gian thực như là trò chuyện trực tuyến, livestream ...
-                    để xem thêm chi tiết các bạn xem ở đây nhé : <a href="https://nodejs.org/en/" target="_blank" title="Ngôn ngữ lập trình NodeJS">Node JS</a>
-                  </td>
-           
-                </tr>
-                <tr>
-                  <th scope="row">Java</th>
-                  <td>Đây là ngôn ngữ được phát triển lâu đời và có  cộng động lớn hỗ trợ. Các website lớn hay ngân hàng thường sử dụng vì vấn đề bảo mật tốt của ngôn ngữ này, để xem thêm chi tiết các bạn xem ở đây nhé : <a href="https://www.java.com/en/download/" target="_blank" title="Ngôn ngữ lập trình Java">Java</a></td>
-            
-                </tr>
-                <tr>
-                  <th scope="row">Ruby</th>
-                  <td>Ngôn ngữ này theo mình thấy thì thường dùng cho những ứng dụng web nhỏ với thời gian phát triển sản phẩm khá  là nhanh. Để xem thêm chi tiết các bạn xem ở đây nhé : <a href="https://www.ruby-lang.org/vi/" target="_blank" title="Ngôn ngữ lập trình Ruby">Ruby</a></td>
-            
-                </tr>
-                <tr>
-                  <th scope="row">Python</th>
-                  <td>Ngôn ngữ này theo mình thấy khá là dễ học với những cú pháp đơn giản. Ngoài việc phát triển trong trí tuệ nhân tạo thì ngôn ngữ còn được sử dụng vào việc làm web.
-                    Để xem thêm chi tiết các bạn xem ở đây nhé : <a href="https://www.python.org/" target="_blank" title="Ngôn ngữ lập trình Python">Python</a>
-                  </td>
-            
-                </tr>
-              </tbody>
-            </table>
-            </p>
-            <p><b>Ở đây thì mình không sắp xếp  theo thứ tự phổ biến và cũng còn rất nhiều ngôn ngữ tốt khác nữa nên khi các bạn chọn ngôn ngữ lập trình Web  thì điều quan trọng là   cảm thấy thích với cú pháp, cách sử dụng, cách xử lý logic của ngôn ngữ và phải phù hợp với nhu cầu của dự án web.</b></p>
-            <p>Thuộc tính <b>method="POST"</b> là phương pháp gửi dữ liệu bảo mật lên Web server thường dùng chủ yếu trong form. Còn một phương thức nữa nhưng kém bảo mật và an toàn là phương thức <b>GET</b> vì nó sẽ hiện thông tin dữ liệu lên trang URL. Khi lập trình thì mình khuyến khích các bạn nên sử dụng <b>POST</b> để cho an toàn  nhé!</p>
-            <h5 class="ml-5"><b>Các thẻ nhập dữ liệu trong Form</b>:</h5>
-            <h6><b><u>Ô nhập chữ (Text):</u></b> </h6>
-            <p class="text-center mt-4 mb-4"><span class="p-3 bg-primary text-white" style="font-size:1rem">&#60;input </span><span class="p-3 text-white bg-success">type="text"</span><span class="p-3 bg-primary text-white" style="font-size:1rem"> /&#62;</span></p>
-            <p>
-              Đây là thẻ  được dùng với một hay nhiều chữ trên một dòng giúp các bạn có thể nhập chữ như tên, tên đăng nhập, sở thích... và thường được sử dụng  nhiều nhất trong form. Bây giờ chúng ta cùng nhau xem ví dụ nhé:
-              <div class="row">
-                <div class="col-md-12 col-sm-12">
-                  <div class=" shadow p-2">
-                    <h5 class="text-center bg-primary text-white p-2 mb-4">Mã Code HTML</h5>
-                    <pre><code class="html">&#60;label&#62;Sở thích của bạn:&#60;/label&#62;<br />&#60;input type="text" name="soThich" maxlength="10" /&#62;</code></pre>
-                  </div>
-                </div>
-                <div class="col-md-12 col-sm-12 mt-4">
-                  <div class=" shadow p-2">
-                    <h5 class="text-center bg-primary text-white p-2 mb-4">Hiện thị trên Web</h5>
-                    <p>Sở thích của bạn:
-                      <input type="text" name="soThich" maxlength="10" />
-                      </p>
-                  </div>
-                </div>
-              </div>
-            </p>
-            <p class="mt-4">thì ở đây có các thuộc tính các bạn cần lưu ý:</p>
-            <ul>
-              <li><b>type="text"</b>: Thuộc tính xác định dữ liệu người dùng nhập vào luôn là chuỗi.</li>
-              <li><b>name="soThich"</b>: Thuộc tính này giúp xác định tên của ô nhập khi gửi dữ liệu từ  form tới Web Server.</li>
-              <li><b>maxlength="10"</b>: Thuộc tính này giới hạn người dùng nhập kí tự vào ô nhập chữ. (Ở ví dụ  là giới hạn 10 kí tự nhé!)</li>
-              <li><b>Thẻ &#60;label&#62;</b>: Dùng để miêu tả ô nhập chữ giúp người dùng biết mình cần nhập dữ liệu nào vào từng ô cho chính xác.</li>
-            </ul>
-            <h6><b><u>Ô nhập mật khẩu (Password):</u></b> </h6>
-            <p class="text-center mt-4 mb-4"><span class="p-3 bg-primary text-white" style="font-size:1rem">&#60;input </span><span class="p-3 text-white bg-success">type="password"</span><span class="p-3 bg-primary text-white" style="font-size:1rem"> /&#62;</span></p>
-            <p>Để bảo vệ tài khoản của các bạn thì người ta tạo ra một giá trị thuộc tính tên là <b>password</b> trong thuộc tính <b>type</b> giúp các bạn khi nhập mật khẩu hay những thông tin bí mật, riêng tư của mình ở nơi công cộng thì sẽ chỉ hiện **** hoặc ••••, 
-            những người xung quanh dù có xem điện thoại của bạn thì cũng không thể biết được mật khẩu hay thông tin riêng tư ở trong đó.</p>
-            <div class="row">
-              <div class="col-md-12 col-sm-12">
-                <div class=" shadow p-2">
-                  <h5 class="text-center bg-primary text-white p-2 mb-4">Mã Code HTML</h5>
-                  <pre><code class="html">&#60;label&#62;Nhập mật khẩu của bạn:&#60;/label&#62;<br />&#60;input type="password" name="matKhau" /&#62;</code></pre>
-                </div>
-              </div>
-              <div class="col-md-12 col-sm-12 mt-4">
-                <div class=" shadow p-2">
-                  <h5 class="text-center bg-primary text-white p-2 mb-4">Hiện thị trên Web</h5>
-                  <p>Nhập mật khẩu của bạn:
-                    <input type="password" name="matKhau"  />
-                    </p>
-                </div>
-              </div>
-            </div>
-            <p class="mt-4">Thì nó cũng có các thuộc tính khác như ô nhập chữ. Còn những thuộc tính mở rộng của thẻ <b>&#60;input /&#62;</b> thì mình sẽ nói sau nhé!</p>
-            <h6><b><u>Thẻ nhập nhiều dòng (Textarea):</u></b> </h6>
-            <div class="row">
-              <div class="col-md-3 col-xs-12"></div>
-              <div class="col-md-6 col-xs-12">
-                <div class="text-center mt-4 mb-4"><p class="p-3 bg-primary text-white" style="font-size:1rem">&#60;textarea cols="Số Cột" rows="Số Dòng" &#62;</p>
-                  <p class="p-3 text-white bg-success">Nội Dung</p>
-                  <p class="p-3 bg-primary text-white" style="font-size:1rem">&#60;textarea&#62;</p>
-                </div>
-              </div>
-              <div class="col-md-3 col-xs-12"></div>
-            </div>
-          
-            <p>Thẻ này giúp người dùng có thể nhập nhiều thông tin mà họ mong muốn như là bình luận trên Facebook, miêu tả về sản phẩm, nêu cảm nghĩ... Việc điều chỉnh kích thước của thẻ này sẽ theo <b>số cột 
-              và số dòng</b> ví dụ cho các bạn dễ hiểu thì mình đặt giá trị thuộc tính như sau: <b>cols="40" rows="5"</b> thì số <i>5</i> là miêu tả số dòng (xác định chiều cao của thẻ) và <i>40</i> là 
-            số cột tương đương với chiều dài của thẻ sẽ là 40 kí tự cho một dòng. Để nắm rõ hơn mình hãy cùng nhau tìm hiểu ví dụ dưởi đây: </p>
-            <div class="row mb-4">
-              <div class="col-md-12 col-sm-12">
-                <div class=" shadow p-2">
-                  <h5 class="text-center bg-primary text-white p-2 mb-4">Mã Code HTML</h5>
-                  <pre><code class="html">&#60;label&#62;Nhập bình luận của bạn:&#60;/label&#62;&#60;br /&#62;<br />&#60;textarea  name="binhLuan" cols="40" rows="5"&#62;Nhập bình luận&#60;/textarea&#62;</code></pre>
-                </div>
-              </div>
-              <div class="col-md-12 col-sm-12 mt-4">
-                <div class=" shadow p-2">
-                  <h5 class="text-center bg-primary text-white p-2 mb-4">Hiện thị trên Web</h5>
-                  <label>Nhập bình luận của bạn:</label><br />
-                  <textarea  name="binhLuan" cols="40" rows="5">Nhập bình luận</textarea>
-                </div>
-              </div>
-            </div>
-            <h6><b><u>Ô chọn một trong nhiều lựa chọn (Radio):</u></b> </h6>
-            <p class="text-center mt-4 mb-4"><span class="p-3 bg-primary text-white" style="font-size:1rem">&#60;input </span><span class="p-3 text-white bg-success">type="radio"</span><span class="p-3 bg-primary text-white" style="font-size:1rem"> /&#62;</span></p>
-            <p>Ô này giúp chúng ta  <b>chọn một</b> trong nhiều lựa chọn như là giới tính, sở thích ... Đi với ô này thì chúng ta có hai thuộc tính bắt buộc là <b>name và value</b> để xác định tên và giá trị để gửi từ form đến server.
-              Và Thông thường thì các bạn sẽ thấy là những ô này sẽ đi cùng với nhau theo một nhóm (<i>&#60;ul&#62;, &#60;ol&#62;...</i>) Để nắm rõ hơn mình hãy đi vào ví dụ cụ thể nhé:
-            </p>
-            <div class="row mb-4">
-              <div class="col-md-12 col-sm-12">
-                <div class=" shadow p-2">
-                  <h5 class="text-center bg-primary text-white p-2 mb-4">Mã Code HTML</h5>
-                  <pre><code class="html">&#60;label&#62;Chọn giới tính của bạn&#60;/label&#62;<br /> &#60;ul style="list-style-type: none;"&#62;<br /> &#60;li&#62;&#60;input type="radio" name="gioiTinh" value="nam" checked&#62; Nam&#60;/li&#62;<br /> &#60;li&#62;&#60;input type="radio" name="gioiTinh" value="nu"&#62; Nữ&#60;/li&#62;<br /> &#60;/ul&#62;<br /></code></pre>
-                </div>
-              </div>
-              <div class="col-md-12 col-sm-12 mt-4">
-                <div class=" shadow p-2">
-                  <h5 class="text-center bg-primary text-white p-2 mb-4">Hiện thị trên Web</h5>
-                  <label>Nhập giới tính của bạn</label>
- <ul style="list-style-type: none;">
- <li><input type="radio" name="gioiTinh" value="nam" checked> Nam</li>
- <li><input type="radio" name="gioiTinh" value="nu"> Nữ</li>
- </ul>
-                </div>
-              </div>
-            </div>
-            <p>Các bạn có thể thấy là ở đây mình đặt thuộc tính là <b>style="list-style-type: none;"</b> ngăn cho HTML tạo ra những kí hiệu mặc định trong thẻ danh sách làm cho form của chúng ta 
-            dễ nhìn và đơn giản hơn (Các bạn có thể xem lại trong bài 4 về thẻ danh sách). Thuộc tính <b>checked</b> đặt một lựa chọn làm mặc định giúp cho thông tin từ form gửi lên server sẽ 
-            không bị thiếu làm  ảnh hưởng đến việc xử lý thông tin nếu người dùng không chọn. Và mình có thể thêm bao nhiêu lựa chọn tùy ý nhưng các bạn chỉ có thể chọn một thôi nhé!</p>
-            <h6><b><u>Ô chọn hai hay nhiều lựa chọn (Radio):</u></b> </h6>
-            <p class="text-center mt-4 mb-4"><span class="p-3 bg-primary text-white" style="font-size:1rem">&#60;input </span><span class="p-3 text-white bg-success">type="checkbox"</span><span class="p-3 bg-primary text-white" style="font-size:1rem"> /&#62;</span></p>
-              Cũng có những dữ liệu chúng ta cần thu thập nhiều thông tin từ người dùng như là màu yêu thích, loại nhạc bạn thích nghe, Sở thích... Nó cũng giống như ô <b>radio</b> là cần hai thuộc tính bắt buộc là 
-              <b>name và value</b>. Để hiểu rõ mình hãy đi vào ví dụ nhé:
-              <div class="row mb-4">
-                <div class="col-md-12 col-sm-12">
-                  <div class=" shadow p-2">
-                    <h5 class="text-center bg-primary text-white p-2 mb-4">Mã Code HTML</h5>
-                    <pre><code class="html">&#60;label&#62;Chọn sở thích của bạn&#60;/label&#62;<br /> &#60;ul style="list-style-type: none;"&#62;<br /> &#60;li&#62;&#60;input type="checkbox" name="soThich" value="daBanh" checked&#62; Đá banh&#60;/li&#62;<br /> &#60;li&#62;&#60;input type="checkbox" name="soThich" value="ngheNhac"&#62; Nghe nhạc&#60;/li&#62;<br /> &#60;li&#62;&#60;input type="checkbox" name="soThich" value="xemPhim"&#62; Xem phim&#60;/li&#62;<br /> &#60;li&#62;&#60;input type="checkbox" name="soThich" value="diBo"&#62; Đi Bộ&#60;/li&#62;<br /> &#60;/ul&#62;<br /></code></pre>
-                  </div>
-                </div>
-                <div class="col-md-12 col-sm-12 mt-4">
-                  <div class=" shadow p-2">
-                    <h5 class="text-center bg-primary text-white p-2 mb-4">Hiện thị trên Web</h5>
-                    <label>Chọn sở thích của bạn</label>
-                    <ul style="list-style-type: none;">
-                    <li><input type="checkbox" name="soThich" value="daBanh" checked> Đá banh</li>
-                    <li><input type="checkbox" name="soThich" value="ngheNhac"> Nghe nhạc</li>
-                    <li><input type="checkbox" name="soThich" value="xemPhim"> Xem phim</li>
-                    <li><input type="checkbox" name="soThich" value="diBo"> Đi Bộ</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <h6><b><u>Thẻ chọn một trong danh sách sổ xuống (&#60;select&#62;):</u></b> </h6>
-              <div class="row">
-                <div class="col-md-3 col-xs-12"></div>
-                <div class="col-md-6 col-xs-12">
-                  <div class="text-center mt-4 mb-4"><p class="p-3 bg-primary text-white" style="font-size:1rem">&#60;select name="ten" &#62;</p>
-                    <p class="p-3 text-white bg-success">&#60;option value="Giá Trị 1" &#62;Giá Trị 1&#60;option&#62;</p>
-                    <p class="p-3 text-white bg-success">&#60;option value="Giá Trị 2" &#62;Giá Trị 2&#60;option&#62;</p>
-                    <p class="p-3 text-white bg-success">&#60;option value="Giá Trị 3" &#62;Giá Trị 3&#60;option&#62;</p>
-                    <p class="p-3 bg-primary text-white" style="font-size:1rem">&#60;select&#62;</p>
-                  </div>
-                </div>
-                <div class="col-md-3 col-xs-12"></div>
-              </div>
-              <p>Nó cũng giống ô chọn một trong nhiều lựa chọn mà mình đã học ở trên nhưng điểm khác nhau ở đây là nó không hiển thị trực tiếp mà chỉ khi ta nhấp chuột vào thì nó mới hiện danh sách cho chúng ta chọn.
-                Trong thẻ <b>&#60;select&#62;</b> thì mình có các thẻ con là <b>&#60;option&#62;</b> dùng để hiện thị các lựa chọn mà chúng ta muốn người dùng chọn. Và  nó phải có thuộc tính bắt buộc là <b>value</b>.
-                Để các bạn rõ hơn thì mình hãy tìm hiểu thông qua ví dụ nhé:
-                <div class="row mb-4">
-                  <div class="col-md-12 col-sm-12">
-                    <div class=" shadow p-2">
-                      <h5 class="text-center bg-primary text-white p-2 mb-4">Mã Code HTML</h5>
-                      <pre><code class="html">&#60;label&#62;Thiết Bị mà bạn hay sử dụng để học tập: &#60;/label&#62;&#60;br /&#62;<br /> &#60;select name="hocTap"&#62;<br /> &#60;option value="maytinhban"&#62;Máy tính bàn&#60;/option&#62;<br /> &#60;option value="maytinhbang"&#62;Máy tính bảng&#60;/option&#62;<br /> &#60;option value="maytinhxachtay"&#62;Máy tính xách tay&#60;/option&#62;<br /> &#60;/select&#62;</code></pre>
-                    </div>
-                  </div>
-                  <div class="col-md-12 col-sm-12 mt-4">
-                    <div class=" shadow p-2">
-                      <h5 class="text-center bg-primary text-white p-2 mb-4">Hiện thị trên Web</h5>
-                      <label>Thiết Bị mà bạn hay sử dụng để học tập: </label><br />
-                     <select name="hocTap">
-                       <option value="maytinhban">Máy tính bàn</option>
-                       <option value="maytinhbang">Máy tính bảng</option>
-                       <option value="maytinhxachtay">Máy tính xách tay</option>
-                     </select>
-                
-                    </div>
-                  </div>
-                </div>
-              </p>
-              <p>Thì thẻ này cũng cho phép chúng ta có thể chọn hai hay nhiều lựa chọn trở lên bằng cách thêm thuộc tính <b>multiple</b>. Lưu ý là khi các bạn muốn chọn nhiều thì 
-                mình phải giữ nút <b>CTRL</b> và nhấp chuột vào lựa chọn mình muốn. Để nắm rõ hơn các bạn xem ví dụ nhé: </p>
-              <div class="row mb-4">
-                <div class="col-md-12 col-sm-12">
-                  <div class=" shadow p-2">
-                    <h5 class="text-center bg-primary text-white p-2 mb-4">Mã Code HTML</h5>
-                    <pre><code class="html">&#60;label&#62;Thiết Bị mà bạn hay sử dụng để học tập: &#60;/label&#62;&#60;br /&#62;<br /> &#60;select name="hocTap"&#62;<br /> &#60;option value="maytinhban"&#62;Máy tính bàn&#60;/option&#62;<br /> &#60;option value="maytinhbang"&#62;Máy tính bảng&#60;/option&#62;<br /> &#60;option value="maytinhxachtay"&#62;Máy tính xách tay&#60;/option&#62;<br /> &#60;/select&#62;</code></pre>
-                  </div>
-                </div>
-                <div class="col-md-12 col-sm-12 mt-4">
-                  <div class=" shadow p-2">
-                    <h5 class="text-center bg-primary text-white p-2 mb-4">Hiện thị trên Web</h5>
-                    <label>Thiết Bị mà bạn hay sử dụng để học tập: </label><br />
-                   <select name="hocTap" multiple>
-                     <option value="maytinhban">Máy tính bàn</option>
-                     <option value="maytinhbang">Máy tính bảng</option>
-                     <option value="maytinhxachtay">Máy tính xách tay</option>
-                   </select>
-              
-                  </div>
-                </div>
-              </div>
-              <p>Đôi khi chúng ta muốn hiển thị số lựa chọn được hiển thị mặc định còn những lựa chọn khác thì phải kéo chuột xuống mới thấy. Thì thuộc tính <b>size</b> cho phép chúng ta linh động hiện thị mà theo cách ta muốn.
-              Để rõ hơn thì chúng ta hãy cung tìm hiểu thông qua ví dụ nhé:</p>
-              <div class="row mb-4">
-                <div class="col-md-12 col-sm-12">
-                  <div class=" shadow p-2">
-                    <h5 class="text-center bg-primary text-white p-2 mb-4">Mã Code HTML</h5>
-                    <pre><code class="html">&#60;label&#62;Thiết Bị mà bạn hay sử dụng để học tập: &#60;/label&#62;&#60;br /&#62;<br /> &#60;select name="hocTap" size="2"&#62;<br /> &#60;option value="maytinhban"&#62;Máy tính bàn&#60;/option&#62;<br /> &#60;option value="maytinhbang"&#62;Máy tính bảng&#60;/option&#62;<br /> &#60;option value="maytinhxachtay"&#62;Máy tính xách tay&#60;/option&#62;<br /> &#60;/select&#62;</code></pre>
-                  </div>
-                </div>
-                <div class="col-md-12 col-sm-12 mt-4">
-                  <div class=" shadow p-2">
-                    <h5 class="text-center bg-primary text-white p-2 mb-4">Hiện thị trên Web</h5>
-                    <label>Thiết bị mà bạn hay sử dụng để học tập: </label><br />
-                   <select name="hocTap" size="2">
-                     <option value="maytinhban">Máy tính bàn</option>
-                     <option value="maytinhbang">Máy tính bảng</option>
-                     <option value="maytinhxachtay">Máy tính xách tay</option>
-                   </select>
-                  </div>
-                </div>
-              </div>
-              <h6><b><u>Ô gửi form (&#60;Submit&#62;):</u></b> </h6>
-              <p class="text-center mt-4 mb-4"><span class="p-3 bg-primary text-white" style="font-size:1rem">&#60;input </span><span class="p-3 text-white bg-success">type="submit"</span><span class="p-3 bg-primary text-white" style="font-size:1rem"> /&#62;</span></p>
-              <p>Đây là  ô mà khi người dùng đã nhập xong hết dữ liệu có trong form thì nút này dùng để gửi form lên Web Server để xử lý thông tin. Đa số trong  form  thì cũng phải có nút này và thuộc tính bắt buộc trong thẻ là <b>value</b>. Và  thẻ này thường được đặt 
-                dưới cùng của form để tiện cho người dùng nhấp vào. Để rõ hơn thì hãy cùng nhau tìm hiểu thông qua ví dụ nhé: 
-              </p>
-              <div class="row mb-4">
-                <div class="col-md-12 col-sm-12">
-                  <div class=" shadow p-2">
-                    <h5 class="text-center bg-primary text-white p-2 mb-4">Mã Code HTML</h5>
-                    <pre><code class="html">&#60;form action="/dangky.php" method="POST"&#62;<br /> &#60;label&#62;Tên&#60;/label&#62;&#60;br /&#62;<br /> &#60;input type="text" name="ten" maxlength="30"/&#62;&#60;br /&#62;<br /> &#60;label&#62;Mật Khẩu&#60;/label&#62;&#60;br /&#62;<br /> &#60;input type="password" name="matkhau" maxlength="30"/&#62;&#60;br /&#62;&#60;br /&#62;<br /> &#60;input type="submit" value="Đăng Ký" /&#62;<br /> &#60;/form&#62;</code></pre>
-                  </div>
-                </div>
-                <div class="col-md-12 col-sm-12 mt-4">
-                  <div class=" shadow p-2">
-                    <h5 class="text-center bg-primary text-white p-2 mb-4">Hiện thị trên Web</h5>
-                    <form action="/dangky.php" method="POST">
-                      <label>Tên</label><br />
-                      <input type="text" name="ten" maxlength="30"/><br />
-                      <label>Mật Khẩu</label><br />
-                      <input type="password" name="matkhau" maxlength="30"/><br /><br />
-                      <input type="submit" value="Đăng Ký" />
-                    </form>
-                  </div>
-                </div>
-              </div>
-
-<p>Thì các bạn có thể thấy là giá trị thuộc tính <b>value</b> trong ô gửi  sẽ hiển thị trên nút gửi, giúp cho người dùng biết là khi nhấn vào ô đó thì nó  gửi dữ liệu của mình lên để Web Server xử lý thông tin là đăng ký tài khoản.</p>
-
-
-
-
-  <h4 class="mt-4"> <b><i class="fa fa-question-circle-o" aria-hidden="true"></i> Bài tập HTML: </b></h4>
-            <p>Sau đây mình sẽ có bài tập nhỏ giúp các bạn nhớ những gì mà mình đã học trong ngày hôm nay.<br />
-
-              <ol>
-                <li>
-                  Các bạn tạo một cấu trúc file HTML với tên là <b>HTML7baitap.html</b>
-                </li>
-                <li>
-                  Sau đó các bạn nhập form có nội dung như sau đây nha:
-                  <div class="row mt-4 mb-4">
-                  <div class=" shadow p-2 col-xs-12 col-md-12">
-                    <h4>Đăng ký thành viên</h4>
-                    <form action="/dangky.php" method="POST">
-                      <label>Tên của bạn:</label><br />
-                      <input type="text" name="ten" maxlength="30"/><br />
-                      <label>Mật Khẩu</label><br />
-                      <input type="password" name="matkhau" maxlength="30"/><br />
-                      <label>Sở Thích của bạn: </label><br />
-                      <ul style="list-style-type: none;">
-                      <li><input type="checkbox" name="soThich" value="daBanh" checked> Đi du lịch</li>
-                      <li><input type="checkbox" name="soThich" value="ngheNhac"> Nghe nhạc</li>
-                      <li><input type="checkbox" name="soThich" value="xemPhim"> Gặp gỡ bạn bè</li>
-                      <li><input type="checkbox" name="soThich" value="diBo"> Đi Bộ</li>
-                      </ul>
-                      <label>Giới tính của bạn:</label> 
-                      <select name="gioitinh">
-                        <option value="nam">Nam</option>
-                        <option value="nu">Nữ</option>
-                        </select>
-                        <br />
-                        <label>Hãy góp ý để dịch vụ chúng tôi phát triển hơn :</label> <br />
-                        <textarea name="gopy" cols="40" rows="5">Hãy góp ý , xin chân thành cảm ơn!</textarea><br />
-                    
-                      <input type="submit" value="Đăng Ký" />
-                      
-                    </form>
-                  </div>
-                  </div>
-                </li>
-              </ol>
-              <p><i>Các bạn chỉ cần đặt <b>action="" method=""</b></i>. Vì chúng ta mới học nên chỉ cần hiển thị một form là được.</p>
-
-            </p>
-            <p>Đây là file lời giải của bài tập các bạn tham khảo. Nhưng trước khi xem hãy cố gắng hoàn thành bài tập để
-              mình nhớ lâu hơn nhé!</p>
-            <p>
-              <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
-                aria-expanded="false" aria-controls="collapseExample">
-                Lời giải bài tập
-              </button>
-            </p>
-            <div class="collapse" id="collapseExample">
-              <pre><code class="html">&#60;h4&#62;Đăng ký thành viên&#60;/h4&#62;<br /> &#60;form action="/dangky.php" method="POST"&#62;<br /> &#60;label&#62;Tên của bạn:&#60;/label&#62;&#60;br /&#62;<br /> &#60;input type="text" name="ten" maxlength="30"/&#62;&#60;br /&#62;<br /> &#60;label&#62;Mật Khẩu&#60;/label&#62;&#60;br /&#62;<br /> &#60;input type="password" name="matkhau" maxlength="30"/&#62;&#60;br /&#62;<br /> &#60;label&#62;Sở Thích của bạn: &#60;/label&#62;&#60;br /&#62;<br /> &#60;ul style="list-style-type: none;"&#62;<br /> &#60;li&#62;&#60;input type="checkbox" name="soThich" value="daBanh" checked&#62; Đi du lịch&#60;/li&#62;<br /> &#60;li&#62;&#60;input type="checkbox" name="soThich" value="ngheNhac"&#62; Nghe nhạc&#60;/li&#62;<br /> &#60;li&#62;&#60;input type="checkbox" name="soThich" value="xemPhim"&#62; Gặp gỡ bạn bè&#60;/li&#62;<br /> &#60;li&#62;&#60;input type="checkbox" name="soThich" value="diBo"&#62; Đi Bộ&#60;/li&#62;<br /> &#60;/ul&#62;<br /> &#60;label&#62;Giới tính của bạn:&#60;/label&#62; <br /> &#60;select name="gioitinh"&#62;<br /> &#60;option value="nam"&#62;Nam&#60;/option&#62;<br /> &#60;option value="nu"&#62;Nữ&#60;/option&#62;<br /> &#60;/select&#62;<br /> &#60;br /&#62;<br /> &#60;label&#62;Hãy góp ý để dịch vụ chúng tôi phát triển hơn :&#60;/label&#62; &#60;br /&#62;<br /> &#60;textarea name="gopy" cols="40" rows="5"&#62;Hãy góp ý , xin chân thành cảm ơn!&#60;/textarea&#62;&#60;br /&#62;<br /> &#60;input type="submit" value="Đăng Ký" /&#62;<br /> &#60;/form&#62;</code></pre>
-            </div>
-            <p>Còn điều này mình quên nói là khi các bạn làm xong và lưu vào <b>HTML7baitap.html</b>. Thì để mở mình vào
-              thư mục đã lưu file và nhấn trực tiếp vào thì
-              trình duyệt sẽ tự động chạy file đó nhé.</p>
-            <img class="img-fluid shadow-sm rounded"
-              src=" https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576500256/bai%202/Open_file_html_vulqku.png" />
-            <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
-            <p>Do bài này hơi dài nên mình sẽ chia sẻ làm hai phần nhé các bạn. Ở phần này thì mình đã giới thiệu đến các bạn cách hoạt động và những thẻ cơ bản có trong Form. Phần tiếp theo mình sẽ tìm hiểu sâu hơn về những thẻ khác có trong Form.
-              Và có gì thắc mắc thì cứ liên hệ mình sẽ trả lời sớm nhất có thể. Chúc các 
-              bạn làm việc và học tập thật tốt nhé! 
-            </p>
-          </div>
+            <p>Chúng ta sẽ sử dụng plugin <b>Table2Excel</b> để chuyển đổi từ bảng sang file Excel. Các bạn nhấp vào đường dẫn 
+            bên dưới để tải file Javascript về nhé! <br />
+            <i class="fa fa-download" aria-hidden="true"></i> <a href="https://res.cloudinary.com/dn4nxz7f0/raw/upload/v1580485796/HTML%20table%20to%20excel/jquery.table2excel.min_bdjf5z.rar" download>Download File Table2Excel</a></p>
+  
+            <p>Sau đó các bạn sẽ giải nén file và tạo ra cấu trúc thư mục cây như sau: </p>
+            <img src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1580486733/HTML%20table%20to%20excel/table2excel_twjj79.svg"  width="200" height="200" alt="Table2Excel">
+            <p>Các bạn nhập đoạn code này vào <b>trangchinh.html</b>: </p>
+            <pre><code class="html">&#60;!doctype html&#62; <br /> &#60;html lang="en"&#62; <br /> &#60;head&#62; <br /> &#60;title&#62;Trang Chính&#60;/title&#62; <br />&#60;meta charset="utf-8"&#62; <br /> &#60;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&#62; <br />&#60;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"&#62; <br /> &#60;/head&#62; <br /> &#60;body&#62; <br />&#60;script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"&#62;&#60;/script&#62; <br /> &#60;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"&#62;&#60;/script&#62; <br /> &#60;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"&#62;&#60;/script&#62; <br /> &#60;script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"&#62;&#60;/script&#62; <br /> &#60;script src="./jquery.table2excel.min.js"&#62;&#60;/script&#62;<br />&#60;/body&#62; <br />&#60;/html&#62;<br /></code></pre>
+          <p>Sau khi đã thêm được file jquery.table2excel.min.js vào trang HTML thì bạn nhập một bảng như ví dụ sau đây: </p>
+          <table class="table" id="table2excel">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+          <button class="btn btn-success">Xuất File Excel</button>
+          <br /><br />
+          <p>Với đoạn code như hình dưới đây và các bạn cần lưu ý là đặt id cho bảng là <b>id="table2excel"</b> :</p>
+          <pre><code class="html">&#60;table class="table" id="table2excel"&#62;<br /> &#60;thead class="thead-dark"&#62;<br /> &#60;tr&#62;<br /> &#60;th scope="col"&#62;#&#60;/th&#62;<br /> &#60;th scope="col"&#62;First&#60;/th&#62;<br /> &#60;th scope="col"&#62;Last&#60;/th&#62;<br /> &#60;th scope="col"&#62;Handle&#60;/th&#62;<br /> &#60;/tr&#62;<br /> &#60;/thead&#62;<br /> &#60;tbody&#62;<br /> &#60;tr&#62;<br /> &#60;th scope="row"&#62;1&#60;/th&#62;<br /> &#60;td&#62;Mark&#60;/td&#62;<br /> &#60;td&#62;Otto&#60;/td&#62;<br /> &#60;td&#62;@mdo&#60;/td&#62;<br /> &#60;/tr&#62;<br /> &#60;tr&#62;<br /> &#60;th scope="row"&#62;2&#60;/th&#62;<br /> &#60;td&#62;Jacob&#60;/td&#62;<br /> &#60;td&#62;Thornton&#60;/td&#62;<br /> &#60;td&#62;@fat&#60;/td&#62;<br /> &#60;/tr&#62;<br /> &#60;tr&#62;<br /> &#60;th scope="row"&#62;3&#60;/th&#62;<br /> &#60;td&#62;Larry&#60;/td&#62;<br /> &#60;td&#62;the Bird&#60;/td&#62;<br /> &#60;td&#62;@twitter&#60;/td&#62;<br /> &#60;/tr&#62;<br /> &#60;/tbody&#62;<br /> &#60;/table&#62;<br />&#60; button class="btn btn-success"&#62;Xuất File Excel&#60;button&#62;</code></pre>
+        <p>Sau khi đã thiết lập bảng xong thì bạn bắt đầu nhập code để chuyển đổi từ Bảng sang Excel:</p>  
+        <pre><code class="html">&#60;script&#62;<br /> $("button").click(function(){<br /> $("#table2excel").table2excel({<br /> name: "Worksheet Name",<br /> filename: "FileExcel",<br /> fileext: ".xls"<br /> }) <br /> });<br /> &#60;/script&#62;<br /></code></pre>
+        <p>
+          <p><b>Một số mà bạn cần lưu ý trong đoạn code trên: </b></p>
+          <ul>
+            <li>filename là tên để đặt cho Tên của File Excel</li>
+            <li>fileext là đuôi mà chúng ta muốn xuất dưới dạng Excel</li>
+          </ul>
+        </p>
+        <p>Sau khi đã nhập thành công thì bạn thử nhấn vào nút <b>Xem Kết Quả</b> để thấy thành quả nhé! <br />
+          <a href="/table2excel" target="_blank"><button class="btn btn-success" ><i class="fa fa-eye" aria-hidden="true"></i> Xem Kết Quả</button></a></p>
+         
+    
+        <p>Mình cũng gửi các bạn đường dẫn để tải về những file trong thư mục table2excel để bạn đễ hình dung và có thể xem lại! <br />
+          <i class="fa fa-download" aria-hidden="true"></i> <a href="https://res.cloudinary.com/dn4nxz7f0/raw/upload/v1580556095/HTML%20table%20to%20excel/Table2Excel_x9rhhk.rar" download>Đường dẫn tải File Source Code</a>
+        </p>
+        <p>Các bạn có thể tìm hiểu thêm thông qua đường dẫn dưới đây nhé! <br />
+          <i class="fa fa-info" aria-hidden="true"></i> <a href="https://www.jqueryscript.net/table/Export-Html-Table-To-Excel-Spreadsheet-using-jQuery-table2excel.html" target="_blank">Đường dẫn để bạn tìm hiểu thêm</a>
+        </p>
+        <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
+        <p>Qua đây bạn đã có thể tạo được một File Excel từ một bảng HTML. Rất mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
+      </div>
         </article>
       </div>
     </div>

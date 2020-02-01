@@ -135,7 +135,7 @@ body {
 .card-title{
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size:2rem;
+  font-size:1.8rem;
 }
 .btn-reading{
   background-color: #000;
@@ -639,3 +639,34 @@ a:hover{
   background-color: #5edfff !important;
   color:white;
 }
+
+
+
+.card-row-article{
+  width:32%;
+}
+
+@media  screen and (min-width: 1200px){ 
+  .card-row-article{
+    width:30%;
+  }
+ }
+@media screen and (min-width: 768px) and (max-width: 1200px) { 
+  .card-row-article{
+    width:45%;
+    font-size: 95%;
+  }
+  .card-title{
+    font-size: 1.6rem !important;
+  }
+ }
+
+ @media screen and (max-width: 768px) {
+  .card-row-article{
+    width:100%;
+    font-size: 90%;
+  }
+  .card-title{
+    font-size: 1.4rem !important;
+  }
+  }
