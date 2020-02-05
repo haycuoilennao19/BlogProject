@@ -7,7 +7,6 @@ var mongoose = require('mongoose');
 var passport = require('passport');
 var session = require('express-session')
 var flash = require('connect-flash')
-const nodemailer = require("nodemailer");
 var indexRouter = require('./routes/index');
 var articlesRouter = require('./routes/article');
 var postsRouter = require('./routes/post');

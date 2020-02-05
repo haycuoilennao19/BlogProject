@@ -2,8 +2,7 @@ var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
 var Blog = require('../model/blog')
-var db = require('../model/mongo_connect')
-const nodemailer = require("nodemailer");
+var db = require('../model/mongo_connect');
 
 
 router.get('/about', function(req, res, next) {
