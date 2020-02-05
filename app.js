@@ -11,13 +11,16 @@ const nodemailer = require("nodemailer");
 var indexRouter = require('./routes/index');
 var articlesRouter = require('./routes/article');
 var postsRouter = require('./routes/post');
+var helmet = require('helmet')
+var compression = require('compression')
 
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
+app.use(compression())
+app.use(helmet())
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

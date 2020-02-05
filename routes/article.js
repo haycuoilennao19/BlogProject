@@ -15,17 +15,13 @@ router.get('/about', function(req, res, next) {
 });
 
 router.get("/css", function(req, res) {
-  var perpage = 6;
-  var page = req.params.page || 1
   Blog
       .find({category:"CSS"})
       .sort({_id: -1})
-      .skip((perpage * page) - perpage)
-      .limit(perpage)
       .exec(function(err, data) {
           Blog.count().exec(function(err, count) {
               if(err) return next(err)
-              res.render('category',{data: data, current:page, pages: Math.ceil(count / perpage)})
+              res.render('category',{data: data})
           })
       })
   // Blog.find({category:"CSS"}, function(err, data){
@@ -33,17 +29,13 @@ router.get("/css", function(req, res) {
   // })
 })
 router.get("/html", function(req, res) {
-  var perpage = 6;
-  var page = req.params.page || 1
   Blog
       .find({category:"HTML"})
       .sort({_id: -1})
-      .skip((perpage * page) - perpage)
-      .limit(perpage)
       .exec(function(err, data) {
           Blog.count().exec(function(err, count) {
               if(err) return next(err)
-              res.render('category',{data: data, current:page, pages: Math.ceil(count / perpage)})
+              res.render('category',{data: data})
           })
       })
   // Blog.find({category:"HTML"}, function(err, data){
@@ -52,22 +44,19 @@ router.get("/html", function(req, res) {
 })
 
 router.get("/Javscript", function(req, res) {
-  var perpage = 6;
-  var page = req.params.page || 1
+
   Blog
       .find({category:"Javscript"})
       .sort({_id: -1})
-      .skip((perpage * page) - perpage)
-      .limit(perpage)
       .exec(function(err, data) {
           Blog.count().exec(function(err, count) {
               if(err) return next(err)
-              res.render('category',{data: data, current:page, pages: Math.ceil(count / perpage)})
+              res.render('category',{data: data})
           })
       })
-  // Blog.find({category:"ThuthuatCSS"}, function(err, data){
-  //   res.render("category", {data: data})
-  // })
+//   Blog.find({category:"ThuthuatCSS"}, function(err, data){
+//     res.render("category", {data: data})
+//   })
 })
 
 router.get("/:id", function(req, res) {
