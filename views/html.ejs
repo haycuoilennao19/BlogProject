@@ -23,131 +23,73 @@
       <hr />
       <div class="card-text text-justify">
         <article>
-          <h2 class="bg-primary mb-4 text-white rounded p-2 shadow"><i class="fa fa-cube" aria-hidden="true"></i> Tạo hiệu ứng scroll bằng AOS</h2>
+          <h2 class="bg-primary mb-4 text-white rounded p-2 shadow"><i class="fa fa-cube" aria-hidden="true"></i> Tạo Hiệu Ứng Hình Ảnh Khi Hover</h2>
           <div class="article-title">
             <div class="progress-wrapper">
               <div class="progress-label"></div><progress></progress>
             </div>
           </div>
           <div class="text-content-article mt-5">
-            <p><i>Xin chào các bạn quay lại blog của mình. Hôm nay mình sẽ giới thiệu đến các bạn một ứng dụng AOS giúp chúng ta tạo hiệu ứng với các thẻ HTML khi 
-              người dùng di chuyển chuột. Để hiểu rõ hơn các bạn cùng mình tìm hiểu nhé!</i>
+            <p><i>Xin chào các bạn quay lại blog của mình. Để các bạn có thể ôn lại và thực hành những gì mình đã học thì hãy cùng mình tạo hiệu ứng hover ảnh bằng HTML và CSS. Để hiểu rõ hơn các bạn cùng mình tìm hiểu nhé!</i>
             </p>
-            <p>Việc đầu tiên là mình sẽ tạo file có cấu trúc thư mục như sau: </p>
-            <img src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1580825559/AOS%20Scroll/AOS_iuyzbi.svg"  width="200" height="200" alt="Cấu Trúc AOS Scroll Libarary">
-            <p>Tiếp đến các bạn tải 2 file là <mark>aos.css và aos.js</mark> mà mình đã nén và  để ở bên dưới để chép vào thư mục AOS_Scroll nhé:<br /> 
-              <i class="fa fa-download" aria-hidden="true"></i> <a href="https://res.cloudinary.com/dn4nxz7f0/raw/upload/v1580825810/AOS%20Scroll/AOS_scroll_asihg0.rar" download="" alt="Download Hover.css">Tải File AOS Scroll</a>          
-          </p>
-              Hoặc các bạn có thể sử dụng CDN link chỉ cần thêm vào file <mark>trang_chinh.html</mark> mà không cần tải file tập tin ở trên:
-              <div class="alert alert-primary" role="alert">
-                &#60;link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"&#62; <br />
-                &#60;script src="https://unpkg.com/aos@2.3.1/dist/aos.js"&#62;&#60;script&#62;
-              </div>
-     
-              <p>Sau đó tạo cấu trúc file HTML cho <mark>trang_chinh.html</mark> và tạo liên kết với trang <mark>aos.css và aos.js</mark>.
-            Do để tạo những nội dung đẹp hơn thì  mình sẽ sử dụng thêm Bootstrap4 cho trang HTML. Một lưu ý nhỏ là các bạn không cần phải tải file Bootrap4 về đâu vì mình 
-            sử dụng CDN link nên các bạn chỉ cần tạo file HTML giống bên dưới là có thể sử sụng được rồi. Các bạn xem đoạn code dưới đây để nắm rõ hơn nhé:
-            </p>
-            <pre><code class="html">&#60;!doctype html&#62;<br /> &#60;html lang="en"&#62;<br /> &#60;head&#62;<br /> &#60;title&#62;AOS Scroll&#60;/title&#62;<br /> &#60;!-- Required meta tags --&#62;<br /> &#60;meta charset="utf-8"&#62;<br /> &#60;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&#62;<br />&#60;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"&#62;<br /> &#60;link rel="stylesheet" href="aos.css"&#62;<br /> &#60;/head&#62;<br /> &#60;body&#62;<br /> &#60;script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"&#62;&#60;/script&#62; &#60;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"&#62;&#60;/script&#62;<br /> &#60;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"&#62;&#60;/script&#62;<br /> &#60;script src="aos.js"&#62;&#60;/script&#62;<br /> &#60;/body&#62;<br /> &#60;/html&#62;<br /></code></pre>
-              <p>Khi chèn đoạn code trên thì tiếp theo  bạn cần thiết lập một đoạn mã Javascript để kích hoạt ứng dụng Javascript AOS để có thể sử dụng thư viện AOS bằng đoạn code dưới đây:</p>
-              <pre><code class="html"> &#60;script&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AOS.init();&nbsp;<br/> &#60;/script&#62;</code></pre>
-             <p>Sau khi thiết lập xong xuôi thì chúng ta chỉ cần chọn những thẻ HTML mà mình muốn thêm hiệu ứng chuyển động  bằng cách  chèn thuộc tính <b>data-aos</b>. Để hiểu rõ các bạn xem đoạn code 
-            sau đây nhé</p>
-            <pre><code class="html">&#60;div data-aos="tên_chuyển_động"&#62;</code></pre>
-            <p>Trước khi thêm hiệu ứng chuyển động thì các bạn cùng mình xem qua bảng miêu tả các thuộc tính quan trọng trong thư viện AOS để giúp chúng ta kết hợp những thuộc tính đó làm cho 
-              hiệu ứng sinh động hơn cũng như linh hoạt phát triển nhiều chuyển động theo mục đích của mình.
-            </p>
-            <table class="table">
-              <thead class="thead-dark">
-                <tr>
-                  <th scope="col">Tên Thuộc Tính</th>
-                  <th scope="col">Miêu Tả Thuộc Tính</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>             
-                  <td>data-aos-offset</td>
-                  <td>Giúp chúng ta kích hoạt chuyển động sớm hơn hay muộn hơn thời gian mặc định.(Giá trị mặc định là 120px)</td>
-                </tr>
-                <tr>
-                  <td>data-aos-duration</td>
-                  <td>Thời gian của hiệu ứng chuyển động (theo ms) </td>
-                </tr>
-                <tr>
-                  <td>data-aos-delay</td>
-                  <td>Là thời gian trì hoãn chuyển động (theo ms và nó phải nằm trong phạm vi là 50ms tới 3000ms)</td>
-                </tr>
-                <tr>
-                  <td> data-aos-easing</td>
-                  <td>Dùng để điều khiển chức năng thời gian tạo hiệu ứng chuyển động cho các đối tượng HTML khác nhau.</td>
-                </tr>
-              </tbody>
-            </table>
-            <p>Nghe hơi khó hiểu nên chúng ta sẽ  thêm đoạn code dưới đây vào <mark>trang_chinh.html </mark> với đối tượng HTML với 3 thuộc tính là  <b>data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-duration="2500"</b> để xem hiệu ứng chuyển động  giúp các bạn có thể hình dung rõ hơn:</p>
-            <pre><code class="html">&#60;div&nbsp;class="container"><br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="row"><br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="col-md-6&nbsp;col-sm-12&nbsp;text-justify&nbsp;shadow-lg&nbsp;p-4&nbsp;mb-5&nbsp;bg-white&nbsp;rounded"&nbsp;data-aos="fade-up-right"><br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h2&nbsp;class="text-primary">Niềm&nbsp;Vui&nbsp;Lập&nbsp;Trình&#60;/h2><br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h4&nbsp;class="text-danger">data-aos="fade-up-right"&#60;/h4><br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p>Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur,&nbsp;adipisicing&nbsp;elit.&nbsp;Neque,&nbsp;quidem&nbsp;quo&nbsp;placeat&nbsp;adipisci&nbsp;non<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cupiditate&nbsp;ducimus&nbsp;dolorum&nbsp;et&nbsp;iste&nbsp;numquam&nbsp;accusamus&nbsp;voluptas&nbsp;minima&nbsp;laudantium&nbsp;odit&nbsp;iure<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;consectetur&nbsp;perferendis.&nbsp;Minima,&nbsp;aspernatur?<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur&nbsp;adipisicing&nbsp;elit.&nbsp;Nesciunt&nbsp;laborum&nbsp;vero&nbsp;similique&nbsp;veniam<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dolores&nbsp;officia&nbsp;reiciendis&nbsp;ea&nbsp;earum,&nbsp;distinctio&nbsp;molestias&nbsp;tenetur&nbsp;labore&nbsp;modi&nbsp;ullam&nbsp;esse<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;necessitatibus&nbsp;libero&nbsp;harum&nbsp;dolorem&nbsp;magnam!<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur&nbsp;adipisicing&nbsp;elit.&nbsp;Laboriosam&nbsp;labore&nbsp;vero&nbsp;sit&nbsp;nesciunt.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Laboriosam&nbsp;fugiat&nbsp;recusandae&nbsp;labore&nbsp;officia,&nbsp;illo&nbsp;aliquam&nbsp;numquam&nbsp;inventore&nbsp;mollitia&nbsp;quidem<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;consectetur,&nbsp;voluptates&nbsp;nihil&nbsp;sit&nbsp;repudiandae&nbsp;repellendus.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/p><br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div><br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="col-md-6&nbsp;col-sm-12">&#60;/div><br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div><br/> &#60;div&nbsp;class="row"><br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="col-md-6&nbsp;col-sm-12">&#60;/div><br/>&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="col-md-6&nbsp;col-sm-12&nbsp;text-justify&nbsp;shadow-lg&nbsp;p-4&nbsp;mb-5&nbsp;bg-white&nbsp;rounded"&nbsp;data-aos="fade-up-left"><br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h2&nbsp;class="text-primary">Niềm&nbsp;Vui&nbsp;Lập&nbsp;Trình&#60;/h2><br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h4&nbsp;class="text-danger">data-aos="fade-up-left"&#60;/h4><br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p>Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur,&nbsp;adipisicing&nbsp;elit.&nbsp;Neque,&nbsp;quidem&nbsp;quo&nbsp;placeat&nbsp;adipisci&nbsp;non<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cupiditate&nbsp;ducimus&nbsp;dolorum&nbsp;et&nbsp;iste&nbsp;numquam&nbsp;accusamus&nbsp;voluptas&nbsp;minima&nbsp;laudantium&nbsp;odit&nbsp;iure&nbsp;consectetur&nbsp;perferendis.&nbsp;Minima,&nbsp;aspernatur?<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur&nbsp;adipisicing&nbsp;elit.&nbsp;Nesciunt&nbsp;laborum&nbsp;vero&nbsp;similique&nbsp;veniam<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dolores&nbsp;officia&nbsp;reiciendis&nbsp;ea&nbsp;earum,&nbsp;distinctio&nbsp;molestias&nbsp;tenetur&nbsp;labore&nbsp;modi&nbsp;ullam&nbsp;essene<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cessitatibus&nbsp;libero&nbsp;harum&nbsp;dolorem&nbsp;magnam!<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur&nbsp;adipisicing&nbsp;elit.&nbsp;Laboriosam&nbsp;labore&nbsp;vero&nbsp;sit&nbsp;nesciunt.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Laboriosam&nbsp;fugiat&nbsp;recusandae&nbsp;labore&nbsp;officia,&nbsp;illo&nbsp;aliquam&nbsp;numquam&nbsp;inventore&nbsp;mollitia&nbsp;quidem<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;consectetur,&nbsp;voluptates&nbsp;nihil&nbsp;sit&nbsp;repudiandae&nbsp;repellendus.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/p><br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div><br/> &#60;/div><br/> &#60;/div><br/></code></pre>
-             <p>Khi thêm xong các bạn nhấn nút <b>Refresh hoặc F5</b> sẽ có những hiệu ứng giống mình ở video dưới đây:</p>
-            <div class="embed-responsive embed-responsive-21by9">
-              <iframe class="embed-responsive-item" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1580838355/AOS%20Scroll/Title_a3ivcc.mp4"></iframe>
-            </div>
-            <p class="mt-4">
-              Sau khi gọi đến hiệu ứng chuyển động cơ bản thì tiếp theo mình sẽ thử thêm hai thuộc tính là <b> data-aos-easing="ease-in-sine" và data-aos-duration="2500"</b> vào hai đối tượng HTML
-              để xem nó thay đổi như thế nào nhé:
-            </p>
-            <pre><code class="html">&#60;div&nbsp;class="container"><br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="row"><br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="col-md-6&nbsp;col-sm-12&nbsp;text-justify&nbsp;shadow-lg&nbsp;p-4&nbsp;mb-5&nbsp;bg-white&nbsp;rounded"&nbsp;data-aos="fade-up-right"  data-aos-easing="ease-in-sine" data-aos-duration="2500"><br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h2&nbsp;class="text-primary">Niềm&nbsp;Vui&nbsp;Lập&nbsp;Trình&#60;/h2><br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h4&nbsp;class="text-danger">data-aos="fade-up-right"&#60;/h4><br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p>Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur,&nbsp;adipisicing&nbsp;elit.&nbsp;Neque,&nbsp;quidem&nbsp;quo&nbsp;placeat&nbsp;adipisci&nbsp;non<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cupiditate&nbsp;ducimus&nbsp;dolorum&nbsp;et&nbsp;iste&nbsp;numquam&nbsp;accusamus&nbsp;voluptas&nbsp;minima&nbsp;laudantium&nbsp;odit&nbsp;iure<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;consectetur&nbsp;perferendis.&nbsp;Minima,&nbsp;aspernatur?<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur&nbsp;adipisicing&nbsp;elit.&nbsp;Nesciunt&nbsp;laborum&nbsp;vero&nbsp;similique&nbsp;veniam<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dolores&nbsp;officia&nbsp;reiciendis&nbsp;ea&nbsp;earum,&nbsp;distinctio&nbsp;molestias&nbsp;tenetur&nbsp;labore&nbsp;modi&nbsp;ullam&nbsp;esse<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;necessitatibus&nbsp;libero&nbsp;harum&nbsp;dolorem&nbsp;magnam!<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur&nbsp;adipisicing&nbsp;elit.&nbsp;Laboriosam&nbsp;labore&nbsp;vero&nbsp;sit&nbsp;nesciunt.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Laboriosam&nbsp;fugiat&nbsp;recusandae&nbsp;labore&nbsp;officia,&nbsp;illo&nbsp;aliquam&nbsp;numquam&nbsp;inventore&nbsp;mollitia&nbsp;quidem<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;consectetur,&nbsp;voluptates&nbsp;nihil&nbsp;sit&nbsp;repudiandae&nbsp;repellendus.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/p><br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div><br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="col-md-6&nbsp;col-sm-12">&#60;/div><br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div><br/> &#60;div&nbsp;class="row"><br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="col-md-6&nbsp;col-sm-12">&#60;/div><br/>&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="col-md-6&nbsp;col-sm-12&nbsp;text-justify&nbsp;shadow-lg&nbsp;p-4&nbsp;mb-5&nbsp;bg-white&nbsp;rounded"&nbsp;data-aos="fade-up-left"  data-aos-easing="ease-in-sine" data-aos-duration="2500"><br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h2&nbsp;class="text-primary">Niềm&nbsp;Vui&nbsp;Lập&nbsp;Trình&#60;/h2><br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h4&nbsp;class="text-danger">data-aos="fade-up-left"&#60;/h4><br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p>Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur,&nbsp;adipisicing&nbsp;elit.&nbsp;Neque,&nbsp;quidem&nbsp;quo&nbsp;placeat&nbsp;adipisci&nbsp;non<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cupiditate&nbsp;ducimus&nbsp;dolorum&nbsp;et&nbsp;iste&nbsp;numquam&nbsp;accusamus&nbsp;voluptas&nbsp;minima&nbsp;laudantium&nbsp;odit&nbsp;iure&nbsp;consectetur&nbsp;perferendis.&nbsp;Minima,&nbsp;aspernatur?<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur&nbsp;adipisicing&nbsp;elit.&nbsp;Nesciunt&nbsp;laborum&nbsp;vero&nbsp;similique&nbsp;veniam<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dolores&nbsp;officia&nbsp;reiciendis&nbsp;ea&nbsp;earum,&nbsp;distinctio&nbsp;molestias&nbsp;tenetur&nbsp;labore&nbsp;modi&nbsp;ullam&nbsp;essene<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cessitatibus&nbsp;libero&nbsp;harum&nbsp;dolorem&nbsp;magnam!<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur&nbsp;adipisicing&nbsp;elit.&nbsp;Laboriosam&nbsp;labore&nbsp;vero&nbsp;sit&nbsp;nesciunt.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Laboriosam&nbsp;fugiat&nbsp;recusandae&nbsp;labore&nbsp;officia,&nbsp;illo&nbsp;aliquam&nbsp;numquam&nbsp;inventore&nbsp;mollitia&nbsp;quidem<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;consectetur,&nbsp;voluptates&nbsp;nihil&nbsp;sit&nbsp;repudiandae&nbsp;repellendus.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/p><br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div><br/> &#60;/div><br/> &#60;/div><br/></code></pre>
-            <p>Khi thêm xong các bạn nhấn nút <b>Refresh hoặc F5</b> sẽ có những hiệu ứng giống mình ở video dưới đây:</p>
-            <div class="embed-responsive embed-responsive-21by9">
-              <iframe class="embed-responsive-item" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1580891438/AOS%20Scroll/Title_1_ge7rz7.mp4"></iframe>
-            </div>
-          <p class="mt-4">
-            Khi các bạn có các thuộc tính <mark>data-aos-offset, data-aos-duration, data-aos-easing, data-aos-delay</mark> trong các đối tượng HTML của trang web là bằng nhau thì mình không cần phải 
-            đi thiết lập những thuộc tính này cho từng đối tượng HTML mà ở đây thư viện AOS có một chức năng giúp ta làm điều đó dễ dàng hơn. Các bạn theo dõi đoạn code ở dưới đây nhé: 
-          </p>
-          <pre><code class="html">&#60;script&#62;<br /> &nbsp;&nbsp;&nbsp;AOS.init({<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;offset:&nbsp;200,<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;duration:&nbsp;600,<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;easing:&nbsp;'ease-in-sine',<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delay:&nbsp;100,<br /> &nbsp;&nbsp;&nbsp;});<br /> &#60;/script&#62;<br /></code></pre>
-          <p>Thư viện AOS có thêm một chức năng giúp chúng ta có thể tắt hiệu ứng chuyển động khi màn hình của người dùng trên điện thoại hoặc những màn hình mà các bạn không muốn hiển thị hiệu ứng chuyển động.
-            Để hiểu rõ hơn các bạn xem đoạn code ở dưới đây nhé:
-          </p>
-          <pre><code class="html">&#60;script&#62;<br /> AOS.init({<br /> &nbsp;&nbsp;disable:&nbsp;'mobile'<br /> });<br />AOS.init({<br /> &nbsp;&nbsp;disable:&nbsp;function&nbsp;()&nbsp;{<br /> &nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;maxWidth&nbsp;=&nbsp;1024;<br /> &nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;window.innerWidth&nbsp;&#60;&nbsp;maxWidth;<br /> &nbsp;&nbsp;}<br /> });<br /> &#60;/script&#62;<br /></code></pre>
-          <p>Ở trên các bạn thấy có hai hàm AOS.init tượng trưng cho hai trường hợp thứ nhất là chức năng được viết sẵn bởi thư viện AOS là sẽ tắt hiệu ứng chuyển động khi màn hình là điện thoại còn 
-            cách thứ hai linh hoạt hơn là tùy vào màn hình mà ta thiết lập (như ở đây là 1024px) để tắt hiệu ứng chuyển động.
+            <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Hiệu Ứng Hover Ảnh</h4></div>
+           <p>Đi vào bước thứ nhất các bạn tạo một thư mục có cấu trúc file như sau nhé:</p>
+           <img src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1581226434/Hieu_ung_hover_anh/hover_anh_rymoin.svg" width="200" height="200" alt="Cấu trúc hover anh">
+           <p class="mt-4">
+            Sau khi đã tạo xong cấu trúc thư mục thì bước tiếp theo là tải hình ảnh mà mình để đường dẫn ở bên dưới hoặc có thể  chọn tùy ý hình ảnh nào mà các bạn thích nhé!<br />
+            <i class="fa fa-download" aria-hidden="true"></i> <a href="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1581226721/Hieu_ung_hover_anh/hinh_anh_qcenui.jpg" alt="Tải Hình Hover Ảnh" target="_blank">Tải Hình ảnh</a>
+           </p>
+           <p>
+            Bây giờ mình sẽ tạo cấu trúc file HTML, thêm các thẻ HTML cần thiết cho <mark>trang_chinh.html</mark> sau đó  liên kết nó với file
+            <mark>style.css và Font "Open Sans"</mark> ở Google Font. Để nắm rõ hơn các bạn theo dõ đoạn code dưới đây nhé:
           </p>
 
-          <p>Ở đây mình cũng giới thiệu thêm vài thuộc tính nữa của thư viện AOS nếu các bạn muốn tìm hiểu thêm thì nhấp vào đường dấn mình đặt ở bên dưới nhé: </p>
-          <table class="table">
-            <thead class="thead-dark">
-              <tr>
-                <th scope="col">Tên Thuộc Tính</th>
-                <th scope="col">Miêu Tả Thuộc Tính</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>             
-                <td>data-aos-anchor</td>
-                <td>Khi bạn muốn thực hiện hiệu ứng chuyển động dựa theo vị trí của những đối tượng HTML khác  trong trang web. Giá trị mặc định là null.</td>
-              </tr>
-              <tr>
-                <td>data-aos-anchor-placement</td>
-                <td>Bạn thiết lập một vị trí của đối tượng HTML trên màn hình để thực hiện hiệu ứng chuyển động (Ví dụ bạn có thể thiết lập là top-bottom, top-center...) </td>
-              </tr>
-              <tr>
-                <td>data-aos-once</td>
-                <td>Dùng để điều khiển hiệu ứng chuyển động có lặp lại hay không. Giá trị mặc định là true.</td>
-              </tr>
-            </tbody>
-          </table>
-          <p class="mt-4">Sau đây là những hiệu ứng chuyển động mà mình đã làm trong <mark>trang_chinh.html</mark> có gì các bạn theo đường dẫn bên dưới tải source code để nắmrõ hơn nhé</p>
-          <div class="embed-responsive embed-responsive-21by9">
-            <iframe class="embed-responsive-item" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1580906456/AOS%20Scroll/Title_2_1_febsg3.mp4"></iframe>
-          </div>
+          <pre><code class="html">&#60;!DOCTYPE&nbsp;html&#62;<br/> &#60;html&nbsp;lang="en"&#62;<br/> &#60;head&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;charset="UTF-8"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;name="viewport"&nbsp;content="width=device-width,&nbsp;initial-scale=1.0"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;title&#62;Hiệu&nbsp;ứng&nbsp;CSS&nbsp;Hover&nbsp;ảnh&nbsp;với&nbsp;nội&nbsp;dung&#60;/title&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"&nbsp;rel="stylesheet"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="style.css"&#62;<br/> &#60;/head&#62;<br/> &#60;body&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="hieu_ung"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="noi_dung"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;img&nbsp;src="hinh_anh.jpg"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="phu_de"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &#60;/body&#62;<br/> &#60;/html&#62;<br/></code></pre>
           
+          <p>Tiếp theo việc cần làm là chúng ta sẽ cài đặt font Open Sans cho trang HTML và đưa thẻ <code>&lt;div class="hieu_ung"&gt;</code> ra giữa màn hình để giúp các bạn dễ nhìn và theo dõi hơn bằng cách chỉnh sửa file <mark>style.css</mark>.
+            Trước khi đi vào code do có vài thuộc tính khá trừu tượng nên mình không có thời gian giải thích cặn kẽ cho các bạn hiểu nên  mình sẽ để đường dẫn tham khảo thêm <a href="http://jsfiddle.net/hashem/n3rspnbh/" target="_blank" alt="Center Div">Tham Khảo</a>.
+            Bây giờ các bạn cùng xem đoạn code sau để nắm rõ hơn nhé:</p>
           
-          <p class="mt-4">Mình gửi các bạn đường dẫn để tải về những file trong thư mục <b>AOS Scroll</b> để bạn đễ hình dung và có thể xem lại! <br />
-          <i class="fa fa-download" aria-hidden="true"></i> <a href="https://res.cloudinary.com/dn4nxz7f0/raw/upload/v1580906750/AOS%20Scroll/AOS_Scroll_ctha9r.rar" download>Đường dẫn tải File Source Code</a>
-        </p>
-        <p>Các bạn có thể tìm hiểu thêm thông qua đường dẫn dưới đây nhé! <br />
-          <i class="fa fa-info" aria-hidden="true"></i> <a href="http://michalsnik.github.io/aos/" target="_blank">Đường dẫn để bạn tìm hiểu thêm</a>
-        </p>
-        <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
-        <p>Qua đây mình mong muốn thư viện này sẽ giúp các bạn có thể làm trang web mình một cách sinh động hơn và nếu có thắc mắc gì cứ gủi email mình sẽ phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
+          <pre><code class="css">body{<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-family:&nbsp;'Open&nbsp;Sans',&nbsp;sans-serif;<br/> &nbsp;&nbsp;&nbsp; }<br/>.hieu_ung{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;50%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;left:&nbsp;50%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;translate(-50%,&nbsp;-50%);<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:640px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:400px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;overflow:&nbsp;hidden;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:#000;<br/> }<br/></code></pre>
+          <p>Thuộc tính <code>overflow:hidden</code> giúp chúng ta ẩn những nội dung bị tràn ra ngoài thẻ <code>&lt;div class="hieu_ung"&gt;</code> ví dụ như ở đây là hình ảnh. Bây giờ mình hãy xem kết quả nhé:</p>
+          <img class="img-thumbnail shadow p-3" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1581230104/Hieu_ung_hover_anh/FireShot_Capture_081_-_Hi%E1%BB%87u_%C3%BAng_CSS_Hover_%E1%BA%A3nh_v%E1%BB%9Bi_n%E1%BB%99i_dung_-_127.0.0.1_k1uibz.png" alt="Hình Ảnh Chỉnh CSS cho hiệu ứng hover">
+          
+
+          <p class="mt-4">Bây giờ chúng ta sẽ tạo một hiệu ứng nho nhỏ là khi hover vào <code>&lt;div class="hieu_ung"&gt;</code> thì hình ảnh trong nó sẽ được phóng to lên và làm mờ ảnh đi một nửa bằng thuộc tính <code>transform và opacity</code>. Để hiểu rõ hơn các bạn xem đoạn code dưới đây nhé:</p>
+          <pre><code class="css">.noi_dung{<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:100%;<br/> }<br/> img{<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;0.5s;<br/> }<br/>.hieu_ung:hover&nbsp;img&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;rotate(-10deg)&nbsp;scale(1.3);<br/> &nbsp;&nbsp;&nbsp;&nbsp;opacity:0.5;<br/> }<br/></code></pre>
+          
+            <p>Cùng mình xem kết quả của đoạn code trên: </p>
+            <div class="embed-responsive  embed-responsive-16by9">
+              <iframe class="embed-responsive-item" alt="Demo Hover Image" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1581231098/Hieu_ung_hover_anh/Hi%E1%BB%87u_%C3%BAng_CSS_Hover_%E1%BA%A3nh_v%E1%BB%9Bi_n%E1%BB%99i_dung_oetkkw.mp4"></iframe>
+            </div>
+
+            <p class="mt-4">Tiếp theo ta sẽ thêm một hiệu ứng tạo đường viền hình chữ nhật bao quanh chữ khi hover  vào thẻ <code>&lt;div class="hieu_ung"&gt;</code> bằng 
+          <code>.phu_de::before và .phu_de::after</code>. Nếu các bạn có cảm thấy khó hiểu thì có thể tham khảo ở đường dẫn sau đây
+          <a href="https://freetuts.net/after-va-before-trong-css-447.html" atl="Tìm Hiểu Before và After CSS" target="_blank">Tham Khảo</a>. Để hiểu rõ các bạn xem đoạn code sau đây nhé:
+            </p>
+
+            <pre><code class="css">.phu_de{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:40px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;left:40px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;right:40px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;bottom:40px;<br/> }<br/>.phu_de::before{<br/> &nbsp;&nbsp;&nbsp;&nbsp;content:&nbsp;'';<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;left:0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-top:&nbsp;1px&nbsp;solid&nbsp;#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-bottom:&nbsp;1px&nbsp;solid&nbsp;#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;box-sizing:&nbsp;border-box;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;0.5s;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;scale(0,1)<br/> }<br/>.hieu_ung:hover&nbsp;.phu_de:before{<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;scale(1,1)<br/> }<br/>.phu_de::after{<br/> &nbsp;&nbsp;&nbsp;&nbsp;content:&nbsp;'';<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;left:0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-left:&nbsp;1px&nbsp;solid&nbsp;#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-right:&nbsp;1px&nbsp;solid&nbsp;#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;box-sizing:&nbsp;border-box;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;0.5s;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;scale(1,0)<br/> }<br/>.hieu_ung:hover&nbsp;.phu_de:after{<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;scale(1,1)<br/> }<br/></code></pre>
+            <p>Và đây là kết quả của đoạn code bên trên nhé:</p>
+            <div class="embed-responsive  embed-responsive-16by9">
+              <iframe class="embed-responsive-item" alt="Demo Hover Image" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1581232733/Hieu_ung_hover_anh/Hi%E1%BB%87u_%C3%BAng_CSS_Hover_%E1%BA%A3nh_v%E1%BB%9Bi_n%E1%BB%99i_dung_1_pk7pns.mp4"></iframe>
+            </div>
+            <p class="m-4">Bước cuối cùng là chúng ta sẽ thêm phụ đề cho hình ảnh và nó chỉ hiển thị khi người ta hover vào thẻ <code>&lt;div class="hieu_ung"&gt;</code>. Để hiểu rõ hơn các bạn xem đoạn code sau đây nhé:</p>
+            <p><mark>trang_chinh.html</mark></p>
+            <pre><code class="html">&#60;div&nbsp;class="phu_de"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="thong_tin"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h2&#62;Hãy&nbsp;Hover&nbsp;Chuột&nbsp;vào&nbsp;hình&nbsp;để&nbsp;thấy&nbsp;hiệu&nbsp;ứng&#60;/h2&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p&#62;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur&nbsp;adipisicing&nbsp;<br/>elit.&nbsp;Iste&nbsp;cum&nbsp;rem&nbsp;tempora,&nbsp;molestiae<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;consequuntur&nbsp;cumque&nbsp;maiores&nbsp;officia&nbsp;sapiente&nbsp;possimus&nbsp;<br/>deleniti&nbsp;impedit&nbsp;cupiditate&nbsp;placeat<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mollitia&nbsp;porro&nbsp;minus&nbsp;omnis&nbsp;aliquid&nbsp;autem&nbsp;itaque.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet,&nbsp;consectetur&nbsp;adipisicing&nbsp;elit.&nbsp;Dolor&nbsp;odit&nbsp;doloremque&nbsp;officia.&nbsp;Vero<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;itaque&nbsp;voluptatibus&nbsp;delectus&nbsp;officia&nbsp;necessitatibus&nbsp;iure,&nbsp;<br/>asperiores&nbsp;sit&nbsp;sint&nbsp;vitae&nbsp;commodi<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obcaecati&nbsp;repellat&nbsp;nulla&nbsp;quas&nbsp;id&nbsp;voluptas?<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &#60;/div&#62;<br/></code></pre>
+              
+            <p><mark>style.css</mark></p>
+            <pre><code class="css">.thong_tin{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;50%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;translateY(-50%);<br/> &nbsp;&nbsp;&nbsp;&nbsp;z-index:1;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:20px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;text-align:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;opacity:0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;0.5s;<br/> }<br/> .hieu_ung:hover&nbsp;.thong_tin{<br/> &nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;1;<br/> }<br/>.thong_tin&nbsp;h2{<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;24px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;text-transform:&nbsp;uppercase;<br/> }<br/>.thong_tin&nbsp;p{<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:20px&nbsp;0&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;15px;<br/> }<br/></code></pre>
+            <p>Đoạn code trên thì chủ yếu là chỉnh sửa lại font chữ, kích thước, màu sắc... Các bạn có thể tùy ý chỉnh sửa tùy vào sở thích mình nhé. Bây giờ chúng ta hãy xem kết quả cuối cùng nhé: </p>
+            <div class="embed-responsive  embed-responsive-16by9">
+              <iframe class="embed-responsive-item" alt="Demo Hover Image Final" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1581233701/Hieu_ung_hover_anh/Hi%E1%BB%87u_%C3%BAng_CSS_Hover_%E1%BA%A3nh_v%E1%BB%9Bi_n%E1%BB%99i_dung_2_odf1qu.mp4"></iframe>
+            </div>
+            <p class="mt-4">Mình gửi các bạn đường dẫn để tải về những file trong thư mục <b>Hieu_ung_hover</b> để bạn đễ hình dung và có thể xem lại! <br>
+                <i class="fa fa-download" aria-hidden="true"></i> <a href="https://res.cloudinary.com/dn4nxz7f0/raw/upload/v1581233861/Hieu_ung_hover_anh/Hieu_ung_hover_hig4l0.rar" download="">Đường dẫn tải File Source Code</a></p>
+              
+                <p>Các bạn có thể tìm hiểu thêm thông qua đường dẫn dưới đây nhé!<br> <i class="fa fa-info" aria-hidden="true"></i> <a href="https://www.youtube.com/watch?v=XpeTEY5ndII&t=249s" target="_blank">Đường dẫn để bạn tìm hiểu thêm</a></p>
+          <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
+        <p>Qua đây mình mong các bạn có thể ôn và hiểu hơn về những gì mình đã học về HTML, CSS và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
+         
       </div>
         </article>
       </div>

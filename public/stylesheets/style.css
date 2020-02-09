@@ -272,31 +272,9 @@ font-weight: 700;
 }
 
 /*About*/
-.about-content{
-  background: #2c3e50;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #3498db, #2c3e50);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #3498db, #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background-size: cover;
-  padding: 2rem;
-  color:#fff;
-  
-}
-.about-content-title {
-  font-family: 'Crimson Text', serif;
-}
-.about-content-p{
-  border-left: 2px solid #fff;
-  margin-left: 2rem;
-  padding-left: 1rem;
-}
 
-.description::first-letter {
-  float: left;
-    font-size: 45px;
-    line-height: 1;
-    font-weight: bold;
-    margin-right: 9px;
-}
+
+
 
 .send-email-header{
   background: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114)) !important;
@@ -670,3 +648,32 @@ a:hover{
     font-size: 1.4rem !important;
   }
   }
+
+.about-content{
+    padding: 4rem 0;
+    font-family: 'Roboto', sans-serif;
+    background: #70e1f5;  
+    background: -webkit-linear-gradient(to right, #ffd194, #70e1f5);
+    background: linear-gradient(to right, #ffd194, #70e1f5);
+    background-size: cover;
+}
+  .noi_dung_1{
+    margin-top:2.5rem !important;
+    width: 100%;
+    padding: 30px;
+    background: #ffffff;
+    box-sizing: border-box;
+    border-radius:10px;
+    box-shadow: 0 15px 50px rgba(0,0,0 0.2)
+}
+
+.hinh_anh_about{
+  width: 500px;
+  height:500px;
+  background: url("/images/IMG_1347_loixz1.jpg");
+  transform: rotate(-30deg);
+  border-radius: 50%;
+  float: left;
+  shape-outside: circle();
+  margin:20px 20px 20px 0px;
+}
