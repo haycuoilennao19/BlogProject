@@ -12,6 +12,9 @@ var articlesRouter = require('./routes/article');
 var postsRouter = require('./routes/post');
 var helmet = require('helmet')
 var compression = require('compression')
+var https = require('https')
+var fs = require('fs')
+var http = require('http')
 
 var app = express();
 
@@ -57,5 +60,15 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+// we will pass our 'app' to 'https' server
+https.createServer({
+  key: fs.readFileSync(__dirname +'/key.pem', 'utf8'),
+  cert: fs.readFileSync(__dirname +'/cert.pem', 'utf8'),
+  passphrase: 'nhatlk241095'
+}, app)
+.listen(8443);
+http.createServer(app)
+.listen(8080);
 
 module.exports = app;
