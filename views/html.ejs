@@ -23,37 +23,75 @@
       <hr />
       <div class="card-text text-justify">
         <article>
-          <h2 class="bg-primary mb-4 text-white rounded p-2 shadow"><i class="fa fa-cube" aria-hidden="true"></i> Tạo Thẻ Người Dùng</h2>
+          <h2 class="bg-primary mb-4 text-white rounded p-2 shadow"><i class="fa fa-cube" aria-hidden="true"></i> Tạo Trò chơi Đánh Chữ</h2>
           <div class="article-title">
             <div class="progress-wrapper">
               <div class="progress-label"></div><progress></progress>
             </div>
           </div>
           <div class="text-content-article mt-5">
-            <p><i>Xin chào các bạn quay lại blog của mình. Hôm nay mình sẽ giới thiệu cách xây dựng một thẻ người dùng   giúp các bạn có thể 
+            <p><i>Xin chào các bạn quay lại blog của mình. Hôm nay mình sẽ giới thiệu cách xây dựng một trò chơi đánh chữ giúp các bạn có thể 
               ôn lại và thực hành một số kiến thức HTML, CSS mà mình đã học. Để hiểu rõ hơn các bạn cùng mình tìm hiểu nhé!</i>
             </p>
-            <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Thẻ Người Dùng</h4></div>
+            <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Trò Chơi Đánh Chữ</h4></div>
            <p>Đi vào bước thứ nhất các bạn tạo một thư mục có cấu trúc file như sau nhé:</p>
-           <img src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1581324865/t%E1%BA%A1o%20the%20nguoi%20dung/the_nguoi_dung_xyhgv8.svg" width="400" height="400" alt="Cấu trúc Thư Mục PagePiling">
+           <img src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1581606559/tro_choi_danh_chu/tro_choi_danh_chu_taoch4.svg" width="250" height="250" alt="Cấu trúc Thư Mục Trò Chơi Đánh Chữ Javascript">
            <p class="mt-4">
             Sau khi đã tạo xong cấu trúc thư mục thì bước tiếp theo là các bạn tải một tập tin mà mình đã chứa sẵn các file đã được nén để ở đường dẫn bên dưới giúp chúng ta có thể thực hiện thẻ người dùng mà không mất công phải xây dựng lại từ đầu.
-            Ở đây các bạn có thể chọn phiên bản Font Awesome cao hơn hay những hình ảnh tùy thích miễn sao bạn cảm thấy phù hợp với mình là được.<br />
-            <i class="fa fa-download" aria-hidden="true"></i> <a href="https://res.cloudinary.com/dn4nxz7f0/raw/upload/v1581324573/t%E1%BA%A1o%20the%20nguoi%20dung/Thi%E1%BA%BFt_k%E1%BA%BF_card_nguoi_dung_sscpzz.rar" alt="Tải File Card User CSS" target="_blank" download>Tải File The_nguoi_dung</a> 
+          <br />
+            <i class="fa fa-download" aria-hidden="true"></i> <a href="https://res.cloudinary.com/dn4nxz7f0/raw/upload/v1581606813/tro_choi_danh_chu/Tro_choi_danh_chu_zkxi0j.rar" alt="Tải File Trò Chơi Đánh Chữ" target="_blank" download>Tải File Tro_choi_danh_chu</a> 
            </p>
 
            <p>
             Bây giờ mình sẽ tạo cấu trúc file HTML, thêm các thẻ HTML cần thiết cho <mark>trang_chinh.html</mark> sau đó  liên kết nó với file
-            <mark>style.css, Font Awesome và Google Font</mark>. Các bạn lưu ý là đường dẫn <mark>style.css</mark> lúc nào cũng nằm dưới cùng trong thẻ <code>&lt;head&gt;</code> trong một trang HTML
+            <mark>style.css, ham_danh_chu.js, Font Awesome  và Bootstrap4</mark> để làm các thẻ HTML thêm sinh động và dễ hiệu chỉnh.
+            Các bạn lưu ý là đường dẫn <mark>style.css</mark> lúc nào cũng nằm dưới cùng trong thẻ <code>&lt;head&gt;</code> của một trang HTML
             bởi vì khi ta chỉnh sửa CSS thì nó sẽ không bị ảnh hưởng bởi các file CSS khác. Để nắm rõ hơn các bạn theo dõ đoạn code dưới đây nhé:
           </p>
 
-          <pre><code class="html">&#60;!DOCTYPE&nbsp;html&#62;<br/> &#60;html&nbsp;lang="en"&#62;<br/>&#60;head&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;charset="UTF-8"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;name="viewport"&nbsp;content="width=device-width,&nbsp;initial-scale=1.0"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;title&#62;Tạo&nbsp;thẻ&nbsp;người&nbsp;dùng&nbsp;CSS&#60;/title&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"&nbsp;rel="stylesheet"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="font-awesome-4.7.0/css/font-awesome.min.css"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="style.css"&#62;<br/> &#60;/head&#62;<br/>&#60;body&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="noi_dung"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="the"&#62;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="the"&#62;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="the"&#62;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &#60;/body&#62;<br/>&#60;/html&#62;<br/></code></pre>
+          <pre><code class="html">&#60;!doctype&nbsp;html&#62;<br/> &#60;html&nbsp;lang="vi"&#62;<br/>&#60;head&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;title&#62;Trò&nbsp;Chơi&nbsp;Đánh&nbsp;Chữ&#60;/title&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;charset="utf-8"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;name="viewport"&nbsp;content="width=device-width,&nbsp;initial-scale=1,&nbsp;shrink-to-fit=no"&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"&nbsp;integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"&nbsp;crossorigin="anonymous"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="style.css"&#62;<br/> &#60;/head&#62;<br/>&#60;body&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&#60;script&nbsp;src="https://code.jquery.com/jquery-3.3.1.slim.min.js"&nbsp;integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"&nbsp;crossorigin="anonymous"&#62; &nbsp;&nbsp;&nbsp;&nbsp;&#60;/script&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;script&nbsp;src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"&nbsp;integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"&nbsp;crossorigin="anonymous"&#62; &nbsp;&nbsp;&nbsp;&nbsp;&#60;/script&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;script&nbsp;src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"&nbsp;integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"&nbsp;crossorigin="anonymous"&#62; &nbsp;&nbsp;&nbsp;&nbsp;&#60;/script&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;script&nbsp;src="ham_danh_chu.js"&#62;&#60;/script&#62;<br/> &#60;/body&#62;<br/>&#60;/html&#62;<br/></code></pre>
           
-          <p>Bây giờ thì chúng ta cần cài đặt font cho trang HTML và thiết kế layout sơ lược cho từng thẻ <code>&lt;div class="the"&gt;</code> bằng cách hiển thị dưới dạng lưới và thiết lập một số thuộc tính cơ bản như độ rộng,
-            độ cao, khoảng cách cho nó. Để hiểu rõ hơn các bạn xem đoạn code dưới đây nhé :</p>
+          <p>
+          Sau khi đã liên kết các file xong thì việc tiếp theo là mình sẽ thêm các thẻ HTML với các class của Bootstrap4 và cài đặt id cho từng thẻ để các bước sau ta sẽ lấy những giá tri đó để
+          thực hiện các hàm trong javascript. Và để hiểu rõ hơn các bạn xem đoạn code dưới đây nhé :
+    </p>
           
-          <pre><code class="css">body{<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-family:&nbsp;'Open&nbsp;Sans',&nbsp;sans-serif;<br/> }<br/>.noi_dung{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;1000px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;150px&nbsp;auto&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;auto;<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;grid;<br/> &nbsp;&nbsp;&nbsp;&nbsp;grid-template-columns:&nbsp;1fr&nbsp;1fr&nbsp;1fr;<br/> &nbsp;&nbsp;&nbsp;&nbsp;grid-template-rows:&nbsp;440px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;grid-gap:&nbsp;40px;<br/> }<br/>.noi_dung&nbsp;.the{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;#000;<br/> &nbsp;&nbsp;&nbsp;&nbsp;overflow:&nbsp;hidden;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;10px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;.5s;<br/> }<br/></code></pre>
+          <pre><code class="html">&#60;div&nbsp;class="tro_choi_danh_chu"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="noi_dung&nbsp;shadow&nbsp;p-3"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;header&nbsp;class="text-center"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h1&#62;&#60;i&nbsp;class="fa&nbsp;fa-gamepad"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&nbsp;Trò&nbsp;Chơi&nbsp;Đánh&nbsp;Chữ&#60;/h1&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/header&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="row"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="col-md-6&nbsp;mx-auto"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p&nbsp;class="quy_dinh"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Các&nbsp;bạn&nbsp;hãy&nbsp;đánh&nbsp;chữ&nbsp;dưới&nbsp;đây&nbsp;với&nbsp;thời&nbsp;gian&nbsp;đối&nbsp;đa&nbsp;&#60;span&nbsp;class="text-success" &nbsp;id="thoi_gian"&#62;10&#60;/span&#62;&nbsp;giây:<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h2&nbsp;class="display-2&nbsp;mb-2"&nbsp;id="chu_hien_tai"&#62;Xin&nbsp;Chào!&#60;/h2&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;input&nbsp;type="text"&nbsp;class="form-control&nbsp;form-control-lg&nbsp;rounded-pill&nbsp;shadow&nbsp;p-4"&nbsp;placeholder="Bắt&nbsp;Đầu&nbsp;Nhập&nbsp;Chữ..."&nbsp;id="chu_duoc_nhap"&nbsp;autofocus&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h4&nbsp;class="mt-2"&nbsp;id="thong_bao"&#62;&#60;/h4&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="row&nbsp;mt-4"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="col-md-6"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h3&#62;Thời&nbsp;Gian&nbsp;Còn&nbsp;Lại:&#60;br&nbsp;/&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;span&nbsp;id="giay"&#62;0&#60;/span&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/h3&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="col-md-6"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h3&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Điểm&nbsp;Của&nbsp;Bạn:&#60;br&nbsp;/&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;span&nbsp;id="diem"&#62;0&#60;/span&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/h3&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="text-center&nbsp;bg-primary&nbsp;shadow&nbsp;text-white&nbsp;p-2&nbsp;rounded&nbsp;mb-4"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h4&#62;&#60;i&nbsp;class="fa&nbsp;fa-info-circle"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&nbsp;Hướng&nbsp;Dẫn&#60;/h4&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Các&nbsp;bạn&nbsp;nhập&nbsp;mỗi&nbsp;chữ&nbsp;ở&nbsp;trên&nbsp;với&nbsp;thời&nbsp;gian&nbsp;không&nbsp;được&nbsp;vượt&nbsp;quá&nbsp;10&nbsp;giây.&nbsp;Để&nbsp;chơi&nbsp;lại&nbsp;thì&nbsp;bạn&nbsp;chỉ&nbsp;cần&nbsp;nhập&nbsp;chữ&nbsp;đang&nbsp;hiển&nbsp;thị&nbsp;hiện&nbsp;tại&nbsp;và&nbsp;điểm&nbsp;sẽ&nbsp;tự&nbsp;động&nbsp;được&nbsp;tính&nbsp;lại.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/>&#60;/div&#62;<br/></code></pre>
+          
+          <p>
+            Chúng ta cùng xem kết quả trang HTMl nhé:
+          </p>
+          <img class="img-thumbnail shadow p-3" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1581609151/tro_choi_danh_chu/FireShot_Capture_093_-_Tr%C3%B2_Ch%C6%A1i_%C4%90%C3%A1nh_Ch%E1%BB%AF_-_127.0.0.1_def2ve.png" alt="Cấu trúc thẻ cho HHTML trang tạo trò chơi đánh chữ">
+          
+
+          <p class="mt-4">
+          Nhìn chưa được đẹp lắm bây giờ chúng ta sẽ chỉnh file <mark>style.css</mark> để giúp đưa các thành phần HTML ra giữa trang cũng như thiết lập màu nền cho thẻ <code>&lt;body&gt;</code>.
+          Các bạn xem đoạn code dưới đây để rõ hơn nhé: 
+  </p>
+          <pre><code class="css">body&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;#667db6;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;-webkit-linear-gradient(to&nbsp;right,&nbsp;#667db6,&nbsp;#0082c8,&nbsp;#0082c8,&nbsp;#667db6);<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;linear-gradient(to&nbsp;right,&nbsp;#667db6,&nbsp;#0082c8,&nbsp;#0082c8,&nbsp;#667db6);<br/> }<br/>.tro_choi_danh_chu{<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;flex;<br/> &nbsp;&nbsp;&nbsp;&nbsp;justify-content:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;align-items:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;min-height:&nbsp;100vh;<br/> }<br/>.noi_dung{<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;80%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;10px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;text-align:&nbsp;center;<br/> }<br/></code></pre>
+
+
+          <p>Cùng mình xem kết quả của đoạn code trên nhé:</p>
+          <img class="img-thumbnail shadow p-3" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1581609555/tro_choi_danh_chu/FireShot_Capture_094_-_Tr%C3%B2_Ch%C6%A1i_%C4%90%C3%A1nh_Ch%E1%BB%AF_-_127.0.0.1_tv2lna.png" alt="Cấu trúc thẻ cho HHTML trang tạo trò chơi đánh chữ final">
+
+
+          <p class="mt-4">Như vậy chúng ta đã xong phần giao diện cho trò chơi, kế tiếp các bạn vào trong file <mark>ham_danh_chu.js</mark> thiết lập các biến mặc định  trong file javascript
+             dùng để lưu thời gian, điểm số và trạng thái của người chơi(true hoặc false, quyết định người chơi là đi tiếp hay dừng lại).
+             Tiếp theo là tạo ra các biến để lưu các giá trị trong file <mark>trang_chinh.html</mark> thông qua id. Sau đó tạo ra một mảng(Array) dùng để chứa các từ mà muốn người dùng nhập khi chơi đánh chữ. Cái này các bạn có thể lấy bất kì từ nào mình thích nhé, càng nhiều thì khả năng bị lặp từ càng khó. Nào cùng mình theo dõi đoạn code sau đây để hiểu rõ hơn:  </p>
+
+            <pre><code class="javascript">let thoi_gian = 10;<br/> let diem = 0;<br/> let dang_choi;<br/> const&nbsp;chu_duoc_nhap&nbsp;=&nbsp;document.querySelector('#chu_duoc_nhap');<br/> const&nbsp;chu_hien_tai&nbsp;=&nbsp;document.querySelector('#chu_hien_tai');<br/> const&nbsp;diem_hien_thi&nbsp;=&nbsp;document.querySelector('#diem');<br/> const&nbsp;thoi_gian_hien_thi&nbsp;=&nbsp;document.querySelector('#giay');<br/> const&nbsp;thong_bao&nbsp;=&nbsp;document.querySelector('#thong_bao');<br/>const&nbsp;chu&nbsp;=&nbsp;[<br/> &nbsp;&nbsp;&nbsp;&nbsp;'hat',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'river',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'lucky',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'statue',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'generate',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'stubborn',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'cocktail',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'runaway',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'joke',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'developer',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'establishment',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'hero',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'javascript',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'nutrition',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'revolver',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'echo',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'siblings',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'investigate',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'horrendous',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'symptom',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'laughter',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'magic',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'master',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'space',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'definition'<br/> &nbsp;&nbsp;];<br/></code></pre>
+
+
+            <p>Sau khi đã có các giá trị cần thiết các bạn sẽ viết một hàm có tên là  <code>hien_thi_chu(chu)</code> với tác dụng  sẽ lấy một chữ ngẫu nhiên trong mảng <b>chu</b>,
+            tiếp đến ta cần thêm một hàm tên là <code>chay_ham()</code> dùng để tập hợp các hàm cần có để xử lý trò chơi đánh chữ. Và nó sẽ bắt đầu mỗi khi trình duyệt được load. Để hiểu rõ hơn các bạn xem đoạn code dưới đây nhé:
+          </p>
+          <pre><code class="javascript">window.addEventListener('load',&nbsp;chay_ham)<br/> <br/> function&nbsp;chay_ham()&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;hien_thi_chu(chu);<br/> &nbsp;}<br/> <br/> &nbsp;function&nbsp;hien_thi_chu(chu)&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;chu_ngau_nhien&nbsp;=&nbsp;Math.floor(Math.random()*chu.length);<br/>&nbsp;&nbsp;&nbsp;&nbsp;chu_hien_tai.innerHTML&nbsp;=&nbsp;chu[chu_ngau_nhien];<br/> }<br/></code></pre>
+
+
+
+
+
+
           <p>Ở đây mình có một vài lưu ý ở đoạn code trên và sẽ được giải thích ở bảng dưới đây:</p>
         
           <div class="table-responsive">
@@ -66,113 +104,107 @@
             </thead>
             <tbody>
               <tr>
-                <td><code>margin: 150px auto 0;</code></td>
-                <td>Cái này biểu thị cho margin-top là 150px, margin-left và margin-right là tự động và margin-bottom:0px</td>
+                <td>
+                 <code>window.addEventListener('load', chay_ham)</code>
+                </td>
+                <td>Hàm <code>chay_ham</code> sẽ được chạy mỗi khi trang được load lại. Nghĩa là ta sẽ bắt đầu trò chơi mỗi khi load lại trang HTML.</td>
               </tr>
               <tr>
-                <td><code>display: grid;</code></td>
-                <td>Đây là hệ thống lưới cơ bản trong CSS bằng cách hiển thị dòng và cột.</td>
+                <td>
+                  Biến <code>chu_ngau_nhien</code>
+                </td>
+                <td>Nó sẽ là vị trí index ngẫu nhiên nằm trong mảng <b>chu</b>.</td>
               </tr>
               <tr>
-                <td><code>grid-template-columns: 1fr 1fr 1fr</code></td>
-                <td>Thuộc tính này giúp xác định  số cột và và chiều rộng cột có trong hệ thống lưới. Ví dụ ở đây với <code>&lt;div class="noi_dung"&gt;</code> sẽ chia thành 3 cột.
-                Để các bạn hiểu rõ hơn về đơn vị <b>fr</b> thì mình sẽ trang web tham khảo ở đây: <a href="https://techblog.vn/gioi-thieu-ve-don-vi-fr-trong-css" alt="Giởi thiệu về đơn vị fr" target="_blank">Tham Khảo</a></td>
-              </tr>
-
-              <tr>
-                <td><code>grid-template-rows: 440px;</code></td>
-                <td>Thuộc tính này giúp xác định  số dòng và độ cao của dòng trong hệ thống lưới. Ví dụ ở dây là dòng có chiều cao 440px.</td>
-              </tr>
-
-              <tr>
-                <td><code>grid-gap: 40px;</code></td>
-                <td>Thuộc tính thiết lập khoảng cách giũa dòng và cột ví dụ ở đây là  40px; </td>
-              </tr>
-
-              <tr>
-                <td><code> overflow: hidden;</code></td>
-                <td>Thuộc tính này sẽ ẩn những nội dung mà vượt quá chiều rộng hay chiều cao của thẻ HTML chứa nó. Ví dụ ta có hình quá lớn so với thẻ div chứa nó thì những phần bị tràn ra sẽ bị ẩn đi.</td>
+                <td><code>chu_hien_tai.innerHTML = chu[chu_ngau_nhien];</code></td>
+                <td>Gán chữ ngẫu nhiên trong mảng vào thẻ HTML.</td>
               </tr>
 
             </tbody>
           </table>
     </div>
+    <p class="mt-4">Muốn xem được hiệu ứng này các bạn nhấn F5 hay reload lại trang nhiều lần để xem thay đổi nào chúng ta cùng xem kết quả ở video dưới đây nhé:</p>
+
+
+    <div class="embed-responsive  embed-responsive-16by9">
+      <iframe class="embed-responsive-item" alt="Demo tò chơi đánh chữ" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1581614457/tro_choi_danh_chu/Tr%C3%B2_Ch%C6%A1i_%C4%90%C3%A1nh_Ch%E1%BB%AF_k1xjxa.mp4"></iframe>
+    </div>
+
+
+    <p class="mt-4">Chắc hẳn các bạn sẽ thấy chữ "Xin Chào"  xuất hiện rất nhanh rồi mới chuyển sang chữ khác mỗi khi ta reload lại trang là do nội dung mà ta thiết lập mặc định trong thẻ HTML có id
+      ="chu_hien_tai". Để sửa thì các bạn vào trong trang <mark>trang_chinh.html</mark> và chỉnh lại như đoạn code sau đây:
+    </p>
+    <pre><code class="html">&lt;h2 class="display-2 mb-2" id="chu_hien_tai"&gt;&lt;/h2&gt;</code></pre>
+
+
           <p>Bây giờ chúng ta hãy cùng nhau xem kết quả của đoạn code trên nhé:</p>
-          <img class="img-thumbnail shadow p-3" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1581430356/t%E1%BA%A1o%20the%20nguoi%20dung/FireShot_Capture_083_-_T%E1%BA%A1o_th%E1%BA%BB_ng%C6%B0%E1%BB%9Di_d%C3%B9ng_CSS_-_127.0.0.1_dyezdy.png" alt="Thuộc tính display:grid demo">
+          <div class="embed-responsive  embed-responsive-16by9">
+            <iframe class="embed-responsive-item" alt="Demo tò chơi đánh chữ" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1581615275/tro_choi_danh_chu/Tr%C3%B2_Ch%C6%A1i_%C4%90%C3%A1nh_Ch%E1%BB%AF_1_ecd99u.mp4"></iframe>
+          </div>
 
-          <p class="mt-4">Tiếp theo chúng ta thêm hình ảnh vào các thẻ <code>&lt;div class="noi_dung"&gt;</code> bằng đoạn code dưới đây nhé:</p>
-          <p><mark>trang_chinh.html</mark></p>
-          <pre><code class="html">&#60;div&nbsp;class="noi_dung"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="the"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="hinh_anh"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;img&nbsp;src="hinh_1.jpg"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="the"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="hinh_anh"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;img&nbsp;src="hinh_2.jpg"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="the"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="hinh_anh"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;img&nbsp;src="hinh_3.jpg"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &#60;/div&#62;<br/></code></pre>
+
+<p class="mt-4">Bước trên các bạn có thể làm hay không vì nó không ảnh hưởng đến đoạn code. Bây giờ chúng ta sẽ thiết lập một hàm gọi là <code>dem_nguoc</code> dùng để đếm ngược thời gian từ 10 đến 0
+giúp người dùng biết mình còn bao nhiêu thời gian để đánh chữ và cũng dựa vào đây mà ta sẽ cho phép người dùng được chơi tiếp hay dừng lại bằng cách thiết lập thuộc tính true hoặc false cho biến <code>dang_choi</code>.
+Để chạy được thì mình cần đặt nó trong hàm <code>chay_ham</code>. Các bạn xem đoạn code dưới đây để hiểu hơn nhé:
+</p>
+<pre><code class="javascript">function&nbsp;chay_ham()&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;hien_thi_chu(chu);<br/> &nbsp;&nbsp;&nbsp;&nbsp;setInterval(dem_nguoc,&nbsp;1000);<br/> &nbsp;}<br/>function&nbsp;dem_nguoc()&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;if(thoi_gian&nbsp;>&nbsp;0)&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thoi_gian--;<br/> &nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;else&nbsp;if(thoi_gian&nbsp;==&nbsp;0){<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dang_choi&nbsp;=&nbsp;false;<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;thoi_gian_hien_thi.innerHTML&nbsp;=&nbsp;thoi_gian;<br/> }<br/></code></pre>
+
+<p>Các bạn lưu ý là dòng code <code>setInterval(dem_nguoc, 1000);</code> là cứ sau một giây thì hàm này sẽ chạy lại một lần. Và hãy cùng mình xem kết quả dưới đây nhé: </p>
+
+<div class="embed-responsive  embed-responsive-16by9">
+  <iframe class="embed-responsive-item" alt="Demo tò chơi đánh chữ" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1581616686/tro_choi_danh_chu/Tr%C3%B2_Ch%C6%A1i_%C4%90%C3%A1nh_Ch%E1%BB%AF_2_jntsgm.mp4"></iframe>
+</div>
+
+<p class="mt-4">
+  Bước tiếp theo là ta sẽ tạo hàm <code>so_sanh_chu</code> để so sánh chữ người dùng nhập với chữ được hiển thị thông qua xét từng từ của hai chuỗi có khớp với nhau không bằng một hàm con có 
+  tên <code>so_sanh_tu</code>. Nếu giá trị của hàm trả về true thì người chơi sẽ tiếp tục được đi tiếp, thời gian sẽ trở lại ban đầu là 10 và  điểm sẽ được cộng thêm một điểm còn không thì ta sẽ đặt biến  <code>dang_choi=false</code>. Muốn chạy được thì mình cần đặt nó
+  vào trong hàm <code>chay_ham</code>.
+  Để nắm rõ hơn các bạn xem đoạn code sau đây nhé:
+</p>
+
+<pre><code class="javascript">function&nbsp;chay_ham()&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;hien_thi_chu(chu);<br/> &nbsp;&nbsp;&nbsp;&nbsp;chu_duoc_nhap.addEventListener('input',&nbsp;so_sanh_chu)<br/> &nbsp;&nbsp;&nbsp;&nbsp;setInterval(dem_nguoc,&nbsp;1000);<br/> &nbsp;}<br/>function&nbsp;so_sanh_chu()&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;if(so_sanh_tu())&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dang_choi&nbsp;=&nbsp;true;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thoi_gian&nbsp;=&nbsp;10;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hien_thi_chu(chu);<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;chu_duoc_nhap.value&nbsp;=&nbsp;'';<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;diem++;<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;diem_hien_thi.innerHTML&nbsp;=&nbsp;diem;<br/>&nbsp;&nbsp; }<br/>function&nbsp;so_sanh_tu()&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;if((chu_duoc_nhap.value)&nbsp;===&nbsp;(chu_hien_tai.innerHTML))&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thong_bao.innerHTML&nbsp;=&nbsp;'Đúng&nbsp;Rồi';<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;true;<br/> &nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;else&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thong_bao.innerHTML&nbsp;=&nbsp;'';<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;false;<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> }<br/></code></pre>
+<p>Bây giờ cùng mình xem kết quả nhé:</p>
+
+<div class="embed-responsive  embed-responsive-16by9">
+  <iframe class="embed-responsive-item" alt="Demo tò chơi đánh chữ" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1581618630/tro_choi_danh_chu/Tr%C3%B2_Ch%C6%A1i_%C4%90%C3%A1nh_Ch%E1%BB%AF_3_rf6vv5.mp4"></iframe>
+</div>
+
+<p class="mt-4">
+  Bước cuối cùng là mình sẽ gọi một hàm tên là <code>kiem_tra_chu</code> dùng để kiểm tra nếu thời gian bằng 0 và biến <code>dang_choi = false</code> thì sẽ thông báo kết thúc và dừng trò chơi.
+  Cũng như các hàm trên mình cần đặt nó trong hàm  <code>chay_ham</code> để có thể chạy được. Để nắm rõ hơn mình cùng xem đoạn code sau đây nhé:
+</p>
+<pre><code class="javascript">function&nbsp;chay_ham()&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;hien_thi_chu(chu);<br/> &nbsp;&nbsp;&nbsp;&nbsp;chu_duoc_nhap.addEventListener('input',&nbsp;so_sanh_chu)<br/> &nbsp;&nbsp;&nbsp;&nbsp;setInterval(dem_nguoc,&nbsp;1000);<br/> &nbsp;&nbsp;&nbsp;&nbsp;setInterval(kiem_tra_chu,&nbsp;50);<br/> &nbsp;}<br/>function&nbsp;kiem_tra_chu()&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;if(!dang_choi&nbsp;&&&nbsp;thoi_gian&nbsp;===&nbsp;0)&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thong_bao.innerHTML&nbsp;=&nbsp;'Trò&nbsp;Chơi&nbsp;Kết&nbsp;Thúc!';<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;diem&nbsp;=&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;&nbsp;&nbsp;&nbsp; }<br/></code></pre>
+<p>Bây giờ cùng mình xem kết quả nhé:</p>
+
+<div class="embed-responsive  embed-responsive-16by9">
+  <iframe class="embed-responsive-item" alt="Demo tò chơi đánh chữ" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1581619351/tro_choi_danh_chu/Tr%C3%B2_Ch%C6%A1i_%C4%90%C3%A1nh_Ch%E1%BB%AF_4_ewlsef.mp4"></iframe>
+</div>
+
+
           
-          <img class="img-thumbnail shadow p-3" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1581431430/t%E1%BA%A1o%20the%20nguoi%20dung/FireShot_Capture_084_-_T%E1%BA%A1o_th%E1%BA%BB_ng%C6%B0%E1%BB%9Di_d%C3%B9ng_CSS_-_127.0.0.1_hhgurc.png" alt="TThêm element cho HTML">
-
-          <p class="mt-4">
-            Như các bạn thấy thì hình ảnh nó quá lớn nên chỉ được hiển thị một phần trong thẻ <code>&lt;div class="the"&gt</code>; vì vậy chúng ta cần thiết lập thuộc tính <code>max-width và max-height</code> cho thẻ hình ảnh cũng như thiết lập
-            hiệu ứng làm mờ hình khi ta hover vào hình ảnh. Để nắm rõ hơn các bạn cùng xem đoạn code sau đây nhé:
-          </p>
-          <pre><code class="css">img&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;max-width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;max-height:&nbsp;100%;<br/> }<br/> .noi_dung&nbsp;.the&nbsp;.hinh_anh{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;left:0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:0.5s;<br/> }<br/>.noi_dung&nbsp;.the:hover&nbsp;.hinh_anh{<br/> &nbsp;&nbsp;&nbsp;&nbsp;opacity:0.5;<br/> }<br/></code></pre>
 
 
-            <p>Cùng mình xem kết quả của đoạn code trên: </p>
-            <div class="embed-responsive  embed-responsive-16by9">
-              <iframe class="embed-responsive-item" alt="Demo Card User CSS 3" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1581432061/t%E1%BA%A1o%20the%20nguoi%20dung/TothngidngCSS_lxlr0z.mp4"></iframe>
-            </div>
-
-            <p class="mt-4">
-              Bây giờ mình sẽ thêm nội dung vào các thẻ <code>&lt;div class="the"&gt;</code> dùng để miêu tả vị trí công việc sở thích... và các icon liên kết mạng xã hội của người dùng. Không mất công đánh văn bản các bạn có thể vào trang
-              <a href="https://www.lipsum.com/" target="_blank" alt="Lorem website">Lipsum</a> để có thể tự động tạo những đoạn văn bản. Nào chúng ta cùng xem đoạn code nhé:
-            </p>
-
-            <pre><code class="html">&#60;div&nbsp;class="noi_dung"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="the"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="hinh_anh"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;img&nbsp;src="hinh_1.jpg"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="doan_van"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h2&#62;Tên&nbsp;Người&nbsp;dùng&nbsp;&#60;br&nbsp;/&#62;&nbsp;&#60;span&#62;UX/UI&nbsp;Designer&#60;/span&#62;&#60;/h2&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p&#62;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur&nbsp;adipisicing&nbsp;<br/>elit.&nbsp;Aliquam&nbsp;dicta,&nbsp;similique&nbsp;alias&nbsp;tempora&nbsp;corrupti&nbsp;recusandae&nbsp;<br/>nam&nbsp;rem&nbsp;sit&nbsp;voluptas&nbsp;veritatis&nbsp;est&nbsp;itaque&nbsp;eum&nbsp;magnam&nbsp;eveniet&nbsp;<br/>officiis&nbsp;atque&nbsp;earum&nbsp;rerum&nbsp;provident.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;ul&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;a&nbsp;href="#"&#62;&#60;i&nbsp;class="fa&nbsp;fa-facebook"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&#60;/a&#62;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;a&nbsp;href="#"&#62;&#60;i&nbsp;class="fa&nbsp;fa-google"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&#60;/a&#62;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;a&nbsp;href="#"&#62;&#60;i&nbsp;class="fa&nbsp;fa-twitter"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&#60;/a&#62;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/ul&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="the"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="hinh_anh"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;img&nbsp;src="hinh_2.jpg"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="doan_van"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h2&#62;Tên&nbsp;Người&nbsp;dùng&nbsp;&#60;br&nbsp;/&#62;&nbsp;&#60;span&#62;UX/UI&nbsp;Designer&#60;/span&#62;&#60;/h2&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p&#62;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur&nbsp;adipisicing&nbsp;<br/>elit.&nbsp;Aliquam&nbsp;dicta,&nbsp;similique&nbsp;alias&nbsp;tempora&nbsp;corrupti&nbsp;recusandae&nbsp;<br/>nam&nbsp;rem&nbsp;sit&nbsp;voluptas&nbsp;veritatis&nbsp;est&nbsp;itaque&nbsp;eum&nbsp;magnam&nbsp;eveniet&nbsp;<br/>officiis&nbsp;atque&nbsp;earum&nbsp;rerum&nbsp;provident.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;ul&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;a&nbsp;href="#"&#62;&#60;i&nbsp;class="fa&nbsp;fa-facebook"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&#60;/a&#62;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;a&nbsp;href="#"&#62;&#60;i&nbsp;class="fa&nbsp;fa-google"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&#60;/a&#62;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;a&nbsp;href="#"&#62;&#60;i&nbsp;class="fa&nbsp;fa-twitter"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&#60;/a&#62;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/ul&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="the"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="hinh_anh"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;img&nbsp;src="hinh_3.jpg"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="doan_van"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h2&#62;Tên&nbsp;Người&nbsp;dùng&nbsp;&#60;br&nbsp;/&#62;&nbsp;&#60;span&#62;UX/UI&nbsp;Designer&#60;/span&#62;&#60;/h2&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p&#62;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur&nbsp;adipisicing&nbsp;<br/>elit.&nbsp;Aliquam&nbsp;dicta,&nbsp;similique&nbsp;alias&nbsp;tempora&nbsp;corrupti&nbsp;recusandae&nbsp;<br/>nam&nbsp;rem&nbsp;sit&nbsp;voluptas&nbsp;veritatis&nbsp;est&nbsp;itaque&nbsp;eum&nbsp;magnam&nbsp;eveniet&nbsp;<br/>officiis&nbsp;atque&nbsp;earum&nbsp;rerum&nbsp;provident.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;ul&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;a&nbsp;href="#"&#62;&#60;i&nbsp;class="fa&nbsp;fa-facebook"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&#60;/a&#62;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;a&nbsp;href="#"&#62;&#60;i&nbsp;class="fa&nbsp;fa-google"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&#60;/a&#62;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;a&nbsp;href="#"&#62;&#60;i&nbsp;class="fa&nbsp;fa-twitter"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&#60;/a&#62;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/ul&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &#60;/div&#62;<br/></code></pre>
-            
-            <p>
-            Nhìn có vẻ hơi nhiều nhưng các bạn đừng lo lắng quá vì mình chỉ lập lặp <code>&lt;div class="doan_van"&gt;</code> cho từng thẻ <code>&lt;div class="the"&gt;</code>. Bây giờ chúng ta cần chỉnh một chút file
-            <mark>style.css</mark> chỉnh vị trí, thiết lập độ rộng, độ cao... của thẻ <code>&lt;div class="doan_van"&gt;</code>. Để nắm rõ hơn các bạn xem đoạn code sau đây nhé: 
-          </p>
-          <pre><code class="css">.noi_dung&nbsp;.the&nbsp;.doan_van{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;45%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;bottom:&nbsp;-100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:24px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;box-sizing:&nbsp;border-box;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;0.6rem;<br/> &nbsp;&nbsp;&nbsp;&nbsp;text-align:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;0.5s;<br/> }<br/>.noi_dung&nbsp;.the:hover&nbsp;.doan_van{<br/> &nbsp;&nbsp;&nbsp;&nbsp;bottom:&nbsp;0;<br/> }<br/></code></pre>
-          
-          <p>
-            Một lưu ý là khi mình thiết lập cho <code>&lt;div class="doan_van"&gt;</code> với <code>bottom: -100%;</code> dùng  để ẩn nó đi và tạo hiệu ứng khi chúng ta hover <code>&lt;div class="the"&gt;</code>
-            thì nội dung sẽ chạy từ dưới lên bằng cách là <code>.noi_dung .the:hover .doan_van{  bottom: 0; }</code>. Để hiểu rõ hơn hãy cùng mình xem kết quả nhé:
-          </p>
 
 
-            <div class="embed-responsive  embed-responsive-16by9">
-              <iframe class="embed-responsive-item" alt="Demo Card USer" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1581435319/t%E1%BA%A1o%20the%20nguoi%20dung/TothngidngCSS1_wuk5i0.mp4"></iframe>
-            </div>
 
-            <p class="mt-4">
-              Chúng ta sẽ thiết lập  background <code>linear-gradient</code> giúp cho  thẻ <code>&lt;div class="doan_van"&gt;</code> sinh động và bắt mắt hơn và đây là trang tham khảo thêm về thuộc tính này nếu như các bạn muốn nắm 
-              rõ hơn: <a href="https://www.w3schools.com/cssref/func_linear-gradient.asp" alt="linear-gradient" target="_blank">Thamk Khảo</a>. Để hiểu rõ hơn các bạn  xem đoạn code dưới đây nhé:  
-            </p>
 
-            <pre><code class="css">.noi_dung&nbsp;.the:nth-child(1)&nbsp;.doan_van{<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;linear-gradient(0deg,&nbsp;#c21833,&nbsp;transparent);<br/> }<br/>.noi_dung&nbsp;.the:nth-child(2)&nbsp;.doan_van{<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;linear-gradient(0deg,&nbsp;#8012a5,&nbsp;transparent);<br/> }<br/>.noi_dung&nbsp;.the:nth-child(3)&nbsp;.doan_van{<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;linear-gradient(0deg,&nbsp;#3a414c,&nbsp;transparent);<br/> }<br/></code></pre>
+
+
+
+
+
+
+
+
+
+         
            
-            <p>
-              Và đâ là kết quả của đoạn code tên cùng xem với mình nhé:
-            </p>
-
-            <div class="embed-responsive  embed-responsive-16by9">
-              <iframe class="embed-responsive-item" alt="Demo Card USer Linear gradient" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1581437397/t%E1%BA%A1o%20the%20nguoi%20dung/TothngidngCSS2_prirto.mp4"></iframe>
-            </div>
-
-            <p class="mt-4">
-             Bây giờ công việc cuối cùng của chúng ta là thay đổi màu sắc, cỡ chữ cho nội dung trong thẻ <code>&lt;div class="doan_van"&gt;</code> và thiết kế lại các icon mạng xã hội một tí. Để hiểu rõ hơn các bạn xem 
-             đoạn code dưới đây nhé:
-           </p>
-
-           <pre><code class="css">.noi_dung&nbsp;.the&nbsp;.doan_van&nbsp;h2{<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;0&nbsp;0&nbsp;10px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-size:20px;<br/> }<br/>.noi_dung&nbsp;.the&nbsp;.doan_van&nbsp;h2&nbsp;span{<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:#ccc;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-size:16px;<br/> }<br/>.noi_dung&nbsp;.the&nbsp;.doan_van&nbsp;p{<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-size:10px;<br/> }<br/>.noi_dung&nbsp;.the&nbsp;.doan_van&nbsp;ul&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:flex;<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;20px&nbsp;0&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;align-items:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;justify-content:&nbsp;center;<br/> }<br/>.noi_dung&nbsp;.the&nbsp;.doan_van&nbsp;ul&nbsp;li{<br/> &nbsp;&nbsp;&nbsp;&nbsp;list-style-type:&nbsp;none;<br/> }<br/> .noi_dung&nbsp;.the&nbsp;.doan_van&nbsp;ul&nbsp;li&nbsp;a{<br/> padding:0&nbsp;10px;<br/> font-size:12px;<br/> color:#fff;<br/> transition:&nbsp;0.5s;<br/> }<br/>.noi_dung&nbsp;.the:hover{<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;translateY(-20px);<br/> }<br/></code></pre>
-            <p>Và các bạn xem kết quả cuối cùng nhé:</p>
-            <div class="embed-responsive  embed-responsive-16by9">
-              <iframe class="embed-responsive-item" alt="Demo Card USer Linear gradient" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1581437986/t%E1%BA%A1o%20the%20nguoi%20dung/T%E1%BA%A1o_th%E1%BA%BB_ng%C6%B0%E1%BB%9Di_d%C3%B9ng_CSS_3_rzpb40.mp4"></iframe>
-            </div>
-           
-           <p class="mt-4">Mình gửi các bạn đường dẫn để tải về những file trong thư mục <b>The_nguoi_dung</b> để bạn đễ hình dung và có thể xem lại! <br>
-                <i class="fa fa-download" aria-hidden="true"></i> <a href="https://res.cloudinary.com/dn4nxz7f0/raw/upload/v1581438163/t%E1%BA%A1o%20the%20nguoi%20dung/The_nguoi_dung_ujbuk0.rar" download="">Đường dẫn tải File Source Code</a></p>
+           <p class="mt-4">Mình gửi các bạn đường dẫn để tải về những file trong thư mục <b>Tro_Choi_Danh_Chu</b> để bạn đễ hình dung và có thể xem lại! <br>
+                <i class="fa fa-download" aria-hidden="true"></i> <a href="https://res.cloudinary.com/dn4nxz7f0/raw/upload/v1581619626/tro_choi_danh_chu/Tro_choi_danh_chu_final_pvh34i.rar" download="">Đường dẫn tải File Source Code</a></p>
               
-                <p>Các bạn có thể tìm hiểu thêm thông qua đường dẫn dưới đây nhé!<br> <i class="fa fa-info" aria-hidden="true"></i> <a href="https://www.youtube.com/watch?v=JLA0bMMWlfo&t=312s" target="_blank">Đường dẫn để bạn tìm hiểu thêm</a></p>
+                <p>Các bạn có thể tìm hiểu thêm thông qua đường dẫn dưới đây nhé!<br> <i class="fa fa-info" aria-hidden="true"></i> <a href="https://www.youtube.com/watch?v=Yw-SYSG-028&t=929s" target="_blank">Đường dẫn để bạn tìm hiểu thêm</a></p>
           <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
-        <p>Qua đây mình giúp các bạn có thể làm sinh động cũng như sáng tạo hơn với trang web của mình và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
+        <p>Qua đây mình giúp các bạn có thể ôn lại và sử dụng những kiến thức mà mình đã học và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
          
       </div>
         </article>
