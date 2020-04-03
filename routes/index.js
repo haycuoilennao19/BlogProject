@@ -4,7 +4,10 @@ var mongoose = require('mongoose');
 var Blog = require('../model/blog')
 var db = require('../model/mongo_connect');
 
-
+router.get('/0', function(req, res, next) {
+    res.render('404page')
+  })
+  
 router.get('/about', function(req, res, next) {
     res.render('about')
  });
@@ -56,10 +59,11 @@ router.get('/:page', function(req, res, next) {
         .exec(function(err, products) {
             Blog.count().exec(function(err, count) {
                 if(err) return next(err)
-                res.render('products',{posts: products, current:page, pages: Math.ceil(count / perpage)})
+                res.render('products',{posts: products, current:parseInt(page), pages: Math.ceil(count / perpage)})
             })
         })
 })
+
 
 
 

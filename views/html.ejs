@@ -23,188 +23,280 @@
       <hr />
       <div class="card-text text-justify">
         <article>
-          <h2 class="bg-primary mb-4 text-white rounded p-2 shadow"><i class="fa fa-cube" aria-hidden="true"></i> Tạo Trò chơi Đánh Chữ</h2>
+          <h2 class="bg-primary mb-4 text-white rounded p-2 shadow"><i class="fa fa-cube" aria-hidden="true"></i>Bootstrap 4 Phần 11</h2>
           <div class="article-title">
             <div class="progress-wrapper">
               <div class="progress-label"></div><progress></progress>
             </div>
           </div>
           <div class="text-content-article mt-5">
-            <p><i>Xin chào các bạn quay lại blog của mình. Hôm nay mình sẽ giới thiệu cách xây dựng một trò chơi đánh chữ giúp các bạn có thể 
-              ôn lại và thực hành một số kiến thức HTML, CSS mà mình đã học. Để hiểu rõ hơn các bạn cùng mình tìm hiểu nhé!</i>
+            <p><i>Xin chào các bạn quay lại blog của mình. Hôm nay mình sẽ giới thiệu tiếp về các component trong Bootstrap 4. Nào hãy cũng mình tìm hiểu nhé!</i>
             </p>
-            <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Trò Chơi Đánh Chữ</h4></div>
-           <p>Đi vào bước thứ nhất các bạn tạo một thư mục có cấu trúc file như sau nhé:</p>
-           <img src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1581606559/tro_choi_danh_chu/tro_choi_danh_chu_taoch4.svg" width="250" height="250" alt="Cấu trúc Thư Mục Trò Chơi Đánh Chữ Javascript">
-           <p class="mt-4">
-            Sau khi đã tạo xong cấu trúc thư mục thì bước tiếp theo là các bạn tải một tập tin mà mình đã chứa sẵn các file đã được nén để ở đường dẫn bên dưới giúp chúng ta có thể thực hiện thẻ người dùng mà không mất công phải xây dựng lại từ đầu.
-          <br />
-            <i class="fa fa-download" aria-hidden="true"></i> <a href="https://res.cloudinary.com/dn4nxz7f0/raw/upload/v1581606813/tro_choi_danh_chu/Tro_choi_danh_chu_zkxi0j.rar" alt="Tải File Trò Chơi Đánh Chữ" target="_blank" download>Tải File Tro_choi_danh_chu</a> 
-           </p>
-
-           <p>
-            Bây giờ mình sẽ tạo cấu trúc file HTML, thêm các thẻ HTML cần thiết cho <mark>trang_chinh.html</mark> sau đó  liên kết nó với file
-            <mark>style.css, ham_danh_chu.js, Font Awesome  và Bootstrap4</mark> để làm các thẻ HTML thêm sinh động và dễ hiệu chỉnh.
-            Các bạn lưu ý là đường dẫn <mark>style.css</mark> lúc nào cũng nằm dưới cùng trong thẻ <code>&lt;head&gt;</code> của một trang HTML
-            bởi vì khi ta chỉnh sửa CSS thì nó sẽ không bị ảnh hưởng bởi các file CSS khác. Để nắm rõ hơn các bạn theo dõ đoạn code dưới đây nhé:
-          </p>
-
-          <pre><code class="html">&#60;!doctype&nbsp;html&#62;<br/> &#60;html&nbsp;lang="vi"&#62;<br/>&#60;head&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;title&#62;Trò&nbsp;Chơi&nbsp;Đánh&nbsp;Chữ&#60;/title&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;charset="utf-8"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;name="viewport"&nbsp;content="width=device-width,&nbsp;initial-scale=1,&nbsp;shrink-to-fit=no"&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"&nbsp;integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"&nbsp;crossorigin="anonymous"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="style.css"&#62;<br/> &#60;/head&#62;<br/>&#60;body&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&#60;script&nbsp;src="https://code.jquery.com/jquery-3.3.1.slim.min.js"&nbsp;integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"&nbsp;crossorigin="anonymous"&#62; &nbsp;&nbsp;&nbsp;&nbsp;&#60;/script&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;script&nbsp;src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"&nbsp;integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"&nbsp;crossorigin="anonymous"&#62; &nbsp;&nbsp;&nbsp;&nbsp;&#60;/script&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;script&nbsp;src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"&nbsp;integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"&nbsp;crossorigin="anonymous"&#62; &nbsp;&nbsp;&nbsp;&nbsp;&#60;/script&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;script&nbsp;src="ham_danh_chu.js"&#62;&#60;/script&#62;<br/> &#60;/body&#62;<br/>&#60;/html&#62;<br/></code></pre>
+            <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Framework Bootstrap 4</h4></div>
           
-          <p>
-          Sau khi đã liên kết các file xong thì việc tiếp theo là mình sẽ thêm các thẻ HTML với các class của Bootstrap4 và cài đặt id cho từng thẻ để các bước sau ta sẽ lấy những giá tri đó để
-          thực hiện các hàm trong javascript. Và để hiểu rõ hơn các bạn xem đoạn code dưới đây nhé :
-    </p>
-          
-          <pre><code class="html">&#60;div&nbsp;class="tro_choi_danh_chu"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="noi_dung&nbsp;shadow&nbsp;p-3"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;header&nbsp;class="text-center"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h1&#62;&#60;i&nbsp;class="fa&nbsp;fa-gamepad"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&nbsp;Trò&nbsp;Chơi&nbsp;Đánh&nbsp;Chữ&#60;/h1&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/header&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="row"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="col-md-6&nbsp;mx-auto"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p&nbsp;class="quy_dinh"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Các&nbsp;bạn&nbsp;hãy&nbsp;đánh&nbsp;chữ&nbsp;dưới&nbsp;đây&nbsp;với&nbsp;thời&nbsp;gian&nbsp;đối&nbsp;đa&nbsp;&#60;span&nbsp;class="text-success" &nbsp;id="thoi_gian"&#62;10&#60;/span&#62;&nbsp;giây:<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h2&nbsp;class="display-2&nbsp;mb-2"&nbsp;id="chu_hien_tai"&#62;Xin&nbsp;Chào!&#60;/h2&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;input&nbsp;type="text"&nbsp;class="form-control&nbsp;form-control-lg&nbsp;rounded-pill&nbsp;shadow&nbsp;p-4"&nbsp;placeholder="Bắt&nbsp;Đầu&nbsp;Nhập&nbsp;Chữ..."&nbsp;id="chu_duoc_nhap"&nbsp;autofocus&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h4&nbsp;class="mt-2"&nbsp;id="thong_bao"&#62;&#60;/h4&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="row&nbsp;mt-4"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="col-md-6"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h3&#62;Thời&nbsp;Gian&nbsp;Còn&nbsp;Lại:&#60;br&nbsp;/&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;span&nbsp;id="giay"&#62;0&#60;/span&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/h3&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="col-md-6"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h3&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Điểm&nbsp;Của&nbsp;Bạn:&#60;br&nbsp;/&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;span&nbsp;id="diem"&#62;0&#60;/span&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/h3&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="text-center&nbsp;bg-primary&nbsp;shadow&nbsp;text-white&nbsp;p-2&nbsp;rounded&nbsp;mb-4"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h4&#62;&#60;i&nbsp;class="fa&nbsp;fa-info-circle"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&nbsp;Hướng&nbsp;Dẫn&#60;/h4&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Các&nbsp;bạn&nbsp;nhập&nbsp;mỗi&nbsp;chữ&nbsp;ở&nbsp;trên&nbsp;với&nbsp;thời&nbsp;gian&nbsp;không&nbsp;được&nbsp;vượt&nbsp;quá&nbsp;10&nbsp;giây.&nbsp;Để&nbsp;chơi&nbsp;lại&nbsp;thì&nbsp;bạn&nbsp;chỉ&nbsp;cần&nbsp;nhập&nbsp;chữ&nbsp;đang&nbsp;hiển&nbsp;thị&nbsp;hiện&nbsp;tại&nbsp;và&nbsp;điểm&nbsp;sẽ&nbsp;tự&nbsp;động&nbsp;được&nbsp;tính&nbsp;lại.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/>&#60;/div&#62;<br/></code></pre>
-          
-          <p>
-            Chúng ta cùng xem kết quả trang HTMl nhé:
-          </p>
-          <img class="img-thumbnail shadow p-3" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1581609151/tro_choi_danh_chu/FireShot_Capture_093_-_Tr%C3%B2_Ch%C6%A1i_%C4%90%C3%A1nh_Ch%E1%BB%AF_-_127.0.0.1_def2ve.png" alt="Cấu trúc thẻ cho HHTML trang tạo trò chơi đánh chữ">
-          
+            <div class="bg-primary p-2 rounded text-white">
+              <h3>Component Tooltips:</h3>
+            </div>
+            <p class="mt-4">
+              Tooltip là một đoạn chữ nhỏ được xuất hiện khi người dùng đưa chuột lên (hover) các đối tượng trong HTMl như là thẻ <b>a, button...</b> để cung cấp chỉ dẫn hay thông tin thêm về đối tượng
+              được hover. Nó sẽ rất hữu ích đối với những người dùng mới khi vào trang web của bạn vì tooltip sẽ cung cấp thông tin hay mục đích sử dụng của các biểu tượng và liên kết bằng cách hover chúng.
+            </p>
+            <p>
+              Để tạo component này thì bước đầu tiên  mình cần thêm thuộc tính <code>data-toggle="tooltip"</code> và thuộc tính <code>title</code> giúp chúng ta xác định chữ sẽ hiện bên trong tooltip (thông tin thêm, chỉ dẫn...) vào đối tượng HTML.
+              Để dễ hình dung bạn xem đoạn code dưới đây nhé:
+            </p>
+            <h4 class="text-primary">
+              HTML:
+            </h4>
+            <pre><code class="html">&#60;a href="#" data-toggle="tooltip" id="tooltip_vi_du" title="Nội dung"&#62;Hover Vào Liên Kết&#60;/a&#62;</code></pre>
+            <p class="mt-4">
+              Bước thứ hai là nếu muốn tooltip hoạt động thì chúng ta bắt buộc phải thiết lập với Jquery bằng cách gọi đối tượng theo id, class hay là thuộc tính... mà bạn muốn hiển thị và gọi hàm  <code>tooltip()</code> cho nó.
+              Để dễ hình dung bạn xem đoạn code Jquery dưới đây nhé:
+            </p>
+            <h4 class="text-primary">
+              JS:
+            </h4>
+            <pre><code class="js">&#60;script&#62;<br/> $(document).ready(function(){<br/> &nbsp;&nbsp;&nbsp;&nbsp;$('[data-toggle="tooltip"]').tooltip();<br/> });<br/> &#60;/script&#62;<br/></code></pre>
+            <p class="mt-4">
+              Ở trên là mình sẽ thực hiện hàm tooltip cho tất cả đối tượng HTML mà có thuộc tính <code>data-toggle="tooltip"</code>. Bước tiếp theo chúng ta sẽ kết hợp hai đoạn code trên để tạo ra component tooltip.
+              Để nắm rõ hơn bạn xem ví dụ dưới đây nhé:
+            </p>
+            <h4 class="text-primary">
+              Component Tooltip:
+            </h4>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="vYOwOGd" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="component tooltip">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/vYOwOGd">
+              component tooltip</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            <p class="mt-4">
+              Tiếp theo mình sẽ chỉ bạn cách điều chỉnh vị trí của Tooltip như hiển thị bên trái, bên phải, ở trên hay là ở dưới bằng thuộc tính <code>data-placement=(position)</code> với position là 
+              các hướng mặc định của Bootstrap như là left, right, top và bottom. Để hiểu rõ hơn bạn xem ví dụ dưới đây nhé:
+            </p>
+            <h4 class="text-primary">
+              Vị trí Tooltip:
+            </h4>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="YzXbXZa" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="position Tooltip">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/YzXbXZa">
+              position Tooltip</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <p class="mt-4">
+              Nãy giờ ở các vị trên thì chúng ta  chỉ mới hiển thị một đoạn chữ cơ bản, tiếp theo mình sẽ đi vào cách chèn icon hay hình ảnh vào một component tooltip bằng cách sử dụng Jquery.
+              Để nắm rõ hơn bạn xem ví dụ dưới đây nhé:
+            </p>
+            <h4 class="text-primary">
+             Thêm hình ảnh vào Tooltip:
+            </h4>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="XWbwbeN" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Add image in tooltip">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/XWbwbeN">
+              Add image in tooltip</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <p class="mt-4">
+              Cuối cùng trong component này mình muốn giới thiệu về thời gian sẽ xuất hiện của tooltip khi người dùng hover vào đối tượng HTML (thường được gọi là delay). Để hiểu rõ hơn
+              bạn xem ví dụ dưới đây nhé:
+            </p>
+            <h4 class="text-primary">
+              Thuộc tính delay trong Tooltip:
+            </h4>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="oNXRXEE" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="delay tooltip">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/oNXRXEE">
+              delay tooltip</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <p class="mt-4">
+              Ở đây mình sử dùng thuộc tính <code> delay: {show: 2000, hide:500}</code> để xác định khi người dùng hover vào đối tượng thì sau 2s nó sẽ hiện bằng thuộc tính <code>show: 2000</code> và
+              khi người dùng di chuyển chuột ra khỏi đối tượng thì tooltip sẽ ẩn đi  sau  0.5s  bằng thuộc tính <code> hide:500</code>.
+            </p>
+            <div class="bg-primary p-2 rounded text-white">
+              <h3>Component Popovers:</h3>
+            </div>
+            <p class="mt-4">
+              Thực ra nó cũng giống như chức năng của Tooltip nhưng chỉ sẽ hiển thị khi mà người dùng <b>nhấn (click)</b> vào đối tượng HTML. Để sử dụng nó bạn cần thêm file <b>Poper.js</b> vào 
+              trong File HTML nhé. Để xem cách chèn file này thì bạn tham khảo ở đây: <a href="http://www.niemvuilaptrinh.com/article/5e86052210ee792be0376294" target="_blank">Ở Phần Component Dropdown</a>
+              hoặc ở Bootstrap <a href="https://getbootstrap.com/docs/4.4/getting-started/introduction/" target="_blank">Thêm Popper.js</a>. Ở đây chúng ta cũng sẽ có hai bước như trên:
+            </p>
+            <p>
+              Bước đầu tiên mình sẽ thêm các thuộc tính cần thiết để gọi component Poppovers là <code>data-toggle="popover"</code>, <code>title="Tiêu Đề"</code> để xác định tiêu đề của Popover,
+              <code>data-content="Nội Dung"</code> xác định nội dung của Popover. Để nắm rõ hơn bạn xem đoạn code dưới đây nhé:
+            </p>
+            <h4 class="text-primary">
+              HTML:
+            </h4>
+            <pre><code class="html">&#60;a class="btn btn-primary" href="#" data-toggle="popover" title="Tiêu Đề" data-content="Nội Dung"&#62;Hiển thị popover&#60;/a&#62;</code></pre>
+            <p class="mt-4">
+              Bước thứ hai là nếu muốn popover hoạt động thì chúng ta bắt buộc phải thiết lập với Jquery bằng cách gọi đối tượng theo id, class hay là thuộc tính...
+              mà bạn muốn hiển thị và gọi hàm popover() cho nó. Để dễ hình dung bạn xem đoạn code Jquery dưới đây nhé:
+            </p>
+            <h4 class="text-primary">
+              JS:
+            </h4>
+            <pre><code class="js">&#60;script&#62;<br/> $(document).ready(function(){<br/> &nbsp;&nbsp;&nbsp;&nbsp;$('[data-toggle="popover"]').popover();<br/> });<br/> &#60;/script&#62;<br/></code></pre>
+            <p class="mt-4">
+              Ở trên là mình sẽ thực hiện hàm popover cho tất cả đối tượng HTML mà có thuộc tính <code>data-toggle="popover"</code>. Bước tiếp theo chúng ta sẽ kết hợp hai đoạn code trên để tạo ra component popover. Để nắm rõ hơn bạn xem ví dụ dưới đây nhé:
+            </p>
+            <h4 class="text-primary">
+             Component Popover:
+            </h4>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="gOpJpyJ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="popover">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/gOpJpyJ">
+              popover</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <p class="mt-4">
+              Tiếp theo mình sẽ chỉ bạn cách điều chỉnh vị trí của Popover như hiển thị bên trái, bên phải, ở trên hay là ở dưới bằng thuộc tính <code>data-placement=(position)</code> với position là 
+              các hướng mặc định của Bootstrap như là left, right, top và bottom. Để hiểu rõ hơn bạn xem ví dụ dưới đây nhé:
+            </p>
+            <h4 class="text-primary">
+             Vị trí Popover:
+             </h4>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="OJVYVeK" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="position of popovers">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/OJVYVeK">
+              position of popovers</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <p class="mt-4">
+              Để xem được kết quả bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> nhé. Như ví dụ trên thì chúng ta sẽ gặp một vấn đề là khi người dùng nhấn vào 4 popover thì nó sẽ hiện hết cả 4,
+              nhiều khi như vậy sẽ làm người dùng khó chịu vì khi muốn ẩn popover thì họ phải nhấn lại thêm một lần nữa vào các popover muốn ẩn. Để tránh tình trạng đó thì mình sẽ sử dụng thuộc tính
+              <code>data-trigger="focus"</code> có nhiệm vụ sẽ tự động ẩn popover khi người dùng nhấn vào popover tiếp theo. Để hiễu rõ hơn bạn hãy xem ví dụ dưới đây nhé:
+            </p>
+            <h4 class="text-primary">
+              data-trigger="focus" trong  Popover:
+              </h4>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="JjdqYoZ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="data-trigger=&amp;quot;focus&amp;quot; Bootstrap">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/JjdqYoZ">
+              data-trigger=&quot;focus&quot; Bootstrap</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <p class="mt-4">
+              Bây giờ mình sẽ giới thiệu cách đưa nội dung, hình ảnh, icon... vào trong Popover bằng Jquery. Để hiểu rõ hơn bạn xem ví dụ dưới đây nhé:
+            </p>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="rNVgOxY" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Add content and image Popover">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/rNVgOxY">
+              Add content and image Popover</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <p class="mt-4">
+              Chúng ta cũng có thể thiết lập thời gian delay cho component Popover như Tooltip bằng cách sử dụng thuộc tính delay. Để hiểu rõ hơn bạn xem ví dụ dưới đây nhé:
 
-          <p class="mt-4">
-          Nhìn chưa được đẹp lắm bây giờ chúng ta sẽ chỉnh file <mark>style.css</mark> để giúp đưa các thành phần HTML ra giữa trang cũng như thiết lập màu nền cho thẻ <code>&lt;body&gt;</code>.
-          Các bạn xem đoạn code dưới đây để rõ hơn nhé: 
-  </p>
-          <pre><code class="css">body&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;#667db6;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;-webkit-linear-gradient(to&nbsp;right,&nbsp;#667db6,&nbsp;#0082c8,&nbsp;#0082c8,&nbsp;#667db6);<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;linear-gradient(to&nbsp;right,&nbsp;#667db6,&nbsp;#0082c8,&nbsp;#0082c8,&nbsp;#667db6);<br/> }<br/>.tro_choi_danh_chu{<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;flex;<br/> &nbsp;&nbsp;&nbsp;&nbsp;justify-content:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;align-items:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;min-height:&nbsp;100vh;<br/> }<br/>.noi_dung{<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;80%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;10px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;text-align:&nbsp;center;<br/> }<br/></code></pre>
-
-
-          <p>Cùng mình xem kết quả của đoạn code trên nhé:</p>
-          <img class="img-thumbnail shadow p-3" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1581609555/tro_choi_danh_chu/FireShot_Capture_094_-_Tr%C3%B2_Ch%C6%A1i_%C4%90%C3%A1nh_Ch%E1%BB%AF_-_127.0.0.1_tv2lna.png" alt="Cấu trúc thẻ cho HHTML trang tạo trò chơi đánh chữ final">
-
-
-          <p class="mt-4">Như vậy chúng ta đã xong phần giao diện cho trò chơi, kế tiếp các bạn vào trong file <mark>ham_danh_chu.js</mark> thiết lập các biến mặc định  trong file javascript
-             dùng để lưu thời gian, điểm số và trạng thái của người chơi(true hoặc false, quyết định người chơi là đi tiếp hay dừng lại).
-             Tiếp theo là tạo ra các biến để lưu các giá trị trong file <mark>trang_chinh.html</mark> thông qua id. Sau đó tạo ra một mảng(Array) dùng để chứa các từ mà muốn người dùng nhập khi chơi đánh chữ. Cái này các bạn có thể lấy bất kì từ nào mình thích nhé, càng nhiều thì khả năng bị lặp từ càng khó. Nào cùng mình theo dõi đoạn code sau đây để hiểu rõ hơn:  </p>
-
-            <pre><code class="javascript">let thoi_gian = 10;<br/> let diem = 0;<br/> let dang_choi;<br/> const&nbsp;chu_duoc_nhap&nbsp;=&nbsp;document.querySelector('#chu_duoc_nhap');<br/> const&nbsp;chu_hien_tai&nbsp;=&nbsp;document.querySelector('#chu_hien_tai');<br/> const&nbsp;diem_hien_thi&nbsp;=&nbsp;document.querySelector('#diem');<br/> const&nbsp;thoi_gian_hien_thi&nbsp;=&nbsp;document.querySelector('#giay');<br/> const&nbsp;thong_bao&nbsp;=&nbsp;document.querySelector('#thong_bao');<br/>const&nbsp;chu&nbsp;=&nbsp;[<br/> &nbsp;&nbsp;&nbsp;&nbsp;'hat',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'river',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'lucky',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'statue',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'generate',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'stubborn',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'cocktail',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'runaway',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'joke',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'developer',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'establishment',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'hero',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'javascript',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'nutrition',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'revolver',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'echo',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'siblings',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'investigate',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'horrendous',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'symptom',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'laughter',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'magic',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'master',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'space',<br/> &nbsp;&nbsp;&nbsp;&nbsp;'definition'<br/> &nbsp;&nbsp;];<br/></code></pre>
-
-
-            <p>Sau khi đã có các giá trị cần thiết các bạn sẽ viết một hàm có tên là  <code>hien_thi_chu(chu)</code> với tác dụng  sẽ lấy một chữ ngẫu nhiên trong mảng <b>chu</b>,
-            tiếp đến ta cần thêm một hàm tên là <code>chay_ham()</code> dùng để tập hợp các hàm cần có để xử lý trò chơi đánh chữ. Và nó sẽ bắt đầu mỗi khi trình duyệt được load. Để hiểu rõ hơn các bạn xem đoạn code dưới đây nhé:
-          </p>
-          <pre><code class="javascript">window.addEventListener('load',&nbsp;chay_ham)<br/> <br/> function&nbsp;chay_ham()&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;hien_thi_chu(chu);<br/> &nbsp;}<br/> <br/> &nbsp;function&nbsp;hien_thi_chu(chu)&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;chu_ngau_nhien&nbsp;=&nbsp;Math.floor(Math.random()*chu.length);<br/>&nbsp;&nbsp;&nbsp;&nbsp;chu_hien_tai.innerHTML&nbsp;=&nbsp;chu[chu_ngau_nhien];<br/> }<br/></code></pre>
-
-
-
-
-
-
-          <p>Ở đây mình có một vài lưu ý ở đoạn code trên và sẽ được giải thích ở bảng dưới đây:</p>
-        
-          <div class="table-responsive">
-          <table class="table">
-            <thead class="thead-dark">
-              <tr>
-                <th class="w-50">Thuộc Tính</th>
-                <th class="w-50">Ý Nghĩa</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                 <code>window.addEventListener('load', chay_ham)</code>
-                </td>
-                <td>Hàm <code>chay_ham</code> sẽ được chạy mỗi khi trang được load lại. Nghĩa là ta sẽ bắt đầu trò chơi mỗi khi load lại trang HTML.</td>
-              </tr>
-              <tr>
-                <td>
-                  Biến <code>chu_ngau_nhien</code>
-                </td>
-                <td>Nó sẽ là vị trí index ngẫu nhiên nằm trong mảng <b>chu</b>.</td>
-              </tr>
-              <tr>
-                <td><code>chu_hien_tai.innerHTML = chu[chu_ngau_nhien];</code></td>
-                <td>Gán chữ ngẫu nhiên trong mảng vào thẻ HTML.</td>
-              </tr>
-
-            </tbody>
-          </table>
-    </div>
-    <p class="mt-4">Muốn xem được hiệu ứng này các bạn nhấn F5 hay reload lại trang nhiều lần để xem thay đổi nào chúng ta cùng xem kết quả ở video dưới đây nhé:</p>
-
-
-    <div class="embed-responsive  embed-responsive-16by9">
-      <iframe class="embed-responsive-item" alt="Demo tò chơi đánh chữ" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1581614457/tro_choi_danh_chu/Tr%C3%B2_Ch%C6%A1i_%C4%90%C3%A1nh_Ch%E1%BB%AF_k1xjxa.mp4"></iframe>
-    </div>
-
-
-    <p class="mt-4">Chắc hẳn các bạn sẽ thấy chữ "Xin Chào"  xuất hiện rất nhanh rồi mới chuyển sang chữ khác mỗi khi ta reload lại trang là do nội dung mà ta thiết lập mặc định trong thẻ HTML có id
-      ="chu_hien_tai". Để sửa thì các bạn vào trong trang <mark>trang_chinh.html</mark> và chỉnh lại như đoạn code sau đây:
-    </p>
-    <pre><code class="html">&lt;h2 class="display-2 mb-2" id="chu_hien_tai"&gt;&lt;/h2&gt;</code></pre>
-
-
-          <p>Bây giờ chúng ta hãy cùng nhau xem kết quả của đoạn code trên nhé:</p>
-          <div class="embed-responsive  embed-responsive-16by9">
-            <iframe class="embed-responsive-item" alt="Demo tò chơi đánh chữ" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1581615275/tro_choi_danh_chu/Tr%C3%B2_Ch%C6%A1i_%C4%90%C3%A1nh_Ch%E1%BB%AF_1_ecd99u.mp4"></iframe>
-          </div>
-
-
-<p class="mt-4">Bước trên các bạn có thể làm hay không vì nó không ảnh hưởng đến đoạn code. Bây giờ chúng ta sẽ thiết lập một hàm gọi là <code>dem_nguoc</code> dùng để đếm ngược thời gian từ 10 đến 0
-giúp người dùng biết mình còn bao nhiêu thời gian để đánh chữ và cũng dựa vào đây mà ta sẽ cho phép người dùng được chơi tiếp hay dừng lại bằng cách thiết lập thuộc tính true hoặc false cho biến <code>dang_choi</code>.
-Để chạy được thì mình cần đặt nó trong hàm <code>chay_ham</code>. Các bạn xem đoạn code dưới đây để hiểu hơn nhé:
-</p>
-<pre><code class="javascript">function&nbsp;chay_ham()&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;hien_thi_chu(chu);<br/> &nbsp;&nbsp;&nbsp;&nbsp;setInterval(dem_nguoc,&nbsp;1000);<br/> &nbsp;}<br/>function&nbsp;dem_nguoc()&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;if(thoi_gian&nbsp;>&nbsp;0)&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thoi_gian--;<br/> &nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;else&nbsp;if(thoi_gian&nbsp;==&nbsp;0){<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dang_choi&nbsp;=&nbsp;false;<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;thoi_gian_hien_thi.innerHTML&nbsp;=&nbsp;thoi_gian;<br/> }<br/></code></pre>
-
-<p>Các bạn lưu ý là dòng code <code>setInterval(dem_nguoc, 1000);</code> là cứ sau một giây thì hàm này sẽ chạy lại một lần. Và hãy cùng mình xem kết quả dưới đây nhé: </p>
-
-<div class="embed-responsive  embed-responsive-16by9">
-  <iframe class="embed-responsive-item" alt="Demo tò chơi đánh chữ" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1581616686/tro_choi_danh_chu/Tr%C3%B2_Ch%C6%A1i_%C4%90%C3%A1nh_Ch%E1%BB%AF_2_jntsgm.mp4"></iframe>
-</div>
-
-<p class="mt-4">
-  Bước tiếp theo là ta sẽ tạo hàm <code>so_sanh_chu</code> để so sánh chữ người dùng nhập với chữ được hiển thị thông qua xét từng từ của hai chuỗi có khớp với nhau không bằng một hàm con có 
-  tên <code>so_sanh_tu</code>. Nếu giá trị của hàm trả về true thì người chơi sẽ tiếp tục được đi tiếp, thời gian sẽ trở lại ban đầu là 10 và  điểm sẽ được cộng thêm một điểm còn không thì ta sẽ đặt biến  <code>dang_choi=false</code>. Muốn chạy được thì mình cần đặt nó
-  vào trong hàm <code>chay_ham</code>.
-  Để nắm rõ hơn các bạn xem đoạn code sau đây nhé:
-</p>
-
-<pre><code class="javascript">function&nbsp;chay_ham()&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;hien_thi_chu(chu);<br/> &nbsp;&nbsp;&nbsp;&nbsp;chu_duoc_nhap.addEventListener('input',&nbsp;so_sanh_chu)<br/> &nbsp;&nbsp;&nbsp;&nbsp;setInterval(dem_nguoc,&nbsp;1000);<br/> &nbsp;}<br/>function&nbsp;so_sanh_chu()&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;if(so_sanh_tu())&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dang_choi&nbsp;=&nbsp;true;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thoi_gian&nbsp;=&nbsp;10;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hien_thi_chu(chu);<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;chu_duoc_nhap.value&nbsp;=&nbsp;'';<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;diem++;<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;diem_hien_thi.innerHTML&nbsp;=&nbsp;diem;<br/>&nbsp;&nbsp; }<br/>function&nbsp;so_sanh_tu()&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;if((chu_duoc_nhap.value)&nbsp;===&nbsp;(chu_hien_tai.innerHTML))&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thong_bao.innerHTML&nbsp;=&nbsp;'Đúng&nbsp;Rồi';<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;true;<br/> &nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;else&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thong_bao.innerHTML&nbsp;=&nbsp;'';<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;false;<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> }<br/></code></pre>
-<p>Bây giờ cùng mình xem kết quả nhé:</p>
-
-<div class="embed-responsive  embed-responsive-16by9">
-  <iframe class="embed-responsive-item" alt="Demo tò chơi đánh chữ" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1581618630/tro_choi_danh_chu/Tr%C3%B2_Ch%C6%A1i_%C4%90%C3%A1nh_Ch%E1%BB%AF_3_rf6vv5.mp4"></iframe>
-</div>
-
-<p class="mt-4">
-  Bước cuối cùng là mình sẽ gọi một hàm tên là <code>kiem_tra_chu</code> dùng để kiểm tra nếu thời gian bằng 0 và biến <code>dang_choi = false</code> thì sẽ thông báo kết thúc và dừng trò chơi.
-  Cũng như các hàm trên mình cần đặt nó trong hàm  <code>chay_ham</code> để có thể chạy được. Để nắm rõ hơn mình cùng xem đoạn code sau đây nhé:
-</p>
-<pre><code class="javascript">function&nbsp;chay_ham()&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;hien_thi_chu(chu);<br/> &nbsp;&nbsp;&nbsp;&nbsp;chu_duoc_nhap.addEventListener('input',&nbsp;so_sanh_chu)<br/> &nbsp;&nbsp;&nbsp;&nbsp;setInterval(dem_nguoc,&nbsp;1000);<br/> &nbsp;&nbsp;&nbsp;&nbsp;setInterval(kiem_tra_chu,&nbsp;50);<br/> &nbsp;}<br/>function&nbsp;kiem_tra_chu()&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;if(!dang_choi&nbsp;&&&nbsp;thoi_gian&nbsp;===&nbsp;0)&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thong_bao.innerHTML&nbsp;=&nbsp;'Trò&nbsp;Chơi&nbsp;Kết&nbsp;Thúc!';<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;diem&nbsp;=&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;&nbsp;&nbsp;&nbsp; }<br/></code></pre>
-<p>Bây giờ cùng mình xem kết quả nhé:</p>
-
-<div class="embed-responsive  embed-responsive-16by9">
-  <iframe class="embed-responsive-item" alt="Demo tò chơi đánh chữ" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1581619351/tro_choi_danh_chu/Tr%C3%B2_Ch%C6%A1i_%C4%90%C3%A1nh_Ch%E1%BB%AF_4_ewlsef.mp4"></iframe>
-</div>
-
-
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-         
+            </p>
+            <h4 class="text-primary">
+             delay trong  Popover:
+              </h4>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="xxGNwVz" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Delay in Popover">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/xxGNwVz">
+              Delay in Popover</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+              </p>
+            <p class="mt-4">
+              Ở đây mình sử dùng thuộc tính <code> delay: {show: 2000, hide:500}</code> để xác định khi người dùng nhấn (click) vào đối tượng thì sau 2s nó sẽ hiện bằng thuộc tính <code>show: 2000</code> và
+              khi người dùng nhấn (click) đối tượng lần nữa thì tooltip sẽ ẩn đi  sau  0.5s  bằng thuộc tính <code> hide:500</code>.
+            </p>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
            
-           <p class="mt-4">Mình gửi các bạn đường dẫn để tải về những file trong thư mục <b>Tro_Choi_Danh_Chu</b> để bạn đễ hình dung và có thể xem lại! <br>
-                <i class="fa fa-download" aria-hidden="true"></i> <a href="https://res.cloudinary.com/dn4nxz7f0/raw/upload/v1581619626/tro_choi_danh_chu/Tro_choi_danh_chu_final_pvh34i.rar" download="">Đường dẫn tải File Source Code</a></p>
-              
-                <p>Các bạn có thể tìm hiểu thêm thông qua đường dẫn dưới đây nhé!<br> <i class="fa fa-info" aria-hidden="true"></i> <a href="https://www.youtube.com/watch?v=Yw-SYSG-028&t=929s" target="_blank">Đường dẫn để bạn tìm hiểu thêm</a></p>
-          <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
-        <p>Qua đây mình giúp các bạn có thể ôn lại và sử dụng những kiến thức mà mình đã học và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+            
+            <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
+        <p>Qua đây mình mong bài viết sẽ giúp các bạn nắm được thêm các component trong Bootstrap 4 và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
          
       </div>
         </article>
