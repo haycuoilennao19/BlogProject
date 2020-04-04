@@ -23,7 +23,7 @@
       <hr />
       <div class="card-text text-justify">
         <article>
-          <h2 class="bg-primary mb-4 text-white rounded p-2 shadow"><i class="fa fa-cube" aria-hidden="true"></i>Bootstrap 4 Phần 11</h2>
+          <h2 class="bg-primary mb-4 text-white rounded p-2 shadow"><i class="fa fa-cube" aria-hidden="true"></i>Bootstrap 4 Phần 13</h2>
           <div class="article-title">
             <div class="progress-wrapper">
               <div class="progress-label"></div><progress></progress>
@@ -35,165 +35,129 @@
             <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Framework Bootstrap 4</h4></div>
           
             <div class="bg-primary p-2 rounded text-white">
-              <h3>Component Tooltips:</h3>
+              <h3>Component Scrollspy:</h3>
             </div>
             <p class="mt-4">
-              Tooltip là một đoạn chữ nhỏ được xuất hiện khi người dùng đưa chuột lên (hover) các đối tượng trong HTMl như là thẻ <b>a, button...</b> để cung cấp chỉ dẫn hay thông tin thêm về đối tượng
-              được hover. Nó sẽ rất hữu ích đối với những người dùng mới khi vào trang web của bạn vì tooltip sẽ cung cấp thông tin hay mục đích sử dụng của các biểu tượng và liên kết bằng cách hover chúng.
-            </p>
-            <p>
-              Để tạo component này thì bước đầu tiên  mình cần thêm thuộc tính <code>data-toggle="tooltip"</code> và thuộc tính <code>title</code> giúp chúng ta xác định chữ sẽ hiện bên trong tooltip (thông tin thêm, chỉ dẫn...) vào đối tượng HTML.
-              Để dễ hình dung bạn xem đoạn code dưới đây nhé:
+            Scrollspy giúp chúng ta tự động cập nhật đường dẫn trên thanh navbar dựa vào vị trí của thanh cuộn(scroll) trong trang web. Cái này rất thích hợp cho trang có nội dung lớn
+            giúp người dùng có thể xác định vị trí của mình bằng đường dẫn được sử dụng class <code>active</code> trên thanh điều hướng. Trước khi đi vào cụ thể mình muốn các bạn xem ví dụ dưới đây để 
+            có thể hiểu rõ hơn chức năng của nó:
             </p>
             <h4 class="text-primary">
-              HTML:
+             Component Scrollspy:
             </h4>
-            <pre><code class="html">&#60;a href="#" data-toggle="tooltip" id="tooltip_vi_du" title="Nội dung"&#62;Hover Vào Liên Kết&#60;/a&#62;</code></pre>
-            <p class="mt-4">
-              Bước thứ hai là nếu muốn tooltip hoạt động thì chúng ta bắt buộc phải thiết lập với Jquery bằng cách gọi đối tượng theo id, class hay là thuộc tính... mà bạn muốn hiển thị và gọi hàm  <code>tooltip()</code> cho nó.
-              Để dễ hình dung bạn xem đoạn code Jquery dưới đây nhé:
-            </p>
-            <h4 class="text-primary">
-              JS:
-            </h4>
-            <pre><code class="js">&#60;script&#62;<br/> $(document).ready(function(){<br/> &nbsp;&nbsp;&nbsp;&nbsp;$('[data-toggle="tooltip"]').tooltip();<br/> });<br/> &#60;/script&#62;<br/></code></pre>
-            <p class="mt-4">
-              Ở trên là mình sẽ thực hiện hàm tooltip cho tất cả đối tượng HTML mà có thuộc tính <code>data-toggle="tooltip"</code>. Bước tiếp theo chúng ta sẽ kết hợp hai đoạn code trên để tạo ra component tooltip.
-              Để nắm rõ hơn bạn xem ví dụ dưới đây nhé:
-            </p>
-            <h4 class="text-primary">
-              Component Tooltip:
-            </h4>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="vYOwOGd" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="component tooltip">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/vYOwOGd">
-              component tooltip</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="VwLOqPv" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="component Scrollspy">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/VwLOqPv">
+              component Scrollspy</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
               on <a href="https://codepen.io">CodePen</a>.</span>
             </p>
             <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
             <p class="mt-4">
-              Tiếp theo mình sẽ chỉ bạn cách điều chỉnh vị trí của Tooltip như hiển thị bên trái, bên phải, ở trên hay là ở dưới bằng thuộc tính <code>data-placement=(position)</code> với position là 
-              các hướng mặc định của Bootstrap như là left, right, top và bottom. Để hiểu rõ hơn bạn xem ví dụ dưới đây nhé:
-            </p>
-            <h4 class="text-primary">
-              Vị trí Tooltip:
-            </h4>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="YzXbXZa" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="position Tooltip">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/YzXbXZa">
-              position Tooltip</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <p class="mt-4">
-              Nãy giờ ở các vị trên thì chúng ta  chỉ mới hiển thị một đoạn chữ cơ bản, tiếp theo mình sẽ đi vào cách chèn icon hay hình ảnh vào một component tooltip bằng cách sử dụng Jquery.
-              Để nắm rõ hơn bạn xem ví dụ dưới đây nhé:
-            </p>
-            <h4 class="text-primary">
-             Thêm hình ảnh vào Tooltip:
-            </h4>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="XWbwbeN" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Add image in tooltip">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/XWbwbeN">
-              Add image in tooltip</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <p class="mt-4">
-              Cuối cùng trong component này mình muốn giới thiệu về thời gian sẽ xuất hiện của tooltip khi người dùng hover vào đối tượng HTML (thường được gọi là delay). Để hiểu rõ hơn
-              bạn xem ví dụ dưới đây nhé:
-            </p>
-            <h4 class="text-primary">
-              Thuộc tính delay trong Tooltip:
-            </h4>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="oNXRXEE" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="delay tooltip">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/oNXRXEE">
-              delay tooltip</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <p class="mt-4">
-              Ở đây mình sử dùng thuộc tính <code> delay: {show: 2000, hide:500}</code> để xác định khi người dùng hover vào đối tượng thì sau 2s nó sẽ hiện bằng thuộc tính <code>show: 2000</code> và
-              khi người dùng di chuyển chuột ra khỏi đối tượng thì tooltip sẽ ẩn đi  sau  0.5s  bằng thuộc tính <code> hide:500</code>.
-            </p>
-            <div class="bg-primary p-2 rounded text-white">
-              <h3>Component Popovers:</h3>
-            </div>
-            <p class="mt-4">
-              Thực ra nó cũng giống như chức năng của Tooltip nhưng chỉ sẽ hiển thị khi mà người dùng <b>nhấn (click)</b> vào đối tượng HTML. Để sử dụng nó bạn cần thêm file <b>Poper.js</b> vào 
-              trong File HTML nhé. Để xem cách chèn file này thì bạn tham khảo ở đây: <a href="http://www.niemvuilaptrinh.com/article/5e86052210ee792be0376294" target="_blank">Ở Phần Component Dropdown</a>
-              hoặc ở Bootstrap <a href="https://getbootstrap.com/docs/4.4/getting-started/introduction/" target="_blank">Thêm Popper.js</a>. Ở đây chúng ta cũng sẽ có hai bước như trên:
+              Bạn phải chuyển sang chế độ screen <b>0.5x, 0.25x</b> thì mới thấy kết quả được nhé. Bây giờ mình sẽ giải thích đoạn code trên một tí nha:
+              <ul>
+                <li>Đầu tiên ta sẽ thêm thuộc tính <code>data-spy="scroll"</code> vào trong đối tượng HTML mà mình muốn để xác định khu vực scroll. Thông thường là 
+                sẽ sử dụng cho thẻ <b>body</b> nhé.</li>
+                <li>Tiếp theo là thêm thuộc tính <code>data-target</code> với giá trị id hoặc class của component navbar để chắc chắn rằng là nó đã liên kết khu vực scroll.
+                Nghĩa là các đường dẫn con trong navbar có thể tương tác theo vị trí của thanh cuộn trong thẻ <b>body</b>. Như ví dụ trên mình đặt thuộc tính này theo class
+                là <code>data-target=".navbar"</code>.
+                </li>
+                <li>Thẻ div chứa nội dung muốn tạo hiệu ứng của bạn phải có id trùng khớp với id của thẻ a trên thanh navbar ví dụ ở trên là <code>&#60;div id="section1"&#62;</code> phải khớp với
+                  <code>&#60;a href="#section1"&#62;</code>.
+                </li>
+                <li>
+                  Thuộc tính <code>data-offset</code> dùng để xác định số pixels cộng thêm khi tính toán vị trí của thanh cuộn(scroll).
+                </li>
+                <li>
+                  Đối với bất cứ đối tượng nào mà bạn sử dụng <code>data-spy="scroll"</code> thì phải thiết lập lập thuộc tính CSS: <code>position:relative</code> nhé.
+                </li>
+              </ul>
             </p>
             <p>
-              Bước đầu tiên mình sẽ thêm các thuộc tính cần thiết để gọi component Poppovers là <code>data-toggle="popover"</code>, <code>title="Tiêu Đề"</code> để xác định tiêu đề của Popover,
-              <code>data-content="Nội Dung"</code> xác định nội dung của Popover. Để nắm rõ hơn bạn xem đoạn code dưới đây nhé:
+              Bây giờ mình sẽ đi vào  kết hợp component Scrollspy với component List Group. Để Hiểu rõ hơn bạn xem đoạn code sau đây nhé:
             </p>
             <h4 class="text-primary">
-              HTML:
-            </h4>
-            <pre><code class="html">&#60;a class="btn btn-primary" href="#" data-toggle="popover" title="Tiêu Đề" data-content="Nội Dung"&#62;Hiển thị popover&#60;/a&#62;</code></pre>
-            <p class="mt-4">
-              Bước thứ hai là nếu muốn popover hoạt động thì chúng ta bắt buộc phải thiết lập với Jquery bằng cách gọi đối tượng theo id, class hay là thuộc tính...
-              mà bạn muốn hiển thị và gọi hàm popover() cho nó. Để dễ hình dung bạn xem đoạn code Jquery dưới đây nhé:
-            </p>
-            <h4 class="text-primary">
-              JS:
-            </h4>
-            <pre><code class="js">&#60;script&#62;<br/> $(document).ready(function(){<br/> &nbsp;&nbsp;&nbsp;&nbsp;$('[data-toggle="popover"]').popover();<br/> });<br/> &#60;/script&#62;<br/></code></pre>
-            <p class="mt-4">
-              Ở trên là mình sẽ thực hiện hàm popover cho tất cả đối tượng HTML mà có thuộc tính <code>data-toggle="popover"</code>. Bước tiếp theo chúng ta sẽ kết hợp hai đoạn code trên để tạo ra component popover. Để nắm rõ hơn bạn xem ví dụ dưới đây nhé:
-            </p>
-            <h4 class="text-primary">
-             Component Popover:
-            </h4>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="gOpJpyJ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="popover">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/gOpJpyJ">
-              popover</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <p class="mt-4">
-              Tiếp theo mình sẽ chỉ bạn cách điều chỉnh vị trí của Popover như hiển thị bên trái, bên phải, ở trên hay là ở dưới bằng thuộc tính <code>data-placement=(position)</code> với position là 
-              các hướng mặc định của Bootstrap như là left, right, top và bottom. Để hiểu rõ hơn bạn xem ví dụ dưới đây nhé:
-            </p>
-            <h4 class="text-primary">
-             Vị trí Popover:
+              Component Scrollspy Và List-Group:
              </h4>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="OJVYVeK" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="position of popovers">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/OJVYVeK">
-              position of popovers</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="WNvBLYK" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="List Group And Scrollspy">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/WNvBLYK">
+              List Group And Scrollspy</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
               on <a href="https://codepen.io">CodePen</a>.</span>
             </p>
-            <p class="mt-4">
-              Để xem được kết quả bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> nhé. Như ví dụ trên thì chúng ta sẽ gặp một vấn đề là khi người dùng nhấn vào 4 popover thì nó sẽ hiện hết cả 4,
-              nhiều khi như vậy sẽ làm người dùng khó chịu vì khi muốn ẩn popover thì họ phải nhấn lại thêm một lần nữa vào các popover muốn ẩn. Để tránh tình trạng đó thì mình sẽ sử dụng thuộc tính
-              <code>data-trigger="focus"</code> có nhiệm vụ sẽ tự động ẩn popover khi người dùng nhấn vào popover tiếp theo. Để hiễu rõ hơn bạn hãy xem ví dụ dưới đây nhé:
-            </p>
-            <h4 class="text-primary">
-              data-trigger="focus" trong  Popover:
-              </h4>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="JjdqYoZ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="data-trigger=&amp;quot;focus&amp;quot; Bootstrap">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/JjdqYoZ">
-              data-trigger=&quot;focus&quot; Bootstrap</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <p class="mt-4">
-              Bây giờ mình sẽ giới thiệu cách đưa nội dung, hình ảnh, icon... vào trong Popover bằng Jquery. Để hiểu rõ hơn bạn xem ví dụ dưới đây nhé:
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="rNVgOxY" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Add content and image Popover">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/rNVgOxY">
-              Add content and image Popover</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <p class="mt-4">
-              Chúng ta cũng có thể thiết lập thời gian delay cho component Popover như Tooltip bằng cách sử dụng thuộc tính delay. Để hiểu rõ hơn bạn xem ví dụ dưới đây nhé:
+        <p class="mt-4">
+          Bạn nhớ chuyển sang chế độ screen <b>0.5x, 0.25x</b> trên Codepen để thấy kết quả nhé.
+        </p>
+        <div class="bg-primary p-2 rounded text-white">
+          <h3>Component Media Object:</h3>
+        </div>
+        <p class="mt-4">
+          Đây là component giúp chúng ta có thể canh chỉnh vị trí của những media object (như hình ảnh, video) với nội dung trong trang web như  là comment trong FaceBook,
+          miêu tả thông tin thêm về hình ảnh, video... Để tạo được media object thì ta cần tạo một thẻ div với class <code>media </code> và trong nó sẽ là hình ảnh hoặc video với nội dung
+          được chứa bởi thẻ div với class <code>media-body</code>.
+        </p>
+        <h4 class="text-primary">
+          Component Media Object:
+         </h4>
+        <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="QWbRzXJ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Media Object Bootstrap4">
+          <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/QWbRzXJ">
+          Media Object Bootstrap4</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        <p class="mt-4">
+          Tiếp theo mình sẽ đi vào cách lồng hai component Media Object lại với nhau bằng cách thêm một Media Object con vào trong thẻ div với class <code>media-body</code>  của Component Media Obect cha.
+          Để nắm rõ hơn bạn xem ví dụ dưới đây nhé:
+        </p>
+        <h4 class="text-primary">
+          Lồng Hai Component Media Object:
+         </h4>
+         <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="xxGNMwO" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Nesting  2 Media Object">
+          <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/xxGNMwO">
+          Nesting  2 Media Object</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        <p class="mt-4">
+          Bây giờ mình sẽ hướng dẫn bạn cách đưa hình ảnh hay video nằm bên phải so với nội dung trong component Media Object. Để hiểu rõ hơn bạn xem ví dụ dưới đây nhé:
+        </p>
+        <h4 class="text-primary">
+         Hình Ảnh Nằm Bên Phải Media Object:
+         </h4>
+         <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="GRJazoQ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Right Media Object">
+          <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/GRJazoQ">
+          Right Media Object</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+      <p class="mt-4">
+        Ngoài ra bạn cũng có thể chỉnh vị trí của hình ảnh hay video so với nội dung trong Media Object bằng class <code>align-self-start</code> nằm ở phía trên, <code>align-self-center</code>
+        nằm ở chính giữa và <code>align-self-end</code> nằm ở phía dưới component này. Để hiểu rõ hơn bạn xem đoạn code dưới đây nhé:
+      </p>
+      <h4 class="text-primary">
+        Vị Trí Hình Ảnh Trong Media Object:
+        </h4>
+        <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="gOpJqre" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Position Of Media Object">
+          <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/gOpJqre">
+          Position Of Media Object</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        Để xem rõ hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> trong Codepen nhé.
 
-            </p>
-            <h4 class="text-primary">
-             delay trong  Popover:
-              </h4>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="xxGNwVz" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Delay in Popover">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/xxGNwVz">
-              Delay in Popover</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-              </p>
-            <p class="mt-4">
-              Ở đây mình sử dùng thuộc tính <code> delay: {show: 2000, hide:500}</code> để xác định khi người dùng nhấn (click) vào đối tượng thì sau 2s nó sẽ hiện bằng thuộc tính <code>show: 2000</code> và
-              khi người dùng nhấn (click) đối tượng lần nữa thì tooltip sẽ ẩn đi  sau  0.5s  bằng thuộc tính <code> hide:500</code>.
-            </p>
+
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           
             
             
             

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='/stylesheets/normalizes.css' />
+  <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+  <link rel='stylesheet' href='/stylesheets/darcula.css' />
+  <link rel='stylesheet' href='/stylesheets/hover-min.css' />
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <meta property="og:image"
+    content="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576511394/Niemvuilaptrinh_jgc0rn.png">
+  <meta property="og:description"
+    content="Xin Chào các bạn mình tạo trang này muốn chia sẻ những điều mà mình học được.
+  Chúng ta hãy cùng nhau tiến bộ nhé! Nếu có gì không hiểu cứ liên lạc với mình qua fanpage mình sẽ trả lời sớm nhất có thể.
+  Khóa học về Bootstrap mong sẽ giúp các bạn có thể hiểu hơn về cách thiết kế giao diện cho trang web.">
+  <meta property="og:title" content="Niềm Vui Lập Trình, Học Về Bootstrap 4">
+  <!--Font Logo-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:400,700,800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/stylesheets/font-awesome/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <meta name="google-site-verification" content="SXEFa5YhgCrmAOJhBwsuDms_fUALYxrM8ZUql8KHgNM" />
+  <script data-ad-client="ca-pub-7896774460267824" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+</head>
+
+<body>
+
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top p-2">
+    <a class="navbar-brand" href="/">Niềm Vui Lập Trình</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fa fa-navicon"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link mr-5 hvr-underline-from-left" href="/">Trang Chủ <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown ">
+          <a class="nav-link dropdown-toggle  mr-5 hvr-underline-from-left" data-toggle="dropdown" href="#"
+            role="button" aria-haspopup="true" aria-expanded="false">Ngôn Ngữ</a>
+          <div class="dropdown-menu mt-2">
+            <a class="dropdown-item" href="/article/html">HTML</a>
+            <a class="dropdown-item" href="/article/css">CSS</a>
+            <a class="dropdown-item" href="/article/Javscript">Javascript</a>
+            <a class="dropdown-item" href="/Hoc-Bootstrap4">Hướng Dẫn Bootstrap4</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link hvr-underline-from-left mr-5" href="/about">Giới Thiệu</a>
+        </li>
+
+
+
+    </div>
+  </nav>
+  <!--Content-->
+  <div class="jumbotron jumbotron-fluid image-slider">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-xs-12">
+        <div class="content-image">
+          <div class="content">
+            <blockquote class="blockquote">
+              <h1 class="mb-2 content-header">Tôi không có tài năng gì cả. Tôi chỉ đam mê hiểu biết</h1>
+              <footer class="blockquote-footer text-right text-white">Albert Einstein</footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-text text-center mt-5 ">
+    <span class="header-content">Bootstrap 4</span>
+
+  </div>
+
+ 
+  <div class="container mt-3 mx-auto justify-content-center">
+      
+    <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Hướng Dẫn Về Bootstrap 4</h4></div>
+    <p class="mt-4">
+        <hr>
+        Xin chào các bạn, Hôm nay mình sẽ giới thiệu về Framework Bootstrap có thể giúp bạn dễ dàng trong việc phát triển giao diện cũng như  đáp ứng trên nhiều màn hình thiết bị
+      và được phát triển dựa trên ba ngôn ngữ là HTML, CSS và Javascript.
+        <hr>    
+    </p>
+    <h4 class="text-primary">
+       Giới Thiệu Bootstrap:
+    </h4>
+    <p>Bootstrap là một framework front-end được sử dụng rộng rãi trong việc phát triển web. Nó được thiết kế và phát triển bởi Twitter vào khoảng giữa năm 2010. Trước khi trở thành mã nguồn mở
+        như bây giờ thì Bootstrap thường được biết đến với tên là Twitter Blueprint.
+    </p>
+    <h4 class="text-primary">
+       Những lợi ích khi sử dụng Bootstrap:
+     </h4>
+    <p>
+        Để các bạn hiểu rõ hơn thì mình sẽ nói qua về một số điểm lợi khi sử dụng Bootstrap là:
+        <ul>
+            <li><b>Tiết kiệm thời gian:</b> Bạn có thể tiết kiệm nhiều thời gian và công sức bằng cách sử dụng các template hoặc class để đã được xác định trong Bootstrap để thiết kế giao diện.</li>
+            <li><b>Tiện ích responsive:</b>  Bạn có thể dễ dàng  xây dựng trang web hiển thị trên nhiều màn hình thiết bị khác nhau bằng Bootstrap.</li>
+            <li><b>Nhất quán trong thiết kế:</b> Tất cả component được chia sẻ cùng một mẫu và kiểu thiết kế, vì vậy nên bố cục trang của bạn sẽ được nhất quán.  </li>
+            <li><b>Dễ dàng sử dụng:</b> Bạn chỉ cần biết cơ bản về HTML, CSS và Javascript thì có thể dễ dàng hiểu và phát triển web bằng Bootstrap.</li>
+            <li><b>Tương thích với trình duyệt</b>: Bootstrap thích ứng với tất cả trình duyệt hiện đại như là Chorme, Firefox, Internet Explorer...</li>
+        </ul>
+    </p>
+    <h4 class="text-primary">
+      Phụ Lục Bài Viết Hướng Dẫn Về Bootstrap 4:
+    </h4>
+    <div class="accordion" id="accordionExample">
+        <div class="card shadow-sm">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0 bg-primary">
+              <button class="btn  text-white" type="button" data-toggle="collapse" data-target="#Bootstrap4_1" aria-expanded="true" aria-controls="#Bootstrap4_1">
+              Bài Hướng Dẫn về Bootstrap
+              </button>
+            </h2>
+          </div>
+          <div id="Bootstrap4_1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body p-4 ">
+                <p class="mt-4">
+                    Bài này mình sẽ hướng dẫn bạn về  cách cài đặt và hệ thống lưới trong Bootstrap 4 nhé. Để hiểu rõ hơn bạn xem ở đây nhé:
+                    <a href="http://www.niemvuilaptrinh.com/article/5e7a2b4dfb2be919d808e953" alt="Hướng Dẫn Bootstrap">Hướng Dẫn Bootstrap 4</a>
+                </p>
+                
+            </div>
+          </div>
+        </div>
+
+        <div class="card shadow-sm">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0 bg-primary">
+                <button class="btn  text-white" type="button" data-toggle="collapse" data-target="#Bootstrap4_2" aria-expanded="true" aria-controls="#Bootstrap4_2">
+                Bootstrap Phần 2
+                </button>
+              </h2>
+            </div>
+            <div id="Bootstrap4_2" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body p-4 ">
+                  <p class="mt-4">
+                      Bài này mình sẽ hướng dẫn bạn về  cách lồng các dòng và cột  và xác định độ rộng cột cho từng màn hình trong Bootstrap 4 nhé. Để hiểu rõ hơn bạn xem ở đây nhé:
+                      <a href="http://www.niemvuilaptrinh.com/article/5e7b802c94ea6c313c47264b" alt="Hướng Dẫn Bootstrap 2">Bootstrap 4 Phần 2</a>
+                  </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card shadow-sm">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0 bg-primary">
+                <button class="btn  text-white" type="button" data-toggle="collapse" data-target="#Bootstrap4_3" aria-expanded="true" aria-controls="#Bootstrap4_3">
+                Bootstrap Phần 3
+                </button>
+              </h2>
+            </div>
+            <div id="Bootstrap4_3" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body p-4 ">
+                  <p class="mt-4">
+                      Bài này mình sẽ hướng dẫn bạn về  Component Jumbotron và Component Carousel  trong Bootstrap 4 nhé. Để hiểu rõ hơn bạn xem ở đây nhé:
+                      <a href="http://www.niemvuilaptrinh.com/article/5e7e2ff213b0122e20bed60f" alt="Hướng Dẫn Bootstrap 3">Bootstrap 4 Phần 3</a>
+                  </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card shadow-sm">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0 bg-primary">
+                <button class="btn  text-white" type="button" data-toggle="collapse" data-target="#Bootstrap4_4" aria-expanded="true" aria-controls="#Bootstrap4_4">
+                Bootstrap Phần 4
+                </button>
+              </h2>
+            </div>
+            <div id="Bootstrap4_4" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body p-4 ">
+                  <p class="mt-4">
+                      Bài này mình sẽ hướng dẫn bạn về  Component Card và xử lý hình ảnh  trong Bootstrap 4 nhé. Để hiểu rõ hơn bạn xem ở đây nhé:
+                      <a href="http://www.niemvuilaptrinh.com/article/5e7f8b5c022c50323c905e4a" alt="Hướng Dẫn Bootstrap 4">Bootstrap 4 Phần 4</a>
+                  </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card shadow-sm">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0 bg-primary">
+                <button class="btn  text-white" type="button" data-toggle="collapse" data-target="#Bootstrap4_5" aria-expanded="true" aria-controls="#Bootstrap4_5">
+                Bootstrap Phần 5
+                </button>
+              </h2>
+            </div>
+            <div id="Bootstrap4_5" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body p-4 ">
+                  <p class="mt-4">
+                      Bài này mình sẽ hướng dẫn bạn về  Component Table và Component List  trong Bootstrap 4 nhé. Để hiểu rõ hơn bạn xem ở đây nhé:
+                      <a href="http://www.niemvuilaptrinh.com/article/5e8215df6a49791628c14425" alt="Hướng Dẫn Bootstrap 5">Bootstrap 4 Phần 5</a>
+                  </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card shadow-sm">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0 bg-primary">
+                <button class="btn  text-white" type="button" data-toggle="collapse" data-target="#Bootstrap4_6" aria-expanded="true" aria-controls="#Bootstrap4_6">
+                Bootstrap Phần 6
+                </button>
+              </h2>
+            </div>
+            <div id="Bootstrap4_6" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body p-4 ">
+                  <p class="mt-4">
+                      Bài này mình sẽ hướng dẫn bạn về  Component ListGroup, Component Button và Component Button Group trong Bootstrap 4 nhé. Để hiểu rõ hơn bạn xem ở đây nhé:
+                      <a href="http://www.niemvuilaptrinh.com/article/5e82cf6992078414a827c482" alt="Hướng Dẫn Bootstrap 6">Bootstrap 4 Phần 6</a>
+                  </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card shadow-sm">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0 bg-primary">
+                <button class="btn  text-white" type="button" data-toggle="collapse" data-target="#Bootstrap4_7" aria-expanded="true" aria-controls="#Bootstrap4_7">
+                Bootstrap Phần 7
+                </button>
+              </h2>
+            </div>
+            <div id="Bootstrap4_7" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body p-4 ">
+                  <p class="mt-4">
+                      Bài này mình sẽ hướng dẫn bạn về Component Form và Component Input Groupt trong Bootstrap 4 nhé. Để hiểu rõ hơn bạn xem ở đây nhé:
+                      <a href="http://www.niemvuilaptrinh.com/article/5e8369956da4d322887cb64a" alt="Hướng Dẫn Bootstrap 7">Bootstrap 4 Phần 7</a>
+                  </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card shadow-sm">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0 bg-primary">
+                <button class="btn  text-white" type="button" data-toggle="collapse" data-target="#Bootstrap4_8" aria-expanded="true" aria-controls="#Bootstrap4_8">
+                Bootstrap Phần 8
+                </button>
+              </h2>
+            </div>
+            <div id="Bootstrap4_8" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body p-4 ">
+                  <p class="mt-4">
+                      Bài này mình sẽ hướng dẫn bạn về Component Nav và Component Navbar trong Bootstrap 4 nhé. Để hiểu rõ hơn bạn xem ở đây nhé:
+                      <a href="http://www.niemvuilaptrinh.com/article/5e8453846da6a71da4ee450c" alt="Hướng Dẫn Bootstrap 8">Bootstrap 4 Phần 8</a>
+                  </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card shadow-sm">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0 bg-primary">
+                <button class="btn  text-white" type="button" data-toggle="collapse" data-target="#Bootstrap4_9" aria-expanded="true" aria-controls="#Bootstrap4_9">
+                Bootstrap Phần 9
+                </button>
+              </h2>
+            </div>
+            <div id="Bootstrap4_9" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body p-4 ">
+                  <p class="mt-4">
+                      Bài này mình sẽ hướng dẫn bạn về Component Alert, Component Badge và Component Progress Bars trong Bootstrap 4 nhé. Để hiểu rõ hơn bạn xem ở đây nhé:
+                      <a href="http://www.niemvuilaptrinh.com/article/5e85718963d6ba1f08cc0858" alt="Hướng Dẫn Bootstrap 9">Bootstrap 4 Phần 9</a>
+                  </p>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="card shadow-sm">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0 bg-primary">
+                <button class="btn  text-white" type="button" data-toggle="collapse" data-target="#Bootstrap4_10" aria-expanded="true" aria-controls="#Bootstrap4_10">
+                Bootstrap Phần 10
+                </button>
+              </h2>
+            </div>
+            <div id="Bootstrap4_10" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body p-4 ">
+                  <p class="mt-4">
+                      Bài này mình sẽ hướng dẫn bạn về Component Collapse và Component Dropdown trong Bootstrap 4 nhé. Để hiểu rõ hơn bạn xem ở đây nhé:
+                      <a href="http://www.niemvuilaptrinh.com/article/5e86052210ee792be0376294" alt="Hướng Dẫn Bootstrap 10">Bootstrap 4 Phần 10</a>
+                  </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card shadow-sm">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0 bg-primary">
+                <button class="btn  text-white" type="button" data-toggle="collapse" data-target="#Bootstrap4_11" aria-expanded="true" aria-controls="#Bootstrap4_11">
+                Bootstrap Phần 11
+                </button>
+              </h2>
+            </div>
+            <div id="Bootstrap4_11" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body p-4 ">
+                  <p class="mt-4">
+                      Bài này mình sẽ hướng dẫn bạn về Component Tooltips và Component Popovers trong Bootstrap 4 nhé. Để hiểu rõ hơn bạn xem ở đây nhé:
+                      <a href="http://www.niemvuilaptrinh.com/article/5e86c2cc85837538684653db" alt="Hướng Dẫn Bootstrap 11">Bootstrap 4 Phần 11</a>
+                  </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card shadow-sm">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0 bg-primary">
+                <button class="btn  text-white" type="button" data-toggle="collapse" data-target="#Bootstrap4_12" aria-expanded="true" aria-controls="#Bootstrap4_12">
+                Bootstrap Phần 12
+                </button>
+              </h2>
+            </div>
+            <div id="Bootstrap4_12" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body p-4 ">
+                  <p class="mt-4">
+                      Bài này mình sẽ hướng dẫn bạn về Component Modal, Component Toast và Component Spinners trong Bootstrap 4 nhé. Để hiểu rõ hơn bạn xem ở đây nhé:
+                      <a href="http://www.niemvuilaptrinh.com/article/5e875aa05c7ae625143b4f21" alt="Hướng Dẫn Bootstrap 12">Bootstrap 4 Phần 12</a>
+                  </p>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="card shadow-sm">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0 bg-primary">
+                <button class="btn  text-white" type="button" data-toggle="collapse" data-target="#Bootstrap4_13" aria-expanded="true" aria-controls="#Bootstrap4_13">
+                Bootstrap Phần 13
+                </button>
+              </h2>
+            </div>
+            <div id="Bootstrap4_13" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body p-4 ">
+                  <p class="mt-4">
+                      Bài này mình sẽ hướng dẫn bạn về Component Scrollspy và Component Media Object trong Bootstrap 4 nhé. Để hiểu rõ hơn bạn xem ở đây nhé:
+                      <a href="http://www.niemvuilaptrinh.com/article/5e8812911b598514a0968ebd" alt="Hướng Dẫn Bootstrap 13">Bootstrap 4 Phần 13</a>
+                  </p>
+              </div>
+            </div>
+          </div>
+
+  
+
+
+  
+      </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 context-box-scroll-right col-md-12 col-xs-12">
+          <div class="mt-5"></div>
+          <div class="card card-search">
+            <div class="card-header card-header-category">
+              Từ Khóa
+            </div>
+            <div class="card-body card-body-search mt-4">
+              <h3 class="button-article"><a href="/article/css"><button type="button"
+                    class="CSS btn shadow-sm rounded btn-success m-1 pl-2 pr-2 hvr-shrink"><i class="fa fa-tag"
+                      aria-hidden="true"></i> CSS</button></a>
+                <a href="/article/html"><button type="button"
+                    class="HTML btn shadow-sm rounded btn-success m-1 pl-2 pr-2 hvr-shrink"><i class="fa fa-tag"
+                      aria-hidden="true"></i> HTML</button></a>
+                <a href="/article/Javscript">
+                  <button type="button" class="btn shadow-sm rounded btn-success m-1 pl-2 pr-2 hvr-shrink"><i
+                      class="fa fa-tag" aria-hidden="true"></i> Javscript</button></a>
+              </h3>
+            </div>
+          </div>
+          <div class="card card-search">
+
+            <div class="fb-page"
+              data-href="https://www.facebook.com/Ni&#x1ec1;m-Vui-L&#x1ead;p-Tr&#xec;nh-103123311194043/" data-tabs=""
+              data-width="500" data-height="340" data-small-header="false" data-adapt-container-width="true"
+              data-hide-cover="false" data-show-facepile="false">
+              <blockquote cite="https://www.facebook.com/Ni&#x1ec1;m-Vui-L&#x1ead;p-Tr&#xec;nh-103123311194043/"
+                class="fb-xfbml-parse-ignore"><a
+                  href="https://www.facebook.com/Ni&#x1ec1;m-Vui-L&#x1ead;p-Tr&#xec;nh-103123311194043/">Niềm Vui Lập
+                  Trình</a></blockquote>
+            </div>
+          </div>
+
+          <div class="card card-search">
+            <div class="card-header card-header-search">
+              Đăng kí Email
+
+            </div>
+            <div class="card-body card-body-search">
+              <div class="text-email-subscribe">
+                <p class="text-justify mt-4">Các bạn nhấp subscribe để nhận bài viết mới nhất từ mình nhé!</p>
+              </div>
+              <!-- Begin Mailchimp Signup Form -->
+              <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+              <style type="text/css">
+                #mc_embed_signup {
+                  background: #fff;
+                  clear: left;
+                  font: 14px Helvetica, Arial, sans-serif;
+                }
+
+                /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+                       We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+              </style>
+              <div id="mc_embed_signup">
+                <form
+                  action="https://gmail.us20.list-manage.com/subscribe/post?u=02f033de83f488a359d24bc9f&amp;id=85d0d8697c"
+                  method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+                  target="_blank" novalidate>
+                  <div id="mc_embed_signup_scroll">
+
+                    <div class="mc-field-group">
+                      <label for="mce-EMAIL" class="label-email mb-2">Email:
+                      </label>
+                      <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL"
+                        placeholder="Hãy nhập địa chỉ email của bạn">
+
+                    </div>
+                    <div id="mce-responses" class="clear">
+                      <div class="response text-justify" id="mce-error-response" style="display:none"></div>
+                      <div class="response text-justify" id="mce-success-response" style="display:none"></div>
+                    </div>
+                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                        name="b_02f033de83f488a359d24bc9f_85d0d8697c" tabindex="-1" value=""></div>
+                    <div class="clear"><input type="submit" value="Đăng Kí Email" name="subscribe"
+                        id="mc-embedded-subscribe" class="button"></div>
+                  </div>
+                </form>
+              </div>
+              <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'>
+              </script>
+              <script type='text/javascript'>
+                (function ($) {
+                  window.fnames = new Array();
+                  window.ftypes = new Array();
+                  fnames[0] = 'EMAIL';
+                  ftypes[0] = 'email';
+                  fnames[1] = 'FNAME';
+                  ftypes[1] = 'text';
+                  fnames[2] = 'LNAME';
+                  ftypes[2] = 'text';
+                  fnames[3] = 'ADDRESS';
+                  ftypes[3] = 'address';
+                  fnames[4] = 'PHONE';
+                  ftypes[4] = 'phone';
+                  fnames[5] = 'BIRTHDAY';
+                  ftypes[5] = 'birthday';
+                }(jQuery));
+                var $mcj = jQuery.noConflict(true);
+              </script>
+              <!--End mc_embed_signup-->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script async defer crossorigin="anonymous"
+      src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v5.0&appId=2121975281235443&autoLogAppEvents=1">
+    </script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('.page-link').addClass('hvr-underline-from-left');
+      })
+    </script>
+
+
+    <!--Footer-->
+    <div class="container-fluid footer">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-xs-12">
+          <div class="content-footer">
+            <h5>Góc trả lời</h5>
+            <p>Nếu các bạn có gì thắc mắc thì liên hệ mình qua những mạng xã hội sau đây nhé!</p>
+            <ul class="social-meadia-icon">
+              <li class="social-meadia-icon-item"><a
+                  href="https://www.facebook.com/Chia-S%E1%BA%BB-L%E1%BA%ADp-Tr%C3%ACnh-100797921404016/"><i
+                    class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li class="social-meadia-icon-item"><a href="https://twitter.com/ThaiVietNhat4?s=07"><i
+                    class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              <li class="social-meadia-icon-item"><a href="mailto:niemvuilaptrinh2410@gmail.com" class="mailtoui"><i
+                    class="fa fa-google" aria-hidden="true"></i></a></li>
+            </ul>
+            <hr />
+            <p> © 2019 Copyrigh: Niềm Vui Lập Trình (Thái Viết Nhật).</p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-xs-12">
+
+        </div>
+
+      </div>
+    </div>
+
+    <!--End mc_embed_signup-->
+    <!--Footer-->
+
+    <script>
+      $(function () {
+        $(window).on('scroll', function () {
+          if ($(window).scrollTop() > 10) {
+            $('.navbar').addClass('active shadow');
+          } else {
+            $('.navbar').removeClass('active shadow')
+          }
+        })
+      })
+    </script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/mailtoui@1.0.3/dist/mailtoui-min.js"
+      data-options='{ "buttonText2": "Gửi email bằng Outlook", "buttonText1": "Gửi email bằng Gmail" ,
+        "buttonText3": "Gửi email bằng Yahoo", "buttonText4": "Gửi email bằng Email app window", "title": "Gửi Email cho mình nhé!"}'></script>
+</body>
+
+</html>
