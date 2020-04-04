@@ -23,136 +23,142 @@
       <hr />
       <div class="card-text text-justify">
         <article>
-          <h2 class="bg-primary mb-4 text-white rounded p-2 shadow"><i class="fa fa-cube" aria-hidden="true"></i>Bootstrap 4 Phần 13</h2>
+          <h2 class="bg-primary mb-4 text-white rounded p-2 shadow"><i class="fa fa-cube" aria-hidden="true"></i>Bootstrap 4 Phần 14</h2>
           <div class="article-title">
             <div class="progress-wrapper">
               <div class="progress-label"></div><progress></progress>
             </div>
           </div>
           <div class="text-content-article mt-5">
-            <p><i>Xin chào các bạn quay lại blog của mình. Hôm nay mình sẽ giới thiệu tiếp về các component trong Bootstrap 4. Nào hãy cũng mình tìm hiểu nhé!</i>
+            <p><i>Xin chào các bạn quay lại blog của mình. Hôm nay mình sẽ giới thiệu về các tiện ích trong Bootstrap 4. Nào hãy cũng mình tìm hiểu nhé!</i>
             </p>
             <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Framework Bootstrap 4</h4></div>
           
             <div class="bg-primary p-2 rounded text-white">
-              <h3>Component Scrollspy:</h3>
+              <h3> Flex Bootstrap 4:</h3>
             </div>
             <p class="mt-4">
-            Scrollspy giúp chúng ta tự động cập nhật đường dẫn trên thanh navbar dựa vào vị trí của thanh cuộn(scroll) trong trang web. Cái này rất thích hợp cho trang có nội dung lớn
-            giúp người dùng có thể xác định vị trí của mình bằng đường dẫn được sử dụng class <code>active</code> trên thanh điều hướng. Trước khi đi vào cụ thể mình muốn các bạn xem ví dụ dưới đây để 
-            có thể hiểu rõ hơn chức năng của nó:
+              Theo mình tìm hiểu thì  điểm khác biệt lớn nhất giữa Bootstrap 3 và Bootstrap 4 đó là việc Bootstrap 4 sử dụng flexbox thay cho thuộc tính float để xử lý bố cục cho trang web (layout).
+              Nó giúp chúng ta dễ dàng và linh hoạt trong việc thiết kế cấu trúc bố cục responsive mà không cần phải sử dụng thuộc tính position hay là float. Nếu bạn muốn tìm hiểu về thuộc tính flex
+              thì có thể tham khảo ở đây nha: <a href="https://www.w3schools.com/css/css3_flexbox.asp" alt="Flexbox" target="_blank">Tìm hiểu FlexBox</a>. Bây giờ ta sẽ đi vào tìm hiểu cách tạo một 
+              flexbox container và chuyển các thành phần con trong nó thành flex items. Để nắm rõ hơn bạn xem ví dụ dưới đây nhé:
             </p>
             <h4 class="text-primary">
-             Component Scrollspy:
+            Flex Bootstrap4:
             </h4>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="VwLOqPv" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="component Scrollspy">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/VwLOqPv">
-              component Scrollspy</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="WNvBqKo" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="flex-box Bootstrap">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/WNvBqKo">
+              flex-box Bootstrap</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
               on <a href="https://codepen.io">CodePen</a>.</span>
             </p>
             <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
             <p class="mt-4">
-              Bạn phải chuyển sang chế độ screen <b>0.5x, 0.25x</b> thì mới thấy kết quả được nhé. Bây giờ mình sẽ giải thích đoạn code trên một tí nha:
-              <ul>
-                <li>Đầu tiên ta sẽ thêm thuộc tính <code>data-spy="scroll"</code> vào trong đối tượng HTML mà mình muốn để xác định khu vực scroll. Thông thường là 
-                sẽ sử dụng cho thẻ <b>body</b> nhé.</li>
-                <li>Tiếp theo là thêm thuộc tính <code>data-target</code> với giá trị id hoặc class của component navbar để chắc chắn rằng là nó đã liên kết khu vực scroll.
-                Nghĩa là các đường dẫn con trong navbar có thể tương tác theo vị trí của thanh cuộn trong thẻ <b>body</b>. Như ví dụ trên mình đặt thuộc tính này theo class
-                là <code>data-target=".navbar"</code>.
-                </li>
-                <li>Thẻ div chứa nội dung muốn tạo hiệu ứng của bạn phải có id trùng khớp với id của thẻ a trên thanh navbar ví dụ ở trên là <code>&#60;div id="section1"&#62;</code> phải khớp với
-                  <code>&#60;a href="#section1"&#62;</code>.
-                </li>
-                <li>
-                  Thuộc tính <code>data-offset</code> dùng để xác định số pixels cộng thêm khi tính toán vị trí của thanh cuộn(scroll).
-                </li>
-                <li>
-                  Đối với bất cứ đối tượng nào mà bạn sử dụng <code>data-spy="scroll"</code> thì phải thiết lập lập thuộc tính CSS: <code>position:relative</code> nhé.
-                </li>
-              </ul>
+              Để tạo một inline flexbox container thì ta sẽ sử dụng class <code>d-inline-flex</code>. Để nắm rõ hơn bạn xem ví dụ dưới đây nhé:
             </p>
-            <p>
-              Bây giờ mình sẽ đi vào  kết hợp component Scrollspy với component List Group. Để Hiểu rõ hơn bạn xem đoạn code sau đây nhé:
-            </p>
-            <h4 class="text-primary">
-              Component Scrollspy Và List-Group:
-             </h4>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="WNvBLYK" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="List Group And Scrollspy">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/WNvBLYK">
-              List Group And Scrollspy</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="ExjzBGe" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title=" d-inline-flex">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/ExjzBGe">
+               d-inline-flex</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
               on <a href="https://codepen.io">CodePen</a>.</span>
             </p>
-        <p class="mt-4">
-          Bạn nhớ chuyển sang chế độ screen <b>0.5x, 0.25x</b> trên Codepen để thấy kết quả nhé.
-        </p>
-        <div class="bg-primary p-2 rounded text-white">
-          <h3>Component Media Object:</h3>
-        </div>
-        <p class="mt-4">
-          Đây là component giúp chúng ta có thể canh chỉnh vị trí của những media object (như hình ảnh, video) với nội dung trong trang web như  là comment trong FaceBook,
-          miêu tả thông tin thêm về hình ảnh, video... Để tạo được media object thì ta cần tạo một thẻ div với class <code>media </code> và trong nó sẽ là hình ảnh hoặc video với nội dung
-          được chứa bởi thẻ div với class <code>media-body</code>.
-        </p>
-        <h4 class="text-primary">
-          Component Media Object:
-         </h4>
-        <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="QWbRzXJ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Media Object Bootstrap4">
-          <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/QWbRzXJ">
-          Media Object Bootstrap4</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-          on <a href="https://codepen.io">CodePen</a>.</span>
-        </p>
-        <p class="mt-4">
-          Tiếp theo mình sẽ đi vào cách lồng hai component Media Object lại với nhau bằng cách thêm một Media Object con vào trong thẻ div với class <code>media-body</code>  của Component Media Obect cha.
-          Để nắm rõ hơn bạn xem ví dụ dưới đây nhé:
-        </p>
-        <h4 class="text-primary">
-          Lồng Hai Component Media Object:
-         </h4>
-         <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="xxGNMwO" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Nesting  2 Media Object">
-          <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/xxGNMwO">
-          Nesting  2 Media Object</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-          on <a href="https://codepen.io">CodePen</a>.</span>
-        </p>
-        <p class="mt-4">
-          Bây giờ mình sẽ hướng dẫn bạn cách đưa hình ảnh hay video nằm bên phải so với nội dung trong component Media Object. Để hiểu rõ hơn bạn xem ví dụ dưới đây nhé:
-        </p>
-        <h4 class="text-primary">
-         Hình Ảnh Nằm Bên Phải Media Object:
-         </h4>
-         <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="GRJazoQ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Right Media Object">
-          <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/GRJazoQ">
-          Right Media Object</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-          on <a href="https://codepen.io">CodePen</a>.</span>
-        </p>
-      <p class="mt-4">
-        Ngoài ra bạn cũng có thể chỉnh vị trí của hình ảnh hay video so với nội dung trong Media Object bằng class <code>align-self-start</code> nằm ở phía trên, <code>align-self-center</code>
-        nằm ở chính giữa và <code>align-self-end</code> nằm ở phía dưới component này. Để hiểu rõ hơn bạn xem đoạn code dưới đây nhé:
-      </p>
-      <h4 class="text-primary">
-        Vị Trí Hình Ảnh Trong Media Object:
-        </h4>
-        <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="gOpJqre" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Position Of Media Object">
-          <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/gOpJqre">
-          Position Of Media Object</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-          on <a href="https://codepen.io">CodePen</a>.</span>
-        </p>
-        Để xem rõ hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> trong Codepen nhé.
+           <p class="mt-4">
+             Bây giờ chúng ta sẽ hiển thị các flex item theo hướng ngang bằng class <code>flex-row</code>. Và nếu bạn muốn các flex item canh phải thì có thể sử dụng class <code>flex-row-reverse</code>.
+             Để hiểu rõ hơn bạn xem ví dụ sau đây nhé:
+           </p>
+           <h4 class="text-primary">
+            Flex Row Và Flex Row Reverse:
+            </h4>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="abOrgeP" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Flex Row Và Flex Row Reverse">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/abOrgeP">
+              Flex Row Và Flex Row Reverse</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <p class="mt-4">
+              Tiếp theo chúng ta sẽ hiển thị các flex item theo hướng dọc bằng cách sử dụng class <code>flex-column</code>. Và nếu bạn muốn đảo ngược hướng của các flex item thì có thể sử dụng class <code>flex-column-reverse</code>.
+              Để nắm rõ hơn hãy cùng mình đi vào ví dụ dưới đây nhé:
+            </p>
+            <h4 class="text-primary">
+              Flex Column Và Flex Column Reverse:
+              </h4>
+              <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="bGdyXNq" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title=" Flex Column Và Flex Column Reverse">
+                <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/bGdyXNq">
+                 Flex Column Và Flex Column Reverse</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+              </p>
+              <p class="mt-4">
+                Để thay đổi vị trí của các flex item trong flexbox container thì chúng ta sẽ sử dụng class <code>justify-content-(vị trí)</code> với vị trí  là <code>start(mặc định),
+                  end, center, between và around</code>. Để hiểu hơn về class này bạn xem ví dụ sau đây nhé:
+              </p>
+              <h4 class="text-primary">
+                Justify Content trong Flexbox:
+                </h4>
+                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="PoqvMNb" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Vị trí flex item trong flexbox">
+                  <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/PoqvMNb">
+                  Vị trí flex item trong flexbox</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+              <p class="mt-4">
+                Tiếp theo mình sẽ thiết lập độ rộng bằng nhau cho các flex item trong flexbox container bằng class <code>flex-fill</code>. Để hiểu rõ hơn bạn xem ví dụ dưới đây nhé:
 
-
-
-
-
-            
-
-
-
-
-
-
-
-
-
-
+              </p>
+                <h4 class="text-primary">
+               Class Flex Fill:
+                </h4>
+                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="PoqrYoQ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Use flex-fill Bootstrap 4">
+                  <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/PoqrYoQ">
+                  Use flex-fill Bootstrap 4</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+                <p class="mt-4">
+                  Thông thường thì mỗi flex item chỉ cần độ dài vừa đủ để hiển thị nội dung nên thường sẽ dư ra một khoảng trống không sử dụng đến. Do đó Bootstrap cung cấp cho chúng ta một class
+                  <code>flex-grow-1</code> dùng để thiết lập độ rộng của một flex item sẽ bằng độ rộng của nó cộng với độ rộng dư ra trong flexbox container. Để hiểu rõ hơn bạn xem ví dụ sau đây nhé:
+                </p>
+                <h4 class="text-primary">
+                  Class Flex Grow 1:
+                   </h4>
+                   <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="MWwMgKN" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Class Flex Grow 1">
+                    <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/MWwMgKN">
+                    Class Flex Grow 1</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                  <p class="mt-4">
+                    Tiếp theo chúng ta sẽ đi vào sử dụng thuộc tính auto margin cho flex item với class <code>mr-auto</code> sẽ đẩy các flex item còn lại sang bên phải và <code>ml-auto</code>
+                    sẽ đẩy các item phía trước sang bên trái. Để hiểu rõ hơn bạn xem ví dụ dưới đây nhé:
+                  </p>
+                  <h4 class="text-primary">
+                    Class mr-auto và ml-auto:
+                     </h4>
+                     <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="xxGoKWq" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Class mr-auto và ml-auto">
+                      <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/xxGoKWq">
+                      Class mr-auto và ml-auto</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                      on <a href="https://codepen.io">CodePen</a>.</span>
+                    </p>
+                    <p class="mt-4">
+                      Bây giờ mình sẽ đi vào căn chỉnh vị trí theo chiều dọc cho các flex item bằng cách sử dụng class <code>.align-items-(vị trí)</code> với vị trí là <code>start, end, center, 
+                        baseline và stretch(mặc định)</code>. Để hiểu rõ hơn bạn xem ví dụ dưới đây nhé: 
+                    </p>
+                    <h4 class="text-primary">
+                      Vị trí flex item theo chiều dọc:
+                    </h4>
+                    <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="eYNwOPz" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="vị trí flex-item theo chiều doc">
+                      <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/eYNwOPz">
+                      vị trí flex-item theo chiều doc</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                      on <a href="https://codepen.io">CodePen</a>.</span>
+                    </p>
+                    <div class="bg-primary p-2 rounded text-white mt-4">
+                      <h3> Shadow Bootstrap 4:</h3>
+                    </div>
+                    <p class="mt-4">
+                      Tiếp theo mình sẽ đi vào cách tạo shadow giúp cho các thẻ div chứa nội dung trông đẹp mắt hơn. Để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
+                    </p>
+                    <h4 class="text-primary">
+                      Class shadow:
+                       </h4>
+                       <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="xxGoxxP" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Shadow Bootstrap4">
+                        <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/xxGoxxP">
+                        Shadow Bootstrap4</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                      </p>
+                     
 
 
 
@@ -260,7 +266,7 @@
 
             
             <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
-        <p>Qua đây mình mong bài viết sẽ giúp các bạn nắm được thêm các component trong Bootstrap 4 và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
+        <p>Qua đây mình mong bài viết sẽ giúp các bạn nắm được thêm các class trong Bootstrap 4 và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
          
       </div>
         </article>
