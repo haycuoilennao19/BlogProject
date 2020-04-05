@@ -23,151 +23,112 @@
       <hr />
       <div class="card-text text-justify">
         <article>
-          <h2 class="bg-primary mb-4 text-white rounded p-2 shadow"><i class="fa fa-cube" aria-hidden="true"></i>Bootstrap 4 Phần 14</h2>
+          <h2 class="bg-primary mb-4 text-white rounded p-2 shadow"><i class="fa fa-cube" aria-hidden="true"></i>Thực Hành Bootstrap 4 Phần 1</h2>
           <div class="article-title">
             <div class="progress-wrapper">
               <div class="progress-label"></div><progress></progress>
             </div>
           </div>
           <div class="text-content-article mt-5">
-            <p><i>Xin chào các bạn quay lại blog của mình. Hôm nay mình sẽ giới thiệu về các tiện ích trong Bootstrap 4. Nào hãy cũng mình tìm hiểu nhé!</i>
+            <p><i>Xin chào các bạn quay lại blog của mình. Hôm nay mình sẽ đi vào các ví dụ về việc phát triển giao diện cho trang web bằng Bootstrap 4. Nào hãy cũng mình tìm hiểu nhé!</i>
             </p>
             <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Framework Bootstrap 4</h4></div>
           
             <div class="bg-primary p-2 rounded text-white">
-              <h3> Flex Bootstrap 4:</h3>
+              <h3> Phát triển giao diện bằng  Bootstrap 4:</h3>
             </div>
             <p class="mt-4">
-              Theo mình tìm hiểu thì  điểm khác biệt lớn nhất giữa Bootstrap 3 và Bootstrap 4 đó là việc Bootstrap 4 sử dụng flexbox thay cho thuộc tính float để xử lý bố cục cho trang web (layout).
-              Nó giúp chúng ta dễ dàng và linh hoạt trong việc thiết kế cấu trúc bố cục responsive mà không cần phải sử dụng thuộc tính position hay là float. Nếu bạn muốn tìm hiểu về thuộc tính flex
-              thì có thể tham khảo ở đây nha: <a href="https://www.w3schools.com/css/css3_flexbox.asp" alt="Flexbox" target="_blank">Tìm hiểu FlexBox</a>. Bây giờ ta sẽ đi vào tìm hiểu cách tạo một 
-              flexbox container và chuyển các thành phần con trong nó thành flex items. Để nắm rõ hơn bạn xem ví dụ dưới đây nhé:
+             Để  bạn nắm rõ hơn và thực hành những gì mình đã học thì chúng ta sẽ đi vào dự án thiết kế giao diện cho trang web công ty về dịch vụ bằng Bootstrap 4. Đầu tiên thì mình sẽ phát 
+             họa ra những phần của trang web giúp bạn có thể hiểu được cái sườn mà ta sẽ làm. Để hiểu rõ hơn bạn xem hình ảnh dưới đây nhé:
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-3" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586096139/Project%20Bootstrap/Imae-Project_Bootstrap4_cuczqn.svg" alt="Phát thảo Bố Cục Bootstrap 4">
+            <p class="mt-4">
+              Sau khi đã xác định rõ bố cục thì mình sẽ đi vào tạo những file cần thiết cho việc thiết kế trang web là HTML, CSS, JS và Bootstrap. Để không  mất thời gian của bạn thì mình
+              đã tạo một thư mục chứa sắn các file cần thiết và để đường dẫn bên dưới để tải về nhé.
+            </p>
+            <p>
+            <i class="fa fa-download" aria-hidden="true"></i> <a href="https://res.cloudinary.com/dn4nxz7f0/raw/upload/v1586097267/Project%20Bootstrap/D%E1%BB%B1__%C3%81n_Bootstrap_n9jlxe.rar" download="">Đường dẫn tải File Source Code Dự Án Bootstrap 4</a></p>
+            <p>
+              Mình có lưu ý nhỏ là ở trên mình sử dụng CDN link  liên kết với file Bootstrap 4 để  thiết lập nhanh hơn còn nếu bạn thích tải các file về để sử dụng thì có thể xem thêm ở đây nhé: 
+              <a href="http://www.niemvuilaptrinh.com/article/5e7a2b4dfb2be919d808e953" target="_blank">Cách tải Bootstrap 4</a>. Bạn cũng nên để các file Javascript nằm cuối cùng trang HTML 
+              để tối ưu hiệu suất trang web và nếu cần  chỉnh sửa CSS thì bạn phải đặt file CSS của mình nằm bên dưới file CSS của Bootstrap nhé.
+            </p>
+            <p>Bây giờ chúng ta sẽ đi vào cách tạo thanh điều hướng bằng cách sử dụng component navbar trong Bootstrap 4. Để nắm rõ hơn bạn xem đoạn code dưới đây nhé: </p>
+            <h4 class="text-primary">
+              HTML:
+            </h4>
+            <pre><code class="html">&#60;header&#62;<br/> &#60;div&nbsp;class="container-fluid"&#62;<br/> &nbsp;&nbsp;&#60;nav&nbsp;class="navbar&nbsp;navbar-expand-md&nbsp;navbar-dark&nbsp;bg-dark"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;a&nbsp;class="navbar-brand"&nbsp;href="#"&#62;Niềm&nbsp;Vui&nbsp;Lập&nbsp;Trình&#60;/a&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;button&nbsp;class="navbar-toggler"&nbsp;type="button"&nbsp;data-toggle="collapse"&nbsp;data-target="#collapsibleNavbar"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;span&nbsp;class="navbar-toggler-icon"&#62;&#60;/span&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/button&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="collapse&nbsp;navbar-collapse"&nbsp;id="collapsibleNavbar"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;ul&nbsp;class="navbar-nav&nbsp;ml-auto"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&nbsp;class="nav-item"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;a&nbsp;class="nav-link&nbsp;active"&nbsp;href="#"&#62;Về&nbsp;Chúng&nbsp;Tôi&#60;/a&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&nbsp;class="nav-item"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;a&nbsp;class="nav-link"&nbsp;href="#"&#62;Tiện&nbsp;Ích&#60;/a&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&nbsp;class="nav-item"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;a&nbsp;class="nav-link"&nbsp;href="#"&#62;Giá&nbsp;Dịch&nbsp;Vụ&#60;/a&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&nbsp;class="nav-item"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;a&nbsp;class="nav-link"&nbsp;href="#"&#62;Liên&nbsp;Hệ&#60;/a&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/ul&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&#60;/nav&#62;<br/> &nbsp;&nbsp;&#60;/div&#62;<br/> &#60;/header&#62;<br/></code></pre>
+          <p class="mt-4">
+            Ở trên mình sử dụng thuộc tính <code>ml-auto</code> trong thẻ div class <code>navbar-nav</code> dùng để đẩy các phần tử trong navbar nằm sang bên phải và sử dụng class 
+            <code>navbar-dark bg-dark</code> để xác định màu nền cho component Navbar. Bạn có thể thay đổi màu tùy vào mục đích của mình bằng cách gọi <code>bg-(color)</code> với color là 
+            các màu cơ bản trong Bootstrap như là primay, success... Để nắm rõ hơn bạn xem ví dụ sau đây nhé:
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="XWbLVpx" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Navabar Example Bootstrap 4">
+            <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/XWbLVpx">
+            Navabar Example Bootstrap 4</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+          <p class="mt-4">
+            Để xem được kết quả bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> nha. Bây giờ chúng ta sẽ đi vào thiết kế phần thứ hai cho trang web và để hiểu rõ hơn bạn xem đoạn code sau nhé:
+          </p>
+          <h4 class="text-primary">
+            HTML:
+          </h4>
+          <pre><code class="html">&#60;section&nbsp;id="header-gioi-thieu"&#62;<br/> &nbsp;&nbsp;&#60;div&nbsp;class="container"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="d-flex&nbsp;justify-content-center&nbsp;align-items-center"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="wrap-headline"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h1&nbsp;class="text-center"&#62;Niềm&nbsp;Vui&nbsp;Lập&nbsp;Trình&#60;/h1&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h2&nbsp;class="text-center"&#62;Mang&nbsp;đến&nbsp;niềm&nbsp;vui&nbsp;cho&nbsp;các&nbsp;bạn&nbsp;học&nbsp;lập&nbsp;trình.&#60;/h2&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;hr&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;ul&nbsp;class="list-inline&nbsp;list-unstyled&nbsp;text-center"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&nbsp;class="list-inline-item"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;a&nbsp;class="btn&nbsp;&nbsp;btn-primary&nbsp;btn-lg"&nbsp;href="http://www.niemvuilaptrinh.com"&nbsp;target="_blank"&nbsp;&#62;&#60;i&nbsp;class="fa&nbsp;fa-facebook-official"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&nbsp;Facebook&#60;/a&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&nbsp;class="list-inline-item"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;a&nbsp;class="btn&nbsp;btn-danger&nbsp;btn-lg"&nbsp;href="http://www.niemvuilaptrinh.com"&nbsp;target="_blank"&nbsp;role="button"&#62;&#60;i&nbsp;class="fa&nbsp;fa-google-plus-square"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&nbsp;Google&#60;/a&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/ul&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&#60;/section&#62;<br/></code></pre>
+          <h4 class="text-primary">
+            CSS:
+          </h4><pre><code class="css">.container-fluid&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;0&nbsp;!important;<br/> }<br/> section#header-gioi-thieu&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-image:&nbsp;url("Hinh_Anh/Hinh_anh_1.jpg");<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-size:&nbsp;cover;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;400px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-position:&nbsp;center&nbsp;center;<br/> }<br/>section#header-gioi-thieu&nbsp;.wrap-headline&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding-top:&nbsp;5%;<br/> }<br/>section#header-gioi-thieu&nbsp;h1,<br/> section#header-gioi-thieu&nbsp;h2&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#FFF;<br/> }<br/> section#header-gioi-thieu&nbsp;h2&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;1.5rem;<br/> }<br/></code></pre>
+          <p class="mt-4">
+            Ở trên đây mình có mộ vài lưu ý là :
+            <ul>
+              <li>Sử dụng flex và căn vị trí chính giữa cho nội dung bằng cách sử dụng class <code>d-flex</code> , <code>justify-content-center</code>, <code>align-items-center</code>.
+              Nếu bạn muốn tìm hiểu thêm về flex trong Bootstrap có thể tham khảo ở đây nhé: <a href="http://www.niemvuilaptrinh.com/article/5e88a2fea3b4e5242c612deb" target="_blank">Flex Bootstrap 4</a>.</li>
+              <li>Mình sử dụng Font Awesome 4.7 để tạo các icon cho các nút. Bạn có thể tham khảo ở đây nhé: <a href="https://www.w3schools.com/icons/fontawesome_icons_intro.asp" target="_blank">Cài đặt Font Awesome 4.7</a>.</li>
+                <li>Mình tạo một thư mục tên là <b>Hinh_Anh</b> và trong đó đặt một file ảnh tên là <b>Hinh_anh_1.jpg</b>. Sau đó sử dụng thuộc tính <code>background-image</code> để 
+                thiết lập ảnh nền cho thẻ div id <code>#header-gioi-thieu</code>. Dưới đây là File hình ảnh nếu  bạn cần nhé:<br/>
+                  <a href="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586102426/Project%20Bootstrap/Hinh_anh_1_fwnxr8.jpg" target="_blank" download>Download hình ảnh</a>.
+              </li>
+              <li>Mình thiết lập thuộc tính <code>padding: 0 !important</code> cho class <code>container-fluid</code> để làm độ rộng của nó bằng với trang web.</li>
+            </ul>
+          </p>
+           <p>Do Code pen không hiển thị được phần này nên bạn xem kết quả thông qua hình dưới đây nhé:</p>
+           <img class="img-thumbnail img-fluid shadow p-3" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586105531/Project%20Bootstrap/Bootstrap_Header_Instruction_y7dwcd.png" alt="Bootstrap 4 tạo nội dung section">
+            <p class="mt-4">
+              Mình cũng sẽ để thư mục ở dưới để bạn có thể tải về và xem lại đoạn code ở phần này:
+            </p>
+            <p>
+              <i class="fa fa-download" aria-hidden="true"></i> <a href="https://res.cloudinary.com/dn4nxz7f0/raw/upload/v1586105699/Project%20Bootstrap/D%E1%BB%B1__%C3%81n_Bootstrap_ouwnfy.rar" download="">Đường dẫn tải File Source Code Dự Án Bootstrap 4 Phần 2</a></p>
+              <p>
+            
+            <p>Tiếp theo mình sẽ đi vào phần thứ ba là tạo hình ảnh sản phẩm và tiêu đê, nội dung cho nó. Để responsive trên nhiều màn hình thiết bị thì chúng ta sẽ sử dụng hệ thống lưới trong 
+              Bootstrap 4 để làm phần này. Để hiểu rõ hơn bạn xem đoạn code sau nhé:
             </p>
             <h4 class="text-primary">
-            Flex Bootstrap4:
+              HTML:
             </h4>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="WNvBqKo" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="flex-box Bootstrap">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/WNvBqKo">
-              flex-box Bootstrap</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            <pre><code class="html">&#60;section&nbsp;id="thong_tin_san_pham"&#62;<br/> &nbsp;&nbsp;&#60;div&nbsp;class="container"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="row"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="col-sm-12&nbsp;col-md-6"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;img &nbsp;src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586106189/Project%20Bootstrap/computer1_mcoeri.jpg" &nbsp;class="img-fluid"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="col-sm-12&nbsp;col-md-6"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h3&#62;Tiêu&nbsp;Đề&nbsp;Máy&nbsp;Tính&nbsp;1&#60;/h3&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet,&nbsp;consectetur&nbsp;adipiscing&nbsp;elit.&nbsp;Donec&nbsp;lobortis&nbsp;iaculis&nbsp;sodales.&nbsp;Etiam&nbsp;ante&nbsp;elit,&nbsp;commodo&nbsp;vitae&nbsp;enim&nbsp;vel,&nbsp;imperdiet&nbsp;aliquet&nbsp;lectus.&nbsp;Curabitur&nbsp;id&nbsp;consequat&nbsp;quam,&nbsp;vitae&nbsp;convallis&nbsp;lacus.&nbsp;Suspendisse&nbsp;potenti.&nbsp;Curabitur&nbsp;rhoncus&nbsp;vestibulum&nbsp;pulvinar.&nbsp;Nullam&nbsp;mauris&nbsp;ex,&nbsp;dapibus&nbsp;sed&nbsp;nisi&nbsp;sed,&nbsp;posuere&nbsp;pulvinar&nbsp;eros.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;hr&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="row"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="col-sm-12&nbsp;col-md-6"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h3&#62;Tiêu&nbsp;Đề&nbsp;Máy&nbsp;Tính&nbsp;2&#60;/h3&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet,&nbsp;consectetur&nbsp;adipiscing&nbsp;elit.&nbsp;Donec&nbsp;lobortis&nbsp;iaculis&nbsp;sodales.&nbsp;Etiam&nbsp;ante&nbsp;elit,&nbsp;commodo&nbsp;vitae&nbsp;enim&nbsp;vel,&nbsp;imperdiet&nbsp;aliquet&nbsp;lectus.&nbsp;Curabitur&nbsp;id&nbsp;consequat&nbsp;quam,&nbsp;vitae&nbsp;convallis&nbsp;lacus.&nbsp;Suspendisse&nbsp;potenti.&nbsp;Curabitur&nbsp;rhoncus&nbsp;vestibulum&nbsp;pulvinar.&nbsp;Nullam&nbsp;mauris&nbsp;ex,&nbsp;dapibus&nbsp;sed&nbsp;nisi&nbsp;sed,&nbsp;posuere&nbsp;pulvinar&nbsp;eros.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="col-sm-12&nbsp;col-md-6"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;img&nbsp;src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586106307/Project%20Bootstrap/computer2_myhivw.jpg"&nbsp;class="img-fluid"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&#60;/div&#62;<br/> &#60;/section&#62;<br/></code></pre>
+            <h4 class="mt-4 text-primary">
+              CSS:
+            </h4>
+            <pre><code class="css">section#thong_tin_san_pham{<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin-top:6rem;<br/> }<br/></code></pre>
             <p class="mt-4">
-              Để tạo một inline flexbox container thì ta sẽ sử dụng class <code>d-inline-flex</code>. Để nắm rõ hơn bạn xem ví dụ dưới đây nhé:
+              Bạn xem kết quả bên dưới nhé:
             </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="ExjzBGe" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title=" d-inline-flex">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/ExjzBGe">
-               d-inline-flex</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-           <p class="mt-4">
-             Bây giờ chúng ta sẽ hiển thị các flex item theo hướng ngang bằng class <code>flex-row</code>. Và nếu bạn muốn các flex item canh phải thì có thể sử dụng class <code>flex-row-reverse</code>.
-             Để hiểu rõ hơn bạn xem ví dụ sau đây nhé:
-           </p>
-           <h4 class="text-primary">
-            Flex Row Và Flex Row Reverse:
-            </h4>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="abOrgeP" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Flex Row Và Flex Row Reverse">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/abOrgeP">
-              Flex Row Và Flex Row Reverse</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="ZEGdrmb" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Thong tin san pham Bootstrap 4">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/ZEGdrmb">
+              Thong tin san pham Bootstrap 4</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
               on <a href="https://codepen.io">CodePen</a>.</span>
             </p>
             <p class="mt-4">
-              Tiếp theo chúng ta sẽ hiển thị các flex item theo hướng dọc bằng cách sử dụng class <code>flex-column</code>. Và nếu bạn muốn đảo ngược hướng của các flex item thì có thể sử dụng class <code>flex-column-reverse</code>.
-              Để nắm rõ hơn hãy cùng mình đi vào ví dụ dưới đây nhé:
+              Ở trên mình sử dụng class <code>col-sm-12 col-md-6</code>  nghĩa là khi màn hình điện thoại và nhỏ hơn thì nó sẽ hiển thị độ rộng 12 cột và đối với màn hình
+              máy tính bảng và lớn hơn thì độ rộng cộ sẽ là 6. Và chúng ta sử dụng class <code>img-fluid</code> để tự động điều chỉnh hình ảnh theo kích thước của trang. Để bạn có thể tải về và xem lại đoạn code ở phần này
+              thì mình có để đường dẫn để tải về ở bên dưới:
             </p>
-            <h4 class="text-primary">
-              Flex Column Và Flex Column Reverse:
-              </h4>
-              <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="bGdyXNq" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title=" Flex Column Và Flex Column Reverse">
-                <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/bGdyXNq">
-                 Flex Column Và Flex Column Reverse</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-              </p>
-              <p class="mt-4">
-                Để thay đổi vị trí của các flex item trong flexbox container thì chúng ta sẽ sử dụng class <code>justify-content-(vị trí)</code> với vị trí  là <code>start(mặc định),
-                  end, center, between và around</code>. Để hiểu hơn về class này bạn xem ví dụ sau đây nhé:
-              </p>
-              <h4 class="text-primary">
-                Justify Content trong Flexbox:
-                </h4>
-                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="PoqvMNb" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Vị trí flex item trong flexbox">
-                  <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/PoqvMNb">
-                  Vị trí flex item trong flexbox</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                  on <a href="https://codepen.io">CodePen</a>.</span>
-                </p>
-              <p class="mt-4">
-                Tiếp theo mình sẽ thiết lập độ rộng bằng nhau cho các flex item trong flexbox container bằng class <code>flex-fill</code>. Để hiểu rõ hơn bạn xem ví dụ dưới đây nhé:
+            <p>
+              <i class="fa fa-download" aria-hidden="true"></i> <a href="https://res.cloudinary.com/dn4nxz7f0/raw/upload/v1586107887/Project%20Bootstrap/D%E1%BB%B1__%C3%81n_Bootstrap_t3jggc.rar" download="">Đường dẫn tải File Source Code Dự Án Bootstrap 4 Phần 3</a></p>
+              <p>
 
-              </p>
-                <h4 class="text-primary">
-               Class Flex Fill:
-                </h4>
-                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="PoqrYoQ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Use flex-fill Bootstrap 4">
-                  <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/PoqrYoQ">
-                  Use flex-fill Bootstrap 4</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                  on <a href="https://codepen.io">CodePen</a>.</span>
-                </p>
-                <p class="mt-4">
-                  Thông thường thì mỗi flex item chỉ cần độ dài vừa đủ để hiển thị nội dung nên thường sẽ dư ra một khoảng trống không sử dụng đến. Do đó Bootstrap cung cấp cho chúng ta một class
-                  <code>flex-grow-1</code> dùng để thiết lập độ rộng của một flex item sẽ bằng độ rộng của nó cộng với độ rộng dư ra trong flexbox container. Để hiểu rõ hơn bạn xem ví dụ sau đây nhé:
-                </p>
-                <h4 class="text-primary">
-                  Class Flex Grow 1:
-                   </h4>
-                   <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="MWwMgKN" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Class Flex Grow 1">
-                    <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/MWwMgKN">
-                    Class Flex Grow 1</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                    on <a href="https://codepen.io">CodePen</a>.</span>
-                  </p>
-                  <p class="mt-4">
-                    Tiếp theo chúng ta sẽ đi vào sử dụng thuộc tính auto margin cho flex item với class <code>mr-auto</code> sẽ đẩy các flex item còn lại sang bên phải và <code>ml-auto</code>
-                    sẽ đẩy các item phía trước sang bên trái. Để hiểu rõ hơn bạn xem ví dụ dưới đây nhé:
-                  </p>
-                  <h4 class="text-primary">
-                    Class mr-auto và ml-auto:
-                     </h4>
-                     <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="xxGoKWq" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Class mr-auto và ml-auto">
-                      <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/xxGoKWq">
-                      Class mr-auto và ml-auto</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                      on <a href="https://codepen.io">CodePen</a>.</span>
-                    </p>
-                    <p class="mt-4">
-                      Bây giờ mình sẽ đi vào căn chỉnh vị trí theo chiều dọc cho các flex item bằng cách sử dụng class <code>.align-items-(vị trí)</code> với vị trí là <code>start, end, center, 
-                        baseline và stretch(mặc định)</code>. Để hiểu rõ hơn bạn xem ví dụ dưới đây nhé: 
-                    </p>
-                    <h4 class="text-primary">
-                      Vị trí flex item theo chiều dọc:
-                    </h4>
-                    <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="eYNwOPz" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="vị trí flex-item theo chiều doc">
-                      <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/eYNwOPz">
-                      vị trí flex-item theo chiều doc</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                      on <a href="https://codepen.io">CodePen</a>.</span>
-                    </p>
-                    <div class="bg-primary p-2 rounded text-white mt-4">
-                      <h3> Shadow Bootstrap 4:</h3>
-                    </div>
-                    <p class="mt-4">
-                      Tiếp theo mình sẽ đi vào cách tạo shadow giúp cho các thẻ div chứa nội dung trông đẹp mắt hơn. Để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
-                    </p>
-                    <h4 class="text-primary">
-                      Class shadow:
-                       </h4>
-                       <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="xxGoxxP" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Shadow Bootstrap4">
-                        <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/xxGoxxP">
-                        Shadow Bootstrap4</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                        on <a href="https://codepen.io">CodePen</a>.</span>
-                      </p>
-                     
-
-
-
-
-           
-            
-            
-            
-            
             
             
             
@@ -266,7 +227,7 @@
 
             
             <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
-        <p>Qua đây mình mong bài viết sẽ giúp các bạn nắm được thêm các class trong Bootstrap 4 và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
+        <p>Qua đây mình mong bài viết sẽ giúp bạn thực hành về một số component trong Bootstrap 4 và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
          
       </div>
         </article>
