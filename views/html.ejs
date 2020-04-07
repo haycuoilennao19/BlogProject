@@ -23,119 +23,135 @@
       <hr />
       <div class="card-text text-justify">
         <article>
-          <h2 class="bg-primary mb-4 text-white rounded p-2 shadow"><i class="fa fa-cube" aria-hidden="true"></i> Tạo Hiệu Ứng Hover Hình Ảnh Trong Bootstrap 4</h2>
+          <h2 class="bg-primary mb-4 text-white rounded p-2 shadow"><i class="fa fa-cube" aria-hidden="true"></i> Kết hợp CSS với Bootstrap 4</h2>
           <div class="article-title">
             <div class="progress-wrapper">
               <div class="progress-label"></div><progress></progress>
             </div>
           </div>
           <div class="text-content-article mt-5">
-            <p><i>Xin chào các bạn quay lại blog của mình. Hôm nay chúng ta  sẽ  đi vào cách tạo hiệu ứng hover hình ảnh trong Bootstrap 4. Nào hãy cũng mình tìm hiểu nhé!</i>
+            <p><i>Xin chào các bạn quay lại blog của mình. Hôm nay chúng ta  sẽ  đi vào cách thiết kế giao diện bằng cách kết hợp giữa Bootstrap 4 và CSS. Nào hãy cũng mình tìm hiểu nhé!</i>
             </p>
             <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Framework Bootstrap 4</h4></div>
           
+            <p class="text-muted">Mình Thiết kế giao diện thông qua nguồn <a href="https://bootstrapious.com/" target="_blank">Bootstrapiou</a>. Bạn có thể tham khảo để tìm hiều về cách kết hợp CSS và Bootstrap ở trang web này nhé.</p>
             <div class="bg-primary p-2 rounded text-white">
-              <h3> Phát triển hiệu ứng hover ảnh bằng  Bootstrap 4:</h3>
+              <h3>Tạo timeline trong Bootstrap 4:</h3>
             </div>
             <p class="mt-4">
-              Sau khi bạn đã nắm được những yếu tố căn bản trong Bootstrap thì việc tiếp theo cần làm là chúng ta sẽ đi sâu hơn vào việc kết hợp các thuộc tính CSS và Bootstrap lại với nhau.
-              Bây giờ ta sẽ đi vào cách tạo hiệu ứng hover hình ảnh bằng CSS và Bootstrap. Để đi vào hiệu ứng đầu tiên thì bạn xem kết quả trước để dễ hình dung nhé:
-
+              Theo mình thấy Timeline phù hợp cho việc trình bày những nội dung theo những cột mốc cố định trong quá khứ. Để xem kết quả và đoạn code để xây dựng Timeline bằng 
+              HTMl, CSS và Bootstrap 4 ở dưới đây nhé:
             </p>
-
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="haycuoilennao19" data-slug-hash="MWwMRwr" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Hover Image Bootstrap 4">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/MWwMRwr">
-              Hover Image Bootstrap 4</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="qBdexbd" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Sử dụng Time line Bootstrap 4">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/qBdexbd">
+              Sử dụng Time line Bootstrap 4</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
               on <a href="https://codepen.io">CodePen</a>.</span>
             </p>
             <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-
             <p class="mt-4">
-              Đầu tiên chúng ta cần xây dựng sườn cho hiệu ứng hover 1 bằng thiết lập các thẻ div với class cần thiết trong file HTML. Để hiểu rõ hơn bạn xem đoạn code dưới đây nhé: 
+              Để xem kết quả bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> trong Codepen nhé.
             </p>
-            <pre><code class="html">&#60;div&nbsp;class="py-5&nbsp;container"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;h3&nbsp;class="font-weight-bold&nbsp;mb-0"&#62;Hiệu&nbsp;Ứng&nbsp;Hover1&#60;/h3&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;p&nbsp;class="font-italic&nbsp;text-muted&nbsp;mb-4"&#62;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet,&nbsp;consectetur&nbsp;adipisicing&nbsp;elit.&#60;/p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="row"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="col-8&nbsp;mb-3&nbsp;mb-lg-0"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="hover&nbsp;hover-1&nbsp;text-white&nbsp;rounded"&#62;&#60;img&nbsp;src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586163179/Bootstrap%20hover%20hinh%20anh/hinh_anh_rung_cay_e7rgnw.jpg"&nbsp;alt=""&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="hover-overlay"&#62;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="hover-1-noidung&nbsp;px-5&nbsp;py-4"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h3&nbsp;class="hover-1-tieude&nbsp;text-uppercase&nbsp;font-weight-bold&nbsp;mb-0"&#62;&nbsp;&#60;span&nbsp;class="font-weight-light"&#62;Tiêu&nbsp;Đề&nbsp;&#60;/span&#62;Hình&nbsp;Ảnh&#60;/h3&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p&nbsp;class="hover-1-trichdan&nbsp;font-weight-light&nbsp;mb-0"&#62;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet,&nbsp;consectetur&nbsp;adipisicing&nbsp;elit.&#60;/p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&#60;/div&#62;<br/></code></pre>
+            <div class="bg-primary p-2 rounded mt-4 text-white">
+              <h3>Tạo danh sách sản phẩm  trong Bootstrap 4:</h3>
+            </div>
             <p class="mt-4">
-              Và đây là hình ảnh của kết quả trên nhé:
+              Trong các trang web bán hàng thì danh sách hiển thị sản phẩm và các thông tin liên quan như giá cả, tên sản phẩm... là một phần không thể thiếu. Do đó để giúp bạn thiết kế giao diện 
+              một cách nhanh hơn mình có đoạn code Bootstrap 4 và CSS dưới đây để làm việc đó. Bạn xem kết quả và đoạn code để xây dựng danh sách sản phẩm ở bên dưới nhé:
             </p>
-            <img class="img-thumbnail img-fluid shadow p-3" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586172778/Bootstrap%20hover%20hinh%20anh/Hover_Image_Bootstrap_Demo_1_dzf9th.png" alt="Hover Hình Ảnh Demo1 trong Bootstrap 4">
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="MWwNQdW" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Danh sách sản phẩm Bootstrap 4">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/MWwNQdW">
+              Danh sách sản phẩm Bootstrap 4</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <div class="bg-primary p-2 rounded mt-4 text-white">
+              <h3>Tạo Carousel Quotes:</h3>
+            </div>
             <p class="mt-4">
-              Tiếp theo chúng ta đi vào thiết lập các thuộc tính CSS cho nó, để hiểu rõ hơn bạn xem đoạn code dưới đây nhé:
+              Mình sẽ tinh chỉnh component carousel để tạo ra carousel quotes, nó thường được sử dụng trong việc trích dẫn  ý kiến của  khách hàng trong việc sử dụng dịch vụ của mình.
+              Do đó để giúp bạn thiết kế giao diện một cách nhanh hơn mình có đoạn code Bootstrap 4 và CSS dưới đây để làm việc đó. Bạn xem kết quả và đoạn code để xây dựng
+              danh sách sản phẩm ở bên dưới nhé:
             </p>
-            <pre><code class="css">.hover&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;overflow:&nbsp;hidden;<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding-bottom:&nbsp;60%;<br/> }<br/>.hover-overlay&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;left:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;z-index:&nbsp;90;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;all&nbsp;0.4s;<br/> }<br/>.hover&nbsp;img&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;left:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;all&nbsp;0.3s;<br/> }<br/>.hover-noidung&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;<br/> &nbsp;&nbsp;&nbsp;&nbsp;z-index:&nbsp;99;<br/> }<br/>.hover-1&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#fff;<br/> }<br/>.hover-1&nbsp;img&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;105%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;left:&nbsp;-5%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;all&nbsp;0.3s;<br/> }<br/>.hover-1-noidung&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;bottom:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;left:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;z-index:&nbsp;99;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;all&nbsp;0.4s;<br/> }<br/>.hover-1&nbsp;.hover-overlay&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;rgba(0,&nbsp;0,&nbsp;0,&nbsp;0.5);<br/> }<br/>.hover-1-trichdan&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;translateY(0.5rem);<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;all&nbsp;0.4s;<br/> &nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;0;<br/> }<br/></code></pre>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="QWbemjX" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Carousel trich dan Bootstrap 4">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/QWbemjX">
+              Carousel trich dan Bootstrap 4</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <div class="bg-primary p-2 rounded mt-4 text-white">
+              <h3>Thiết Kế Giao Diện Upload Hình Ảnh Trong Bảng Bootstrap 4:</h3>
+            </div>
             <p class="mt-4">
-              Ở đây mình có một số lưu ý nhỏ  là để hiểu được phần này bạn cần nắm vững các thuộc tính <code>position</code> trong CSS và có thể tham khảo ở đây nhé <a href="https://www.w3schools.com/css/css_positioning.asp" target="_blank">Thuộc tính Position CSS</a>.
-              Mình sẽ cho ẩn đi phần trích dẫn bằng thuộc tính <code>opacity:0</code> trong class <code>hover-1-trichdan</code>, tạo  một màu nền đen với độ mờ 0.5 nằm phía trước hình ảnh bằng thuộc tính <code>background: rgba(0, 0, 0, 0.5);</code>,
-              thuộc tính <code>transition</code> dùng để xác định thời gian và hiệu ứng khi xảy ra một hành động nào đó như là click, hover... Để hiểu hơn bạn có thể tham khảo ở đây nhé:
-              <a href="https://www.w3schools.com/cssref/css3_pr_transition.asp">Transition trong CSS</a>. Và bạn xem kết quả dưới đây nhé:
+              Component này giúp chúng ta tạo thiết kế giao diện upload hình ảnh đẹp hơn bằng HTML, CSS và Bootstrap 4. Bạn xem kết quả và đoạn code để xây dựng
+              upload hình ảnh ở bên dưới nhé:
             </p>
-            <img class="img-thumbnail img-fluid shadow p-3" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586174433/Bootstrap%20hover%20hinh%20anh/Hover_Image_Bootstrap_2_Demo_1_ps9evz.png" alt="Hover Hình Ảnh CSS Demo1 trong Bootstrap 4">
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="WNvVywJ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Upload Hinh Anh  Bootstrap 4">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/WNvVywJ">
+              Upload Hinh Anh  Bootstrap 4</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <div class="bg-primary p-2 rounded mt-4 text-white">
+              <h3>Thiết Kế Giao Diện Calendar (Lịch):</h3>
+            </div>
             <p class="mt-4">
-              Bước cuối cùng là khi người dùng hover vào hình ảnh thì trích dẫn hình ảnh sẽ hiện lên, xóa bỏ background màu nền đen và di chuyển hình ảnh. Để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
+              Sau đây mình sẽ đi vào thiết kế giao diện Calendar bằng cách kết hợp HTML, CSS và Bootstrap 4. Bạn xem kết quả và đoạn code để xây dựng
+             Calendar(Lịch) ở bên dưới nhé:
             </p>
-            <pre><code class="css">.hover-1:hover&nbsp;.hover-1-noidung&nbsp;{<br/> &nbsp;&nbsp;bottom:&nbsp;2rem;<br/> }<br/>.hover-1:hover&nbsp;.hover-1-trichdan&nbsp;{<br/> &nbsp;&nbsp;opacity:&nbsp;1;<br/> &nbsp;&nbsp;transform:&nbsp;none;<br/> }<br/>.hover-1:hover&nbsp;img&nbsp;{<br/> &nbsp;&nbsp;left:&nbsp;0;<br/> }<br/>.hover-1:hover&nbsp;.hover-overlay&nbsp;{<br/> &nbsp;&nbsp;opacity:&nbsp;0;<br/> }<br/></code></pre>
-            Và đây là kết quả bên dưới nhé:
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="haycuoilennao19" data-slug-hash="MWwMRwr" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Hover Image Bootstrap 4">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/MWwMRwr">
-              Hover Image Bootstrap 4</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="mdJNKBM" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Calendar Bootstrap 4">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/mdJNKBM">
+              Calendar Bootstrap 4</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
               on <a href="https://codepen.io">CodePen</a>.</span>
             </p>
             <p class="mt-4">
-              Bây giờ mình sẽ sang hiệu ứng hover hình ảnh thứ hai bằng cách kết hợp CSS và Bootstrap4. Để hiểu rõ hơn bạn xem kết quả demo trước nhé:
+              Để xem rõ kết quả bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> trong Codepen nhé.
             </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="haycuoilennao19" data-slug-hash="gOpNVMa" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Hover Image 2 Bootstrap 4">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/gOpNVMa">
-              Hover Image 2 Bootstrap 4</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+            <div class="bg-primary p-2 rounded mt-4 text-white">
+              <h3>Thiết Kế Header Bootstrap 4:</h3>
+            </div>
+            <p class="mt-4">
+              Bây giờ ta sẽ đi vào thiết kế với header sử dụng  Jumbotron với ảnh nền bằng HTML, CSS và Bootstrap 4. Bạn xem kết quả và đoạn code để xây dựng
+              component này ở bên dưới nhé:
+            </p>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="LYVwrrb" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Bootstrap Static Header">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/LYVwrrb">
+              Bootstrap Static Header</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
               on <a href="https://codepen.io">CodePen</a>.</span>
             </p>
+            <div class="bg-primary p-2 rounded mt-4 text-white">
+              <h3>Thiết Kế Pricing Table (bảng giá) Bootstrap 4:</h3>
+            </div>
             <p class="mt-4">
-              Sườn trang HTML để tạo hiệu ứng và một số thuộc tính CSS giống ở ví dụ trên nên mình sẽ không viết lại các code đó nhé. Có một lưu ý nhỏ là 
-              khi tạo hiệu ứng này bạn cần thay lại các thẻ div class có chứa <code>hover-1</code> sang <code>hover-2</code> nha. Bây giờ ta sẽ đi vào tạo hiệu ứng 
-              bằng thuộc tính <code>:hover</code> trong CSS. Để nắm rõ hơn bạn xem đoạn code sau đây nhé:
+              Bây giờ ta sẽ đi vào thiết kế với bảng giá dịch vụ  bằng HTML, CSS và Bootstrap 4. Bạn xem kết quả và đoạn code để xây dựng
+              component này ở bên dưới nhé:
             </p>
-            <pre><code class="css">.hover2-noidung&nbsp;{<br/> &nbsp;&nbsp;position:&nbsp;relative;<br/> &nbsp;&nbsp;z-index:&nbsp;99;<br/> }<br/>.hover-2&nbsp;.hover-overlay&nbsp;{<br/> &nbsp;&nbsp;background:&nbsp;linear-gradient(to&nbsp;top,&nbsp;rgba(0,&nbsp;0,&nbsp;0,&nbsp;0.4),&nbsp;rgba(0,&nbsp;0,&nbsp;0,&nbsp;0.1));<br/> }<br/>.hover-2-tieude&nbsp;{<br/> &nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;top:&nbsp;50%;<br/> &nbsp;&nbsp;left:&nbsp;0;<br/> &nbsp;&nbsp;text-align:&nbsp;center;<br/> &nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;z-index:&nbsp;99;<br/> &nbsp;&nbsp;transition:&nbsp;all&nbsp;0.3s;<br/> }<br/>.hover-2-trichdan&nbsp;{<br/> &nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;bottom:&nbsp;0;<br/> &nbsp;&nbsp;opacity:&nbsp;0;<br/> &nbsp;&nbsp;left:&nbsp;0;<br/> &nbsp;&nbsp;text-align:&nbsp;center;<br/> &nbsp;&nbsp;z-index:&nbsp;99;<br/> &nbsp;&nbsp;transition:&nbsp;all&nbsp;0.3s;<br/> }<br/>.hover-2:hover&nbsp;.hover-2-tieude&nbsp;{<br/> &nbsp;&nbsp;transform:&nbsp;translateY(-1.5rem);<br/> }<br/>.hover-2:hover&nbsp;.hover-2-trichdan&nbsp;{<br/> &nbsp;&nbsp;bottom:&nbsp;0.5rem;<br/> &nbsp;&nbsp;opacity:&nbsp;1;<br/> }<br/>.hover-2:hover&nbsp;.hover-overlay&nbsp;{<br/> &nbsp;&nbsp;background:&nbsp;linear-gradient(to&nbsp;top,&nbsp;rgba(0,&nbsp;0,&nbsp;0,&nbsp;0.9),&nbsp;rgba(0,&nbsp;0,&nbsp;0,&nbsp;0.1));<br/> }<br/></code></pre>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="VwLodVW" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Bang Gia Bootstrap4">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/VwLodVW">
+              Bang Gia Bootstrap4</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <div class="bg-primary p-2 rounded mt-4 text-white">
+              <h3>Thiết Kế Ô Tìm Kiếm Bootstrap 4:</h3>
+            </div>
             <p class="mt-4">
-              Ở đây có một thuộc tính mình cần lưu ý là <code>background: linear-gradient</code> giúp tạo màu nền bằng cách phối những màu nền xác định lại với nhau. Kết quả thì bạn có thể xem ở trên nhé.
-              
+              Chúng ta đi vào thiết kế giúp cho các ô tìm kiếm của mình đẹp hơn bằng HTML, CSS và Bootstrap 4. Bạn xem kết quả và đoạn code để xây dựng
+              component này ở bên dưới nhé:
             </p>
-            <p>Bây giờ chúng ta sẽ đi vào hiệu ứng hover hình ảnh 3. Sườn trang HTML để tạo hiệu ứng và một số thuộc tính CSS giống ở ví dụ trên nên mình sẽ không viết lại các code đó nhé. 
-              Để dễ hình dung bạn xem kết quả và đoạn code của nó để nắm rõ hơn nha:</p>
-              <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="haycuoilennao19" data-slug-hash="zYGVgmb" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Hover Image 3 Bootstrap 4">
-                <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/zYGVgmb">
-                Hover Image 3 Bootstrap 4</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-              </p>
-              <p>
-                Chúng ta sẽ đi vào phần CSS để tạo hiệu ứng hover hình ảnh này bằng đoạn code sau đây nhé:
-              </p>
-              <pre><code class="css">.hover-3::after&nbsp;{<br/> &nbsp;&nbsp;content:&nbsp;'';<br/> &nbsp;&nbsp;width:&nbsp;calc(100%&nbsp;-&nbsp;3rem);<br/> &nbsp;&nbsp;height:&nbsp;calc(100%&nbsp;-&nbsp;3rem);<br/> &nbsp;&nbsp;border:&nbsp;1px&nbsp;solid&nbsp;#fff;<br/> &nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;top:&nbsp;1.5rem;<br/> &nbsp;&nbsp;left:&nbsp;1.5rem;<br/> &nbsp;&nbsp;z-index:&nbsp;90;<br/> &nbsp;&nbsp;transition:&nbsp;all&nbsp;0.3s;<br/> &nbsp;&nbsp;transform:&nbsp;scale(1.1);<br/> &nbsp;&nbsp;opacity:&nbsp;0;<br/> &nbsp;&nbsp;display:&nbsp;block;<br/> &nbsp;&nbsp;opacity:&nbsp;0;<br/> }<br/>.hover-3-noidung&nbsp;{<br/> &nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;top:&nbsp;50%;<br/> &nbsp;&nbsp;left:&nbsp;0;<br/> &nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;transform:&nbsp;translateY(-50%);<br/> &nbsp;&nbsp;text-align:&nbsp;center;<br/> &nbsp;&nbsp;z-index:&nbsp;99;<br/> }<br/>.hover-3-trichdan&nbsp;{<br/> &nbsp;&nbsp;opacity:&nbsp;0;<br/> &nbsp;&nbsp;transform:&nbsp;scale(1.3);<br/> &nbsp;&nbsp;transition:&nbsp;all&nbsp;0.3s;<br/> }<br/>.hover-3&nbsp;img&nbsp;{<br/> &nbsp;&nbsp;width:&nbsp;110%;<br/> &nbsp;&nbsp;top:&nbsp;50%;<br/> &nbsp;&nbsp;left:&nbsp;50%;<br/> &nbsp;&nbsp;transform:&nbsp;translate(-50%,&nbsp;-50%);<br/> }<br/>.hover-3&nbsp;.hover-overlay&nbsp;{<br/> &nbsp;&nbsp;background:&nbsp;rgba(0,&nbsp;0,&nbsp;0,&nbsp;0.2);<br/> }<br/>.hover-3:hover&nbsp;img&nbsp;{<br/> &nbsp;&nbsp;width:&nbsp;100%;<br/> }<br/>.hover-3:hover::after&nbsp;{<br/> &nbsp;&nbsp;opacity:&nbsp;1;<br/> &nbsp;&nbsp;transform:&nbsp;none;<br/> }<br/>.hover-3:hover&nbsp;.hover-3-trichdan&nbsp;{<br/> &nbsp;&nbsp;opacity:&nbsp;1;<br/> &nbsp;&nbsp;transform:&nbsp;none;<br/> }<br/>.hover-3:hover&nbsp;.hover-overlay&nbsp;{<br/> &nbsp;&nbsp;background:&nbsp;rgba(0,&nbsp;0,&nbsp;0,&nbsp;0.8);<br/> }<br/></code></pre>
-              <p class="mt-4">
-                Mình có lưu ý nhỏ ở hiệu ứng này là thuộc tính <code>::after</code> sẽ thêm một thứ gì đó mà bạn muốn phía sau nội dung của mỗi đối tượng được chọn. Để xem lại hay tìm hiểu thêm bạn 
-                có thể tham khảo ở đây nhé: <a href="https://www.w3schools.com/cssref/sel_after.asp" target="_blank">Thuộc Tính ::after CSS</a>. Thuộc tính <code>transform</code> với giá trị <code>scale</code> giúp ta có thể tăng hay giảm 
-                kích thước của đối tượng được chọn.
-              </p>
-              <p>Bây giờ mình sẽ đi vào ví dụ tạo hiệu ứng hover hình ảnh thứ 4, để hiểu rõ hơn bạn xem kết quả và đoạn code của nó sau đây nhé:</p>
-              <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="haycuoilennao19" data-slug-hash="abOeoLd" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Hover Image 4 Bootstrap 4">
-                <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/abOeoLd">
-                Hover Image 4 Bootstrap 4</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-              </p>
-              <p>Và dưới đây là những thuộc tính CSS mà bạn cần nên chú ý để tạo hiệu ứng hover hình ảnh 4 này:</p>
-              <pre><code class="css">.hover-4&nbsp;img&nbsp;{<br/> &nbsp;&nbsp;width:&nbsp;110%;<br/> &nbsp;&nbsp;top:&nbsp;50%;<br/> &nbsp;&nbsp;left:&nbsp;50%;<br/> &nbsp;&nbsp;transform:&nbsp;translate(-50%,&nbsp;-50%);<br/> }<br/>.hover-4&nbsp;.hover-overlay&nbsp;{<br/> &nbsp;&nbsp;background:&nbsp;rgba(0,&nbsp;0,&nbsp;0,&nbsp;0.4);<br/> &nbsp;&nbsp;z-index:&nbsp;90;<br/> }<br/>.hover-4-tieude&nbsp;{<br/> &nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;bottom:&nbsp;0;<br/> &nbsp;&nbsp;right:&nbsp;0;<br/> &nbsp;&nbsp;padding:&nbsp;3rem;<br/> &nbsp;&nbsp;z-index:&nbsp;99;<br/> }<br/>.hover-4-trichdan&nbsp;{<br/> &nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;top:&nbsp;2rem;<br/> &nbsp;&nbsp;left:&nbsp;2rem;<br/> &nbsp;&nbsp;text-align:&nbsp;right;<br/> &nbsp;&nbsp;border-right:&nbsp;3px&nbsp;solid&nbsp;#fff;<br/> &nbsp;&nbsp;padding:&nbsp;0&nbsp;1rem;<br/> &nbsp;&nbsp;z-index:&nbsp;99;<br/> &nbsp;&nbsp;transform:&nbsp;translateX(-1.5rem);<br/> &nbsp;&nbsp;opacity:&nbsp;0;<br/> &nbsp;&nbsp;transition:&nbsp;all&nbsp;0.3s;<br/> }<br/>@media&nbsp;(min-width:&nbsp;992px)&nbsp;{<br/> &nbsp;&nbsp;.hover-4-trichdan&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;50%;<br/> &nbsp;&nbsp;}<br/> }<br/>.hover-4:hover&nbsp;img&nbsp;{<br/> &nbsp;&nbsp;width:&nbsp;100%;<br/> }<br/>.hover-4:hover::after&nbsp;{<br/> &nbsp;&nbsp;opacity:&nbsp;1;<br/> &nbsp;&nbsp;transform:&nbsp;none;<br/> }<br/>.hover-4:hover&nbsp;.hover-4-trichdan&nbsp;{<br/> &nbsp;&nbsp;opacity:&nbsp;1;<br/> &nbsp;&nbsp;transform:&nbsp;none;<br/> }<br/>.hover-4:hover&nbsp;.hover-overlay&nbsp;{<br/> &nbsp;&nbsp;background:&nbsp;rgba(0,&nbsp;0,&nbsp;0,&nbsp;0.8);<br/> }<br/></code></pre>
-              <p class="mt-4">
-                Không có thuộc tính nào mới nên bạn xem kết quả ở phía trên nha. Bây giờ hãy cùng mình đi vào tìm hiểu hiệu ứng hover hình ảnh 5 và để nắm rõ hơn bạn xem kết quả cũng như đoạn code của nó dưới đây nhé:
-              </p>
-              <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="haycuoilennao19" data-slug-hash="VwLoZBz" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Hover Image 5 Bootstrap 4">
-                <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/VwLoZBz">
-                Hover Image 5 Bootstrap 4</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-              </p>
-             <p class="mt-4">
-               Để xem kết quả rõ hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> trong Codepen nhé. Bây giờ chúng ta sẽ tìm hiểu đoạn code CSS để tạo ra hiệu ứng này:
-             </p>
-             <pre><code class="css">.hover-5::after&nbsp;{<br/> &nbsp;&nbsp;content:&nbsp;'';<br/> &nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;height:&nbsp;10px;<br/> &nbsp;&nbsp;background:&nbsp;#47c650;<br/> &nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;bottom:&nbsp;-10px;<br/> &nbsp;&nbsp;left:&nbsp;0;<br/> &nbsp;&nbsp;display:&nbsp;block;<br/> &nbsp;&nbsp;transition:&nbsp;all&nbsp;0.3s;<br/> &nbsp;&nbsp;z-index:&nbsp;999;<br/> }<br/>.hover-5&nbsp;.hover-overlay&nbsp;{<br/> &nbsp;&nbsp;background:&nbsp;rgba(0,&nbsp;0,&nbsp;0,&nbsp;0.4);<br/> }<br/>.hover-5-tieude&nbsp;{<br/> &nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;bottom:&nbsp;1rem;<br/> &nbsp;&nbsp;left:&nbsp;0;<br/> &nbsp;&nbsp;transition:&nbsp;all&nbsp;0.3s;<br/> &nbsp;&nbsp;padding:&nbsp;2rem&nbsp;3rem;<br/> &nbsp;&nbsp;z-index:&nbsp;99;<br/> }<br/>.hover-5-tieude&nbsp;span&nbsp;{<br/> &nbsp;&nbsp;transition:&nbsp;all&nbsp;0.4s;<br/> &nbsp;&nbsp;opacity:&nbsp;0;<br/> &nbsp;&nbsp;color:&nbsp;#47c650;<br/> }<br/>.hover-5:hover&nbsp;.hover-overlay&nbsp;{<br/> &nbsp;&nbsp;background:&nbsp;rgba(0,&nbsp;0,&nbsp;0,&nbsp;0.8);<br/> }<br/>.hover-5:hover&nbsp;.hover-5-tieude&nbsp;{<br/> &nbsp;&nbsp;bottom:&nbsp;0;<br/> }<br/>.hover-5:hover&nbsp;.hover-5-tieude&nbsp;span&nbsp;{<br/> &nbsp;&nbsp;opacity:&nbsp;1;<br/> }<br/>.hover-5:hover::after&nbsp;{<br/> &nbsp;&nbsp;bottom:&nbsp;0;<br/> }<br/></code></pre>
-             <p class="mt-4">Và bạn có thể xem lại kết quả ở trên nha. Nếu có bất kì thắc mắc về thuộc tính CSS nào ở các ví dụ trên thì bạn cứ nhắn tin mình sẽ tìm hiểu và trả lời sớm nhất có thể nhé.</p>
-
-
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="vYOorwp" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="O Tim Kiem Boostrap 4">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/vYOorwp">
+              O Tim Kiem Boostrap 4</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <div class="bg-primary p-2 rounded mt-4 text-white">
+              <h3>Xây Dựng Vertical Tab Bootstrap 4:</h3>
+            </div>
+            <p class="mt-4">
+              Chúng ta đi vào thiết kế Vertical Tab của mình  bằng HTML, CSS và Bootstrap 4. Bạn xem kết quả và đoạn code để xây dựng
+              component này ở bên dưới nhé:
+            </p>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="gOpVjPd" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Verical tab trong Bootstrap4">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/gOpVjPd">
+              Verical tab trong Bootstrap4</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+      
 
 
 
@@ -181,7 +197,7 @@
 
             
             <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
-        <p>Qua đây mình mong bài viết sẽ giúp bạn tạo được một số hiệu ứng hover hình ảnh kết hợp CSS với  Bootstrap 4 và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
+        <p>Qua đây mình mong bài viết sẽ giúp bạn rút ngắn thời gian và hiểu hơn về cách thiết kế giao diện kết hợp CSS với  Bootstrap 4 và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
          
       </div>
         </article>
