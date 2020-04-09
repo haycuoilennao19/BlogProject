@@ -178,9 +178,6 @@ router.post('/editpost/:id', upload.single('file'), function (req, res) {
             res.redirect('/')
         });
     })
-
-
-
 })
 
 router.post('/deletepost/:id', function (req, res) {
