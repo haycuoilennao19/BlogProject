@@ -13,6 +13,9 @@ router.get('/', function(req, res, next) {
 router.get('/about', function(req, res, next) {
    res.render('about')
 });
+router.get('/Hoc-Bootstrap4', function(req, res, next) {
+    res.render("bootstrap4");
+  })
 
 router.get("/css", function(req, res) {
   Blog

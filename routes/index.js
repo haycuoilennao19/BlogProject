@@ -8,9 +8,7 @@ router.get('/0', function(req, res, next) {
     res.render('404page')
   })
 
-  router.get('/Hoc-Bootstrap4', function(req, res, next) {
-    res.render("bootstrap4");
-  })
+ 
   
 router.get('/about', function(req, res, next) {
     res.render('about')
