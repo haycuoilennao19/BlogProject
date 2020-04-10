@@ -62,7 +62,12 @@ router.get("/Javscript", function(req, res) {
 router.get("/:id", function(req, res) {
     var id = req.params.id;
     Blog.findOne({_id: id}, function(err, data) {
-        res.render("article", {article: data})
+        if(data){
+            res.render("article", {article: data})
+        }
+        else{
+            res.render('404page')
+        }
     })
 })
 
