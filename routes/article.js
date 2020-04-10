@@ -19,7 +19,7 @@ router.get("/css", function(req, res) {
       .find({category:"CSS"})
       .sort({_id: -1})
       .exec(function(err, data) {
-          Blog.count().exec(function(err, count) {
+          Blog.countDocuments().exec(function(err, count) {
               if(err) return next(err)
               res.render('category',{data: data})
           })
@@ -33,7 +33,7 @@ router.get("/html", function(req, res) {
       .find({category:"HTML"})
       .sort({_id: -1})
       .exec(function(err, data) {
-          Blog.count().exec(function(err, count) {
+          Blog.countDocuments().exec(function(err, count) {
               if(err) return next(err)
               res.render('category',{data: data})
           })
@@ -49,7 +49,7 @@ router.get("/Javscript", function(req, res) {
       .find({category:"Javscript"})
       .sort({_id: -1})
       .exec(function(err, data) {
-          Blog.count().exec(function(err, count) {
+          Blog.countDocuments().exec(function(err, count) {
               if(err) return next(err)
               res.render('category',{data: data})
           })
