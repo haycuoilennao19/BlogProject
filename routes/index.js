@@ -42,7 +42,7 @@ router.get('/', function(req, res, next) {
         .skip((perpage * page) - perpage)
         .limit(perpage)
         .exec(function(err, products) {
-            Blog.count().exec(function(err, count) {
+            Blog.countDocuments().exec(function(err, count) {
                 if(err) return next(err)
                 res.render('products',{posts: products, current:page, pages: Math.ceil(count / perpage)})
             })
@@ -59,7 +59,7 @@ router.get('/:page', function(req, res, next) {
         .skip((perpage * page) - perpage)
         .limit(perpage)
         .exec(function(err, products) {
-            Blog.count().exec(function(err, count) {
+            Blog.countDocuments().exec(function(err, count) {
                 if(err) return next(err)
                 res.render('products',{posts: products, current:parseInt(page), pages: Math.ceil(count / perpage)})
             })

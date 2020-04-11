@@ -4,7 +4,6 @@ var mongoose = require('mongoose');
 var Blog = require('../model/blog')
 var db = require('../model/mongo_connect')
 
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.send("article")
