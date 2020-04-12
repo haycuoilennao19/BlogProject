@@ -56,9 +56,6 @@ router.get("/Javscript", function(req, res) {
               res.render('category',{data: data})
           })
       })
-//   Blog.find({category:"ThuthuatCSS"}, function(err, data){
-//     res.render("category", {data: data})
-//   })
 })
 
 router.get("/:id", function(req, res) {
