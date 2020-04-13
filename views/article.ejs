@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html  lang="vi">
 
 <head>
   <title><%=article.title%></title>
@@ -19,6 +19,8 @@
   <meta property="og:description"        content="<%-article.subtitle%>" />
   <meta property="og:image"              content="<%-article.file%>" />
   <meta property="fb:app_id" content="2121975281235443" />
+  <meta name="keywords" content="<%-article.category%>">
+  <meta name="author" content="Thái Viết Nhật">
   <!--Font Logo-->
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Crimson+Text&display=swap" rel="stylesheet">
@@ -30,7 +32,15 @@
   <link rel="stylesheet" href="/stylesheets/font-awesome/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <meta name="google-site-verification" content="SXEFa5YhgCrmAOJhBwsuDms_fUALYxrM8ZUql8KHgNM" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DMC7NBSP9H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-DMC7NBSP9H');
+</script>
 </style>
 </head>
 
@@ -105,7 +115,7 @@
     <div class="col-lg-12 col-md-12 col-xs-12">
      
  
-        <h5 class="card-header"> <img src="<%-article.file%>" class="card-img-top img-thumbnail" alt="<%-article.title%>"></h5>
+        <h2 class="card-header h5"> <img src="<%-article.file%>" class="card-img-top img-thumbnail" alt="<%-article.title%>"></h2>
         <h3 class="button-article"><button type="button"
             class="<%-article.category%> btn shadow-sm rounded btn-success mt-3 pl-5 pr-5"><%=article.category%></button></h3>
             <h6 class="text-muted text-right"><i class="fa fa-clock-o" aria-hidden="true"></i> <%=article.date%></h6>
