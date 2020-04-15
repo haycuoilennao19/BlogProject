@@ -23,257 +23,220 @@
       <hr />
       <div class="card-text text-justify">
         <article>
-          <h2 class="bg-primary mb-4 text-white rounded p-2 shadow"><i class="fa fa-cube" aria-hidden="true"></i>Timeline Snippet trong Bootstrap 4</h2>
+          <h2 class="bg-primary mb-4 text-white rounded p-2 shadow"><i class="fa fa-cube" aria-hidden="true"></i>Product Card Snippet trong Bootstrap 4</h2>
           <div class="article-title">
             <div class="progress-wrapper">
               <div class="progress-label"></div><progress></progress>
             </div>
           </div>
           <div class="text-content-article mt-5">
-            <p><i>Xin chào các bạn quay lại blog của mình. Hôm nay chúng ta sẽ đi tìm hiểu các timeline bằng cách kết hợp HTML, CSS, Javascript và Bootstrap 4 . Nào hãy cũng mình tìm hiểu nhé!</i>
+            <p><i>Xin chào các bạn quay lại blog của mình. Hôm nay chúng ta sẽ đi tìm hiểu các product card (thẻ miêu tả sản phẩm) bằng cách kết hợp HTML, CSS, Javascript và Bootstrap 4 . Nào hãy cũng mình tìm hiểu nhé!</i>
             </p>
             <!--<div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Framework Bootstrap 4</h4></div>-->
          
-            <p class="mt-4"> Sau đây mình xin giới thiệu qua timeline một tí. Nó là một danh sách các sự kiện theo thứ tự thời gian, thông thường bạn sẽ thấy nó là một thanh hiển thị theo chiều 
-              dọc hay chiều ngang với từng mốc thời gian cố định và nội dung về sự kiện đó. Mình thấy nó hay được sử dụng trong việc kể về lịch sử hình thành của một công ty, tổ chức, 
-              hay bạn có thể dùng trong việc thiết lập những danh sách cần làm trong ngày... Nó giúp cho người dùng có cái nhìn trực quan, dễ hiểu và  thích thú khi xem chúng hơn.
+            <p class="mt-4"> Product card (thẻ miêu tả sản phẩm)  là một thành phần không thể thiếu trong các trang web bán hàng, nó cũng góp phần vào yếu tố quyết định
+              người dùng có nên mua sản phẩm của bạn không.
+              Product card (thẻ miêu tả sản phẩm)  chia thông tin sản phẩm thành nhiều khác nhau phần bao gồm hình ảnh, nội dung, giá cả... giúp người dùng có cái nhìn trực quan 
+              cũng như tổng quát hơn về sản phẩm của bạn. Ngoài ra nó còn giúp chúng ta hiển thị nhất quán trên nhiều màn hình thiết bị khác nhau.
               </p>
               <p>
-              Sau đây mình sẽ giới thiệu một số component Timeline (dòng thời gian) được thiết kế sẵn bằng HTML, CSS, Bootstrap và Javascript giúp bạn có thể đa dạng lựa chọn phù hợp với bố cục cũng như thiết kế của trang web.
+                Theo mình thấy thì hình ảnh  là một yếu tố hết sức quan trọng vì nó là yếu tố đầu tiên thu hút ánh mắt của người dùng khi xem sản phẩm của chúng ta do đó bạn cần 
+                làm sao để hình ảnh rõ ràng và chân thật nhất có thể. Bạn cũng không nên sử dụng qua nhiều font chữ và nội dung không quá nhiều vì người dùng sẽ lười đọc nên bạn chỉ cần miêu tả các đặc điểm nổi bật nhất của sản phẩm
+                 cho product card.
+              </p>
+              <p>
+              Sau đây mình sẽ giới thiệu một số component Product Card (thẻ thông tin sản phẩm) được thiết kế sẵn bằng HTML, CSS, Bootstrap và Javascript giúp bạn có thể đa dạng lựa chọn phù hợp với bố cục cũng như thiết kế của trang web.
               </p>
           
               <!--New-->
-             <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Timeline Using CSS Vs Bootstrap:</h4></div>
-             <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586748551/Time%20Line/Timeline_Bootstrap_CSS_1_vcwrej.png" alt="Các loại timeline được xây dựng bằng bằng HTML, CSS, Javascript, Bootstrap 4">
+             <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">UI Design - Product Card:</h4></div>
+             <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586866883/product%20card/productcard_snippet_html_css_phan1_brnftf.png" alt="Product Card(thẻ sản phẩm) xây dựng bằng HTML, CSS và Bootstrap">
              <p class="mt-4">
-                Mình có tổng hợp một số Timeline được xây dựng bằng Bootstrap 4 kết hợp với CSS và Fontawesome bao gồm cả theo chiều dọc và chiều ngang. Tuy không có hiệu ứng nào nhưng theo mình thấy
-                khả nằng phối màu, sắp xếp bố cục rất đẹp và rõ ràng.
-               Để hiểu rõ hơn bạn xem đoạn code sau nhé:
+              Product card này được xây dựng theo phong cách 3D với màu nền của tiêu đề thẻ tương ứng với màu sản phẩm tạo nên sự đồng nhất cho thẻ. Ngoài ra nó còn hiển thị đánh giá sản phẩm theo sao giúp 
+              người dùng có thể biết được mức độ bền và tốt của sản phẩm. Và giá tiền được thiết kế bắt mắt cũng là một điểm cộng cho component này.
+                Bây giờ để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
              </p>
-             <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="haycuoilennao19" data-slug-hash="VwvZbPe" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Timeline Bootstrap (source from bootsnipp)">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/VwvZbPe">
-              Timeline Bootstrap (source from bootsnipp)</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+             <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="CodeFrogShow" data-slug-hash="rWjYrP" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="UI Design - Product Card">
+              <span>See the Pen <a href="https://codepen.io/CodeFrogShow/pen/rWjYrP">
+              UI Design - Product Card</a> by CodeFrog (<a href="https://codepen.io/CodeFrogShow">@CodeFrogShow</a>)
               on <a href="https://codepen.io">CodePen</a>.</span>
             </p>
             <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
             <p class="mt-4">
               Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
               nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-              Còn đây là nguồn mình sao chép: <a href="https://bootsnipp.com/snippets/Q0ppE" target="_blank">Timeline Using CSS Vs Bootstrap</a>.
+              Còn đây là nguồn mình sao chép: <a href="https://codepen.io/CodeFrogShow/pen/rWjYrP" target="_blank">UI Design - Product Card</a>.
             </p>
-
-                    <!--New-->
-                    <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Timeline:</h4></div>
-                    <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586750910/Time%20Line/Timeline_SCSS_2_shcmfa.png" alt="timeline được xây dựng bằng bằng HTML, SCSS">
-                    <p class="mt-4">
-                      Timeline này theo hướng hiện đại với việc sử dụng màu nền đen tạo nên độ tương phản cao cho các sự kiện và nó  chia các sự kiện theo trục thời gian với thông tin chi tiết giúp người dùng có 
-                      cái nhìn trực quan và dễ dàng so sánh khoảng thời gian giũa các sự kiện. Để hiểu rõ hơn bạn xem đoạn code sau nhé:
-                    </p>
-                    <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="clintabrown" data-slug-hash="yoFcC" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Timeline">
-                      <span>See the Pen <a href="https://codepen.io/clintabrown/pen/yoFcC">
-                      Timeline</a> by Clint Brown (<a href="https://codepen.io/clintabrown">@clintabrown</a>)
-                      on <a href="https://codepen.io">CodePen</a>.</span>
-                    </p>
-                   
-                   <p class="mt-4">
-                     Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
-                     nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-                     Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
-                     Còn đây là nguồn mình sao chép: <a href="https://codepen.io/clintabrown/pen/yoFcC" target="_blank">Timeline</a>.
-                   </p>
-
-                          <!--New-->
-                          <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">4 Panel Timeline CSS:</h4></div>
-                          <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586751474/Time%20Line/Timeline_SCSS_3_umqo59.png" alt="timeline được xây dựng bằng bằng HTML, SCSS phần 3">
-                          <p class="mt-4">
-                      Timeline này sử dụng hình ảnh làm điểm thu hút người dùng cùng với thời gian sự kiện. Để tạo nên trải nghiệm thú vị thì nó sử dụng hiệu ứng khi người dùng hover vào ảnh thì 
-                      nó sẽ hiện ra thông tin chi tiết về sự kiện đó và làm mờ ảnh nền của những sự kiện khác. Để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
-                          </p>
-                          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="jeffglenn" data-slug-hash="KNYoKa" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="4 Panel Timeline CSS">
-                            <span>See the Pen <a href="https://codepen.io/jeffglenn/pen/KNYoKa">
-                            4 Panel Timeline CSS</a> by Jeff Glenn (<a href="https://codepen.io/jeffglenn">@jeffglenn</a>)
-                            on <a href="https://codepen.io">CodePen</a>.</span>
-                          </p>
-                        
-                         
-                         <p class="mt-4">
-                           Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
-                           nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-                           Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
-                           Còn đây là nguồn mình sao chép: <a href="https://codepen.io/jeffglenn/pen/KNYoKa" target="_blank">4 Panel Timeline CSS</a>.
-                         </p>
-
-                    <!--New-->
-                    <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Horizontal Timeline:</h4></div>
-                    <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586752828/Time%20Line/Timeline_CSS_JS_4_gzuwkg.png" alt="timeline được xây dựng bằng bằng HTML, CSS và Javascript phần 4">
-                    <p class="mt-4">
-                Timeline này tập trung vào việc thiết kế, hiển thị nội dung cho từng sự kiện và thanh điều hướng cho mỗi mốc thời gian.
-                Thiết kế timeline này giúp cho người dùng sự kích thích muốn xem  nội dung chi tiết  của những sự kiện khác bằng cách click(nhấp) vào từng mốc thời gian . Để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
-                    </p>
-                    <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="ritz078" data-slug-hash="LGRWjE" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="horizontal timeline">
-                      <span>See the Pen <a href="https://codepen.io/ritz078/pen/LGRWjE">
-                      horizontal timeline</a> by Ritesh Kumar (<a href="https://codepen.io/ritz078">@ritz078</a>)
-                      on <a href="https://codepen.io">CodePen</a>.</span>
-                    </p>
-              
-                   
-                   <p class="mt-4">
-                     Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
-                     nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-                     Còn đây là nguồn mình sao chép: <a href="https://codepen.io/ritz078/pen/LGRWjE" target="_blank">Horizontal Timeline</a>.
-                   </p>
-
-
-                         <!--New-->
-                         <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Vertical Timeline:</h4></div>
-                         <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586754008/Time%20Line/Timeline_CSS_JS_Bootstrap_5_feeqqt.png" alt="timeline được xây dựng bằng bằng HTML, CSS, Javascript và Scrollrevealjs phần 5">
-                         <p class="mt-4">
-                     Timeline này sử dụng component card Bootstrap để kết hợp hình ảnh và nội dung sự kiện lại với nhau. Thiết kế của nó cũng không quá cầu kì, chủ yếu chú trọng vào yếu tố đơn giản. Ở đây mình có lưu ý nhỏ là về hiệu ứng của nó 
-                     được xây dựng bằng plugin <a href="https://scrollrevealjs.org/api/reveal.html" target="_blank">Scrollrevealjs</a> giúp tạo hiệu ứng chuyển động và mốc sự kiện chỉ xuất hiện khi người dùng sroll  tới sự kiện đó trong trang web.
-                     Để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
-                         </p>
-                         <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="savalazic" data-slug-hash="QKwERN" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Vertical Timeline">
-                          <span>See the Pen <a href="https://codepen.io/savalazic/pen/QKwERN">
-                          Vertical Timeline</a> by Sava Lazic (<a href="https://codepen.io/savalazic">@savalazic</a>)
-                          on <a href="https://codepen.io">CodePen</a>.</span>
-                        </p>
-                      
-                   
-                        
-                        <p class="mt-4">
-                          Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
-                          nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-                          Còn đây là nguồn mình sao chép: <a href="https://codepen.io/savalazic/pen/QKwERN" target="_blank">Vertical Timeline</a>.
-                        </p>
-     
-                        
-                         <!--New-->
-                         <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Simple Responsive Timeline:</h4></div>
-                         <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586754902/Time%20Line/Timeline_HTML_CSS__6_cylauy.png" alt="Timeline được xây dựng bằng bằng HTML, CSS, Javascript phần 6">
-                         <p class="mt-4">
-                     Timeline này thiết kế theo phong cách đơn giản, không có hiệu ứng nào nhưng do việc chọn font, màu sắc hài hòa và hiển thị được nhiều trên nhiều màn hình thiết bị nên bạn 
-                     có thể áp dụng cho nhiều loại bố cục của trang web. 
-                     Để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
-                         </p>
-                         <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="brady_wright" data-slug-hash="NNOvrW" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Simple Responsive Timeline">
-                          <span>See the Pen <a href="https://codepen.io/brady_wright/pen/NNOvrW">
-                          Simple Responsive Timeline</a> by Brady Wright (<a href="https://codepen.io/brady_wright">@brady_wright</a>)
-                          on <a href="https://codepen.io">CodePen</a>.</span>
-                        </p>
-                  
-                      
-                   
-                        <p class="mt-4">
-                          Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
-                          nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-                          Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
-                          Còn đây là nguồn mình sao chép: <a href="https://codepen.io/brady_wright/pen/NNOvrW" target="_blank">Simple Responsive Timeline</a>.
-                        </p>
-     
-
-                                
-                         <!--New-->
-                         <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Timeline Style Navigation:</h4></div>
-                         <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586755954/Time%20Line/Timeline_HTML_CSS__Jquery_7_imisrm.png" alt="Timeline được xây dựng bằng bằng HTML, CSS, Jquery phần 7">
-                         <p class="mt-4">
-                          Điểm đặc biệt của timline này là bạn có thể sử dụng với chức năng liệt kệ sự kiện theo thời gian hoặc  thanh điều hướng (navigation) trong trang web. Sự thú vị trong hiệu ứng của nó là 
-                          tạo sự tương tác  giữa phần nội dung với đường dẫn liên kết tới nó giúp người dùng xác định chủ đề của nội dung đó trong timline. Để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
-                         </p>
-                         <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="nailaahmad" data-slug-hash="MyZXVE" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Timeline Style Navigation">
-                          <span>See the Pen <a href="https://codepen.io/nailaahmad/pen/MyZXVE">
-                          Timeline Style Navigation</a> by Naila Ahmad (<a href="https://codepen.io/nailaahmad">@nailaahmad</a>)
-                          on <a href="https://codepen.io">CodePen</a>.</span>
-                        </p>
-                        
-                  
-                      
-                   
-                        <p class="mt-4">
-                          Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
-                          nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-                          Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
-                          Còn đây là nguồn mình sao chép: <a href="https://codepen.io/nailaahmad/pen/MyZXVE" target="_blank">Timeline Style Navigation</a>.
-                        </p>
-     
-                            <!--New-->
-                            <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Horizontal Timeline Responsive:</h4></div>
-                            <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586756791/Time%20Line/Timeline_HTML_CSS__Bootstrap_8_uzo4uy.png" alt="Timeline được xây dựng bằng bằng HTML, CSS, Bootstrap phần 8">
-                            <p class="mt-4">
-                             Nãy giờ chúng ta thiết kế theo mốc thời gian,  bây giờ mình sẽ giới thiệu một timline khác được thiết kế để miêu tả từng bước hành động cụ thể để đạt một điều gì đó.
-                             Theo mình thấy thì ở đây quan trọng vào hình ảnh minh họa giúp người dùng có cái nhìn trực quan và dễ hình dung công việc cụ thể
-                             . Để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
-                            </p>
-                            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="nickoafan" data-slug-hash="eJMaBx" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Horizontal Timeline Responsive">
-                              <span>See the Pen <a href="https://codepen.io/nickoafan/pen/eJMaBx">
-                              Horizontal Timeline Responsive</a> by Nicko Afan (<a href="https://codepen.io/nickoafan">@nickoafan</a>)
-                              on <a href="https://codepen.io">CodePen</a>.</span>
-                            </p>
-                            
-                           
-                     
-                         
-                      
-                           <p class="mt-4">
-                             Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
-                             nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-                             Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
-                             Còn đây là nguồn mình sao chép: <a href="https://codepen.io/nickoafan/pen/eJMaBx" target="_blank">Horizontal Timeline Responsive</a>.
-                           </p>
-        
-
-                                 <!--New-->
-                                 <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Banner Slider Timeline With Progress Bar:</h4></div>
-                                 <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586758419/Time%20Line/Timeline_HTML_CSS_JS_9_pz6sus.png" alt="Timeline được xây dựng bằng bằng HTML, CSS, Bootstrap phần 9">
-                                 <p class="mt-4">
-                                  Timeline này sử dụng slider để tạo hiệu ứng cho từng sự kiện bằng việc tính toán thời gian thì nó sẽ tự động chuyển sang mốc sự kiện kiện khác với nội dung và ảnh nền tương ứng.
-                                 Ngoài ra nó còn có chức năng hiển thị thời gian còn lại bằng thanh trượt ngang trước khi chuyển sang sự kiện kế tiếp
-
-                                  . Để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
-                                 </p>
-                                 <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="ccrch" data-slug-hash="raGVeL" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Banner slider with progress bar">
-                                  <span>See the Pen <a href="https://codepen.io/ccrch/pen/raGVeL">
-                                  Banner slider with progress bar</a> by Krz Szzz (<a href="https://codepen.io/ccrch">@ccrch</a>)
-                                  on <a href="https://codepen.io">CodePen</a>.</span>
-                                </p>
-                           
-                                 
-                                
-                          
-                              
-                           
-                                <p class="mt-4">
-                                  Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
-                                  nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-                                  Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
-                                  Còn đây là nguồn mình sao chép: <a href="https://codepen.io/ccrch/pen/raGVeL" target="_blank">Banner Slider Timeline With Progress Bar</a>.
-                                </p>
-                                            <!--New-->
-                                            <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Responsive Timeline V4: Pure CSS:</h4></div>
-                                            <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586758802/Time%20Line/Timeline_HTML_CSS_10_moyjwi.png" alt="Timeline được xây dựng bằng bằng HTML, CSS phần 10">
-                                            <p class="mt-4">
-                                             Timeline này được thiết kế đơn giản với HTML và CSS nhưng vô cùng đẹp mắt và responsive trên nhiều màn hình thiết bị khác nhau nên bạn có thể áp dụng rộng rãi
-                                             cho các bố cục trang web
+                  <!--New-->
+                  <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">E-commerce Product (Delicious Apples):</h4></div>
+                  <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586874305/product%20card/productcard_snippet_html_css_phan2_mhzg3o.png" alt="Product Card(thẻ sản phẩm) xây dựng bằng HTML, CSS và Bootstrap Phần 2">
+                  <p class="mt-4">
+                   Product card này được xây dựng hình ảnh theo phong cách 3D với hình ảnh được chụp ở nhiều góc độ khác nhau giúp miêu tả độ chân thật và chất lượng của sản phẩm.
+                   Nhưng do chỉ thiết kế bằng HTML, CSS nên không thể kích hoạt các nút trong thẻ sản phẩm nếu bạn muốn thì có thể thêm Javascript để tạo nhé. Giá và nút đặt hàng được 
+                   làm nổi bật trong thẻ để nhấn mạnh nội dung cũng như kích thích khách hàng đặt hàng.
+                     Bây giờ để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
+                  </p>
+                  <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="john-mantas" data-slug-hash="bxmrBq" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="E-commerce Product (Delicious Apples)">
+                    <span>See the Pen <a href="https://codepen.io/john-mantas/pen/bxmrBq">
+                    E-commerce Product (Delicious Apples)</a> by John Mantas (<a href="https://codepen.io/john-mantas">@john-mantas</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
            
-                                             . Để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
-                                            </p>
-                                            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="cjl750" data-slug-hash="MXvYmg" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="responsive timeline v4: pure CSS">
-                                              <span>See the Pen <a href="https://codepen.io/cjl750/pen/MXvYmg">
-                                              responsive timeline v4: pure CSS</a> by Clay Larson (<a href="https://codepen.io/cjl750">@cjl750</a>)
-                                              on <a href="https://codepen.io">CodePen</a>.</span>
-                                            </p>
-                                         
-                                           
-                                     
-                                         
-                                      
-                                           <p class="mt-4">
-                                             Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
-                                             nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-                                             Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
-                                             Còn đây là nguồn mình sao chép: <a href="https://codepen.io/ccrch/pen/raGVeL" target="_blank">Responsive Timeline V4: Pure CSS</a>.
-                                           </p>
-             
+                  <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
+                    Còn đây là nguồn mình sao chép: <a href="https://codepen.io/john-mantas/pen/bxmrBq" target="_blank">E-commerce Product (Delicious Apples)</a>.</p>
 
+                      <!--New-->
+                  <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Ecommerce Single Item:</h4></div>
+                  <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586875730/product%20card/productcard_snippet_html_css_phan3_ehtpet.png" alt="Product Card(thẻ sản phẩm) xây dựng bằng HTML, CSS và Bootstrap Phần 3">
+                  <p class="mt-4">
+                   Nếu bạn muốn lựa chọn một product card thiết kế đơn giản thì có thể chọn component này. Ngoài ra nó còn có hiệu ứng thay đổi màu sắc để người dùng có thể chọn màu phù hợp với sản phẩm mà họ muốn.
+                   Nó cũng sử dụng font Roboto giúp tạo thêm phong cánh hiện đại và giàu cảm xúc hơn.
+                     Bây giờ để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
+                  </p>
+                  <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="nuel" data-slug-hash="yOKNmX" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Daily UI #012 - Ecommerce Single Item">
+                    <span>See the Pen <a href="https://codepen.io/nuel/pen/yOKNmX">
+                    Daily UI #012 - Ecommerce Single Item</a> by Immanuel Pandiangan (<a href="https://codepen.io/nuel">@nuel</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+   
+           
+                  <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
+                    Còn đây là nguồn mình sao chép: <a href="https://codepen.io/nuel/pen/yOKNmX" target="_blank">Ecommerce Single Item</a>.</p>
+
+                               <!--New-->
+                  <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Product Card:</h4></div>
+                  <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586877104/product%20card/productcard_snippet_html_css_phan4_pchz2h.png" alt="Product Card(thẻ sản phẩm) xây dựng bằng HTML, CSS và Bootstrap Phần 4">
+                  <p class="mt-4">
+                   Product card này khá là thú vị khi sử dụng hiệu ứng hover để hiển thị thông tin sản phẩm. Nó giúp giảm được diện tích chiếm trang khi trang web 
+                   chúng ta có  nhiều sản phẩm. Khi click(nhấn) vào "VIEW DETAILS" thì nó sẽ hiện các sản phẩm tương ứng với màu sắc khác nhau.
+                     Bây giờ để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
+                  </p>
+                  <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="virgilpana" data-slug-hash="RNYQwB" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Product Card">
+                    <span>See the Pen <a href="https://codepen.io/virgilpana/pen/RNYQwB">
+                    Product Card</a> by Virgil Pana (<a href="https://codepen.io/virgilpana">@virgilpana</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+   
+           
+                  <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Do đây sử dụng <b>Less</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a href="https://jsonformatter.org/less-to-css" target="_blank">Less to CSS</a>.
+                    Còn đây là nguồn mình sao chép: <a href="https://codepen.io/virgilpana/pen/RNYQwB" target="_blank">Product Card </a>.</p>
+
+                                        <!--New-->
+                  <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Product Card 2:</h4></div>
+                  <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586877421/product%20card/productcard_snippet_html_css_phan5_i9gzmv.png" alt="Product Card(thẻ sản phẩm) xây dựng bằng HTML, CSS và Bootstrap Phần 5">
+                  <p class="mt-4">
+                   Product card này sử dụng thiết kế đơn giản miêu tả những thông tin cần có về một sản phẩm. Do chỉ viết bằng HTML, CSS nên bạn dễ thay đổi cũng như áp dụng cho nhiều loại bố cục
+                   trang web khác nhau.
+                     Bây giờ để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
+                  </p>
+                  <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="ff0004-red" data-slug-hash="WxJEJZ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Product Card">
+                    <span>See the Pen <a href="https://codepen.io/ff0004-red/pen/WxJEJZ">
+                    Product Card</a> by Alexandra K (<a href="https://codepen.io/ff0004-red">@ff0004-red</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                 
+   
+           
+                  <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+                    Còn đây là nguồn mình sao chép: <a href="https://codepen.io/ff0004-red/pen/WxJEJZ" target="_blank">Product Card 2</a>.</p>
+
+                                      <!--New-->
+                  <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Product Card UI / CSS:</h4></div>
+                  <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586878762/product%20card/productcard_snippet_html_css_phan6_mix6xl.png" alt="Product Card(thẻ sản phẩm) xây dựng bằng HTML, CSS và Bootstrap Phần 6">
+                  <p class="mt-4">
+                   Product card này cũng có thiết kế giống ở trên nhưng điểm đặc biệt của nó là khi người dùng hover vào ảnh có thể xem chi tiết thông tin của sản phẩm. Ngoài ra nó còn có xếp hạng đánh giá sao 
+                   và tự động chuyển sang đặt hàng khi người dùng hover vào giá tiền hoặc nút mua hàng.
+                     Bây giờ để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
+                  </p>
+                  <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="linux" data-slug-hash="LjWrPZ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Product Card UI / CSS">
+                    <span>See the Pen <a href="https://codepen.io/linux/pen/LjWrPZ">
+                    Product Card UI / CSS</a> by Omar Dsooky (<a href="https://codepen.io/linux">@linux</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+             
+                 
+   
+           
+                  <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+                    Còn đây là nguồn mình sao chép: <a href="https://codepen.io/linux/pen/LjWrPZ" target="_blank">Product Card UI / CSS</a>.</p>
+
+                                      <!--New-->
+                  <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Product Detail Page:</h4></div>
+                  <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586880734/product%20card/productcard_snippet_html_css_js_phan7_jkljgs.png" alt="Product Card(thẻ sản phẩm) xây dựng bằng HTML, CSS và Bootstrap Phần 7">
+                  <p class="mt-4">
+                  Đây có thể xem là product card điển hình hay được sử dụng trong các trang web bán hàng đặc biệt là hàng điện tử.
+                  Nó còn có hiệu ứng tự động chuyển đổi các hình ảnh khác của sản phẩm và chức năng giúp xem đánh giá của người dùng sau khi mua sản phẩm trong component này.
+                     Bây giờ để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
+                  </p>
+                  <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="bGVVKad" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Product Detail Page(Source from Snippet)">
+                    <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/bGVVKad">
+                    Product Detail Page(Source from Snippet)</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+             
+             
+                 
+   
+           
+                  <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+                    Còn đây là nguồn mình sao chép: <a href="https://bootsnipp.com/snippets/XqvZr" target="_blank">Product Detail Page</a>.</p>
+
+                                                   <!--New-->
+                  <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Product Card 3:</h4></div>
+                  <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586882059/product%20card/productcard_snippet_html_css_phan8_p9xmtl.png" alt="Product Card(thẻ sản phẩm) xây dựng bằng HTML, CSS và Bootstrap Phần 8">
+                  <p class="mt-4">
+                  Thiết kế Product card này được nổi bật bởi sự thiết kế đơn giản cùng với việc phối màu cũng như sắp xếp các thành phần trong component. Nó chú trọng vào làm nổi bật  tiêu đề và giá thành bằng việc sử dụng font chữ lớn cộng thêm tô đậm và 
+                  hiển thị số người review cũng như số sao của sản phẩm để khách hàng có thể đánh giá về chất lượng và tiêu chí phù hợp với họ.
+                     Bây giờ để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
+                  </p>
+                  <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="GeorgeGedox" data-slug-hash="yEwoqP" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Product card">
+                    <span>See the Pen <a href="https://codepen.io/GeorgeGedox/pen/yEwoqP">
+                    Product card</a> by George V. (<a href="https://codepen.io/GeorgeGedox">@GeorgeGedox</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+             
+             
+                 
+   
+           
+                  <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+                    Còn đây là nguồn mình sao chép: <a href="https://codepen.io/GeorgeGedox/pen/yEwoqP" target="_blank">Product Card 3</a>.</p>
+
+                    
+                                                   <!--New-->
+                  <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">E-Commerce Card:</h4></div>
+                  <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586883080/product%20card/productcard_snippet_html_css_phan9_o77axc.png" alt="Product Card(thẻ sản phẩm) xây dựng bằng HTML, CSS và Bootstrap Phần 9">
+                  <p class="mt-4">
+                  Thiết kế Product card này đơn giản không cầu kì về màu sắc cũng như hiệu ứng trong component này. Nó chú trọng vào hai yếu tố chính đó là tiêu đề và giá của sản phẩm.
+                     Bây giờ để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
+                  </p>
+                  <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="jacobsauerhoefer" data-slug-hash="mVZwLB" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="E-Commerce Card">
+                    <span>See the Pen <a href="https://codepen.io/jacobsauerhoefer/pen/mVZwLB">
+                    E-Commerce Card</a> by Jacob Sauerhoefer (<a href="https://codepen.io/jacobsauerhoefer">@jacobsauerhoefer</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+            
+           
+                  <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+                    Còn đây là nguồn mình sao chép: <a href="https://codepen.io/jacobsauerhoefer/pen/mVZwLB" target="_blank">E-Commerce Card</a>.</p>
+
+                                                      <!--New-->
+                  <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Product:</h4></div>
+                  <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586883722/product%20card/productcard_snippet_html_css_phan10_eugh1w.png" alt="Product Card(thẻ sản phẩm) xây dựng bằng HTML, CSS và Bootstrap Phần 10">
+                  <p class="mt-4">
+                  Thiết kế Product card này cũng y chang ở trên nhưng nó có hiệu ứng click(nhấn) để xem thêm các hình ảnh khác của sản phẩm. Nó phù hợp với đa số thiết kế và bố cục của nhiều loại trang web bán hàng.
+                     Bây giờ để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
+                  </p>
+                  <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="kathykato" data-slug-hash="gdvjax" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Product">
+                    <span>See the Pen <a href="https://codepen.io/kathykato/pen/gdvjax">
+                    Product</a> by Katherine Kato (<a href="https://codepen.io/kathykato">@kathykato</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+           
+            
+           
+                  <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+                    Còn đây là nguồn mình sao chép: <a href="https://codepen.io/kathykato/pen/gdvjax" target="_blank">Product</a>.</p>
 
 
 
@@ -288,7 +251,7 @@
             
             <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
     
-        <p>Qua đây mình mong bài viết sẽ giúp bạn rút ngắn thời gian trong việc thiết kế giao diện Testimonials trong Bootstrap 4 và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
+        <p>Qua đây mình mong bài viết sẽ giúp bạn rút ngắn thời gian trong việc thiết kế giao diện Product Card (thẻ sản phẩm) trong Bootstrap 4 và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
          
       </div>
         </article>
@@ -317,76 +280,7 @@
       </div>
     </div>
 
-    <div class="card card-search">
-      <div class="card-header card-header-search">
-        Đăng kí Email
-
-      </div>
-      <div class="card-body card-body-search">
-        <div class="text-email-subscribe">
-          <p class="text-justify mt-4">Các bạn nhấp subscribe để nhận bài viết mới nhất từ mình nhé!</p>
-        </div>
-        <!-- Begin Mailchimp Signup Form -->
-        <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-        <style type="text/css">
-          #mc_embed_signup {
-            background: #fff;
-            clear: left;
-            font: 14px Helvetica, Arial, sans-serif;
-          }
-
-          /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-                         We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-        </style>
-        <div id="mc_embed_signup">
-          <form action="https://gmail.us20.list-manage.com/subscribe/post?u=02f033de83f488a359d24bc9f&amp;id=85d0d8697c"
-            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
-            target="_blank" novalidate>
-            <div id="mc_embed_signup_scroll">
-
-              <div class="mc-field-group">
-                <label for="mce-EMAIL" class="label-email mb-2">Email:
-                </label>
-                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL"
-                  placeholder="Hãy nhập địa chỉ email của bạn">
-
-              </div>
-              <div id="mce-responses" class="clear">
-                <div class="response text-justify" id="mce-error-response" style="display:none"></div>
-                <div class="response text-justify" id="mce-success-response" style="display:none"></div>
-              </div>
-              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-                  name="b_02f033de83f488a359d24bc9f_85d0d8697c" tabindex="-1" value=""></div>
-              <div class="clear"><input type="submit" value="Đăng Kí Email" name="subscribe" id="mc-embedded-subscribe"
-                  class="button"></div>
-            </div>
-          </form>
-        </div>
-        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-        <script type='text/javascript'>
-          (function ($) {
-            window.fnames = new Array();
-            window.ftypes = new Array();
-            fnames[0] = 'EMAIL';
-            ftypes[0] = 'email';
-            fnames[1] = 'FNAME';
-            ftypes[1] = 'text';
-            fnames[2] = 'LNAME';
-            ftypes[2] = 'text';
-            fnames[3] = 'ADDRESS';
-            ftypes[3] = 'address';
-            fnames[4] = 'PHONE';
-            ftypes[4] = 'phone';
-            fnames[5] = 'BIRTHDAY';
-            ftypes[5] = 'birthday';
-          }(jQuery));
-          var $mcj = jQuery.noConflict(true);
-        </script>
-        <!--End mc_embed_signup-->
-
-      </div>
-    </div>
+ 
   </div>
 </div>
 </div>

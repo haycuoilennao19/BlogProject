@@ -72,10 +72,10 @@
           <a class="nav-link dropdown-toggle  mr-5 hvr-underline-from-left" data-toggle="dropdown" href="#"
             role="button" aria-haspopup="true" aria-expanded="false">Ngôn Ngữ</a>
           <div class="dropdown-menu mt-2">
-            <a class="dropdown-item" href="/article/html">HTML</a>
-            <a class="dropdown-item" href="/article/css">CSS</a>
-            <a class="dropdown-item" href="/article/Javscript">Javascript</a>
-            <a class="dropdown-item" href="/article/Hoc-Bootstrap4">Hướng Dẫn Bootstrap4</a>
+            <a class="dropdown-item" title="Hướng Dẫn Về HTML" href="/article/html">HTML</a>
+            <a class="dropdown-item" title="Hướng Dẫn Về CSS" href="/article/css">CSS</a>
+            <a class="dropdown-item" title="Hướng Dẫn Về Javascript" href="/article/Javscript">Javascript</a>
+            <a class="dropdown-item" title="Hướng Dẫn Về Bootstrap 4" href="/article/Hoc-Bootstrap4">Hướng Dẫn Bootstrap4</a>
         </li>
         <li class="nav-item">
           <a class="nav-link hvr-underline-from-left mr-5" href="/about">Giới Thiệu</a>
@@ -123,7 +123,7 @@
               <span class="circle">
                 <span class="icon arrow"></span>
               </span>
-              <a class="button-text" href="/article/<%-post.id%>">
+              <a class="button-text" title="<%-post.title%>" href="/article/<%-post.id%>">
                 <span">Tiếp tục đọc</span>
               </a>
             </button>
@@ -140,12 +140,12 @@
     <div class="row">          
       <div class="col-sm-6 order-6 text-right"  style="font-size:2rem">
        <% if (pages > 0 && current < pages) { %>
-       <a class="btn btn-outline-dark hvr-underline-from-center shadow-sm rounded-pill p-2" href="<%=current= current + 1%>">Trang Sau <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> </a>
+       <a class="btn btn-outline-dark hvr-underline-from-center shadow-sm rounded-pill p-2"  title="Next" href="<%=current= current + 1%>">Trang Sau <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> </a>
        <%}  %>
      </div>
      <div class="col-sm-6" style="font-size:2rem">
        <% if (pages > 2 && current < pages +1 ) { %>
-        <a class="btn btn-outline-dark hvr-underline-from-center shadow-sm rounded-pill p-2" href="<%=current= current - 2%>"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i>  Trang Trước</a>
+        <a class="btn btn-outline-dark hvr-underline-from-center shadow-sm rounded-pill p-2"  title="Previous" href="<%=current= current - 2%>"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i>  Trang Trước</a>
          <%}%>
       
        </div>
@@ -186,78 +186,6 @@
             </div>
           </div>
 
-          <div class="card card-search">
-            <div class="card-header card-header-search">
-              Đăng kí Email
-
-            </div>
-            <div class="card-body card-body-search">
-              <div class="text-email-subscribe">
-                <p class="text-justify mt-4">Các bạn nhấp subscribe để nhận bài viết mới nhất từ mình nhé!</p>
-              </div>
-              <!-- Begin Mailchimp Signup Form -->
-              <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-              <style type="text/css">
-                #mc_embed_signup {
-                  background: #fff;
-                  clear: left;
-                  font: 14px Helvetica, Arial, sans-serif;
-                }
-
-                /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-                       We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-              </style>
-              <div id="mc_embed_signup">
-                <form
-                  action="https://gmail.us20.list-manage.com/subscribe/post?u=02f033de83f488a359d24bc9f&amp;id=85d0d8697c"
-                  method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
-                  target="_blank" novalidate>
-                  <div id="mc_embed_signup_scroll">
-
-                    <div class="mc-field-group">
-                      <label for="mce-EMAIL" class="label-email mb-2">Email:
-                      </label>
-                      <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL"
-                        placeholder="Hãy nhập địa chỉ email của bạn">
-
-                    </div>
-                    <div id="mce-responses" class="clear">
-                      <div class="response text-justify" id="mce-error-response" style="display:none"></div>
-                      <div class="response text-justify" id="mce-success-response" style="display:none"></div>
-                    </div>
-                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-                        name="b_02f033de83f488a359d24bc9f_85d0d8697c" tabindex="-1" value=""></div>
-                    <div class="clear"><input type="submit" value="Đăng Kí Email" name="subscribe"
-                        id="mc-embedded-subscribe" class="button"></div>
-                  </div>
-                </form>
-              </div>
-              <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'>
-              </script>
-              <script type='text/javascript'>
-                (function ($) {
-                  window.fnames = new Array();
-                  window.ftypes = new Array();
-                  fnames[0] = 'EMAIL';
-                  ftypes[0] = 'email';
-                  fnames[1] = 'FNAME';
-                  ftypes[1] = 'text';
-                  fnames[2] = 'LNAME';
-                  ftypes[2] = 'text';
-                  fnames[3] = 'ADDRESS';
-                  ftypes[3] = 'address';
-                  fnames[4] = 'PHONE';
-                  ftypes[4] = 'phone';
-                  fnames[5] = 'BIRTHDAY';
-                  ftypes[5] = 'birthday';
-                }(jQuery));
-                var $mcj = jQuery.noConflict(true);
-              </script>
-              <!--End mc_embed_signup-->
-
-            </div>
-          </div>
         </div>
       </div>
     </div>
