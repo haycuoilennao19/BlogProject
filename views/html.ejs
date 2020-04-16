@@ -23,235 +23,244 @@
       <hr />
       <div class="card-text text-justify">
         <article>
-          <h2 class="bg-primary mb-4 text-white rounded p-2 shadow"><i class="fa fa-cube" aria-hidden="true"></i>Product Card Snippet trong Bootstrap 4</h2>
+          <h2 class="bg-primary mb-4 text-white rounded p-2 shadow"><i class="fa fa-cube" aria-hidden="true"></i>Accordion Snippet trong Bootstrap</h2>
           <div class="article-title">
             <div class="progress-wrapper">
               <div class="progress-label"></div><progress></progress>
             </div>
           </div>
           <div class="text-content-article mt-5">
-            <p><i>Xin chào các bạn quay lại blog của mình. Hôm nay chúng ta sẽ đi tìm hiểu các product card (thẻ miêu tả sản phẩm) bằng cách kết hợp HTML, CSS, Javascript và Bootstrap 4 . Nào hãy cũng mình tìm hiểu nhé!</i>
+            <p><i>Xin chào các bạn quay lại blog của mình. Hôm nay chúng ta sẽ đi tìm hiểu các accordion bằng cách kết hợp HTML, CSS, Javascript và Bootstrap . Nào hãy cũng mình tìm hiểu nhé!</i>
             </p>
             <!--<div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Framework Bootstrap 4</h4></div>-->
          
-            <p class="mt-4"> Product card (thẻ miêu tả sản phẩm)  là một thành phần không thể thiếu trong các trang web bán hàng, nó cũng góp phần vào yếu tố quyết định
-              người dùng có nên mua sản phẩm của bạn không.
-              Product card (thẻ miêu tả sản phẩm)  chia thông tin sản phẩm thành nhiều khác nhau phần bao gồm hình ảnh, nội dung, giá cả... giúp người dùng có cái nhìn trực quan 
-              cũng như tổng quát hơn về sản phẩm của bạn. Ngoài ra nó còn giúp chúng ta hiển thị nhất quán trên nhiều màn hình thiết bị khác nhau.
-              </p>
-              <p>
-                Theo mình thấy thì hình ảnh  là một yếu tố hết sức quan trọng vì nó là yếu tố đầu tiên thu hút ánh mắt của người dùng khi xem sản phẩm của chúng ta do đó bạn cần 
-                làm sao để hình ảnh rõ ràng và chân thật nhất có thể. Bạn cũng không nên sử dụng qua nhiều font chữ và nội dung không quá nhiều vì người dùng sẽ lười đọc nên bạn chỉ cần miêu tả các đặc điểm nổi bật nhất của sản phẩm
-                 cho product card.
-              </p>
-              <p>
-              Sau đây mình sẽ giới thiệu một số component Product Card (thẻ thông tin sản phẩm) được thiết kế sẵn bằng HTML, CSS, Bootstrap và Javascript giúp bạn có thể đa dạng lựa chọn phù hợp với bố cục cũng như thiết kế của trang web.
+            <p class="mt-4"> 
+              Accordion là một danh sách được sắp xếp theo chiều dọc hay chiều ngang có chức năng để hiển thị hay ẩn nội dung. Nếu bạn muốn xem lại thì có thể tham khảo ở đây nhé 
+              <a href="https://www.niemvuilaptrinh.com/article/5e86052210ee792be0376294" title="component accordion">Accordion</a>. Nó giúp chúng ta có thể tiết kiệm diện tích trang và hiển thị 
+              những thông tin chính, khi người dùng muốn xem có thể nhấn vào để hiện nội dung của thông tin đó mà không cần phải điều hướng trang nhiều lần. Nó thường được sử dụng trong trang FAQ,
+              Danh sách nhiều thành phần con hay bảng dữ liệu...
+            </p>
+            <p>Để hiểu rõ hơn bạn xem ví dụ về trang FAQ của Microsoft dưới đây nha:</p>
+            <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586963140/Accordion/Vi-du-ve-accordion-trong-trang-FAQ_ckhigg.png" alt="Ví dụ về accordion trong trang Microsoft FAQ">
+              <p class="mt-4">
+              Sau đây mình sẽ giới thiệu một số component Accordion được thiết kế sẵn bằng HTML, CSS, Bootstrap và Javascript giúp bạn có thể đa dạng lựa chọn phù hợp với bố cục cũng như thiết kế của trang web.
               </p>
           
               <!--New-->
-             <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">UI Design - Product Card:</h4></div>
-             <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586866883/product%20card/productcard_snippet_html_css_phan1_brnftf.png" alt="Product Card(thẻ sản phẩm) xây dựng bằng HTML, CSS và Bootstrap">
-             <p class="mt-4">
-              Product card này được xây dựng theo phong cách 3D với màu nền của tiêu đề thẻ tương ứng với màu sản phẩm tạo nên sự đồng nhất cho thẻ. Ngoài ra nó còn hiển thị đánh giá sản phẩm theo sao giúp 
-              người dùng có thể biết được mức độ bền và tốt của sản phẩm. Và giá tiền được thiết kế bắt mắt cũng là một điểm cộng cho component này.
-                Bây giờ để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
-             </p>
-             <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="CodeFrogShow" data-slug-hash="rWjYrP" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="UI Design - Product Card">
-              <span>See the Pen <a href="https://codepen.io/CodeFrogShow/pen/rWjYrP">
-              UI Design - Product Card</a> by CodeFrog (<a href="https://codepen.io/CodeFrogShow">@CodeFrogShow</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+             <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">FAQ:</h4></div>
+             <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586966263/Accordion/Snippet_Accordion_HTML_CSS_Javascript_phan_1_vfsqir.png" alt="Accordion xây dựng bằng HTML, CSS và Javascript Phần 1">
+          
+              <p class="mt-4">Đây là đoạn code và khi hiển thị trên web của Accordion này nhé:</p>
+              <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="kathykato" data-slug-hash="MoZJom" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="FAQ">
+                <span>See the Pen <a href="https://codepen.io/kathykato/pen/MoZJom">
+                FAQ</a> by Katherine Kato (<a href="https://codepen.io/kathykato">@kathykato</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+              </p>
+              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
             <p class="mt-4">
               Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
               nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-              Còn đây là nguồn mình sao chép: <a href="https://codepen.io/CodeFrogShow/pen/rWjYrP" target="_blank">UI Design - Product Card</a>.
+              Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
+              Còn đây là nguồn mình sao chép: <a href="https://codepen.io/kathykato/pen/MoZJom" target="_blank">FAQ</a>.
             </p>
-                  <!--New-->
-                  <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">E-commerce Product (Delicious Apples):</h4></div>
-                  <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586874305/product%20card/productcard_snippet_html_css_phan2_mhzg3o.png" alt="Product Card(thẻ sản phẩm) xây dựng bằng HTML, CSS và Bootstrap Phần 2">
-                  <p class="mt-4">
-                   Product card này được xây dựng hình ảnh theo phong cách 3D với hình ảnh được chụp ở nhiều góc độ khác nhau giúp miêu tả độ chân thật và chất lượng của sản phẩm.
-                   Nhưng do chỉ thiết kế bằng HTML, CSS nên không thể kích hoạt các nút trong thẻ sản phẩm nếu bạn muốn thì có thể thêm Javascript để tạo nhé. Giá và nút đặt hàng được 
-                   làm nổi bật trong thẻ để nhấn mạnh nội dung cũng như kích thích khách hàng đặt hàng.
-                     Bây giờ để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
-                  </p>
-                  <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="john-mantas" data-slug-hash="bxmrBq" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="E-commerce Product (Delicious Apples)">
-                    <span>See the Pen <a href="https://codepen.io/john-mantas/pen/bxmrBq">
-                    E-commerce Product (Delicious Apples)</a> by John Mantas (<a href="https://codepen.io/john-mantas">@john-mantas</a>)
-                    on <a href="https://codepen.io">CodePen</a>.</span>
-                  </p>
-           
-                  <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
-                    Còn đây là nguồn mình sao chép: <a href="https://codepen.io/john-mantas/pen/bxmrBq" target="_blank">E-commerce Product (Delicious Apples)</a>.</p>
 
-                      <!--New-->
-                  <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Ecommerce Single Item:</h4></div>
-                  <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586875730/product%20card/productcard_snippet_html_css_phan3_ehtpet.png" alt="Product Card(thẻ sản phẩm) xây dựng bằng HTML, CSS và Bootstrap Phần 3">
-                  <p class="mt-4">
-                   Nếu bạn muốn lựa chọn một product card thiết kế đơn giản thì có thể chọn component này. Ngoài ra nó còn có hiệu ứng thay đổi màu sắc để người dùng có thể chọn màu phù hợp với sản phẩm mà họ muốn.
-                   Nó cũng sử dụng font Roboto giúp tạo thêm phong cánh hiện đại và giàu cảm xúc hơn.
-                     Bây giờ để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
-                  </p>
-                  <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="nuel" data-slug-hash="yOKNmX" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Daily UI #012 - Ecommerce Single Item">
-                    <span>See the Pen <a href="https://codepen.io/nuel/pen/yOKNmX">
-                    Daily UI #012 - Ecommerce Single Item</a> by Immanuel Pandiangan (<a href="https://codepen.io/nuel">@nuel</a>)
+                 <!--New-->
+                 <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">CSS Responsive animated Accordion:</h4></div>
+                 <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586967122/Accordion/Snippet_Accordion_HTML_CSS_Javascript_phan_2_rtnu9r.png" alt="Accordion xây dựng bằng HTML, CSS và Javascript Phần 2">
+
+   
+                  <p class="mt-4">Đây là đoạn code và khi hiển thị trên web của Accordion này nhé:</p>
+                  <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="chriswrightdesign" data-slug-hash="cmanI" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS Responsive animated Accordion">
+                    <span>See the Pen <a href="https://codepen.io/chriswrightdesign/pen/cmanI">
+                    CSS Responsive animated Accordion</a> by Chris Wright (<a href="https://codepen.io/chriswrightdesign">@chriswrightdesign</a>)
                     on <a href="https://codepen.io">CodePen</a>.</span>
                   </p>
-   
-           
-                  <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
-                    Còn đây là nguồn mình sao chép: <a href="https://codepen.io/nuel/pen/yOKNmX" target="_blank">Ecommerce Single Item</a>.</p>
+              
+                <p class="mt-4">
+                  Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
+                  nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+                  Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
+                  Còn đây là nguồn mình sao chép: <a href="https://codepen.io/chriswrightdesign/pen/cmanI" target="_blank">CSS Responsive animated Accordion</a>.
+                </p>
+
+                
+                 <!--New-->
+                 <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Pure CSS Accordion:</h4></div>
+                 <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586967294/Accordion/Snippet_Accordion_HTML_CSS_Javascript_phan_3_kz4bkd.png" alt="Accordion xây dựng bằng HTML, CSS và Javascript Phần 3">
+              
+               <p class="mt-4">Đây là đoạn code và khi hiển thị trên web của Accordion này nhé:</p>
+                  <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="raubaca" data-slug-hash="PZzpVe" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS Accordion">
+                    <span>See the Pen <a href="https://codepen.io/raubaca/pen/PZzpVe">
+                    Pure CSS Accordion</a> by Rau (<a href="https://codepen.io/raubaca">@raubaca</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+ 
+                <p class="mt-4">
+                  Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
+                  nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+                  Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
+                  Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
+                  Còn đây là nguồn mình sao chép: <a href="https://codepen.io/raubaca/pen/PZzpVe" target="_blank">Pure CSS Accordion</a>.
+                </p>
+                
+
+                 <!--New-->
+                 <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Responsive Animated SCSS Accordion:</h4></div>
+                 <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586967946/Accordion/Snippet_Accordion_HTML_CSS_Javascript_phan_4_fkt20n.png" alt="Accordion xây dựng bằng HTML, CSS và Javascript Phần 4">
+         
+               <p class="mt-4">Đây là đoạn code và khi hiển thị trên web của Accordion này nhé:</p>
+               <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="pirrera" data-slug-hash="KwzMGZ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Responsive Animated SCSS Accordion">
+                <span>See the Pen <a href="https://codepen.io/pirrera/pen/KwzMGZ">
+                Responsive Animated SCSS Accordion</a> by MrPirrera (<a href="https://codepen.io/pirrera">@pirrera</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+              </p>
+        
+ 
+                <p class="mt-4">
+                  Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
+                  nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+                  Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
+                  Còn đây là nguồn mình sao chép: <a href="https://codepen.io/pirrera/pen/KwzMGZ" target="_blank">Responsive Animated SCSS Accordion</a>.
+                </p>
+                
+                      <!--New-->
+                      <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Responsive Accordion (Background Images):</h4></div>
+                      <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586968410/Accordion/Snippet_Accordion_HTML_CSS_Javascript_phan_5_hid871.png" alt="Accordion xây dựng bằng HTML, CSS và Javascript Phần 5">
+                      <p class="mt-4">Đây là đoạn code và khi hiển thị trên web của Accordion này nhé:</p>
+                      <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="ferry" data-slug-hash="ZYVwxz" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Responsive Accordion (Background Images)">
+                        <span>See the Pen <a href="https://codepen.io/ferry/pen/ZYVwxz">
+                        Responsive Accordion (Background Images)</a> by Michael Ferry (<a href="https://codepen.io/ferry">@ferry</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                      </p>
+                 
+      
+                     <p class="mt-4">
+                       Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
+                       nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+                       Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
+                       Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
+                       
+                       Còn đây là nguồn mình sao chép: <a href="https://codepen.io/ferry/pen/ZYVwxz" target="_blank">Responsive Accordion (Background Images)</a>.
+                     </p>
+
+                                   <!--New-->
+                                   <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Collapsing Accordion Pure CSS:</h4></div>
+                                   <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586969496/Accordion/Snippet_Accordion_HTML_CSS_Javascript_phan_6_z6j1y0.png" alt="Accordion xây dựng bằng HTML, CSS  Phần 6">
+                                   <p class="mt-4">Đây là đoạn code và khi hiển thị trên web của Accordion này nhé:</p>
+                                   <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="JeremyWink" data-slug-hash="PoYdrLV" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Collapsing Accordion Pure CSS">
+                                    <span>See the Pen <a href="https://codepen.io/JeremyWink/pen/PoYdrLV">
+                                    Collapsing Accordion Pure CSS</a> by Kniw Studio (<a href="https://codepen.io/JeremyWink">@JeremyWink</a>)
+                                    on <a href="https://codepen.io">CodePen</a>.</span>
+                                  </p>
+                           
+                              
+                   
+                                  <p class="mt-4">
+                                    Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
+                                    nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+                                    Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
+                     
+                                    
+                                    Còn đây là nguồn mình sao chép: <a href="https://codepen.io/JeremyWink/pen/PoYdrLV" target="_blank">Collapsing Accordion Pure CSS</a>.
+                                  </p>
+                     
+                                  <!--New-->
+                                  <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Material design Accordion - Bootstrap v3:</h4></div>
+                                  <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586971158/Accordion/Snippet_Accordion_HTML_CSS_Javascript_phan_7_yltpw7.png" alt="Accordion xây dựng bằng HTML, CSS  Phần 7">
+              
+                                  <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="shehab-eltawel" data-slug-hash="dYwOgX" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Material design Accordion - Bootstrap v3">
+                                    <span>See the Pen <a href="https://codepen.io/shehab-eltawel/pen/dYwOgX">
+                                    Material design Accordion - Bootstrap v3</a> by Shehab Eltawel (<a href="https://codepen.io/shehab-eltawel">@shehab-eltawel</a>)
+                                    on <a href="https://codepen.io">CodePen</a>.</span>
+                                  </p>
+                              
+                          
+                              
+                  
+                                  <p class="mt-4">
+                                    Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
+                                    nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+                                    Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
+                                  
+                                    
+                                    Còn đây là nguồn mình sao chép: <a href="https://codepen.io/shehab-eltawel/pen/dYwOgX" target="_blank">Material design Accordion - Bootstrap v3</a>.
+                                  </p>
+                                  <!--New-->
+                                  <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Accordion:</h4></div>
+                                  <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586971334/Accordion/Snippet_Accordion_HTML_CSS_Javascript_phan_8_j0ntpw.png" alt="Accordion xây dựng bằng HTML, CSS  Phần 8">
+                                  <p class="mt-4">Đây là đoạn code và khi hiển thị trên web của Accordion này nhé:</p>
+                                  <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="LewisBriffa" data-slug-hash="qjwqLb" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Accordion">
+                                    <span>See the Pen <a href="https://codepen.io/LewisBriffa/pen/qjwqLb">
+                                    Accordion</a> by Lewis Briffa (<a href="https://codepen.io/LewisBriffa">@LewisBriffa</a>)
+                                    on <a href="https://codepen.io">CodePen</a>.</span>
+                                  </p>
+                             
+                              
+                          
+                              
+                  
+                                  <p class="mt-4">
+                                    Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
+                                    nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+                                    Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
+                                  
+                                    
+                                    Còn đây là nguồn mình sao chép: <a href="https://codepen.io/LewisBriffa/pen/qjwqLb" target="_blank">Simple Flat UI CSS Accordion</a>.
+                                  </p>
+
+                            <!--New-->
+                            <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Accordion:</h4></div>
+                            <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586971592/Accordion/Snippet_Accordion_HTML_CSS_Javascript_phan_9_nbvlio.png" alt="Accordion xây dựng bằng HTML, CSS  Phần 9">
+                            <p class="mt-4">Đây là đoạn code và khi hiển thị trên web của Accordion này nhé:</p>
+                            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="samsurysites" data-slug-hash="qxHJK" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Simple Flat UI CSS Accordion">
+                              <span>See the Pen <a href="https://codepen.io/samsurysites/pen/qxHJK">
+                              Simple Flat UI CSS Accordion</a> by Virlyz ID (<a href="https://codepen.io/samsurysites">@samsurysites</a>)
+                              on <a href="https://codepen.io">CodePen</a>.</span>
+                            </p>
+                    
+                      
+                        
+                    
+                        
+            
+                            <p class="mt-4">
+                              Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
+                              nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+                              Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
+                            
+                              
+                              Còn đây là nguồn mình sao chép: <a href="https://codepen.io/samsurysites/pen/qxHJK" target="_blank">Simple Flat UI CSS Accordion</a>.
+                            </p>
 
                                <!--New-->
-                  <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Product Card:</h4></div>
-                  <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586877104/product%20card/productcard_snippet_html_css_phan4_pchz2h.png" alt="Product Card(thẻ sản phẩm) xây dựng bằng HTML, CSS và Bootstrap Phần 4">
-                  <p class="mt-4">
-                   Product card này khá là thú vị khi sử dụng hiệu ứng hover để hiển thị thông tin sản phẩm. Nó giúp giảm được diện tích chiếm trang khi trang web 
-                   chúng ta có  nhiều sản phẩm. Khi click(nhấn) vào "VIEW DETAILS" thì nó sẽ hiện các sản phẩm tương ứng với màu sắc khác nhau.
-                     Bây giờ để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
-                  </p>
-                  <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="virgilpana" data-slug-hash="RNYQwB" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Product Card">
-                    <span>See the Pen <a href="https://codepen.io/virgilpana/pen/RNYQwB">
-                    Product Card</a> by Virgil Pana (<a href="https://codepen.io/virgilpana">@virgilpana</a>)
-                    on <a href="https://codepen.io">CodePen</a>.</span>
-                  </p>
-   
-           
-                  <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Do đây sử dụng <b>Less</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a href="https://jsonformatter.org/less-to-css" target="_blank">Less to CSS</a>.
-                    Còn đây là nguồn mình sao chép: <a href="https://codepen.io/virgilpana/pen/RNYQwB" target="_blank">Product Card </a>.</p>
-
-                                        <!--New-->
-                  <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Product Card 2:</h4></div>
-                  <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586877421/product%20card/productcard_snippet_html_css_phan5_i9gzmv.png" alt="Product Card(thẻ sản phẩm) xây dựng bằng HTML, CSS và Bootstrap Phần 5">
-                  <p class="mt-4">
-                   Product card này sử dụng thiết kế đơn giản miêu tả những thông tin cần có về một sản phẩm. Do chỉ viết bằng HTML, CSS nên bạn dễ thay đổi cũng như áp dụng cho nhiều loại bố cục
-                   trang web khác nhau.
-                     Bây giờ để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
-                  </p>
-                  <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="ff0004-red" data-slug-hash="WxJEJZ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Product Card">
-                    <span>See the Pen <a href="https://codepen.io/ff0004-red/pen/WxJEJZ">
-                    Product Card</a> by Alexandra K (<a href="https://codepen.io/ff0004-red">@ff0004-red</a>)
-                    on <a href="https://codepen.io">CodePen</a>.</span>
-                  </p>
-                 
-   
-           
-                  <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-                    Còn đây là nguồn mình sao chép: <a href="https://codepen.io/ff0004-red/pen/WxJEJZ" target="_blank">Product Card 2</a>.</p>
-
-                                      <!--New-->
-                  <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Product Card UI / CSS:</h4></div>
-                  <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586878762/product%20card/productcard_snippet_html_css_phan6_mix6xl.png" alt="Product Card(thẻ sản phẩm) xây dựng bằng HTML, CSS và Bootstrap Phần 6">
-                  <p class="mt-4">
-                   Product card này cũng có thiết kế giống ở trên nhưng điểm đặc biệt của nó là khi người dùng hover vào ảnh có thể xem chi tiết thông tin của sản phẩm. Ngoài ra nó còn có xếp hạng đánh giá sao 
-                   và tự động chuyển sang đặt hàng khi người dùng hover vào giá tiền hoặc nút mua hàng.
-                     Bây giờ để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
-                  </p>
-                  <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="linux" data-slug-hash="LjWrPZ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Product Card UI / CSS">
-                    <span>See the Pen <a href="https://codepen.io/linux/pen/LjWrPZ">
-                    Product Card UI / CSS</a> by Omar Dsooky (<a href="https://codepen.io/linux">@linux</a>)
-                    on <a href="https://codepen.io">CodePen</a>.</span>
-                  </p>
-             
-                 
-   
-           
-                  <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-                    Còn đây là nguồn mình sao chép: <a href="https://codepen.io/linux/pen/LjWrPZ" target="_blank">Product Card UI / CSS</a>.</p>
-
-                                      <!--New-->
-                  <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Product Detail Page:</h4></div>
-                  <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586880734/product%20card/productcard_snippet_html_css_js_phan7_jkljgs.png" alt="Product Card(thẻ sản phẩm) xây dựng bằng HTML, CSS và Bootstrap Phần 7">
-                  <p class="mt-4">
-                  Đây có thể xem là product card điển hình hay được sử dụng trong các trang web bán hàng đặc biệt là hàng điện tử.
-                  Nó còn có hiệu ứng tự động chuyển đổi các hình ảnh khác của sản phẩm và chức năng giúp xem đánh giá của người dùng sau khi mua sản phẩm trong component này.
-                     Bây giờ để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
-                  </p>
-                  <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="bGVVKad" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Product Detail Page(Source from Snippet)">
-                    <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/bGVVKad">
-                    Product Detail Page(Source from Snippet)</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                    on <a href="https://codepen.io">CodePen</a>.</span>
-                  </p>
-             
-             
-                 
-   
-           
-                  <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-                    Còn đây là nguồn mình sao chép: <a href="https://bootsnipp.com/snippets/XqvZr" target="_blank">Product Detail Page</a>.</p>
-
-                                                   <!--New-->
-                  <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Product Card 3:</h4></div>
-                  <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586882059/product%20card/productcard_snippet_html_css_phan8_p9xmtl.png" alt="Product Card(thẻ sản phẩm) xây dựng bằng HTML, CSS và Bootstrap Phần 8">
-                  <p class="mt-4">
-                  Thiết kế Product card này được nổi bật bởi sự thiết kế đơn giản cùng với việc phối màu cũng như sắp xếp các thành phần trong component. Nó chú trọng vào làm nổi bật  tiêu đề và giá thành bằng việc sử dụng font chữ lớn cộng thêm tô đậm và 
-                  hiển thị số người review cũng như số sao của sản phẩm để khách hàng có thể đánh giá về chất lượng và tiêu chí phù hợp với họ.
-                     Bây giờ để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
-                  </p>
-                  <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="GeorgeGedox" data-slug-hash="yEwoqP" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Product card">
-                    <span>See the Pen <a href="https://codepen.io/GeorgeGedox/pen/yEwoqP">
-                    Product card</a> by George V. (<a href="https://codepen.io/GeorgeGedox">@GeorgeGedox</a>)
-                    on <a href="https://codepen.io">CodePen</a>.</span>
-                  </p>
-             
-             
-                 
-   
-           
-                  <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-                    Còn đây là nguồn mình sao chép: <a href="https://codepen.io/GeorgeGedox/pen/yEwoqP" target="_blank">Product Card 3</a>.</p>
-
-                    
-                                                   <!--New-->
-                  <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">E-Commerce Card:</h4></div>
-                  <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586883080/product%20card/productcard_snippet_html_css_phan9_o77axc.png" alt="Product Card(thẻ sản phẩm) xây dựng bằng HTML, CSS và Bootstrap Phần 9">
-                  <p class="mt-4">
-                  Thiết kế Product card này đơn giản không cầu kì về màu sắc cũng như hiệu ứng trong component này. Nó chú trọng vào hai yếu tố chính đó là tiêu đề và giá của sản phẩm.
-                     Bây giờ để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
-                  </p>
-                  <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="jacobsauerhoefer" data-slug-hash="mVZwLB" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="E-Commerce Card">
-                    <span>See the Pen <a href="https://codepen.io/jacobsauerhoefer/pen/mVZwLB">
-                    E-Commerce Card</a> by Jacob Sauerhoefer (<a href="https://codepen.io/jacobsauerhoefer">@jacobsauerhoefer</a>)
-                    on <a href="https://codepen.io">CodePen</a>.</span>
-                  </p>
-            
-           
-                  <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-                    Còn đây là nguồn mình sao chép: <a href="https://codepen.io/jacobsauerhoefer/pen/mVZwLB" target="_blank">E-Commerce Card</a>.</p>
-
-                                                      <!--New-->
-                  <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Product:</h4></div>
-                  <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586883722/product%20card/productcard_snippet_html_css_phan10_eugh1w.png" alt="Product Card(thẻ sản phẩm) xây dựng bằng HTML, CSS và Bootstrap Phần 10">
-                  <p class="mt-4">
-                  Thiết kế Product card này cũng y chang ở trên nhưng nó có hiệu ứng click(nhấn) để xem thêm các hình ảnh khác của sản phẩm. Nó phù hợp với đa số thiết kế và bố cục của nhiều loại trang web bán hàng.
-                     Bây giờ để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
-                  </p>
-                  <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="kathykato" data-slug-hash="gdvjax" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Product">
-                    <span>See the Pen <a href="https://codepen.io/kathykato/pen/gdvjax">
-                    Product</a> by Katherine Kato (<a href="https://codepen.io/kathykato">@kathykato</a>)
-                    on <a href="https://codepen.io">CodePen</a>.</span>
-                  </p>
-           
-            
-           
-                  <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-                    Còn đây là nguồn mình sao chép: <a href="https://codepen.io/kathykato/pen/gdvjax" target="_blank">Product</a>.</p>
-
-
-
-
-
-
-          
-
-     
-            
+                               <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Pure HTML+CSS Accordion:</h4></div>
+                               <img class="img-thumbnail shadow p-2" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586971902/Accordion/Snippet_Accordion_HTML_CSS_Javascript_phan_10_ywqgpm.png" alt="Accordion xây dựng bằng HTML, CSS  Phần 10">
+                               <p class="mt-4">Đây là đoạn code và khi hiển thị trên web của Accordion này nhé:</p>
+                               <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="dandiws" data-slug-hash="qqyeed" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure HTML+CSS Accordion (Without Javascript)">
+                                <span>See the Pen <a href="https://codepen.io/dandiws/pen/qqyeed">
+                                Pure HTML+CSS Accordion (Without Javascript)</a> by Dandi Wiratsangka (<a href="https://codepen.io/dandiws">@dandiws</a>)
+                                on <a href="https://codepen.io">CodePen</a>.</span>
+                              </p>
+                             
+                         
+                           
+                       
+                           
+               
+                               <p class="mt-4">
+                                 Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
+                                 nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+                                 Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
+                               
+                                 
+                                 Còn đây là nguồn mình sao chép: <a href="https://codepen.io/dandiws/pen/qqyeed" target="_blank">Pure HTML+CSS Accordion</a>.
+                               </p>
+                                  
 
             
             <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
     
-        <p>Qua đây mình mong bài viết sẽ giúp bạn rút ngắn thời gian trong việc thiết kế giao diện Product Card (thẻ sản phẩm) trong Bootstrap 4 và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
+        <p>Qua đây mình mong bài viết sẽ giúp bạn rút ngắn thời gian trong việc thiết kế giao diện Accordion cho trang  web và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
          
       </div>
         </article>
