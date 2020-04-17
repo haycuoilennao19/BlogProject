@@ -58,6 +58,18 @@ router.get("/Javscript", function(req, res) {
       })
 })
 
+router.get("/Bootstrap", function(req, res) {
+
+    Blog
+        .find({title: {$regex : /Bootstrap/}})
+        .sort({_id: 1})
+        .exec(function(err, data) {
+            Blog.countDocuments().exec(function(err, count) {
+                if(err) return next(err)
+                res.render('category',{data: data})
+            })
+        })
+  })
 router.get("/:id", function(req, res) {
     var id = req.params.id;
     Blog.findOne({_id: id}, function(err, data) {
@@ -69,6 +81,9 @@ router.get("/:id", function(req, res) {
         }
     })
 })
+
+
+  
 
 
 

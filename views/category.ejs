@@ -92,7 +92,7 @@
   <% data.forEach(function(post){ %>
   <div class="card border-0 shadow card-row-article">
 
-    <h5 class="card-header"> <img src="<%-post.file%>" class="card-img-top header-img" alt="<%-post.subtitle%>"></h5>
+    <h5 class="card-header"> <img data-src="<%-post.file%>" class="card-img-top header-img lazyload" alt="<%-post.subtitle%>"></h5>
     <h3 class="button-article"><button type="button"
         class="<%-post.category%> btn shadow-sm rounded btn-success m-3 pl-5 pr-5"><%=post.category%></button></h3>
     <div class="card-body">
@@ -131,6 +131,9 @@
                 <a href="/article/Javscript" title="Thông Tin Về Javascript">
                 <button type="button"
                 class="btn shadow-sm rounded btn-success m-1 pl-2 pr-2 hvr-shrink"><i class="fa fa-tag" aria-hidden="true"></i> Javscript</button></a>
+                <a href="/article/Bootstrap" title="Thông Tin Về Bootstrap">
+                  <button type="button"
+                  class="btn shadow-sm rounded m-1 pl-2 pr-2 hvr-shrink bg-bootstrap-color"><i class="fa fa-tag" aria-hidden="true"></i> Bootstrap</button></a>
               </h3>
                 </div>
           </div>
@@ -193,7 +196,7 @@ $(document).ready(function() {
       })
     </script>
     
-
+    <script src="/javascripts/lazysizes.min.js" async></script>
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
       </script>
