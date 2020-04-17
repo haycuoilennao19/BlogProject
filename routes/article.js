@@ -3,6 +3,7 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var Blog = require('../model/blog')
 var db = require('../model/mongo_connect')
+var slug = require('slug')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -70,9 +71,23 @@ router.get("/Bootstrap", function(req, res) {
             })
         })
   })
-router.get("/:id", function(req, res) {
-    var id = req.params.id;
-    Blog.findOne({_id: id}, function(err, data) {
+
+//   router.get("/updateall", function(req, res) {
+
+//     Blog.find({}, function(err, data) {
+//         if (err) return done(err);
+//        for(i=0; i< data.length;i++){
+//           var slugTitle = slug(data[i].title)
+//           data[i].slug = slugTitle;
+//           data[i].save()
+//        }
+        
+//     })
+// })
+
+router.get("/:slug", function(req, res) {
+    var slug = req.params.slug;
+    Blog.findOne({slug: slug}, function(err, data) {
         if(data){
             res.render("article", {article: data})
         }
@@ -81,6 +96,18 @@ router.get("/:id", function(req, res) {
         }
     })
 })
+
+// router.get("/:id", function(req, res) {
+//     var id = req.params.id;
+//     Blog.findOne({_id: id}, function(err, data) {
+//         if(data){
+//             res.render("article", {article: data})
+//         }
+//         else{
+//             res.render('404page')
+//         }
+//     })
+// })
 
 
   

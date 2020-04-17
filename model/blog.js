@@ -11,7 +11,8 @@ var blogSchema = new Schema({
     comments: [{ body: String, date: Date }],
     date:String,
     file: String,
-    category: String
+    category: String,
+    slug:String
   });
 
  

@@ -14,7 +14,7 @@ var User = require('../model/User')
 var bcrypt = require('bcryptjs')
 
 var cloudinary = require('cloudinary').v2;
-
+var slug = require('slug')
 
 cloudinary.config({
     cloud_name: 'dn4nxz7f0',
@@ -215,6 +215,7 @@ router.post('/addpost', upload.single('file'), function (req, res) {
     var subtitle = req.body.subtitle;
     var categoryID = req.body.category;
     var time = new Date();
+    var slugTitle = slug(title);
     var date = `Ngày ${time.getDate().toString()} Tháng ${(time.getMonth() + 1).toString()}  Năm ${time.getFullYear().toString()}`
     var category;
    
@@ -226,6 +227,7 @@ router.post('/addpost', upload.single('file'), function (req, res) {
             title: title,
             content: content,
             subtitle: subtitle,
+            slug:slugTitle,
             file: result.url,
             category: category,
             date: date
