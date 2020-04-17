@@ -23,320 +23,347 @@
       <hr />
       <div class="card-text text-justify">
         <article>
-          <h2 class="bg-primary mb-4 text-white rounded p-2 shadow"><i class="fa fa-cube" aria-hidden="true"></i>Form
-            Tìm Kiếm Snippet trong Bootstrap</h2>
+          <h2 class="bg-primary mb-4 text-white rounded p-2 shadow"><i class="fa fa-cube" aria-hidden="true"></i>Breadcrumb Snippet trong Bootstrap</h2>
           <div class="article-title">
             <div class="progress-wrapper">
               <div class="progress-label"></div><progress></progress>
             </div>
           </div>
           <div class="text-content-article mt-5">
-            <p><i>Xin chào các bạn quay lại blog của mình. Hôm nay chúng ta sẽ đi tìm hiểu các form tìm kiếm
+            <p><i>Xin chào các bạn quay lại blog của mình. Hôm nay chúng ta sẽ đi tìm hiểu Breadcrumb snippet
                 bằng cách kết hợp HTML, CSS, Javascript và Bootstrap . Nào hãy cũng mình tìm hiểu nhé!</i>
             </p>
             <!--<div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Framework Bootstrap 4</h4></div>-->
 
             <p class="mt-4">
-              Theo mình thấy form tìm kiếm được sử dụng trong những trang web có nội dung lớn, nó giúp người dùng nhanh
-              chóng tìm kiểm được thông tin cần thiết mà họ mong muốn.
-              Ví dụ một trang web bán hàng với nhiều sản phẩm đa dạng thì khách hàng không thể ngồi coi từng sản phẩm
-              của chúng ta để chọn ra sản phẩm mà họ mong muốn vì sẽ tốn nhiều thời gian cũng như công sức của họ,
-              do đó form tìm kiếm là một ứng dụng hữu ích và lí tưởng trong trường hợp này. Theo mình tìm hiểu thì ngày
-              nay công cụ tìm kiếm bằng giọng nói sẽ chiếm khoảng 50% trong tương lai
-              do điện thoại thông minh ngày càng phát triển.
+              Breadcrumb là một loại sơ đồ điều hướng thứ cấp trong cấp trong trang web để giúp người dùng cải thiện các thao tác tìm kiếm  và  hiểu hơn về sơ đồ,  các thành phần  mà bạn phân bổ trong trang 
+              web. Ví dụ như trang web bán hàng của bạn có  nhiều  sản phẩm và được chia thành nhiều loại sản phẩm khác nhau thì bạn nên sử dụng component này. Chúng ta nên sử dụng Breadcrumb như một tiện ích
+              bổ sung chứ không nên thay thế thanh điều hướng chính (thường là component navbar) trong trang web.
 
             </p>
 
             <p>Để hiểu rõ hơn bạn xem ví dụ về trang tìm kiếm của Google dưới đây nha:</p>
-            <img class="img-thumbnail shadow p-2"
-              src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587041279/Form%20tim%20kiem/Vi-du-form-tim-kiem_f00na1.png"
-              alt="Ví dụ về form tìm kiếm Google">
+            <img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587126691/BreadCrumb/Vi-du-ve-breadcrumb-html-css-bootstrap-javascript_i544ij.png"
+              alt="Ví dụ về breadcrumb bằng trang web Dell">
             <p class="mt-4">
-              Mình có một số lưu ý khi thiết kế form tìm kiếm là nơi đặt vị trí phải giúp người dùng dễ nhìn thấy và
-              nhận ra nhất trong trang web của chúng ta.Theo mình tìm hiểu thì nơi tốt nhất để đặt là
-              trên cùng bên trái trên cùng bên phải của trang web. Điều quan trọng thứ hai là bạn cần làm rõ cho người
-              dùng biết nó là form tìm kiếm
-              bằng cách đặt tên cho button gửi form bằng icon tìm kiếm hoặc chữ "Tìm", "Tìm Kiếm"...
-              Và cuối cùng nó phải hài hòa với thiết kế
-              cũng như bố cục của trang và bạn cũng có thể các tùy chọn tìm kiếm nâng cao giúp hỗ trợ tìm kiếm thông tin
-              chính xác mà khách hàng mong muốn.
+              Ở ví dụ trên, mình có cần một số lưu ý nhỏ là các biểu tượng (icon) thường được sử dụng trong breadcrumb vì nó dễ dàng nhận biết để phân biết các danh mục trong
+              component này  như <code>danh mục cha <b>></b> danh mục con</code> hay <code>danh mục cha <b>/</b> danh mục con</code>... Do nó chỉ là tính năng hỗ trợ nên kích thước 
+              không nên quá lớn và phải ít nổi bật hơn so với thanh điều hướng chính (component navbar). Vị trí mà bạn nên đặt breadcrumb là phần trên của trang nằm bên dưới 
+              so với thanh điều hướng chính và thường được bố trí theo hướng nằm ngang.
+
             </p>
 
             <p class="mt-4">
 
-              Bây giờ mình sẽ giới thiệu tiếp một số component Form tìm kiếm được thiết kế sẵn bằng HTML, CSS, Bootstrap
+              Bây giờ mình sẽ giới thiệu tiếp một số component Breadcrumb được thiết kế sẵn bằng HTML, CSS, Bootstrap
               và
               Javascript giúp bạn có thể đa dạng lựa chọn phù hợp với bố cục cũng như thiết kế của trang web.
             </p>
 
             <!--New-->
             <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4">Form Tìm Kiếm Bootstrap 4:</h4>
+              <h4 class="text-primary ml-4 title-article-size">Flat CSS3 Breadcrumb:</h4>
             </div>
-            <img class="img-thumbnail shadow p-2"
-              src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587048196/Form%20tim%20kiem/Form-tim-kiem-bootstrap4-phan1_lnvbsm.png"
-              alt="Form Tìm Kiếm xây dựng bằng HTML, CSS và Bootstrap 4 Phần 1">
+            <img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587133227/BreadCrumb/breadcrumb-html-css-bootstrap-phan-1_jjjnyb.png"
+              alt="BreadCrumb xây dựng bằng HTML, CSS và Bootstrap Phần 1">
             <p class="mt-4">
-              Đây là tập những loại form tìm kiếm được sử dụng HTML, CSS và Bootstrap 4 để xây dựng. Bạn có thể tùy vào
-              bố cục và thiết kế của trang web mà lựa chọn phù hợp nha.
-              Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi các form này được hiển thị trên web ở dưới đây nhé:
+              Breadcrumb này được thiết kế theo phong cách Flat. Nó là xu hướng thiết kế sử dụng các hình dạng và biểu tượng phẳng như hình chữ nhật, hình tròn, hình tam giác... 
+              mà không sử dụng đến các yếu tố không cần thiêt như gradients, shadow... Việc kết hợp thêm icon vào mỗi liên kết giúp làm rõ nội dung và mục đích của liên kết hơn.
+              Do chỉ sử dụng HTML, CSS nên bạn có thể áp dụng rộng rãi cho nhiều loại trang web khác nhau.
+              Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi breadcrum này được hiển thị trên web ở dưới đây nhé:
             </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result"
-              data-user="haycuoilennao19" data-slug-hash="vYOorwp"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="O Tim Kiem Boostrap 4">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/vYOorwp">
-                  O Tim Kiem Boostrap 4</a> by haycuoilennao19 (<a
-                  href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="firatcftc" data-slug-hash="sHlnK" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Flat CSS3 Breadcrumb">
+              <span>See the Pen <a href="https://codepen.io/firatcftc/pen/sHlnK">
+              Flat CSS3 Breadcrumb</a> by Fırat çiftçi (<a href="https://codepen.io/firatcftc">@firatcftc</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
             </p>
             <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
             <p class="mt-4">
               Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
               nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-              Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
-              vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-              Còn đây là nguồn mình sao chép: <a href="https://codepen.io/haycuoilennao19/pen/vYOorwp"
-                target="_blank">Form Tìm Kiếm Bootstrap 4</a>.
-            </p>
-
-
-            <!--New-->
-            <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4"> Search Bar:</h4>
-            </div>
-            <img class="img-thumbnail shadow p-2"
-              src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587048894/Form%20tim%20kiem/Form-tim-kiem-html-css-phan-2_ntz2ol.png"
-              alt="Form Tìm Kiếm xây dựng bằng HTML, CSS và Bootstrap 4 Phần 2">
-            <p class="mt-4">
-              Form tìm kiếm này được thiết kế theo phong cách đơn giản với sự tập trung vào các chi tiết như hiệu ứng
-              chuyển động mở rộng thanh tìm kiếm, việc phối hợp màu sắc hài hòa
-              giữa các thành phần trong component này. Do chỉ viết bằng HTMl và CSS nên bạn có thể áp dụng cho nhiều
-              loại trang web khác nhau.
-              Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi form này được hiển thị trên web ở dưới đây nhé:
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
-              data-user="AlbertFeynman" data-slug-hash="BPvzWZ"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="UI #2 - Search Bar">
-              <span>See the Pen <a href="https://codepen.io/AlbertFeynman/pen/BPvzWZ">
-                  UI #2 - Search Bar</a> by Jove Angelevski (<a
-                  href="https://codepen.io/AlbertFeynman">@AlbertFeynman</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <p class="mt-4">
-              Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
-              nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
               Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
-                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
+              href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
               Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
               vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-              Còn đây là nguồn mình sao chép: <a href="https://codepen.io/AlbertFeynman/pen/BPvzWZ" target="_blank">
-                Search Bar</a>.
+              Còn đây là nguồn mình sao chép: <a href="https://codepen.io/firatcftc/pen/sHlnK"
+                target="_blank">Flat CSS3 Breadcrumb</a>.
             </p>
 
+            
             <!--New-->
             <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4">Search Bar Animation:</h4>
+              <h4 class="text-primary ml-4 title-article-size">Breadcrumbs:</h4>
             </div>
-            <img class="img-thumbnail shadow p-2"
-              src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587049597/Form%20tim%20kiem/Form-tim-kiem-html-css-phan-3_pdddyw.png"
-              alt="Form Tìm Kiếm xây dựng bằng HTML, CSS và Javascript 4 Phần 3">
+            <img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587135512/BreadCrumb/breadcrumb-html-css-bootstrap-phan-2_iyrcdd.png"
+              alt="BreadCrumb xây dựng bằng HTML, CSS và Bootstrap Phần 2">
             <p class="mt-4">
-              Form tìm kiếm này cũng được thiết kế như ở ví dụ như ở trân nhưng điểm sáng tạo ở đây là cách nó tạo hiệu
-              ứng bằng cách di chuyển phần thân của icon kính lúp thành biểu tượng dấu
-              "X". Bằng việc sử dụng màu nền cam và màu chữ trắng tạo độ tương phản cao giúp làm nổi bật form tìm kiếm
-              và do nó sử dụng button để mở rộng ô nhập form nên bạn có thể áp dụng
-              trên môi trường mobile để tiết kiệm diện tích và tăng độ tương tác hơn.
-              Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi form này được hiển thị trên web ở dưới đây nhé:
+              Theo mình thấy điều mà giúp breadcrumb này nổi bật là việc kết hợp hài hòa màu sắc vào trong bố cục và nó cũng được dùng để phân biệt các mục trong breadcrumb.
+              Component này nên được sử dụng trong các trang bán hàng thương mại điện tử hay trang web công ty mà việc sử dụng màu sắc để làm nổi bật nội dung cũng như khuyến khích tăng sự tương 
+              tác của người dùng.
+              Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi breadcrum này được hiển thị trên web ở dưới đây nhé:
             </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
-              data-user="MilanMilosev" data-slug-hash="JdgRpB"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Search bar animation">
-              <span>See the Pen <a href="https://codepen.io/MilanMilosev/pen/JdgRpB">
-                  Search bar animation</a> by Milan Milošev (<a
-                  href="https://codepen.io/MilanMilosev">@MilanMilosev</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="tomek8899" data-slug-hash="obJsu" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Breadcrumbs">
+              <span>See the Pen <a href="https://codepen.io/tomek8899/pen/obJsu">
+              Breadcrumbs</a> by tomek8899 (<a href="https://codepen.io/tomek8899">@tomek8899</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
             </p>
-
             <p class="mt-4">
               Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
               nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
               Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
               vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-              Còn đây là nguồn mình sao chép: <a href="https://codepen.io/MilanMilosev/pen/JdgRpB"
-                target="_blank">Search Bar Animation</a>.
+              Còn đây là nguồn mình sao chép: <a href="https://codepen.io/tomek8899/pen/obJsu"
+                target="_blank">Breadcrumbs</a>.
             </p>
 
+                    
             <!--New-->
             <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4">Fancy Search Box:</h4>
+              <h4 class="text-primary ml-4 title-article-size">Force Framework Breadcrumb:</h4>
             </div>
-            <img class="img-thumbnail shadow p-2"
-              src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587050007/Form%20tim%20kiem/Form-tim-kiem-html-css-javascript-phan-4_knfcjp.png"
-              alt="Form Tìm Kiếm xây dựng bằng HTML, CSS và Javascript Phần 4">
+            <img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587136134/BreadCrumb/breadcrumb-html-css-bootstrap-phan-3_jqe8ol.png"
+              alt="BreadCrumb xây dựng bằng HTML, CSS và Bootstrap Phần 3">
             <p class="mt-4">
-              Form tìm kiếm này được thiết kế theo phong cách sáng tạo gây ấn tượng mạnh cho người dùng bởi hiệu ứng của
-              component. Khi người dùng nhấn vào thì nó loại bỏ mọi
-              đường viền không cần thiết trong ô input và cũng đảo hướng icon tìm kiếm từ trái sang phải.
-              Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi form này được hiển thị trên web ở dưới đây nhé:
+              Đây là một tập hợp các loại breadcrumbs được xây dựng bằng HTML, CSS giúp bạn có thể đa dạng, phong phú trong việc lựa chọn sử dụng vào bố cục cũng như thiết kế của trang web.
+              Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi breadcrum này được hiển thị trên web ở dưới đây nhé:
             </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
-              data-user="tommysmall92" data-slug-hash="oPjaNW"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Fancy Search Box // SVG + CSS + jQuery">
-              <span>See the Pen <a href="https://codepen.io/tommysmall92/pen/oPjaNW">
-                  Fancy Search Box // SVG + CSS + jQuery</a> by Tommy Small (<a
-                  href="https://codepen.io/tommysmall92">@tommysmall92</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="mrdogra007" data-slug-hash="JONzgy" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Force Framework breadcrumb style modified CSS">
+              <span>See the Pen <a href="https://codepen.io/mrdogra007/pen/JONzgy">
+              Force Framework breadcrumb style modified CSS</a> by Nishant Dogra (<a href="https://codepen.io/mrdogra007">@mrdogra007</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
             </p>
-
             <p class="mt-4">
               Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
               nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
               Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
               vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-              Còn đây là nguồn mình sao chép: <a href="https://codepen.io/tommysmall92/pen/oPjaNW?page=1&"
-                target="_blank">Fancy Search Box</a>.
+              Còn đây là nguồn mình sao chép: <a href="https://codepen.io/mrdogra007/pen/JONzgy"
+                target="_blank">Force Framework Breadcrumb</a>.
             </p>
 
-
-            <!--New-->
-            <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4">CSS3 Animated Search Box:</h4>
-            </div>
-            <img class="img-thumbnail shadow p-2"
-              src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587050475/Form%20tim%20kiem/Form-tim-kiem-html-css-javascript-phan-5_yvhokh.png"
-              alt="Form Tìm Kiếm xây dựng bằng HTML, CSS và Javascript  Phần 5">
-            <p class="mt-4">
-              Form tìm kiếm cũng giống như ở trên nhưng nó nổi bật bởi sự phối hợp giữa màu nền và các màu trong thành
-              phần form. Ngoài ra hiệu ứng chuyển động là một điểm cộng cho form tìm kiếm này.
-              Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi form này được hiển thị trên web ở dưới đây nhé:
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="nuski"
-              data-slug-hash="NyzZGg"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="CSS3 Animated Search Box">
-              <span>See the Pen <a href="https://codepen.io/nuski/pen/NyzZGg">
-                  CSS3 Animated Search Box</a> by Nuski Hazeem (<a href="https://codepen.io/nuski">@nuski</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-
-            <p class="mt-4">
-              Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
-              nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-              Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
-              vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-              Còn đây là nguồn mình sao chép: <a href="https://codepen.io/nuski/pen/NyzZGg" target="_blank">CSS3
-                Animated Search Box</a>.
-            </p>
+                 <!--New-->
+                 <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                  <h4 class="text-primary ml-4 title-article-size">Snippet Breadcrumbs:</h4>
+                </div>
+                <img class="img-thumbnail shadow p-2 lazyload"
+                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587136848/BreadCrumb/breadcrumb-html-css-bootstrap-phan-4_f7wfnx.png"
+                  alt="BreadCrumb xây dựng bằng HTML, CSS và Bootstrap Phần 4">
+                <p class="mt-4">
+                  Đây là một tập hợp các loại breadcrumbs khác được xây dựng bằng HTML, CSS và Bootstrap 4 giúp bạn vừa có thể tìm hiểu thêm về component này cũng như áp dụng vào thực tế để xây dựng trang web.
+                  Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi breadcrum này được hiển thị trên web ở dưới đây nhé:
+                </p>
+                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="RwWaEmZ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Snippet Breadcrumbs(source from bootstrapious)">
+                  <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/RwWaEmZ">
+                  Snippet Breadcrumbs(source from bootstrapious)</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+               
+                <p class="mt-4">
+                  Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
+                  nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+                  Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
+                  vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
+                  Còn đây là nguồn mình sao chép: <a href="https://codepen.io/haycuoilennao19/pen/RwWaEmZ"
+                    target="_blank">Snippet Breadcrumbs</a>.
+                </p>
 
 
+                      <!--New-->
+                      <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                        <h4 class="text-primary ml-4 title-article-size">Breadcrumbs 2:</h4>
+                      </div>
+                      <img class="img-thumbnail shadow p-2 lazyload"
+                        data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587138153/BreadCrumb/breadcrumb-html-css-bootstrap-phan-5_mhdimc.png"
+                        alt="BreadCrumb xây dựng bằng HTML, CSS và Bootstrap Phần 5">
+                      <p class="mt-4">
+                        Breadcrumb này được thiết kế theo phong cách đơn giản với mục đích là miêu tả các bước hành động thường được sử dụng trong các trang thương mại điện tử như khi đặt hàng thì bạn  nhập thông tin cá nhân rồi chuyển sang 
+                        bước chọn phương thức thanh toán...
+                        Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi breadcrum này được hiển thị trên web ở dưới đây nhé:
+                      </p>
+                      <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="axelaredz" data-slug-hash="dqxjb" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Крошки | Breadcrumbs">
+                        <span>See the Pen <a href="https://codepen.io/axelaredz/pen/dqxjb">
+                        Крошки | Breadcrumbs</a> by Axelaredz (<a href="https://codepen.io/axelaredz">@axelaredz</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                      </p>
+             
+                     
+                      <p class="mt-4">
+                        Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
+                        nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+                        Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
+                        vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
+                        Còn đây là nguồn mình sao chép: <a href="https://codepen.io/axelaredz/pen/dqxjb"
+                          target="_blank">Breadcrumbs 2</a>.
+                      </p>
 
-            <!--New-->
-            <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4"> Pure CSS Expanding Search:</h4>
-            </div>
-            <img class="img-thumbnail shadow p-2"
-              src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587051431/Form%20tim%20kiem/Form-tim-kiem-html-css--phan-6_lk0mpb.png"
-              alt="Form Tìm Kiếm xây dựng bằng HTML, CSS và Javascript  Phần 6">
-            <p class="mt-4">
-              Nếu bạn cần một Form tìm kiếm mà chỉ sử dụng HTML, CSS và có những hiệu ứng chuyển động đẹp thì nên sử
-              dụng component này.
-              Cách thay đổi màu sắc hài hòa khi người dùng nhấn vào button với icon tìm kiếm tạo cảm giác thú vị cho
-              người sử dụng.
-              Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi form này được hiển thị trên web ở dưới đây nhé:
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
-              data-user="thebabydino" data-slug-hash="PBXRRm"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Pure CSS expanding search with custom properties (no Edge support)">
-              <span>See the Pen <a href="https://codepen.io/thebabydino/pen/PBXRRm">
-                  Pure CSS expanding search with custom properties (no Edge support)</a> by Ana Tudor (<a
-                  href="https://codepen.io/thebabydino">@thebabydino</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
+                      <!--New-->
+                      <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                        <h4 class="text-primary ml-4 title-article-size">EXPANDABLE BREADCRUMBS:</h4>
+                      </div>
+                      <img class="img-thumbnail shadow p-2 lazyload"
+                        data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587139096/BreadCrumb/breadcrumb-html-css-bootstrap-phan-6_rl6kbx.png"
+                        alt="BreadCrumb xây dựng bằng HTML, CSS và Bootstrap Phần 6">
+                      <p class="mt-4">
+                       Breadcrumb này cũng được thiết kế giống ở trên nhưng điểm khác biệt là bạn có thể ẩn nội dung để giảm diện tích trang đặc biệt là trên môi trường mobile và nó 
+                       chỉ xuất hiện khi người dùng hover vào từng danh mục. 
 
-
-
-            <p class="mt-4">
-              Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
-              nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-              Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
-              vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-              Còn đây là nguồn mình sao chép: <a href="https://codepen.io/thebabydino/pen/PBXRRm" target="_blank">
-                Pure CSS Expanding Search</a>.
-            </p>
-
-            <!--New-->
-            <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4">Colorlib Search Form v24:</h4>
-            </div>
-            <img class="img-thumbnail shadow p-2"
-              src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587052849/Form%20tim%20kiem/Form-tim-kiem-html-css--phan-7_vnwkas.png"
-              alt="Form Tìm Kiếm xây dựng bằng HTML, CSS và Javascript  Phần 7">
-            <p class="mt-4">
-              Form tìm kiếm này ngoài việc cung cấp ô nhập chữ thì nó còn cung cấp thẻ select giúp cho người dùng giảm bớt phạm vi tìm kiếm cũng như hiển thị chính xác thông tin họ mong muốn hơn. 
-              Việc phối hợp màu ảnh nền với màu trong form tạo cảm giác hài hòa hơn cho trang web.
-              Nếu bạn muốn biết thêm thông tin hay tải form này về thì xem bên dưới nhé:</p>
-            <a href="https://colorlib.com/download/1859/" class="btn btn-primary" title="Tải  Form Tìm Kiếm Từ Colorlib"
-              target="_blank" download=""><i class="fa fa-download" aria-hidden="true"></i> Tải Về</a>
-            <a href="https://colorlib.com/etc/searchf/colorlib-search-24/" class="btn btn-primary ml-4" target="_blank"
-              title="Thông tin về Form Từ Colorlib"><i class="fa fa-info" aria-hidden="true"></i> Demo Form</a>
-
-                       <!--New-->
-            <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4">Colorlib Search Form v23:</h4>
-            </div>
-            <img class="img-thumbnail shadow p-2"
-              src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587053564/Form%20tim%20kiem/Form-tim-kiem-html-css--phan-8_ep3aaq.png"
-              alt="Form Tìm Kiếm xây dựng bằng HTML, CSS và Javascript  Phần 8">
-            <p class="mt-4">
-              Form tìm kiếm này được thiết kế đơn giản bởi HTML, CSS và được responsive trên màn hình thiết bị khác nhau. Bạn cũng có thể thêm các gợi ý từ khóa bên dưới ô nhập chữ. Nó tạo
-              sự mềm mại và hiện đại bằng cách bo góc cho form cũng như sử dụng ảnh nền thú vị cho trang web.
-              Nếu bạn muốn biết thêm thông tin hay tải form này về thì xem bên dưới nhé:</p>
-            <a href="https://colorlib.com/download/1857/" class="btn btn-primary" title="Tải  Form Tìm Kiếm Từ Colorlib"
-              target="_blank" download=""><i class="fa fa-download" aria-hidden="true"></i> Tải Về</a>
-            <a href="https://colorlib.com/etc/searchf/colorlib-search-23/" class="btn btn-primary ml-4" target="_blank"
-              title="Thông tin về Form Từ Colorlib"><i class="fa fa-info" aria-hidden="true"></i> Demo Form</a>
+                        Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi breadcrum này được hiển thị trên web ở dưới đây nhé:
+                      </p>
+                      <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="phemestre" data-slug-hash="zglJf" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="zglJf">
+                        <span>See the Pen <a href="https://codepen.io/phemestre/pen/zglJf">
+                        zglJf</a> by Phelipe M Peres (<a href="https://codepen.io/phemestre">@phemestre</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                      </p>
+   
+             
+                     
+                      <p class="mt-4">
+                        Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
+                        nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+                        Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
+                        vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
+                        Còn đây là nguồn mình sao chép: <a href="https://codepen.io/phemestre/pen/zglJf"
+                          target="_blank">EXPANDABLE BREADCRUMBS</a>.
+                      </p>
+      
 
                           <!--New-->
-            <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4">Colorlib Search Form v9:</h4>
-            </div>
-            <img class="img-thumbnail shadow p-2"
-              src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587054007/Form%20tim%20kiem/Form-tim-kiem-html-css--phan-9_j05021.png"
-              alt="Form Tìm Kiếm xây dựng bằng HTML, CSS và Javascript  Phần 9">
-            <p class="mt-4">
-              Form này rất phù hợp với các trang trang web có nội dung lớn và đa dạng. Nó sử dụng những công cụ tìm kiếm nâng cao bằng cách đưa ra sự lựa chọn cho từng thể loại cụ thể.
-              Với thiết kế đơn giản giúp khách hàng có thể dễ dàng sử dụng và chức năng reset giúp làm mới lại toàn bộ nội dung trong form tìm kiếm. 
-              Nếu bạn muốn biết thêm thông tin hay tải form này về thì xem bên dưới nhé:</p>
-            <a href="https://colorlib.com/download/1827/" class="btn btn-primary" title="Tải  Form Tìm Kiếm Từ Colorlib"
-              target="_blank" download=""><i class="fa fa-download" aria-hidden="true"></i> Tải Về</a>
-            <a href="https://colorlib.com/etc/searchf/colorlib-search-9/" class="btn btn-primary ml-4" target="_blank"
-              title="Thông tin về Form Từ Colorlib"><i class="fa fa-info" aria-hidden="true"></i> Demo Form</a>
+                          <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                            <h4 class="text-primary ml-4 title-article-size">Cutup #6 Breadcrumbs:</h4>
+                          </div>
+                          <img class="img-thumbnail shadow p-2 lazyload"
+                            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587140042/BreadCrumb/breadcrumb-html-css-bootstrap-phan-7_jeahgh.png"
+                            alt="BreadCrumb xây dựng bằng HTML, CSS và Bootstrap Phần 7">
+                          <p class="mt-4">
+                           Breadcrumb này  thiết kế đơn giản được xây dựng bằng HTML, CSS với cấu trúc code  dễ hiểu giúp bạn có thể tinh chỉnh tùy theo ý muốn của mình. Điểm đặc biệt của component này là 
+                           sử dụng font chữ độc đáo và hiệu ứng chuyển màu khi người dùng hover vào từng danh mục. 
+    
+                            Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi breadcrum này được hiển thị trên web ở dưới đây nhé:
+                          </p>
+                          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="nana8" data-slug-hash="VEeoPW" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Cutup #6 Breadcrumbs">
+                            <span>See the Pen <a href="https://codepen.io/nana8/pen/VEeoPW">
+                            Cutup #6 Breadcrumbs</a> by nana (<a href="https://codepen.io/nana8">@nana8</a>)
+                            on <a href="https://codepen.io">CodePen</a>.</span>
+                          </p>
+            
+       
+                 
+                         
+                          <p class="mt-4">
+                            Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
+                            nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+                            Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
+                            href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
+                            Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
+                            vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
+                            Còn đây là nguồn mình sao chép: <a href="https://codepen.io/nana8/pen/VEeoPW"
+                              target="_blank">Cutup #6 Breadcrumbs</a>.
+                          </p>
 
-                                   <!--New-->
-            <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4">Colorlib Search Form v18:</h4>
-            </div>
-            <img class="img-thumbnail shadow p-2"
-              src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587054796/Form%20tim%20kiem/Form-tim-kiem-html-css-bootstrap-phan-10_twbf3k.png"
-              alt="Form Tìm Kiếm xây dựng bằng HTML, CSS và Javascript  Phần 10">
-            <p class="mt-4">
-              Đây là form tìm kiếm về khách sạn, xe hơi, chuyến bay với mỗi thể loại là các loại form tìm kiếm nâng cao tương ứng. Hiệu ứng ảnh nền làm cho form trong trang web nổi bật hơn và 
-              các  form này bạn có thể hoàn toàn điều chỉnh để phù hợp với mục đích sử dụng của mình.
-              Nếu bạn muốn biết thêm thông tin hay tải form này về thì xem bên dưới nhé:</p>
-            <a href="https://colorlib.com/download/1846/" class="btn btn-primary" title="Tải  Form Tìm Kiếm Từ Colorlib"
-              target="_blank" download=""><i class="fa fa-download" aria-hidden="true"></i> Tải Về</a>
-            <a href="https://colorlib.com/etc/searchf/colorlib-search-18/" class="btn btn-primary ml-4" target="_blank"
-              title="Thông tin về Form Từ Colorlib"><i class="fa fa-info" aria-hidden="true"></i> Demo Form</a>
+                                      <!--New-->
+                                      <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                                        <h4 class="text-primary ml-4 title-article-size">Breadcrumbs 3:</h4>
+                                      </div>
+                                      <img class="img-thumbnail shadow p-2 lazyload"
+                                        data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587140869/BreadCrumb/breadcrumb-html-css-bootstrap-phan-8_elingu.png"
+                                        alt="BreadCrumb xây dựng bằng HTML, CSS Phần 8">
+                                      <p class="mt-4">
+                                       Breadcrumb này  thiết kế đơn giản lấy màu trắng làm chủ đạo và điểm nổi bật cúa nó sử dụng hiệu ứng đổ bóng(shadow) và chuyển  màu khi người dùng hover.  Do
+                                       được xây dựng bằng HTML, CSS nên bạn có thể áp dụng cho nhiều loại bố cục, thiết kế web khác nhau.
+                
+                                        Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi breadcrum này được hiển thị trên web ở dưới đây nhé:
+                                      </p>
+                                      <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="brampeirs" data-slug-hash="LJzyBy" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="breadcrumb">
+                                        <span>See the Pen <a href="https://codepen.io/brampeirs/pen/LJzyBy">
+                                        breadcrumb</a> by Bram (<a href="https://codepen.io/brampeirs">@brampeirs</a>)
+                                        on <a href="https://codepen.io">CodePen</a>.</span>
+                                      </p>
+                               
+                   
+                             
+                                     
+                                      <p class="mt-4">
+                                        Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
+                                        nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+                              
+                                        Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
+                                        vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
+                                        Còn đây là nguồn mình sao chép: <a href="https://codepen.io/brampeirs/pen/LJzyBy"
+                                          target="_blank">Breadcrumbs 3</a>.
+                                      </p>
 
+                                         <!--New-->
+                                         <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                                          <h4 class="text-primary ml-4 title-article-size">Tiny CSS3 Round Breadcrumb:</h4>
+                                        </div>
+                                        <img class="img-thumbnail shadow p-2 lazyload"
+                                          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587141830/BreadCrumb/breadcrumb-html-css-bootstrap-phan-9_jlotf7.png"
+                                          alt="BreadCrumb xây dựng bằng HTML, CSS Phần 9">
+                                        <p class="mt-4">
+                                         Nếu bạn thích thiết kế theo phong cách mới lạ và mang lai cảm giác thú vị  cho người dùng thì bạn nên sử dụng component này. Nó sử dụng hình dạng tròn giúp người dùng tập trung nội dung hơn và
+                                         hiệu ứng mở rộng danh mục khi người dùng hover giúp tiết kiệm diện tích cho trang web.
+                  
+                                          Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi breadcrum này được hiển thị trên web ở dưới đây nhé:
+                                        </p>
+                                        <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="renaudtertrais" data-slug-hash="GfaCE" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Tiny CSS3 Round Breadcrumb">
+                                          <span>See the Pen <a href="https://codepen.io/renaudtertrais/pen/GfaCE">
+                                          Tiny CSS3 Round Breadcrumb</a> by Renaud Tertrais (<a href="https://codepen.io/renaudtertrais">@renaudtertrais</a>)
+                                          on <a href="https://codepen.io">CodePen</a>.</span>
+                                        </p>
+                                  
+                                 
+                     
+                               
+                                       
+                                        <p class="mt-4">
+                                          Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
+                                          nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+                                          Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
+                                          href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
+                                          Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
+                                          vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
+                                          Còn đây là nguồn mình sao chép: <a href="https://codepen.io/renaudtertrais/pen/GfaCE"
+                                            target="_blank">Tiny CSS3 Round Breadcrumb</a>.
+                                        </p>
+                                        
 
-
-
+                                              <!--New-->
+                                              <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                                                <h4 class="text-primary ml-4 title-article-size">Awesome Bootstrap Button Extension:</h4>
+                                              </div>
+                                              <img class="img-thumbnail shadow p-2 lazyload"
+                                                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587142348/BreadCrumb/breadcrumb-html-css-bootstrap-phan-10_iyqsar.png"
+                                                alt="BreadCrumb xây dựng bằng HTML, CSS Phần 10">
+                                              <p class="mt-4">
+                                               Breadcrum này được thiết kế bằng component button trong Bootstrap với vài chi tiết thay đổi nhỏ trong CSS giúp bạn có thể áp dụng hầu như đa số các thiết kế và bố 
+                                               cục trang web có hỗ trợ Bootstrap.
+                        
+                                                Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi breadcrum này được hiển thị trên web ở dưới đây nhé:
+                                              </p>
+                                              <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="picoboero" data-slug-hash="mpoyG" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Awesome bootstrap button extension">
+                                                <span>See the Pen <a href="https://codepen.io/picoboero/pen/mpoyG">
+                                                Awesome bootstrap button extension</a> by Pico Boero (<a href="https://codepen.io/picoboero">@picoboero</a>)
+                                                on <a href="https://codepen.io">CodePen</a>.</span>
+                                              </p>
+                                       
+                                        
+                                       
+                           
+                                     
+                                             
+                                              <p class="mt-4">
+                                                Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
+                                                nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+                                                Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
+                                                vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
+                                                Còn đây là nguồn mình sao chép: <a href="https://codepen.io/picoboero/pen/mpoyG"
+                                                  target="_blank">Awesome Bootstrap Button Extension</a>.
+                                              </p>
+                
 
 
 
@@ -443,5 +470,7 @@
       $('.nav-item').removeClass('hvr-underline-from-left')
     }
   }));
+
 </script>
+<script src="/javascripts/lazysizes.min.js" async></script>
 <%- include('footer') -%>
