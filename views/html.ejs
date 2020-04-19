@@ -23,347 +23,387 @@
       <hr />
       <div class="card-text text-justify">
         <article>
-          <h2 class="bg-primary mb-4 text-white rounded p-2 shadow"><i class="fa fa-cube" aria-hidden="true"></i>Breadcrumb Snippet trong Bootstrap</h2>
+          <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube" aria-hidden="true"></i>Modal
+            Snippet trong Bootstrap</h2>
           <div class="article-title">
             <div class="progress-wrapper">
               <div class="progress-label"></div><progress></progress>
             </div>
           </div>
           <div class="text-content-article mt-5">
-            <p><i>Xin chào các bạn quay lại blog của mình. Hôm nay chúng ta sẽ đi tìm hiểu Breadcrumb snippet
-                bằng cách kết hợp HTML, CSS, Javascript và Bootstrap . Nào hãy cũng mình tìm hiểu nhé!</i>
+            <p><i>Hôm nay chúng ta sẽ đi tìm hiểu cách thiết kế component modal bằng cách kết hợp HTML, CSS, Javascript
+                và Bootstrap nhé.</i>
             </p>
             <!--<div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Framework Bootstrap 4</h4></div>-->
 
             <p class="mt-4">
-              Breadcrumb là một loại sơ đồ điều hướng thứ cấp trong cấp trong trang web để giúp người dùng cải thiện các thao tác tìm kiếm  và  hiểu hơn về sơ đồ,  các thành phần  mà bạn phân bổ trong trang 
-              web. Ví dụ như trang web bán hàng của bạn có  nhiều  sản phẩm và được chia thành nhiều loại sản phẩm khác nhau thì bạn nên sử dụng component này. Chúng ta nên sử dụng Breadcrumb như một tiện ích
-              bổ sung chứ không nên thay thế thanh điều hướng chính (thường là component navbar) trong trang web.
+              Modal cơ bản là một hộp thoại hay cửa sổ bật lên được dùng để cung cấp thông tin quan trọng hay nhắc nhở
+              người dùng thực hiện các hoạt động cần thiết trước khi tiếp tục. Ví dụ bạn tạo nút thanh toán sản phẩm để
+              người dùng mua hàng thì thay vì phải chuyển sang trang khác để nhập thông tin thanh toán của người dùng
+              thì ở ngay trang mua hàng chúng ta sẽ sử dụng modal để chứa Form thanh toán để người dùng nhập vào.
+              Bạn có thể tìm hiểu thêm ở đây nhé: <a href="https://www.niemvuilaptrinh.com/article/Bootstrap-4-Phan-12"
+                target="_blank" title="Hướng Dẫn Modal">Modal</a>.
+              Việc chúng ta sử dụng component này giúp hạn chế việc tải trang gây khó chịu cho người dùng và tiết kiếm
+              không gian cho trang web của bạn.
 
             </p>
 
-            <p>Để hiểu rõ hơn bạn xem ví dụ về trang tìm kiếm của Google dưới đây nha:</p>
+
+
+
+            <p>Để hiểu rõ hơn bạn xem ví dụ về footer trong trang web dưới đây nhé:</p>
             <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587126691/BreadCrumb/Vi-du-ve-breadcrumb-html-css-bootstrap-javascript_i544ij.png"
-              alt="Ví dụ về breadcrumb bằng trang web Dell">
-            <p class="mt-4">
-              Ở ví dụ trên, mình có cần một số lưu ý nhỏ là các biểu tượng (icon) thường được sử dụng trong breadcrumb vì nó dễ dàng nhận biết để phân biết các danh mục trong
-              component này  như <code>danh mục cha <b>></b> danh mục con</code> hay <code>danh mục cha <b>/</b> danh mục con</code>... Do nó chỉ là tính năng hỗ trợ nên kích thước 
-              không nên quá lớn và phải ít nổi bật hơn so với thanh điều hướng chính (component navbar). Vị trí mà bạn nên đặt breadcrumb là phần trên của trang nằm bên dưới 
-              so với thanh điều hướng chính và thường được bố trí theo hướng nằm ngang.
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587219453/Modal%20snippet/V%C3%AD-d%E1%BB%A5-v%E1%BB%81-modal-html-css-bootstrap_dvhzka.png"
+              alt="Ví dụ về modal trong trang web">
 
+            <p class="mt-4">
+              Sau đây mình sẽ liệt kê danh sách các thành phần hay được tích hợp vào modal ở trong trang web hiện nay
+              nhé:
             </p>
-
+            <ul>
+              <li>
+                Hình ảnh, Video: Nó cho phép sử dụng hình ảnh, video thu nhỏ thay vì toàn phần giúp chúng ta tiết kiệm
+                không gian trang, bố cục có tổ chức hơn và giảm thời gian
+                tải trang web của bạn.
+              </li>
+              <li>
+                Form: Nó giúp người dùng xử lý nhập thông tin ngay trên trang mà không cần phải điều hướng gây ra sự khó
+                chịu cho người dùng. Các form hay được sử dụng là
+                contact form, đăng nhập, đăng ký, thanh toán...
+              </li>
+              <li>
+                Thông báo, chú ý (alert): Dùng để thông báo về một hành động quan trọng cần sự lựa chọn các phương thức
+                xử lý của người dùng. Ví dụ chúng ta có một danh sách sản phẩm trong database
+                và người dùng muốn xóa đi một sản phẩm nào đó thì bạn nên hiển thị modal để chắc chắn người dùng đã chọn
+                đúng sản phẩm và có thể đồng ý xóa hoặc hủy.
+              </li>
+              <li>
+                Tip: Cung cấp các mẹo hay thông tin thêm để sử dụng các chức năng trong trang web được tốt nhất có thể.
+              </li>
+            </ul>
             <p class="mt-4">
 
-              Bây giờ mình sẽ giới thiệu tiếp một số component Breadcrumb được thiết kế sẵn bằng HTML, CSS, Bootstrap
+              Bây giờ mình sẽ giới thiệu tiếp một số Modal được thiết kế sẵn bằng HTML, CSS, Bootstrap
               và
               Javascript giúp bạn có thể đa dạng lựa chọn phù hợp với bố cục cũng như thiết kế của trang web.
             </p>
 
             <!--New-->
             <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4 title-article-size">Flat CSS3 Breadcrumb:</h4>
+              <h4 class="text-primary ml-4 title-article-size">Pure Css Popup:</h4>
             </div>
             <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587133227/BreadCrumb/breadcrumb-html-css-bootstrap-phan-1_jjjnyb.png"
-              alt="BreadCrumb xây dựng bằng HTML, CSS và Bootstrap Phần 1">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587221908/Modal%20snippet/Modal-snippet-html-css-phan-1_ri01vd.png"
+              alt="Modal xây dựng bằng HTML, CSS  Phần 1">
             <p class="mt-4">
-              Breadcrumb này được thiết kế theo phong cách Flat. Nó là xu hướng thiết kế sử dụng các hình dạng và biểu tượng phẳng như hình chữ nhật, hình tròn, hình tam giác... 
-              mà không sử dụng đến các yếu tố không cần thiêt như gradients, shadow... Việc kết hợp thêm icon vào mỗi liên kết giúp làm rõ nội dung và mục đích của liên kết hơn.
-              Do chỉ sử dụng HTML, CSS nên bạn có thể áp dụng rộng rãi cho nhiều loại trang web khác nhau.
-              Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi breadcrum này được hiển thị trên web ở dưới đây nhé:
+              Modal này được xây dựng thiết kế đơn giản với hai phần riêng biệt là hình ảnh và nội dung. Bạn có thể thay
+              đổi nội dung tùy vào mục đích sử dụng của mình.
+              Và do được xây dựng bằng HTML, CSS nên chúng ta có thể áp dụng nó cho nhiều loại trang web khác nhau.
+              Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi modal này được hiển thị trên web ở dưới đây nhé:
             </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="firatcftc" data-slug-hash="sHlnK" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Flat CSS3 Breadcrumb">
-              <span>See the Pen <a href="https://codepen.io/firatcftc/pen/sHlnK">
-              Flat CSS3 Breadcrumb</a> by Fırat çiftçi (<a href="https://codepen.io/firatcftc">@firatcftc</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
+              data-user="erdemuslu" data-slug-hash="JpPLZJ"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Pure Css Popup">
+              <span>See the Pen <a href="https://codepen.io/erdemuslu/pen/JpPLZJ">
+                  Pure Css Popup</a> by Erdem Uslu (<a href="https://codepen.io/erdemuslu">@erdemuslu</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
             </p>
             <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
             <p class="mt-4">
               Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
               nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
               Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
-              href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
+                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
               Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
               vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-              Còn đây là nguồn mình sao chép: <a href="https://codepen.io/firatcftc/pen/sHlnK"
-                target="_blank">Flat CSS3 Breadcrumb</a>.
+              Còn đây là nguồn mình sao chép: <a href="https://codepen.io/erdemuslu/pen/JpPLZJ" target="_blank">Pure Css
+                Popup</a>.
+            </p>
+
+
+            <!--New-->
+            <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+              <h4 class="text-primary ml-4 title-article-size">No JS Modal Popup Window:</h4>
+            </div>
+            <img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587222486/Modal%20snippet/Modal-snippet-html-css-phan-2_e4xpuh.png"
+              alt="Modal xây dựng bằng HTML, CSS  Phần 2">
+            <p class="mt-4">
+              Modal này giúp chúng ta làm nổi bật nội dung của mình. Với việc mở rộng toàn màn hình và thiết lập nền màu đen cho modal 
+              giúp người dùng chỉ tập trung vào nội dung chính mà chúng ta muốn truyền đạt. Hiệu ứng chuyển động mượt mà khi nhấn vào button để hiện modal cũng là một điểm cộng
+              cho component này.
+              Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi modal này được hiển thị trên web ở dưới đây nhé:
+            </p>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="davidicus" data-slug-hash="ZYjoVO" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="No JS modal popup window">
+              <span>See the Pen <a href="https://codepen.io/davidicus/pen/ZYjoVO">
+              No JS modal popup window</a> by David Conner (<a href="https://codepen.io/davidicus">@davidicus</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+          
+            <p class="mt-4">
+              Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
+              nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+              Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
+                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
+              Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
+              vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
+              Còn đây là nguồn mình sao chép: <a href="https://codepen.io/davidicus/pen/ZYjoVO" target="_blank">No JS Modal Popup Window</a>.
             </p>
 
             
             <!--New-->
             <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4 title-article-size">Breadcrumbs:</h4>
+              <h4 class="text-primary ml-4 title-article-size">Popup / Overlay:</h4>
             </div>
             <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587135512/BreadCrumb/breadcrumb-html-css-bootstrap-phan-2_iyrcdd.png"
-              alt="BreadCrumb xây dựng bằng HTML, CSS và Bootstrap Phần 2">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587223504/Modal%20snippet/Modal-snippet-html-css-js-phan-3_pbrhny.png"
+              alt="Modal xây dựng bằng HTML, CSS, JS  Phần 3">
             <p class="mt-4">
-              Theo mình thấy điều mà giúp breadcrumb này nổi bật là việc kết hợp hài hòa màu sắc vào trong bố cục và nó cũng được dùng để phân biệt các mục trong breadcrumb.
-              Component này nên được sử dụng trong các trang bán hàng thương mại điện tử hay trang web công ty mà việc sử dụng màu sắc để làm nổi bật nội dung cũng như khuyến khích tăng sự tương 
-              tác của người dùng.
-              Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi breadcrum này được hiển thị trên web ở dưới đây nhé:
+             Sau đây là ví dụ về việc kết hợp hình ảnh với Modal. Khi người người nhấn vào hình thì modal sẽ mở rộng toàn bộ trang và chỉ chứa hình được chọn ở vị trí chính giữa giúp thu hút 
+             sự tập trung của người dùng hơn. Ngoài ra thành phần modal còn có tiêu đề và nội dung hình ảnh giúp cung cấp thêm thông tin cho người sử dụng.
+              Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi modal này được hiển thị trên web ở dưới đây nhé:
             </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="tomek8899" data-slug-hash="obJsu" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Breadcrumbs">
-              <span>See the Pen <a href="https://codepen.io/tomek8899/pen/obJsu">
-              Breadcrumbs</a> by tomek8899 (<a href="https://codepen.io/tomek8899">@tomek8899</a>)
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="supah" data-slug-hash="ZWGJeR" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="DailyUI #016 - Popup / Overlay">
+              <span>See the Pen <a href="https://codepen.io/supah/pen/ZWGJeR">
+              DailyUI #016 - Popup / Overlay</a> by Fabio Ottaviani (<a href="https://codepen.io/supah">@supah</a>)
               on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <p class="mt-4">
-              Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
-              nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-              Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
-              vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-              Còn đây là nguồn mình sao chép: <a href="https://codepen.io/tomek8899/pen/obJsu"
-                target="_blank">Breadcrumbs</a>.
             </p>
 
-                    
-            <!--New-->
-            <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4 title-article-size">Force Framework Breadcrumb:</h4>
-            </div>
-            <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587136134/BreadCrumb/breadcrumb-html-css-bootstrap-phan-3_jqe8ol.png"
-              alt="BreadCrumb xây dựng bằng HTML, CSS và Bootstrap Phần 3">
-            <p class="mt-4">
-              Đây là một tập hợp các loại breadcrumbs được xây dựng bằng HTML, CSS giúp bạn có thể đa dạng, phong phú trong việc lựa chọn sử dụng vào bố cục cũng như thiết kế của trang web.
-              Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi breadcrum này được hiển thị trên web ở dưới đây nhé:
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="mrdogra007" data-slug-hash="JONzgy" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Force Framework breadcrumb style modified CSS">
-              <span>See the Pen <a href="https://codepen.io/mrdogra007/pen/JONzgy">
-              Force Framework breadcrumb style modified CSS</a> by Nishant Dogra (<a href="https://codepen.io/mrdogra007">@mrdogra007</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
+          
             <p class="mt-4">
               Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
               nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+              Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
+                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
               Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
               vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-              Còn đây là nguồn mình sao chép: <a href="https://codepen.io/mrdogra007/pen/JONzgy"
-                target="_blank">Force Framework Breadcrumb</a>.
+              Còn đây là nguồn mình sao chép: <a href="https://codepen.io/supah/pen/ZWGJeR" target="_blank">Popup / Overlay</a>.
             </p>
+
 
                  <!--New-->
                  <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                  <h4 class="text-primary ml-4 title-article-size">Snippet Breadcrumbs:</h4>
+                  <h4 class="text-primary ml-4 title-article-size">Responsive Login/Signup Modal Window:</h4>
                 </div>
                 <img class="img-thumbnail shadow p-2 lazyload"
-                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587136848/BreadCrumb/breadcrumb-html-css-bootstrap-phan-4_f7wfnx.png"
-                  alt="BreadCrumb xây dựng bằng HTML, CSS và Bootstrap Phần 4">
+                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587224026/Modal%20snippet/Modal-snippet-html-css-js-phan-4_ya5cdm.png"
+                  alt="Modal xây dựng bằng HTML, CSS, JS  Phần 4">
                 <p class="mt-4">
-                  Đây là một tập hợp các loại breadcrumbs khác được xây dựng bằng HTML, CSS và Bootstrap 4 giúp bạn vừa có thể tìm hiểu thêm về component này cũng như áp dụng vào thực tế để xây dựng trang web.
-                  Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi breadcrum này được hiển thị trên web ở dưới đây nhé:
+                 Modal này sẽ hiển thị form  đăng nhập, đăng ký bằng cách nhấn vào nút tương ứng trên trang. Nó giúp người dùng không cần phải chuyển sang trang khác để thực hiện hành động và 
+                trong component modal có thể chuyển đổi qua lại giữa đăng nhập, đăng ký.
+                  Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi modal này được hiển thị trên web ở dưới đây nhé:
                 </p>
-                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="RwWaEmZ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Snippet Breadcrumbs(source from bootstrapious)">
-                  <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/RwWaEmZ">
-                  Snippet Breadcrumbs(source from bootstrapious)</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="codyhouse" data-slug-hash="pIrbg" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Responsive Login/Signup Modal Window">
+                  <span>See the Pen <a href="https://codepen.io/codyhouse/pen/pIrbg">
+                  Responsive Login/Signup Modal Window</a> by CodyHouse (<a href="https://codepen.io/codyhouse">@codyhouse</a>)
                   on <a href="https://codepen.io">CodePen</a>.</span>
                 </p>
-               
+    
+              
                 <p class="mt-4">
                   Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
                   nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+                  Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
+                    href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
                   Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
                   vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-                  Còn đây là nguồn mình sao chép: <a href="https://codepen.io/haycuoilennao19/pen/RwWaEmZ"
-                    target="_blank">Snippet Breadcrumbs</a>.
+                  Còn đây là nguồn mình sao chép: <a href="https://codepen.io/codyhouse/pen/pIrbg" target="_blank">Responsive Login/Signup Modal Window</a>.
                 </p>
 
-
-                      <!--New-->
-                      <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                        <h4 class="text-primary ml-4 title-article-size">Breadcrumbs 2:</h4>
-                      </div>
-                      <img class="img-thumbnail shadow p-2 lazyload"
-                        data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587138153/BreadCrumb/breadcrumb-html-css-bootstrap-phan-5_mhdimc.png"
-                        alt="BreadCrumb xây dựng bằng HTML, CSS và Bootstrap Phần 5">
-                      <p class="mt-4">
-                        Breadcrumb này được thiết kế theo phong cách đơn giản với mục đích là miêu tả các bước hành động thường được sử dụng trong các trang thương mại điện tử như khi đặt hàng thì bạn  nhập thông tin cá nhân rồi chuyển sang 
-                        bước chọn phương thức thanh toán...
-                        Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi breadcrum này được hiển thị trên web ở dưới đây nhé:
-                      </p>
-                      <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="axelaredz" data-slug-hash="dqxjb" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Крошки | Breadcrumbs">
-                        <span>See the Pen <a href="https://codepen.io/axelaredz/pen/dqxjb">
-                        Крошки | Breadcrumbs</a> by Axelaredz (<a href="https://codepen.io/axelaredz">@axelaredz</a>)
-                        on <a href="https://codepen.io">CodePen</a>.</span>
-                      </p>
-             
+                     <!--New-->
+                     <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                      <h4 class="text-primary ml-4 title-article-size">YouTube Video Modal:</h4>
+                    </div>
+                    <img class="img-thumbnail shadow p-2 lazyload"
+                      data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587225302/Modal%20snippet/Modal-snippet-html-css-js-phan-5_slp9tk.png"
+                      alt="Modal xây dựng bằng HTML, CSS, JS  Phần 5">
+                    <p class="mt-4">
+                     Đây là ví dụ giúp chúng ta kết hợp modal với video. Nó sử dụng hình ảnh chứa liên kết để  đại diện cho video và khi người dùng nhấn vào thì  sẽ gọi ra modal chứa video với màn hình 
+                     xung quanh bị làm mờ giúp  thu hút chú ý và tập trung của người dùng vào modal hơn.
                      
-                      <p class="mt-4">
-                        Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
-                        nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-                        Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
-                        vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-                        Còn đây là nguồn mình sao chép: <a href="https://codepen.io/axelaredz/pen/dqxjb"
-                          target="_blank">Breadcrumbs 2</a>.
-                      </p>
+                      Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi modal này được hiển thị trên web ở dưới đây nhé:
+                    </p>
+                    <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="mattamyot" data-slug-hash="dMGwyK" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="YouTube Video Modal">
+                      <span>See the Pen <a href="https://codepen.io/mattamyot/pen/dMGwyK">
+                      YouTube Video Modal</a> by Matt Amyot (<a href="https://codepen.io/mattamyot">@mattamyot</a>)
+                      on <a href="https://codepen.io">CodePen</a>.</span>
+                    </p>
+                
+        
+                  
+                    <p class="mt-4">
+                      Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
+                      nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+                      Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
+                      vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
+                      Còn đây là nguồn mình sao chép: <a href="https://codepen.io/mattamyot/pen/dMGwyK" target="_blank">YouTube Video Modal</a>.
+                    </p>
 
-                      <!--New-->
-                      <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                        <h4 class="text-primary ml-4 title-article-size">EXPANDABLE BREADCRUMBS:</h4>
-                      </div>
-                      <img class="img-thumbnail shadow p-2 lazyload"
-                        data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587139096/BreadCrumb/breadcrumb-html-css-bootstrap-phan-6_rl6kbx.png"
-                        alt="BreadCrumb xây dựng bằng HTML, CSS và Bootstrap Phần 6">
-                      <p class="mt-4">
-                       Breadcrumb này cũng được thiết kế giống ở trên nhưng điểm khác biệt là bạn có thể ẩn nội dung để giảm diện tích trang đặc biệt là trên môi trường mobile và nó 
-                       chỉ xuất hiện khi người dùng hover vào từng danh mục. 
+                         <!--New-->
+                         <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                          <h4 class="text-primary ml-4 title-article-size">Bootstrap Modal Animation Effects:</h4>
+                        </div>
+                        <img class="img-thumbnail shadow p-2 lazyload"
+                          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587226167/Modal%20snippet/Modal-snippet-html-css-js-phan-6_q4kgfc.png"
+                          alt="Modal xây dựng bằng HTML, CSS, JS  Phần 6">
+                        <p class="mt-4">
+                          Ngoài cách sử dụng các thành phần trong modal thì dưới đây mình sẽ giới thiệu thêm các hiệu ứng chuyển động giúp bạn có lựa chọn đa dạng và phong phú hơn. Ngoài ra cũng tăng 
+                          cảm giác trải nghiệm khi người dùng sử dụng trang web của chúng ta.
+                         
+                          Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi modal này được hiển thị trên web ở dưới đây nhé:
+                        </p>
+                        <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="wisnust10" data-slug-hash="qZaPBY" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="30+ Bootstrap Modal Animation Effects">
+                          <span>See the Pen <a href="https://codepen.io/wisnust10/pen/qZaPBY">
+                          30+ Bootstrap Modal Animation Effects</a> by Wisnu ST (<a href="https://codepen.io/wisnust10">@wisnust10</a>)
+                          on <a href="https://codepen.io">CodePen</a>.</span>
+                        </p>
 
-                        Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi breadcrum này được hiển thị trên web ở dưới đây nhé:
-                      </p>
-                      <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="phemestre" data-slug-hash="zglJf" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="zglJf">
-                        <span>See the Pen <a href="https://codepen.io/phemestre/pen/zglJf">
-                        zglJf</a> by Phelipe M Peres (<a href="https://codepen.io/phemestre">@phemestre</a>)
-                        on <a href="https://codepen.io">CodePen</a>.</span>
-                      </p>
-   
-             
-                     
-                      <p class="mt-4">
-                        Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
-                        nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-                        Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
-                        vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-                        Còn đây là nguồn mình sao chép: <a href="https://codepen.io/phemestre/pen/zglJf"
-                          target="_blank">EXPANDABLE BREADCRUMBS</a>.
-                      </p>
-      
+                    
+            
+                      
+                        <p class="mt-4">
+                          Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
+                          nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+                          Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
+                          vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
+                          Còn đây là nguồn mình sao chép: <a href="https://codepen.io/wisnust10/pen/qZaPBY" target="_blank">Bootstrap Modal Animation Effects</a>.
+                        </p>
+
+
+                        <!--New-->
+                        <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                          <h4 class="text-primary ml-4 title-article-size">Responsive Flexbox Based Modal:</h4>
+                        </div>
+                        <img class="img-thumbnail shadow p-2 lazyload"
+                          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587228118/Modal%20snippet/Modal-snippet-html-css-js-phan-7_b9wk9o.png"
+                          alt="Modal xây dựng bằng HTML, CSS, JS  Phần 7">
+                        <p class="mt-4">
+                          Đây là tập hợp các modal được thiết kế sẵn và được xây dựng bằng HTML, CSS và Javascript nên bạn có thể tự do lựa chọn và áp dụng vào trong web của mình.
+                          
+                          Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi modal này được hiển thị trên web ở dưới đây nhé:
+                        </p>
+                        <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="bchalker" data-slug-hash="pyvBmq" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Simple, flexible, and responsive flexbox-based modal">
+                          <span>See the Pen <a href="https://codepen.io/bchalker/pen/pyvBmq">
+                          Simple, flexible, and responsive flexbox-based modal</a> by Bryan Chalker (<a href="https://codepen.io/bchalker">@bchalker</a>)
+                          on <a href="https://codepen.io">CodePen</a>.</span>
+                        </p>
+           
+                    
+            
+                      
+                        <p class="mt-4">
+                          Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
+                          nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+                          Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
+                          href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
+                          Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
+                          vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
+                          Còn đây là nguồn mình sao chép: <a href="https://codepen.io/bchalker/pen/pyvBmq" target="_blank">Responsive Flexbox Based Modal</a>.
+                        </p>
 
                           <!--New-->
                           <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                            <h4 class="text-primary ml-4 title-article-size">Cutup #6 Breadcrumbs:</h4>
+                            <h4 class="text-primary ml-4 title-article-size">Modal Velocity.js Animation:</h4>
                           </div>
                           <img class="img-thumbnail shadow p-2 lazyload"
-                            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587140042/BreadCrumb/breadcrumb-html-css-bootstrap-phan-7_jeahgh.png"
-                            alt="BreadCrumb xây dựng bằng HTML, CSS và Bootstrap Phần 7">
+                            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587229563/Modal%20snippet/Modal-snippet-html-css-js-phan-8_yf8cxt.png"
+                            alt="Modal xây dựng bằng HTML, CSS, JS  Phần 8">
                           <p class="mt-4">
-                           Breadcrumb này  thiết kế đơn giản được xây dựng bằng HTML, CSS với cấu trúc code  dễ hiểu giúp bạn có thể tinh chỉnh tùy theo ý muốn của mình. Điểm đặc biệt của component này là 
-                           sử dụng font chữ độc đáo và hiệu ứng chuyển màu khi người dùng hover vào từng danh mục. 
-    
-                            Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi breadcrum này được hiển thị trên web ở dưới đây nhé:
+                            Đây là tập hợp các modal được thiết kế sẵn và được xây dựng bằng HTML, CSS, Javascript và plugin Velocity.js (bạn có thể tìm hiểu ở đây nhé: <a href="http://velocityjs.org/" target="_blank">Velocity.js</a>). Ngoài việc tạo hiệu 
+                            ứng chuyển động nó còn giúp chúng ta hiển thị vị trí của các tooltip (cung cấp thêm thông tin cho người dùng về nhiệm vụ, chức năng của nút) cho các button.
+                            
+                            Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi modal này được hiển thị trên web ở dưới đây nhé:
                           </p>
-                          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="nana8" data-slug-hash="VEeoPW" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Cutup #6 Breadcrumbs">
-                            <span>See the Pen <a href="https://codepen.io/nana8/pen/VEeoPW">
-                            Cutup #6 Breadcrumbs</a> by nana (<a href="https://codepen.io/nana8">@nana8</a>)
+                          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="macsupport" data-slug-hash="OPwvwx" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Bootstrap Modal and popover with Velocity.js animation">
+                            <span>See the Pen <a href="https://codepen.io/macsupport/pen/OPwvwx">
+                            Bootstrap Modal and popover with Velocity.js animation</a> by Mike Sozanski (<a href="https://codepen.io/macsupport">@macsupport</a>)
                             on <a href="https://codepen.io">CodePen</a>.</span>
-                          </p>
-            
-       
-                 
-                         
+                    
+                      
+              
+                        
                           <p class="mt-4">
                             Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
                             nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-                            Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
-                            href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
                             Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
                             vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-                            Còn đây là nguồn mình sao chép: <a href="https://codepen.io/nana8/pen/VEeoPW"
-                              target="_blank">Cutup #6 Breadcrumbs</a>.
+                            Còn đây là nguồn mình sao chép: <a href="https://codepen.io/macsupport/pen/OPwvwx" target="_blank">Modal Velocity.js Animation</a>.
                           </p>
 
-                                      <!--New-->
-                                      <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                                        <h4 class="text-primary ml-4 title-article-size">Breadcrumbs 3:</h4>
-                                      </div>
-                                      <img class="img-thumbnail shadow p-2 lazyload"
-                                        data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587140869/BreadCrumb/breadcrumb-html-css-bootstrap-phan-8_elingu.png"
-                                        alt="BreadCrumb xây dựng bằng HTML, CSS Phần 8">
-                                      <p class="mt-4">
-                                       Breadcrumb này  thiết kế đơn giản lấy màu trắng làm chủ đạo và điểm nổi bật cúa nó sử dụng hiệu ứng đổ bóng(shadow) và chuyển  màu khi người dùng hover.  Do
-                                       được xây dựng bằng HTML, CSS nên bạn có thể áp dụng cho nhiều loại bố cục, thiết kế web khác nhau.
-                
-                                        Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi breadcrum này được hiển thị trên web ở dưới đây nhé:
-                                      </p>
-                                      <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="brampeirs" data-slug-hash="LJzyBy" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="breadcrumb">
-                                        <span>See the Pen <a href="https://codepen.io/brampeirs/pen/LJzyBy">
-                                        breadcrumb</a> by Bram (<a href="https://codepen.io/brampeirs">@brampeirs</a>)
-                                        on <a href="https://codepen.io">CodePen</a>.</span>
-                                      </p>
-                               
-                   
-                             
-                                     
-                                      <p class="mt-4">
-                                        Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
-                                        nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-                              
-                                        Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
-                                        vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-                                        Còn đây là nguồn mình sao chép: <a href="https://codepen.io/brampeirs/pen/LJzyBy"
-                                          target="_blank">Breadcrumbs 3</a>.
-                                      </p>
 
-                                         <!--New-->
-                                         <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                                          <h4 class="text-primary ml-4 title-article-size">Tiny CSS3 Round Breadcrumb:</h4>
-                                        </div>
-                                        <img class="img-thumbnail shadow p-2 lazyload"
-                                          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587141830/BreadCrumb/breadcrumb-html-css-bootstrap-phan-9_jlotf7.png"
-                                          alt="BreadCrumb xây dựng bằng HTML, CSS Phần 9">
-                                        <p class="mt-4">
-                                         Nếu bạn thích thiết kế theo phong cách mới lạ và mang lai cảm giác thú vị  cho người dùng thì bạn nên sử dụng component này. Nó sử dụng hình dạng tròn giúp người dùng tập trung nội dung hơn và
-                                         hiệu ứng mở rộng danh mục khi người dùng hover giúp tiết kiệm diện tích cho trang web.
-                  
-                                          Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi breadcrum này được hiển thị trên web ở dưới đây nhé:
-                                        </p>
-                                        <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="renaudtertrais" data-slug-hash="GfaCE" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Tiny CSS3 Round Breadcrumb">
-                                          <span>See the Pen <a href="https://codepen.io/renaudtertrais/pen/GfaCE">
-                                          Tiny CSS3 Round Breadcrumb</a> by Renaud Tertrais (<a href="https://codepen.io/renaudtertrais">@renaudtertrais</a>)
-                                          on <a href="https://codepen.io">CodePen</a>.</span>
-                                        </p>
-                                  
-                                 
-                     
-                               
-                                       
-                                        <p class="mt-4">
-                                          Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
-                                          nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-                                          Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
-                                          href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
-                                          Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
-                                          vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-                                          Còn đây là nguồn mình sao chép: <a href="https://codepen.io/renaudtertrais/pen/GfaCE"
-                                            target="_blank">Tiny CSS3 Round Breadcrumb</a>.
-                                        </p>
-                                        
-
-                                              <!--New-->
-                                              <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                                                <h4 class="text-primary ml-4 title-article-size">Awesome Bootstrap Button Extension:</h4>
-                                              </div>
-                                              <img class="img-thumbnail shadow p-2 lazyload"
-                                                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587142348/BreadCrumb/breadcrumb-html-css-bootstrap-phan-10_iyqsar.png"
-                                                alt="BreadCrumb xây dựng bằng HTML, CSS Phần 10">
-                                              <p class="mt-4">
-                                               Breadcrum này được thiết kế bằng component button trong Bootstrap với vài chi tiết thay đổi nhỏ trong CSS giúp bạn có thể áp dụng hầu như đa số các thiết kế và bố 
-                                               cục trang web có hỗ trợ Bootstrap.
-                        
-                                                Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi breadcrum này được hiển thị trên web ở dưới đây nhé:
-                                              </p>
-                                              <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="picoboero" data-slug-hash="mpoyG" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Awesome bootstrap button extension">
-                                                <span>See the Pen <a href="https://codepen.io/picoboero/pen/mpoyG">
-                                                Awesome bootstrap button extension</a> by Pico Boero (<a href="https://codepen.io/picoboero">@picoboero</a>)
-                                                on <a href="https://codepen.io">CodePen</a>.</span>
-                                              </p>
-                                       
-                                        
-                                       
+                               <!--New-->
+                               <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                                <h4 class="text-primary ml-4 title-article-size">Nifty Modal Window or Slider Effects:</h4>
+                              </div>
+                              <img class="img-thumbnail shadow p-2 lazyload"
+                                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587229909/Modal%20snippet/Modal-snippet-html-css-js-phan-9_gytdoj.png"
+                                alt="Modal xây dựng bằng HTML, CSS, JS  Phần 9">
+                              <p class="mt-4">
+                                Đây là tập hợp các modal được thiết kế sẵn với HTML, CSS và Javscript và đặc biệt phù hợp với ai yêu thích hiệu ứng chuyển động 3D.
+                                Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi modal này được hiển thị trên web ở dưới đây nhé:
+                              </p>
+                              <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="coldarif" data-slug-hash="bgixa" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Nifty Modal Window or Slider Effects ">
+                                <span>See the Pen <a href="https://codepen.io/coldarif/pen/bgixa">
+                                Nifty Modal Window or Slider Effects </a> by coldarif (<a href="https://codepen.io/coldarif">@coldarif</a>)
+                                on <a href="https://codepen.io">CodePen</a>.</span>
+                              </p>
                            
-                                     
-                                             
-                                              <p class="mt-4">
-                                                Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
-                                                nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-                                                Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
-                                                vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-                                                Còn đây là nguồn mình sao chép: <a href="https://codepen.io/picoboero/pen/mpoyG"
-                                                  target="_blank">Awesome Bootstrap Button Extension</a>.
-                                              </p>
-                
+                        
+                          
+                  
+                            
+                              <p class="mt-4">
+                                Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
+                                nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+                                Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
+                                vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
+                                Còn đây là nguồn mình sao chép: <a href="https://codepen.io/coldarif/pen/bgixa" target="_blank">Nifty Modal Window or Slider Effects</a>.
+                              </p>
+
+
+                                <!--New-->
+                                <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                                  <h4 class="text-primary ml-4 title-article-size">Responsive Modal Design:</h4>
+                                </div>
+                                <img class="img-thumbnail shadow p-2 lazyload"
+                                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587230500/Modal%20snippet/Modal-snippet-html-css-js-phan-10_ys4by5.png"
+                                  alt="Modal xây dựng bằng HTML, CSS, JS  Phần 10">
+                                <p class="mt-4">
+                                  Đây là tập hợp các modal được thiết kế theo phong cách material. Bạn có thể tìm hiểu thêm về materail ở đây nhé <a href="https://material.io/design/introduction#getting-around" target="_blank">Tìm hiểu thêm</a>.
+                                  Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi modal này được hiển thị trên web ở dưới đây nhé:
+                                </p>
+                                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="ettrics" data-slug-hash="Jdjdzp" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Responsive Modal Design">
+                                  <span>See the Pen <a href="https://codepen.io/ettrics/pen/Jdjdzp">
+                                  Responsive Modal Design</a> by Ettrics (<a href="https://codepen.io/ettrics">@ettrics</a>)
+                                  on <a href="https://codepen.io">CodePen</a>.</span>
+                                </p>
+                   
+                          
+                            
+                    
+                              
+                                <p class="mt-4">
+                                  Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
+                                  nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+                                  Do đây sử dụng <b>Stylus</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
+                                  href="https://www.cssportal.com/stylus-to-css/" target="_blank">Stylus to CSS</a>.
+                                  Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
+                                  vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
+                                  Còn đây là nguồn mình sao chép: <a href="https://codepen.io/ettrics/pen/Jdjdzp" target="_blank">Responsive Modal Design</a>.
+                                </p>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -378,7 +418,8 @@
 
             <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
 
-            <p>Qua đây mình mong bài viết sẽ giúp bạn rút ngắn thời gian trong việc thiết kế giao diện Form tìm kiếm cho
+            <p>Qua đây mình mong bài viết sẽ giúp bạn rút ngắn thời gian trong việc thiết kế giao diện component Modal
+              cho
               trang web và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng
               hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
 
@@ -470,7 +511,6 @@
       $('.nav-item').removeClass('hvr-underline-from-left')
     }
   }));
-
 </script>
 <script src="/javascripts/lazysizes.min.js" async></script>
 <%- include('footer') -%>

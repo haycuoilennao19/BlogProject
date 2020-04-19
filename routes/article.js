@@ -4,6 +4,7 @@ var mongoose = require('mongoose');
 var Blog = require('../model/blog')
 var db = require('../model/mongo_connect')
 var slug = require('slug')
+var Categories = require('../model/categories')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -13,51 +14,122 @@ router.get('/', function(req, res, next) {
 router.get('/about', function(req, res, next) {
    res.render('about')
 });
-router.get('/Hoc-Bootstrap4', function(req, res, next) {
-    res.render("bootstrap4");
+  router.get('/css/0', function(req, res, next) {
+    res.render('404page')
+  })
+
+  router.get('/html/0', function(req, res, next) {
+    res.render('404page')
+  })
+
+  router.get('/Javascript/0', function(req, res, next) {
+    res.render('404page')
   })
 
 router.get("/css", function(req, res) {
-  Blog
-      .find({category:"CSS"})
-      .sort({_id: -1})
-      .exec(function(err, data) {
-          Blog.countDocuments().exec(function(err, count) {
-              if(err) return next(err)
-              res.render('category',{data: data})
-          })
-      })
-  // Blog.find({category:"CSS"}, function(err, data){
-  //   res.render("category", {data: data})
-  // })
+    var perpage = 6;
+    var page = req.params.page || 1
+    var category = "css"
+    Blog
+        .find({category:"CSS"})
+        .sort({_id: -1})
+        .skip((perpage * page) - perpage)
+        .limit(perpage)
+        .exec(function(err, products) {
+            Blog.countDocuments().exec(function(err, count) {
+                if(err) return next(err)
+                res.render('products-category',{posts: products, current:page, pages: Math.ceil(count / perpage), category: category})
+            })
+        })
 })
+
+
+router.get('/css/:page', function(req, res, next) {
+    var perpage = 6;
+    var page = req.params.page || 1
+    Blog
+        .find({category:"CSS"})
+        .sort({_id: -1})
+        .skip((perpage * page) - perpage)
+        .limit(perpage)
+        .exec(function(err, products) {
+            Blog.countDocuments().exec(function(err, count) {
+                if(err) return next(err)
+                res.render('products',{posts: products, current:parseInt(page), pages: Math.ceil(count / perpage)})
+            })
+        })
+})
+
 router.get("/html", function(req, res) {
-  Blog
-      .find({category:"HTML"})
-      .sort({_id: -1})
-      .exec(function(err, data) {
-          Blog.countDocuments().exec(function(err, count) {
-              if(err) return next(err)
-              res.render('category',{data: data})
-          })
-      })
-  // Blog.find({category:"HTML"}, function(err, data){
-  //   res.render("category", {data: data})
-  // })
+    var perpage = 6;
+    var page = req.params.page || 1
+    var category = "html"
+    Blog
+        .find({category:"HTML"})
+        .sort({_id: -1})
+        .skip((perpage * page) - perpage)
+        .limit(perpage)
+        .exec(function(err, products) {
+            Blog.countDocuments().exec(function(err, count) {
+                if(err) return next(err)
+                res.render('products-category',{posts: products, current:page, pages: Math.ceil(count / perpage), category: category})
+            })
+        })
 })
 
-router.get("/Javscript", function(req, res) {
 
-  Blog
-      .find({category:"Javscript"})
-      .sort({_id: -1})
-      .exec(function(err, data) {
-          Blog.countDocuments().exec(function(err, count) {
-              if(err) return next(err)
-              res.render('category',{data: data})
-          })
-      })
+router.get('/html/:page', function(req, res, next) {
+    var perpage = 6;
+    var page = req.params.page || 1
+    Blog
+        .find({category:"HTML"})
+        .sort({_id: -1})
+        .skip((perpage * page) - perpage)
+        .limit(perpage)
+        .exec(function(err, products) {
+            Blog.countDocuments().exec(function(err, count) {
+                if(err) return next(err)
+                res.render('products',{posts: products, current:parseInt(page), pages: Math.ceil(count / perpage)})
+            })
+        })
 })
+
+router.get("/Javascript", function(req, res) {
+
+    var perpage = 6;
+    var page = req.params.page || 1
+    var category = "Javascript"
+    Blog
+        .find({category:"Javascript"})
+        .sort({_id: -1})
+        .skip((perpage * page) - perpage)
+        .limit(perpage)
+        .exec(function(err, products) {
+            Blog.countDocuments().exec(function(err, count) {
+                if(err) return next(err)
+                res.render('products-category',{posts: products, current:page, pages: Math.ceil(count / perpage), category: category})
+            })
+        })
+})
+
+
+router.get('/Javascript/:page', function(req, res, next) {
+    var perpage = 6;
+    var page = req.params.page || 1
+    Blog
+        .find({category:"Javascript"})
+        .sort({_id: -1})
+        .skip((perpage * page) - perpage)
+        .limit(perpage)
+        .exec(function(err, products) {
+            Blog.countDocuments().exec(function(err, count) {
+                if(err) return next(err)
+                res.render('products',{posts: products, current:parseInt(page), pages: Math.ceil(count / perpage)})
+            })
+        })
+})
+
+
 
 router.get("/Bootstrap", function(req, res) {
 

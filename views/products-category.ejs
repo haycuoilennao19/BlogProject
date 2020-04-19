@@ -2,7 +2,7 @@
 <html lang="vi">
 
 <head>
-  <title>Niềm Vui Lập Trình - Chia Sẻ Kiến Thức Về Lập Trình</title>
+  <title>Niềm Vui Lập Trình - Hướng Dẫn Về <%-category-%></title>
   <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586594935/logo-via-logohub_2_a9ubsa.png">
   <link rel="alternate" href="http://www.niemvuilaptrinh.com/" hreflang="vi-vn" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -140,12 +140,12 @@
     <div class="row">          
       <div class="col-sm-6 order-6 text-right"  style="font-size:2rem">
        <% if (pages > 0 && current < pages) { %>
-       <a class="btn btn-outline-dark hvr-underline-from-center shadow-sm rounded-pill p-2"  title="Next" href="<%=current= current + 1%>">Trang Sau <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> </a>
+       <a class="btn btn-outline-dark hvr-underline-from-center shadow-sm rounded-pill p-2"  title="Next" href="/article/<%-category-%>/<%=current= current + 1%>">Trang Sau <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> </a>
        <%}  %>
      </div>
      <div class="col-sm-6" style="font-size:2rem">
        <% if (pages > 2 && current < pages +1 ) { %>
-        <a class="btn btn-outline-dark hvr-underline-from-center shadow-sm rounded-pill p-2"  title="Previous" href="<%=current= current - 2%>"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i>  Trang Trước</a>
+        <a class="btn btn-outline-dark hvr-underline-from-center shadow-sm rounded-pill p-2"  title="Previous" href="/article/<%-category-%>/<%=current= current - 2%>"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i>  Trang Trước</a>
          <%}%>
       
        </div>

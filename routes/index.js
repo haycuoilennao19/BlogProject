@@ -4,6 +4,7 @@ var mongoose = require('mongoose');
 var Blog = require('../model/blog')
 var db = require('../model/mongo_connect');
 
+
 router.get('/0', function(req, res, next) {
     res.render('404page')
   })
@@ -34,6 +35,7 @@ router.get('/', function(req, res, next) {
     //     if (err) return console.error(err);
     //     console.log("Save database success")
     //   });
+    
     var perpage = 6;
     var page = req.params.page || 1
     Blog
