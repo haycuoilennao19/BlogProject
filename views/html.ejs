@@ -23,90 +23,108 @@
       <hr />
       <div class="card-text text-justify">
         <article>
-          <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube" aria-hidden="true"></i>Modal
-            Snippet trong Bootstrap</h2>
+          <div class="row">
+            <div class="col-sm-12">
+              <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
+                  aria-hidden="true"></i>Timepicker
+                Snippet trong Bootstrap</h2>
+            </div>
+          </div>
+
           <div class="article-title">
             <div class="progress-wrapper">
               <div class="progress-label"></div><progress></progress>
             </div>
           </div>
           <div class="text-content-article mt-5">
-            <p><i>Hôm nay chúng ta sẽ đi tìm hiểu cách thiết kế component modal bằng cách kết hợp HTML, CSS, Javascript
+            <p><i>Hôm nay chúng ta sẽ đi tìm hiểu cách thiết kế component timepicker bằng cách kết hợp HTML, CSS,
+                Javascript
                 và Bootstrap nhé.</i>
             </p>
             <!--<div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Framework Bootstrap 4</h4></div>-->
 
             <p class="mt-4">
-              Modal cơ bản là một hộp thoại hay cửa sổ bật lên được dùng để cung cấp thông tin quan trọng hay nhắc nhở
-              người dùng thực hiện các hoạt động cần thiết trước khi tiếp tục. Ví dụ bạn tạo nút thanh toán sản phẩm để
-              người dùng mua hàng thì thay vì phải chuyển sang trang khác để nhập thông tin thanh toán của người dùng
-              thì ở ngay trang mua hàng chúng ta sẽ sử dụng modal để chứa Form thanh toán để người dùng nhập vào.
-              Bạn có thể tìm hiểu thêm ở đây nhé: <a href="https://www.niemvuilaptrinh.com/article/Bootstrap-4-Phan-12"
-                target="_blank" title="Hướng Dẫn Modal">Modal</a>.
-              Việc chúng ta sử dụng component này giúp hạn chế việc tải trang gây khó chịu cho người dùng và tiết kiếm
-              không gian cho trang web của bạn.
-
+              Timepicker là một ô nhập dữ liệu trong form giúp người dùng chọn thời gian tùy vào mục đích của chúng ta.
+              Ví dụ ở trong form đăng ký thì đa số đều bắt bạn nhập ngày, tháng, năm sinh thì đây chính là một kiểu
+              timepicker. Nó giúp cho người dùng tiết kiệm thời gian và hạn chế tối đa việc xảy ra các lỗi cú pháp khi
+              phải nhập bằng tay.
             </p>
 
-
-
-
-            <p>Để hiểu rõ hơn bạn xem ví dụ về footer trong trang web dưới đây nhé:</p>
+            <p>Để hiểu rõ hơn bạn xem ví dụ về Timepicker của trang web <a href="https://www.norwegian.com/us/"
+                title="ví dụ về dateppicker" target="_blank">hwww.norwegian.com</a> dưới đây nhé:</p>
             <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587219453/Modal%20snippet/V%C3%AD-d%E1%BB%A5-v%E1%BB%81-modal-html-css-bootstrap_dvhzka.png"
-              alt="Ví dụ về modal trong trang web">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587351233/Datepicker%20snippet/V%C3%AD-d%E1%BB%A5-v%E1%BB%81-datepicker-html-css-javascript_ejw86w.png"
+              alt="Ví dụ về Timepicker  trong trang web">
 
             <p class="mt-4">
-              Sau đây mình sẽ liệt kê danh sách các thành phần hay được tích hợp vào modal ở trong trang web hiện nay
-              nhé:
+              Khi bạn thiết kế một component timepicker thì việc chúng ta quan tâm là làm sao người dùng có thể dễ dàng
+              sử dụng nhất có thể. Ở đây bạn có thể phân tách ngày tháng năm thành ba phần
+              riêng biệt với mỗi phần là một ô select(chọn) hay sử dụng component dropdown để hiển thị giá trị. Một lưu
+              ý nhỏ là khi sử dụng timpicker dạng này bạn cần phải kiểm tra
+              dữ liệu thông tin người dùng nhập vào một cách cẩn thận vì rất có thể không đúng với thực tế ví dụ như
+              ngày 31 tháng 2.
+              Để hiểu rõ hơn bạn xem ví dụ sau đây nhé:
             </p>
-            <ul>
-              <li>
-                Hình ảnh, Video: Nó cho phép sử dụng hình ảnh, video thu nhỏ thay vì toàn phần giúp chúng ta tiết kiệm
-                không gian trang, bố cục có tổ chức hơn và giảm thời gian
-                tải trang web của bạn.
-              </li>
-              <li>
-                Form: Nó giúp người dùng xử lý nhập thông tin ngay trên trang mà không cần phải điều hướng gây ra sự khó
-                chịu cho người dùng. Các form hay được sử dụng là
-                contact form, đăng nhập, đăng ký, thanh toán...
-              </li>
-              <li>
-                Thông báo, chú ý (alert): Dùng để thông báo về một hành động quan trọng cần sự lựa chọn các phương thức
-                xử lý của người dùng. Ví dụ chúng ta có một danh sách sản phẩm trong database
-                và người dùng muốn xóa đi một sản phẩm nào đó thì bạn nên hiển thị modal để chắc chắn người dùng đã chọn
-                đúng sản phẩm và có thể đồng ý xóa hoặc hủy.
-              </li>
-              <li>
-                Tip: Cung cấp các mẹo hay thông tin thêm để sử dụng các chức năng trong trang web được tốt nhất có thể.
-              </li>
-            </ul>
-            <p class="mt-4">
+            <img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587354391/Datepicker%20snippet/v%C3%AD-d%E1%BB%A5-v%E1%BB%81-datepicker-dropdown_kgz05e.png"
+              alt="Ví dụ về Timepicker  Dropdown trong trang web">
 
-              Bây giờ mình sẽ giới thiệu tiếp một số Modal được thiết kế sẵn bằng HTML, CSS, Bootstrap
-              và
-              Javascript giúp bạn có thể đa dạng lựa chọn phù hợp với bố cục cũng như thiết kế của trang web.
+            <p class="mt-4">
+              Cách thứ hai là bạn có thể cho người dùng nhập vào giá trị số trong component timepicker với định dạng
+              được bạn xác định từ trước hay cũng có thể theo hướng dẫn của bạn.
+              Ví dụ khi bạn muốn hướng dẫn người dùng nhập ngày tháng năm theo đúng cú pháp thì có thể đặt hướng dẫn như
+              sau: <b>yyyy-mm-dd</b> thì khi đó người ta sẽ hiểu là
+              <b>năm-tháng-ngày</b>. Và bạn cũng nên kết hợp với calenderpicker để người dùng nhìn trên lịch có thể dễ
+              hình dung hơn. Để hiểu rõ hơn bạn hãy xem ví dụ dưới đây nhé:
             </p>
+            <img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587356557/Datepicker%20snippet/v%C3%AD-d%E1%BB%A5-v%E1%BB%81-datepicker-input-v%E1%BB%9Bi-calendarpicker_ziwjbh.png"
+              alt="Ví dụ về Timepicker  input  trong trang web">
+            <p class="mt-4">
+              Nếu bạn muốn tiết kiệm thời gian cũng như giảm các lỗi nhập sai định dạng cho người dùng thì nên sử dụng
+              calendar(lịch). Nó giúp hiển thị trực quan các ngày tháng trong năm và thân thiện với màn hình
+              moblie. Để hiểu rõ hơn bạn xem hình ảnh sau đây nhé:
+            </p>
+            <img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587357868/Datepicker%20snippet/vi-du-ve-datepicker-calendar_tyrlrt.png"
+              alt="Ví dụ về Timepicker  kết hợp calendar  trong trang web">
+
+            <p class="mt-4">
+              Chúng ta cũng có thể tích hợp chọn thời gian vào trong timepicker. Nó sẽ phù hợp với một số ngữ cảnh nhất
+              định như chúng ta muốn tạo một form đặt chuyến bay thì ngoài ngày tháng năm ra thì bạn cần biết
+              thêm thông tin mà người dùng muốn bay. Để hiểu rõ hơn bạn xem ví dụ dưới đây nhé:
+            </p>
+            <img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587358866/Datepicker%20snippet/vi-du-ve-timepicker-chon-thoi-gian_w5sq0q.png"
+              alt="Ví dụ về Timepicker  kết hợp input chọn thời gian  trong trang web">
+
+            <p class="mt-4">Sau khi hiểu sơ lược về timepicker thì sau đây mình sẽ giới thiệu một số Timepicker snippet
+              giúp bạn có sự lựa chọn tốt nhất để phù hợp với mục đích
+              cũng như thiết kế, bố cục trang web của bạn.
+            </p>
+
+
+
 
             <!--New-->
-            <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4 title-article-size">Pure Css Popup:</h4>
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h4 class="text-primary ml-4 title-article-size">jQuery UI Date Picker:</h4>
+              </div>
             </div>
+
             <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587221908/Modal%20snippet/Modal-snippet-html-css-phan-1_ri01vd.png"
-              alt="Modal xây dựng bằng HTML, CSS  Phần 1">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587365939/Datepicker%20snippet/jQuery_UI_Date_Picker_tez5tg.png"
+              alt="jQuery UI Date Picker">
             <p class="mt-4">
-              Modal này được xây dựng thiết kế đơn giản với hai phần riêng biệt là hình ảnh và nội dung. Bạn có thể thay
-              đổi nội dung tùy vào mục đích sử dụng của mình.
-              Và do được xây dựng bằng HTML, CSS nên chúng ta có thể áp dụng nó cho nhiều loại trang web khác nhau.
-              Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi modal này được hiển thị trên web ở dưới đây nhé:
+              Đây là đoạn code và khi hiển thị trên web của Timepicker này nhé:
             </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
-              data-user="erdemuslu" data-slug-hash="JpPLZJ"
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="aktorou"
+              data-slug-hash="MymKoB"
               style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Pure Css Popup">
-              <span>See the Pen <a href="https://codepen.io/erdemuslu/pen/JpPLZJ">
-                  Pure Css Popup</a> by Erdem Uslu (<a href="https://codepen.io/erdemuslu">@erdemuslu</a>)
+              data-pen-title="jQuery UI Date Picker">
+              <span>See the Pen <a href="https://codepen.io/aktorou/pen/MymKoB">
+                  jQuery UI Date Picker</a> by Ashley Ktorou (<a href="https://codepen.io/aktorou">@aktorou</a>)
                 on <a href="https://codepen.io">CodePen</a>.</span>
             </p>
             <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
@@ -117,31 +135,32 @@
                 href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
               Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
               vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-              Còn đây là nguồn mình sao chép: <a href="https://codepen.io/erdemuslu/pen/JpPLZJ" target="_blank">Pure Css
-                Popup</a>.
+              Còn đây là nguồn mình sao chép: <a href="https://codepen.io/aktorou/pen/MymKoB" target="_blank">jQuery UI
+                Date Picker</a>.
             </p>
 
 
             <!--New-->
-            <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4 title-article-size">No JS Modal Popup Window:</h4>
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h4 class="text-primary ml-4 title-article-size">Bootstrap Datepickers Inline Sliding:</h4>
+              </div>
             </div>
             <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587222486/Modal%20snippet/Modal-snippet-html-css-phan-2_e4xpuh.png"
-              alt="Modal xây dựng bằng HTML, CSS  Phần 2">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587366188/Datepicker%20snippet/Bootstrap_Datepickers_Inline_Sliding_l8jacb.png"
+              alt="Bootstrap Datepickers Inline Sliding">
             <p class="mt-4">
-              Modal này giúp chúng ta làm nổi bật nội dung của mình. Với việc mở rộng toàn màn hình và thiết lập nền màu đen cho modal 
-              giúp người dùng chỉ tập trung vào nội dung chính mà chúng ta muốn truyền đạt. Hiệu ứng chuyển động mượt mà khi nhấn vào button để hiện modal cũng là một điểm cộng
-              cho component này.
-              Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi modal này được hiển thị trên web ở dưới đây nhé:
+              Đây là đoạn code và khi hiển thị trên web của Timepicker này nhé:
             </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="davidicus" data-slug-hash="ZYjoVO" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="No JS modal popup window">
-              <span>See the Pen <a href="https://codepen.io/davidicus/pen/ZYjoVO">
-              No JS modal popup window</a> by David Conner (<a href="https://codepen.io/davidicus">@davidicus</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="vushe"
+              data-slug-hash="gmrMjv"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Bootstrap datepickers inline sliding (demo)">
+              <span>See the Pen <a href="https://codepen.io/vushe/pen/gmrMjv">
+                  Bootstrap datepickers inline sliding (demo)</a> by Valentin Dzhankhotov (<a
+                  href="https://codepen.io/vushe">@vushe</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
             </p>
-            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-          
             <p class="mt-4">
               Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
               nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
@@ -149,150 +168,297 @@
                 href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
               Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
               vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-              Còn đây là nguồn mình sao chép: <a href="https://codepen.io/davidicus/pen/ZYjoVO" target="_blank">No JS Modal Popup Window</a>.
+              Còn đây là nguồn mình sao chép: <a href="https://codepen.io/vushe/pen/gmrMjv" target="_blank">Bootstrap
+                Datepickers Inline Sliding</a>.
             </p>
 
-            
+
             <!--New-->
-            <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4 title-article-size">Popup / Overlay:</h4>
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h4 class="text-primary ml-4 title-article-size">Bootstrap Date_Picker Vaildate:</h4>
+              </div>
             </div>
             <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587223504/Modal%20snippet/Modal-snippet-html-css-js-phan-3_pbrhny.png"
-              alt="Modal xây dựng bằng HTML, CSS, JS  Phần 3">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587367733/Datepicker%20snippet/Bootstrap_Date_Picker_Vaildate_lgryhs.png"
+              alt="Bootstrap Date_Picker Vaildate">
             <p class="mt-4">
-             Sau đây là ví dụ về việc kết hợp hình ảnh với Modal. Khi người người nhấn vào hình thì modal sẽ mở rộng toàn bộ trang và chỉ chứa hình được chọn ở vị trí chính giữa giúp thu hút 
-             sự tập trung của người dùng hơn. Ngoài ra thành phần modal còn có tiêu đề và nội dung hình ảnh giúp cung cấp thêm thông tin cho người sử dụng.
-              Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi modal này được hiển thị trên web ở dưới đây nhé:
+              Đây là đoạn code và khi hiển thị trên web của Timepicker này nhé:
             </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="supah" data-slug-hash="ZWGJeR" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="DailyUI #016 - Popup / Overlay">
-              <span>See the Pen <a href="https://codepen.io/supah/pen/ZWGJeR">
-              DailyUI #016 - Popup / Overlay</a> by Fabio Ottaviani (<a href="https://codepen.io/supah">@supah</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="sykarra"
+              data-slug-hash="eWKOjR"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="bootstrap date picker vaildate">
+              <span>See the Pen <a href="https://codepen.io/sykarra/pen/eWKOjR">
+                  bootstrap date picker vaildate</a> by Peter Schöning (<a
+                  href="https://codepen.io/sykarra">@sykarra</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
             </p>
 
-          
+
             <p class="mt-4">
               Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
               nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-              Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
-                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
               Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
               vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-              Còn đây là nguồn mình sao chép: <a href="https://codepen.io/supah/pen/ZWGJeR" target="_blank">Popup / Overlay</a>.
+              Còn đây là nguồn mình sao chép: <a href="https://codepen.io/sykarra/pen/eWKOjR" target="_blank">Bootstrap
+                Date_Picker Vaildate</a>.
             </p>
 
 
-                 <!--New-->
-                 <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                  <h4 class="text-primary ml-4 title-article-size">Responsive Login/Signup Modal Window:</h4>
+
+            <!--New-->
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h4 class="text-primary ml-4 title-article-size">Air-Datepicker:</h4>
+              </div>
+            </div>
+            <img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587368168/Datepicker%20snippet/Air-Datepicker_zgz3in.png"
+              alt="Bootstrap Date_Picker Vaildate">
+            <p class="mt-4">
+              Đây là đoạn code và khi hiển thị trên web của Timepicker này nhé:
+            </p>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
+              data-user="ankithingarajiya" data-slug-hash="jjOxMo"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="air-datepicker">
+              <span>See the Pen <a href="https://codepen.io/ankithingarajiya/pen/jjOxMo">
+                  air-datepicker</a> by Ankit Hingarajiya (<a
+                  href="https://codepen.io/ankithingarajiya">@ankithingarajiya</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+
+
+
+            <p class="mt-4">
+              Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
+              nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+              Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
+              vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
+              Còn đây là nguồn mình sao chép: <a href="https://codepen.io/ankithingarajiya/pen/jjOxMo"
+                target="_blank">Air-Datepicker</a>.
+            </p>
+
+
+            <!--New-->
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h4 class="text-primary ml-4 title-article-size">Flatpickr:</h4>
+              </div>
+            </div>
+            <img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587369103/Datepicker%20snippet/Timepicker-flat_g0rmat.png"
+              alt="Timepicker Flatpickr">
+            <p class="mt-4">
+              Đây là đoạn code và khi hiển thị trên web của Timepicker này nhé:
+            </p>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result"
+              data-user="riyos94" data-slug-hash="xppbBj"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Flatpickr">
+              <span>See the Pen <a href="https://codepen.io/riyos94/pen/xppbBj">
+                  Flatpickr</a> by Rio Dwi Prabowo (<a href="https://codepen.io/riyos94">@riyos94</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+
+
+
+
+            <p class="mt-4">
+              Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
+              nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+              Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
+              vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
+              Còn đây là nguồn mình sao chép: <a href="https://codepen.io/riyos94/pen/xppbBj"
+                target="_blank">Flatpickr</a>.
+            </p>
+
+
+            <!--New-->
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h4 class="text-primary ml-4 title-article-size">Date and Time Picker:</h4>
+              </div>
+            </div>
+            <img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587370268/Datepicker%20snippet/Date-Time-Picker-Bootstrap_msdaps.png"
+              alt="Time và Date Picker">
+            <p class="mt-4">
+              Đây là đoạn code và khi hiển thị trên web của Timepicker này nhé:
+            </p>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result"
+              data-user="haycuoilennao19" data-slug-hash="YzyGWKa"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title=" Date and Time Picker(Source from bbbootstrap)">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/YzyGWKa">
+                  Date and Time Picker(Source from bbbootstrap)</a> by haycuoilennao19 (<a
+                  href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+
+
+
+
+            <p class="mt-4">
+              Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
+              nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+              Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
+              vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
+              Còn đây là nguồn mình sao chép: <a
+                href="https://bbbootstrap.com/snippets/dark-themed-date-and-time-picker-76906698" target="_blank">Date
+                and Time Picker</a>.
+            </p>
+
+
+            <!--New-->
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h4 class="text-primary ml-4 title-article-size">Bootstrap Datepicker:</h4>
+              </div>
+            </div>
+            <img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587370781/Datepicker%20snippet/Bootstrap-Datepicker_gudpax.png"
+              alt="Bootstrap Datepicker">
+            <p class="mt-4">
+              Đây là đoạn code và khi hiển thị trên web của Timepicker này nhé:
+            </p>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="hexagoncircle" data-slug-hash="XdZrKa" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Bootstrap Datepicker Demo">
+              <span>See the Pen <a href="https://codepen.io/hexagoncircle/pen/XdZrKa">
+              Bootstrap Datepicker Demo</a> by Ryan Mulligan (<a href="https://codepen.io/hexagoncircle">@hexagoncircle</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+ 
+
+
+
+
+            <p class="mt-4">
+              Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
+              nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+              Do đây sử dụng <b>SCSS, Pug</b> nếu bạn muốn sử dụng HTML, CSS thì có thể xem tại đây nha : 
+              <a
+              href="https://pughtml.com/" target="_blank">Pug to HTML</a> và
+              <a
+              href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
+              Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
+              vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
+              Còn đây là nguồn mình sao chép: <a
+                href="https://codepen.io/hexagoncircle/pen/XdZrKa" target="_blank">Bootstrap Datepicker</a>.
+            </p>
+
+
+               <!--New-->
+               <div class="row">
+                <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                  <h4 class="text-primary ml-4 title-article-size">Bootstrap Date Range Picker:</h4>
+                </div>
+              </div>
+              <img class="img-thumbnail shadow p-2 lazyload"
+                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587371371/Datepicker%20snippet/Date-range-picker_mawmzh.png"
+                alt="Bootstrap Date Range Picker">
+              <p class="mt-4">
+                Đây là đoạn code và khi hiển thị trên web của Timepicker này nhé:
+              </p>
+              <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="haycuoilennao19" data-slug-hash="vYNXKmV" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Bootstrap Date Range Picker(Source from bbootstrap)">
+                <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/vYNXKmV">
+                Bootstrap Date Range Picker(Source from bbootstrap)</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+              </p>
+             
+  
+  
+  
+  
+              <p class="mt-4">
+                Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
+                nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+                Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
+                vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
+                Còn đây là nguồn mình sao chép: <a
+                  href="https://bbbootstrap.com/snippets/green-themed-datepicker-date-range-54853616" target="_blank">Bootstrap Date Range Picker</a>.
+              </p>
+
+
+              
+               <!--New-->
+               <div class="row">
+                <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                  <h4 class="text-primary ml-4 title-article-size">Datepicker With Date Range:</h4>
+                </div>
+              </div>
+              <img class="img-thumbnail shadow p-2 lazyload"
+                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587371728/Datepicker%20snippet/Datepicker-With-Date-Range_hgebdu.png"
+                alt="Datepicker With Date Range">
+              <p class="mt-4">
+                Đây là đoạn code và khi hiển thị trên web của Timepicker này nhé:
+              </p>
+              <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="haycuoilennao19" data-slug-hash="GRpjqvz" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Datepicker With Date Range(Source from  bbbootstrap)">
+                <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/GRpjqvz">
+                Datepicker With Date Range(Source from  bbbootstrap)</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+              </p>
+             
+              <p class="mt-4">
+                Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
+                nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+                Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
+                vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
+                Còn đây là nguồn mình sao chép: <a
+                  href="https://bbbootstrap.com/snippets/orange-themed-datepicker-date-range-30620898" target="_blank">Datepicker With Date Range</a>.
+              </p>
+
+
+                <!--New-->
+                <div class="row">
+                  <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                    <h4 class="text-primary ml-4 title-article-size">Datepicker:</h4>
+                  </div>
                 </div>
                 <img class="img-thumbnail shadow p-2 lazyload"
-                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587224026/Modal%20snippet/Modal-snippet-html-css-js-phan-4_ya5cdm.png"
-                  alt="Modal xây dựng bằng HTML, CSS, JS  Phần 4">
+                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587372204/Datepicker%20snippet/Date-Picker_hzzn1u.png"
+                  alt="Datepicker">
                 <p class="mt-4">
-                 Modal này sẽ hiển thị form  đăng nhập, đăng ký bằng cách nhấn vào nút tương ứng trên trang. Nó giúp người dùng không cần phải chuyển sang trang khác để thực hiện hành động và 
-                trong component modal có thể chuyển đổi qua lại giữa đăng nhập, đăng ký.
-                  Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi modal này được hiển thị trên web ở dưới đây nhé:
+                  Đây là đoạn code và khi hiển thị trên web của Timepicker này nhé:
                 </p>
-                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="codyhouse" data-slug-hash="pIrbg" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Responsive Login/Signup Modal Window">
-                  <span>See the Pen <a href="https://codepen.io/codyhouse/pen/pIrbg">
-                  Responsive Login/Signup Modal Window</a> by CodyHouse (<a href="https://codepen.io/codyhouse">@codyhouse</a>)
+                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="samwooly" data-slug-hash="eyBmKz" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Journey - Date picker">
+                  <span>See the Pen <a href="https://codepen.io/samwooly/pen/eyBmKz">
+                  Journey - Date picker</a> by Sam Woolerton (<a href="https://codepen.io/samwooly">@samwooly</a>)
                   on <a href="https://codepen.io">CodePen</a>.</span>
                 </p>
-    
-              
+        
+               
                 <p class="mt-4">
                   Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
                   nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
                   Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
-                    href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
+                  href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
                   Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
                   vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-                  Còn đây là nguồn mình sao chép: <a href="https://codepen.io/codyhouse/pen/pIrbg" target="_blank">Responsive Login/Signup Modal Window</a>.
+                  Còn đây là nguồn mình sao chép: <a
+                    href="https://codepen.io/samwooly/pen/eyBmKz" target="_blank">Datepicker</a>.
                 </p>
 
-                     <!--New-->
-                     <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                      <h4 class="text-primary ml-4 title-article-size">YouTube Video Modal:</h4>
-                    </div>
-                    <img class="img-thumbnail shadow p-2 lazyload"
-                      data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587225302/Modal%20snippet/Modal-snippet-html-css-js-phan-5_slp9tk.png"
-                      alt="Modal xây dựng bằng HTML, CSS, JS  Phần 5">
-                    <p class="mt-4">
-                     Đây là ví dụ giúp chúng ta kết hợp modal với video. Nó sử dụng hình ảnh chứa liên kết để  đại diện cho video và khi người dùng nhấn vào thì  sẽ gọi ra modal chứa video với màn hình 
-                     xung quanh bị làm mờ giúp  thu hút chú ý và tập trung của người dùng vào modal hơn.
-                     
-                      Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi modal này được hiển thị trên web ở dưới đây nhé:
-                    </p>
-                    <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="mattamyot" data-slug-hash="dMGwyK" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="YouTube Video Modal">
-                      <span>See the Pen <a href="https://codepen.io/mattamyot/pen/dMGwyK">
-                      YouTube Video Modal</a> by Matt Amyot (<a href="https://codepen.io/mattamyot">@mattamyot</a>)
-                      on <a href="https://codepen.io">CodePen</a>.</span>
-                    </p>
-                
-        
-                  
-                    <p class="mt-4">
-                      Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
-                      nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-                      Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
-                      vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-                      Còn đây là nguồn mình sao chép: <a href="https://codepen.io/mattamyot/pen/dMGwyK" target="_blank">YouTube Video Modal</a>.
-                    </p>
 
                          <!--New-->
-                         <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                          <h4 class="text-primary ml-4 title-article-size">Bootstrap Modal Animation Effects:</h4>
+                         <div class="row">
+                          <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                            <h4 class="text-primary ml-4 title-article-size">Material Design Calendar:</h4>
+                          </div>
                         </div>
                         <img class="img-thumbnail shadow p-2 lazyload"
-                          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587226167/Modal%20snippet/Modal-snippet-html-css-js-phan-6_q4kgfc.png"
-                          alt="Modal xây dựng bằng HTML, CSS, JS  Phần 6">
+                          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587372515/Datepicker%20snippet/Material-Design-Calendar_l3crx5.png"
+                          alt="Material Design Calendar">
                         <p class="mt-4">
-                          Ngoài cách sử dụng các thành phần trong modal thì dưới đây mình sẽ giới thiệu thêm các hiệu ứng chuyển động giúp bạn có lựa chọn đa dạng và phong phú hơn. Ngoài ra cũng tăng 
-                          cảm giác trải nghiệm khi người dùng sử dụng trang web của chúng ta.
-                         
-                          Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi modal này được hiển thị trên web ở dưới đây nhé:
+                          Đây là đoạn code và khi hiển thị trên web của Timepicker này nhé:
                         </p>
-                        <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="wisnust10" data-slug-hash="qZaPBY" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="30+ Bootstrap Modal Animation Effects">
-                          <span>See the Pen <a href="https://codepen.io/wisnust10/pen/qZaPBY">
-                          30+ Bootstrap Modal Animation Effects</a> by Wisnu ST (<a href="https://codepen.io/wisnust10">@wisnust10</a>)
+                        <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="Jacobdo" data-slug-hash="GNEeVR" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Material design calendar + input">
+                          <span>See the Pen <a href="https://codepen.io/Jacobdo/pen/GNEeVR">
+                          Material design calendar + input</a> by Jacob (<a href="https://codepen.io/Jacobdo">@Jacobdo</a>)
                           on <a href="https://codepen.io">CodePen</a>.</span>
                         </p>
-
                     
-            
-                      
-                        <p class="mt-4">
-                          Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
-                          nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-                          Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
-                          vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-                          Còn đây là nguồn mình sao chép: <a href="https://codepen.io/wisnust10/pen/qZaPBY" target="_blank">Bootstrap Modal Animation Effects</a>.
-                        </p>
-
-
-                        <!--New-->
-                        <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                          <h4 class="text-primary ml-4 title-article-size">Responsive Flexbox Based Modal:</h4>
-                        </div>
-                        <img class="img-thumbnail shadow p-2 lazyload"
-                          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587228118/Modal%20snippet/Modal-snippet-html-css-js-phan-7_b9wk9o.png"
-                          alt="Modal xây dựng bằng HTML, CSS, JS  Phần 7">
-                        <p class="mt-4">
-                          Đây là tập hợp các modal được thiết kế sẵn và được xây dựng bằng HTML, CSS và Javascript nên bạn có thể tự do lựa chọn và áp dụng vào trong web của mình.
-                          
-                          Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi modal này được hiển thị trên web ở dưới đây nhé:
-                        </p>
-                        <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="bchalker" data-slug-hash="pyvBmq" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Simple, flexible, and responsive flexbox-based modal">
-                          <span>See the Pen <a href="https://codepen.io/bchalker/pen/pyvBmq">
-                          Simple, flexible, and responsive flexbox-based modal</a> by Bryan Chalker (<a href="https://codepen.io/bchalker">@bchalker</a>)
-                          on <a href="https://codepen.io">CodePen</a>.</span>
-                        </p>
-           
-                    
-            
-                      
+                       
                         <p class="mt-4">
                           Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
                           nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
@@ -300,101 +466,12 @@
                           href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
                           Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
                           vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-                          Còn đây là nguồn mình sao chép: <a href="https://codepen.io/bchalker/pen/pyvBmq" target="_blank">Responsive Flexbox Based Modal</a>.
+                          Còn đây là nguồn mình sao chép: <a
+                            href="https://codepen.io/Jacobdo/pen/GNEeVR" target="_blank">Material Design Calendar</a>.
                         </p>
 
-                          <!--New-->
-                          <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                            <h4 class="text-primary ml-4 title-article-size">Modal Velocity.js Animation:</h4>
-                          </div>
-                          <img class="img-thumbnail shadow p-2 lazyload"
-                            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587229563/Modal%20snippet/Modal-snippet-html-css-js-phan-8_yf8cxt.png"
-                            alt="Modal xây dựng bằng HTML, CSS, JS  Phần 8">
-                          <p class="mt-4">
-                            Đây là tập hợp các modal được thiết kế sẵn và được xây dựng bằng HTML, CSS, Javascript và plugin Velocity.js (bạn có thể tìm hiểu ở đây nhé: <a href="http://velocityjs.org/" target="_blank">Velocity.js</a>). Ngoài việc tạo hiệu 
-                            ứng chuyển động nó còn giúp chúng ta hiển thị vị trí của các tooltip (cung cấp thêm thông tin cho người dùng về nhiệm vụ, chức năng của nút) cho các button.
-                            
-                            Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi modal này được hiển thị trên web ở dưới đây nhé:
-                          </p>
-                          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="macsupport" data-slug-hash="OPwvwx" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Bootstrap Modal and popover with Velocity.js animation">
-                            <span>See the Pen <a href="https://codepen.io/macsupport/pen/OPwvwx">
-                            Bootstrap Modal and popover with Velocity.js animation</a> by Mike Sozanski (<a href="https://codepen.io/macsupport">@macsupport</a>)
-                            on <a href="https://codepen.io">CodePen</a>.</span>
-                    
-                      
-              
-                        
-                          <p class="mt-4">
-                            Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
-                            nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-                            Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
-                            vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-                            Còn đây là nguồn mình sao chép: <a href="https://codepen.io/macsupport/pen/OPwvwx" target="_blank">Modal Velocity.js Animation</a>.
-                          </p>
 
-
-                               <!--New-->
-                               <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                                <h4 class="text-primary ml-4 title-article-size">Nifty Modal Window or Slider Effects:</h4>
-                              </div>
-                              <img class="img-thumbnail shadow p-2 lazyload"
-                                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587229909/Modal%20snippet/Modal-snippet-html-css-js-phan-9_gytdoj.png"
-                                alt="Modal xây dựng bằng HTML, CSS, JS  Phần 9">
-                              <p class="mt-4">
-                                Đây là tập hợp các modal được thiết kế sẵn với HTML, CSS và Javscript và đặc biệt phù hợp với ai yêu thích hiệu ứng chuyển động 3D.
-                                Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi modal này được hiển thị trên web ở dưới đây nhé:
-                              </p>
-                              <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="coldarif" data-slug-hash="bgixa" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Nifty Modal Window or Slider Effects ">
-                                <span>See the Pen <a href="https://codepen.io/coldarif/pen/bgixa">
-                                Nifty Modal Window or Slider Effects </a> by coldarif (<a href="https://codepen.io/coldarif">@coldarif</a>)
-                                on <a href="https://codepen.io">CodePen</a>.</span>
-                              </p>
-                           
-                        
-                          
-                  
-                            
-                              <p class="mt-4">
-                                Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
-                                nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-                                Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
-                                vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-                                Còn đây là nguồn mình sao chép: <a href="https://codepen.io/coldarif/pen/bgixa" target="_blank">Nifty Modal Window or Slider Effects</a>.
-                              </p>
-
-
-                                <!--New-->
-                                <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                                  <h4 class="text-primary ml-4 title-article-size">Responsive Modal Design:</h4>
-                                </div>
-                                <img class="img-thumbnail shadow p-2 lazyload"
-                                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587230500/Modal%20snippet/Modal-snippet-html-css-js-phan-10_ys4by5.png"
-                                  alt="Modal xây dựng bằng HTML, CSS, JS  Phần 10">
-                                <p class="mt-4">
-                                  Đây là tập hợp các modal được thiết kế theo phong cách material. Bạn có thể tìm hiểu thêm về materail ở đây nhé <a href="https://material.io/design/introduction#getting-around" target="_blank">Tìm hiểu thêm</a>.
-                                  Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi modal này được hiển thị trên web ở dưới đây nhé:
-                                </p>
-                                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="ettrics" data-slug-hash="Jdjdzp" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Responsive Modal Design">
-                                  <span>See the Pen <a href="https://codepen.io/ettrics/pen/Jdjdzp">
-                                  Responsive Modal Design</a> by Ettrics (<a href="https://codepen.io/ettrics">@ettrics</a>)
-                                  on <a href="https://codepen.io">CodePen</a>.</span>
-                                </p>
-                   
-                          
-                            
-                    
-                              
-                                <p class="mt-4">
-                                  Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
-                                  nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-                                  Do đây sử dụng <b>Stylus</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
-                                  href="https://www.cssportal.com/stylus-to-css/" target="_blank">Stylus to CSS</a>.
-                                  Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
-                                  vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-                                  Còn đây là nguồn mình sao chép: <a href="https://codepen.io/ettrics/pen/Jdjdzp" target="_blank">Responsive Modal Design</a>.
-                                </p>
-
-
+         
 
 
 
@@ -418,7 +495,7 @@
 
             <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
 
-            <p>Qua đây mình mong bài viết sẽ giúp bạn rút ngắn thời gian trong việc thiết kế giao diện component Modal
+            <p>Qua đây mình mong bài viết sẽ giúp bạn rút ngắn thời gian trong việc thiết kế giao diện component Timepicker
               cho
               trang web và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng
               hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
