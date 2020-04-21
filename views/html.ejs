@@ -26,8 +26,7 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i>Timepicker
-                Snippet trong Bootstrap</h2>
+                  aria-hidden="true"></i>Những Alert Snippet Trong Thiết Kế Web</h2>
             </div>
           </div>
 
@@ -37,441 +36,491 @@
             </div>
           </div>
           <div class="text-content-article mt-5">
-            <p><i>Hôm nay chúng ta sẽ đi tìm hiểu cách thiết kế component timepicker bằng cách kết hợp HTML, CSS,
-                Javascript
+            <p><i>Hôm nay chúng ta sẽ đi tìm hiểu cách thiết kế component alert bằng cách kết hợp HTML, CSS, Javascript
                 và Bootstrap nhé.</i>
             </p>
             <!--<div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Framework Bootstrap 4</h4></div>-->
 
             <p class="mt-4">
-              Timepicker là một ô nhập dữ liệu trong form giúp người dùng chọn thời gian tùy vào mục đích của chúng ta.
-              Ví dụ ở trong form đăng ký thì đa số đều bắt bạn nhập ngày, tháng, năm sinh thì đây chính là một kiểu
-              timepicker. Nó giúp cho người dùng tiết kiệm thời gian và hạn chế tối đa việc xảy ra các lỗi cú pháp khi
-              phải nhập bằng tay.
+              Khi bạn cần thu hút sự chú ý của người dùng đến một hành động hay sự kiện nào đó trên trang web của chúng
+              ta thì bạn có thể sử dụng component alert(thông báo).
+              Nhưng cũng không nên quá lạm dụng vì nó sẽ gây sự khó chịu cho người dùng và lần sau họ có thể không quay
+              lại trang của bạn nữa. Có thể bạn sử dụng trong những hoạt động sau:
             </p>
-
-            <p>Để hiểu rõ hơn bạn xem ví dụ về Timepicker của trang web <a href="https://www.norwegian.com/us/"
-                title="ví dụ về dateppicker" target="_blank">hwww.norwegian.com</a> dưới đây nhé:</p>
+            <ul>
+              <li>Thông báo kết quả về một hành động hay sự kiện. Ví dụ như người dùng đăng ký thành viên thì chúng ta
+                nên sử dụng alert để thông báo cho người dùng biết là đã đăng ký thành công hoặc xảy ra lỗi.</li>
+              <li>Cảnh bảo từ hệ thống trang web để cung cấp thông tin cho người dùng như là sắp có bảo trì hệ thống,
+                một chức năng sắp ra mắt…</li>
+              <li>Xác nhận hành động rủi ro nào đó trên trang web.
+                Ví dụ khi bạn vào một trang web không an toàn thì Google sẽ đưa ra cảnh báo cho bạn và sẽ có hai sự lựa
+                chọn là đi tiếp hoặc không truy cập vào trang web đó nữa.</li>
+              <li>
+                Giúp bạn tăng khả năng liên kết với các khách hàng tiềm năng bằng những mẫu thông báo đăng ký email để
+                nhận sản phẩm mới, bài viết mới…
+              </li>
+            </ul>
             <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587351233/Datepicker%20snippet/V%C3%AD-d%E1%BB%A5-v%E1%BB%81-datepicker-html-css-javascript_ejw86w.png"
-              alt="Ví dụ về Timepicker  trong trang web">
-
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587453788/alert%20snippet/Vi-Du-Alert-HTML-CSS-JS-Bootstrap_by85wh.png"
+              alt="Ví dụ về component Alert">
             <p class="mt-4">
-              Khi bạn thiết kế một component timepicker thì việc chúng ta quan tâm là làm sao người dùng có thể dễ dàng
-              sử dụng nhất có thể. Ở đây bạn có thể phân tách ngày tháng năm thành ba phần
-              riêng biệt với mỗi phần là một ô select(chọn) hay sử dụng component dropdown để hiển thị giá trị. Một lưu
-              ý nhỏ là khi sử dụng timpicker dạng này bạn cần phải kiểm tra
-              dữ liệu thông tin người dùng nhập vào một cách cẩn thận vì rất có thể không đúng với thực tế ví dụ như
-              ngày 31 tháng 2.
-              Để hiểu rõ hơn bạn xem ví dụ sau đây nhé:
+              Ðối với việc thiết kế một thông báo bạn cần quan tâm đến màu sắc cũng như nội dung mà mình muốn truyền
+              đạt.
+              Như đối với thông báo cảnh báo thì bạn nên sử dụng màu đỏ để ngụ ý rằng dây là một hành động nguy hiểm có
+              thể ảnh hưởng tới người dùng
+              hay một hành động cần thực hiện ngay lập tức. Về phần nội dung thì cần câu văn rõ ràng ngắn gọn đảm bảo
+              người dùng có thể hiểu được một cách dễ dàng.
             </p>
-            <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587354391/Datepicker%20snippet/v%C3%AD-d%E1%BB%A5-v%E1%BB%81-datepicker-dropdown_kgz05e.png"
-              alt="Ví dụ về Timepicker  Dropdown trong trang web">
-
-            <p class="mt-4">
-              Cách thứ hai là bạn có thể cho người dùng nhập vào giá trị số trong component timepicker với định dạng
-              được bạn xác định từ trước hay cũng có thể theo hướng dẫn của bạn.
-              Ví dụ khi bạn muốn hướng dẫn người dùng nhập ngày tháng năm theo đúng cú pháp thì có thể đặt hướng dẫn như
-              sau: <b>yyyy-mm-dd</b> thì khi đó người ta sẽ hiểu là
-              <b>năm-tháng-ngày</b>. Và bạn cũng nên kết hợp với calenderpicker để người dùng nhìn trên lịch có thể dễ
-              hình dung hơn. Để hiểu rõ hơn bạn hãy xem ví dụ dưới đây nhé:
-            </p>
-            <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587356557/Datepicker%20snippet/v%C3%AD-d%E1%BB%A5-v%E1%BB%81-datepicker-input-v%E1%BB%9Bi-calendarpicker_ziwjbh.png"
-              alt="Ví dụ về Timepicker  input  trong trang web">
-            <p class="mt-4">
-              Nếu bạn muốn tiết kiệm thời gian cũng như giảm các lỗi nhập sai định dạng cho người dùng thì nên sử dụng
-              calendar(lịch). Nó giúp hiển thị trực quan các ngày tháng trong năm và thân thiện với màn hình
-              moblie. Để hiểu rõ hơn bạn xem hình ảnh sau đây nhé:
-            </p>
-            <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587357868/Datepicker%20snippet/vi-du-ve-datepicker-calendar_tyrlrt.png"
-              alt="Ví dụ về Timepicker  kết hợp calendar  trong trang web">
-
-            <p class="mt-4">
-              Chúng ta cũng có thể tích hợp chọn thời gian vào trong timepicker. Nó sẽ phù hợp với một số ngữ cảnh nhất
-              định như chúng ta muốn tạo một form đặt chuyến bay thì ngoài ngày tháng năm ra thì bạn cần biết
-              thêm thông tin mà người dùng muốn bay. Để hiểu rõ hơn bạn xem ví dụ dưới đây nhé:
-            </p>
-            <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587358866/Datepicker%20snippet/vi-du-ve-timepicker-chon-thoi-gian_w5sq0q.png"
-              alt="Ví dụ về Timepicker  kết hợp input chọn thời gian  trong trang web">
-
-            <p class="mt-4">Sau khi hiểu sơ lược về timepicker thì sau đây mình sẽ giới thiệu một số Timepicker snippet
-              giúp bạn có sự lựa chọn tốt nhất để phù hợp với mục đích
-              cũng như thiết kế, bố cục trang web của bạn.
-            </p>
+            <p>Sau khi hiểu sơ lược về thông báo thì sau đây mình sẽ giới thiệu một số Alert snippet giúp bạn có sự lựa
+              chọn tốt nhất để phù hợp với mục đích cũng như thiết kế, bố cục trang web của bạn.</p>
 
 
 
 
-            <!--New-->
+
+
+
+
             <div class="row">
               <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h4 class="text-primary ml-4 title-article-size">jQuery UI Date Picker:</h4>
+                <h4 class="text-primary ml-4 title-article-size">Modern Alerts:</h4>
               </div>
             </div>
-
             <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587365939/Datepicker%20snippet/jQuery_UI_Date_Picker_tez5tg.png"
-              alt="jQuery UI Date Picker">
-            <p class="mt-4">
-              Đây là đoạn code và khi hiển thị trên web của Timepicker này nhé:
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="aktorou"
-              data-slug-hash="MymKoB"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587454775/alert%20snippet/Alert-Snipper-HTML-CSS-JS_dbutkw.png"
+              alt="Xây Dựng component thông báo bằng HTML, CSS, JS Phần 1">
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component thông báo này nhé:</p>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
+              data-user="keikaavousi" data-slug-hash="eYOmOpN"
               style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="jQuery UI Date Picker">
-              <span>See the Pen <a href="https://codepen.io/aktorou/pen/MymKoB">
-                  jQuery UI Date Picker</a> by Ashley Ktorou (<a href="https://codepen.io/aktorou">@aktorou</a>)
+              data-pen-title="Modern Alerts">
+              <span>See the Pen <a href="https://codepen.io/keikaavousi/pen/eYOmOpN">
+                  Modern Alerts</a> by MohammadReza keikavousi (<a
+                  href="https://codepen.io/keikaavousi">@keikaavousi</a>)
                 on <a href="https://codepen.io">CodePen</a>.</span>
             </p>
             <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-            <p class="mt-4">
-              Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
-              nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-              Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
-                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
-              Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
-              vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-              Còn đây là nguồn mình sao chép: <a href="https://codepen.io/aktorou/pen/MymKoB" target="_blank">jQuery UI
-                Date Picker</a>.
-            </p>
+            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Do đây sử dụng
+              <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
+                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. Và nếu chúng ta muốn xem
+              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
+              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
+                href="https://codepen.io/keikaavousi/pen/eYOmOpN" target="_blank">Modern Alerts</a>.</p>
 
 
-            <!--New-->
+
+
             <div class="row">
               <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h4 class="text-primary ml-4 title-article-size">Bootstrap Datepickers Inline Sliding:</h4>
+                <h4 class="text-primary ml-4 title-article-size">CSS Notifications Component:</h4>
               </div>
             </div>
             <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587366188/Datepicker%20snippet/Bootstrap_Datepickers_Inline_Sliding_l8jacb.png"
-              alt="Bootstrap Datepickers Inline Sliding">
-            <p class="mt-4">
-              Đây là đoạn code và khi hiển thị trên web của Timepicker này nhé:
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="vushe"
-              data-slug-hash="gmrMjv"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Bootstrap datepickers inline sliding (demo)">
-              <span>See the Pen <a href="https://codepen.io/vushe/pen/gmrMjv">
-                  Bootstrap datepickers inline sliding (demo)</a> by Valentin Dzhankhotov (<a
-                  href="https://codepen.io/vushe">@vushe</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <p class="mt-4">
-              Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
-              nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-              Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
-                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
-              Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
-              vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-              Còn đây là nguồn mình sao chép: <a href="https://codepen.io/vushe/pen/gmrMjv" target="_blank">Bootstrap
-                Datepickers Inline Sliding</a>.
-            </p>
-
-
-            <!--New-->
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h4 class="text-primary ml-4 title-article-size">Bootstrap Date_Picker Vaildate:</h4>
-              </div>
-            </div>
-            <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587367733/Datepicker%20snippet/Bootstrap_Date_Picker_Vaildate_lgryhs.png"
-              alt="Bootstrap Date_Picker Vaildate">
-            <p class="mt-4">
-              Đây là đoạn code và khi hiển thị trên web của Timepicker này nhé:
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="sykarra"
-              data-slug-hash="eWKOjR"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="bootstrap date picker vaildate">
-              <span>See the Pen <a href="https://codepen.io/sykarra/pen/eWKOjR">
-                  bootstrap date picker vaildate</a> by Peter Schöning (<a
-                  href="https://codepen.io/sykarra">@sykarra</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-
-            <p class="mt-4">
-              Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
-              nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-              Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
-              vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-              Còn đây là nguồn mình sao chép: <a href="https://codepen.io/sykarra/pen/eWKOjR" target="_blank">Bootstrap
-                Date_Picker Vaildate</a>.
-            </p>
-
-
-
-            <!--New-->
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h4 class="text-primary ml-4 title-article-size">Air-Datepicker:</h4>
-              </div>
-            </div>
-            <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587368168/Datepicker%20snippet/Air-Datepicker_zgz3in.png"
-              alt="Bootstrap Date_Picker Vaildate">
-            <p class="mt-4">
-              Đây là đoạn code và khi hiển thị trên web của Timepicker này nhé:
-            </p>
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587456160/alert%20snippet/Alert-Snipper-HTML-CSS-JS-Phan-2_nt8s7e.png"
+              alt="Xây Dựng component thông báo bằng HTML, CSS, JS Phần 2">
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component thông báo này nhé:</p>
             <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
-              data-user="ankithingarajiya" data-slug-hash="jjOxMo"
+              data-user="damianmuti" data-slug-hash="GEZoeG"
               style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="air-datepicker">
-              <span>See the Pen <a href="https://codepen.io/ankithingarajiya/pen/jjOxMo">
-                  air-datepicker</a> by Ankit Hingarajiya (<a
-                  href="https://codepen.io/ankithingarajiya">@ankithingarajiya</a>)
+              data-pen-title="CSS-only Notifications Component">
+              <span>See the Pen <a href="https://codepen.io/damianmuti/pen/GEZoeG">
+                  CSS-only Notifications Component</a> by Damián Muti (<a
+                  href="https://codepen.io/damianmuti">@damianmuti</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+
+
+            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Do đây sử dụng
+              <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
+                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. Và nếu chúng ta muốn xem
+              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
+              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
+                href="https://codepen.io/damianmuti/pen/GEZoeG" target="_blank">CSS Notifications Component</a>.</p>
+
+
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h4 class="text-primary ml-4 title-article-size">Notifications:</h4>
+              </div>
+            </div>
+            <img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587456371/alert%20snippet/Alert-Snipper-HTML-CSS-JS-Phan-3_wyc0ub.png"
+              alt="Xây Dựng component thông báo bằng HTML, CSS, JS Phần 3">
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component thông báo này nhé:</p>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="hmps"
+              data-slug-hash="sCnbm"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Notifications">
+              <span>See the Pen <a href="https://codepen.io/hmps/pen/sCnbm">
+                  Notifications</a> by Hampus Persson (<a href="https://codepen.io/hmps">@hmps</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+
+
+            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Do đây sử dụng
+              <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
+                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. Và nếu chúng ta muốn xem
+              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
+              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
+                href="https://codepen.io/hmps/pen/sCnbm" target="_blank">Notifications</a>.</p>
+
+
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h4 class="text-primary ml-4 title-article-size">Flash Message (Error/Success):</h4>
+              </div>
+            </div>
+            <img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587456711/alert%20snippet/Alert-Snipper-HTML-CSS-JS-Phan-4_xzovp9.png"
+              alt="Xây Dựng component thông báo bằng HTML, CSS, JS Phần 4">
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component thông báo này nhé:</p>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
+              data-user="juliepark" data-slug-hash="vjMOKQ"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Daily UI#011 | Flash Message (Error/Success)">
+              <span>See the Pen <a href="https://codepen.io/juliepark/pen/vjMOKQ">
+                  Daily UI#011 | Flash Message (Error/Success)</a> by Julie Park (<a
+                  href="https://codepen.io/juliepark">@juliepark</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+
+
+            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Do đây sử dụng
+              <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
+                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. Và nếu chúng ta muốn xem
+              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
+              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
+                href="https://codepen.io/juliepark/pen/vjMOKQ" target="_blank">Flash Message (Error/Success)</a>.</p>
+
+
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h4 class="text-primary ml-4 title-article-size">Material Design Alerts:</h4>
+              </div>
+            </div>
+            <img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587458052/alert%20snippet/Alert-Snipper-HTML-CSS-JS-Phan-7_flt3uq.png"
+              alt="Xây Dựng component thông báo bằng HTML, CSS, JS Phần 7">
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component thông báo này nhé:</p>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
+              data-user="renanpupin" data-slug-hash="dYZyjj"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="UI -Material Design alerts">
+              <span>See the Pen <a href="https://codepen.io/renanpupin/pen/dYZyjj">
+                  UI -Material Design alerts</a> by Renan Pupin (<a
+                  href="https://codepen.io/renanpupin">@renanpupin</a>)
                 on <a href="https://codepen.io">CodePen</a>.</span>
             </p>
 
 
 
-            <p class="mt-4">
-              Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
-              nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-              Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
-              vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-              Còn đây là nguồn mình sao chép: <a href="https://codepen.io/ankithingarajiya/pen/jjOxMo"
-                target="_blank">Air-Datepicker</a>.
-            </p>
+            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Do đây sử dụng
+              <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
+                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. Và nếu chúng ta muốn xem
+              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
+              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
+                href="https://codepen.io/renanpupin/pen/dYZyjj" target="_blank">Material Design Alerts</a>.</p>
 
 
-            <!--New-->
             <div class="row">
               <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h4 class="text-primary ml-4 title-article-size">Flatpickr:</h4>
+                <h4 class="text-primary ml-4 title-article-size">Alerts Component:</h4>
               </div>
             </div>
             <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587369103/Datepicker%20snippet/Timepicker-flat_g0rmat.png"
-              alt="Timepicker Flatpickr">
-            <p class="mt-4">
-              Đây là đoạn code và khi hiển thị trên web của Timepicker này nhé:
-            </p>
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587456907/alert%20snippet/Alert-Snipper-HTML-CSS-JS-Phan-5_mhl3wy.png"
+              alt="Xây Dựng component thông báo bằng HTML, CSS, JS Phần 5">
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component thông báo này nhé:</p>
             <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result"
-              data-user="riyos94" data-slug-hash="xppbBj"
+              data-user="travis_john" data-slug-hash="pXRPzE"
               style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Flatpickr">
-              <span>See the Pen <a href="https://codepen.io/riyos94/pen/xppbBj">
-                  Flatpickr</a> by Rio Dwi Prabowo (<a href="https://codepen.io/riyos94">@riyos94</a>)
+              data-pen-title="Alerts Component">
+              <span>See the Pen <a href="https://codepen.io/travis_john/pen/pXRPzE">
+                  Alerts Component</a> by Travis John (<a href="https://codepen.io/travis_john">@travis_john</a>)
                 on <a href="https://codepen.io">CodePen</a>.</span>
             </p>
 
 
 
 
-            <p class="mt-4">
-              Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
-              nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-              Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
-              vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-              Còn đây là nguồn mình sao chép: <a href="https://codepen.io/riyos94/pen/xppbBj"
-                target="_blank">Flatpickr</a>.
-            </p>
+
+            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Do đây sử dụng
+              <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
+                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. Và nếu chúng ta muốn xem
+              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
+              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
+                href="https://codepen.io/travis_john/pen/pXRPzE" target="_blank">Alerts Component</a>.</p>
 
 
-            <!--New-->
+
+
+
             <div class="row">
               <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h4 class="text-primary ml-4 title-article-size">Date and Time Picker:</h4>
+                <h4 class="text-primary ml-4 title-article-size">Notifications 2:</h4>
               </div>
             </div>
             <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587370268/Datepicker%20snippet/Date-Time-Picker-Bootstrap_msdaps.png"
-              alt="Time và Date Picker">
-            <p class="mt-4">
-              Đây là đoạn code và khi hiển thị trên web của Timepicker này nhé:
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result"
-              data-user="haycuoilennao19" data-slug-hash="YzyGWKa"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587457701/alert%20snippet/Alert-Snipper-HTML-CSS-JS-Phan-6_qldx7t.png"
+              alt="Xây Dựng component thông báo bằng HTML, CSS, JS Phần 6">
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component thông báo này nhé:</p>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
+              data-user="keithpickering" data-slug-hash="ibtEa"
               style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title=" Date and Time Picker(Source from bbbootstrap)">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/YzyGWKa">
-                  Date and Time Picker(Source from bbbootstrap)</a> by haycuoilennao19 (<a
-                  href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+              data-pen-title="Notifications">
+              <span>See the Pen <a href="https://codepen.io/keithpickering/pen/ibtEa">
+                  Notifications</a> by Keith Pickering (<a href="https://codepen.io/keithpickering">@keithpickering</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+
+            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Do đây sử dụng
+              <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
+                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. Và nếu chúng ta muốn xem
+              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
+              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
+                href="https://codepen.io/keithpickering/pen/ibtEa" target="_blank">Notifications 2</a>.</p>
+
+
+
+
+
+
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h4 class="text-primary ml-4 title-article-size">Animated Notification Messages:</h4>
+              </div>
+            </div>
+            <img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587458137/alert%20snippet/Alert-Snipper-HTML-CSS-JS-Phan-8_fqpwlr.png"
+              alt="Xây Dựng component thông báo bằng HTML, CSS, JS Phần 8">
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component thông báo này nhé:</p>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="jedtrow"
+              data-slug-hash="wBQagR"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Animated Notification Messages">
+              <span>See the Pen <a href="https://codepen.io/jedtrow/pen/wBQagR">
+                  Animated Notification Messages</a> by Jed Trow (<a href="https://codepen.io/jedtrow">@jedtrow</a>)
                 on <a href="https://codepen.io">CodePen</a>.</span>
             </p>
 
 
 
 
-            <p class="mt-4">
-              Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
-              nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-              Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
-              vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-              Còn đây là nguồn mình sao chép: <a
-                href="https://bbbootstrap.com/snippets/dark-themed-date-and-time-picker-76906698" target="_blank">Date
-                and Time Picker</a>.
-            </p>
 
 
-            <!--New-->
+
+            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Và nếu chúng ta muốn xem
+              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
+              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
+                href="https://codepen.io/jedtrow/pen/wBQagR" target="_blank">Animated Notification Messages</a>.</p>
+
+
+
+                
             <div class="row">
               <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h4 class="text-primary ml-4 title-article-size">Bootstrap Datepicker:</h4>
+                <h4 class="text-primary ml-4 title-article-size">Pop-Up Overlay:</h4>
               </div>
             </div>
             <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587370781/Datepicker%20snippet/Bootstrap-Datepicker_gudpax.png"
-              alt="Bootstrap Datepicker">
-            <p class="mt-4">
-              Đây là đoạn code và khi hiển thị trên web của Timepicker này nhé:
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="hexagoncircle" data-slug-hash="XdZrKa" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Bootstrap Datepicker Demo">
-              <span>See the Pen <a href="https://codepen.io/hexagoncircle/pen/XdZrKa">
-              Bootstrap Datepicker Demo</a> by Ryan Mulligan (<a href="https://codepen.io/hexagoncircle">@hexagoncircle</a>)
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587459013/alert%20snippet/Alert-Snipper-HTML-CSS-JS-Phan-9_ciogrj.png"
+              alt="Xây Dựng component thông báo bằng HTML, CSS, JS Phần 9">
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component thông báo này nhé:</p>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="BeanBaag" data-slug-hash="mMJqma" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pop-Up Overlay">
+              <span>See the Pen <a href="https://codepen.io/BeanBaag/pen/mMJqma">
+              Pop-Up Overlay</a> by Aaron Taylor (<a href="https://codepen.io/BeanBaag">@BeanBaag</a>)
               on <a href="https://codepen.io">CodePen</a>.</span>
             </p>
- 
+           
 
 
 
 
-            <p class="mt-4">
-              Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
-              nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-              Do đây sử dụng <b>SCSS, Pug</b> nếu bạn muốn sử dụng HTML, CSS thì có thể xem tại đây nha : 
-              <a
-              href="https://pughtml.com/" target="_blank">Pug to HTML</a> và
-              <a
-              href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
-              Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
-              vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-              Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/hexagoncircle/pen/XdZrKa" target="_blank">Bootstrap Datepicker</a>.
+
+
+
+            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Và nếu chúng ta muốn xem
+              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
+              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
+                href="https://codepen.io/BeanBaag/pen/mMJqma" target="_blank">Pop-Up Overlay</a>.</p>
+
+
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h4 class="text-primary ml-4 title-article-size">Bootstrap Alert Tests:</h4>
+              </div>
+            </div>
+            <img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587459311/alert%20snippet/Alert-Snipper-HTML-CSS-JS-Phan-10_wdn3lq.png"
+              alt="Xây Dựng component thông báo bằng HTML, CSS, JS Phần 10">
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component thông báo này nhé:</p>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="LAUVz" data-slug-hash="ybdjeE" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Bootstrap Alert Tests">
+              <span>See the Pen <a href="https://codepen.io/LAUVz/pen/ybdjeE">
+              Bootstrap Alert Tests</a> by Henrijs Kons (<a href="https://codepen.io/LAUVz">@LAUVz</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
             </p>
+          
 
 
-               <!--New-->
-               <div class="row">
-                <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                  <h4 class="text-primary ml-4 title-article-size">Bootstrap Date Range Picker:</h4>
-                </div>
-              </div>
-              <img class="img-thumbnail shadow p-2 lazyload"
-                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587371371/Datepicker%20snippet/Date-range-picker_mawmzh.png"
-                alt="Bootstrap Date Range Picker">
-              <p class="mt-4">
-                Đây là đoạn code và khi hiển thị trên web của Timepicker này nhé:
-              </p>
-              <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="haycuoilennao19" data-slug-hash="vYNXKmV" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Bootstrap Date Range Picker(Source from bbootstrap)">
-                <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/vYNXKmV">
-                Bootstrap Date Range Picker(Source from bbootstrap)</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-              </p>
-             
-  
-  
-  
-  
-              <p class="mt-4">
-                Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
-                nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-                Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
-                vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-                Còn đây là nguồn mình sao chép: <a
-                  href="https://bbbootstrap.com/snippets/green-themed-datepicker-date-range-54853616" target="_blank">Bootstrap Date Range Picker</a>.
-              </p>
+            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Và nếu chúng ta muốn xem
+              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
+              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
+                href="https://codepen.io/LAUVz/pen/ybdjeE" target="_blank">Bootstrap Alert Tests</a>.</p>
 
 
-              
-               <!--New-->
-               <div class="row">
-                <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                  <h4 class="text-primary ml-4 title-article-size">Datepicker With Date Range:</h4>
-                </div>
-              </div>
-              <img class="img-thumbnail shadow p-2 lazyload"
-                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587371728/Datepicker%20snippet/Datepicker-With-Date-Range_hgebdu.png"
-                alt="Datepicker With Date Range">
-              <p class="mt-4">
-                Đây là đoạn code và khi hiển thị trên web của Timepicker này nhé:
-              </p>
-              <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="haycuoilennao19" data-slug-hash="GRpjqvz" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Datepicker With Date Range(Source from  bbbootstrap)">
-                <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/GRpjqvz">
-                Datepicker With Date Range(Source from  bbbootstrap)</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-              </p>
-             
-              <p class="mt-4">
-                Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
-                nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-                Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
-                vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-                Còn đây là nguồn mình sao chép: <a
-                  href="https://bbbootstrap.com/snippets/orange-themed-datepicker-date-range-30620898" target="_blank">Datepicker With Date Range</a>.
-              </p>
-
-
-                <!--New-->
                 <div class="row">
                   <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                    <h4 class="text-primary ml-4 title-article-size">Datepicker:</h4>
+                    <h4 class="text-primary ml-4 title-article-size">Flash Message:</h4>
                   </div>
                 </div>
                 <img class="img-thumbnail shadow p-2 lazyload"
-                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587372204/Datepicker%20snippet/Date-Picker_hzzn1u.png"
-                  alt="Datepicker">
-                <p class="mt-4">
-                  Đây là đoạn code và khi hiển thị trên web của Timepicker này nhé:
-                </p>
-                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="samwooly" data-slug-hash="eyBmKz" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Journey - Date picker">
-                  <span>See the Pen <a href="https://codepen.io/samwooly/pen/eyBmKz">
-                  Journey - Date picker</a> by Sam Woolerton (<a href="https://codepen.io/samwooly">@samwooly</a>)
+                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587459846/alert%20snippet/Alert-Snipper-HTML-CSS-JS-Phan-11_jgoab1.png"
+                  alt="Xây Dựng component thông báo bằng HTML, CSS, JS Phần 11">
+                <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component thông báo này nhé:</p>
+                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="andrewichert" data-slug-hash="mEzpZZ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="#011  Flash Message ">
+                  <span>See the Pen <a href="https://codepen.io/andrewichert/pen/mEzpZZ">
+                  #011  Flash Message </a> by Andre Wichert (<a href="https://codepen.io/andrewichert">@andrewichert</a>)
                   on <a href="https://codepen.io">CodePen</a>.</span>
                 </p>
-        
-               
-                <p class="mt-4">
-                  Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
-                  nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-                  Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
-                  href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
-                  Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
-                  vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-                  Còn đây là nguồn mình sao chép: <a
-                    href="https://codepen.io/samwooly/pen/eyBmKz" target="_blank">Datepicker</a>.
-                </p>
+            
+              
+    
+    
+                <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+                  thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+                  Do đây sử dụng
+              <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
+                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. Và nếu chúng ta muốn xem
+                  các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
+                  dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
+                    href="https://codepen.io/andrewichert/pen/mEzpZZ" target="_blank">Flash Message</a>.</p>
 
 
-                         <!--New-->
-                         <div class="row">
+              
+                    <div class="row">
+                      <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                        <h4 class="text-primary ml-4 title-article-size">Flash Message 2:</h4>
+                      </div>
+                    </div>
+                    <img class="img-thumbnail shadow p-2 lazyload"
+                      data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587460451/alert%20snippet/Alert-Snipper-HTML-CSS-JS-Phan-13_1_zedacu.png"
+                      alt="Xây Dựng component thông báo bằng HTML, CSS, JS Phần 13">
+                    <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component thông báo này nhé:</p>
+                    <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="max1128" data-slug-hash="vPprRO" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Flash Messages - 100 Accessible UI Challenge">
+                      <span>See the Pen <a href="https://codepen.io/max1128/pen/vPprRO">
+                      Flash Messages - 100 Accessible UI Challenge</a> by Maxwell Antonucci (<a href="https://codepen.io/max1128">@max1128</a>)
+                      on <a href="https://codepen.io">CodePen</a>.</span>
+                    </p>
+                  
+              
+                
+                    <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+                      thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+                      Do đây sử dụng
+                  <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
+                    href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. Và nếu chúng ta muốn xem
+                      các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
+                      dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
+                        href="https://codepen.io/max1128/pen/vPprRO" target="_blank">Flash Message 2</a>.</p>
+
+                        <div class="row">
                           <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                            <h4 class="text-primary ml-4 title-article-size">Material Design Calendar:</h4>
+                            <h4 class="text-primary ml-4 title-article-size">Simple Css Alerts:</h4>
                           </div>
                         </div>
                         <img class="img-thumbnail shadow p-2 lazyload"
-                          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587372515/Datepicker%20snippet/Material-Design-Calendar_l3crx5.png"
-                          alt="Material Design Calendar">
-                        <p class="mt-4">
-                          Đây là đoạn code và khi hiển thị trên web của Timepicker này nhé:
-                        </p>
-                        <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="Jacobdo" data-slug-hash="GNEeVR" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Material design calendar + input">
-                          <span>See the Pen <a href="https://codepen.io/Jacobdo/pen/GNEeVR">
-                          Material design calendar + input</a> by Jacob (<a href="https://codepen.io/Jacobdo">@Jacobdo</a>)
+                          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587460625/alert%20snippet/Alert-Snipper-HTML-CSS-JS-Phan-14_tvjlkz.png"
+                          alt="Xây Dựng component thông báo bằng HTML, CSS, JS Phần 14">
+                        <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component thông báo này nhé:</p>
+                        <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="golcinho" data-slug-hash="wEJQVm" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Simple css alerts">
+                          <span>See the Pen <a href="https://codepen.io/golcinho/pen/wEJQVm">
+                          Simple css alerts</a> by Stanislav (<a href="https://codepen.io/golcinho">@golcinho</a>)
                           on <a href="https://codepen.io">CodePen</a>.</span>
                         </p>
+                
+                      
+                  
                     
-                       
-                        <p class="mt-4">
-                          Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và
-                          nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-                          Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
-                          href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
-                          Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
-                          vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.
-                          Còn đây là nguồn mình sao chép: <a
-                            href="https://codepen.io/Jacobdo/pen/GNEeVR" target="_blank">Material Design Calendar</a>.
-                        </p>
+                        <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+                          thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+                         Và nếu chúng ta muốn xem
+                          các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
+                          dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
+                            href="https://codepen.io/golcinho/pen/wEJQVm" target="_blank">Simple Css Alerts</a>.</p>
 
 
-         
+                            <div class="row">
+                              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                                <h4 class="text-primary ml-4 title-article-size">UI Alert CSS:</h4>
+                              </div>
+                            </div>
+                            <img class="img-thumbnail shadow p-2 lazyload"
+                              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587460811/alert%20snippet/Alert-Snipper-HTML-CSS-JS-Phan-15_d74iqx.png"
+                              alt="Xây Dựng component thông báo bằng HTML, CSS, JS Phần 15">
+                            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component thông báo này nhé:</p>
+                            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="nirazanbasnet" data-slug-hash="mOVxgg" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="UI Alert CSS">
+                              <span>See the Pen <a href="https://codepen.io/nirazanbasnet/pen/mOVxgg">
+                              UI Alert CSS</a> by Nirajan Basnet (<a href="https://codepen.io/nirazanbasnet">@nirazanbasnet</a>)
+                              on <a href="https://codepen.io">CodePen</a>.</span>
+                            </p>
+                      
+                        
+                          
+                
+                
+                            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+                              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+                              Do đây sử dụng
+                          <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
+                            href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. Và nếu chúng ta muốn xem
+                              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
+                              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
+                                href="https://codepen.io/nirazanbasnet/pen/mOVxgg" target="_blank">UI Alert CSS</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -495,7 +544,7 @@
 
             <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
 
-            <p>Qua đây mình mong bài viết sẽ giúp bạn rút ngắn thời gian trong việc thiết kế giao diện component Timepicker
+            <p>Qua đây mình mong bài viết sẽ giúp bạn rút ngắn thời gian trong việc chọn thiết kế component thông báo
               cho
               trang web và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng
               hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
