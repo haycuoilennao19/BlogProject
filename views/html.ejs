@@ -26,7 +26,7 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i>Những Thư Viện CSS Và Javascript Phần 1</h2>
+                  aria-hidden="true"></i>Slider Snippet Trong Thiết Kế Web (Phần 2)</h2>
             </div>
           </div>
 
@@ -36,215 +36,588 @@
             </div>
           </div>
           <div class="text-content-article mt-5">
-            <p><i>Hôm nay chúng ta sẽ đi tìm hiểu thêm về những thư viện CSS và Javascript để phát triển web.</i>
+            <p><i>Hôm nay chúng ta sẽ đi tìm hiểu cách thiết kế slider bằng cách kết hợp HTML, CSS, Javascript nhé.</i>
             </p>
             <!--<div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Framework Bootstrap 4</h4></div>-->
 
             <p class="mt-4">
-            Thư viện là tập hợp những đoạn mã được viết sẵn và có thể áp dụng vào dự án giúp tiết kiệm thời gian phát triển web của bạn.
-           Nó có rất nhiều tiện ích, tính năng  giúp bạn tăng khả năng trải nghiệm người dùng khi sử dụng web cũng như những điều  bổ ích giúp chúng ta học thêm được nhiều điều mới hơn.
+              Slider được sử dụng rộng rãi trong tất cả các loại trang web ngày nay nhưng phổ biến nhất có lẻ là trang
+              web kinh doanh
+              thương mại điện tử. Nó giúp bạn có thể đặt những nội dung quan trọng để thu hút sự chú ý của khách hàng và
+              thường xuất hiện sau thanh điều hướng(navigation) trong trang web.
+              Điểm mạnh của nó là có thể tự động hiển thị hình ảnh nội dung khác nhau theo khoảng thời gian cố định
+              và có các nút điều chỉnh giúp khách hàng có thể xem lại nội dung hay tương tác với bài viết. Ngoài ra nó
+              cũng giúp tiết kiệm không gian trang,
+              giúp bạn dễ dàng cập nhật tự động các nội dung mới(như bài viết sản phẩm mới) và tăng trải nghiệm của
+              người dùng đối với trang web.
 
-           <div class="row">
-            <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4 title-article-size">
-               <a href="https://github.com/kamranahmedse/developer-roadmap" title="Web Developer Road Map" target="_blank">Web Developer Road Map:</a>
-              </h4>
+              Để hiểu rõ hơn bạn xem ví dụ sau đây nhé:
+            </p>
+            <img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587614185/slider-trong-web-phan-2/Vi-Du-Slider-Trong-Trang-Web_j4ohcr.png"
+              alt="Ví Dụ Slider Trong Trang Web">
+
+            <p class="mt-4">
+              Việc đặt nội dung cho từng slide(trang) rất quan trọng nhé theo mình tìm hiểu thì slide đầu tiên thì sẽ
+              được nhấn(click) nhiều nhất và
+              số lượng nhấn(click) sẽ giảm tỉ lệ thuận với vị trí của slide. Do đó trang slider bạn nên chỉ sử dụng từ 5
+              slide trở xuống.
+            </p>
+            <p>
+              Mình cũng có một số lưu ý thêm khi bạn thiết kế slider cho trang web là
+              nó có thể làm chậm trang web vì cần tải thêm javascript do đó bạn nên sử dụng thư viện nhẹ để tạo
+              component này còn nếu
+              tốt hơn bạn có thể viết bằng javascript thuần. Thứ hai là bạn chăm chút nội dung cho từng slide để có thể
+              gây sự thích thú đối đa với khách hàng. Thứ ba là bạn xem nó có thân thiện với thiết bị di động chưa,
+              responsive được trên nhiều màn hình thiết bị không nhé.
+            </p>
+            <p>
+              Sau khi hiểu sơ lược về slider thì sau đây mình sẽ giới thiệu một số component này giúp bạn có sự lựa
+              chọn tốt nhất để phù hợp với mục đích cũng như thiết kế, bố cục trang web của bạn.
+            </p>
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h4 class="text-primary ml-4 title-article-size">GSAP Slider:</h4>
+              </div>
             </div>
-          </div>
-          
-          <img class="img-thumbnail shadow p-2 lazyload"
-          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587564672/thu%20vien%20css%20js%20phan%201/ban-do-huong-dan-lap-trinh_zswxxn.png"
-          alt="hướng phát triển lập trình">
-           <p class="mt-4"> 
-             Mục đích của road map là cung cấp cho bạn một con đường định hướng với 3 xu hướng là Front-end, Back-end, DevOps.
-             Hồi đó mình cũng tự học HTML, CSS và Javascript rồi sau đó mình mơ hồ không biết học thêm cái gì để có thể lập trình và phát triển web.
-             Bản đồ road map này đã giúp mình xác định được nên học cái gì tiếp theo cũng như cập như xu hướng ngôn ngữ nên học vào thời điểm hiện tại.
-            Do nó ghi bằng tiếng anh nên bạn cần google dịch tí nhé và minh mong nó sẽ giúp được bạn có thể lựa chọn con đường lập trình 
-            mà mình sẽ đi trong tương lai.<br />
-            Đường dẫn ở đây nhé: <a href="https://github.com/kamranahmedse/developer-roadmap" title="Web Developer Road Map" target="_blank">Web Developer Road Map</a>
-           </p>
 
 
-           <div class="row">
-            <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4 title-article-size">
-               <a href="https://sweetalert2.github.io/" title="Sweet Alert 2" target="_blank">Sweet Alert 2:</a>
-              </h4>
+            <img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587615617/slider-trong-web-phan-2/Slider-HTML-CSS-JS-phan-1_1_uhoz6q.png"
+              alt="Xây dựng slider phần 1 html,css, js">
+
+
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component slider này nhé:</p>
+
+
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="gvrban"
+              data-slug-hash="qjbpaa"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="GSAP slider">
+              <span>See the Pen <a href="https://codepen.io/gvrban/pen/qjbpaa">
+                  GSAP slider</a> by Goran Vrban (<a href="https://codepen.io/gvrban">@gvrban</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+
+            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Và nếu chúng ta muốn xem
+              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
+              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
+                href="https://codepen.io/gvrban/pen/qjbpaa" target="_blank">GSAP Slider</a>.</p>
+
+
+            <!-- Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. -->
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h4 class="text-primary ml-4 title-article-size">Blend Mode Slider:</h4>
+              </div>
             </div>
-          </div>
-          
-          <img class="img-thumbnail shadow p-2 lazyload"
-          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587565581/thu%20vien%20css%20js%20phan%201/SweetAlert2_zaz9v7.png"
-          alt="Tạo thông báo đẹp">
-           <p class="mt-4"> 
-            Sweet Alert 2 là thư viện giúp bạn tạo các thông báo đẹp mặt với nhiều chức năng và nó cũng responsive được trên
-            nhiều màn hình thiết bị khác nhau. Và bạn cũng có thể chỉnh sửa tùy ý phù hợp với mục đích của mình.<br/>
-            Đường dẫn ở đây nhé: <a href="https://sweetalert2.github.io/" title="Sweet Alert 2" target="_blank">Sweet Alert 2</a>
-           </p>
 
 
-           <div class="row">
-            <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4 title-article-size">
-               <a href="https://connoratherton.com/loaders" title="Loaders.css" target="_blank">Loaders.css:</a>
-              </h4>
+            <img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587616069/slider-trong-web-phan-2/Slider-HTML-CSS-JS-phan-2_a1fw5i.png"
+              alt="Xây dựng slider phần 2 html,css, js">
+
+
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component slider này nhé:</p>
+
+
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="nolakat"
+              data-slug-hash="LWdxEr"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Blend Mode Slider - Double Exposure">
+              <span>See the Pen <a href="https://codepen.io/nolakat/pen/LWdxEr">
+                  Blend Mode Slider - Double Exposure</a> by Sullivan Nolan (<a
+                  href="https://codepen.io/nolakat">@nolakat</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+
+
+
+            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+              Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
+                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
+              Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
+              vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn
+              mình sao chép: <a href="https://codepen.io/nolakat/pen/LWdxEr" target="_blank">Blend Mode Slider</a>.</p>
+
+
+
+
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h4 class="text-primary ml-4 title-article-size">Exploring UI Animation:</h4>
+              </div>
             </div>
-          </div>
-          
-          <img class="img-thumbnail shadow p-2 lazyload"
-          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587566555/thu%20vien%20css%20js%20phan%201/LoaderCss_frpawn.png"
-          alt="Thư Viện Loader Css">
-           <p class="mt-4"> 
-            Loader.css là bộ sưu tập những hiệu ứng chuyển động spinners với hơn 25 thiết kế. Do chỉ sử dụng CSS thiết kế nên bạn có thể dễ dàng 
-            áp dụng và tùy chỉnh cho trang web của mình.<br/>
-            Đường dẫn ở đây nhé: <a href="https://connoratherton.com/loaders" title="Loaders.css" target="_blank">Loaders.css:</a>
-           </p>
 
 
-           <div class="row">
-            <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4 title-article-size">
-               <a href="https://lodash.com/" title="Lodash" target="_blank">Lodash:</a>
-              </h4>
+            <img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587616359/slider-trong-web-phan-2/Slider-HTML-CSS-JS-phan-3_jj5udy.png"
+              alt="Xây dựng slider phần 3 html,css, js">
+
+
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component slider này nhé:</p>
+
+
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
+              data-user="mariosmaselli" data-slug-hash="WGwKVg"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Exploring UI Animation #2">
+              <span>See the Pen <a href="https://codepen.io/mariosmaselli/pen/WGwKVg">
+                  Exploring UI Animation #2</a> by mario s maselli (<a
+                  href="https://codepen.io/mariosmaselli">@mariosmaselli</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+
+
+
+
+            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+              Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
+                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
+              Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
+              vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn
+              mình sao chép: <a href="https://codepen.io/mariosmaselli/pen/WGwKVg" target="_blank">Exploring UI
+                Animation</a>.</p>
+
+
+
+
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h4 class="text-primary ml-4 title-article-size">Exploring UI Animation #2:</h4>
+              </div>
             </div>
-          </div>
-          
-          <img class="img-thumbnail shadow p-2 lazyload"
-          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587568389/thu%20vien%20css%20js%20phan%201/Lodash_asheri.png"
-          alt="Thư Viện  Lodash">
-           <p class="mt-4"> 
-            Lodash là một thư viện Javascript giúp chúng ta có thể dễ dàng hơn khi làm việc với mảng, chuỗi hay đối tượng(object) trong Javascript...
-            Nó giúp bạn tăng hiệu suất, mã code của chúng ta sẽ dễ đọc hơn với số lượng dòng được giảm đáng kể và nó cũng hoạt động trên tất cả các trình duyệt.  
-            <br/>
-            Đường dẫn ở đây nhé:  <a href="https://lodash.com/" title="Lodash" target="_blank">Lodash</a>.
-           </p>
 
 
-           <div class="row">
-            <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4 title-article-size">
-               <a href="https://bulma.io/" title="Bulma" target="_blank">Bulma:</a>
-              </h4>
+            <img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587616893/slider-trong-web-phan-2/Slider-HTML-CSS-JS-phan-4_ojwe4e.png"
+              alt="Xây dựng slider phần 4 html,css, js">
+
+
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component slider này nhé:</p>
+
+
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
+              data-user="mariosmaselli" data-slug-hash="ZpvLao"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Exploring UI Animation #4">
+              <span>See the Pen <a href="https://codepen.io/mariosmaselli/pen/ZpvLao">
+                  Exploring UI Animation #4</a> by mario s maselli (<a
+                  href="https://codepen.io/mariosmaselli">@mariosmaselli</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+
+
+
+
+
+            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+              Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
+                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
+              Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
+              vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn
+              mình sao chép: <a href="https://codepen.io/mariosmaselli/pen/ZpvLao" target="_blank">Exploring UI
+                Animation #2</a>.</p>
+
+
+
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h4 class="text-primary ml-4 title-article-size">Slider Transitions:</h4>
+              </div>
             </div>
-          </div>
-          
-          <img class="img-thumbnail shadow p-2 lazyload"
-          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587569146/thu%20vien%20css%20js%20phan%201/Bulma-CSS-Framework_rwx1ky.png"
-          alt="Thư Viện  Bulma">
-           <p class="mt-4"> 
-           Bulma là một framework CSS đang phát triển với tốc độ mạnh mẽ với việc chỉ sử dụng CSS dựa trên tính năng <b>Flexbox</b> trong framework. 
-           Nó là mã nguồn mở nên bạn có thể tải về và sử dụng miễn phí chỉ với 1 file bulma.css và khoảng 200.000 lập trình viên tin tưởng sử dụng.
-            <br/>
-            Đường dẫn ở đây nhé:    <a href="https://bulma.io/" title="Bulma" target="_blank">Bulma</a>.
-           </p>
 
 
-           
-           <div class="row">
-            <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4 title-article-size">
-               <a href="https://plyr.io/" title="Plyr" target="_blank">Plyr:</a>
-              </h4>
+            <img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587617048/slider-trong-web-phan-2/Slider-HTML-CSS-JS-phan-5_odphei.png"
+              alt="Xây dựng slider phần 5 html,css, js">
+
+
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component slider này nhé:</p>
+
+
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="fluxus"
+              data-slug-hash="rweVgp"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Slider transitions">
+              <span>See the Pen <a href="https://codepen.io/fluxus/pen/rweVgp">
+                  Slider transitions</a> by Mirko Zorić (<a href="https://codepen.io/fluxus">@fluxus</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+
+
+
+
+
+            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+              Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
+              vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn
+              mình sao chép: <a href="https://codepen.io/fluxus/pen/rweVgp" target="_blank">Slider Transitions</a>.</p>
+
+
+
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h4 class="text-primary ml-4 title-article-size">Slice Slider:</h4>
+              </div>
             </div>
-          </div>
-          
-          <img class="img-thumbnail shadow p-2 lazyload"
-          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587571266/thu%20vien%20css%20js%20phan%201/Thu-Vien-Javascript-Plyr_jolr4o.png"
-          alt="Thư Viện  Plyr">
-           <p class="mt-4"> 
-           Plyr là một thư viện javascript giúp bạn có thể phát nhiều loại dạng video khác nhau HTML5, Vimeo, Youtube. Và bạn có thể chỉnh sửa 
-           thiết kế lại phù hợp với thiết kế của trang web. Điểm yêu thích nữa mà mình thích ở nó là kích thước nhẹ, có thể chạy trên đa số trình duyệt và responsive trên nhiều màn hình thiết bị khác nhau.
-            <br/>
-            Đường dẫn ở đây nhé:       <a href="https://plyr.io/" title="Plyr" target="_blank">Plyr</a>.
-           </p>
 
 
-           <div class="row">
-            <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4 title-article-size">
-               <a href="https://nhn.github.io/tui.calendar/latest/tutorial-example00-basic" title="Toast UI Calendar" target="_blank">Toast UI Calendar:</a>
-              </h4>
+            <img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587617272/slider-trong-web-phan-2/Slider-HTML-CSS-JS-phan-6_srvff2.png"
+              alt="Xây dựng slider phần 6 html,css, js">
+
+
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component slider này nhé:</p>
+
+
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
+              data-user="StephenScaff" data-slug-hash="egOedp"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Slice Slider">
+              <span>See the Pen <a href="https://codepen.io/StephenScaff/pen/egOedp">
+                  Slice Slider</a> by Stephen Scaff (<a href="https://codepen.io/StephenScaff">@StephenScaff</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+
+
+
+
+
+
+            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+              Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
+                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
+              Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
+              vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn
+              mình sao chép: <a href="https://codepen.io/StephenScaff/pen/egOedp" target="_blank">Slice Slider</a>.</p>
+
+
+
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h4 class="text-primary ml-4 title-article-size">Motion Blur Effect:</h4>
+              </div>
             </div>
-          </div>
-          
-          <img class="img-thumbnail shadow p-2 lazyload"
-          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587572352/thu%20vien%20css%20js%20phan%201/Thu-Vien-Javascript-Toast-Calendar_muod8t.png"
-          alt="Thư Viện Toast UI Calendar">
-           <p class="mt-4"> 
-           Toast UI Calendar giúp chúng ta tạo lịch(calendar) trên trang web với nhiều tiện ích như hỗ trợ xem theo ngày, tháng, tuần, tháng, hỗ trợ tùy chỉnh giao diện UI theo
-           chủ đề có sẵn, giúp quản lý hiệu quả  lịch trình công việc...
-            <br/>
-            Đường dẫn ở đây nhé:                    <a href="https://nhn.github.io/tui.calendar/latest/tutorial-example00-basic" title="Toast UI Calendar" target="_blank">Toast UI Calendar</a>.
-           </p>
 
 
-           
-           <div class="row">
-            <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4 title-article-size">
-               <a href="http://kenwheeler.github.io/slick/" title="Slick" target="_blank">Slick:</a>
-              </h4>
+            <img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587617500/slider-trong-web-phan-2/Slider-HTML-CSS-JS-phan-7_qo1u1d.png"
+              alt="Xây dựng slider phần 7 html,css, js">
+
+
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component slider này nhé:</p>
+
+
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
+              data-user="damianmuti" data-slug-hash="MvYPPa"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Motion blur effect using SVG filters">
+              <span>See the Pen <a href="https://codepen.io/damianmuti/pen/MvYPPa">
+                  Motion blur effect using SVG filters</a> by Damián Muti (<a
+                  href="https://codepen.io/damianmuti">@damianmuti</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+
+
+            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+              Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
+                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
+              Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
+              vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn
+              mình sao chép: <a href="https://codepen.io/damianmuti/pen/MvYPPa" target="_blank">Motion Blur Effect</a>.
+            </p>
+
+
+
+
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h4 class="text-primary ml-4 title-article-size">Flexslider CSS Animated Layers:</h4>
+              </div>
             </div>
-          </div>
-          
-          <img class="img-thumbnail shadow p-2 lazyload"
-          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587573564/thu%20vien%20css%20js%20phan%201/Thu-Vien-Javascript-slick_ilgc3r.png"
-          alt="Thư Viện Slick">
-           <p class="mt-4"> 
-          Slick là một thư viện giúp chúng ta tạo carousel/slider với độ tùy chỉnh cao, thân thiện với di động và responsive trên nhiều màn hinh thiết bị khác nhau.
-          Nó có rất nhiều tính năng giúp bạn có sự lựa chọn đa dạng hơn trong việc đưa vào sử dụng trong trang web của bạn.
-            <br/>
-            Đường dẫn ở đây nhé:                               <a href="http://kenwheeler.github.io/slick/" title="Slick" target="_blank">Slick</a>.
-           </p>
+
+
+            <img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587617682/slider-trong-web-phan-2/Slider-HTML-CSS-JS-phan-8_eqsge0.png"
+              alt="Xây dựng slider phần 8 html,css, js">
+
+
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component slider này nhé:</p>
+
+
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
+              data-user="Komeyl94" data-slug-hash="vOaReR"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Flexslider with simple CSS animated layers">
+              <span>See the Pen <a href="https://codepen.io/Komeyl94/pen/vOaReR">
+                  Flexslider with simple CSS animated layers</a> by Komeyl (<a
+                  href="https://codepen.io/Komeyl94">@Komeyl94</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
 
 
 
-           <div class="row">
-            <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4 title-article-size">
-               <a href="https://sachinchoolur.github.io/lightgallery.js/" title="Lightgallery" target="_blank">Lightgallery:</a>
-              </h4>
+            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+              Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
+              vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn
+              mình sao chép: <a href="https://codepen.io/Komeyl94/pen/vOaReR" target="_blank">Flexslider CSS Animated
+                Layers</a>.</p>
+
+
+
+
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h4 class="text-primary ml-4 title-article-size">Greensock Animated Slideshow:</h4>
+              </div>
             </div>
-          </div>
-          
-          <img class="img-thumbnail shadow p-2 lazyload"
-          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587574826/thu%20vien%20css%20js%20phan%201/Thu-Vien-Javascript-lightgallery_d60s56.png"
-          alt="Thư Viện Lightgallery">
-           <p class="mt-4"> 
-         Lightgallery giúp bạn tạo ra các bộ sưu tập hình ảnh đẹp mắt với kích thước nhỏ gọn. Nó có các chức năng hỗ trợ phóng to, thu nhỏ,
-         tải trước hình ảnh và tối ưu, hiển thị trên nhiều màn hình thiết bị, dễ dàng tùy chỉnh thông qua CSS...
-            <br/>
-            Đường dẫn ở đây nhé: <a href="https://sachinchoolur.github.io/lightgallery.js/" title="Lightgallery" target="_blank">Lightgallery</a>.
-           </p>
 
 
-           <div class="row">
-            <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4 title-article-size">
-               <a href="https://momentjs.com/" title="Moment JS" target="_blank">Moment JS:</a>
-              </h4>
+            <img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587617970/slider-trong-web-phan-2/Slider-HTML-CSS-JS-phan-9_bb5lr5.png"
+              alt="Xây dựng slider phần 9 html,css, js">
+
+
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component slider này nhé:</p>
+
+
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="aderaaij"
+              data-slug-hash="wKVaKE"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Greensock animated slideshow [wip]">
+              <span>See the Pen <a href="https://codepen.io/aderaaij/pen/wKVaKE">
+                  Greensock animated slideshow [wip]</a> by Arden (<a href="https://codepen.io/aderaaij">@aderaaij</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+
+
+
+            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+              Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS và HTML thì có thể xem tại đây nha : <a
+                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a> và <a
+                href="https://pughtml.com/" target="_blank">Pug to HTML</a>.
+              Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
+              vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn
+              mình sao chép: <a href="https://codepen.io/aderaaij/pen/wKVaKE" target="_blank">Greensock Animated
+                Slideshow</a>.</p>
+
+
+
+
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h4 class="text-primary ml-4 title-article-size">Full Slider Prototype:</h4>
+              </div>
             </div>
-          </div>
-          
-          <img class="img-thumbnail shadow p-2 lazyload"
-          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587575319/thu%20vien%20css%20js%20phan%201/Thu-Vien-Javascript-Moment_bzjbud.png"
-          alt="Thư Viện Momentjs">
-           <p class="mt-4"> 
-         Moment JS là mã nguồn mở miễn phí giúp chúng ta dễ dàng xử lý các thông tin thời gian một cách nhanh chóng và hiệu quả hơn.
-         Nó có rất nhiều các chức năng để giải quyết các vấn đề ngày giờ khi bạn gặp phải trong việc phát triển web.
-            <br/>
-            Đường dẫn ở đây nhé: <a href="https://momentjs.com/" title="Moment JS" target="_blank">Moment JS</a>.
-           </p>
+
+
+            <img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587618386/slider-trong-web-phan-2/Slider-HTML-CSS-JS-phan-10_akxale.png"
+              alt="Xây dựng slider phần 10 html,css, js">
+
+
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component slider này nhé:</p>
+
+
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result"
+              data-user="glaubersampaio" data-slug-hash="Qwzjvy"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Full Slider Prototype">
+              <span>See the Pen <a href="https://codepen.io/glaubersampaio/pen/Qwzjvy">
+                  Full Slider Prototype</a> by Glauber Sampaio (<a
+                  href="https://codepen.io/glaubersampaio">@glaubersampaio</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+
+
+
+
+            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+              Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
+                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
+              Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
+              vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn
+              mình sao chép: <a href="https://codepen.io/glaubersampaio/pen/Qwzjvy" target="_blank">Full Slider
+                Prototype</a>.</p>
 
 
 
 
 
 
-            
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h4 class="text-primary ml-4 title-article-size">Image Overlay Slider:</h4>
+              </div>
+            </div>
 
-                
-  
+
+            <img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587618568/slider-trong-web-phan-2/Slider-HTML-CSS-JS-phan-11_gcv8mb.png"
+              alt="Xây dựng slider phần 11 html,css, js">
+
+
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component slider này nhé:</p>
+
+
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="pizza3"
+              data-slug-hash="ZyGYRK"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Image Overlay Slider">
+              <span>See the Pen <a href="https://codepen.io/pizza3/pen/ZyGYRK">
+                  Image Overlay Slider</a> by Yugam (<a href="https://codepen.io/pizza3">@pizza3</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+
+
+
+
+
+            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+              Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
+                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
+              Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
+              vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn
+              mình sao chép: <a href="https://codepen.io/pizza3/pen/ZyGYRK" target="_blank">Image Overlay Slider
+              </a>.</p>
+
+
+
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h4 class="text-primary ml-4 title-article-size">Clip-Path Revealing Slider:</h4>
+              </div>
+            </div>
+
+
+            <img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587618771/slider-trong-web-phan-2/Slider-HTML-CSS-JS-phan-12_ahi5vd.png"
+              alt="Xây dựng slider phần 12 html,css, js">
+
+
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component slider này nhé:</p>
+
+
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="suez"
+              data-slug-hash="grJONP"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Clip-Path Revealing Slider">
+              <span>See the Pen <a href="https://codepen.io/suez/pen/grJONP">
+                  Clip-Path Revealing Slider</a> by Nikolay Talanov (<a href="https://codepen.io/suez">@suez</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+
+
+
+
+
+            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+              Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
+                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
+              Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
+              vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn
+              mình sao chép: <a href="https://codepen.io/suez/pen/grJONP" target="_blank">Clip-Path Revealing Slider
+              </a>.</p>
+
+
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h4 class="text-primary ml-4 title-article-size">Popout Slider:</h4>
+              </div>
+            </div>
+
+
+            <img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587619014/slider-trong-web-phan-2/Slider-HTML-CSS-JS-phan-13_hlzf2e.png"
+              alt="Xây dựng slider phần 13 html,css, js">
+
+
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component slider này nhé:</p>
+
+
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
+              data-user="nathantaylor" data-slug-hash="JEXgpj"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Popout Slider">
+              <span>See the Pen <a href="https://codepen.io/nathantaylor/pen/JEXgpj">
+                  Popout Slider</a> by Nathan Taylor (<a href="https://codepen.io/nathantaylor">@nathantaylor</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+
+
+
+
+
+            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+              Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
+                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
+              Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
+              vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn
+              mình sao chép: <a href="https://codepen.io/nathantaylor/pen/JEXgpj" target="_blank">Popout Slider
+              </a>.</p>
+
+
+
+
+
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h4 class="text-primary ml-4 title-article-size">Full Page Slider:</h4>
+              </div>
+            </div>
+
+
+            <img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587619353/slider-trong-web-phan-2/Slider-HTML-CSS-JS-phan-14_i1qtmk.png"
+              alt="Xây dựng slider phần 14 html,css, js">
+
+
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component slider này nhé:</p>
+
+
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="jjmartucci" data-slug-hash="tsCpL" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Full Page Slider">
+              <span>See the Pen <a href="https://codepen.io/jjmartucci/pen/tsCpL">
+              Full Page Slider</a> by Joseph Martucci (<a href="https://codepen.io/jjmartucci">@jjmartucci</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+      
+
+
+
+
+
+            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
+              Do đây sử dụng <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
+                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>.
+              Và nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp
+              vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn
+              mình sao chép: <a href="https://codepen.io/jjmartucci/pen/tsCpL" target="_blank">Full Page Slider
+              </a>.</p>
+
+
+
+
+
+
+
+
 
 
 
@@ -277,7 +650,7 @@
 
             <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
 
-            <p>Qua đây mình mong bài viết sẽ giúp bạn rút ngắn thời gian trong việc phát triển 
+            <p>Qua đây mình mong bài viết sẽ giúp bạn rút ngắn thời gian thiết kế slider trong việc phát triển
               trang web và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng
               hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
 
