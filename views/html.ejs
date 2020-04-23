@@ -26,7 +26,7 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i>Những Alert Snippet Trong Thiết Kế Web</h2>
+                  aria-hidden="true"></i>Những Thư Viện CSS Và Javascript Phần 1</h2>
             </div>
           </div>
 
@@ -36,482 +36,215 @@
             </div>
           </div>
           <div class="text-content-article mt-5">
-            <p><i>Hôm nay chúng ta sẽ đi tìm hiểu cách thiết kế component alert bằng cách kết hợp HTML, CSS, Javascript
-                và Bootstrap nhé.</i>
+            <p><i>Hôm nay chúng ta sẽ đi tìm hiểu thêm về những thư viện CSS và Javascript để phát triển web.</i>
             </p>
             <!--<div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill"><h4 class="text-primary ml-4">Framework Bootstrap 4</h4></div>-->
 
             <p class="mt-4">
-              Khi bạn cần thu hút sự chú ý của người dùng đến một hành động hay sự kiện nào đó trên trang web của chúng
-              ta thì bạn có thể sử dụng component alert(thông báo).
-              Nhưng cũng không nên quá lạm dụng vì nó sẽ gây sự khó chịu cho người dùng và lần sau họ có thể không quay
-              lại trang của bạn nữa. Có thể bạn sử dụng trong những hoạt động sau:
-            </p>
-            <ul>
-              <li>Thông báo kết quả về một hành động hay sự kiện. Ví dụ như người dùng đăng ký thành viên thì chúng ta
-                nên sử dụng alert để thông báo cho người dùng biết là đã đăng ký thành công hoặc xảy ra lỗi.</li>
-              <li>Cảnh bảo từ hệ thống trang web để cung cấp thông tin cho người dùng như là sắp có bảo trì hệ thống,
-                một chức năng sắp ra mắt…</li>
-              <li>Xác nhận hành động rủi ro nào đó trên trang web.
-                Ví dụ khi bạn vào một trang web không an toàn thì Google sẽ đưa ra cảnh báo cho bạn và sẽ có hai sự lựa
-                chọn là đi tiếp hoặc không truy cập vào trang web đó nữa.</li>
-              <li>
-                Giúp bạn tăng khả năng liên kết với các khách hàng tiềm năng bằng những mẫu thông báo đăng ký email để
-                nhận sản phẩm mới, bài viết mới…
-              </li>
-            </ul>
-            <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587453788/alert%20snippet/Vi-Du-Alert-HTML-CSS-JS-Bootstrap_by85wh.png"
-              alt="Ví dụ về component Alert">
-            <p class="mt-4">
-              Ðối với việc thiết kế một thông báo bạn cần quan tâm đến màu sắc cũng như nội dung mà mình muốn truyền
-              đạt.
-              Như đối với thông báo cảnh báo thì bạn nên sử dụng màu đỏ để ngụ ý rằng dây là một hành động nguy hiểm có
-              thể ảnh hưởng tới người dùng
-              hay một hành động cần thực hiện ngay lập tức. Về phần nội dung thì cần câu văn rõ ràng ngắn gọn đảm bảo
-              người dùng có thể hiểu được một cách dễ dàng.
-            </p>
-            <p>Sau khi hiểu sơ lược về thông báo thì sau đây mình sẽ giới thiệu một số Alert snippet giúp bạn có sự lựa
-              chọn tốt nhất để phù hợp với mục đích cũng như thiết kế, bố cục trang web của bạn.</p>
+            Thư viện là tập hợp những đoạn mã được viết sẵn và có thể áp dụng vào dự án giúp tiết kiệm thời gian phát triển web của bạn.
+           Nó có rất nhiều tiện ích, tính năng  giúp bạn tăng khả năng trải nghiệm người dùng khi sử dụng web cũng như những điều  bổ ích giúp chúng ta học thêm được nhiều điều mới hơn.
 
-
-
-
-
-
-
-
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h4 class="text-primary ml-4 title-article-size">Modern Alerts:</h4>
-              </div>
+           <div class="row">
+            <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+              <h4 class="text-primary ml-4 title-article-size">
+               <a href="https://github.com/kamranahmedse/developer-roadmap" title="Web Developer Road Map" target="_blank">Web Developer Road Map:</a>
+              </h4>
             </div>
-            <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587454775/alert%20snippet/Alert-Snipper-HTML-CSS-JS_dbutkw.png"
-              alt="Xây Dựng component thông báo bằng HTML, CSS, JS Phần 1">
-            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component thông báo này nhé:</p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
-              data-user="keikaavousi" data-slug-hash="eYOmOpN"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Modern Alerts">
-              <span>See the Pen <a href="https://codepen.io/keikaavousi/pen/eYOmOpN">
-                  Modern Alerts</a> by MohammadReza keikavousi (<a
-                  href="https://codepen.io/keikaavousi">@keikaavousi</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
-              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Do đây sử dụng
-              <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
-                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. Và nếu chúng ta muốn xem
-              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
-              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/keikaavousi/pen/eYOmOpN" target="_blank">Modern Alerts</a>.</p>
-
-
-
-
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h4 class="text-primary ml-4 title-article-size">CSS Notifications Component:</h4>
-              </div>
-            </div>
-            <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587456160/alert%20snippet/Alert-Snipper-HTML-CSS-JS-Phan-2_nt8s7e.png"
-              alt="Xây Dựng component thông báo bằng HTML, CSS, JS Phần 2">
-            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component thông báo này nhé:</p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
-              data-user="damianmuti" data-slug-hash="GEZoeG"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="CSS-only Notifications Component">
-              <span>See the Pen <a href="https://codepen.io/damianmuti/pen/GEZoeG">
-                  CSS-only Notifications Component</a> by Damián Muti (<a
-                  href="https://codepen.io/damianmuti">@damianmuti</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-
-            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
-              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Do đây sử dụng
-              <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
-                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. Và nếu chúng ta muốn xem
-              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
-              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/damianmuti/pen/GEZoeG" target="_blank">CSS Notifications Component</a>.</p>
-
-
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h4 class="text-primary ml-4 title-article-size">Notifications:</h4>
-              </div>
-            </div>
-            <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587456371/alert%20snippet/Alert-Snipper-HTML-CSS-JS-Phan-3_wyc0ub.png"
-              alt="Xây Dựng component thông báo bằng HTML, CSS, JS Phần 3">
-            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component thông báo này nhé:</p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="hmps"
-              data-slug-hash="sCnbm"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Notifications">
-              <span>See the Pen <a href="https://codepen.io/hmps/pen/sCnbm">
-                  Notifications</a> by Hampus Persson (<a href="https://codepen.io/hmps">@hmps</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-
-            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
-              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Do đây sử dụng
-              <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
-                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. Và nếu chúng ta muốn xem
-              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
-              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/hmps/pen/sCnbm" target="_blank">Notifications</a>.</p>
-
-
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h4 class="text-primary ml-4 title-article-size">Flash Message (Error/Success):</h4>
-              </div>
-            </div>
-            <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587456711/alert%20snippet/Alert-Snipper-HTML-CSS-JS-Phan-4_xzovp9.png"
-              alt="Xây Dựng component thông báo bằng HTML, CSS, JS Phần 4">
-            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component thông báo này nhé:</p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
-              data-user="juliepark" data-slug-hash="vjMOKQ"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Daily UI#011 | Flash Message (Error/Success)">
-              <span>See the Pen <a href="https://codepen.io/juliepark/pen/vjMOKQ">
-                  Daily UI#011 | Flash Message (Error/Success)</a> by Julie Park (<a
-                  href="https://codepen.io/juliepark">@juliepark</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-
-            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
-              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Do đây sử dụng
-              <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
-                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. Và nếu chúng ta muốn xem
-              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
-              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/juliepark/pen/vjMOKQ" target="_blank">Flash Message (Error/Success)</a>.</p>
-
-
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h4 class="text-primary ml-4 title-article-size">Material Design Alerts:</h4>
-              </div>
-            </div>
-            <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587458052/alert%20snippet/Alert-Snipper-HTML-CSS-JS-Phan-7_flt3uq.png"
-              alt="Xây Dựng component thông báo bằng HTML, CSS, JS Phần 7">
-            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component thông báo này nhé:</p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
-              data-user="renanpupin" data-slug-hash="dYZyjj"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="UI -Material Design alerts">
-              <span>See the Pen <a href="https://codepen.io/renanpupin/pen/dYZyjj">
-                  UI -Material Design alerts</a> by Renan Pupin (<a
-                  href="https://codepen.io/renanpupin">@renanpupin</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-
-
-            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
-              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Do đây sử dụng
-              <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
-                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. Và nếu chúng ta muốn xem
-              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
-              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/renanpupin/pen/dYZyjj" target="_blank">Material Design Alerts</a>.</p>
-
-
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h4 class="text-primary ml-4 title-article-size">Alerts Component:</h4>
-              </div>
-            </div>
-            <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587456907/alert%20snippet/Alert-Snipper-HTML-CSS-JS-Phan-5_mhl3wy.png"
-              alt="Xây Dựng component thông báo bằng HTML, CSS, JS Phần 5">
-            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component thông báo này nhé:</p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result"
-              data-user="travis_john" data-slug-hash="pXRPzE"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Alerts Component">
-              <span>See the Pen <a href="https://codepen.io/travis_john/pen/pXRPzE">
-                  Alerts Component</a> by Travis John (<a href="https://codepen.io/travis_john">@travis_john</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-
-
-
-
-            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
-              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Do đây sử dụng
-              <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
-                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. Và nếu chúng ta muốn xem
-              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
-              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/travis_john/pen/pXRPzE" target="_blank">Alerts Component</a>.</p>
-
-
-
-
-
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h4 class="text-primary ml-4 title-article-size">Notifications 2:</h4>
-              </div>
-            </div>
-            <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587457701/alert%20snippet/Alert-Snipper-HTML-CSS-JS-Phan-6_qldx7t.png"
-              alt="Xây Dựng component thông báo bằng HTML, CSS, JS Phần 6">
-            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component thông báo này nhé:</p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
-              data-user="keithpickering" data-slug-hash="ibtEa"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Notifications">
-              <span>See the Pen <a href="https://codepen.io/keithpickering/pen/ibtEa">
-                  Notifications</a> by Keith Pickering (<a href="https://codepen.io/keithpickering">@keithpickering</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
-              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Do đây sử dụng
-              <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
-                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. Và nếu chúng ta muốn xem
-              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
-              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/keithpickering/pen/ibtEa" target="_blank">Notifications 2</a>.</p>
-
-
-
-
-
-
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h4 class="text-primary ml-4 title-article-size">Animated Notification Messages:</h4>
-              </div>
-            </div>
-            <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587458137/alert%20snippet/Alert-Snipper-HTML-CSS-JS-Phan-8_fqpwlr.png"
-              alt="Xây Dựng component thông báo bằng HTML, CSS, JS Phần 8">
-            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component thông báo này nhé:</p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="jedtrow"
-              data-slug-hash="wBQagR"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Animated Notification Messages">
-              <span>See the Pen <a href="https://codepen.io/jedtrow/pen/wBQagR">
-                  Animated Notification Messages</a> by Jed Trow (<a href="https://codepen.io/jedtrow">@jedtrow</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-
-
-
-
-
-
-            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
-              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Và nếu chúng ta muốn xem
-              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
-              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/jedtrow/pen/wBQagR" target="_blank">Animated Notification Messages</a>.</p>
-
-
-
-                
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h4 class="text-primary ml-4 title-article-size">Pop-Up Overlay:</h4>
-              </div>
-            </div>
-            <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587459013/alert%20snippet/Alert-Snipper-HTML-CSS-JS-Phan-9_ciogrj.png"
-              alt="Xây Dựng component thông báo bằng HTML, CSS, JS Phần 9">
-            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component thông báo này nhé:</p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="BeanBaag" data-slug-hash="mMJqma" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pop-Up Overlay">
-              <span>See the Pen <a href="https://codepen.io/BeanBaag/pen/mMJqma">
-              Pop-Up Overlay</a> by Aaron Taylor (<a href="https://codepen.io/BeanBaag">@BeanBaag</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-           
-
-
-
-
-
-
-
-            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
-              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Và nếu chúng ta muốn xem
-              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
-              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/BeanBaag/pen/mMJqma" target="_blank">Pop-Up Overlay</a>.</p>
-
-
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h4 class="text-primary ml-4 title-article-size">Bootstrap Alert Tests:</h4>
-              </div>
-            </div>
-            <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587459311/alert%20snippet/Alert-Snipper-HTML-CSS-JS-Phan-10_wdn3lq.png"
-              alt="Xây Dựng component thông báo bằng HTML, CSS, JS Phần 10">
-            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component thông báo này nhé:</p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="LAUVz" data-slug-hash="ybdjeE" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Bootstrap Alert Tests">
-              <span>See the Pen <a href="https://codepen.io/LAUVz/pen/ybdjeE">
-              Bootstrap Alert Tests</a> by Henrijs Kons (<a href="https://codepen.io/LAUVz">@LAUVz</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
+          </div>
           
+          <img class="img-thumbnail shadow p-2 lazyload"
+          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587564672/thu%20vien%20css%20js%20phan%201/ban-do-huong-dan-lap-trinh_zswxxn.png"
+          alt="hướng phát triển lập trình">
+           <p class="mt-4"> 
+             Mục đích của road map là cung cấp cho bạn một con đường định hướng với 3 xu hướng là Front-end, Back-end, DevOps.
+             Hồi đó mình cũng tự học HTML, CSS và Javascript rồi sau đó mình mơ hồ không biết học thêm cái gì để có thể lập trình và phát triển web.
+             Bản đồ road map này đã giúp mình xác định được nên học cái gì tiếp theo cũng như cập như xu hướng ngôn ngữ nên học vào thời điểm hiện tại.
+            Do nó ghi bằng tiếng anh nên bạn cần google dịch tí nhé và minh mong nó sẽ giúp được bạn có thể lựa chọn con đường lập trình 
+            mà mình sẽ đi trong tương lai.<br />
+            Đường dẫn ở đây nhé: <a href="https://github.com/kamranahmedse/developer-roadmap" title="Web Developer Road Map" target="_blank">Web Developer Road Map</a>
+           </p>
 
 
-            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
-              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Và nếu chúng ta muốn xem
-              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
-              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/LAUVz/pen/ybdjeE" target="_blank">Bootstrap Alert Tests</a>.</p>
+           <div class="row">
+            <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+              <h4 class="text-primary ml-4 title-article-size">
+               <a href="https://sweetalert2.github.io/" title="Sweet Alert 2" target="_blank">Sweet Alert 2:</a>
+              </h4>
+            </div>
+          </div>
+          
+          <img class="img-thumbnail shadow p-2 lazyload"
+          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587565581/thu%20vien%20css%20js%20phan%201/SweetAlert2_zaz9v7.png"
+          alt="Tạo thông báo đẹp">
+           <p class="mt-4"> 
+            Sweet Alert 2 là thư viện giúp bạn tạo các thông báo đẹp mặt với nhiều chức năng và nó cũng responsive được trên
+            nhiều màn hình thiết bị khác nhau. Và bạn cũng có thể chỉnh sửa tùy ý phù hợp với mục đích của mình.<br/>
+            Đường dẫn ở đây nhé: <a href="https://sweetalert2.github.io/" title="Sweet Alert 2" target="_blank">Sweet Alert 2</a>
+           </p>
 
 
-                <div class="row">
-                  <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                    <h4 class="text-primary ml-4 title-article-size">Flash Message:</h4>
-                  </div>
-                </div>
-                <img class="img-thumbnail shadow p-2 lazyload"
-                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587459846/alert%20snippet/Alert-Snipper-HTML-CSS-JS-Phan-11_jgoab1.png"
-                  alt="Xây Dựng component thông báo bằng HTML, CSS, JS Phần 11">
-                <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component thông báo này nhé:</p>
-                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="andrewichert" data-slug-hash="mEzpZZ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="#011  Flash Message ">
-                  <span>See the Pen <a href="https://codepen.io/andrewichert/pen/mEzpZZ">
-                  #011  Flash Message </a> by Andre Wichert (<a href="https://codepen.io/andrewichert">@andrewichert</a>)
-                  on <a href="https://codepen.io">CodePen</a>.</span>
-                </p>
+           <div class="row">
+            <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+              <h4 class="text-primary ml-4 title-article-size">
+               <a href="https://connoratherton.com/loaders" title="Loaders.css" target="_blank">Loaders.css:</a>
+              </h4>
+            </div>
+          </div>
+          
+          <img class="img-thumbnail shadow p-2 lazyload"
+          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587566555/thu%20vien%20css%20js%20phan%201/LoaderCss_frpawn.png"
+          alt="Thư Viện Loader Css">
+           <p class="mt-4"> 
+            Loader.css là bộ sưu tập những hiệu ứng chuyển động spinners với hơn 25 thiết kế. Do chỉ sử dụng CSS thiết kế nên bạn có thể dễ dàng 
+            áp dụng và tùy chỉnh cho trang web của mình.<br/>
+            Đường dẫn ở đây nhé: <a href="https://connoratherton.com/loaders" title="Loaders.css" target="_blank">Loaders.css:</a>
+           </p>
+
+
+           <div class="row">
+            <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+              <h4 class="text-primary ml-4 title-article-size">
+               <a href="https://lodash.com/" title="Lodash" target="_blank">Lodash:</a>
+              </h4>
+            </div>
+          </div>
+          
+          <img class="img-thumbnail shadow p-2 lazyload"
+          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587568389/thu%20vien%20css%20js%20phan%201/Lodash_asheri.png"
+          alt="Thư Viện  Lodash">
+           <p class="mt-4"> 
+            Lodash là một thư viện Javascript giúp chúng ta có thể dễ dàng hơn khi làm việc với mảng, chuỗi hay đối tượng(object) trong Javascript...
+            Nó giúp bạn tăng hiệu suất, mã code của chúng ta sẽ dễ đọc hơn với số lượng dòng được giảm đáng kể và nó cũng hoạt động trên tất cả các trình duyệt.  
+            <br/>
+            Đường dẫn ở đây nhé:  <a href="https://lodash.com/" title="Lodash" target="_blank">Lodash</a>.
+           </p>
+
+
+           <div class="row">
+            <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+              <h4 class="text-primary ml-4 title-article-size">
+               <a href="https://bulma.io/" title="Bulma" target="_blank">Bulma:</a>
+              </h4>
+            </div>
+          </div>
+          
+          <img class="img-thumbnail shadow p-2 lazyload"
+          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587569146/thu%20vien%20css%20js%20phan%201/Bulma-CSS-Framework_rwx1ky.png"
+          alt="Thư Viện  Bulma">
+           <p class="mt-4"> 
+           Bulma là một framework CSS đang phát triển với tốc độ mạnh mẽ với việc chỉ sử dụng CSS dựa trên tính năng <b>Flexbox</b> trong framework. 
+           Nó là mã nguồn mở nên bạn có thể tải về và sử dụng miễn phí chỉ với 1 file bulma.css và khoảng 200.000 lập trình viên tin tưởng sử dụng.
+            <br/>
+            Đường dẫn ở đây nhé:    <a href="https://bulma.io/" title="Bulma" target="_blank">Bulma</a>.
+           </p>
+
+
+           
+           <div class="row">
+            <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+              <h4 class="text-primary ml-4 title-article-size">
+               <a href="https://plyr.io/" title="Plyr" target="_blank">Plyr:</a>
+              </h4>
+            </div>
+          </div>
+          
+          <img class="img-thumbnail shadow p-2 lazyload"
+          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587571266/thu%20vien%20css%20js%20phan%201/Thu-Vien-Javascript-Plyr_jolr4o.png"
+          alt="Thư Viện  Plyr">
+           <p class="mt-4"> 
+           Plyr là một thư viện javascript giúp bạn có thể phát nhiều loại dạng video khác nhau HTML5, Vimeo, Youtube. Và bạn có thể chỉnh sửa 
+           thiết kế lại phù hợp với thiết kế của trang web. Điểm yêu thích nữa mà mình thích ở nó là kích thước nhẹ, có thể chạy trên đa số trình duyệt và responsive trên nhiều màn hình thiết bị khác nhau.
+            <br/>
+            Đường dẫn ở đây nhé:       <a href="https://plyr.io/" title="Plyr" target="_blank">Plyr</a>.
+           </p>
+
+
+           <div class="row">
+            <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+              <h4 class="text-primary ml-4 title-article-size">
+               <a href="https://nhn.github.io/tui.calendar/latest/tutorial-example00-basic" title="Toast UI Calendar" target="_blank">Toast UI Calendar:</a>
+              </h4>
+            </div>
+          </div>
+          
+          <img class="img-thumbnail shadow p-2 lazyload"
+          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587572352/thu%20vien%20css%20js%20phan%201/Thu-Vien-Javascript-Toast-Calendar_muod8t.png"
+          alt="Thư Viện Toast UI Calendar">
+           <p class="mt-4"> 
+           Toast UI Calendar giúp chúng ta tạo lịch(calendar) trên trang web với nhiều tiện ích như hỗ trợ xem theo ngày, tháng, tuần, tháng, hỗ trợ tùy chỉnh giao diện UI theo
+           chủ đề có sẵn, giúp quản lý hiệu quả  lịch trình công việc...
+            <br/>
+            Đường dẫn ở đây nhé:                    <a href="https://nhn.github.io/tui.calendar/latest/tutorial-example00-basic" title="Toast UI Calendar" target="_blank">Toast UI Calendar</a>.
+           </p>
+
+
+           
+           <div class="row">
+            <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+              <h4 class="text-primary ml-4 title-article-size">
+               <a href="http://kenwheeler.github.io/slick/" title="Slick" target="_blank">Slick:</a>
+              </h4>
+            </div>
+          </div>
+          
+          <img class="img-thumbnail shadow p-2 lazyload"
+          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587573564/thu%20vien%20css%20js%20phan%201/Thu-Vien-Javascript-slick_ilgc3r.png"
+          alt="Thư Viện Slick">
+           <p class="mt-4"> 
+          Slick là một thư viện giúp chúng ta tạo carousel/slider với độ tùy chỉnh cao, thân thiện với di động và responsive trên nhiều màn hinh thiết bị khác nhau.
+          Nó có rất nhiều tính năng giúp bạn có sự lựa chọn đa dạng hơn trong việc đưa vào sử dụng trong trang web của bạn.
+            <br/>
+            Đường dẫn ở đây nhé:                               <a href="http://kenwheeler.github.io/slick/" title="Slick" target="_blank">Slick</a>.
+           </p>
+
+
+
+           <div class="row">
+            <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+              <h4 class="text-primary ml-4 title-article-size">
+               <a href="https://sachinchoolur.github.io/lightgallery.js/" title="Lightgallery" target="_blank">Lightgallery:</a>
+              </h4>
+            </div>
+          </div>
+          
+          <img class="img-thumbnail shadow p-2 lazyload"
+          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587574826/thu%20vien%20css%20js%20phan%201/Thu-Vien-Javascript-lightgallery_d60s56.png"
+          alt="Thư Viện Lightgallery">
+           <p class="mt-4"> 
+         Lightgallery giúp bạn tạo ra các bộ sưu tập hình ảnh đẹp mắt với kích thước nhỏ gọn. Nó có các chức năng hỗ trợ phóng to, thu nhỏ,
+         tải trước hình ảnh và tối ưu, hiển thị trên nhiều màn hình thiết bị, dễ dàng tùy chỉnh thông qua CSS...
+            <br/>
+            Đường dẫn ở đây nhé: <a href="https://sachinchoolur.github.io/lightgallery.js/" title="Lightgallery" target="_blank">Lightgallery</a>.
+           </p>
+
+
+           <div class="row">
+            <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+              <h4 class="text-primary ml-4 title-article-size">
+               <a href="https://momentjs.com/" title="Moment JS" target="_blank">Moment JS:</a>
+              </h4>
+            </div>
+          </div>
+          
+          <img class="img-thumbnail shadow p-2 lazyload"
+          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587575319/thu%20vien%20css%20js%20phan%201/Thu-Vien-Javascript-Moment_bzjbud.png"
+          alt="Thư Viện Momentjs">
+           <p class="mt-4"> 
+         Moment JS là mã nguồn mở miễn phí giúp chúng ta dễ dàng xử lý các thông tin thời gian một cách nhanh chóng và hiệu quả hơn.
+         Nó có rất nhiều các chức năng để giải quyết các vấn đề ngày giờ khi bạn gặp phải trong việc phát triển web.
+            <br/>
+            Đường dẫn ở đây nhé: <a href="https://momentjs.com/" title="Moment JS" target="_blank">Moment JS</a>.
+           </p>
+
+
+
+
+
+
             
-              
-    
-    
-                <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
-                  thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-                  Do đây sử dụng
-              <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
-                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. Và nếu chúng ta muốn xem
-                  các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
-                  dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                    href="https://codepen.io/andrewichert/pen/mEzpZZ" target="_blank">Flash Message</a>.</p>
 
-
-              
-                    <div class="row">
-                      <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                        <h4 class="text-primary ml-4 title-article-size">Flash Message 2:</h4>
-                      </div>
-                    </div>
-                    <img class="img-thumbnail shadow p-2 lazyload"
-                      data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587460451/alert%20snippet/Alert-Snipper-HTML-CSS-JS-Phan-13_1_zedacu.png"
-                      alt="Xây Dựng component thông báo bằng HTML, CSS, JS Phần 13">
-                    <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component thông báo này nhé:</p>
-                    <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="max1128" data-slug-hash="vPprRO" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Flash Messages - 100 Accessible UI Challenge">
-                      <span>See the Pen <a href="https://codepen.io/max1128/pen/vPprRO">
-                      Flash Messages - 100 Accessible UI Challenge</a> by Maxwell Antonucci (<a href="https://codepen.io/max1128">@max1128</a>)
-                      on <a href="https://codepen.io">CodePen</a>.</span>
-                    </p>
-                  
-              
                 
-                    <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
-                      thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-                      Do đây sử dụng
-                  <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
-                    href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. Và nếu chúng ta muốn xem
-                      các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
-                      dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                        href="https://codepen.io/max1128/pen/vPprRO" target="_blank">Flash Message 2</a>.</p>
-
-                        <div class="row">
-                          <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                            <h4 class="text-primary ml-4 title-article-size">Simple Css Alerts:</h4>
-                          </div>
-                        </div>
-                        <img class="img-thumbnail shadow p-2 lazyload"
-                          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587460625/alert%20snippet/Alert-Snipper-HTML-CSS-JS-Phan-14_tvjlkz.png"
-                          alt="Xây Dựng component thông báo bằng HTML, CSS, JS Phần 14">
-                        <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component thông báo này nhé:</p>
-                        <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="golcinho" data-slug-hash="wEJQVm" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Simple css alerts">
-                          <span>See the Pen <a href="https://codepen.io/golcinho/pen/wEJQVm">
-                          Simple css alerts</a> by Stanislav (<a href="https://codepen.io/golcinho">@golcinho</a>)
-                          on <a href="https://codepen.io">CodePen</a>.</span>
-                        </p>
-                
-                      
-                  
-                    
-                        <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
-                          thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-                         Và nếu chúng ta muốn xem
-                          các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
-                          dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                            href="https://codepen.io/golcinho/pen/wEJQVm" target="_blank">Simple Css Alerts</a>.</p>
-
-
-                            <div class="row">
-                              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                                <h4 class="text-primary ml-4 title-article-size">UI Alert CSS:</h4>
-                              </div>
-                            </div>
-                            <img class="img-thumbnail shadow p-2 lazyload"
-                              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587460811/alert%20snippet/Alert-Snipper-HTML-CSS-JS-Phan-15_d74iqx.png"
-                              alt="Xây Dựng component thông báo bằng HTML, CSS, JS Phần 15">
-                            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component thông báo này nhé:</p>
-                            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="nirazanbasnet" data-slug-hash="mOVxgg" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="UI Alert CSS">
-                              <span>See the Pen <a href="https://codepen.io/nirazanbasnet/pen/mOVxgg">
-                              UI Alert CSS</a> by Nirajan Basnet (<a href="https://codepen.io/nirazanbasnet">@nirazanbasnet</a>)
-                              on <a href="https://codepen.io">CodePen</a>.</span>
-                            </p>
-                      
-                        
-                          
-                
-                
-                            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
-                              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé.
-                              Do đây sử dụng
-                          <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
-                            href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. Và nếu chúng ta muốn xem
-                              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
-                              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                                href="https://codepen.io/nirazanbasnet/pen/mOVxgg" target="_blank">UI Alert CSS</a>.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
 
 
 
@@ -544,8 +277,7 @@
 
             <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
 
-            <p>Qua đây mình mong bài viết sẽ giúp bạn rút ngắn thời gian trong việc chọn thiết kế component thông báo
-              cho
+            <p>Qua đây mình mong bài viết sẽ giúp bạn rút ngắn thời gian trong việc phát triển 
               trang web và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng
               hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
 
