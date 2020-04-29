@@ -15,6 +15,8 @@ var compression = require('compression')
 var https = require('https')
 var fs = require('fs')
 var http = require('http')
+let ejs = require('ejs')
+let LRU = require('lru-cache')
 
 var app = express();
 
@@ -32,7 +34,7 @@ app.use(session({secret: 'ketboard cat', cookie: { maxAge: 6000000 }, resave: fa
 app.use(flash())
 app.use(passport.initialize());
 app.use(passport.session())
-
+ejs.cache = new LRU(100);
 app.use('/', indexRouter);
 app.use('/article', articlesRouter);
 app.use('/post', postsRouter);

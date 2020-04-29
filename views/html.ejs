@@ -26,7 +26,7 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i>Giới thiệu về Javascript phần 1</h2>
+                  aria-hidden="true"></i>Toán Tử Điều Kiện Trong Javascript</h2>
             </div>
           </div>
 
@@ -36,191 +36,97 @@
             </div>
           </div>
           <div class="text-content-article mt-5">
-            <p><i>Hôm nay bạn hãy cùng mình sẽ đi tìm hiểu sơ lược về khái niệm cũng như những nét đặc biệt trong ngôn
-                ngữ Javascript.</i>
+            <p><i>Hôm nay bạn hãy cùng mình sẽ đi tìm hiểu khái niệm cũng như cách sử dụng toán tử điều kiện của ngôn
+                ngữ lập trình Javascript trong trang web nhé.</i>
             </p>
 
             <div class="row">
               <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h4 class="text-primary ml-4 title-article-size">Khái Niệm Về Ngôn Ngữ Javascript :</h4>
+                <h4 class="text-primary ml-4 title-article-size">Vòng Lặp For Và While Trong Javascript</h4>
               </div>
             </div>
             <p>
-              Javascript được tạo ra để bạn tương tác với các thành phần trang web và thường được kết hợp với HTML, CSS
-              để tạo ra các chức năng tiện ích, tăng khả năng tương tác cho trang web..
-              Việc tiện lợi của nó là có thể viết ngay trong trang HTML và tư động chạy khi trang được tải mà không cần
-              bất kỳ trình biên dịch
-              nào cả, bạn có thể hiểu nôm na trình biên dịch là công việc chuyển ngôn ngữ lập trình hiện tại sang một
-              ngôn ngữ cấp thấp hơn như là ngôn ngữ máy để giúp máy
-              tính có thể hiểu và thực hiện. Để hiểu rõ hơn bạn có thể tham khảo ở đây nhé: <a
-                href="https://vi.wikipedia.org/wiki/Tr%C3%ACnh_bi%C3%AAn_d%E1%BB%8Bch" target="_blank"
-                title="Trinh2Bien6 Dịch">Trình Biên Dịch</a>.
+              <b>Vòng lặp</b> được sinh ra để giúp chúng ta giảm các hành động được lặp lại nhiều lần. Ví dụ khi bạn muốn xuất ra 
+              màn hình từ số 1 đến số 10 thì việc ghi từng số như vậy sẽ mất rất nhiều thời gian cũng như công sức. Do đó 
+              để giải quyết trường hợp trên thì bạn nên sử dụng vòng lặp.
             </p>
-            <div class="border rounded bg-dark text-white shadow p-4">
-              <h6 class="text-white">
-                Vậy tại sao nó gọi là <b>Javascript</b> và nó có liên quan gì đến ngôn ngữ <b>Java</b> không?
-              </h6>
-              <p>Vào năm 1995, Javascript được tạo ra bởi một lập trình viên tên là Brendan Eich thuộc công ty Netscape.
-                Tên đầu tiên mà nhà sáng lập
-                đặt cho nó là <b>Mocha</b> sau đó đổi thành <b>LiveScript</b>. Nhưng tại thời điểm đó thì ngôn ngữ Java
-                đang được sử dụng rộng rãi và phổ biển
-                nên họ đã quyết định đổi tên thành <b>Javascript</b>. Và hai ngôn nghữ này không hề liên quan gì đến
-                nhau đâu nhé.<br />
 
-              </p>
-            </div>
-            <!-- <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587651751/Gallery/Vi-du-Gallery-trong-web_vkt5mb.png"
-              alt="Ví Dụ Gallery Trong Trang Web"> -->
-
+            <h5 class="text-white bg-secondary p-2 shadow  title-article-size rounded">Vòng Lặp <b>While</b>  Trong Javascript:</h5>
+            <p class="mt-2">
+              Câu lệnh <b>while</b> trong javascript sẽ tạo ra vòng lặp để thực hiện khối mã bên trong <b><code>{}</code></b>
+               khi điều kiện đúng. Để nắm rõ hơn bạn xem cú pháp bên dưới nhé:
+            </p>
+            <pre><code class="javascript"> while(Điều Kiện){<br/> &nbsp; &nbsp;/* Thực thi mã khi điều kiện đúng */<br/> }</code></pre>
             <p class="mt-4">
-              Ngày nay ngôn Ngữ Javascript không chỉ được sử dụng trong browser(trình duyệt) mà nó còn được áp dụng trên
-              server(máy chủ)
-              để xử lý. Bạn có thể viết một trang web mà chỉ cần một ngôn ngữ như javascript chẳng hạn. Ví dụ phía
-              front-end là VueJs,
-              ReactJS... còn phía Back-end là Nodejs...<br />
-              Javascript ngày này được xem là một ngôn ngữ lập trình khá an toàn và bảo mật vì không cung cấp quyền truy
-              cập cấp thấp vào bộ nhớ hay CPU bởi ban
-              đầu nó được tạo ra với mục đích cho các trình duyệt nên không cần các chức năng đó.
+              Như bạn thấy, câu lệnh <b>while</b> sẽ kiểm tra điều kiện trước mỗi lần lặp của vòng lặp.
+              Nếu điều kiện là <b><code>true</code></b> thì câu lệnh while sẽ được thực thi và sẽ dừng lại 
+              khi điều kiện <b><code>false</code></b>. Để hiểu rõ hơn thì chúng ta sẽ đi vào ví dụ 
+              hiển thị các số từ 0 tới 5 ở bên dưới nhé: 
             </p>
-            <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587702649/Javascript%20Gi%E1%BB%9Bi%20Thi%E1%BB%87u/emile-perron-xrVDYZRGdw4-unsplash_1_1_u8b1df.jpg"
-              alt="Ví Dụ Gallery Trong Trang Web">
-            <p class="mt-4">Khả năng thực thi của Javascript phụ thuộc môi trường mà nó đang chạy. Ví dụ như NodeJs hỗ
-              trợ các chức năng cho phép Javascript
-              ghi hoặc đọc file, thức hiện các kết nối mạng...<br>
-              Đối với môi trường browsser(trình duyệt), Javascript có thể tương tác với các thành phần web, tạo tương
-              tác với người dùng...
-              ví dụ như là thêm các thẻ HTML vào trang web, chỉnh sửa thay đổi nội dung, thực hiện hành động nào đó khi
-              người dùng click(nhấn), hover(di chuyển lên)
-              các thành phần trong trang web, gứi hoặc nhận các dữ liệu từ Server thông qua công nghệ Ajax...
-            </p>
-            <div class="border rounded bg-dark text-white shadow p-4">
-              <h6 class="text-white">
-                Vậy điều gì tạo nên sự khác biệt cho ngôn ngữ Javascript?
-              </h6>
-
+            <pre><code class="javascript">&nbsp;&nbsp;let&nbsp;i&nbsp;=&nbsp;0;<br/> &nbsp;while&nbsp;(i&nbsp;<&nbsp;5)&nbsp;{&nbsp;/*&nbsp;Hiển&nbsp;thị&nbsp;0,1,2,3,4*/<br/> &nbsp;&nbsp;&nbsp;console.log(&nbsp;i&nbsp;);<br/> &nbsp;&nbsp;&nbsp;i++;<br/> &nbsp;}<br/></code></pre>
+            <p class="mt-4">
+              Bây giờ mình sẽ đi vào giải thích đoạn code phía trên nhé:
               <ul>
-                <li>Dễ dàng kết hợp với HTML, CSS.</li>
-                <li>Hỗ trợ hầu hết các trình duyệt ngày nay.</li>
-                <li>Có cộng động sử dụng và hỗ trợ đông đảo.</li>
-                <li>Dễ dàng học đối với người mới bắt đầu.</li>
-
-
-                </p>
-            </div>
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h4 class="text-primary ml-4 title-article-size">Những Công Cụ Soạn Thảo Cho Ngôn Ngữ Javascript:</h4>
-              </div>
-            </div>
-
-            <p>Để thuận tiện trong việc tạo, chỉnh sửa, dễ dàng phát hiện lỗi, tăng tốc độ nhập mã nguồn cho ngôn ngữ
-              lập trình Javascript
-              thì mình sẽ giới thiệu một số trình soạn thảo phổ biến hiện nay ở bên dưới nhé.
+                <li>Đầu tiên chúng ta sẽ gọi một biến <b><code>i</code></b> với giá trị bằng 0 (Số đầu tiên ta muốn hiển thị ra màn hình).</li>
+                <li>Sau đó trước khi thực hiện mỗi vòng lặp  thì câu lệnh <b>while</b> sẽ kiểm tra điều kiện biến <b><code>i</code> có nhỏ hơn 5 không.</b></li>
+                <li>Cứ mỗi khi thực hiện vòng lặp thì biến <b><code>i</code></b> sẽ tăng thêm một đơn vị bằng <b><code>i++</code></b>.
+                Bạn có thể tham khảo thêm về cách sử dụng <b><code>i++</code></b> ở đây nhé: <a href="https://www.niemvuilaptrinh.com/article/Toan-Tu-Trong-Javascript" title="Toán Tử Trong Javascript" target="_blank">Toán Tử Trong Javascript</a>.
+                </li>
+                <li>
+                  Khi biến <b><code>i</code></b> được cộng tới  giá trị biến bằng 5 thì <b><code>i < 5</code></b> sẽ có giá trị <b><code>false</code></b>.
+                  Lúc này vòng lặp sẽ dừng lại.
+                </li>
+              </ul>
             </p>
-            <h5><a href="https://code.visualstudio.com/Download#" target="_blank" title="Visual Studio Code">Visual
-                Studio Code</a></h5>
-            <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1575500184/bai%201%28HTML%29/FireShot_Capture_001_-_Visual_Studio_Code_-_Code_Editing._Redefined_-_code.visualstudio.com_yanqtc.png"
-              alt="Trình Soạn Thảo Visual Studio Code">
-            <p class="mt-4">
-              Visual Studio Code là một mã nguồn mở và được phát triển bởi Microsoft nên các bạn cứ yên tâm sử dụng vì
-              nó hoàn toàn miễn phí và luôn được cập nhật những phiên bản mới nhất. Không chỉ vậy nó còn rất thích hợp
-              cho việc phát triển các dự án lớn, phức tạp ngoài ra còn hỗ trợ việc tích hợp Git. Công cụ này còn cung
-              cấp các phần mở rộng(extension) giúp chúng ta có thể code một cách nhanh hơn, quản lý file hiệu quả...
+            <p>
+              Ở đây mình có lưu ý nhỏ là khi bạn quên đặt <b><code>i++</code></b> thì vòng lặp này sẽ lặp vô hạn đấy nhé.
+              Ở đây mình có đặt đường dẫn nếu như bạn lỡ bị trường hợp này: <a href="https://developers.google.com/web/updates/2018/04/devtools#stop" title="Dừng Vòng Lặp" target="_blank">Dừng Vòng Lặp</a>
             </p>
-            <p class="mb-4"><strong><i class="fa fa-download" aria-hidden="true"></i> Link tải ở đây nhé các bạn: <br>
-                <a href="https://code.visualstudio.com/Download#" target="_blank">Visual Studio Code</a> </strong></p>
-
-
-            <h5><a href="https://atom.io" target="_blank" title="Atom">Atom</a></h5>
-            <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1575553223/bai%201%28HTML%29/FireShot_Capture_003_-_Atom_-_atom.io_s54h4y.png"
-              alt="Trình Soạn Atom">
-            <p class="mt-4"><strong><i class="fa fa-plus-square" aria-hidden="true"></i> Ưu điểm: </strong><br> Atom là
-              mã nguồn mở và được phát triển bởi github và miễn phí. Cung cấp những tiện ích giúp chúng ta làm việc với
-              git và github dễ dàng hơn. Nó cũng cung cấp các những tiện ích mở rộng, được hỗ trợ bởi cộng đồng github
-              nên mình thấy ở những bản cập nhật sau này thì có cải thiện về hiệu suất hơn trước. Điểm đặc biệt nữa là
-              cho phép chúng ta tùy chỉnh giao diện theo sở thích của mình! </p>
-            <p><strong><i class="fa fa-download" aria-hidden="true"></i> Link tải ở đây nhé các bạn: <br> <a
-                  href="https://atom.io" target="_blank" title="Atom">Atom</a> </strong></p>
+            <p>Mình sẽ đi vào ví dụ tiếp theo là hiển thị ra màn hình từ số 4 lùi về số 1 với điều kiện là <b><code>while(i)</code></b>.
+            Ở đây bạn có thể hiểu <b><code>while(i)</code></b> sẽ viết tắt cho <b><code>while(i != 0)</code></b>:
+            </p>
+            <pre><code class="javascript">&nbsp;&nbsp;let&nbsp;i&nbsp;=&nbsp;5;<br/> &nbsp;while&nbsp;(i)&nbsp;{&nbsp;/*&nbsp;Hiển&nbsp;thị&nbsp;5,4,3,2,1*/<br/> &nbsp;&nbsp;&nbsp;console.log(&nbsp;i&nbsp;);<br/> &nbsp;&nbsp;&nbsp;i--;<br/> &nbsp;}<br/></code></pre>
+            <h5 class="text-white bg-secondary p-2 mt-4 shadow  title-article-size rounded">
+              Vòng Lặp <b>Do...While</b> Trong Javascript:
+            </h5>
 
 
 
 
-            <h5><a href="https://notepad-plus-plus.org/downloads/" target="_blank" title="NotePad++">Notepad++</a></h5>
-            <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1575558305/bai%201%28HTML%29/FireShot_Capture_008_-_Notepad_-_notepad-plus-plus.org_yhu8jp.png"
-              alt="Trình Soạn Thảo Notepad++">
-            <p class="mt-4"><strong><i class="fa fa-plus-square" aria-hidden="true"></i> Ưu điểm: </strong><br>
-              Notepad++ là một mã
-              nguồn mở miễn phí và được cấp phép bởi GPL. theo mình thấy đây là một trình soạn thảo tuyệt vời và đơn
-              giản và dễ dàng sử dụng đối với mọi cấp độ phát triển đặc biệt là người mới bắt đầu. Nó hỗ trợ nhiều loại
-              ngôn ngữ khác nhau và được coi là phần mềm chuyên trình soạn thảo văn bản HTML. Khởi động và hiệu suất đạt
-              mức tốt, cung cấp những phần tiện tích bên ngoài, tự động thay đổi màu sắc tùy vào thẻ mà ta sử dụng trong
-              HTML! </p>
-            <p><strong><i class="fa fa-download" aria-hidden="true"></i> Link tải ở đây nhé các bạn: <br> <a
-                  href="https://notepad-plus-plus.org/downloads/" target="_blank" title="NotePad++">Notepad++</a>
-              </strong></p>
 
 
 
-            <h5> <a href="https://www.sublimetext.com/3" title="Sublime Text" target="_blank">Sublime Text</a></h5>
-            <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1575555310/bai%201%28HTML%29/FireShot_Capture_006_-_Brackets_-_A_modern_open_source_code_editor_that_understands_web_des__-_brackets.io_nql73s.png"
-              alt="Trình Soạn Thảo Brackets">
-            <p class="mt-4"><strong><i class="fa fa-plus-square" aria-hidden="true"></i> Ưu điểm: </strong><br> Brackets
-              là mã nguồn
-              mở và miễn phí được phát triển bởi Adobe. Adobe cung cấp những sản phẩm chuyên về thiết kế và đồ họa mà có
-              thể nhiều bạn đã sử dụng qua như là Photoshop, After Effects, Illustrator. Nó cũng tích hợp những trình
-              soạn thảo cơ bản cần có cho việc viết code. <b>Có tính năng đặc biệt trong phần mềm này là cho phép chúng
-                ta lấy màu sắc, số đo, font chữ... từ PSD thành CSS sẵn sàng cho web.</b> Theo mình nghĩ thì đây là công
-              cụ dễ dàng sử dụng đối với các bạn mới vì dễ dàng tùy chỉnh, thích hợp vói việc triển khai các ứng dụng
-              HTML, CSS ,tạo kết nối thời gian thực đến trình duyệt nghĩa là khi bạn chỉnh sửa file HTML, CSS thì trình
-              duyệt tự động cập nhật mà chúng ta không cần phải tải lại trang. </p>
-            <p><strong><i class="fa fa-download" aria-hidden="true"></i> Link tải ở đây nhé các bạn: <br> <a
-                  href="http://brackets.io/" title="Brackets" target="_blank">Brackets</a> </strong></p>
 
 
-            <h5><a href="http://brackets.io/" title="Brackets" target="_blank">Brackets</a></h5>
-            <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1575584221/bai%201%28HTML%29/FireShot_Capture_009_-_Sublime_Text_-_A_sophisticated_text_editor_for_code_markup_and_prose__-_www.sublimetext.com_ltrfnx.png"
-              alt="Trình Soạn Thảo Sublime Text">
-            <p class="mt-4"><strong><i class="fa fa-plus-square" aria-hidden="true"></i> Ưu điểm: </strong><br> Sublime Text là một
-              trình soạn thảo có khoảng 4500 tiện ích mở rộng. Theo mình đây là một trình soạn thảo vừa nhẹ nhanh, hiệu
-              suất cao và giao diện bắt mắt giúp người dùng trải nghiệm tốt hơn. Nó có thể xử lý, quản lý các dự án lớn
-              rất tốt. Không chỉ vậy nó còn luôn được cập nhật thường xuyên! </p>
-              <strong><i class="fa fa-download" aria-hidden="true"></i> Link tải ở đây nhé các bạn: <br> <a href="https://www.sublimetext.com/3" title="Sublime Text" target="_blank">Sublime Text</a> </strong>
 
 
-              <div class="row">
-                <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                  <h4 class="text-primary ml-4 title-article-size">Developer Console:</h4>
-                </div>
-              </div>
-              <p>
-                Thông thường khi bạn viết một chức năng hay chương trình thì việc xảy ra lỗi là không thể tránh khỏi do đó các trình duyệt 
-                có cung cấp cho chúng ta chức năng có tên là "developer tool"(công cụ cho lập trình viên). Nó cho phép chúng ta kiểm trả, hiển thị lỗi trong file 
-                Javascript để sửa chữa. Hầu hết các trình duyệt Chorme, Firefox, Edge, Safari, Opera.. đều hỗ trợ chức năng này và bổ sung các tính năng hữu ích khác.
-                Để dễ hiểu hơn thì mình sẽ thực hiện một ví dụ trên trinh duyệt Google Chorme dưới đây nhé.
-              </p>
-              Đây là đoạn code mình sẽ dùng(nếu bạn chưa hiểu thì cũng không sao nhé bài sau mình sẽ hướng dận chi tiết hơn):
-              <p>
-                <pre><code class="html">&#60;!DOCTYPE&nbsp;html&#62;<br/> &#60;html&nbsp;lang="en"&#62;<br/> &#60;head&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;charset="UTF-8"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;name="viewport"&nbsp;content="width=device-width,&nbsp;initial-scale=1.0"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;title&#62;Document&#60;/title&#62;<br/> &#60;/head&#62;<br/> &#60;body&#62;<br/> &#60;script&#62;<br/> &nbsp;&nbsp;&nbsp;Hahaha<br/> &#60;/script&#62;<br/> &#60;/body&#62;<br/> &#60;/html&#62;<br/></code></pre>
-                Để mở  developer tool thì trên trình duyệt  mình sẽ nhấn <b>F12</b>, đối với máy Mac thì ta sẽ nhấn <b>Cmd+Opt+J</b>.
-              </p>
 
-              <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587707043/Javascript%20Gi%E1%BB%9Bi%20Thi%E1%BB%87u/Google-Chorme-Console_vhevmq.png"
-              alt="Giới Thiệu Về Google Chorme Console">
-              <p class="mt-4">
-                Trong phần developer tool bạn chọn phần <b>console</b> thì sẽ thấy các thông báo lỗi màu đỏ và vị trí trong file Javascript.
-                <ul>
-                  <li><span class="text-danger"><b>Hahaha</b></span> không xác định. (Đây là nguyên nhân gây ra lỗi).</li>
-                  <li><span class="text-danger"><b>index.html:12</b></span> Đây là vị trí dòng xảy ra lỗi.</li>
-                </ul>
-              </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -235,7 +141,11 @@
 
             <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
 
-            <p>Qua đây mình mong bài viết sẽ giúp bạn hiểu sơ lược về lịch sử, khái niệm, chức năng  ngôn ngữ lập trình Javascript trong phát triển web và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng
+            <p>Qua đây mình mong bài viết sẽ giúp bạn hiểu được khái niệm cũng như cách sử dụng toán tử điều kiện
+              trong ngôn ngữ
+              Javascript và
+              nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất
+              mong bạn tiếp tục ủng
               hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
 
           </div>
