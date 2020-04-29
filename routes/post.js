@@ -28,7 +28,7 @@ cloudinary.config({
 passport.use('login', new LocalStrategy({
         passReqToCallback: true
     },
-    function (req, username, password, done) {
+    function (req, username, password, res,done) {
         // check in mongo if a user with username exists or not
         User.findOne({
                 'username': username
@@ -41,7 +41,7 @@ passport.use('login', new LocalStrategy({
                 if (!user) {
                     console.log('User Not Found with username ' + username);
                     return done(null, false,
-                        req.flash('message', 'User Not found.'));
+                    req.flash('message', 'User Not found.'));
                 }
                 // User exists but wrong password, log the error 
                 if (!isValidPassword(user, password)) {
@@ -131,13 +131,14 @@ router.get('/login', function (req, res) {
 
 //Authenticate when login
 router.post('/login', passport.authenticate('login'), function (req, res, next) {
-    var posts = '';
+
     Blog.find(function (err, data) {
-        if (err) return console.error(err)
+        if (err)  return console.error(err)
         res.render('postadmin', {
             posts: data
         })
     })
+ 
 });
 
 /************************************************************************** */

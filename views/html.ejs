@@ -26,7 +26,7 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i>Toán Tử Điều Kiện Trong Javascript</h2>
+                  aria-hidden="true"></i>Vòng Lặp Trong Javascript</h2>
             </div>
           </div>
 
@@ -36,7 +36,7 @@
             </div>
           </div>
           <div class="text-content-article mt-5">
-            <p><i>Hôm nay bạn hãy cùng mình sẽ đi tìm hiểu khái niệm cũng như cách sử dụng toán tử điều kiện của ngôn
+            <p><i>Hôm nay bạn hãy cùng mình sẽ đi tìm hiểu khái niệm cũng như cách sử dụng vòng lặp của ngôn
                 ngữ lập trình Javascript trong trang web nhé.</i>
             </p>
 
@@ -46,78 +46,211 @@
               </div>
             </div>
             <p>
-              <b>Vòng lặp</b> được sinh ra để giúp chúng ta giảm các hành động được lặp lại nhiều lần. Ví dụ khi bạn muốn xuất ra 
-              màn hình từ số 1 đến số 10 thì việc ghi từng số như vậy sẽ mất rất nhiều thời gian cũng như công sức. Do đó 
+              <b>Vòng lặp</b> được sinh ra để giúp chúng ta giảm các hành động được lặp lại nhiều lần. Ví dụ khi bạn
+              muốn xuất ra
+              màn hình từ số 1 đến số 10 thì việc ghi từng số như vậy sẽ mất rất nhiều thời gian cũng như công sức. Do
+              đó
               để giải quyết trường hợp trên thì bạn nên sử dụng vòng lặp.
             </p>
 
-            <h5 class="text-white bg-secondary p-2 shadow  title-article-size rounded">Vòng Lặp <b>While</b>  Trong Javascript:</h5>
+            <h5 class="text-white bg-secondary p-2 shadow  title-article-size rounded">Vòng Lặp <b>While</b> Trong
+              Javascript:</h5>
             <p class="mt-2">
-              Câu lệnh <b>while</b> trong javascript sẽ tạo ra vòng lặp để thực hiện khối mã bên trong <b><code>{}</code></b>
-               khi điều kiện đúng. Để nắm rõ hơn bạn xem cú pháp bên dưới nhé:
+              Câu lệnh <b>while</b> trong javascript sẽ tạo ra vòng lặp để thực hiện khối mã bên trong
+              <b><code>{}</code></b>
+              khi điều kiện đúng. Để nắm rõ hơn bạn xem cú pháp bên dưới nhé:
             </p>
             <pre><code class="javascript"> while(Điều Kiện){<br/> &nbsp; &nbsp;/* Thực thi mã khi điều kiện đúng */<br/> }</code></pre>
             <p class="mt-4">
               Như bạn thấy, câu lệnh <b>while</b> sẽ kiểm tra điều kiện trước mỗi lần lặp của vòng lặp.
-              Nếu điều kiện là <b><code>true</code></b> thì câu lệnh while sẽ được thực thi và sẽ dừng lại 
-              khi điều kiện <b><code>false</code></b>. Để hiểu rõ hơn thì chúng ta sẽ đi vào ví dụ 
-              hiển thị các số từ 0 tới 5 ở bên dưới nhé: 
+              Nếu điều kiện là <b><code>true</code></b> thì câu lệnh while sẽ được thực thi và sẽ dừng lại
+              khi điều kiện <b><code>false</code></b>. Để hiểu rõ hơn thì chúng ta sẽ đi vào ví dụ
+              hiển thị các số từ 0 tới 5 ở bên dưới nhé:
             </p>
             <pre><code class="javascript">&nbsp;&nbsp;let&nbsp;i&nbsp;=&nbsp;0;<br/> &nbsp;while&nbsp;(i&nbsp;<&nbsp;5)&nbsp;{&nbsp;/*&nbsp;Hiển&nbsp;thị&nbsp;0,1,2,3,4*/<br/> &nbsp;&nbsp;&nbsp;console.log(&nbsp;i&nbsp;);<br/> &nbsp;&nbsp;&nbsp;i++;<br/> &nbsp;}<br/></code></pre>
             <p class="mt-4">
               Bây giờ mình sẽ đi vào giải thích đoạn code phía trên nhé:
               <ul>
-                <li>Đầu tiên chúng ta sẽ gọi một biến <b><code>i</code></b> với giá trị bằng 0 (Số đầu tiên ta muốn hiển thị ra màn hình).</li>
-                <li>Sau đó trước khi thực hiện mỗi vòng lặp  thì câu lệnh <b>while</b> sẽ kiểm tra điều kiện biến <b><code>i</code> có nhỏ hơn 5 không.</b></li>
-                <li>Cứ mỗi khi thực hiện vòng lặp thì biến <b><code>i</code></b> sẽ tăng thêm một đơn vị bằng <b><code>i++</code></b>.
-                Bạn có thể tham khảo thêm về cách sử dụng <b><code>i++</code></b> ở đây nhé: <a href="https://www.niemvuilaptrinh.com/article/Toan-Tu-Trong-Javascript" title="Toán Tử Trong Javascript" target="_blank">Toán Tử Trong Javascript</a>.
+                <li>Đầu tiên chúng ta sẽ gọi một biến <b><code>i</code></b> với giá trị bằng 0 (Số đầu tiên ta muốn hiển
+                  thị ra màn hình).</li>
+                <li>Sau đó trước khi thực hiện mỗi vòng lặp thì câu lệnh <b>while</b> sẽ kiểm tra điều kiện biến
+                  <b><code>i</code> có nhỏ hơn 5 không.</b></li>
+                <li>Cứ mỗi khi thực hiện vòng lặp thì biến <b><code>i</code></b> sẽ tăng thêm một đơn vị bằng
+                  <b><code>i++</code></b>.
+                  Bạn có thể tham khảo thêm về cách sử dụng <b><code>i++</code></b> ở đây nhé: <a
+                    href="https://www.niemvuilaptrinh.com/article/Toan-Tu-Trong-Javascript"
+                    title="Toán Tử Trong Javascript" target="_blank">Toán Tử Trong Javascript</a>.
                 </li>
                 <li>
-                  Khi biến <b><code>i</code></b> được cộng tới  giá trị biến bằng 5 thì <b><code>i < 5</code></b> sẽ có giá trị <b><code>false</code></b>.
+                  Khi biến <b><code>i</code></b> được cộng tới giá trị biến bằng 5 thì <b><code>i < 5</code> </b> sẽ có
+                        giá trị <b><code>false</code></b>.
                   Lúc này vòng lặp sẽ dừng lại.
                 </li>
               </ul>
             </p>
             <p>
-              Ở đây mình có lưu ý nhỏ là khi bạn quên đặt <b><code>i++</code></b> thì vòng lặp này sẽ lặp vô hạn đấy nhé.
-              Ở đây mình có đặt đường dẫn nếu như bạn lỡ bị trường hợp này: <a href="https://developers.google.com/web/updates/2018/04/devtools#stop" title="Dừng Vòng Lặp" target="_blank">Dừng Vòng Lặp</a>
+              Ở đây mình có lưu ý nhỏ là khi bạn quên đặt <b><code>i++</code></b> thì vòng lặp này sẽ lặp vô hạn đấy
+              nhé.
+              Ở đây mình có đặt đường dẫn nếu như bạn lỡ bị trường hợp này: <a
+                href="https://developers.google.com/web/updates/2018/04/devtools#stop" title="Dừng Vòng Lặp"
+                target="_blank">Dừng Vòng Lặp</a>
             </p>
-            <p>Mình sẽ đi vào ví dụ tiếp theo là hiển thị ra màn hình từ số 4 lùi về số 1 với điều kiện là <b><code>while(i)</code></b>.
-            Ở đây bạn có thể hiểu <b><code>while(i)</code></b> sẽ viết tắt cho <b><code>while(i != 0)</code></b>:
+            <p>Mình sẽ đi vào ví dụ tiếp theo là hiển thị ra màn hình từ số 4 lùi về số 1 với điều kiện là
+              <b><code>while(i)</code></b>.
+              Ở đây bạn có thể hiểu <b><code>while(i)</code></b> sẽ viết tắt cho <b><code>while(i != 0)</code></b>:
             </p>
             <pre><code class="javascript">&nbsp;&nbsp;let&nbsp;i&nbsp;=&nbsp;5;<br/> &nbsp;while&nbsp;(i)&nbsp;{&nbsp;/*&nbsp;Hiển&nbsp;thị&nbsp;5,4,3,2,1*/<br/> &nbsp;&nbsp;&nbsp;console.log(&nbsp;i&nbsp;);<br/> &nbsp;&nbsp;&nbsp;i--;<br/> &nbsp;}<br/></code></pre>
             <h5 class="text-white bg-secondary p-2 mt-4 shadow  title-article-size rounded">
               Vòng Lặp <b>Do...While</b> Trong Javascript:
             </h5>
+            <p class="mt-2">
+              Vòng lặp <b>do-while</b> tạo ra một vòng lặp thực thi khối mã bên trong dấu <b><code>{}</code></b>
+              cho đến khi điều kiện sai. Ở đây thì mình có chú ý nhỏ là điểm khác biệt giữa <b><code>while</code></b>
+              và <b><code>do-while</code></b> là <b><code>do-while</code></b> sẽ thực thi ít nhất một lần khối mã của
+              chúng ta
+              trước khi đi vào kiểm tra điều kiện. Để hiểu rõ hơn bạn xem cú pháp sau đây nhé:
+            </p>
+            <pre><code class="javascript"> do{ <br/> /*Thực thi khối mã*/ <br/> } while (Điều kiện);</code></pre>
+            <p class="mt-4">
+              Để hiểu rõ hơn thì chúng ta cùng nhau đi vào tìm hiểu ví dụ thực tế bằng cách hiển thị ra màn hình từ số 0
+              đến số 4 ở phía bên
+              dưới nhé:
+            </p>
+            <pre><code class="javascript">&nbsp;let&nbsp;so&nbsp;=&nbsp;0;<br/> &nbsp;do&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log('Số&nbsp;hiện&nbsp;tại&nbsp;là '&nbsp;+&nbsp;so);<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;so++;<br/> &nbsp;}&nbsp;while&nbsp;(so&nbsp;<&nbsp;5);<br/></code></pre>
+            <p class="mt-4">
+              Ở đây chúng ta đặt biến <b><code>so</code></b> với giá trị là 0 và cứ mỗi sau mỗi lần lặp thì nó sẽ tăng
+              lên một đơn vị cho đến khi điều kiện sai thì dừng lại.
+              Điểm đặc biệt là nó sẽ <b>thực hiện ít nhất một lần</b> khối mã của chúng ta và đây chính là điểm quan
+              trọng nhất trong lệnh <b><code>do-while</code></b> nhé.
+            </p>
 
+            <h5 class="text-white bg-secondary p-2 mt-4 shadow  title-article-size rounded">
+              Vòng Lặp <b>For</b> Trong Javascript:
+            </h5>
+            <p class="mt-2">
+              Câu lệnh <b><code>for</code></b> trong Javascript cho phép chúng ta tạo ra một vòng lặp với việc
+              kết hợp <b>ba biểu thức với nhau</b>. Nó tuy hơi phức tạp so với hai vòng lặp trên nhưng thường xuyên được
+              sử dụng
+              để thực hiện vòng lặp vì tính chất chặt chẽ của nó. Để hiểu rõ hơn bạn xem cú pháp bên dưới nhé:
+            </p>
+            <pre><code class="javascript"> for (bắt đầu; điều kiện; bước nhảy){<br/> /*Thực thi khối mã*/ <br/> }</code></pre>
+            <p class="mt-4">
+              Ở đây mình xin giải thích sơ qua 3 biểu thức trên là:
+              <ul>
+                <li>Bắt đầu: Biểu thức khởi tạo này chỉ được thực hiện một lần trong suốt quá trình lặp và thông thường
+                  là chúng ta sẽ khai báo tên, giá trị biến ở biểu thức này.
+                </li>
+                <li>
+                  Điều kiện: Cũng giống y như hai vòng lặp trên nó dùng để kiểm tra tính đúng sai mà biểu thức ta đưa
+                  vào. Nếu đúng thì thực hiện
+                  tiếp vòng lặp còn nếu sai thì sẽ dừng vòng lặp. Mình có lưu ý nhỏ là khi bạn không thiết lập điều kiện
+                  cho vòng lặp <b><code>for</code></b>
+                  thì nó sẽ mặc định điều kiện này luôn đúng.
+                </li>
+                <li>Bước nhảy: Nó giúp chúng ta cập nhật giá trị của biến khởi tạo có thể tăng hoặc giảm bao nhiêu đơn
+                  vị tùy vào mục đích của bạn.</li>
+              </ul>
+            </p>
+            <p>
+              Bây giờ chúng ta sẽ đi vào ví dụ thực tế để hiểu cách nó hoạt động hơn nhé:
+            </p>
+            <pre><code class="javascript"> for(let i = 0; i &#60; 5; i++){ /*Kết quả sẽ hiển thị: 0,1,2,3,4*/<br /> console.log(i); <br/> }</code></pre>
+            <p class="mt-4">
+              <ul>
+                <li>Với <b><code>i = 0</code></b>: Chúng ta khai báo biển và khởi tạo vòng lặp.</li>
+                <li>Với <b><code>i &#60; 5</code></b>: Kiểm tra điều kiện trước mỗi lần lặp. Nếu diều kiện sai sẽ dừng
+                  vòng lặp.</li>
+                <li>Với <b><code>console.log(i)</code></b>: Đây là khối mã mà sẽ được lặp nếu điều kiện đúng.</li>
+                <li>Với <b><code>i++</code></b>: Sẽ tăng một đơn vị giá trị của biến <b><code>i</code></b> sau khi thực
+                  hiện mỗi vòng lặp. </li>
+              </ul>
+            </p>
+            <p>
+              Ở đây mình giải thích thêm một tí là giả sử chúng ta chưa biết về <b>vòng lặp</b> thì ta cũng có thể sử
+              dụng
+              <b>toán tử điều kiện</b> để xuất ra màn hình từ số 0 tới số 4 bằng cách sau đây:
+            </p>
+            <pre><code class="javascript">&nbsp;/*&nbsp;Khởi&nbsp;tạo&nbsp;vòng&nbsp;lặp&nbsp;*/<br/> &nbsp;let&nbsp;i&nbsp;=&nbsp;0<br/> &nbsp;/*&nbsp;Kiểm&nbsp;tra&nbsp;điều&nbsp;kiện&nbsp;→&nbsp;Đúng&nbsp;thì&nbsp;thực&nbsp;thi&nbsp;khối&nbsp;mã&nbsp;và&nbsp;i++(i=1)&nbsp;*/<br/> &nbsp;if&nbsp;(i&nbsp;<&nbsp;5)&nbsp;{&nbsp;console.log(i);&nbsp;i++&nbsp;}&nbsp;/*Kết&nbsp;quả:&nbsp;0*/<br/> &nbsp;/*&nbsp;Kiểm&nbsp;tra&nbsp;điều&nbsp;kiện&nbsp;→&nbsp;Đúng&nbsp;thì&nbsp;thực&nbsp;thi&nbsp;khối&nbsp;mã&nbsp;và&nbsp;i++(i=2)&nbsp;*/<br/> &nbsp;if&nbsp;(i&nbsp;<&nbsp;5)&nbsp;{&nbsp;console.log(i);&nbsp;i++&nbsp;}&nbsp;/*Kết&nbsp;quả:&nbsp;1*/<br/> &nbsp;/*&nbsp;Kiểm&nbsp;tra&nbsp;điều&nbsp;kiện&nbsp;→&nbsp;Đúng&nbsp;thì&nbsp;thực&nbsp;thi&nbsp;khối&nbsp;mã&nbsp;và&nbsp;i++(i=3)&nbsp;*/<br/> &nbsp;if&nbsp;(i&nbsp;<&nbsp;5)&nbsp;{&nbsp;console.log(i);&nbsp;i++&nbsp;}&nbsp;/*Kết&nbsp;quả:&nbsp;2*/<br/> &nbsp;/*&nbsp;Kiểm&nbsp;tra&nbsp;điều&nbsp;kiện&nbsp;→&nbsp;Đúng&nbsp;thì&nbsp;thực&nbsp;thi&nbsp;khối&nbsp;mã&nbsp;và&nbsp;i++(i=4)&nbsp;*/<br/> &nbsp;if&nbsp;(i&nbsp;<&nbsp;5)&nbsp;{&nbsp;console.log(i);&nbsp;i++&nbsp;}&nbsp;/*Kết&nbsp;quả:&nbsp;3*/<br/> &nbsp;/*&nbsp;Kiểm&nbsp;tra&nbsp;điều&nbsp;kiện&nbsp;→&nbsp;Đúng&nbsp;thì&nbsp;thực&nbsp;thi&nbsp;khối&nbsp;mã&nbsp;và&nbsp;i++(i=5)&nbsp;*/<br/> &nbsp;if&nbsp;(i&nbsp;<&nbsp;5)&nbsp;{&nbsp;console.log(i);&nbsp;i++&nbsp;}&nbsp;/*Kết&nbsp;quả:&nbsp;4*/<br/> &nbsp;/*Lúc&nbsp;này&nbsp;i&nbsp;=&nbsp;5&nbsp;thì&nbsp;điều&nbsp;kiện&nbsp;i&nbsp;<&nbsp;5&nbsp;sẽ&nbsp;false.*/<br/></code></pre>
+            <p class="mt-4">
+              Ở đây mình cũng sẽ giới thiệu thêm cho bạn về cách sử dụng <b>var</b>(biến toàn cục) và <b>let</b>(biến
+              cục bộ) khi sử dụng với vòng lặp <b><code>for</code></b>.
+              Đối với <b><code>var</code></b> thì bạn có thể sử dụng <b>biến khởi tạo</b> khi vòng lặp kết thúc (Nghĩa
+              là nó sẽ lấy giá trị cuối cùng của biến khởi tạo trong vòng lặp)
+              còn với <b><code>let</code></b> thì sẽ hiển thị <b>lỗi</b> nếu chúng ta muốn sử dụng biến khởi tạo bên
+              ngoài vòng lặp.
+            </p>
+            <p>
+              Bây giờ chúng ta sẽ đi vào khởi tạo biến với từ khóa <b><code>let</code></b> ở phía bên dưới nhé:
+            </p>
+            <pre><code class="javascript">&nbsp;for&nbsp;(let&nbsp;soDem&nbsp;=&nbsp;1;&nbsp;soDem&nbsp;<&nbsp;5;&nbsp;soDem++)&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log('Bên&nbsp;trong&nbsp;vòng&nbsp;lặp'&nbsp;+&nbsp;soDem&nbsp;);<br/> &nbsp;}<br/> &nbsp;console.log('Bên&nbsp;ngoài&nbsp;vòng&nbsp;lặp:'&nbsp;+&nbsp;soDem);<br/></code></pre>
 
+            <p class="mt-4">
+              Thì bạn có thể hình ảnh kết quả ở bên dưới để hiểu hơn nhé:
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588133614/Vong%20lap%20trong%20javascript/su-dung-ket-trong-for-loop_prkeyi.png"
+              alt="Sử dụng let trong vòng lặp  Javascript"
+            >
+            <p class="mt-4">
+              Bây giờ chúng ta thử khởi tạo biến với từ khóa <b><code>var</code></b> để xem kết quả sao nhé:
+            </p>
+            <pre><code class="javascript">&nbsp;for&nbsp;(var&nbsp;soDem&nbsp;=&nbsp;1;&nbsp;soDem&nbsp;<&nbsp;5;&nbsp;soDem++)&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log('Bên&nbsp;trong&nbsp;vòng&nbsp;lặp'&nbsp;+&nbsp;soDem&nbsp;);<br/> &nbsp;}<br/> &nbsp;console.log('Bên&nbsp;ngoài&nbsp;vòng&nbsp;lặp:'&nbsp;+&nbsp;soDem);<br/></code></pre>
+            <p class="mt-4">
+              Bạn xem kết quả ở hình ảnh bên dưới nhé:
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588134042/Vong%20lap%20trong%20javascript/su-dung-var-trong-for-loop_fkabvl.png"
+            alt="Sử dụng var trong vòng lặp  Javascript"
+            >
+            <h5 class="text-white bg-secondary p-2 mt-4 shadow  title-article-size rounded">
+              Rút Ngắn Vòng Lặp <b>For</b> Trong Javascript:
+            </h5>
+            <p class="mt-2">
+              Chúng ta có thể rút ngắn bằng cách khai báo biến khởi tạo ở ngoài vòng lặp. Để hiểu rõ hơn bạn xem đoạn code sau nhé:
+            </p>
+            <pre><code class="javascript"> let  i = 0; /* Chúng ta khai báo và gán giá trị cho biến khởi tạo*/<br/> for(; i &#60; 5; i++) { /* Chúng ta không cần khai báo biến khởi tạo nữa*/<br/> console.log(i);<br/> }</code></pre>
+            <p class="mt-4">
+              Bạn cũng có thể khai báo <b>bước nhảy</b> trong vòng lặp bằng ví dụ sau đây nhé:
+            </p>
+            <pre><code class="javascript"> let i = 0; <br/> for(; i &#60; 5;) {<br/> &nbsp;&nbsp;console.log(i++); <br/> }</code></pre>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            <h5 class="text-white bg-secondary p-2 mt-4 shadow  title-article-size rounded">
+              Dừng  Vòng Lặp  Trong Javascript:
+            </h5>
+            <p class="mt-2">
+              Thông thường vòng lặp  chỉ dừng lại khi điều kiện của nó sai. Nhưng chúng ta cũng có thể đặt thêm điều kiện 
+              để thực hiện lệnh dừng vòng lặp dựa theo mục đích của mình. Để hiểu rõ hơn bạn xem ví dụ sau nhé:
+            </p>
+            <pre><code class="javascript"> for( i = 0; i &#60; 5; i ++) { <br/> &nbsp;&nbsp;if(i === 3)&nbsp; {<br/> &nbsp;&nbsp;&nbsp;&nbsp;break;<br/>&nbsp;&nbsp; }<br/> &nbsp;&nbsp; console.log(i);<br/> }</code></pre>
+            <p class="mt-4">
+              Và dưới đây là kết quả nhé:
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588137035/Vong%20lap%20trong%20javascript/dung-vong-lap-break-javascript_svrhlw.png"
+            alt="Dừng Vòng Lặp Bằng Break">
+            <p class="mt-4">
+              Như bạn thấy  khi giá trị của biến mà bằng 3 thì lệnh <b><code>break;</code></b> sẽ 
+              dừng vòng lặp ngay lặp tức nên kết quả ngoài màn hình của chúng ta là 0,1,2.
+            </p>
+            <h5 class="text-white bg-secondary p-2 mt-4 shadow  title-article-size rounded">
+              Sử dụng lệnh <b>continue</b> trong vòng lặp:
+            </h5>
+            <p class="mt-2">
+              Câu lệnh <b>continue</b> sẽ bỏ qua lần lặp hiện tại của một vòng lặp và chuyển sang vòng lặp tiếp theo.
+              Nó cũng khá giống câu lệnh <b><code>break</code></b> là dừng lại vòng lặp nhưng <b><code>continue</code></b>
+              không dừng hoàn toàn vòng lặp mà cho phép tiếp tục thực hiện vòng lặp tiếp theo. Để hiểu rõ hơn bây giờ chúng ta xem ví dụ 
+              sau đây nhé:
+            </p>
+            <pre><code class="javascript"> for( i = 0; i &#60; 5; i ++) { <br/> &nbsp;&nbsp;if(i === 3)&nbsp; {<br/> &nbsp;&nbsp;&nbsp;&nbsp;continue;<br/>&nbsp;&nbsp; }<br/> &nbsp;&nbsp; console.log(i);<br/> }</code></pre>
+            <p class="mt-4">
+              Và bên dưới là kết quả nhé:
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588144481/Vong%20lap%20trong%20javascript/dung-vong-lap-continue-javascript_tsd3ya.png"
+            alt="Dừng Vòng Lặp Bằng Continue">
+            <p class="mt-4">
+              Như bạn thấy thì khi giá trị của biến <b><code>i</code></b> mà bằng 3 thì nó sẽ bỏ qua và chuyển sang vòng lặp tiếp theo.
+            </p>
 
 
 
@@ -141,7 +274,7 @@
 
             <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
 
-            <p>Qua đây mình mong bài viết sẽ giúp bạn hiểu được khái niệm cũng như cách sử dụng toán tử điều kiện
+            <p>Qua đây mình mong bài viết sẽ giúp bạn hiểu được khái niệm cũng như cách sử dụng vòng lặp
               trong ngôn ngữ
               Javascript và
               nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất

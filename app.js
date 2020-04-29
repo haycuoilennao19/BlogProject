@@ -23,6 +23,7 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+ejs.cache = new LRU(100);
 app.use(compression())
 app.use(helmet())
 app.use(logger('dev'));
@@ -34,7 +35,7 @@ app.use(session({secret: 'ketboard cat', cookie: { maxAge: 6000000 }, resave: fa
 app.use(flash())
 app.use(passport.initialize());
 app.use(passport.session())
-ejs.cache = new LRU(100);
+
 app.use('/', indexRouter);
 app.use('/article', articlesRouter);
 app.use('/post', postsRouter);
