@@ -26,7 +26,7 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i>Object Trong Javascript</h2>
+                  aria-hidden="true"></i>Object Phần 2 Trong Javascript</h2>
             </div>
           </div>
 
@@ -36,7 +36,8 @@
             </div>
           </div>
           <div class="text-content-article mt-5">
-            <p><i>Hôm nay bạn hãy cùng mình sẽ đi tìm hiểu khái niệm cũng như cách sử dụng object trong ngôn
+            <p><i>Hôm nay bạn hãy cùng mình sẽ tiếp tục đi vào tìm hiểu khái niệm cũng như cách sử dụng object trong
+                ngôn
                 ngữ lập trình Javascript cho trang web nhé.</i>
             </p>
 
@@ -45,216 +46,90 @@
                 <h4 class="text-primary ml-4 title-article-size">Kiểu dữ liệu <b>Object</b> Trong Javascript</h4>
               </div>
             </div>
-            <p>
-              Javascript là ngôn ngữ lập trình theo hướng đối tượng, do đó để hiểu và lập trình hiệu quả thì chúng ta
-              cần biết cách nó hoạt động cũng như nắm vững
-              khái niệm cách sử dụng kiểu dữ liệu <b>object(đối tượng)</b> trong ngôn ngữ này.
-            </p>
-
-            <p>
-              <b>Object(đối tượng)</b> là một kiểu dữ liệu quan trọng nhất trong Javascript. Nó không giống so với
-              các kiểu dữ liệu <b>primitive(nguyên thủy)</b> mà chúng ta đã học ở bài trước (Bạn có thể tìm hiểu thêm
-              các dữ kiểu dữ liệu ở đây nhé: <a
-                href="https://www.niemvuilaptrinh.com/article/Cac-Kieu-Du-Lieu-Trong-Javascript" target="blank"
-                title="Kiểu Dữ Liệu Trong Javascript">Kiểu dữ liệu</a>).
-              Ví dụ các kiểu nguyên thủy như là <b>string</b>, <b>number</b>, <b>boolean</b>... thì chỉ có thể chứa một
-              giá trị duy nhất. Còn đối với kiểu dữ liệu <b>object(đối tượng)</b>, nó phức tạp hơn và
-              có thể chứa nhiều loại kiểu dữ liệu giá trị khác nhau. Bây giờ để hiểu rõ hơn chúng ta cùng nhau tìm hiểu
-              ở phía dưới nhé!
-            </p>
 
 
-            <h5 class="text-white bg-secondary p-2 shadow  title-article-size rounded">Cách tạo <b>Object</b> trong
+
+
+
+            <h5 class="text-white bg-secondary p-2 shadow  title-article-size rounded">Cách sao chép <b>Object</b> trong
               Javascript:</h5>
-            <p class="mt-2">
-              Object là nơi tập hợp các danh sách <b>property(thuộc tính)</b> được xác định bằng cặp giá trị
-              <b>key-value</b>.
-              Với <b>key(cặp khóa)</b> có thể là chuỗi còn <b>value(giá trị)</b> có thể bất kỳ giá trị nào hợp lệ.
-              Ví dụ trong thực tế chúng ta hãy liên tưởng object(đối tượng) như một chiếc máy tính xách tay
-              thì <b>property</b> (thuộc tính) của object(đối tượng) này là màu sắc, kích thước, bộ nhớ... Với các cặp
-              giá trị (key-value) như
-              <b><code>màu sắc: đỏ</code></b>, <b><code>kích thước: 2.3 kg</code></b>...
-            </p>
-            <p>
-              Đầu tiên chúng ta sẽ đi vào tìm hiểu cách tạo một object cụ thể bằng ví dụ sau đây nhé:
-            </p>
-            <pre><code class="javascript"> let khachHang = new Object();<br /> let khachHang = {};</code></pre>
             <p class="mt-4">
-              Trên là hai cách mà chúng ta có thể sử dụng để tạo một đối tượng trong Javascript. Nhưng theo mình thấy
-              thì cách
-              thứ hai với dấu <b><code>{}</code></b> hay được sử dụng hơn vì tính chất ngắn gọn và dễ hiểu của nó.
-              Bây giờ chúng ta hãy cùng nhau đi vào ví dụ thực tế tạo một đối tượng với danh sách chứa các <b>thuộc
-                tính</b> ở
-              bên dưới nhé:
+              Thông thường đối với các kiểu dữ liệu nguyên thủy (kiểu dữ liệu chuỗi, số, boolean) thì bạn có thể sao
+              chép giá trị của một biến sau đó
+              lưu vào một biến khác. Và khi giá trị <b>biến sao chép</b> thay đổi thì không ảnh hưởng đến giá trị của
+              <b>biến được sao chép</b>.
+              Để hiểu rõ hơn bạn xem đoạn code sau nhé:
             </p>
-            <pre><code class="javascript">let khachHang = { <br/> &nbsp;&nbsp;&nbsp;ten: "An",<br/> &nbsp;&nbsp;&nbsp;tuoi: 25,<br/> &nbsp;&nbsp;}</code></pre>
+            <pre><code class="javascript"> let thongDiep = 'Xin Chào'; <br/> let chaoHoi = thongDiep;</code></pre>
+
             <p class="mt-4">
-              Thì mình có một số lưu ý nhỏ khi tạo object(đối tượng) trong Javascript là:
+              Để bạn dễ hình dùng thì bạn nhìn vào ảnh bên dưới nhé:
+            </p>
+
+            <img class="lazyload" height="250"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588687181/Object-Javascript/vi-du-sao-chep-bien-nguyen-thuy_ybnues.svg"
+              alt="Truy cập key nhiều kí tự trong đối tượng">
+            <p class="mt-4">
+              Các bạn có thể thấy là hai biến này lưu trữ chuỗi <b>"Xin Chào"</b> hoàn toàn độc lập với nhau nên khi
+              chúng ta thay đổi giá trị của một biến sẽ không ảnh hưởng
+              đến biến còn lại. Để hiểu rõ hơn bạn thử xem đoạn code sau đây nhé:
+            </p>
+            <pre><code class="javascript"> let thongDiep = 'Xin Chào'; <br/> let chaoHoi = thongDiep;<br/> chaoHoi = 'Hello'; <br/> console.log(thongDiep);<br/> console.log(chaoHoi);</code></pre>
+            <p class="mt-4">
+              Ở đây mình xin có một số lưu ý nhỏ là:
               <ul>
-                <li>Ví dụ trên chúng ta chứa các danh sách thuộc tính trong dấu <b><code>{}</code></b>.</li>
-                <li>Mỗi thuộc tính trong đối tượng sẽ cách nhau bởi dấu <b><code>,</code>(phẩy)</b>.</li>
-                <li>Một thuộc tính sẽ có <b>key</b>( bạn có thể hiểu là tên hay định danh cũng được nhé) nằm bên tay
-                  trái
-                  và <b>value</b>(giá trị) nằm bên tay phải.
-                </li>
-                <li>Cú pháp của cặp giá trị thuộc tính là <b><code>key : value</code></b>.</li>
+                <li>Đầu tiên chúng ta khai báo biến <b><code>thongDiep</code></b> với giá trị là chuỗi <b>'Xin
+                    Chào'</b>.</li>
+                <li>Tiếp theo chúng ta khai báo biến <b><code>chaoHoi</code></b> có giá trị bằng với biến
+                  <b><code>thongDiep</code></b> với giá trị là chuỗi <b>'Xin Chào'</b>.</li>
+                <li>Sau đó chúng ta thay đổi giá trị biến <b><code>chaoHoi</code></b> với chuỗi <b>'Hello'</b>.</li>
               </ul>
             </p>
             <p>
-              Nếu như bạn dùng <b>key</b> với <b>nhiều hơn 1 từ</b> thì chúng ta phải chuyển sang kiểu chuỗi như ví dụ
-              sau đây nhé:
+              Bây giờ chúng ta thử xem kết quả của đoạn code trên xem giá trị của hai biến <b><code>thongDiep</code></b>
+              và <b><code>chaoHoi</code></b>
+              như thế nào nhé:
             </p>
-            <pre><code class="javascript">let khachHang = { <br/> &nbsp;&nbsp;&nbsp;ten: "An",<br/> &nbsp;&nbsp;&nbsp;tuoi: 25,<br/> &nbsp;&nbsp;&nbsp;"gioi tinh": "Nữ",<br/>&nbsp;&nbsp;}</code></pre>
-            <p class="mt-4">
-              Đối với các thuộc tính nằm ở <b>vị trí cuối cùng</b> thì bạn có thể sử dụng dấu <b><code>,</code></b>
-              (phẩy) hoặc không nhé:
-            </p>
-            <pre><code class="javascript">let khachHang = { <br/> &nbsp;&nbsp;&nbsp;ten: "An",<br/> &nbsp;&nbsp;&nbsp;tuoi: 25<br/> &nbsp;&nbsp;}</code></pre>
-
-
-            <h5 class="text-white bg-secondary p-2 shadow mt-4 title-article-size rounded">
-              Cách truy cập thuộc tính <b>Object</b> trong Javascript:
-            </h5>
-            <h6 class="text-primary mt-4"><b><u>1) Sử dụng dấu chấm(<b><code>.</code></b>)</u></b></h6>
-            <p>
-              Chúng ta sẽ sử dụng cú pháp như sau để lấy giá trị thuộc tính trong đối tượng:
-            </p>
-            <pre><code class="javascript">(Tên Đối Tượng).(Tên Thuộc Tính)</code></pre>
-            <p class="mt-4">
-              Để dễ hiểu hơn thì mình sẽ lấy giá trị của thuộc tính <b><code>ten</code></b> trong đối tượng
-              <b><code>khachHang</code></b> ở ví dụ trên
-              thông qua cách truy cập bằng dấu chấm nhé:
-            </p>
-            <pre><code class="javascript">let khachHang = { <br/> &nbsp;&nbsp;&nbsp;ten: "An",<br/> &nbsp;&nbsp;&nbsp;tuoi: 25<br/> &nbsp;&nbsp;};<br /> console.log(khachHang.ten)</code></pre>
-            <p class="mt-4"> Kết quả ở bên dưới nhé:</p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588647701/Object-Javascript/Truy-cap-Object-Javascript_mcbcr4.png"
-              alt="Truy cập thuộc tính trong đối tượng Javascript"
-              >
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588688332/Object-Javascript/sao-chep-bien-nguyen-thuy-javascript_cmvwif.png"
+              alt="Sao chép biến nguyên thủy trong Javascript">
+            <p class="mt-4">
+              Khi bạn đã hiểu về cách sao chép giá trị của biến nguyên thủy thì chúng ta sẽ đi vào cách sao chép
+              giá trị biến <b>object(đối tượng)</b>. Nó không lưu trữ trực tiếp vào biến như ở trong biến loại kiểu dữ
+              liệu nguyên thủy,
+              mà biến được gán kiểu dữ liệu <b>object(đối tượng)</b> sẽ như một đại diện và tham chiếu đến địa chỉ bộ
+              nhớ lưu trữ đối tượng này trong Javascript.
+              Nghe hơi khó hiểu nhưng bạn cố gắng theo dõi ví dụ dưới đây để hiểu rõ hơn nhé:
+            </p>
+            <pre><code class="javascript"> let khachHang = { <br/> &nbsp;&nbsp;&nbsp;&nbsp; ten: "An"<br/>&nbsp;&nbsp;}</code></pre>
+            <p class="mt-4">
+              Bạn có thể xem hình ảnh bên dưới để nắm rõ hơn nhé:
+            </p>
 
-              <h6 class="text-primary mt-4"><b><u>2) Sử dụng dấu giống Array(<code>[]</code>)</u></b></h6>
-              <p>
-                Kiểu dữ liệu Array thì mình sẽ có một bài chi tiết cho phần này sau nha. Bây giờ chúng ta cùng tìm 
-                hiểu cú pháp cách truy cập thuộc tính trong object thông qua dấu <b><code>[]</code></b> ở bên dưới nhé:
-              </p>
-              <pre><code class="javascript">(Tên Đối Tượng).["Tên Thuộc Tính"]</code></pre>
-              <p class="mt-4">
-                Như ví dụ của cách thứ nhất, mình sẽ lấy  giá trị của thuộc tính <b><code>ten</code></b> trong đối tượng
-                <b><code>khachHang</code></b> bằng cách sử dụng dấu <b><code>[]</code></b> nhé:
-              </p>
-              <pre><code class="javascript">let khachHang = { <br/> &nbsp;&nbsp;&nbsp;ten: "An",<br/> &nbsp;&nbsp;&nbsp;tuoi: 25<br/> &nbsp;&nbsp;};<br /> console.log(khachHang['ten'])</code></pre>
-              <p class="mt-4"> Kết quả ở bên dưới nhé:</p>
-              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588648350/Object-Javascript/Truy-cap-Object-bang-array-Javascript_iwhlsl.png"
-                alt="Truy cập thuộc tính trong đối tượng bằng cách sử dụng []"
-                >
-               <p class="mt-4">
-                 Ở đây mình có lưu ý điểm khác biệt giữa hai cách truy cập thuộc tính trong đối tượng là 
-                sử dụng với <b>key có nhiều hơn 1 từ</b>. Để dễ dàng so sánh và nắm rõ hơn thì bạn xem 
-                2 ví dụ sau đây nhé:
-               </p> 
-               <h6 class="text-info"><b>Đối với cách truy cập thuộc tính bằng dấu chấm:</b></h6>
-               <pre><code class="javascript">let khachHang = { <br/> &nbsp;&nbsp;&nbsp;ten: "An",<br/> &nbsp;&nbsp;&nbsp;tuoi: 25,<br/> &nbsp;&nbsp;&nbsp;"gioi tinh": "Nữ",<br/>&nbsp;&nbsp;};<br/>&nbsp;&nbsp; console.log(khachHang.'gioi tinh')</code></pre>
-               <p class="mt-4"> Kết quả ở bên dưới nhé:</p>
-               <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                 data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588648943/Object-Javascript/Loi-Truy-cap-Object-Javascript_h3e8ni.png"
-                 alt="Lỗi truy cập thuộc tính bằng dấu chấm"
-                 >
-
-                 <h6 class="text-info mt-4"><b>Đối với cách truy cập thuộc tính bằng dấu <b><code>[]</code></b>:</b></h6>
-                 <pre><code class="javascript">let khachHang = { <br/> &nbsp;&nbsp;&nbsp;ten: "An",<br/> &nbsp;&nbsp;&nbsp;tuoi: 25,<br/> &nbsp;&nbsp;&nbsp;"gioi tinh": "Nữ",<br/>&nbsp;&nbsp;};<br/>&nbsp;&nbsp; console.log(khachHang["gioi tinh"])</code></pre>
-                 <p class="mt-4"> Kết quả ở bên dưới nhé:</p>
-                 <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                   data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588649196/Object-Javascript/Truy-cap-key-nhieu-ky-tu-Object_odeeox.png"
-                   alt="Truy cập key nhiều kí tự trong đối tượng"
-                   >
-                   <h5 class="text-white bg-secondary p-2 shadow mt-4 title-article-size rounded">
-                    Thay đổi giá trị thuộc tính <b>Object</b> trong Javascript:
-                  </h5>
-                  <p class="mt-4">
-                    Bây giờ chúng ta sẽ đi vào tìm hiểu cách thay đổi giá trị thuộc tính cho đối tượng bằng ví dụ cụ thể sau đây nhé: 
-                  </p>
-                  <pre><code class="javascript">let khachHang = { <br/> &nbsp;&nbsp;&nbsp;ten: "An",<br/> &nbsp;&nbsp;&nbsp;tuoi: 25,<br/> &nbsp;&nbsp;&nbsp;"gioi tinh": "Nữ",<br/>&nbsp;&nbsp;};<br/>&nbsp;&nbsp; khachHang.ten = "Lan";<br/>&nbsp;&nbsp; console.log(khachHang.ten)</code></pre>
-                  <p class="mt-4"> Bạn xem kết quả ở bên dưới nhé:</p>
-                  <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                    data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588650150/Object-Javascript/thay-doi-gia-tri-thuoc-tinh-object_udftwv.png"
-                    alt="Thay đổi giá trị thuộc tính trong object"
-                  >
-                  <h5 class="text-white bg-secondary p-2 shadow mt-4 title-article-size rounded">
-                    Thêm thuộc tính mới trong <b>Object</b> Javascript:
-                  </h5>
-                  <p class="mt-4">
-                    Tiếp theo chúng ta sẽ đi vào ví dụ thực tế để tìm hiểu cách thêm thuộc tính mới vào trong đối tượng 
-                    ở bên dưới nhé:
-                  </p>
-                  <pre><code class="javascript">let khachHang = { <br/> &nbsp;&nbsp;&nbsp;ten: "An",<br/> &nbsp;&nbsp;&nbsp;tuoi: 25,<br/> &nbsp;&nbsp;&nbsp;"gioi tinh": "Nữ",<br/>&nbsp;&nbsp;};<br/>&nbsp;&nbsp; khachHang.ho = "Nguyen";<br/>&nbsp;&nbsp; console.log(khachHang)</code></pre>
-                  <p class="mt-4"> Bạn xem kết quả ở bên dưới nhé:</p>
-                  <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                    data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588650523/Object-Javascript/them-thuoc-tinh-moi-trong-object_zkg3rj.png"
-                    alt="Thêm thuộc tính mới cho object"
-                  >
-                  <h5 class="text-white bg-secondary p-2 shadow mt-4 title-article-size rounded">
-                   Xóa thuộc tính trong <b>Object</b> Javascript:
-                  </h5>
-                  <p class="mt-4">
-                    Tiếp theo chúng ta sẽ đi vào ví dụ thực tế để tìm hiểu cách xóa thuộc tính  trong đối tượng 
-                    ở bên dưới nhé:
-                  </p>
-                  <pre><code class="javascript">let khachHang = { <br/> &nbsp;&nbsp;&nbsp;ten: "An",<br/> &nbsp;&nbsp;&nbsp;tuoi: 25,<br/> &nbsp;&nbsp;&nbsp;"gioi tinh": "Nữ",<br/>&nbsp;&nbsp;};<br/>&nbsp;&nbsp; delete khachHang.tuoi;<br/>&nbsp;&nbsp; console.log(khachHang)</code></pre>
-                  <p class="mt-4"> Bạn xem kết quả ở bên dưới nhé:</p>
-                  <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                    data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588650751/Object-Javascript/xoa-thuoc-tinh-trong-object_etmhvq.png"
-                    alt="Xóa thuộc tính trong object"
-                  >
-
-                  <h5 class="text-white bg-secondary p-2 shadow mt-4 title-article-size rounded">
-                    Kiểm tra thuộc tính ở trong <b>Object</b> Javascript:
-                  </h5>
-                  <p class="mt-4">
-                    Trong Javascript cho phép chúng ta kiểm tra một thuộc tính tồn tại hay không bằng một 
-                    toán tử đặc biệt là <b><code>in</code></b> với giá trị trả về là <b>true</b> hoặc <b>false</b>.
-                    Bây giờ chúng ta sẽ đi vào tìm hiểu cú pháp cách kiểm này nhé:
-                  </p>
-                  <pre><code class="javascript">(Tên Thuộc Tính) in (Tên Đối Tượng)</code></pre>
-                  <p class="mt-4">
-                    Để các bạn hiểu và nắm rõ hơn thì chúng ta cùng nhau  kiểm tra các thuộc có tồn tại 
-                    trong đối tượng hay không bằng  ví dụ thực tế ở dưới đây nhé:
-                  </p>
-                  <pre><code class="javascript">let khachHang = { <br/> &nbsp;&nbsp;&nbsp;ten: "An",<br/> &nbsp;&nbsp;&nbsp;tuoi: 25,<br/> &nbsp;&nbsp;&nbsp;"gioi tinh": "Nữ",<br/>&nbsp;&nbsp;};<br/>&nbsp;&nbsp; console.log('ten' in khachHang)<br/>&nbsp;&nbsp; console.log('email' in khachHang)</code></pre>
-
-                  <p class="mt-4"> Kết quả ở bên dưới nhé:</p>
-                  <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                    data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588651539/Object-Javascript/kiem-tra-thuoc-tinh-trong-object_ssaedr.png"
-                    alt="Kiểm tra thuộc tính có tồn tại hay không trong object"
-                    >
-
-                    <h5 class="text-white bg-secondary p-2 shadow mt-4 title-article-size rounded">
-                      Sử dụng vòng lặp trong <b>Object</b> bằng <b>for...in</b>:
-                    </h5>
-                    <p class="mt-4">
-                      Trong object(đối tượng) chúng ta có thể lấy các cặp giá trị <b>key-value</b> bằng cách sử dụng 
-                      vòng lặp <b>for...in</b>. Nó được tối ưu hóa đặc biệt để sử dụng cho đối tượng và cấu trúc của nó thì hoàn toàn khác so 
-                      với vòng lặp <b>for</b> mà chúng ta học ở bài trước (Bạn có thể tìm hiểu thêm về vòng lặp ở đây nhé:
-                      <a href="https://www.niemvuilaptrinh.com/article/Vong-Lap-Trong-Javascript" title="Vòng lặp" target="_blank">Vòng Lặp</a>).
-                      Để hiểu rõ hơn thì chúng ta cùng nhau tìm hiểu về cú pháp của nó nhé:
-                    </p>
-                    <pre><code class="javascript"> for(let (thuộc tính) in (đối tượng) ) { <br/>&nbsp;&nbsp;&nbsp; /*Đoạn mã thực thi*/ <br/> }</code></pre>
-                    <p class="mt-4">
-                      Để hiểu rõ hơn chúng ta sẽ đi vào cách lấy giá trị các thuộc tính trong đối tượng bằng cách sử dụng vòng lặp này nhé:
-                    </p>
-
-                    <pre><code class="javascript"> let&nbsp;khachHang&nbsp;=&nbsp;{&nbsp;<br/> &nbsp;&nbsp;&nbsp;&nbsp;ten:&nbsp;"An",<br/> &nbsp;&nbsp;&nbsp;&nbsp;tuoi:&nbsp;25,<br/> &nbsp;&nbsp;&nbsp;&nbsp;"gioi&nbsp;tinh":&nbsp;"Nữ",<br/> &nbsp;&nbsp;&nbsp;&nbsp;};<br/>&nbsp;for&nbsp;(const&nbsp;thuocTinh&nbsp;in&nbsp;khachHang)&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(khachHang[thuocTinh]);<br/> &nbsp;}<br/></code></pre>
-
-                    <p class="mt-4"> Bạn xem kết quả ở bên dưới nhé:</p>
-                    <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                      data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588652956/Object-Javascript/vong-lap-for-in-trong-object_iv2le8.png"
-                      alt="Vòng lặp for...in trong object"
-                      >
-
-
-
-
-
+            <img class="lazyload" height="250"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588689172/Object-Javascript/luu-tru-bien-object_wzomaz.svg"
+              alt="Lưu trữ biến trong object javascript">
+            <p class="mt-4">
+              Các bạn có thể hình dung là object(đối tượng) sẽ được lưu trữ vào một nơi nào đó trong bộ nhớ của chương trình và 
+              biến <b><code>khachHang</code></b> sẽ tham chiếu để lấy giá trị của nó. Tiếp theo chúng ta sẽ đi vào tìm hiểu  cách sao chép 
+              object(đối tượng) bằng đoạn code sau nhé:
+            </p>
+            <pre><code class="javascript"> let khachHang = { <br/> &nbsp;&nbsp;&nbsp;&nbsp; ten: "An"<br/>&nbsp;&nbsp;};<br/> let nguoiDung = khachHang;</code></pre>
+            <p class="mt-4">
+              Để dễ hình dung thì bạn xem hình ảnh bên dưới nhé:
+            </p>
+            <img class="lazyload" height="250"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588689742/Object-Javascript/tham-chieu-object-trong-javascript_dkqeqn.svg"
+            alt="Sao chép hai biến object trong javascript">
+            <p class="mt-4">
+              Ở đây bạn có thể thấy điểm khác kiểu <b>object(đối tượng)</b> so với các kiểu dữ liệu còn lại là 
+              mỗi biến không trực tiếp lưu trữ biến như ví dụ của kiểu dữ liệu nguyên thủy(primitives) mà chúng chỉ sao 
+              chép địa chỉ tham chiếu  đến cùng một nơi <b>lưu trữ object(đối tượng)</b>.
+            </p>
+            <p><b>Vậy tại sao nãy giờ mình lại cố gắng so sánh biến kiểu nguyên thủy với biến kiểu object để làm gì?</b></p>
+            <p>Điểm mấu chốt ở đây chính là khi sao chép object(đối tượng) thì <b>object(bị sao chép) sẽ 
+            bị ảnh hưởng khi mà biến sao chép thay đổi.</b> Để hiểu rõ hơn bạn xem ví dụ sau đây nhé: </p>
+            <pre><code class="javascript"> let khachHang = { <br/> &nbsp;&nbsp;&nbsp;&nbsp; ten: "An"<br/>&nbsp;&nbsp;};<br/> let nguoiDung = khachHang;</code></pre>
 
 
 
@@ -276,11 +151,13 @@
             <p>
               Mình có một số đúc kết khi sử dụng object(đối tượng) trong Javascript như sau:
               <ul>
-                <li>Object là nơi tập hợp các cặp giá trị key-value thường gọi là thuộc tính và được đặt trong dấu <b><code>{}</code></b>.</li>
+                <li>Object là nơi tập hợp các cặp giá trị key-value thường gọi là thuộc tính và được đặt trong dấu
+                  <b><code>{}</code></b>.</li>
                 <li>Ta có thể truy cập thuộc tính bằng cách sử dụng dấu chấm hay dấu [].</li>
                 <li>Ta có thể xóa thuộc tính bằng cách sử dụng <b><code>delete</code></b>.</li>
                 <li>Kiểm tra một thuộc thuộc tính có tồn tại hay không thì ta sẽ sử dụng <b><code>in</code></b>.</li>
-                <li>Lấy dữ liệu các cặp giá trị key-value thì ta có thể sử dụng vòng lặp <b><code>for...in</code></b>.</li>
+                <li>Lấy dữ liệu các cặp giá trị key-value thì ta có thể sử dụng vòng lặp <b><code>for...in</code></b>.
+                </li>
 
               </ul>
             </p>
