@@ -10,7 +10,9 @@ var Categories = require('../model/categories')
 router.get('/', function(req, res, next) {
   res.send("article")
 });
-
+router.get('/Hoc-Javascript', function(req, res, next) {
+    res.render('HocJavascript')
+  });
 router.get('/about', function(req, res, next) {
    res.render('about')
 });
@@ -25,6 +27,7 @@ router.get('/about', function(req, res, next) {
   router.get('/Javascript/0', function(req, res, next) {
     res.render('404page')
   })
+
 
 router.get("/css", function(req, res) {
     var perpage = 6;
@@ -143,6 +146,7 @@ router.get("/Bootstrap", function(req, res) {
             })
         })
   })
+
 
 //   router.get("/updateall", function(req, res) {
 

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <title>Học Về Javascript</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta name="description"
+    content="Các bài học thì sẽ giúp bạn  hiểu các khái niệm, định nghĩa và cách sử dụng javascript trong quá trình lập trình web.">
+  <link rel="alternate" href="http://www.niemvuilaptrinh.com/" hreflang="vi-vn" />
+  <link rel="icon" type="image/x-icon"
+    href="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586594935/logo-via-logohub_2_a9ubsa.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='/stylesheets/normalizes.css' />
+  <link rel='stylesheet' href='/stylesheets/darcula.css' />
+  <link rel='stylesheet' href='/stylesheets/hover-min.css' />
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <!-- <meta property="og:image" content="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576511394/Niemvuilaptrinh_jgc0rn.png"> -->
+  <meta property="og:url" content="http://www.niemvuilaptrinh.com/article/Hoc-Javascript" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Học Về Javascript" />
+  <meta property="og:description"
+    content="Các bài học thì sẽ giúp bạn  hiểu các khái niệm, định nghĩa và cách sử dụng javascript trong quá trình lập trình web." />
+  <meta property="og:image"
+    content="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576511394/Niemvuilaptrinh_jgc0rn.png" />
+  <meta property="fb:app_id" content="2121975281235443" />
+  <meta name="keywords" content="Javascript, Tự Học Javascript, Lập trình Web">
+  <meta name="author" content="Thái Viết Nhật">
+  <!--Font Logo-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:400,700,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <meta name="google-site-verification" content="SXEFa5YhgCrmAOJhBwsuDms_fUALYxrM8ZUql8KHgNM" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163462128-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-163462128-1');
+  </script>
+
+  </style>
+</head>
+
+<body>
+
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        appId: '2121975281235443',
+        xfbml: true,
+        version: 'v5.0'
+      });
+      FB.AppEvents.logPageView();
+    };
+
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {
+        return;
+      }
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top p-2">
+    <a class="navbar-brand" title="Niềm Vui Lập Trình" href="/">Niềm Vui Lập Trình</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fa fa-navicon"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link mr-5 hvr-underline-from-left" title="Trang Chủ" href="/">Trang Chủ <span
+              class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown ">
+          <a class="nav-link dropdown-toggle  mr-5 hvr-underline-from-left" data-toggle="dropdown" href="#"
+            role="button" aria-haspopup="true" aria-expanded="false" title="Xem Khóa Học">Ngôn Ngữ</a>
+          <div class="dropdown-menu mt-2">
+            <a class="dropdown-item" title="Hướng Dẫn Về HTML" href="/article/html">HTML</a>
+            <a class="dropdown-item" title="Hướng Dẫn Về CSS" href="/article/css">CSS</a>
+            <a class="dropdown-item" title="Hướng Dẫn Về Javascript" href="/article/Javscript">Javascript</a>
+            <a class="dropdown-item" title="Hướng Dẫn Về Bootstrap 4" href="/article/Bootstrap">Hướng Dẫn Bootstrap4</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link hvr-underline-from-left mr-5" title="Giới Thiệu Bản Thân" href="/about">Giới Thiệu</a>
+        </li>
+
+
+
+    </div>
+  </nav>
+  <!--Content-->
+  <div class="jumbotron jumbotron-fluid image-slider">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-xs-12">
+        <div class="content-image">
+          <div class="content">
+            <blockquote class="blockquote">
+              <h4 class="mb-2 content-header">Tôi không có tài năng gì cả. Tôi chỉ đam mê hiểu biết</h4>
+              <footer class="blockquote-footer text-right text-white">Albert Einstein</footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container header-text text-center mt-5 ">
+    <h1 class="text-white bg-primary p-2 mt-4 mb-4 shadow rounded h3">Hướng Dẫn Học Về Javascript</h1>
+  </div>
+  <div class="container mt-5" id="content-box">
+    <div class="row">
+
+      <div class="alert alert-success" role="alert">
+        <h5>Sau đây mình sẽ giới thiệu với bạn về khóa tự học Javascript mong nó sẽ giúp bạn hiểu hơn về ngôn ngữ lập
+          trình Javascript
+          cũng như áp dụng thực tế vào quá trình lập trình web.</h5>
+      </div>
+
+      <div class="list-group vw-100">
+
+        <a href="https://www.niemvuilaptrinh.com/article/Gioi-thieu-ve-Javascript-phan-1"
+          title="Giới thiệu về Javascript" class="list-group-item list-group-item-action bg-dark text-white  p-4">
+          <h5>Giới thiệu về Javascript</h5>
+          <p>
+            Javascript được tạo ra để bạn tương tác với các thành phần trang web và thường được kết hợp với HTML, CSS để
+            tạo ra các chức năng tiện ích, tăng khả năng tương tác cho trang web.. Việc tiện lợi của nó là có thể viết
+            ngay trong trang HTML và tư động chạy khi trang được tải mà không cần bất kỳ trình biên dịch nào cả, bạn có
+            thể hiểu nôm na trình biên dịch là công việc chuyển ngôn ngữ lập trình hiện tại sang một ngôn ngữ cấp thấp
+            hơn như là ngôn ngữ máy để giúp máy tính có thể hiểu và thực hiện...
+          </p>
+        </a>
+        <a href="https://www.niemvuilaptrinh.com/article/Viet-Hello-World-Voi-Javascript"
+          title="Viết Hello World Với Javascript" class="list-group-item list-group-item-action bg-warning   p-4">
+          <h5>Viết Hello World Với Javascript</h5>
+          <p>
+            Hôm nay bạn hãy cùng mình sẽ đi tìm hiểu cách sử dụng ngôn ngữ lập trình Javascript để có thể viết được
+            Hello World trong trang web nhé.
+          </p>
+        </a>
+
+        <a href="https://www.niemvuilaptrinh.com/article/Su-Dung-Bien-Trong-Javascript"
+          title="Sử Dụng Biến Trong Javascript"
+          class="list-group-item list-group-item-action bg-danger text-white  p-4">
+          <h5>Sử Dụng Biến Trong Javascript</h5>
+          <p>
+            Biến là nơi để bạn có thể lưu trữ thông tin. Ví dụ trong thực tế bạn có trang web kinh doanh hàng online thì
+            thông tin có thể lưu trữ là giá sản phẩm, mã sản phẩm, thông tin người mua hàng... Để tạo một biến trong
+            Javascript thì ta có thể sử dụng ba cách khai báo sau...
+          </p>
+        </a>
+        <a href="https://www.niemvuilaptrinh.com/article/Cac-Kieu-Du-Lieu-Trong-Javascript"
+          title="Các Kiểu Dữ Liệu Trong Javascript"
+          class="list-group-item list-group-item-action bg-secondary text-white  p-4">
+          <h5>Các Kiểu Dữ Liệu Trong Javascript</h5>
+          <p>
+            Javascript là một ngữ dynamically typed(ngôn ngữ động), nó cho phép chúng ta không cần phải khai báo kiểu
+            của biến trước khi sử dụng. Kiểu sẽ được xác định tự động trong khi chương trình thực thi...
+          </p>
+        </a>
+
+        <a href="https://www.niemvuilaptrinh.com/article/Toan-Tu-Trong-Javascript" title="Toán Tử Trong Javascript"
+          class="list-group-item list-group-item-action bg-warning   p-4">
+          <h5>Toán Tử Trong Javascript</h5>
+          <p>
+            Operator(Toán tử) có lẽ ai trong chúng ta đều đã tiếp xúc qua như là phép cộng, phép trừ, phép nhân, phép
+            chia ở trong trường học và nó được xem là các toán tử cơ bản trong Javascript. Trong phần này chúng ta sẽ đi
+            tìm hiểu thêm các loại toán tử khác nâng cao hơn...
+          </p>
+        </a>
+
+        <a href="https://www.niemvuilaptrinh.com/article/Toan-Tu-So-Sanh-Va-Logic-Trong-Javascript"
+          title="Toán Tử So Sánh Và Logic Trong Javascript"
+          class="list-group-item list-group-item-action bg-dark text-white   p-4">
+          <h5>Toán Tử So Sánh Và Logic Trong Javascript</h5>
+          <p>
+            Toán tử so sánh giúp chúng ta so sánh giá trị giữa các biến hay giá trị trong Javascript. Sau đây mình sẽ có
+            một bảng liệt kê các toán tử so sánh hay sử dụng trong Javascript, bạn có thể xem ở bên dưới nhé...
+          </p>
+        </a>
+
+        <a href="https://www.niemvuilaptrinh.com/article/Toan-Tu-Dieu-Kien-Trong-Javascript"
+          title="Toán Tử Điều Kiện Trong Javascript"
+          class="list-group-item list-group-item-action bg-danger text-white   p-4">
+          <h5>Toán Tử Điều Kiện Trong Javascript</h5>
+          <p>
+            Câu lệnh toán tử điều kiện if thường hay được sử dụng trong Javascript để thực hiện các hành động khác nhau
+            dựa trên các điều kiện đã cho...
+          </p>
+        </a>
+
+        <a href="https://www.niemvuilaptrinh.com/article/Vong-Lap-Trong-Javascript" title="Vòng Lặp Trong Javascript"
+          class="list-group-item list-group-item-action bg-secondary text-white   p-4">
+          <h5>Vòng Lặp Trong Javascript</h5>
+          <p>
+            Vòng lặp được sinh ra để giúp chúng ta giảm các hành động được lặp lại nhiều lần. Ví dụ khi bạn muốn xuất ra
+            màn hình từ số 1 đến số 10 thì việc ghi từng số như vậy sẽ mất rất nhiều thời gian cũng như công sức. Do đó
+            để giải quyết trường hợp trên thì bạn nên sử dụng vòng lặp...
+          </p>
+        </a>
+
+        <a href="https://www.niemvuilaptrinh.com/article/Cau-Lenh-Switch-Trong-Javascript"
+          title="Câu Lệnh Switch Trong Javascript" class="list-group-item list-group-item-action bg-warning    p-4">
+          <h5>Câu Lệnh Switch Trong Javascript</h5>
+          <p>
+            Câu lệnh switch giúp chúng ta thực thi đoạn mã khác nhau theo những điều kiện khác nhau. Bạn có thể hiểu là
+            nó có thể thay thế cho nhiều câu lệnh kiểm tra điều kiện if ở trong Javascript...
+          </p>
+        </a>
+
+        <a href="https://www.niemvuilaptrinh.com/article/Function-Trong-Javascript" title="Function Trong Javascript"
+          class="list-group-item list-group-item-action bg-dark text-white   p-4">
+          <h5>Function Trong Javascript</h5>
+          <p>
+            Function(hàm) là một yếu tố cực kỳ quan trọng trong việc xây dựng chương trình cho trang web của chúng ta.
+            Nó giúp bạn có thể tái sử dụng những đoạn code để thực thi ở những nơi khác nhau trong chương trình. Ví dụ
+            khi bạn muốn tính toán tổng của hai số bất kỳ thì ta phải lặp đi lặp lại phép tính cộng với các số chúng ta
+            muốn như console.log(2+2), console.log(5+9)... Ở đây function sẽ có nhiệm vụ giúp chúng ta thực thi một cách
+            tổng quan hơn bằng cách sẽ cho người dùng nhập vào hai số rồi tự động xuất ra màn hình giá trị của tổng hai
+            số mỗi khi function được gọi...
+          </p>
+        </a>
+
+        <a href="https://www.niemvuilaptrinh.com/article/Object-Trong-Javascript" title="Object Trong Javascript"
+          class="list-group-item list-group-item-action bg-danger text-white   p-4">
+          <h5>Object Trong Javascript</h5>
+          <p>
+            Object(đối tượng) là một kiểu dữ liệu quan trọng nhất trong Javascript. Nó không giống so với các kiểu dữ
+            liệu primitive(nguyên thủy) mà chúng ta đã học ở bài trước (Bạn có thể tìm hiểu thêm các dữ kiểu dữ liệu ở
+            đây nhé: Kiểu dữ liệu). Ví dụ các kiểu nguyên thủy như là string, number, boolean... thì chỉ có thể chứa một
+            giá trị duy nhất. Còn đối với kiểu dữ liệu object(đối tượng), nó phức tạp hơn và có thể chứa nhiều loại kiểu
+            dữ liệu giá trị khác nhau...
+          </p>
+        </a>
+      </div>
+
+
+
+
+
+
+
+
+
+      <div class="mb-5"></div>
+      <div class="col-lg-12 col-md-12 col-xs-12">
+        <div class="mt-5"></div>
+        <div class="card card-search">
+          <div class="card-header card-header-category">
+            Từ Khóa
+          </div>
+          <div class="card-body card-body-search mt-4">
+            <h3 class="button-article"><a title="Thông Tin Về CSS" href="/article/css"><button type="button"
+                  class="CSS btn shadow-sm rounded btn-success m-1 pl-2 pr-2 hvr-shrink"><i class="fa fa-tag"
+                    aria-hidden="true"></i> CSS</button></a>
+              <a href="/article/html" title="Thông Tin Về HTML"><button type="button"
+                  class="HTML btn shadow-sm rounded btn-success m-1 pl-2 pr-2 hvr-shrink"><i class="fa fa-tag"
+                    aria-hidden="true"></i> HTML</button></a>
+              <a href="/article/Javascript" title="Thông Tin Về Javascript">
+                <button type="button" class="btn shadow-sm rounded btn-success m-1 pl-2 pr-2 hvr-shrink"><i
+                    class="fa fa-tag" aria-hidden="true"></i> Javascript</button></a>
+              <a href="/article/Bootstrap" title="Thông Tin Về Bootstrap">
+                <button type="button" class="btn shadow-sm rounded m-1 pl-2 pr-2 hvr-shrink bg-bootstrap-color"><i
+                    class="fa fa-tag" aria-hidden="true"></i> Bootstrap</button></a>
+            </h3>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var container = document.getElementById('content-box');
+
+    $(window).on('load resize', (function () {
+      windowsize = $(window).width();
+
+      if ((windowsize <= 992) && (screen.height >= 768)) {
+        container.classList.remove('container');
+        container.classList.add('container-fluid')
+
+        //navbar
+        $('.nav-item').addClass('hvr-underline-from-left')
+      } else {
+        container.classList.add('container');
+        container.classList.remove('container-fluid')
+
+        //navbar
+        $('.nav-item').removeClass('hvr-underline-from-left')
+      }
+    }));
+  </script>
+  <script src='/javascripts/highlight.pack.js'></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  <script>
+    $(document).ready(function () {
+      const win = $(window);
+      const doc = $(document);
+      const progressBar = $('progress');
+      const progressLabel = $('.progress-label');
+      const setValue = () => win.scrollTop();
+      const setMax = () => doc.height() - win.height();
+      const setPercent = () => Math.round(win.scrollTop() / (doc.height() - win.height()) * 100);
+
+      progressLabel.text(setPercent() + '%');
+      progressBar.attr({
+        value: setValue(),
+        max: setMax()
+      });
+
+      doc.on('scroll', () => {
+        progressLabel.text(setPercent() + '%');
+        progressBar.attr({
+          value: setValue()
+        });
+      });
+
+      win.on('resize', () => {
+        progressLabel.text(setPercent() + '%');
+        progressBar.attr({
+          value: setValue(),
+          max: setMax()
+        });
+      })
+    });
+  </script>
+  <%- include('footer') -%>

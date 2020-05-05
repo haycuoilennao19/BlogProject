@@ -28,7 +28,7 @@ cloudinary.config({
 passport.use('login', new LocalStrategy({
         passReqToCallback: true
     },
-    function (req, username, password, res,done) {
+    function (req, username, password,done) {
         // check in mongo if a user with username exists or not
         User.findOne({
                 'username': username
@@ -130,8 +130,9 @@ router.get('/login', function (req, res) {
 
 
 //Authenticate when login
-router.post('/login', passport.authenticate('login'), function (req, res, next) {
-
+router.post('/login', passport.authenticate('login', {
+    failureRedirect: '/'
+  }), function (req, res, next) {
     Blog.find(function (err, data) {
         if (err)  return console.error(err)
         res.render('postadmin', {
