@@ -26,7 +26,7 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i>Object Phần 2 Trong Javascript</h2>
+                  aria-hidden="true"></i> Phương Thức và Từ Khóa <b>this</b> Object Trong Javascript</h2>
             </div>
           </div>
 
@@ -36,9 +36,9 @@
             </div>
           </div>
           <div class="text-content-article mt-5">
-            <p><i>Hôm nay bạn hãy cùng mình sẽ tiếp tục đi vào tìm hiểu khái niệm cũng như cách sử dụng object trong
+            <p><i>Hôm nay bạn hãy cùng mình  đi vào tìm hiểu khái niệm cũng như cách sử dụng phương thức và từ khóa this với object trong
                 ngôn
-                ngữ lập trình Javascript cho trang web nhé.</i>
+                ngữ lập trình Javascript để phát triển web nhé.</i>
             </p>
 
             <div class="row">
@@ -51,117 +51,137 @@
 
 
 
-            <h5 class="text-white bg-secondary p-2 shadow  title-article-size rounded">Cách sao chép <b>Object</b> trong
-              Javascript:</h5>
+            <h5 class="text-white bg-secondary p-2 shadow  title-article-size rounded">
+              Method (Phương Thức) <b>Object</b> trong Javascript:
+            </h5>
             <p class="mt-4">
-              Thông thường đối với các kiểu dữ liệu nguyên thủy (kiểu dữ liệu chuỗi, số, boolean) thì bạn có thể sao
-              chép giá trị của một biến sau đó
-              lưu vào một biến khác. Và khi giá trị <b>biến sao chép</b> thay đổi thì không ảnh hưởng đến giá trị của
-              <b>biến được sao chép</b>.
-              Để hiểu rõ hơn bạn xem đoạn code sau nhé:
-            </p>
-            <pre><code class="javascript"> let thongDiep = 'Xin Chào'; <br/> let chaoHoi = thongDiep;</code></pre>
-
-            <p class="mt-4">
-              Để bạn dễ hình dùng thì bạn nhìn vào ảnh bên dưới nhé:
-            </p>
-
-            <img class="lazyload" height="250"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588687181/Object-Javascript/vi-du-sao-chep-bien-nguyen-thuy_ybnues.svg"
-              alt="Truy cập key nhiều kí tự trong đối tượng">
-            <p class="mt-4">
-              Các bạn có thể thấy là hai biến này lưu trữ chuỗi <b>"Xin Chào"</b> hoàn toàn độc lập với nhau nên khi
-              chúng ta thay đổi giá trị của một biến sẽ không ảnh hưởng
-              đến biến còn lại. Để hiểu rõ hơn bạn thử xem đoạn code sau đây nhé:
-            </p>
-            <pre><code class="javascript"> let thongDiep = 'Xin Chào'; <br/> let chaoHoi = thongDiep;<br/> chaoHoi = 'Hello'; <br/> console.log(thongDiep);<br/> console.log(chaoHoi);</code></pre>
-            <p class="mt-4">
-              Ở đây mình xin có một số lưu ý nhỏ là:
-              <ul>
-                <li>Đầu tiên chúng ta khai báo biến <b><code>thongDiep</code></b> với giá trị là chuỗi <b>'Xin
-                    Chào'</b>.</li>
-                <li>Tiếp theo chúng ta khai báo biến <b><code>chaoHoi</code></b> có giá trị bằng với biến
-                  <b><code>thongDiep</code></b> với giá trị là chuỗi <b>'Xin Chào'</b>.</li>
-                <li>Sau đó chúng ta thay đổi giá trị biến <b><code>chaoHoi</code></b> với chuỗi <b>'Hello'</b>.</li>
-              </ul>
+              Ở các bài trước bạn chỉ thấy các thuộc tính của object, hôm nay chúng ta sẽ đi vào phương thức(hành động) của object 
+             . Các hành động đó được hiển thị thông qua <b>functuon (hàm)</b>. Để dễ hiểu thì bạn có thể hình dung một đối tượng (object) trong thực thực 
+             tế là một con mèo thì:
+             <ul>
+               <li><b>Thuộc tính (property)</b> của nó là màu sắc, cân nặng, tuổi...</li>
+               <li><b>Phương thức (method)</b> của nó là ngủ(), kêu() , chạy()...</li>
+             </ul>
             </p>
             <p>
-              Bây giờ chúng ta thử xem kết quả của đoạn code trên xem giá trị của hai biến <b><code>thongDiep</code></b>
-              và <b><code>chaoHoi</code></b>
-              như thế nào nhé:
+              Như bạn thấy phương thức là cách miêu tả các hành động của các đối tượng trong thực tế. Để hiểu rõ hơn chúng ta hãy đi vào ví dụ cụ thể 
+              sau đây nhé:
             </p>
+            
+            <pre><code class="javascript">&nbsp;let&nbsp;meo&nbsp;=&nbsp;{<br/> &nbsp;&nbsp;&nbsp;ten:&nbsp;"Boo",<br/> &nbsp;&nbsp;&nbsp;mauSac:&nbsp;"Đen"<br/> &nbsp;};<br/> &nbsp;meo.keu&nbsp;=&nbsp;function()&nbsp;{<br/> &nbsp;&nbsp;&nbsp;console.log("Meow&nbsp;Meow");<br/> &nbsp;};<br/><br/> &nbsp;meo.keu();<br/></code></pre>
+
+            <p class="mt-4">
+              Bạn xem kết quả bên dưới nhé:
+            </p>
+
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588688332/Object-Javascript/sao-chep-bien-nguyen-thuy-javascript_cmvwif.png"
-              alt="Sao chép biến nguyên thủy trong Javascript">
-            <p class="mt-4">
-              Khi bạn đã hiểu về cách sao chép giá trị của biến nguyên thủy thì chúng ta sẽ đi vào cách sao chép
-              giá trị biến <b>object(đối tượng)</b>. Nó không lưu trữ trực tiếp vào biến như ở trong biến loại kiểu dữ
-              liệu nguyên thủy,
-              mà biến được gán kiểu dữ liệu <b>object(đối tượng)</b> sẽ như một đại diện và tham chiếu đến địa chỉ bộ
-              nhớ lưu trữ đối tượng này trong Javascript.
-              Nghe hơi khó hiểu nhưng bạn cố gắng theo dõi ví dụ dưới đây để hiểu rõ hơn nhé:
-            </p>
-            <pre><code class="javascript"> let khachHang = { <br/> &nbsp;&nbsp;&nbsp;&nbsp; ten: "An"<br/>&nbsp;&nbsp;}</code></pre>
-            <p class="mt-4">
-              Bạn có thể xem hình ảnh bên dưới để nắm rõ hơn nhé:
-            </p>
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588756458/Method%20Object%20JS/phuong-thuc-method-trong-object-js_dusg0q.png"
+              alt="Phương Thức Method Object trong Javascript">
+        <p class="mt-4">
+          <ul>
+            <li>Đầu tiên chúng ta tạo ra một biến object(đối tượng) với tên là
+              <b><code>meo</code></b>. </li>
+              <li>Tiếp theo ta tạo ra một function(hàm) và gán nó vào trong thuộc tính <b><code> meo.keu</code></b> của đối tượng <b><code>meo</code></b>.</li>
+              <li>Sau đó chúng ta  sẽ gọi phương thức của đối tượng <b><code>meo</code></b> bằng cách <b><code> meo.keu()</code></b> thì lúc này hàm sẽ được thực thi và xuất ra màn hình chúng ta là dòng chữ "Meow Meow".</li>
+            </ul>
+        </p>
 
-            <img class="lazyload" height="250"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588689172/Object-Javascript/luu-tru-bien-object_wzomaz.svg"
-              alt="Lưu trữ biến trong object javascript">
-            <p class="mt-4">
-              Các bạn có thể hình dung là object(đối tượng) sẽ được lưu trữ vào một nơi nào đó trong bộ nhớ của chương trình và 
-              biến <b><code>khachHang</code></b> sẽ tham chiếu để lấy giá trị của nó. Tiếp theo chúng ta sẽ đi vào tìm hiểu  cách sao chép 
-              object(đối tượng) bằng đoạn code sau nhé:
-            </p>
-            <pre><code class="javascript"> let khachHang = { <br/> &nbsp;&nbsp;&nbsp;&nbsp; ten: "An"<br/>&nbsp;&nbsp;};<br/> let nguoiDung = khachHang;</code></pre>
-            <p class="mt-4">
-              Để dễ hình dung thì bạn xem hình ảnh bên dưới nhé:
-            </p>
-            <img class="lazyload" height="250"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588689742/Object-Javascript/tham-chieu-object-trong-javascript_dkqeqn.svg"
-            alt="Sao chép hai biến object trong javascript">
-            <p class="mt-4">
-              Ở đây bạn có thể thấy điểm khác kiểu <b>object(đối tượng)</b> so với các kiểu dữ liệu còn lại là 
-              mỗi biến không trực tiếp lưu trữ biến như ví dụ của kiểu dữ liệu nguyên thủy(primitives) mà chúng chỉ sao 
-              chép địa chỉ tham chiếu  đến cùng một nơi <b>lưu trữ object(đối tượng)</b>.
-            </p>
-            <p><b>Vậy tại sao nãy giờ mình lại cố gắng so sánh biến kiểu nguyên thủy với biến kiểu object để làm gì?</b></p>
-            <p>Điểm mấu chốt ở đây chính là khi sao chép object(đối tượng) thì <b>object(bị sao chép) sẽ 
-            bị ảnh hưởng khi mà biến sao chép thay đổi.</b> Để hiểu rõ hơn bạn xem ví dụ sau đây nhé: </p>
-            <pre><code class="javascript"> let khachHang = { <br/> &nbsp;&nbsp;&nbsp;&nbsp; ten: "An"<br/>&nbsp;&nbsp;};<br/> let nguoiDung = khachHang;</code></pre>
+        <p>
+          Ngoài ra chúng ta cũng có cách xác định phương thức cho đối tượng bằng cách <b>khai báo hàm trước</b> rồi 
+          sau đó mới thêm vào thuộc tính của object. Để hiểu rõ hơn bạn xem ví dụ sau đây nhé:
+        </p>
+        <pre><code class="javascript">&nbsp;let&nbsp;meo&nbsp;=&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;ten:&nbsp;"Boo",<br/> &nbsp;&nbsp;&nbsp;&nbsp;mauSac:&nbsp;"Đen"<br/> &nbsp;&nbsp;};<br/> &nbsp;&nbsp;function&nbsp;keu()&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;console.log("Meow&nbsp;Meow");<br/> &nbsp;&nbsp;};<br/>&nbsp;&nbsp;meo.keu&nbsp;=&nbsp;keu;<br/>&nbsp;&nbsp;meo.keu();<br/></code></pre>
+        <p class="mt-4">
+          Bạn xem kết quả bên dưới nhé:
+        </p>
 
+        <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588766761/Method%20Object%20JS/phuong-thuc-khai-bao-method-trong-object-js_f43enf.png"
+          alt="Phương Thức Khai Báo Function(Hàm) Method Object trong Javascript">
+        <p class="mt-4">
+          Ngoài ra bạn có thể <b>khái báo method(phương thức)</b> trực tiếp trong object bằng ví dụ sau đây nhé:
+        </p>
+        <pre><code class="javascript">&nbsp;let&nbsp;meo&nbsp;=&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ten:&nbsp;"Boo",<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mauSac:&nbsp;"Đen",<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;keu:&nbsp;function(){<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log("Meow&nbsp;Meow");<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;};<br/> &nbsp;meo.keu();//Kết quả: Meow Meow<br/></code></pre>
+        <p class="mt-4">
+          Bạn cũng có thể khai khai báo method(phương thức) trong object bằng cú pháp <b>ES6</b> giúp chúng ta rút ngắn đoạn code hơn ở ví dụ trên.
+          Để hiểu rõ hơn bạn xem đoạn code sau nhé:
+        </p>
+        <pre><code class="javascript">&nbsp;let&nbsp;meo&nbsp;=&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ten:&nbsp;"Boo",<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mauSac:&nbsp;"Đen",<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;keu() {<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log("Meow&nbsp;Meow");<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;};<br/> &nbsp;meo.keu();//Kết quả: Meow Meow<br/></code></pre>
 
+        <h5 class="text-white bg-secondary p-2 shadow mt-4  title-article-size rounded">
+         <b>This</b> Trong Method (Phương Thức):
+        </h5>
+        <p class="mt-4">
+          Thông thường trong thực tế thì bạn sẽ có lúc cần truy cập và sử dụng dữ liệu của đối tượng cho phương thức hiện có 
+          thì từ khóa <b><code>this</code></b> rất phù hợp cho việc này.
+        </p>
+        <p>
+          Trong phương thức (method), giá trị <b><code>this</code></b> sẽ <b>tham chiếu đến đối tượng mà đang chứa 
+          phương thức đó</b> vì vậy bạn có thể truy cập, lấy dữ liệu của đối tượng này. Bây giờ chúng ta thử đi vào tìm hiểu cú pháp của nó nhé:
+        </p>
+        <pre><code class="javascript"> this.(Tên Thuộc Tính)</code></pre>
+        <p>
+          Sau khi nắm sơ lược về cú pháp, chúng ta sẽ đi vào ví dụ thực tế bằng cách xây dựng hành động xin chào 
+          với dữ liệu được lấy từ thông tin khách hàng. Để hiểu rõ hơn bạn xem ví dụ sau đây nhé:
+        </p>
+        <pre><code>&nbsp;let&nbsp;khachHang&nbsp;=&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ten:&nbsp;'An',<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ho:&nbsp;'Nguyễn',<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xinChao:&nbsp;function&nbsp;()&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log('Xin&nbsp;Chào&nbsp;Khách&nbsp;Hàng&nbsp;'&nbsp;+&nbsp;this.ho&nbsp;+&nbsp;'&nbsp;'&nbsp;+&nbsp;this.ten);<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;};<br/> &nbsp;khachHang.xinChao();<br/></code></pre>
 
+        <p class="mt-4">
+          Bạn xem kết quả bên dưới nhé:
+        </p>
 
+        <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588818488/Method%20Object%20JS/Su-Dung-This-Trong-Object-JS_q2bje2.png"
+          alt="Sử dụng từ khóa this trong Object Javascript">
+        <p class="mt-4">
+          Ở đây mình có vài lưu ý nhỏ tý là:
+          <ul>
+            <li>Chúng ta sẽ tạo một biến object <b><code>khachHang</code></b> với hai thông tin là tên, họ của khách hàng
+            và phương thức Xin Chào.
+            </li>
+            <li>
+              Trong phương thức Xin Chào chúng ta sẽ sử dụng từ khóa <b><code>this</code></b> để tham chiếu đến object của nó
+              là <b><code>khachHang</code></b>.
+            </li>
+            <li>Lúc này <b><code>this.ho</code></b> sẽ bằng với <b><code>khachHang.ho</code></b> và <b><code>this.ten</code></b> sẽ bằng với <b><code>khachHang.ten</code></b>.</li>
+            <li>Cuối cùng kết quả bạn sẽ thấy như hình ảnh trên.</li>
+          </ul>
+        </p>
 
+        <p>
+          Bây giờ ta sẽ đi vào một trường hợp là bạn có hai khách hàng khác nhau, như những gì chúng ta đã học  thì sẽ cần hai 
+          phương thức xin chào cho mỗi đối tượng khách hàng cụ thể như ví dụ sau đây:
+        </p>
+        <pre><code class="javascript">&nbsp;let&nbsp;khachHang1&nbsp;=&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ten:&nbsp;'An',<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ho:&nbsp;'Nguyễn',<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xinChao:&nbsp;function&nbsp;()&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log('Xin&nbsp;Chào&nbsp;Khách&nbsp;Hàng&nbsp;'&nbsp;+&nbsp;this.ho&nbsp;+&nbsp;'&nbsp;'&nbsp;+&nbsp;this.ten);<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;&nbsp;};<br/> &nbsp;let&nbsp;khachHang2&nbsp;=&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ten:&nbsp;'Lan',<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ho:&nbsp;'Đỗ',<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xinChao:&nbsp;function&nbsp;()&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log('Xin&nbsp;Chào&nbsp;Khách&nbsp;Hàng&nbsp;'&nbsp;+&nbsp;this.ho&nbsp;+&nbsp;'&nbsp;'&nbsp;+&nbsp;this.ten);<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;&nbsp;};<br/> &nbsp;&nbsp;khachHang1.xinChao();<br/> &nbsp;&nbsp;khachHang2.xinChao();<br/></code></pre>
 
+        <p class="mt-4">
+          Bạn xem kết quả bên dưới nhé:
+        </p>
 
+        <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588820045/Method%20Object%20JS/Su-Dung-This-Cho-NhieuObject-JS_zgrtmb.png"
+          alt="Sử dụng từ khóa this cho nhiều Object Javascript">
+        <p class="mt-4">
+          Như bạn thấy nếu cứ mỗi lần có khách hàng mới thì ta lại thêm một phương thức xin chào khác cho đối tượng đó thì 
+          việc như vậy sẽ rất mất thời gian và công sức. Nên  phương thức nào lặp đi lặp lại như vậy thì bạn có thể <b>viết
+          phương thức đó dưới dạng một hàm</b> và  sử dụng cho nhiều loại đối tượng bằng từ khóa <b><code>this</code></b>.
+          Để hiểu rõ hơn bạn xem ví dụ sau đây nhé:
+        </p>
+        <pre><code class="javascript">&nbsp;&nbsp;let&nbsp;khachHang1&nbsp;=&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ten:&nbsp;'An',<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ho:&nbsp;'Nguyễn',<br/> &nbsp;&nbsp;};<br/> &nbsp;let&nbsp;khachHang2&nbsp;=&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ten:&nbsp;'Lan',<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ho:&nbsp;'Đỗ',<br/> &nbsp;&nbsp;};<br/> &nbsp;&nbsp;function&nbsp;xinChao(){<br/> &nbsp;&nbsp;&nbsp;&nbsp;console.log('Xin&nbsp;Chào&nbsp;Khách&nbsp;Hàng&nbsp;'&nbsp;+&nbsp;this.ho&nbsp;+&nbsp;'&nbsp;'&nbsp;+&nbsp;this.ten);<br/> &nbsp;&nbsp;&nbsp;}<br/> &nbsp;&nbsp;khachHang1.thongDiep&nbsp;=&nbsp;xinChao;<br/> &nbsp;&nbsp;khachHang2.thongDiep&nbsp;=&nbsp;xinChao;<br/><br/> &nbsp;&nbsp;khachHang1.thongDiep();<br/> &nbsp;&nbsp;khachHang2.thongDiep();<br/></code></pre>
+        <p class="mt-4">
+          Bạn xem kết quả bên dưới nhé:
+        </p>
 
-
-
-
-
-
+        <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588820903/Method%20Object%20JS/Su-Dung-This-Function-Cho-Nhieu-Object-JS_nehfli.png"
+          alt="Sử dụng từ khóa this dưới dạng function  trong Object Javascript">
 
 
 
             <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
 
-            <p>
-              Mình có một số đúc kết khi sử dụng object(đối tượng) trong Javascript như sau:
-              <ul>
-                <li>Object là nơi tập hợp các cặp giá trị key-value thường gọi là thuộc tính và được đặt trong dấu
-                  <b><code>{}</code></b>.</li>
-                <li>Ta có thể truy cập thuộc tính bằng cách sử dụng dấu chấm hay dấu [].</li>
-                <li>Ta có thể xóa thuộc tính bằng cách sử dụng <b><code>delete</code></b>.</li>
-                <li>Kiểm tra một thuộc thuộc tính có tồn tại hay không thì ta sẽ sử dụng <b><code>in</code></b>.</li>
-                <li>Lấy dữ liệu các cặp giá trị key-value thì ta có thể sử dụng vòng lặp <b><code>for...in</code></b>.
-                </li>
-
-              </ul>
-            </p>
-            <p>Qua đây mình mong bài viết sẽ giúp bạn hiểu được khái niệm cũng như cách sử dụng object(đối tượng)
+       
+            <p>Qua đây mình mong bài viết sẽ giúp bạn hiểu được cách <b>sử dụng phương thức(method) và từ khóa this trong  object(đối tượng)</b>
               trong ngôn ngữ
               Javascript và
               nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất
