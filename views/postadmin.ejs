@@ -3,7 +3,9 @@
 
 <div class="container-fluid">
   <table class="table">
-    <h1 class="text-center mb-5 mt-5">Admin Chia Sẻ Lập Trình</h1>
+    <h1 class="text-center mb-5 mt-5">Admin Niềm Vui Lập Trình</h1>
+    <h3>Thêm Bài Viết: </h3>
+    <h5>Xin truy cập cào link này để thêm bài viết: <a href="/post/addpost">Add Post</a></h5>
     <div class="text-right mb-5">
     <a href="/post/logout"><button type="submit" class="btn btn-secondary">Đăng Xuất</button></a>
     </div>
@@ -22,16 +24,16 @@
       <tr>
         <th scope="row"><%=post.id%></th>
         <td><%=post.title%></td>
-        <td><img src="<%-post.file%>" alt="..." width="100px" height="100px"></td>
-        <td><a href="/post/editpost/<%-post.id%>"><button type="button" class="btn btn-info"><i class="fa fa-pencil"
+        <!-- <td><img src="<%-post.file%>" alt="..." width="100px" height="100px"></td> -->
+        <!-- <td><a  href="/post/editpost/<%-post.id%>" ><button type="button" class="btn btn-info disabled"><i class="fa fa-pencil"
                 aria-hidden="true"></i></button></a></td>
         <td>
-            <form method="POST" action="/post/deletepost/<%-post.id%>">
+            <form class="disabled" method="POST" action="/post/deletepost/<%-post.id%>">
               <button type="submit" class="btn btn-danger"><i
                 class="fa fa-eraser" aria-hidden="true"></i></button>
             </form>
          
-        </td>
+        </td> -->
       </tr>
       <% })%>
     </tbody>
@@ -40,8 +42,7 @@
   <div class="mb-5 mt-5">
     <hr />
   </div>
-  <h3>Thêm Bài Viết: </h3>
-  <h5>Xin truy cập cào link này để thêm bài viết: <a href="/post/addpost">Add Post</a></h5>
+
 </div>
 
 
