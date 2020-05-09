@@ -26,7 +26,7 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i> Constructor Function Trong Javascript</h2>
+                  aria-hidden="true"></i> Các Phương Thức Chuỗi Trong Javascript</h2>
             </div>
           </div>
 
@@ -36,116 +36,265 @@
             </div>
           </div>
           <div class="text-content-article mt-5">
-            <p><i>Hôm nay bạn hãy cùng mình  đi vào tìm hiểu khái niệm cũng như cách sử dụng constructor function trong
+            <p><i>Hôm nay bạn hãy cùng mình đi vào tìm hiểu cách sử dụng các phương thức đối với chuỗi  trong
                 ngôn
                 ngữ lập trình Javascript để phát triển web nhé.</i>
             </p>
 
             <div class="row">
               <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h4 class="text-primary ml-4 title-article-size">Constructor Function Trong Javascript</h4>
+                <h4 class="text-primary ml-4 title-article-size">Chuỗi Trong Javascript</h4>
               </div>
             </div>
-
-
-
-
-
             <h5 class="text-white bg-secondary p-2 shadow  title-article-size rounded">
-              <b>Constructor Function</b> trong Javascript:
+              Phương thức <b>Concat()</b> trong Chuỗi(String):
             </h5>
+
             <p class="mt-4">
-            Ở các bài trước thì chúng ta hay <b>tạo một object</b> bằng cách sử dụng dấu <b><code>{}</code></b>
-            . Nhưng  có một hạn chế vô cùng lớn khi sử dụng cách này là nếu các <b>object có cùng thuộc tính và phương thức</b>
-            thì chúng ta cũng phải định nghĩa lại khi khởi tạo object bằng <b><code>{}</code></b>. Do đó <b>constructor function</b> được sinh ra để
-             giúp ta giải quyết bài toán trên.
+              Phương thức <b><code>concat()</code></b> được sử dụng để trả về một chuỗi mới
+              được <b>ghép từ danh sách các chuỗi lại với nhau</b>. Để hiểu rõ hơn bạn xem cú pháp nó nhé:
             </p>
+            <pre><code class="javascript"> (Chuỗi).concat(chuỗi 1, chuỗi 2, chuỗi 3... chuỗi n);</code></pre>
             <p>
-              Chúng ta có hai quy tắc khi sử dụng <b>constructor function</b> là:
-              <ul>
-                <li>Ký tự đầu tiên trong tên của <b>constructor function</b> phải là chữ in hoa.</li>
-                <li>Để thực thi tạo ra object mới thì chúng ta phải sử dụng chúng với toán tử <b>new</b>.</li>
-              </ul>
+              Ở đây bạn có thể ghép bao nhiêu chuỗi tùy ý nha. Bây giờ để hiểu rõ hơn bạn xem ví dụ sau đây nhé:
             </p>
-            <p>Để hiểu rõ hơn bạn xem thử ví dụ đoạn code sau đây nhé:</p>
-            
-            <pre><code class="javascript">&nbsp;function&nbsp;KhachHang()&nbsp;{<br/> &nbsp;&nbsp;&nbsp;/*&nbsp;thuộc&nbsp;tính&nbsp;và&nbsp;phương&nbsp;thức&nbsp;của&nbsp;object&nbsp;*/<br/> &nbsp;}<br/>&nbsp;var&nbsp;khachHang1&nbsp;=&nbsp;new&nbsp;KhachHang();<br/></code></pre>
-            <p>
-              Như bạn thấy nó giống với <b>function (hàm)</b> bình thường nhưng điểm khác biệt thì mình đã liệt kê ở trên rồi nhé.
-              Đoạn code trên là một ví dụ tổng quan khi chúng ta muốn tạo một object từ <b>constructor function</b>.
-            </p>
-            <p>
-              Bây giờ chúng ta thử tạo nhiều object từ <b>constructor function</b> bằng đoạn code sau đây nhé:
-            </p>
-            <pre><code class="javascript">&nbsp;function&nbsp;KhachHang(ten,&nbsp;email)&nbsp;{<br/> &nbsp;&nbsp;&nbsp;this.ten&nbsp;=&nbsp;ten,<br/> &nbsp;&nbsp;&nbsp;this.email&nbsp;=&nbsp;email<br/> &nbsp;}<br/> <br/> &nbsp;let&nbsp;khachHang1&nbsp;=&nbsp;new&nbsp;KhachHang('An',&nbsp;'123@gmail.com');<br/> &nbsp;let&nbsp;khachHang2&nbsp;=&nbsp;new&nbsp;KhachHang('Lan',&nbsp;'abc@gmail.com');<br/> <br/> &nbsp;console.log(khachHang1&nbsp;);<br/> &nbsp;console.log(khachHang2&nbsp;);<br/></code></pre>
+
+            <pre><code class="javascript"> let chuoi1 = 'Xin Chào';<br/> let chuoi2 = chuoi1.concat(' Các Bạn');<br/><br/> console.log(chuoi2);</code></pre>
+
             <p class="mt-4">
               Bạn xem kết quả bên dưới nhé:
             </p>
 
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588843185/function%20constructor/vi-du-ve-constructor-function_qb1ccd.png"
-              alt="Constructor Function trong Javascript">
-        <p class="mt-4">
-          <ul>
-            <li>
-              Đầu tiên chúng ta tạo ra một <b>constructor function</b> với tên là <b>khachHang</b>. 
-            </li>
-            <li>
-              Khi chương trình chạy tới toán tử <b>new</b> thì nó sẽ tạo ra một object rỗng và được gán với từ khóa <b><code>this</code></b> trong <b>constructor function khachHang</b>.
-             
-            </li>
-              <li>Sau đó nó sẽ gán các thuộc tính trong <b>constructor function</b> với tham số được truyền vào là <b><code>ten, email</code></b> theo cặp giá trị là <b>thuộc tính: giá trị</b>.</li>
-              <li>Tiếp theo <b>constructor function</b> trả về một biến object đã có đầy đủ thông tin và gán vào biến mà ta gọi lệnh <b>new</b>.</li>
-            </ul>
-        </p>
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588939510/Method-String-JS/Noi-Chuoi-Concat-trong-javascript_afpv4s.png"
+              alt="Sử dụng phương thức concat trong chuỗi js">
+            <p class="mt-4">
+              Ở đây mình có lưu ý nhỏ là:
+              <ul>
+                <li>Đầu tiên chúng ta tạo một biến <b><code>chuoi1</code></b> chứa giá trị chuỗi <b>Xin Chào</b>.</li>
+                <li>Tiếp theo ta sẽ tạo một biến <b><code>chuoi2</code></b> dùng để <b>lưu giá trị chuỗi mới trả về</b>
+                  khi nối hai chuỗi
+                  <b>'Xin Chào'</b> và <b>' Các Bạn'</b> lại với nhau bằng phương thức <b>concat()</b>.</li>
+                <li>Bạn có thể hiểu nôm na cách nó nối chuỗi sẽ y như ta sử dụng toán tử cộng: <b><code>chuoi2 = chuoi1
+                      + ' Các Bạn'</code></b>.</li>
+                <li>Cuối cùng chúng ta có kết quả là <b>'Xin Chào Các Bạn' </b>in ra màn hình.</li>
+              </ul>
+            </p>
+            <p>
+              Người ta khuyên chúng ta nên sử dụng toán tử <b><code>+</code></b> hay <b><code>+=</code></b> để nối chuỗi
+              ví nó sẽ giúp cải thiện hiệu
+              suất hơn.
+            </p>
+            <p>
+              Đối với các tham số truyền vào trong phương thức <b>concat()</b> mà đang là <b>kiểu dữ liệu khác chuỗi</b>
+              ví dụ như số, boolean...
+              thì nó sẽ <b>tự động chuyển sang kiểu chuỗi</b> và nối lại với nhau. Để hiểu rõ hơn bạn xem đoạn code sau
+              nhé:
+            </p>
+            <pre><code class="javascript"> let boolean = false;<br/> let number = 5;<br/> let chuoi = "Chuyển đổi sang kiểu chuỗi: ";<br/> let ketQua = chuoi.concat(boolean, number);<br/><br/> console.log(ketQua);<br/> console.log(typeof ketQua);</code></pre>
 
-      <p>Bây giờ bạn muốn tạo bao nhiêu thông tin khách hàng thì chỉ cần việc gọi <b><code>let tenkhachHang = new KhachHang('Ten', 'Email');</code></b>.
-      </p>
-      <h6 class="text-primary mt-4"><b><u>Sử dụng phương thức (method) trong constructor function</u></b></h6>
-      <p>
-        Bây giờ chúng ta sẽ tiếp tục đi vào tìm hiểu cách sử dụng phương thức khi tạo object bằng constructor function
-        thông qua ví dụ dưới đây nhé:
-      </p>
-      <pre><code class="javascript">&nbsp;function&nbsp;khachHang(ten)&nbsp;{<br/> &nbsp;&nbsp;this.ten=&nbsp;ten;<br/> &nbsp;&nbsp;this.xinChao&nbsp;=&nbsp;function()&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;console.log(&nbsp;"Khách&nbsp;Hàng&nbsp;Tên&nbsp;Là&nbsp;"&nbsp;+&nbsp;this.ten);<br/> &nbsp;&nbsp;};<br/> }<br/> <br/> &nbsp;let&nbsp;khachHang1&nbsp;=&nbsp;new&nbsp;khachHang("An");<br/> &nbsp;khachHang1.xinChao();<br/></code></pre>
-      <p class="mt-4">
-        Bạn xem kết quả bên dưới nhé:
-      </p>
+            <p class="mt-4">
+              Bạn xem kết quả bên dưới nhé:
+            </p>
 
-      <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-        data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588857026/function%20constructor/su-dung-method-trong-constructor-function_auosq8.png"
-        alt="Sử Dụng Method Constructor Function trong Javascript">
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588940607/Method-String-JS/Su-Dung-Concat-Khac-Kieu-Chuoi-trong-javascript_cggej9.png"
+              alt="Chuyển đối kiểu dữ liệu sang chuỗi JS bằng concat()">
 
+            <p class="mt-4">
+              Nếu bạn không có biến nào lưu trữ giá trị chuỗi để thực hiện phương thức <b>concat()</b> thì ta có thể
+              thay thế
+              bằng dấu <b><code>''</code></b> hoặc <b><code>""</code></b>. Để hiểu rõ hơn bạn xem ví dụ sau đây nhé:
+            </p>
 
+            <pre><code class="javascript"> let chuoi = ''.concat(4,5,6);<br/> console.log(chuoi);<br/> console.log(typeof chuoi)</code></pre>
+            <p class="mt-4">
+              Bạn xem kết quả bên dưới nhé:
+            </p>
 
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588941056/Method-String-JS/su-dung-concat-voi-chuoi-js_pbzhzr.png"
+              alt="Sử  dụng concat() với chuỗi trong javascript">
 
+            <h5 class="text-white bg-secondary p-2 shadow mt-4  title-article-size rounded">
+              Tự động <b>IN HOA</b> hay <b>in thường</b> trong Chuỗi(String) Javascript:
+            </h5>
+            <p>
+              Trong thực tế nhiều khi bạn muốn so sánh các chuỗi với nhau thì nên chuyển nó về <b>trạng thái
+                chung</b> là chuỗi in hoa hoặc in thường. Trong Javascript cung cấp cho chúng ta hai phương thức là
+              <b><code>toLowerCase()</code></b> để chuyển sang in thường và <b><code>toUpperCase()</code></b>
+              để chuyển sang in hoa. Bây giờ để hiểu rõ hơn bạn xem đoạn code sau nhé:
+            </p>
+            <pre><code class="javascript"> let chuoi = "Xin Chào Các Bạn";<br/> let chuoiInHoa = chuoi.toUpperCase();<br/> let chuoiInThuong = chuoi.toLowerCase();<br/><br/> console.log(chuoiInHoa); <br/> console.log(chuoiInThuong);</code></pre>
 
+            <p class="mt-4">
+              Bạn xem kết quả bên dưới nhé:
+            </p>
 
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588941906/Method-String-JS/in-hoa-in-thuong-trong-chuoi-js_w1jcqe.png"
+              alt="Sử  dụng toLowerCase() và  toUpperCase() với chuỗi trong javascript">
 
+            <h5 class="text-white bg-secondary p-2 shadow mt-4  title-article-size rounded">
+              Sử dụng phương thức <b>indexOf()</b> trong Chuỗi(String) Javascript:
+            </h5>
+            <p class="mt-4">
+              Phương thức <b>indexOf()</b> giúp chúng ta trả về <b>vị trí chỉ mục</b> của chuỗi con xuất hiện <b>đầu
+                tiên</b> trong
+              chuỗi.
+            </p>
+            <p>
+              Bây giờ chúng ta sẽ đi vào cú pháp để hiểu rõ hơn nhé:
+            </p>
+            <pre><code class="javascript"> let viTriChiMuc = (Chuỗi).indexOf(chuỗi con, Vị trí bắt đầu tìm kiếm);</code></pre>
+            <p>
+              Ở đây mình có một số lưu ý nhỏ là:
+              <ul>
+                <li>Phương thức <b>indexOf()</b> sẽ trả về giá trị <b>-1</b> nếu như chuỗi chính không chứa chuỗi con.
+                </li>
+                <li><b> Vị trí bắt đầu tìm kiếm</b> có nghĩa là một tham số để bạn xác định phương thức <b>indexOf()</b>
+                  sẽ <b>bắt đầu tìm kiếm từ vị trí chỉ mục nào</b> trong chuỗi. Nếu bạn không sử dụng tham số này thì nó
+                  sẽ mặc định
+                  <b>vị trí chỉ mục là 0</b>, nghĩa là nó sẽ bắt đầu tìm kiếm từ ký tự đầu tiên của chuỗi.</li>
+                <li>Phương thức <b>indexOf()</b> sẽ phân biệt các ký tự chữ thường với chữ in hoa nhé. Ví dụ như
+                  <b>ten</b> và <b>Ten</b>
+                  sẽ là hai chuỗi con khác nhau.</li>
+              </ul>
+            </p>
 
+            <p>
+              Khi đã nắm sơ lược thì chúng ta sẽ đi vào ví dụ cụ thể là tìm vị trí của từ <b>S</b> đầu tiên trong
+             chuỗi <b>JAVASCRIPT</b>.
+              Ở bên dưới mình có minh họa để bạn có thể hiểu rõ hơn:
+            </p>
 
+            <img class=" lazyload" height="250"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588948422/Method-String-JS/vi-tri-chi-muc-chuoi-js_gwrdpb.svg"
+              alt="Ví dụ minh họa indexOf trong javascript">
+            <p class="mt-4">
+              Như bạn thấy vị trí chỉ mục sẽ <b>bắt đầu từ số 0</b> còn vị trí sẽ bắt đầu bằng số 1 nhé.
+            </p>
+            <p>
+              Bây giờ chúng ta sẽ đi vào đoạn code sử dụng phương thức <b>indexOf()</b> để tìm chữ <b>S</b> nhé:
+            </p>
+            <pre><code class="javascript"> let chuoi = "JAVASCRIPT";<br/> console.log(chuoi.indexOf('S'));<br/> console.log(chuoi.indexOf('s')); </code></pre>
+            <p class="mt-4">
+              Bạn xem kết quả bên dưới nhé:
+            </p>
 
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588950590/Method-String-JS/su-dung-index-of-trong-chuoi-js_lwmmn3.png"
+              alt="Sử  dụng indexOf() với chuỗi trong javascript">
 
+            <p class="mt-4">
+              Như ví dụ trên thì ta có được vị trí chỉ mục của từ <b>S</b> là 4 (Bạn nhớ là vị trí chỉ mục bắt đầu từ số 0 nhé).
+              Còn trả về giá trị <b>-1</b> thì nó không tồn tại trong chuỗi, do chữ <b>s</b> và <b>S</b> sẽ khác nhau trong phương thức 
+              <b>indexOf()</b>.
+            </p>
+            <p>
+              Vậy có cách nào giúp ta tìm được vị trí chỉ mục của chuỗi con mà <b>không cần phân biệt in hoa và in thường</b> không?<br/>
+              Chúng ta có thể sử dụng phương thức đã học là <b>toLowerCase()</b> hoặc <b>toUpperCase()</b> để đưa chuỗi con và chuỗi chính về trạng thái chung
+              rồi sau đó ta mới bắt đầu sử dụng phương thức <b>indexOf()</b>. Để hiểu rõ hơn bạn xem đoạn code sau nhé:
+            </p>
+            <pre><code class="javascript"> let chuoi = ("JAVASCRIPT").toLowerCase();<br/> let chuoiCon = ("s").toLowerCase();<br/><br/> console.log(chuoi.indexOf(chuoiCon));</code></pre>
 
+            <p class="mt-4">
+              Bạn xem kết quả bên dưới nhé:
+            </p>
 
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588951411/Method-String-JS/tim-ky-tu-thuong-index-of-trong-chuoi-js_wx401m.png"
+              alt="Sử  dụng indexOf() và toLowerCase() với chuỗi trong javascript">
+            <p class="mt-4">
+              Bây giờ chúng ta sẽ đi vào ví dụ tìm kiếm ký tự trong chuỗi bằng cách  sử dụng tham số 
+              <b><code>Vị trí bắt đầu tìm kiếm</code></b>. Để hiểu rõ hơn bạn xem ví dụ sau nhé:
+            </p>
+            <pre><code class="javascript"> let chuoi = 'JAVASCRIPT';<br/> let chuoiCon = chuoi.indexOf('A', 2);<br/><br/> console.log(chuoiCon);</code></pre>
 
+            <p class="mt-4">
+              Bạn xem kết quả bên dưới nhé:
+            </p>
 
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588989484/Method-String-JS/index-of-voi-tham-so-trong-chuoi-js_xyblek.png"
+              alt="Sử  dụng indexOf() với tham số trong chuỗi  javascript">
+            <p class="mt-4">
+              Mình có một số lưu ý nhỏ trong đoạn code trên là:
+              <ul>
+                <li>Đầu tiên chúng ta sẽ gọi một biến <b><code>chuoi</code></b> lưu giá trị chuỗi là "JAVASCRIPT".</li>
+                <li>Tiếp theo ta sẽ sử dụng phương thức <b>indexOf()</b> để tìm chuỗi con.</li>
+                <li>ký tự ta muốn tìm là <b><code>'A'</code></b> trong chuỗi và phương thức sẽ tìm kiếm 
+                từ vị trí chỉ mục thứ hai tức là bắt đầu từ chữ <b><code>V</code></b>.</li>
+                <li>Như vậy bạn thấy nó sẽ xuất hiện vị trí chỉ mục của chuỗi con là số 3.</li>
+              </ul>
+            </p>
+            <p>
+              Phần này chúng ta sẽ đi vào sử dụng với việc tìm kiếm vị trí của chuỗi con chứa nhiều ký tự bằng phương
+              thức <b>indexOf()</b> trong ví dụ dưới đây nhé:
+            </p>
+            <pre><code class="javascript"> let chuoi = "Vì mình thích javascript nên mình chia sẻ các kiến thức liên quan đến javascript!";<br/> chuoiCon = chuoi.indexOf("javascript");<br/><br/> console.log(chuoiCon);</code></pre>
+            <p class="mt-4">
+              Bạn xem kết quả bên dưới nhé:
+            </p>
 
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588990712/Method-String-JS/index-of-voi-tnhieu-ky-tu-trong-chuoi-js_l5diyz.png"
+              alt="Sử  dụng indexOf() với nhiều ký tự trong chuỗi  javascript">
+            <p class="mt-4">
+              Qua ví dụ ta thấy được là phương thức <b><code>indexOf()</code></b> sẽ trả về vị trí của chuỗi con xuất hiện <b>đầu tiên</b> trong chuỗi.
+              Vậy có  cách nào để tìm được vị trí xuất hiện <b>cuối cùng</b> của chuỗi con trong chuỗi không?
+            </p>
+            <p>
+              Trong Javascript có cung cấp cho chúng ta một phương thức là <b><code>lastIndexOf()</code></b> giúp ta tìm được vị trí xuất hiện cuối cùng 
+              của chuỗi con trong chuỗi. Bây giờ cùng là ví dụ trên nhưng chúng ta thử tìm vị trí cuối cùng của chuỗi con <b>"javascript"</b> trong biến <b><code>chuoi</code></b> để xem nó hoạt động sao nhé:
+            </p>
 
+            <pre><code class="javascript"> let chuoi = "Vì mình thích javascript nên mình chia sẻ các kiến thức liên quan đến javascript!";<br/> chuoiCon = chuoi.lastIndexOf("javascript");<br/><br/> console.log(chuoiCon);</code></pre>
 
+            <p class="mt-4">
+              Bạn xem kết quả bên dưới nhé:
+            </p>
 
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588991739/Method-String-JS/last-index-of-voi-nhieu-ky-tu-trong-chuoi-js_n8wbmw.png"
+              alt="Sử  dụng lastIndexOf() với nhiều ký tự trong chuỗi  javascript">
+            <p class="mt-4">
+              Bạn có thể sử dụng <b>vòng lặp</b> để xuất ra tất cả các vị trí chỉ mục xuất hiện của chuỗi con hay đếm có bao nhiêu chuỗi con ở trong chuỗi...
+              Bây giờ mình sẽ  sử dụng vòng lặp với  ví dụ trên và <b>xuất ra tất cả các vị trí chỉ mục của chuỗi con</b> xuất hiện ở trong chuỗi.
+            </p>
+            <pre><code class="javascript">&nbsp;&nbsp;let&nbsp;chuoi&nbsp;=&nbsp;'Vì&nbsp;mình&nbsp;thích&nbsp;javascript&nbsp;nên&nbsp;mình&nbsp;chia&nbsp;sẻ&nbsp;các&nbsp;kiến&nbsp;thức&nbsp;liên&nbsp;quan&nbsp;đến&nbsp;javascript!';<br/> &nbsp;let&nbsp;chuoiCon&nbsp;=&nbsp;'javascript';<br/> &nbsp;let&nbsp;viTriChiMuc&nbsp;=&nbsp;chuoi.indexOf(chuoiCon);<br/><br/> &nbsp;while(viTriChiMuc&nbsp;!==&nbsp;-1)&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;console.log('Vị&nbsp;trí&nbsp;xuất&nbsp;hiện&nbsp;chuỗi&nbsp;con&nbsp;là&nbsp;'&nbsp;+&nbsp;viTriChiMuc);<br/> &nbsp;&nbsp;&nbsp;&nbsp;viTriChiMuc&nbsp;=&nbsp;chuoi.indexOf(chuoiCon&nbsp;,&nbsp;viTriChiMuc&nbsp;+&nbsp;1);<br/> &nbsp;}<br/></code></pre>
 
+            <p class="mt-4">
+              Bạn xem kết quả bên dưới nhé:
+            </p>
 
-
-
-
-
-
-
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588993073/Method-String-JS/vong-lap-va-index-of-voi-nhieu-ky-tu-trong-chuoi-js_eclzei.png"
+              alt="Sử  dụng vòng lặp và IndexOf() với nhiều ký tự trong chuỗi  javascript">
+            <p class="mt-4">
+              Ở đây mình có một số lưu ý sau là:
+              <ul>
+                <li>
+                  Đầu tiên chúng ta sẽ lấy vị trí xuất hiện đầu tiên của chuỗi con trong chuỗi bằng <b><code>chuoi.indexOf(chuoiCon)</code></b>.
+                </li>
+                <li>Biểu thức <b><code>viTriChiMuc !== -1</code></b> giúp chúng ta kiểm tra chuỗi con <b>có xuất hiện trong chuỗi hay không</b>?</li>
+                <li>Khi đã kiểm tra xong thì xuất ra màn hình và tiếp theo chúng ta sẽ tăng vị trí chỉ mục lên <b>1 đơn vị</b>.
+                </li>
+                <li>
+                  Ở đây có nghĩa là vị trí chỉ mục xuất hiện đầu tiên của chuỗi con "javascript" là <b>14</b>.<br/>
+                  Để tìm chuỗi con "javascript" <b>tiếp theo</b> trong chuỗi thì chúng ta sẽ  tăng biến vị trí chỉ mục lên 1
+                  tức là <b>15</b>.<br/>
+                  Lúc này ta sẽ có <b><code>chuoi.indexOf(chuoiCon , 15)</code></b> nghĩa là nó sẽ bắt đầu tìm kiếm từ vị trí chỉ mục 15
+                  trong chuỗi.
+                </li>
+                <li>Vòng lặp cứ như vậy đến khi không còn thỏa mãn biểu thức <b><code>viTriChiMuc !== -1</code></b> thì sẽ dừng lại.</li>
+              </ul>
+            </p>
 
             <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
 
-       
-            <p>Qua đây mình mong bài viết sẽ giúp bạn hiểu được cách <b>sử dụng constructor function</b>
+
+            <p>Qua đây mình mong bài viết sẽ giúp bạn hiểu được cách <b>sử dụng các phương thức đối với chuỗi</b>
               trong ngôn ngữ
               Javascript và
               nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất
