@@ -26,7 +26,7 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i> Các Phương Thức Chuỗi Trong Javascript</h2>
+                  aria-hidden="true"></i> Các Phương Thức Chuỗi Phần 2 Trong Javascript</h2>
             </div>
           </div>
 
@@ -36,7 +36,7 @@
             </div>
           </div>
           <div class="text-content-article mt-5">
-            <p><i>Hôm nay bạn hãy cùng mình đi vào tìm hiểu cách sử dụng các phương thức đối với chuỗi  trong
+            <p><i>Hôm nay bạn hãy cùng mình đi vào tìm hiểu thêm các phương thức được sử dụng   đối với chuỗi trong
                 ngôn
                 ngữ lập trình Javascript để phát triển web nhé.</i>
             </p>
@@ -47,249 +47,373 @@
               </div>
             </div>
             <h5 class="text-white bg-secondary p-2 shadow  title-article-size rounded">
-              Phương thức <b>Concat()</b> trong Chuỗi(String):
+              Phương thức <b>substring()</b> trong Chuỗi(String):
             </h5>
 
             <p class="mt-4">
-              Phương thức <b><code>concat()</code></b> được sử dụng để trả về một chuỗi mới
-              được <b>ghép từ danh sách các chuỗi lại với nhau</b>. Để hiểu rõ hơn bạn xem cú pháp nó nhé:
+              Phương thức <b><code>substring()</code></b> được sử dụng để trả về một chuỗi con nằm trong chuỗi
+              bằng cách xác định vị trí chỉ mục <b>bắt đầu</b> và <b>kết thúc</b>. Để hiểu rõ hơn bạn xem cú pháp của nó
+              sau đây nhé:
             </p>
-            <pre><code class="javascript"> (Chuỗi).concat(chuỗi 1, chuỗi 2, chuỗi 3... chuỗi n);</code></pre>
+            <pre><code class="javascript"> (Chuỗi).substring(Vị trí chỉ mục đầu tiên, Vị trí chỉ mục kết thúc);</code></pre>
             <p>
-              Ở đây bạn có thể ghép bao nhiêu chuỗi tùy ý nha. Bây giờ để hiểu rõ hơn bạn xem ví dụ sau đây nhé:
+              Ở đây mình sẽ giải thích một tý về cú pháp trên là :
+              <ul>
+                <li><b>Vị trí chỉ mục bắt đầu</b>: là vị trí chỉ mục của ký tự đầu tiên trong chuỗi con mà chúng ta muốn
+                  lấy.</li>
+                <li><b>Vị trí chỉ mục kết thúc</b>: là vị trí chỉ mục cuối cùng trong chuỗi con và không được bao gồm
+                  trong chuỗi con. Bạn có thể hiểu nôm na là
+                  chuỗi con sẽ <b>không chứa ký tự với vị trí chỉ mục cuối cùng</b> khi ta sử dụng phương thức
+                  <b><code>substring()</code></b> .</li>
+              </ul>
             </p>
-
-            <pre><code class="javascript"> let chuoi1 = 'Xin Chào';<br/> let chuoi2 = chuoi1.concat(' Các Bạn');<br/><br/> console.log(chuoi2);</code></pre>
+            <p>
+              Bây giờ để nắm rõ hơn chúng ta sẽ đi vào ví dụ thực tế với hình ảnh minh họa dưới đây nhé:
+            </p>
+            <img class=" lazyload" height="250"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588948422/Method-String-JS/vi-tri-chi-muc-chuoi-js_gwrdpb.svg"
+              alt="Ví dụ minh họa vị trí chỉ mục trong javascript">
+            <p class="mt-4">
+              Vậy để lấy chuỗi con <b>"JAVA"</b> trong <b>"JAVASCRIPT"</b> thì bạn sẽ phải lấy từ vị trí chỉ mục
+              <b>0</b> đến vị trí chỉ mục thứ
+              <b>4</b> chứ không phải vị trí chỉ mục thứ <b>3</b> nha. Để hiểu rõ hơn bạn hãy cùng mình đi vào ví dụ cụ
+              thể sau đây nhé:
+            </p>
+            <pre><code class="javascript"> let chuoi = 'JAVASCRIPT';<br/> let chuoiCon1 = chuoi.substring(0,4);<br/> let chuoiCon2 = chuoi.substring(0,3);<br/><br/> console.log(chuoiCon1);<br/> console.log(chuoiCon2);</code></pre>
 
             <p class="mt-4">
               Bạn xem kết quả bên dưới nhé:
             </p>
 
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588939510/Method-String-JS/Noi-Chuoi-Concat-trong-javascript_afpv4s.png"
-              alt="Sử dụng phương thức concat trong chuỗi js">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589164003/Method-String-JS/vi-du--substring-trong-chuoi-js_ackkts.png"
+              alt="Sử dụng substring trong chuỗi javascript">
+            <p class="mt-4">
+              Như bạn thấy ở ví dụ trên thì chúng ta có thể rút ra một lưu ý là khi bạn muốn lấy ký tự cuối cùng của
+              chuỗi con bằng phương thức <b><code>substring()</code></b> thì
+              thì ta sẽ lấy <b>vị trí chỉ mục ký tự cuối cùng ta muốn lấy cộng với 1</b>.
+            </p>
+
+            <p>
+              Tiếp theo chúng ta sẽ đi vào ví dụ nhiều chữ trong một chuỗi bằng ví dụ dưới đây nhé:
+            </p>
+
+            <pre><code class="javascript"> let chuoi = 'Xin Chào';<br/> let chuoiCon = chuoi.substring(0,3);<br/><br/> console.log(chuoiCon);</code></pre>
+
+            <p class="mt-4">
+              Bạn xem kết quả bên dưới nhé:
+            </p>
+
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589162382/Method-String-JS/vi-du-substring-trong-js_uod2le.png"
+              alt="Sử dụng substring trong chuỗi js">
             <p class="mt-4">
               Ở đây mình có lưu ý nhỏ là:
               <ul>
-                <li>Đầu tiên chúng ta tạo một biến <b><code>chuoi1</code></b> chứa giá trị chuỗi <b>Xin Chào</b>.</li>
-                <li>Tiếp theo ta sẽ tạo một biến <b><code>chuoi2</code></b> dùng để <b>lưu giá trị chuỗi mới trả về</b>
-                  khi nối hai chuỗi
-                  <b>'Xin Chào'</b> và <b>' Các Bạn'</b> lại với nhau bằng phương thức <b>concat()</b>.</li>
-                <li>Bạn có thể hiểu nôm na cách nó nối chuỗi sẽ y như ta sử dụng toán tử cộng: <b><code>chuoi2 = chuoi1
-                      + ' Các Bạn'</code></b>.</li>
-                <li>Cuối cùng chúng ta có kết quả là <b>'Xin Chào Các Bạn' </b>in ra màn hình.</li>
+                <li>Đầu tiên chúng ta gán giá trị "Xin Chào" cho biến <b><code>chuoi</code></b>.</li>
+                <li>Tiếp theo chúng ta sẽ sử dụng phương thức <b><code>substring</code></b> để trả về giá trị cho biến
+                  <b><code>chuoiCon</code></b>.</li>
+                <li>Phương thức <b><code>substring</code></b> sẽ lấy giá trị chuỗi con từ vị trí chỉ mục <b>0</b>
+                  đến vị
+                  trí chỉ mục <b>3</b> (Không bao gồm ký tự vị trí chỉ mục thứ <b>3</b> có trong chuỗi con).
+                  Với vị trí chỉ mục sẽ <b>bắt đầu từ số 0 nhé</b>.
+                </li>
               </ul>
             </p>
+            <h6 class="text-primary mt-4"><b><u>Chỉ sử dụng 1 tham số trong <code>substring()</code></b>:</u></b></h6>
             <p>
-              Người ta khuyên chúng ta nên sử dụng toán tử <b><code>+</code></b> hay <b><code>+=</code></b> để nối chuỗi
-              ví nó sẽ giúp cải thiện hiệu
-              suất hơn.
+              Bạn xem cú pháp sử dụng 1 tham số trong phương thức <b><code>substring</code></b> dưới đây nhé:
             </p>
+            <pre><code class="javascript"> (Chuỗi).substring(Vị trí bắt đầu);</code></pre>
             <p>
-              Đối với các tham số truyền vào trong phương thức <b>concat()</b> mà đang là <b>kiểu dữ liệu khác chuỗi</b>
-              ví dụ như số, boolean...
-              thì nó sẽ <b>tự động chuyển sang kiểu chuỗi</b> và nối lại với nhau. Để hiểu rõ hơn bạn xem đoạn code sau
-              nhé:
+              Ở đây nó sẽ trả về một chuỗi con từ vị trí chỉ mục bắt đầu đến <b>vị trí cuối cùng trong chuỗi</b>.
+              Mình có lưu ý nhỏ là <b>khoảng trắng</b> cũng là một ký tự trong chuỗi nha. Bây giờ để hiểu rõ hơn
+              chúng ta hãy cùng đi vào ví dụ dưới đây nhé:
             </p>
-            <pre><code class="javascript"> let boolean = false;<br/> let number = 5;<br/> let chuoi = "Chuyển đổi sang kiểu chuỗi: ";<br/> let ketQua = chuoi.concat(boolean, number);<br/><br/> console.log(ketQua);<br/> console.log(typeof ketQua);</code></pre>
+            <pre><code class="javascript"> let chuoi = 'Xin Chào';<br/> let chuoiCon = chuoi.substring(4);<br/><br/> console.log(chuoiCon);</code></pre>
 
             <p class="mt-4">
               Bạn xem kết quả bên dưới nhé:
             </p>
 
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588940607/Method-String-JS/Su-Dung-Concat-Khac-Kieu-Chuoi-trong-javascript_cggej9.png"
-              alt="Chuyển đối kiểu dữ liệu sang chuỗi JS bằng concat()">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589165633/Method-String-JS/vi-du-substring-mot-tham-so-trong-chuoi-js_qay2se.png"
+              alt="substring với một tham số trong chuỗi js">
 
-            <p class="mt-4">
-              Nếu bạn không có biến nào lưu trữ giá trị chuỗi để thực hiện phương thức <b>concat()</b> thì ta có thể
-              thay thế
-              bằng dấu <b><code>''</code></b> hoặc <b><code>""</code></b>. Để hiểu rõ hơn bạn xem ví dụ sau đây nhé:
+            <h6 class="text-primary mt-4"><b><u>Hoán đổi vị trí chỉ mục trong <code>substring()</code></b>:</u></b></h6>
+            <p>
+              Khi mà bạn thiết lập vị trí chỉ mục bắt đầu <b>lớn hơn</b> vị trí chỉ mục kết thúc thì nó sẽ tự động hoán
+              đổi vị trí
+              nghĩa là vị trí chỉ mục bắt đầu sẽ đổi thành vị trí chỉ mục kết thúc và ngược lại.
+              Bây giờ để dễ hình dung bạn xem ví dụ sau đây nhé:
             </p>
-
-            <pre><code class="javascript"> let chuoi = ''.concat(4,5,6);<br/> console.log(chuoi);<br/> console.log(typeof chuoi)</code></pre>
+            <pre><code class="javascript"> let chuoi = 'Xin Chào';<br/> let chuoiCon = chuoi.substring(3, 0);<br/><br/> console.log(chuoiCon);</code></pre>
             <p class="mt-4">
               Bạn xem kết quả bên dưới nhé:
             </p>
 
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588941056/Method-String-JS/su-dung-concat-voi-chuoi-js_pbzhzr.png"
-              alt="Sử  dụng concat() với chuỗi trong javascript">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589166675/Method-String-JS/hoan-doi-vi-tri-trong-substring-js_db8h4c.png"
+              alt="Hoán đổi vị trí chỉ mục trong substring chuỗi js">
+            <h6 class="text-primary mt-4"><b><u>Khi hai vị trí chỉ mục bằng nhau trong
+                  <code>substring()</code></b>:</u></b></h6>
+            <p>
+              Khi bạn thiết lập vị trí chỉ mục bắt đầu <b>bằng</b> với vị trí chỉ mục kết thúc thì nó sẽ trả về <b>một
+                chuỗi rỗng</b>.
+              Để hiểu rõ hơn bạn xem ví dụ sau đây nhé:
+            </p>
+            <pre><code class="javascript"> let chuoi = 'Xin Chào';<br/> let chuoiCon = chuoi.substring(4,4);<br/><br/> console.log(chuoiCon);</code></pre>
 
-            <h5 class="text-white bg-secondary p-2 shadow mt-4  title-article-size rounded">
-              Tự động <b>IN HOA</b> hay <b>in thường</b> trong Chuỗi(String) Javascript:
+            <p class="mt-4">
+              Bạn xem kết quả bên dưới nhé:
+            </p>
+
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589166953/Method-String-JS/hai-vi-tri-chi-muc-bang-nhau-trong-substring-js_dy0uxm.png"
+              alt="hai vị trí chỉ mục bằng nhau trong substring">
+
+            <h5 class="text-white bg-secondary p-2 shadow mt-4 title-article-size rounded">
+              Phương thức <b>slice()</b> trong Chuỗi(String):
             </h5>
             <p>
-              Trong thực tế nhiều khi bạn muốn so sánh các chuỗi với nhau thì nên chuyển nó về <b>trạng thái
-                chung</b> là chuỗi in hoa hoặc in thường. Trong Javascript cung cấp cho chúng ta hai phương thức là
-              <b><code>toLowerCase()</code></b> để chuyển sang in thường và <b><code>toUpperCase()</code></b>
-              để chuyển sang in hoa. Bây giờ để hiểu rõ hơn bạn xem đoạn code sau nhé:
+              Các đặc điểm của phương thức <b><code>slice()</code></b> khá giống với <b><code>substring()</code></b>.
+              Nhưng điểm khác biệt chính là phương thức <b><code>slice</code></b> cho phép vị trí chỉ mục là <b>số
+                âm</b> và
+              nó sẽ không chấp nhận nếu vị trí chỉ mục bắt đầu <b>lơn hơn</b> vị trí chỉ mục kết thúc. Bây giờ để hiểu
+              rõ hơn chúng ta
+              đi vào cú pháp nó nhé:
             </p>
-            <pre><code class="javascript"> let chuoi = "Xin Chào Các Bạn";<br/> let chuoiInHoa = chuoi.toUpperCase();<br/> let chuoiInThuong = chuoi.toLowerCase();<br/><br/> console.log(chuoiInHoa); <br/> console.log(chuoiInThuong);</code></pre>
+            <pre><code class="javascript"> (Chuỗi).slice(Vị trí chỉ mục bắt đầu, Vị trí chỉ mục kết thúc)</code></pre>
+            <p>
+              Các tính chất của nó cũng giống như phương thức <b><code>substring()</code></b> và để hiểu rõ hơn chúng ta
+              cùng nhau xem ví dụ sau đây nhé:
+            </p>
+
+            <pre><code class="javascript"> let chuoi = "JAVASCRIPT";<br/> let chuoiCon1 = chuoi.slice(0,4);<br/> let chuoiCon2 = chuoi.slice(4);<br/><br/> console.log(chuoiCon1);<br/> console.log(chuoiCon2);</code></pre>
+            <p class="mt-4">
+              Bạn xem kết quả bên dưới nhé:
+            </p>
+
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589168544/Method-String-JS/phuong-thuc-slice-trong-chuoi-js_yirsnu.png"
+              alt="Phương thức slice() trong chuỗi javascript">
+            <p class="mt-4">
+              Tiếp theo chúng ta sẽ đi vào ví dụ sử dụng <b>số âm</b> cho các vị trí chỉ mục. Lúc này nó sẽ bắt đầu
+              từ vị trí chỉ mục <b>cuối chuỗi</b> đến <b>đầu chuỗi</b> (Từ phải sang trái). Để hiểu rõ hơn bạn xem ví dụ
+              sau nhé:
+            </p>
+            <pre><code class="javascript"> let chuoi = "JAVASCRIPT";<br/> let chuoiCon = chuoi.slice(-5,-1);<br/><br/> console.log(chuoiCon);</code></pre>
+
+            <p>
+              Ở đoạn code trên thì nó sẽ bắt đầu từ vị trí thứ 5 <b>từ bên phải</b> đến vị trí thứ 1 <b>từ bên phải</b>.
+              Và bạn theo dõi kết quả ở dưới đây nhé:
+            </p>
+
+
+
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589169151/Method-String-JS/so-am-trong-slice-trong-chuoi-js_cvaan2.png"
+              alt="Sử dụng số âm trong Phương thức slice()">
+            <p class="mt-4">
+              Ở đây mình có lưu ý là:
+              <ul>
+                <li>Nếu cách trên khó hiểu bạn hình dung như sau: với ví dụ trên thì vị trí chỉ mục đều là số âm.</li>
+                <li>Lúc này vị trí chỉ mục bắt đầu = <b>Vị trí chỉ mục bắt đầu (Số âm) + Chiều dài của chuỗi</b>.
+                  Vậy kết quả là vị trí chỉ mục bắt đầu = -5 + 10 = <b>5</b> .
+                </li>
+                <li>Vị trí chỉ mục kết thúc = <b>Vị trí chỉ mục kết thúc (Số âm) + Chiều dài của chuỗi</b>.
+                  Vậy kết quả là vị trí chỉ mục kết thúc = -1 +10 = <b>9</b> .
+                </li>
+                <li>
+                  Ta suy ra là <b>chuoi.slice(-5,-1)</b> sẽ bằng với <b>chuoi.slice(5,9)</b>.
+                </li>
+              </ul>
+            </p>
+            <p>
+              Bây giờ chúng ta thử xem kết quả của hai phương thức trên sao nhé:
+            </p>
+
+
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589169911/Method-String-JS/vi-tri-chi-muc-am-trong-slice_tofla9.png"
+              alt="Sử dụng số âm với vị trí chỉ mục trong Phương thức slice()">
+            <p class="mt-4">
+              Khác biệt khi hoán đổi vị trí chỉ mục giữa hai phương thức <b><code>slice()</code></b> và <b><code>substring()</code></b>:
+            </p>
+            <pre><code class="javascript"> let chuoi = "JAVASCRIPT";<br/> let chuoiCon1 = chuoi.slice(6, 2);<br/> let chuoiCon2 = chuoi.substring(6,2);<br/><br/> console.log(chuoiCon1);<br/> console.log(chuoiCon2); </code></pre>
 
             <p class="mt-4">
               Bạn xem kết quả bên dưới nhé:
             </p>
 
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588941906/Method-String-JS/in-hoa-in-thuong-trong-chuoi-js_w1jcqe.png"
-              alt="Sử  dụng toLowerCase() và  toUpperCase() với chuỗi trong javascript">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589170300/Method-String-JS/so-sanh-slice_-va-substring_-js_endgt6.png"
+              alt="So sánh pương thức slice() và substring() trong chuỗi javascript">
+            <p class="mt-4">
+              Như bạn thấy thì đối với phương thức <b><code>slice()</code></b> thì sẽ trả về <b>chuỗi rỗng</b> nếu 
+              vị trí chỉ mục bắt đầu  <b>lớn hơn</b> vị trí chỉ mục kết thúc.
+            </p>
 
-            <h5 class="text-white bg-secondary p-2 shadow mt-4  title-article-size rounded">
-              Sử dụng phương thức <b>indexOf()</b> trong Chuỗi(String) Javascript:
+            <h5 class="text-white bg-secondary p-2 shadow mt-4 title-article-size rounded">
+              Phương thức <b>substr()</b> trong Chuỗi(String):
             </h5>
-            <p class="mt-4">
-              Phương thức <b>indexOf()</b> giúp chúng ta trả về <b>vị trí chỉ mục</b> của chuỗi con xuất hiện <b>đầu
-                tiên</b> trong
-              chuỗi.
-            </p>
             <p>
-              Bây giờ chúng ta sẽ đi vào cú pháp để hiểu rõ hơn nhé:
+              Phương thức này cũng trả về chuỗi con nhưng dựa vào vị trí chỉ mục bắt đầu và chiều dài của chuỗi con mà chúng ta muốn lấy.
+              Để hiểu rõ hơn bạn xem cú pháp sau nhé:
             </p>
-            <pre><code class="javascript"> let viTriChiMuc = (Chuỗi).indexOf(chuỗi con, Vị trí bắt đầu tìm kiếm);</code></pre>
+            <pre><code class="javascript"> (Chuỗi).substr(Vị trí chỉ mục bắt đầu, Độ dài chuỗi con mà ta muốn lấy);</code></pre>
             <p>
-              Ở đây mình có một số lưu ý nhỏ là:
-              <ul>
-                <li>Phương thức <b>indexOf()</b> sẽ trả về giá trị <b>-1</b> nếu như chuỗi chính không chứa chuỗi con.
-                </li>
-                <li><b> Vị trí bắt đầu tìm kiếm</b> có nghĩa là một tham số để bạn xác định phương thức <b>indexOf()</b>
-                  sẽ <b>bắt đầu tìm kiếm từ vị trí chỉ mục nào</b> trong chuỗi. Nếu bạn không sử dụng tham số này thì nó
-                  sẽ mặc định
-                  <b>vị trí chỉ mục là 0</b>, nghĩa là nó sẽ bắt đầu tìm kiếm từ ký tự đầu tiên của chuỗi.</li>
-                <li>Phương thức <b>indexOf()</b> sẽ phân biệt các ký tự chữ thường với chữ in hoa nhé. Ví dụ như
-                  <b>ten</b> và <b>Ten</b>
-                  sẽ là hai chuỗi con khác nhau.</li>
-              </ul>
+              Để hiểu rõ hơn giờ bạn cùng mình xem ví dụ sau đây nhé:
             </p>
-
-            <p>
-              Khi đã nắm sơ lược thì chúng ta sẽ đi vào ví dụ cụ thể là tìm vị trí của từ <b>S</b> đầu tiên trong
-             chuỗi <b>JAVASCRIPT</b>.
-              Ở bên dưới mình có minh họa để bạn có thể hiểu rõ hơn:
-            </p>
-
-            <img class=" lazyload" height="250"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588948422/Method-String-JS/vi-tri-chi-muc-chuoi-js_gwrdpb.svg"
-              alt="Ví dụ minh họa indexOf trong javascript">
-            <p class="mt-4">
-              Như bạn thấy vị trí chỉ mục sẽ <b>bắt đầu từ số 0</b> còn vị trí sẽ bắt đầu bằng số 1 nhé.
-            </p>
-            <p>
-              Bây giờ chúng ta sẽ đi vào đoạn code sử dụng phương thức <b>indexOf()</b> để tìm chữ <b>S</b> nhé:
-            </p>
-            <pre><code class="javascript"> let chuoi = "JAVASCRIPT";<br/> console.log(chuoi.indexOf('S'));<br/> console.log(chuoi.indexOf('s')); </code></pre>
+            <pre><code class="javascript"> let chuoi = "JAVASCRIPT";<br/> let chuoiCon = chuoi.substr(4,5);<br/><br/> console.log(chuoiCon);<br/> console.log(chuoiCon.length);</code></pre>
             <p class="mt-4">
               Bạn xem kết quả bên dưới nhé:
             </p>
 
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588950590/Method-String-JS/su-dung-index-of-trong-chuoi-js_lwmmn3.png"
-              alt="Sử  dụng indexOf() với chuỗi trong javascript">
-
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589170988/Method-String-JS/vi-du-substr_-js_tsggkw.png"
+              alt="Ví dụ substr() trong chuỗi javascript">
             <p class="mt-4">
-              Như ví dụ trên thì ta có được vị trí chỉ mục của từ <b>S</b> là 4 (Bạn nhớ là vị trí chỉ mục bắt đầu từ số 0 nhé).
-              Còn trả về giá trị <b>-1</b> thì nó không tồn tại trong chuỗi, do chữ <b>s</b> và <b>S</b> sẽ khác nhau trong phương thức 
-              <b>indexOf()</b>.
+              Sự khác biệt giữa <b><code>substr</code></b> và <b><code>substring</code></b> là phương thức 
+              <b><code>substr</code></b> cho phép chúng ta sử dụng <b>số âm cho tham số đầu tiên</b> còn phương thức  <b><code>substring</code></b> thì không.
+              Để hiểu rõ hơn bạn xem ví dụ sau đây nhé:
             </p>
-            <p>
-              Vậy có cách nào giúp ta tìm được vị trí chỉ mục của chuỗi con mà <b>không cần phân biệt in hoa và in thường</b> không?<br/>
-              Chúng ta có thể sử dụng phương thức đã học là <b>toLowerCase()</b> hoặc <b>toUpperCase()</b> để đưa chuỗi con và chuỗi chính về trạng thái chung
-              rồi sau đó ta mới bắt đầu sử dụng phương thức <b>indexOf()</b>. Để hiểu rõ hơn bạn xem đoạn code sau nhé:
-            </p>
-            <pre><code class="javascript"> let chuoi = ("JAVASCRIPT").toLowerCase();<br/> let chuoiCon = ("s").toLowerCase();<br/><br/> console.log(chuoi.indexOf(chuoiCon));</code></pre>
-
+            <pre><code class="javascript"> let chuoi = "JAVASCRIPT";<br/> let chuoiCon = chuoi.substr(-4, 4);<br/><br/> console.log(chuoiCon);</code></pre>
             <p class="mt-4">
-              Bạn xem kết quả bên dưới nhé:
+              Ở đây nó sẽ bắt đầu vị trí thứ 4 <b>từ bên phải</b> và lấy <b>4 ký tự</b> trong chuỗi. Để hiểu rõ hơn bạn xem kết quả bên dưới nhé:
             </p>
 
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588951411/Method-String-JS/tim-ky-tu-thuong-index-of-trong-chuoi-js_wx401m.png"
-              alt="Sử  dụng indexOf() và toLowerCase() với chuỗi trong javascript">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589171386/Method-String-JS/so-sanh-substr_-va-substring_-js_czayjm.png"
+              alt="So sánh substr() với substring() trong chuỗi javascript">
+
             <p class="mt-4">
-              Bây giờ chúng ta sẽ đi vào ví dụ tìm kiếm ký tự trong chuỗi bằng cách  sử dụng tham số 
-              <b><code>Vị trí bắt đầu tìm kiếm</code></b>. Để hiểu rõ hơn bạn xem ví dụ sau nhé:
+              Vậy chúng ta có thể rút ra khi sử dụng 3 phương thức trên với <b>số âm</b> là:
             </p>
-            <pre><code class="javascript"> let chuoi = 'JAVASCRIPT';<br/> let chuoiCon = chuoi.indexOf('A', 2);<br/><br/> console.log(chuoiCon);</code></pre>
+            <table class="table table-dark">
+              <thead>
+                <tr>
+                  <th scope="col">Phương Thức</th>
+                  <th scope="col">Số Âm</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>slice()</td>
+                  <td>Chấp nhận số âm cho tất cả tham số.</td>
+                </tr>
+                <tr>
+                  <td>substring()</td>
+                  <td>Các số âm sẽ tự động chuyển sang giá trị là <b>0</b>.</td>
+                </tr>
+                <tr>
+                  <td>substr()</td>
+                  <td>Chấp nhận tham số đầu tiên là số âm.</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h5 class="text-white bg-secondary p-2 shadow mt-4 title-article-size rounded">
+              Phương thức <b>trim()</b> trong Chuỗi(String):
+            </h5>
+            <p>
+              Phương thức này giúp chúng ta loại bỏ những khoảng trắng phía trước và sau của chuỗi.
+              Để hiểu rõ hơn bạn xem ví dụ cụ thể sau đây nhé:
+            </p>
+            <pre><code class="javascript"> let chuoi = "     Xin Chào     ";<br/> let chuoiCon = chuoi.trim();<br/><br/> console.log(chuoi);<br/> console.log(chuoiCon);</code></code></pre>
 
             <p class="mt-4">
               Bạn xem kết quả bên dưới nhé:
             </p>
 
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588989484/Method-String-JS/index-of-voi-tham-so-trong-chuoi-js_xyblek.png"
-              alt="Sử  dụng indexOf() với tham số trong chuỗi  javascript">
-            <p class="mt-4">
-              Mình có một số lưu ý nhỏ trong đoạn code trên là:
-              <ul>
-                <li>Đầu tiên chúng ta sẽ gọi một biến <b><code>chuoi</code></b> lưu giá trị chuỗi là "JAVASCRIPT".</li>
-                <li>Tiếp theo ta sẽ sử dụng phương thức <b>indexOf()</b> để tìm chuỗi con.</li>
-                <li>ký tự ta muốn tìm là <b><code>'A'</code></b> trong chuỗi và phương thức sẽ tìm kiếm 
-                từ vị trí chỉ mục thứ hai tức là bắt đầu từ chữ <b><code>V</code></b>.</li>
-                <li>Như vậy bạn thấy nó sẽ xuất hiện vị trí chỉ mục của chuỗi con là số 3.</li>
-              </ul>
-            </p>
-            <p>
-              Phần này chúng ta sẽ đi vào sử dụng với việc tìm kiếm vị trí của chuỗi con chứa nhiều ký tự bằng phương
-              thức <b>indexOf()</b> trong ví dụ dưới đây nhé:
-            </p>
-            <pre><code class="javascript"> let chuoi = "Vì mình thích javascript nên mình chia sẻ các kiến thức liên quan đến javascript!";<br/> chuoiCon = chuoi.indexOf("javascript");<br/><br/> console.log(chuoiCon);</code></pre>
-            <p class="mt-4">
-              Bạn xem kết quả bên dưới nhé:
-            </p>
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589179546/Method-String-JS/su-dung-trim-js_h7akzv.png"
+              alt="Phương thức trim() trong chuỗi javascript">
+              <h5 class="text-white bg-secondary p-2 shadow mt-4 title-article-size rounded">
+                Phương thức <b>replace()</b> trong Chuỗi(String):
+              </h5>
+              <p>
+                Phương thức này giúp bạn thay thế  giá trị   trong chuỗi bằng một giá trị mới nếu thỏa mãn một biểu thức 
+                hay một chuỗi mà chúng ta đưa vào.
+                Để hiểu rõ hơn bạn xem cú pháp sau nhé:
+              </p>
+              <pre><code class="javascript"> (Chuỗi).replace(Chuỗi cần thay thế, Chuỗi thay thế);</code></pre>
+              <p>
+                Để dễ hình dung hơn bạn xem ví dụ sau đây nhé:
+              </p>
+              <pre><code class="javascript"> let chuoi = "Xin Chào Thế Giới";<br/> let chuoiCon = chuoi.replace("Thế Giới", "Các Bạn");<br/><br/> console.log(chuoiCon);</code></pre>
 
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588990712/Method-String-JS/index-of-voi-tnhieu-ky-tu-trong-chuoi-js_l5diyz.png"
-              alt="Sử  dụng indexOf() với nhiều ký tự trong chuỗi  javascript">
-            <p class="mt-4">
-              Qua ví dụ ta thấy được là phương thức <b><code>indexOf()</code></b> sẽ trả về vị trí của chuỗi con xuất hiện <b>đầu tiên</b> trong chuỗi.
-              Vậy có  cách nào để tìm được vị trí xuất hiện <b>cuối cùng</b> của chuỗi con trong chuỗi không?
-            </p>
-            <p>
-              Trong Javascript có cung cấp cho chúng ta một phương thức là <b><code>lastIndexOf()</code></b> giúp ta tìm được vị trí xuất hiện cuối cùng 
-              của chuỗi con trong chuỗi. Bây giờ cùng là ví dụ trên nhưng chúng ta thử tìm vị trí cuối cùng của chuỗi con <b>"javascript"</b> trong biến <b><code>chuoi</code></b> để xem nó hoạt động sao nhé:
-            </p>
+              <p class="mt-4">
+                Bạn xem kết quả bên dưới nhé:
+              </p>
+  
+              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589180620/Method-String-JS/su-dung-replace_-trong-chuoi-js_pdlyxl.png"
+                alt="Phương thức replace() trong chuỗi javascript">
+              <p class="mt-4">
+               Ngoài ra chúng ta cũng có thể sử dụng <b>biểu thức chính quy(regular expressions ) </b> để tìm  chuỗi con phù hợp  mà chúng ta muốn thay thế.
+               Phần này mình sẽ có một bài riêng để nói về nó nha. Bây giờ chúng ta hãy cùng nhau tìm hiểu thông qua ví dụ thực tế sau đây nhé:
 
-            <pre><code class="javascript"> let chuoi = "Vì mình thích javascript nên mình chia sẻ các kiến thức liên quan đến javascript!";<br/> chuoiCon = chuoi.lastIndexOf("javascript");<br/><br/> console.log(chuoiCon);</code></pre>
+              </p>
+              <pre><code class="javascript"> let chuoi = "Xin Chào Thế Giới";<br/> let chuoiCon = chuoi.replace(/Thế Giới/g, "Các Bạn");<br/><br/> console.log(chuoiCon);</code></pre>
 
-            <p class="mt-4">
-              Bạn xem kết quả bên dưới nhé:
-            </p>
+              <p class="mt-4">
+                Bạn xem kết quả bên dưới nhé:
+              </p>
+  
+              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589181555/Method-String-JS/su-dung-regex-trong-replace_-trong-chuoi-js_xbo7zc.png"
+                alt="Phương thức replace() với regex trong chuỗi javascript">
+              <p class="mt-4">
+               Một điều bạn cần lưu ý là  nếu tìm kiếm theo chuỗi thì phương thức này sẽ <b>phân biệt chữ in hoa và chữ in thường</b>. Ngoài ra nó cũng chỉ thay thế <b>giá trị đầu tiên</b> phù hợp được tìm thấy  ở trong chuỗi.
+               Để nắm rõ hơn bạn xem đoạn code sau nhé:
+              </p>
+              <pre><code class="javascript"> let chuoi = "Xin Chào Thế Giới! Chúc Thế Giới Có Một Ngày Vui Vẻ!";<br/><br/> console.log(chuoi.replace('Thế Giới', 'Các Bạn'));/*Chỉ thay thế giá trị đầu tiên phù hợp*/<br/> console.log(chuoi.replace('thế giới', 'Các Bạn'));/*Phân biệt chữ in hoa và in thường*/</code></pre>
+              <p class="mt-4">
+                Bạn xem kết quả bên dưới nhé:
+              </p>
+  
+              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589182459/Method-String-JS/loi-khi-dung-replace_-trong-chuoi-js_p2yhzk.png"
+                alt="Lỗi Khi Dùng Phương thức replace() trong chuỗi javascript">
 
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588991739/Method-String-JS/last-index-of-voi-nhieu-ky-tu-trong-chuoi-js_n8wbmw.png"
-              alt="Sử  dụng lastIndexOf() với nhiều ký tự trong chuỗi  javascript">
-            <p class="mt-4">
-              Bạn có thể sử dụng <b>vòng lặp</b> để xuất ra tất cả các vị trí chỉ mục xuất hiện của chuỗi con hay đếm có bao nhiêu chuỗi con ở trong chuỗi...
-              Bây giờ mình sẽ  sử dụng vòng lặp với  ví dụ trên và <b>xuất ra tất cả các vị trí chỉ mục của chuỗi con</b> xuất hiện ở trong chuỗi.
-            </p>
-            <pre><code class="javascript">&nbsp;&nbsp;let&nbsp;chuoi&nbsp;=&nbsp;'Vì&nbsp;mình&nbsp;thích&nbsp;javascript&nbsp;nên&nbsp;mình&nbsp;chia&nbsp;sẻ&nbsp;các&nbsp;kiến&nbsp;thức&nbsp;liên&nbsp;quan&nbsp;đến&nbsp;javascript!';<br/> &nbsp;let&nbsp;chuoiCon&nbsp;=&nbsp;'javascript';<br/> &nbsp;let&nbsp;viTriChiMuc&nbsp;=&nbsp;chuoi.indexOf(chuoiCon);<br/><br/> &nbsp;while(viTriChiMuc&nbsp;!==&nbsp;-1)&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;console.log('Vị&nbsp;trí&nbsp;xuất&nbsp;hiện&nbsp;chuỗi&nbsp;con&nbsp;là&nbsp;'&nbsp;+&nbsp;viTriChiMuc);<br/> &nbsp;&nbsp;&nbsp;&nbsp;viTriChiMuc&nbsp;=&nbsp;chuoi.indexOf(chuoiCon&nbsp;,&nbsp;viTriChiMuc&nbsp;+&nbsp;1);<br/> &nbsp;}<br/></code></pre>
+                <h5 class="text-white bg-secondary p-2 shadow mt-4 title-article-size rounded">
+                  Phương thức <b>includes()</b> trong Chuỗi(String):
+                </h5>
+                <p>
+                  Giúp chúng ta kiểm tra xem chuỗi có <b>chứa</b> chuỗi con ở trong nó hay không? Với giá trị mà phương thức 
+                  này trả về sẽ là <b><code>true</code></b> hoặc <b><code>false</code></b>.
+                  Để hiểu rõ hơn chúng ta sẽ đi vào ví dụ thực tế nhé:
+                </p>
+                <pre><code class="javascript"> let chuoi = "Xin Chào Các Bạn";<br/> let chuoiCon1 = chuoi.includes("Bạn");<br/> let chuoiCon2 = chuoi.includes("Mình");<br/><br/> console.log(chuoiCon1);<br/> console.log(chuoiCon2);</code></pre>
+                <p class="mt-4">
+                  Bạn xem kết quả bên dưới nhé:
+                </p>
+    
+                <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589182871/Method-String-JS/Su-dung-includes_-trong-chuoi-js_dqhl10.png"
+                  alt="Phương thức includes() trong chuỗi javascript">
 
-            <p class="mt-4">
-              Bạn xem kết quả bên dưới nhé:
-            </p>
 
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588993073/Method-String-JS/vong-lap-va-index-of-voi-nhieu-ky-tu-trong-chuoi-js_eclzei.png"
-              alt="Sử  dụng vòng lặp và IndexOf() với nhiều ký tự trong chuỗi  javascript">
-            <p class="mt-4">
-              Ở đây mình có một số lưu ý sau là:
-              <ul>
-                <li>
-                  Đầu tiên chúng ta sẽ lấy vị trí xuất hiện đầu tiên của chuỗi con trong chuỗi bằng <b><code>chuoi.indexOf(chuoiCon)</code></b>.
-                </li>
-                <li>Biểu thức <b><code>viTriChiMuc !== -1</code></b> giúp chúng ta kiểm tra chuỗi con <b>có xuất hiện trong chuỗi hay không</b>?</li>
-                <li>Khi đã kiểm tra xong thì xuất ra màn hình và tiếp theo chúng ta sẽ tăng vị trí chỉ mục lên <b>1 đơn vị</b>.
-                </li>
-                <li>
-                  Ở đây có nghĩa là vị trí chỉ mục xuất hiện đầu tiên của chuỗi con "javascript" là <b>14</b>.<br/>
-                  Để tìm chuỗi con "javascript" <b>tiếp theo</b> trong chuỗi thì chúng ta sẽ  tăng biến vị trí chỉ mục lên 1
-                  tức là <b>15</b>.<br/>
-                  Lúc này ta sẽ có <b><code>chuoi.indexOf(chuoiCon , 15)</code></b> nghĩa là nó sẽ bắt đầu tìm kiếm từ vị trí chỉ mục 15
-                  trong chuỗi.
-                </li>
-                <li>Vòng lặp cứ như vậy đến khi không còn thỏa mãn biểu thức <b><code>viTriChiMuc !== -1</code></b> thì sẽ dừng lại.</li>
-              </ul>
-            </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
 
