@@ -26,7 +26,7 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i> Các Phương Thức Chuỗi Phần 2 Trong Javascript</h2>
+                  aria-hidden="true"></i>Các Phương Thức Number(Số) Trong Javascript</h2>
             </div>
           </div>
 
@@ -36,363 +36,372 @@
             </div>
           </div>
           <div class="text-content-article mt-5">
-            <p><i>Hôm nay bạn hãy cùng mình đi vào tìm hiểu thêm các phương thức được sử dụng   đối với chuỗi trong
+            <p><i>Hôm nay bạn hãy cùng mình đi vào tìm hiểu khái niệm cũng như các phương thức sử dụng với số trong
                 ngôn
                 ngữ lập trình Javascript để phát triển web nhé.</i>
             </p>
 
             <div class="row">
               <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h4 class="text-primary ml-4 title-article-size">Chuỗi Trong Javascript</h4>
+                <h4 class="text-primary ml-4 title-article-size">Các Phương Thức Number(Số) Trong Javascript</h4>
               </div>
             </div>
+            <p>
+              Bạn nên tham khảo lại về định nghĩa kiểu dữ liệu số và các thuộc tính của nó trước khi ta đi vào
+              tìm hiểu các phương thức được sử dụng cho kiểu dữ liệu này nhé. Đường dẫn tham khảo:
+              <a href="https://www.niemvuilaptrinh.com/article/Cac-Kieu-Du-Lieu-Trong-Javascript"
+                title="Kiểu dữ liệu số">Kiểu dữ liệu số</a>.
+            </p>
             <h5 class="text-white bg-secondary p-2 shadow  title-article-size rounded">
-              Phương thức <b>substring()</b> trong Chuỗi(String):
+              Phương thức <b>toFixed()</b> trong Number(Số):
             </h5>
 
             <p class="mt-4">
-              Phương thức <b><code>substring()</code></b> được sử dụng để trả về một chuỗi con nằm trong chuỗi
-              bằng cách xác định vị trí chỉ mục <b>bắt đầu</b> và <b>kết thúc</b>. Để hiểu rõ hơn bạn xem cú pháp của nó
+              Phương thức <b><code>toFixed()</code></b>
+              thường được áp dụng đối với các <b>số thập phân</b>. Nó giúp chúng ta xác định bao nhiêu số
+              đằng sau dấu thập phân(<b><code>.</code></b>) sẽ được hiển thị và kết quả trả về là một số với kiểu dữ
+              liệu là <b>chuỗi</b>
+              . Để hiểu rõ hơn bạn xem cú pháp của nó
               sau đây nhé:
             </p>
-            <pre><code class="javascript"> (Chuỗi).substring(Vị trí chỉ mục đầu tiên, Vị trí chỉ mục kết thúc);</code></pre>
+            <pre><code class="javascript"> (Số).toFixed(Số lượng number mà ta muốn hiển thị);</code></pre>
             <p>
-              Ở đây mình sẽ giải thích một tý về cú pháp trên là :
+              Bây giờ chúng ta sẽ đi vào ví dụ thực tế để hiểu về cách sử dụng nó nhé:
+            </p>
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> let tongGia = 0.56894;<br/> let tongGiaChuyenDoi = tongGia.toFixed(2);<br/><br/> console.log(tongGiaChuyenDoi);<br/> console.log(typeof tongGiaChuyenDoi);</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589251372/Number%20Of%20Javascript/phuong-thuc-toFixed_-trong-Javascript_qtwh1v.png"
+              alt="Phương thức toFixed() trong javascript">
+
+            <p class="mt-4">
+              Tại sao kết quả là <b>0.57</b> chứ không phải <b>0.56</b> ?
+            </p>
+            <p>
+              Thì ở đây mình xin giải thích là khi ta chọn <b>2</b> chữ số sau dấu thập phân thì phương thức này
+              sẽ xem xét giá trị của chữ số thứ <b>3</b> sau dấu thập phân nếu:
               <ul>
-                <li><b>Vị trí chỉ mục bắt đầu</b>: là vị trí chỉ mục của ký tự đầu tiên trong chuỗi con mà chúng ta muốn
-                  lấy.</li>
-                <li><b>Vị trí chỉ mục kết thúc</b>: là vị trí chỉ mục cuối cùng trong chuỗi con và không được bao gồm
-                  trong chuỗi con. Bạn có thể hiểu nôm na là
-                  chuỗi con sẽ <b>không chứa ký tự với vị trí chỉ mục cuối cùng</b> khi ta sử dụng phương thức
-                  <b><code>substring()</code></b> .</li>
+                <li><b>Nếu nó >= 5 </b>: thì số trước nó tăng lên một đơn vị.</li>
+                <li><b>Nếu nó &#60; 5 </b> : thì số trước nó giữ nguyên giá trị.</li>
               </ul>
+              Do đó số <b>8 > 5</b> nên kết quả sẽ là <b>0.57</b>.
             </p>
             <p>
-              Bây giờ để nắm rõ hơn chúng ta sẽ đi vào ví dụ thực tế với hình ảnh minh họa dưới đây nhé:
+              Để hiểu nhiều hơn chúng ta hãy xem ví dụ với các số khác nhau trong phương thức
+              <b><code>toFixed()</code></b> ở đoạn code dưới đây nhé:
             </p>
-            <img class=" lazyload" height="250"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1588948422/Method-String-JS/vi-tri-chi-muc-chuoi-js_gwrdpb.svg"
-              alt="Ví dụ minh họa vị trí chỉ mục trong javascript">
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> let soThapPhan = 124.654;<br/><br/> console.log(soThapPhan.toFixed(0));<br/> console.log(soThapPhan.toFixed(1));<br/> console.log(soThapPhan.toFixed(2));<br/> console.log(soThapPhan.toFixed(8));</code></pre>
             <p class="mt-4">
-              Vậy để lấy chuỗi con <b>"JAVA"</b> trong <b>"JAVASCRIPT"</b> thì bạn sẽ phải lấy từ vị trí chỉ mục
-              <b>0</b> đến vị trí chỉ mục thứ
-              <b>4</b> chứ không phải vị trí chỉ mục thứ <b>3</b> nha. Để hiểu rõ hơn bạn hãy cùng mình đi vào ví dụ cụ
-              thể sau đây nhé:
+              <mark class="p-1"><b>Kết Quả:</b></mark>
             </p>
-            <pre><code class="javascript"> let chuoi = 'JAVASCRIPT';<br/> let chuoiCon1 = chuoi.substring(0,4);<br/> let chuoiCon2 = chuoi.substring(0,3);<br/><br/> console.log(chuoiCon1);<br/> console.log(chuoiCon2);</code></pre>
-
-            <p class="mt-4">
-              Bạn xem kết quả bên dưới nhé:
-            </p>
-
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589164003/Method-String-JS/vi-du--substring-trong-chuoi-js_ackkts.png"
-              alt="Sử dụng substring trong chuỗi javascript">
-            <p class="mt-4">
-              Như bạn thấy ở ví dụ trên thì chúng ta có thể rút ra một lưu ý là khi bạn muốn lấy ký tự cuối cùng của
-              chuỗi con bằng phương thức <b><code>substring()</code></b> thì
-              thì ta sẽ lấy <b>vị trí chỉ mục ký tự cuối cùng ta muốn lấy cộng với 1</b>.
-            </p>
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589253710/Number%20Of%20Javascript/vi-du-toFixed_-trong-Javascript_majexs.png"
+              alt="Các ví dụ về toFixed() trong javascript">
 
-            <p>
-              Tiếp theo chúng ta sẽ đi vào ví dụ nhiều chữ trong một chuỗi bằng ví dụ dưới đây nhé:
-            </p>
-
-            <pre><code class="javascript"> let chuoi = 'Xin Chào';<br/> let chuoiCon = chuoi.substring(0,3);<br/><br/> console.log(chuoiCon);</code></pre>
-
-            <p class="mt-4">
-              Bạn xem kết quả bên dưới nhé:
-            </p>
-
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589162382/Method-String-JS/vi-du-substring-trong-js_uod2le.png"
-              alt="Sử dụng substring trong chuỗi js">
-            <p class="mt-4">
-              Ở đây mình có lưu ý nhỏ là:
-              <ul>
-                <li>Đầu tiên chúng ta gán giá trị "Xin Chào" cho biến <b><code>chuoi</code></b>.</li>
-                <li>Tiếp theo chúng ta sẽ sử dụng phương thức <b><code>substring</code></b> để trả về giá trị cho biến
-                  <b><code>chuoiCon</code></b>.</li>
-                <li>Phương thức <b><code>substring</code></b> sẽ lấy giá trị chuỗi con từ vị trí chỉ mục <b>0</b>
-                  đến vị
-                  trí chỉ mục <b>3</b> (Không bao gồm ký tự vị trí chỉ mục thứ <b>3</b> có trong chuỗi con).
-                  Với vị trí chỉ mục sẽ <b>bắt đầu từ số 0 nhé</b>.
-                </li>
-              </ul>
-            </p>
-            <h6 class="text-primary mt-4"><b><u>Chỉ sử dụng 1 tham số trong <code>substring()</code></b>:</u></b></h6>
-            <p>
-              Bạn xem cú pháp sử dụng 1 tham số trong phương thức <b><code>substring</code></b> dưới đây nhé:
-            </p>
-            <pre><code class="javascript"> (Chuỗi).substring(Vị trí bắt đầu);</code></pre>
-            <p>
-              Ở đây nó sẽ trả về một chuỗi con từ vị trí chỉ mục bắt đầu đến <b>vị trí cuối cùng trong chuỗi</b>.
-              Mình có lưu ý nhỏ là <b>khoảng trắng</b> cũng là một ký tự trong chuỗi nha. Bây giờ để hiểu rõ hơn
-              chúng ta hãy cùng đi vào ví dụ dưới đây nhé:
-            </p>
-            <pre><code class="javascript"> let chuoi = 'Xin Chào';<br/> let chuoiCon = chuoi.substring(4);<br/><br/> console.log(chuoiCon);</code></pre>
-
-            <p class="mt-4">
-              Bạn xem kết quả bên dưới nhé:
-            </p>
-
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589165633/Method-String-JS/vi-du-substring-mot-tham-so-trong-chuoi-js_qay2se.png"
-              alt="substring với một tham số trong chuỗi js">
-
-            <h6 class="text-primary mt-4"><b><u>Hoán đổi vị trí chỉ mục trong <code>substring()</code></b>:</u></b></h6>
-            <p>
-              Khi mà bạn thiết lập vị trí chỉ mục bắt đầu <b>lớn hơn</b> vị trí chỉ mục kết thúc thì nó sẽ tự động hoán
-              đổi vị trí
-              nghĩa là vị trí chỉ mục bắt đầu sẽ đổi thành vị trí chỉ mục kết thúc và ngược lại.
-              Bây giờ để dễ hình dung bạn xem ví dụ sau đây nhé:
-            </p>
-            <pre><code class="javascript"> let chuoi = 'Xin Chào';<br/> let chuoiCon = chuoi.substring(3, 0);<br/><br/> console.log(chuoiCon);</code></pre>
-            <p class="mt-4">
-              Bạn xem kết quả bên dưới nhé:
-            </p>
-
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589166675/Method-String-JS/hoan-doi-vi-tri-trong-substring-js_db8h4c.png"
-              alt="Hoán đổi vị trí chỉ mục trong substring chuỗi js">
-            <h6 class="text-primary mt-4"><b><u>Khi hai vị trí chỉ mục bằng nhau trong
-                  <code>substring()</code></b>:</u></b></h6>
-            <p>
-              Khi bạn thiết lập vị trí chỉ mục bắt đầu <b>bằng</b> với vị trí chỉ mục kết thúc thì nó sẽ trả về <b>một
-                chuỗi rỗng</b>.
-              Để hiểu rõ hơn bạn xem ví dụ sau đây nhé:
-            </p>
-            <pre><code class="javascript"> let chuoi = 'Xin Chào';<br/> let chuoiCon = chuoi.substring(4,4);<br/><br/> console.log(chuoiCon);</code></pre>
-
-            <p class="mt-4">
-              Bạn xem kết quả bên dưới nhé:
-            </p>
-
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589166953/Method-String-JS/hai-vi-tri-chi-muc-bang-nhau-trong-substring-js_dy0uxm.png"
-              alt="hai vị trí chỉ mục bằng nhau trong substring">
-
-            <h5 class="text-white bg-secondary p-2 shadow mt-4 title-article-size rounded">
-              Phương thức <b>slice()</b> trong Chuỗi(String):
+            <h5 class="text-white bg-secondary p-2 mt-4 shadow  title-article-size rounded">
+              Phương thức <b>toPrecision()</b> trong Number(Số):
             </h5>
             <p>
-              Các đặc điểm của phương thức <b><code>slice()</code></b> khá giống với <b><code>substring()</code></b>.
-              Nhưng điểm khác biệt chính là phương thức <b><code>slice</code></b> cho phép vị trí chỉ mục là <b>số
-                âm</b> và
-              nó sẽ không chấp nhận nếu vị trí chỉ mục bắt đầu <b>lơn hơn</b> vị trí chỉ mục kết thúc. Bây giờ để hiểu
-              rõ hơn chúng ta
-              đi vào cú pháp nó nhé:
+              Phương thức này có cách hoạt động khá giống với phương thức <b><code>toFixed()</code></b>
+              , điểm khác biệt chú ý ở đây là nó cho phép chúng ta xác định <b>chiều dài</b> của số chứ không
+              phải là <b>xác định bao nhiêu số đằng sau dấu thập phân</b>. Trước khi đi vào so sánh thì bạn xem cú pháp
+              của nó trước nhé:
             </p>
-            <pre><code class="javascript"> (Chuỗi).slice(Vị trí chỉ mục bắt đầu, Vị trí chỉ mục kết thúc)</code></pre>
-            <p>
-              Các tính chất của nó cũng giống như phương thức <b><code>substring()</code></b> và để hiểu rõ hơn chúng ta
-              cùng nhau xem ví dụ sau đây nhé:
-            </p>
-
-            <pre><code class="javascript"> let chuoi = "JAVASCRIPT";<br/> let chuoiCon1 = chuoi.slice(0,4);<br/> let chuoiCon2 = chuoi.slice(4);<br/><br/> console.log(chuoiCon1);<br/> console.log(chuoiCon2);</code></pre>
-            <p class="mt-4">
-              Bạn xem kết quả bên dưới nhé:
-            </p>
-
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589168544/Method-String-JS/phuong-thuc-slice-trong-chuoi-js_yirsnu.png"
-              alt="Phương thức slice() trong chuỗi javascript">
-            <p class="mt-4">
-              Tiếp theo chúng ta sẽ đi vào ví dụ sử dụng <b>số âm</b> cho các vị trí chỉ mục. Lúc này nó sẽ bắt đầu
-              từ vị trí chỉ mục <b>cuối chuỗi</b> đến <b>đầu chuỗi</b> (Từ phải sang trái). Để hiểu rõ hơn bạn xem ví dụ
-              sau nhé:
-            </p>
-            <pre><code class="javascript"> let chuoi = "JAVASCRIPT";<br/> let chuoiCon = chuoi.slice(-5,-1);<br/><br/> console.log(chuoiCon);</code></pre>
+            <pre><code class="javascript">(Số).toPrecision(Chiều dài của số);</code></pre>
 
             <p>
-              Ở đoạn code trên thì nó sẽ bắt đầu từ vị trí thứ 5 <b>từ bên phải</b> đến vị trí thứ 1 <b>từ bên phải</b>.
-              Và bạn theo dõi kết quả ở dưới đây nhé:
-            </p>
-
-
-
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589169151/Method-String-JS/so-am-trong-slice-trong-chuoi-js_cvaan2.png"
-              alt="Sử dụng số âm trong Phương thức slice()">
-            <p class="mt-4">
-              Ở đây mình có lưu ý là:
-              <ul>
-                <li>Nếu cách trên khó hiểu bạn hình dung như sau: với ví dụ trên thì vị trí chỉ mục đều là số âm.</li>
-                <li>Lúc này vị trí chỉ mục bắt đầu = <b>Vị trí chỉ mục bắt đầu (Số âm) + Chiều dài của chuỗi</b>.
-                  Vậy kết quả là vị trí chỉ mục bắt đầu = -5 + 10 = <b>5</b> .
-                </li>
-                <li>Vị trí chỉ mục kết thúc = <b>Vị trí chỉ mục kết thúc (Số âm) + Chiều dài của chuỗi</b>.
-                  Vậy kết quả là vị trí chỉ mục kết thúc = -1 +10 = <b>9</b> .
-                </li>
-                <li>
-                  Ta suy ra là <b>chuoi.slice(-5,-1)</b> sẽ bằng với <b>chuoi.slice(5,9)</b>.
-                </li>
-              </ul>
+              Bây giờ ta sẽ đi vào ví dụ cụ thể so sánh hai phương thức trên nhé:
             </p>
             <p>
-              Bây giờ chúng ta thử xem kết quả của hai phương thức trên sao nhé:
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
             </p>
-
-
+            <pre><code class="javascript"> let soTong = 2.548;<br/><br/> console.log(soTong.toPrecision(2));<br/> console.log(soTong.toFixed(2));</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589169911/Method-String-JS/vi-tri-chi-muc-am-trong-slice_tofla9.png"
-              alt="Sử dụng số âm với vị trí chỉ mục trong Phương thức slice()">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589254387/Number%20Of%20Javascript/phuong-thuc-toPrecision_-trong-Javascript_vtqekr.png"
+              alt="Phương Thức toPrecision() trong javascript">
             <p class="mt-4">
-              Khác biệt khi hoán đổi vị trí chỉ mục giữa hai phương thức <b><code>slice()</code></b> và <b><code>substring()</code></b>:
+              Với tham số <b>chiều dài(length)</b> trong phương thức <b><code>toPrecision</code></b> thì bạn chỉ
+              sử dụng được <b>từ 1 đến 100</b> thôi nhé.
             </p>
-            <pre><code class="javascript"> let chuoi = "JAVASCRIPT";<br/> let chuoiCon1 = chuoi.slice(6, 2);<br/> let chuoiCon2 = chuoi.substring(6,2);<br/><br/> console.log(chuoiCon1);<br/> console.log(chuoiCon2); </code></pre>
-
             <p class="mt-4">
-              Bạn xem kết quả bên dưới nhé:
+              Tiếp theo chúng ta sẽ đi vào ví dụ cụ thể khi sử dụng phương thức <b><code>toPrecision()</code></b> với
+              nhiều chiều dài khác nhau
+              ở đoạn code sau nhé:
             </p>
-
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> let soThapPhan = 124.654;<br/><br/> console.log(soThapPhan.toPrecision(3));<br/> console.log(soThapPhan.toPrecision(4));<br/> console.log(soThapPhan.toPrecision(8));<br/> console.log(soThapPhan.toPrecision(0));/* Sẽ xảy ra lỗi*/<br/></code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589170300/Method-String-JS/so-sanh-slice_-va-substring_-js_endgt6.png"
-              alt="So sánh pương thức slice() và substring() trong chuỗi javascript">
-            <p class="mt-4">
-              Như bạn thấy thì đối với phương thức <b><code>slice()</code></b> thì sẽ trả về <b>chuỗi rỗng</b> nếu 
-              vị trí chỉ mục bắt đầu  <b>lớn hơn</b> vị trí chỉ mục kết thúc.
-            </p>
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589255243/Number%20Of%20Javascript/vi-du-toPrecision_-trong-Javascript_wfvtei.png"
+              alt="Các ví dụ về toPrecision() trong javascript">
 
-            <h5 class="text-white bg-secondary p-2 shadow mt-4 title-article-size rounded">
-              Phương thức <b>substr()</b> trong Chuỗi(String):
+            <h5 class="text-white bg-secondary p-2 mt-4 shadow  title-article-size rounded">
+              Phương thức <b>parseInt()</b> trong Number(Số):
             </h5>
             <p>
-              Phương thức này cũng trả về chuỗi con nhưng dựa vào vị trí chỉ mục bắt đầu và chiều dài của chuỗi con mà chúng ta muốn lấy.
-              Để hiểu rõ hơn bạn xem cú pháp sau nhé:
+              Phương thức <b><code>parseInt()</code></b> giúp chúng ta chuyển các kiểu dữ liệu khác (chuỗi, boolean...)
+              sang <b>kiểu số nguyên</b>. Để hiểu rõ hơn bạn xem cú pháp sau nhé:
             </p>
-            <pre><code class="javascript"> (Chuỗi).substr(Vị trí chỉ mục bắt đầu, Độ dài chuỗi con mà ta muốn lấy);</code></pre>
+            <pre><code class="javascript"> parseInt(Kiểu dữ liệu ta muốn chuyển sang số nguyên);</code></pre>
             <p>
-              Để hiểu rõ hơn giờ bạn cùng mình xem ví dụ sau đây nhé:
+              Bây giờ chúng ta đi vào ví dụ để hiểu hơn nhé:
             </p>
-            <pre><code class="javascript"> let chuoi = "JAVASCRIPT";<br/> let chuoiCon = chuoi.substr(4,5);<br/><br/> console.log(chuoiCon);<br/> console.log(chuoiCon.length);</code></pre>
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> console.log(parseInt("20"));<br/> console.log(parseInt("20.68"));</code></pre>
             <p class="mt-4">
-              Bạn xem kết quả bên dưới nhé:
+              <mark class="p-1"><b>Kết Quả:</b></mark>
             </p>
-
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589170988/Method-String-JS/vi-du-substr_-js_tsggkw.png"
-              alt="Ví dụ substr() trong chuỗi javascript">
-            <p class="mt-4">
-              Sự khác biệt giữa <b><code>substr</code></b> và <b><code>substring</code></b> là phương thức 
-              <b><code>substr</code></b> cho phép chúng ta sử dụng <b>số âm cho tham số đầu tiên</b> còn phương thức  <b><code>substring</code></b> thì không.
-              Để hiểu rõ hơn bạn xem ví dụ sau đây nhé:
-            </p>
-            <pre><code class="javascript"> let chuoi = "JAVASCRIPT";<br/> let chuoiCon = chuoi.substr(-4, 4);<br/><br/> console.log(chuoiCon);</code></pre>
-            <p class="mt-4">
-              Ở đây nó sẽ bắt đầu vị trí thứ 4 <b>từ bên phải</b> và lấy <b>4 ký tự</b> trong chuỗi. Để hiểu rõ hơn bạn xem kết quả bên dưới nhé:
-            </p>
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589256111/Number%20Of%20Javascript/phuong-thuc-parseInt_-trong-Javascript_jbms2r.png"
+              alt="Phương thức parseInt() trong javascript">
 
+            <p class="mt-4">
+              Nếu như ta có chuỗi là <b>"20 học sinh"</b> và <b>"học sinh thứ 20"</b> thì bạn nghĩ phương thức này có
+              thể chuyển sang kiểu số được không?
+            </p>
+            <p>
+              Để trả lời câu hỏi trên chúng ta thử đi vào ví dụ với hai chuỗi trên để xem sao nhé:
+            </p>
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> console.log(parseInt("20 học sinh"));<br/> console.log(parseInt("học sinh thứ 20"));</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589171386/Method-String-JS/so-sanh-substr_-va-substring_-js_czayjm.png"
-              alt="So sánh substr() với substring() trong chuỗi javascript">
-
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589256455/Number%20Of%20Javascript/chuyen-chuoi-sang-so-parseInt_-trong-Javascript_ugkomm.png"
+              alt="Chuyển chuỗi sang số bằng phương thức parseInt() trong javascript">
             <p class="mt-4">
-              Vậy chúng ta có thể rút ra khi sử dụng 3 phương thức trên với <b>số âm</b> là:
+              Vậy chúng ta có thể rút ra kết luận là đối với chuỗi <b>có số đầu tiên</b> thì phương thức này có thể
+              chuyển sang kiểu <b>number</b> và bỏ các ký tự chữ còn lại.
+              Còn nếu chuỗi <b>có chữ đầu tiên</b> thì nó sẽ trả về kiểu dữ liệu <b>NaN(Not a Number)</b>.
             </p>
-            <table class="table table-dark">
-              <thead>
+            <h5 class="text-white bg-secondary p-2 mt-4 shadow  title-article-size rounded">
+              Phương thức <b>parseFloat()</b> trong Number(Số):
+            </h5>
+            <p>
+              Phương thức <b><code>parseFloat()</code></b> giúp chúng ta chuyển các kiểu dữ liệu khác (chuỗi,
+              boolean...)
+              sang <b>kiểu số số thập phân</b>. Để hiểu rõ hơn bạn xem cú pháp sau nhé:
+            </p>
+            <pre><code class="javascript"> parseFloat(Kiểu dữ liệu ta muốn chuyển sang số thập phân);</code></pre>
+            <p>
+              Bây giờ để hiểu rõ hơn bạn cùng mình xem ví dụ sau đây nhé:
+            </p>
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> console.log(parseFloat("12.65"));<br/> console.log(parseFloat("1.5rem"));<br/> console.log(parseFloat("1.2.6"));</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589257471/Number%20Of%20Javascript/phuong-thuc-parseFloat_-trong-Javascript_jyoq7r.png"
+              alt="Phương thức parseFloat() trong javascript">
+            <h5 class="text-white bg-secondary p-2 mt-4 shadow  title-article-size rounded">
+              Những Cách Viết Khác Number(Số) Trong Javascript:
+            </h5>
+            <p>
+              Ví dụ khi bạn ghi một số có chiều dài quá lớn như đơn vị triệu, đơn vị tỷ thì việc thường nhập sai là
+              điều khó tránh khỏi. Vị dụ như sau đây:
+            </p>
+            <pre><code class="javascript"> let haiTy = 2000000000;</code></pre>
+            <p>
+              Trong Javascript có cho phép chúng ta sử dụng chữ <b>e</b> để xác định có bao nhiều <b>số 0</b>
+              được hiển thị trong number. Để hiểu rõ hơn bạn xem đoạn code sau nhé:
+            </p>
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> let haiTy = 2000000000;<br/> console.log(haiTy);<br/><br/> let haiTyChuyenDoi = 2e9;<br/> console.log(haiTyChuyenDoi);</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589258065/Number%20Of%20Javascript/su-dung-e-trong-number-Javascript_u6phga.png"
+              alt="Sử dụng e trong số  javascript">
+            <p class="mt-4">
+              Ở đây mình sẽ giải thích một tý về cách hoạt động của chữ <b>e</b> trong kiểu dữ liệu số ở dưới đây nhé:
+            </p>
+            <pre><code class="javascript"> 2e9 = 2 * 1000000000; <br/> 1e3 = 1 * 1000;</code></pre>
+
+
+            <h5 class="text-white bg-secondary p-2 mt-4 shadow  title-article-size rounded">
+              Sử Dụng Một Số Phương Thức Math Trong Number(Số) Javascript:
+            </h5>
+            <p class="mt-4">
+              Đầu tiên là mình muốn giới thiệu đến các bạn ba phương thức Math giúp chúng ta có thể dễ dàng làm <b>tròn số</b> là:
+            </p>
+            <table class="table">
+              <thead class="thead-dark">
                 <tr>
-                  <th scope="col">Phương Thức</th>
-                  <th scope="col">Số Âm</th>
+                  <th scope="col"></th>
+                  <th scope="col">Math.floor</th>
+                  <th scope="col">Math.ceil</th>
+                  <th scope="col">Math.round</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>slice()</td>
-                  <td>Chấp nhận số âm cho tất cả tham số.</td>
+                  <th scope="row">Ý Nghĩa</th>
+                  <td>Làm tròn số xuống.</td>
+                  <td>Làm tròn số lên.</td>
+                  <td>Làm tròn tới số gấn nhất.</td>
                 </tr>
                 <tr>
-                  <td>substring()</td>
-                  <td>Các số âm sẽ tự động chuyển sang giá trị là <b>0</b>.</td>
-                </tr>
-                <tr>
-                  <td>substr()</td>
-                  <td>Chấp nhận tham số đầu tiên là số âm.</td>
+                  <th scope="row">Cú Pháp</th>
+                  <td>Math.floor(Số)</td>
+                  <td>Math.ceil(Số)</td>
+                  <td>Math.round(Số)</td>
                 </tr>
               </tbody>
             </table>
+            <p class="mt-4">
+              Bây giờ để hiểu rõ hơn chúng ta đi vào  ví dụ cụ thể sau nhé:
+            </p>
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> let so1 = 4.1;<br/> let so2 = 4.6;<br/><br/> console.log(`Sử dụng Math.floor với số ${so1} : ` + Math.floor(so1));<br/> console.log(`Sử dụng Math.floor với số ${so2} : ` + Math.floor(so2));<br/><br/> console.log(`Sử dụng Math.ceil với số ${so1} : ` + Math.ceil(so1));<br/> console.log(`Sử dụng Math.ceil với số ${so2} : ` + Math.ceil(so2));<br/><br/> console.log(`Sử dụng Math.round với số ${so1} : ` + Math.round(so1));<br/> console.log(`Sử dụng Math.round với số ${so2} : ` + Math.round(so2)); </code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589273387/Number%20Of%20Javascript/su-dung-math-trong-number-Javascript_e4zeql.png"
+              alt="Sử dụng Math() trong số  javascript">
+            <p class="mt-4">
+              Tùy vào trường hợp thực tế mà bạn lựa chọn phương thức làm tròn số cho hợp lý nhé.
+            </p>
+            <p class="text-primary">
+              Sử Dụng Math.random():
+            </p>
+            <p>Tạo một số <b>ngẫu nhiên</b> từ 0 đến 1 (không có số 1 nhé). Bây giờ để hiểu rõ hơn bạn xem đoạn cod sau nhé:</p>
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> console.log(Math.random());<br/> console.log(Math.random()); </code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589274011/Number%20Of%20Javascript/su-dung-math.random_-trong-number-Javascript_gofdg4.png"
+              alt="Sử dụng Math.random() trong số  javascript">
+            <p class="mt-4 text-primary">
+              Sử Dụng Math.max() và Math.min():
+            </p>
+            <p>
+              Giúp chúng ta trả về giá trị lơn nhất hay nhỏ nhất với các số đã cho. Để hiểu rõ hơn bạn xem cú pháp sau nhé:
+            </p>
+            <pre><code class="javascript"> Math.max(Số 1, Số 2, Số 3... Số n)<br/> Math.min(Số 1, Số 2, Số 3... Số n)</code></pre>
+            <p>
+              Bây giờ để hiểu rõ hơn chúng ta cùng di vào ví dụ sau nhé:
+            </p>
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> let soLonNhat = Math.max(20, 50, 44, 60, 90, 80);<br/> let soNhoNhat = Math.min(20, 50, 44, 60, 90, 80);<br/><br/> console.log(`Số lớn nhất là : ${soLonNhat}`)<br/> console.log(`Số nhỏ nhất là : ${soNhoNhat}`)</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589274450/Number%20Of%20Javascript/math.min-math.max-trong-number-Javascript_lulq4w.png"
+              alt="Sử dụng Math.min() và Math.max() trong số  javascript">
 
-            <h5 class="text-white bg-secondary p-2 shadow mt-4 title-article-size rounded">
-              Phương thức <b>trim()</b> trong Chuỗi(String):
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <h5 class="text-white bg-secondary p-2 mt-4 shadow  title-article-size rounded">
+              Chuển đổi Number(Số) Sang Kiểu Chuỗi Trong Javascript:
             </h5>
             <p>
-              Phương thức này giúp chúng ta loại bỏ những khoảng trắng phía trước và sau của chuỗi.
-              Để hiểu rõ hơn bạn xem ví dụ cụ thể sau đây nhé:
+              Thông thường chúng ta sẽ sử dụng phương pháp <b><code>toString()</code></b> để chuyển đổi
+              kiểu dữ liệu từ số sang chuỗi. Nhưng trong phần này mình muốn giới thiệu thêm về phương thức
+              <b><code>toString</code></b> khi sử dụng
+              với <b>tham số</b>. Để hiểu rõ hơn bạn xem cú pháp sau nhé:
             </p>
-            <pre><code class="javascript"> let chuoi = "     Xin Chào     ";<br/> let chuoiCon = chuoi.trim();<br/><br/> console.log(chuoi);<br/> console.log(chuoiCon);</code></code></pre>
-
+            <pre><code class="javascript"> (Number).toString(Tham Số);</code></pre>
+            <p>
+              Với <b>tham số</b> ở đây nằm trong khoảng từ <b>2 đến 36</b> và thông thường chúng ta sẽ sử dụng
+              các tham số dưới đây để sử dụng trong hệ thống số là:
+              <ul>
+                <li>
+                  Phương thức <b><code>toString()</code></b> nếu không có tham số thì sẽ mặc định là <b>10</b>.
+                </li>
+                <li>
+                  <b>tham số = 2</b> thì được dùng để hiển thị số dưới dạng nhị phân(Chỉ bao gồm số 0 và số 1).
+                </li>
+                <li>
+                  <b>tham số = 8</b> được dùng để hiển thị số bát phân.
+                </li>
+                <li>
+                  <b>tham số = 16</b> được dùng để hiển thị hex color, mã hóa ký tự...
+                </li>
+                <li>
+                  <b>tham số = 32</b> được dùng để hiển thị số thông qua các chữ cái latin.
+                </li>
+              </ul>
+            </p>
+            <p>
+              Nếu thấy khó hiểu cũng không sao nha vì mình viết thêm phần này để giúp bạn tham khảo
+              chứ đối với lập trình web bình thường cũng ít khi sử dụng tới nha. Bây giờ chúng ta cùng nhau đi vào tìm
+              hiểu
+              ví dụ thực tế sau đây nhé:
+            </p>
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> let num = 140;<br/> console.log(num.toString(2));<br/> console.log(num.toString(8));<br/> console.log(num.toString(16));<br/> console.log(num.toString(32));<br/> console.log(num.toString(10));//Sử dụng mặc định</code></pre>
             <p class="mt-4">
-              Bạn xem kết quả bên dưới nhé:
+              <mark class="p-1"><b>Kết Quả:</b></mark>
             </p>
-
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589179546/Method-String-JS/su-dung-trim-js_h7akzv.png"
-              alt="Phương thức trim() trong chuỗi javascript">
-              <h5 class="text-white bg-secondary p-2 shadow mt-4 title-article-size rounded">
-                Phương thức <b>replace()</b> trong Chuỗi(String):
-              </h5>
-              <p>
-                Phương thức này giúp bạn thay thế  giá trị   trong chuỗi bằng một giá trị mới nếu thỏa mãn một biểu thức 
-                hay một chuỗi mà chúng ta đưa vào.
-                Để hiểu rõ hơn bạn xem cú pháp sau nhé:
-              </p>
-              <pre><code class="javascript"> (Chuỗi).replace(Chuỗi cần thay thế, Chuỗi thay thế);</code></pre>
-              <p>
-                Để dễ hình dung hơn bạn xem ví dụ sau đây nhé:
-              </p>
-              <pre><code class="javascript"> let chuoi = "Xin Chào Thế Giới";<br/> let chuoiCon = chuoi.replace("Thế Giới", "Các Bạn");<br/><br/> console.log(chuoiCon);</code></pre>
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589272042/Number%20Of%20Javascript/su-dung-toString_-trong-number-Javascript_p4unir.png"
+              alt="Sử dụng tham số với toString() trong số  javascript">
 
-              <p class="mt-4">
-                Bạn xem kết quả bên dưới nhé:
-              </p>
-  
-              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589180620/Method-String-JS/su-dung-replace_-trong-chuoi-js_pdlyxl.png"
-                alt="Phương thức replace() trong chuỗi javascript">
-              <p class="mt-4">
-               Ngoài ra chúng ta cũng có thể sử dụng <b>biểu thức chính quy(regular expressions ) </b> để tìm  chuỗi con phù hợp  mà chúng ta muốn thay thế.
-               Phần này mình sẽ có một bài riêng để nói về nó nha. Bây giờ chúng ta hãy cùng nhau tìm hiểu thông qua ví dụ thực tế sau đây nhé:
 
-              </p>
-              <pre><code class="javascript"> let chuoi = "Xin Chào Thế Giới";<br/> let chuoiCon = chuoi.replace(/Thế Giới/g, "Các Bạn");<br/><br/> console.log(chuoiCon);</code></pre>
 
-              <p class="mt-4">
-                Bạn xem kết quả bên dưới nhé:
-              </p>
-  
-              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589181555/Method-String-JS/su-dung-regex-trong-replace_-trong-chuoi-js_xbo7zc.png"
-                alt="Phương thức replace() với regex trong chuỗi javascript">
-              <p class="mt-4">
-               Một điều bạn cần lưu ý là  nếu tìm kiếm theo chuỗi thì phương thức này sẽ <b>phân biệt chữ in hoa và chữ in thường</b>. Ngoài ra nó cũng chỉ thay thế <b>giá trị đầu tiên</b> phù hợp được tìm thấy  ở trong chuỗi.
-               Để nắm rõ hơn bạn xem đoạn code sau nhé:
-              </p>
-              <pre><code class="javascript"> let chuoi = "Xin Chào Thế Giới! Chúc Thế Giới Có Một Ngày Vui Vẻ!";<br/><br/> console.log(chuoi.replace('Thế Giới', 'Các Bạn'));/*Chỉ thay thế giá trị đầu tiên phù hợp*/<br/> console.log(chuoi.replace('thế giới', 'Các Bạn'));/*Phân biệt chữ in hoa và in thường*/</code></pre>
-              <p class="mt-4">
-                Bạn xem kết quả bên dưới nhé:
-              </p>
-  
-              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589182459/Method-String-JS/loi-khi-dung-replace_-trong-chuoi-js_p2yhzk.png"
-                alt="Lỗi Khi Dùng Phương thức replace() trong chuỗi javascript">
 
-                <h5 class="text-white bg-secondary p-2 shadow mt-4 title-article-size rounded">
-                  Phương thức <b>includes()</b> trong Chuỗi(String):
-                </h5>
-                <p>
-                  Giúp chúng ta kiểm tra xem chuỗi có <b>chứa</b> chuỗi con ở trong nó hay không? Với giá trị mà phương thức 
-                  này trả về sẽ là <b><code>true</code></b> hoặc <b><code>false</code></b>.
-                  Để hiểu rõ hơn chúng ta sẽ đi vào ví dụ thực tế nhé:
-                </p>
-                <pre><code class="javascript"> let chuoi = "Xin Chào Các Bạn";<br/> let chuoiCon1 = chuoi.includes("Bạn");<br/> let chuoiCon2 = chuoi.includes("Mình");<br/><br/> console.log(chuoiCon1);<br/> console.log(chuoiCon2);</code></pre>
-                <p class="mt-4">
-                  Bạn xem kết quả bên dưới nhé:
-                </p>
-    
-                <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589182871/Method-String-JS/Su-dung-includes_-trong-chuoi-js_dqhl10.png"
-                  alt="Phương thức includes() trong chuỗi javascript">
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -418,7 +427,7 @@
             <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
 
 
-            <p>Qua đây mình mong bài viết sẽ giúp bạn hiểu được cách <b>sử dụng các phương thức đối với chuỗi</b>
+            <p>Qua đây mình mong bài viết sẽ giúp bạn hiểu được cách <b>sử dụng các phương thức đối với số</b>
               trong ngôn ngữ
               Javascript và
               nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất
