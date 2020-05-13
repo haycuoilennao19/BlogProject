@@ -26,7 +26,7 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i>Array (Mảng) Trong Javascript</h2>
+                  aria-hidden="true"></i> Các Phương Thức Array (Mảng) Trong Javascript</h2>
             </div>
           </div>
 
@@ -36,306 +36,310 @@
             </div>
           </div>
           <div class="text-content-article mt-5">
-            <p><i>Hôm nay bạn hãy cùng mình đi vào tìm hiểu khái niệm cũng như cách sử dụng với kiểu dữ liệu array (mảng) trong
+            <p><i>Hôm nay bạn hãy cùng mình đi vào tìm hiểu cách sử dụng các phương thức với kiểu dữ liệu array (mảng)
+                trong
                 ngôn
                 ngữ lập trình Javascript để phát triển web nhé.</i>
             </p>
 
-            <div class="row"> 
+            <div class="row">
               <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h4 class="text-primary ml-4 title-article-size">Array (Mảng) Trong Javascript</h4>
+                <h4 class="text-primary ml-4 title-article-size">Các Phương Thức Array (Mảng) Trong Javascript</h4>
               </div>
             </div>
             <p>
-              <b>Mảng (Array)</b> là một nơi  cho phép chúng ta lưu trữ nhiều giá trị theo thứ tự nhất định trong một biến duy nhất.<br/>
-              Nó có thể chứa nhiều giá trị với <b>kiểu dữ liệu khác nhau</b> như là chuỗi, số, đối tượng... và chiều dài của 
-              mảng có thể <b>tự động tăng lên hay giảm xuống</b> khi chúng ta thực hiện thêm hay xóa các phần tử trong mảng.<br/>
-              Vị trí của các phần tử trong mảng sẽ bắt đầu <b>từ số 0</b> nhé.
+              Trong bài này chúng ta sẽ đi vào tìm hiểu cách sử dụng các phương thức đối với kiểu dữ liệu mảng
+              ở phía bên dưới nhé!
             </p>
-            <p>
-              Ví dụ chúng ta có nhiều biến như đoạn code sau đây:
-            </p>
-            <pre><code class="javascript"> let mauSac1 = 'xanh';<br/> let mauSac2 = 'đỏ';<br/> let mauSac3 = 'cam';</code></pre>
-            <p>
-              Việc lưu trữ giá trị biến như vậy sẽ làm bạn khó khăn trong việc tìm kiếm, sử dụng biến và 
-              gây hao phí bộ nhớ. Thì lúc này sử dụng array(mảng) là một giải pháp phù hợp. Bây giờ để hiểu rõ hơn bạn cùng mình đi  tìm 
-              hiểu nhé!
-            </p>
-            
+
             <h5 class="text-white bg-secondary p-2 shadow  title-article-size rounded">
-              Cách Tạo <b>Array (Mảng)</b> Trong Javascript:
+              Phương thức push() trong Array Javascript:
             </h5>
 
             <p class="mt-4">
-              Thông thường chúng ta có hai cách tạo mảng trong javascript là sử dụng từ khóa <b>new</b> hoặc 
-              dấu <b>[]</b>. Để hiểu rõ hơn chúng ta đi vào tìm hiểu cú pháp của từng cách trên nhé: 
+              Phương thức <b><code>push()</code></b> cho phép chúng ta <b>thêm</b> một hay nhiều phần tử con vào
+              <b>vị trí cuối cùng</b> của mảng. Khi bạn sử dụng phương thức này thì <b>độ dài</b> của mảng cũng thay đổi nha.
+              Bây giờ để hiểu rõ hơn chúng ta đi vào cú pháp của nó ở bên dưới nhé:
             </p>
-            <h6 class="text-primary"><b><u>Sử dụng từ khóa <b>new</b> để tạo mảng</b>:</u></h6>
+            <p class="text-primary">Cú Pháp:</p>
+            <pre><code class="javascript"> (Tên Mảng).push(Phần tử 1, Phần tử 2... Phần tử n);</code></pre>
             <p>
-              Bây giờ chúng ta đi vào cú phép của nó nhé:
+              Để hiểu rõ hơn chúng ta sẽ đi vào ví dụ thêm các phần tử cho mảng bằng phương thức <b><code>push()</code></b> ở dưới đây nhé:
             </p>
-            <pre><code class="javascript"> let mang = new Array();</code></pre>
             <p>
-              Sau khi đã khai báo một biến với kiểu dữ liệu thì chúng ta sẽ đi vào <b>cách thêm phần tử</b>
-              cho mảng thông qua ví dụ dưới đây nhé:
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
             </p>
+            <pre><code class="javascript"> let mang = [];<br/> mang.push(4);<br/> mang.push(5);<br/> mang.push(6);<br/><br/> console.log(mang);</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589338157/Method-Array-JS/phuong-thuc-push_-trong-array_shfp6u.png"
+              alt="Phương thức push() trong array(mảng) javascript">
+            <p class="mt-4">
+              Nếu thêm từng phần tử cho mảng như vậy sẽ mất nhiều thời gian và công sức nên bây giờ chúng ta sẽ đi vào tìm hiểu 
+              cách <b>thêm nhiều phần tử</b> trong mảng bằng phương thức <b><code>push()</code></b> ở dưới đây nhé:
+            </p>
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> let mang = [];<br/> mang.push(4,5,6);<br/><br/> console.log(mang);</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589338498/Method-Array-JS/them-nhieu-phan-tu-push_-trong-array_ixv941.png"
+              alt="Thêm nhiều phần tử bằng phush() trong Array(mảng) JS">
 
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> let mang = new Array(4, 5, 6);<br/> console.log(mang);</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589291114/Array-Trong-JS/khai-bao-mang-bang-new-js_fff3nv.png"
-              alt="Khai bảo mảng bằng new Array trong javascript">
-            <p class="mt-4">
-              Ngoài ra chúng ta cũng có thể  thiết lập 
-              <b>chiều dài trước</b> cho mảng mà không cần thêm các phần tử bằng cách sử dụng <b>1 tham số</b>
-             trong  cách khai báo này. Để hiểu rõ hơn bạn 
-              xem đoạn cú pháp  sau nhé:
-            </p>
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> let mang = new Array(5);<br/> console.log(mang);<br/> console.log(mang.length)</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589291578/Array-Trong-JS/thiet-lap-do-dai-truoc-cho-mang-js_xrl48r.png"
-              alt="Thiết lập độ dài trước cho mảng trong javascript">
-            <p class="mt-4">
-              Chúng ta cũng có thể sử dụng <b>các kiểu dữ liệu khác</b> cho  phần tử trong mảng ở ví dụ dưới đây nhé:
-            </p>
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> let mang = new Array("Xin Chào", false);<br/> console.log(mang);</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589291813/Array-Trong-JS/khai_bao-kieu-du-lieu-khac-cho-mang-js_wz1mcw.png"
-              alt="Khai báo các kiểu dữ liệu khác cho mảng trong javascript">
-
-              <h6 class="text-primary mt-4"><b><u>Sử dụng dấu <b>[]</b> để tạo mảng</b>:</u></h6>
-            <p>
-              Cách này thì thường được sử dụng nhiều trong việc khởi tạo mảng trong javascript vì tính 
-              nhanh, gọn và đơn giản của nó. Chúng ta cùng tìm hiểu cú pháp của nó sau đây nhé:
-            </p>
-            <pre><code class="javascript"> let mang = [phần tử 1, phần tử 2, phần tử 3... phần tử n]</code></pre>
-            <p>
-              Bây giờ để hiểu rõ hơn chúng ta sẽ đi vào cách thêm các phần tử cho nó nhé:
-            </p>
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> let mang = ["xanh", "đỏ", "cam"];<br/> console.log(mang);</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589292228/Array-Trong-JS/khai_bao-kieu-_-cho-mang-js_bnzkxl.png"
-              alt="Khai báo  cho mảng bằng dấu [] trong javascript">
-            <p class="mt-4">
-              Chúng ta cũng có thể khai báo một <b>mảng rỗng</b> với cách này như sau:
-            </p>
-            <pre><code class="javascript"> let mang = [];</code></pre>
-
-            <h5 class="text-white bg-secondary p-2 shadow  mt-4 title-article-size rounded">
-              Cách truy cập các phần tử trong  <b>Array (Mảng)</b> Javascript:
-            </h5>
-            <p>
-              Bạn có thể truy cập để lấy dữ liệu các phần tử bằng cách sử dụng dấu <b><code>[]</code></b> 
-              kết hợp với <b>vị trí chỉ mục</b> của phần tử trong mảng. Bạn lưu ý là thành phần đầu tiên trong mảng 
-              sẽ có vị trí chỉ mục là 0 nha. Để dễ hình dung bạn xem ví dụ sau đây nhé:
-            </p>
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> let mang = ["Màu Xanh", "Màu Đỏ", "Màu Cam"];<br/><br/> console.log("Màu thứ nhất là: " + mang[0]);<br/> console.log("Màu thứ hai là: " + mang[1]);<br/> console.log("Màu thứ ba là: " + mang[2]);</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589292889/Array-Trong-JS/truy-cap-phan-tu-trong-mang-js_wmim0m.png"
-              alt="Truy cập phần tử trong mảng javascript">
-            <p class="mt-4">
-              Ở ví dụ trên chúng ta có chiều dài của mảng là 3 và vị trí chỉ mục chỉ mục của các phần tử  
-              là <b>từ 0 tới 2</b>. Như vậy để truy cập giá trị của mảng thì:<br/>
-                <b><code>(Tên biến mảng)[Vị trí chỉ mục phần tử]</code></b>
-            </p>
-            <p>
-              Vậy nếu như chúng ta truy cập phần tử mà <b>không tồn tại</b> trong mảng thì sao nhỉ?
-            </p>
-            <p>
-              Trước khi biết kết quả thì bạn xem đoạn code sau đây nhé:
-            </p>
-
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> let mang = ["Màu Xanh", "Màu Đỏ", "Màu Cam"];<br/><br/> console.log(mang[100]);</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589293488/Array-Trong-JS/loi-khitruy-cap-phan-tu-trong-mang-js_dvtusq.png"
-              alt="Lỗi khi truy cập phần tử trong mảng javascript">
-            <p class="mt-4">
-              Như bạn thấy thì kết quả sẽ trả về <b>undefined</b> khi không tồn tại phần tử trong mảng.
-            </p>
-
-            <h6 class="text-primary"><b><u>Cách thay đổi giá trị cho phần tử trong mảng</b>:</u></h6>
-            <p>
-              Để thay đổi giá trị của phần tử trong mảng thì chúng ta sẽ sử dụng theo cú pháp sau nhé:
-            </p>
-            <pre><code class="javascript"> (Tên Mảng)[Vị trí chỉ mục] = Giá trị thay thế</code></pre>
-            <p>
-              Để hiểu rõ hơn chúng ta cùng nhau đi vào ví dụ thực tế sau đây nhé:
-            </p>
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> let mang = ["Màu Xanh", "Màu Đỏ", "Màu Cam"];<br/><br/> mang[1] = "Màu Vàng";<br/> console.log(mang);</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589294670/Array-Trong-JS/thay-doi-gia-tri-phan-tu-trong-mang-js_rrydsn.png"
-              alt="Thay đổi giá trị phần tử trong mảng javascript">
-            <p class="mt-4">
-              Vậy nếu chúng ta gán giá trị cho <b>vị trí chỉ mục không tồn tại</b> thì sao nhỉ?
-            </p>
-            <p>
-              Để giải quyết vấn đề trên bạn xem đoạn code sau đây nhé:
-            </p>
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> let mang = ["Màu Xanh", "Màu Đỏ", "Màu Cam"];<br/><br/> mang[100] = "Màu Vàng";<br/> console.log(mang);</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589294904/Array-Trong-JS/gan-gia-tri-phan-tu-trong-mang-js_g5ptng.png"
-              alt="Gán giá trị phần tử trong mảng javascript">
-            <p class="mt-4">
-              Như vậy ngoài các phần tử có sẵn thì nó sẽ thêm các phần tử rỗng đến vị trí chỉ mục <b>100</b> để thêm giá trị vào mảng.
-            </p>
-            <p>
-              Cách sử dụng kiểu dữ liệu <b>object (đối tượng)</b> ở trong mảng:
-            </p>
-            <p>
-              Để dễ hình dung thì bạn xem cách chúng ta thêm đối tượng cũng như cách sử dụng phần tử này trong mảng ở 
-              ví dụ dưới đây nhé: 
-            </p>
-            
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> let mang = [4, {so: 5}, 6];<br/><br/> /*Cách lấy giá trị phần tử object*/<br/> console.log(mang[1].so);</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589295499/Array-Trong-JS/phan-tu-object-trong-mang-js_epi1oz.png"
-              alt="Sử dụng phần tử object trong mảng javascript">
-            <p class="mt-4">
-              Cách chúng ta lấy giá trị của phần tử object là:<br/>
-              <b><code>(Tên mảng)[(Vị trí chỉ mục phần tử object).(thuộc tính phần tử)]</code></b>
-            </p>
-
-            <h5 class="text-white bg-secondary p-2 shadow  mt-4 title-article-size rounded">
-              Cách kiểm tra một biến có phải là   <b>Array (Mảng)</b> không?
-            </h5>
-            <p>
-              Thông thường khi chúng ta muốn kiểm tra kiểu dữ liệu thì thường sử dụng lệnh <b>typeof</b>,
-              vậy để xem lệnh này kiểm tra được kiểu dữ liệu mảng trong javascript không nhé?
-            </p>
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> let mang = [4, 5, 6];<br/><br/> console.log(typeof mang);</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589296301/Array-Trong-JS/lenh-typeof-trong-mang-js_yz2oki.png"
-              alt="Sử dụng typeof trong mảng javascript">
-            <p class="mt-4">
-              Như bạn thấy thì kết quả sẽ trả về khi sử dụng <b>typeof</b> đối với mảng là <b>kiểu dữ liệu object</b>. Vậy chúng ta 
-              có cách nào để kiểm tra kiểu dữ liệu một biến là mảng?
-            </p>
-            <p>
-              Ở đây bạn nên sử dụng phương thức <b><code>Array.isArray()</code></b> để kiểm tra kiểm dữ liệu mảng cho biến với 
-              giá trị trả về là <b><code>true</code></b> hoặc <b><code>false</code></b>.
-              Để hiểu rõ hơn bạn xem ví dụ sau đây nhé:
-            </p>
-
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> let mang = [4, 5, 6];<br/><br/> console.log(Array.isArray(mang));</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589296722/Array-Trong-JS/lenh-isArraytrong-mang-js_agjtls.png"
-              alt="Sử dụng isArray() trong mảng javascript">
-              <h5 class="text-white bg-secondary p-2 shadow  mt-4 title-article-size rounded">
-                Cách chuyển  từ  <b>Array (Mảng)</b> sang chuỗi bằng toString():
+              <h5 class="text-white bg-secondary p-2 shadow mt-4 title-article-size rounded">
+                Phương thức pop() trong Array Javascript:
               </h5>
-
-              <p>
-                Chúng ta có thể chuyển kiểu dữ liệu từ mảng sang chuỗi bằng phương thức <b><code>toString()</code></b>
-                với các phần tử trong mảng sẽ được ngăn bằng dấu <b><code>,</code></b> ở trong chuỗi. Để hiểu rõ hơn bạn xem đoạn code sau nhé:
+              <p class="mt-4">
+                Phương thức <b><code>pop</code></b> giúp chúng ta <b>xóa phần tử</b> ở vị trí <b>cuối mảng</b> 
+                và sẽ trả về kết quả phần tử bị xóa nếu nó được gọi. Để hiểu rõ hơn bạn xem cú pháp nó nhé:
               </p>
-             
+              <p class="text-primary">Cú Pháp:</p>
+              <pre><code class="javascript"> (Tên Mảng).pop();</code></pre>
+              <p>
+                Để hiểu rõ hơn chúng ta sẽ đi vào ví dụ xóa các phần tử trong mảng bằng phương thức <b><code>pop()</code></b> ở dưới đây nhé:
+              </p>
               <p>
                 <mark class="p-1"><b>Đoạn Code:</b></mark>
               </p>
-              <pre><code class="javascript"> let mang = ["Màu Xanh", "Màu Đỏ", "Màu Cam"];<br/> let chuoi = mang.toString();<br/><br/> console.log(chuoi);<br/> console.log(typeof chuoi);</code></pre>
+              <pre><code class="javascript"> let mang = [4, 5, 6];<br/> mang.pop();<br/> console.log("Mảng còn lại là: " + mang);<br/><br/> mang.pop();<br/> console.log("Mảng còn lại là: " + mang);</code></pre>
               <p class="mt-4">
                 <mark class="p-1"><b>Kết Quả:</b></mark>
               </p>
               <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589297175/Array-Trong-JS/su-dung-toString_-trong-mang-js_lilu8v.png"
-                alt="Sử dụng toString() trong mảng javascript">
-                <h5 class="text-white bg-secondary p-2 shadow  mt-4 title-article-size rounded">
-                  Sử dụng length trong  <b>Array (Mảng)</b> Javascript:
-                </h5>
+                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589339306/Method-Array-JS/phuong-thuc-pop_-trong-array_p1l0ft.png"
+                alt="Phương thức pop() trong array(mảng) javascript">
+             <p class="mt-4">
+               Nếu chúng ta sử dụng phương thức <b><code>pop()</code></b> với mảng <b>rỗng</b> thì bạn nghĩ sẽ trả về kết quả thế nào nhỉ?
+             </p>
+             <p>
+               Để trả lời câu hỏi trên chúng ta thử đi vào viết đoạn code để thử xem kết quả sao nhé:
+             </p>
+             <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> let mang = [];<br/> console.log(mang.pop());</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589339770/Method-Array-JS/su-dung-pop_-voi-mang-rong-trong-array_sceae3.png"
+              alt="Phương thức pop() với mảng rỗng trong array(mảng) javascript">
+            <p class="mt-4">
+              Kết quả trả về sẽ là <b>undefined</b> khi chúng ta sử dụng phương thức <b><code>pop()</code></b> với mảng rỗng.
+            </p>
+            <p>
+              Bây giờ ta sẽ đi vào tìm hiểu <b>cách lấy giá trị</b> của một phần tử xóa bằng phương thức <b><code>pop()</code></b>
+              thông qua ví dụ dưới đây nhé:
+            </p>
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> let mang = [4, 5, 6];<br/> let phanTuBiXoa =  mang.pop();<br/><br/> console.log(mang);<br/> console.log(mang.length);<br/> console.log("Giá trị phần tử bị xóa: " + phanTuBiXoa)</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589340484/Method-Array-JS/lay-gia-tri-khi-dung-pop-trong-array_j942hk.png"
+              alt="Lấy giá trị phương thức pop()  trong array(mảng) javascript">
+              <h5 class="text-white bg-secondary p-2 shadow mt-4 title-article-size rounded">
+                Phương thức unshift() trong Array Javascript:
+              </h5>
+              <p class="mt-4">
+                Phương thức <b><code>unshift</code></b> giúp chúng ta <b>thêm</b> một hay nhiều hay phần tử 
+                vào <b>vị trí đầu</b> của mảng. Để hiểu rõ hơn bạn xem cú pháp sau nhé: 
+              </p>
+              <p class="text-primary">Cú Pháp:</p>
+              <pre><code class="javascript"> (Tên Mảng).unshift(Phần tử 1, Phần tử 2... Phần tử n)</code></pre>
+              <p>
+                Bây giờ để nắm rõ hơn chúng ta sẽ đi vào cách thêm một hay nhiều phần tử trong mảng bằng phương thức 
+                <b><code>unshift()</code></b> ở ví dụ dưới đây nhé:
+              </p>
+              <p>
+                <mark class="p-1"><b>Đoạn Code:</b></mark>
+              </p>
+              <pre><code class="javascript"> let mang = [];<br/> /*Thêm 1 Phần tử*/<br/> mang.unshift(4);<br/> console.log(mang)<br/><br/> /*Thêm nhiều phần tử cho mảng*/<br/> mang.unshift(5,6);<br/> console.log(mang);</code></pre>
+              <p class="mt-4">
+                <mark class="p-1"><b>Kết Quả:</b></mark>
+              </p>
+              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589341114/Method-Array-JS/phuong-thuc-unshift_-trong-array_viyhpl.png"
+                alt="Phương thức unshift() trong array (mảng) js">
+              <p class="mt-4">
+                Chúng ta cũng có thể kết hợp hai phương thức <b><code>unshift()</code></b> và <b><code>push()</code></b>
+                để thêm các phần tử trong mảng. Để hiểu rõ hơn bạn xem ví dụ sau đây nhé:
+              </p>
 
-                <p class="mt-4">
-                  Khi sử dụng mảng với thuộc tính <b><code>length</code></b>, nó sẽ trả về <b>độ dài</b> của các phần tử được chứa trong mảng.
-                  Để hiểu rõ hơn bạn xem ví dụ sau nhé:
+              <p>
+                <mark class="p-1"><b>Đoạn Code:</b></mark>
+              </p>
+              <pre><code class="javascript"> let mang = [8];<br/> mang.unshift(6, 7);<br/> mang.push(9, 10);<br/><br/> console.log(mang);</code></pre>
+              <p class="mt-4">
+                <mark class="p-1"><b>Kết Quả:</b></mark>
+              </p>
+              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589341455/Method-Array-JS/ket-hop-unshift-push-trong-array_fvkwbe.png"
+                alt="Kết hợp unshift() và push() trong array (mảng) js">
+                <h5 class="text-white bg-secondary p-2 shadow mt-4 title-article-size rounded">
+                  Phương thức shift() trong Array Javascript:
+                </h5>
+                <p>
+                  Phương thức <b><code>shift()</code></b> sẽ giúp chúng ta xóa <b>phần tử</b> ở vị trí <b>đầu tiên</b> trong mảng. Để hiểu rõ hơn bạn xem cú pháp sau nhé: 
+                </p>
+                <p class="text-primary">
+                  Cú Pháp:
+                </p>
+                <pre><code class="javascript"> (Tên Mảng).shift();</code></pre>
+                <p>
+                  Bây giờ chúng ta sẽ cùng nhau đi vào ví dụ thực tế để hiểu rõ hơn về nó nhé:
                 </p>
                 <p>
                   <mark class="p-1"><b>Đoạn Code:</b></mark>
                 </p>
-                <pre><code class="javascript"> let mang = ["Màu Xanh", "Màu Đỏ", "Màu Cam"];<br/> console.log(mang.length);</code></pre>
+                <pre><code class="javascript"> let mang = [4, 5];<br/> mang.shift();<br/> console.log(mang)<br/><br/> mang.shift();<br/> console.log(mang)</code></pre>
                 <p class="mt-4">
                   <mark class="p-1"><b>Kết Quả:</b></mark>
                 </p>
                 <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589335271/Array-Trong-JS/su-dung-length-trong-mang-js_ywfade.png"
-                  alt="Sử dụng length trong mảng javascript">
+                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589341955/Method-Array-JS/phuong-thuc-shift-trong-array_klgwhg.png"
+                  alt="Phương thức shift() trong array (mảng) js">
                 <p class="mt-4">
-                  Ngoài ra chúng ta cũng có thể dùng thuộc tính <b>length</b> để <b>xác định trước độ dài</b> của các phần tử sẽ nằm trong chuỗi với giá trị mỗi phần tử là 
-                  <b>undefined</b>. Để dễ hình dung bạn xem đoạn code sau nhé:
+                  Bây giờ chúng ta thử xóa phần tử với <b>mảng rỗng</b> bằng phương thức <b><code>shift()</code></b> xem nó có trả về giá trị <b>undefined</b>
+                  như phương thức <b><code>pop()</code></b> không nhé:
                 </p>
                 <p>
                   <mark class="p-1"><b>Đoạn Code:</b></mark>
                 </p>
-                <pre><code class="javascript"> let mang = [];<br/> mang.length = 10;<br/> console.log(mang);<br/> console.log("Giá trị là :" + mang[5]);</code></pre>
+                <pre><code class="javascript"> let mang = [];<br/> mang.shift();<br/> console.log(mang);</code></pre>
                 <p class="mt-4">
                   <mark class="p-1"><b>Kết Quả:</b></mark>
                 </p>
                 <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589335598/Array-Trong-JS/xac-dinh-length-trong-mang-js_rwazdn.png"
-                  alt="Xác định đỗ dài trong mảng javascript">
+                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589342168/Method-Array-JS/phuong-thuc-shift-voi-mang-rong-trong-array_ab5uyb.png"
+                  alt="Phương thức shift() với mảng rỗng trong array (mảng) js">
+                <p class="mt-4">
+                  Như bạn thấy thì kết quả trả về vẫn là <b>mảng rỗng</b> khi ta sử dụng xóa phần tử với phương thức <b><code>shift()</code></b>.
+                </p>
+
+                <h5 class="text-white bg-secondary p-2 shadow title-article-size rounded">
+                  Sử dụng vòng lặp với  Array Javascript:
+                </h5>
+                <p>
+                  Thông thường chúng ta thường cần lấy hay lọc dữ liệu trong mảng thì việc sử dụng vòng lặp là cách tối ưu 
+                  giúp chúng ta giải quyết vấn đề trên. Sau đây mình sẽ giới thiệu đến các bạn vòng lặp thông dụng 
+                  hay được sử dụng đối với mảng ở dưới đây nhé.
+                </p>
+
+                <h6 class="text-primary"><b><u>Sử dụng vòng lặp for:</u></b></h6>
+                <p>
+                  Để dễ hình dung chúng ta cùng nhau đi vào ví dụ thực tế để lấy giá trị các phần tử trong mảng 
+                  thông qua vòng lặp <b>for</b> ở dưới đây nhé:
+                </p>
+                <p>
+                  <mark class="p-1"><b>Đoạn Code:</b></mark>
+                </p>
+                <pre><code class="javascript"> let mang = [4, 5, 6];<br/> for(let i=0; i < mang.length; i++){ <br/> &nbsp;&nbsp;console.log("Giá trị là " + mang[i]);<br/>&nbsp;}<br/></code></pre>
+                <p class="mt-4">
+                  <mark class="p-1"><b>Kết Quả:</b></mark>
+                </p>
+                <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589355041/Method-Array-JS/vong-lap-for-voi-mang-js_dhqhzd.png"
+                  alt="Sử dụng vòng lặp for với  array (mảng) js">
+
+                  <h6 class="text-primary mt-4"><b><u>Sử dụng vòng lặp for-of:</u></b></h6>
+                <p>
+                 Bây giờ chúng ta sẽ đi vào ví dụ lấy dữ liệu  trong mảng thông qua vòng lặp <b>for-of</b> 
+                 ở dưới dây nhé:
+                </p>
+                <p>
+                  <mark class="p-1"><b>Đoạn Code:</b></mark>
+                </p>
+                <pre><code class="javascript"> let mang = [4, 5, 6];<br/> for(let phanTu of mang){ <br/> &nbsp;&nbsp;console.log("Giá trị là " + phanTu);<br/>&nbsp;}<br/></code></pre>
+                <p class="mt-4">
+                  <mark class="p-1"><b>Kết Quả:</b></mark>
+                </p>
+                <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589355729/Method-Array-JS/vong-lap-for-of-voi-mang-js_ehks3j.png"
+                  alt="Sử dụng vòng lặp for-of với  array (mảng) js">
+
+                  <h6 class="text-primary mt-4"><b><u>Sử dụng vòng lặp for-in:</u></b></h6>
+                <p>
+                  Ở bài trước chúng ta có thử dùng <b><code>typeof</code></b> với mảng thì được kết quả <b>mảng  là một  object</b>.
+                  Do đó bạn có thể sử dụng vong lặp <b>for-in</b> để lấy dữ liệu trong mảng thông qua ví dụ dưới đây nhé:
+                </p>
+                <p>
+                  <mark class="p-1"><b>Đoạn Code:</b></mark>
+                </p>
+                <pre><code class="javascript"> let mang = [4, 5, 6];<br/> for(let phanTu in mang){ <br/> &nbsp;&nbsp;console.log("Giá trị là " + mang[phanTu]);<br/>&nbsp;}<br/></code></pre>
+                <p class="mt-4">
+                  <mark class="p-1"><b>Kết Quả:</b></mark>
+                </p>
+                <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589356078/Method-Array-JS/su-dung-vong-lap-for-in-voi-mang-js_g7fjj6.png"
+                  alt="Sử dụng vòng lặp for-in với  array (mảng) js">
+                <p class="mt-4">
+                  Cách gọi <b>mang[phanTu]</b> giúp chúng ta lấy giá trị thuộc tính trong kiểu dữ liệu object. Bạn có thể tham khảo thêm ở đây nhé:
+                  <a href="https://www.niemvuilaptrinh.com/article/Object-Trong-Javascript" title="object trong js">Object trong Javascript</a>.
+                </p>
+                <h5 class="text-white bg-secondary p-2 shadow title-article-size rounded">
+                  Chú ý khi sử dụng Array trong Javascript:
+                </h5>
+                <p>
+                  Như bạn đã biết thì kiểu dữ liệu của mảng là <b>object</b> do đó về cơ bản mảng được xem  là một dạng đặc biệt của 
+                  object.
+                </p>
+                <p>
+                  Ví dụ khi bạn dùng <b>mang[0]</b> thì đó là cách gọi lấy giá trị của object với:
+                  <ul>
+                    <li><b>mang</b> là một object.</li>
+                    <li><b>0</b> là thuộc tính trong object.</li>
+                  </ul> 
+                </p>
+                <p>
+                  Bạn có thể sử dụng các tính chất của object để áp dụng với mảng. Để dễ hình dung chúng ta hãy cùng nhau đi vào tìm hiểu ví dụ ở dưới đây nhé:
+                </p>
+                <p>
+                  <mark class="p-1"><b>Đoạn Code:</b></mark>
+                </p>
+                <pre><code class="javascript"> let mang = [];<br/> mang[0] = "Màu Xanh";<br/> mang.mausac = "Màu Đỏ";<br/><br/> console.log(mang);<br/> console.log(mang["mausac"]);</code></pre>
+                <p class="mt-4">
+                  <mark class="p-1"><b>Kết Quả:</b></mark>
+                </p>
+                <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589357718/Method-Array-JS/array-la-object-trong-js_psfvu1.png"
+                  alt="Kiểu dữ liệu   array (mảng) là object js">
+                <p class="mt-4">
+                  Mình có thêm một lưu ý khác là khi gán hai biến mảng <b>bằng nhau</b> thì  nó sẽ
+                 cùng  <b>tham chiếu</b> đến một địa chỉ lưu giá trị của biến như tính chất của object.
+                  Nếu bạn muốn tham khảo lại phần object thì xem ở đây nhé:
+                  <a href="https://www.niemvuilaptrinh.com/article/So-Sanh-va-Sao-Chep-Object-Trong-Javascript" title="Sao chép object">Object trong javascript</a>.
+                 <br/> Bây giờ để hiểu rõ hơn chúng ta đi vào ví dụ sau đây nhé:
+                </p>
+                <p>
+                  <mark class="p-1"><b>Đoạn Code:</b></mark>
+                </p>
+                <pre><code class="javascript"> let mang = [4, 5, 6];<br/> let mangCopy = mang;/*Gán hai biến mảng bằng nhau*/<br/> console.log(mangCopy);<br/><br/> mang.push(3);<br/> console.log(mangCopy);</code></pre>
+                <p class="mt-4">
+                  <mark class="p-1"><b>Kết Quả:</b></mark>
+                </p>
+                <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589358809/Method-Array-JS/gan-bien-array-trong-js_yjazml.png"
+                  alt="Gán biến rray (mảng)  js">
+                <p class="mt-4">
+                  Như bạn thấy thì khi chúng ta thay đổi số lượng  phần tử trong biến <b><code>mang</code></b> thì 
+                  biến <b><code>mangCopy</code></b> cũng sẽ thay đổi theo.
+                </p>
+
+
+
+
+
+
+
 
 
 
@@ -355,7 +359,7 @@
             <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
 
 
-            <p>Qua đây mình mong bài viết sẽ giúp bạn hiểu được <b>khái niệm cũng như cách sử dụng mảng</b>
+            <p>Qua đây mình mong bài viết sẽ giúp bạn hiểu được <b>cách sử dụng các phương thức đối với mảng</b>
               trong ngôn ngữ
               Javascript và
               nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất
