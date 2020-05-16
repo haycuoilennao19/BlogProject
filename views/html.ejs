@@ -26,7 +26,7 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i>Các Phương Thức Mảng Phần 3 Trong Javascript</h2>
+                  aria-hidden="true"></i>Các Phương Thức Mảng Phần 4 Trong Javascript</h2>
             </div>
           </div>
 
@@ -37,7 +37,6 @@
           </div>
           <div class="text-content-article mt-5">
             <p><i>Hôm nay bạn hãy cùng mình đi vào tìm hiểu thêm các phương thức được sử dụng đối với array(mảng)
-
                 trong
                 ngôn
                 ngữ lập trình Javascript để phát triển web nhé.</i>
@@ -45,458 +44,366 @@
 
             <div class="row">
               <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">Phương thức map() trong Array(Mảng):</h3>
+                <h3 class="text-primary ml-4 title-article-size">Phương thức every() trong Array(Mảng):</h3>
               </div>
             </div>
             <p>
-              Trước khi đi vào chi tiết phương thức thì bạn nên hiểu cơ bản về <b>arrow function</b> đã nha.
-              Nếu bạn muốn tham khảo hay xem lại về định nghĩa hoặc cách sử dụng thì có thể tham khảo ở đây nhé:
-              <a href="https://www.niemvuilaptrinh.com/article/Arrow-Function-Co-Ban-Trong-Javascript"
-                title="Arrow Function">Arrow Function</a>.
+
             </p>
             <p>
-              Phương thức <b><code>map()</code></b> sẽ gọi một hàm và thực thi hàm đó đối với tất cả phần tử trong mảng
-              và kết quả trả về là
-              một mảng mới chứa các phần tử đã được xử lý.<br />
-              Mình có lưu ý là kết quả mảng mới trả về sẽ <b>không ảnh hưởng</b> đến mảng chính khi nó thay đổi
-              và phương thức này sẽ không thực hiện hàm đối với các phần tử <b>không có giá trị(undefined)</b>.
+              Phương thức <b><code>every()</code></b> sẽ <b>kiểm tra tất cả phần tử</b> trong mảng có
+              thỏa mãn điều kiện nào đó mà chúng ta đưa ra hay không. Và kết quả trả về của nó sẽ có giá trị là <b><code>true</code></b>
+              hoặc <b><code>false</code></b>.
             </p>
+            <p> Mình có lưu ý là phương thức <b><code>every()</code></b> sẽ <b>không ảnh hưởng</b> đến mảng chính và
+              phương thức này sẽ không thực hiện hàm đối với các phần tử <b>không có giá trị(undefined)</b>.</p>
+              <p>
+                Nếu chỉ có <b>một phần tử</b> không thỏa mãn điều kiện thì phương thức <b><code>every()</code></b> 
+                sẽ ngay lập tức trả về giá trị <b><code>false</code></b> nhé.
+              </p>
             <h4 class="text-white bg-secondary p-2 shadow  title-article-size rounded">
-              Cú Pháp Của Phương Thức map():
+              Cú pháp của phương thức  every():
             </h4>
             <p>
-              Bây giờ chúng ta đi vào tìm hiểu cú pháp của phương thức <b><code>map()</code></b> ở phía dưới đây nhé:
+              Bây giờ chúng ta đi vào tìm hiểu cú pháp của phương thức <b><code>every()</code></b> ở phía dưới đây nhé:
             </p>
-            <pre><code class="javascript"> let ketQua = (Mảng).map(function (Phần Tử, Vị Trí Chỉ Mục, Mảng){<br/> &nbsp;&nbsp;/*Mã Thực Thi*/<br/> }) => Biểu thức</code></pre>
+            <pre><code class="javascript"> let ketQua = (Mảng).every(function (Phần Tử, Vị Trí Chỉ Mục, Mảng){<br/> &nbsp;&nbsp;/*Mã Thực Thi*/<br/> }) => Biểu thức</code></pre>
             <ul>
               <li><b>Phần tử:</b> là giá trị phần tử hiện tại của mảng được xử lý.</li>
               <li><b>Vị trí chỉ mục:</b> Vị trí chỉ mục của phần tử đó.</li>
               <li><b>Mảng:</b> Là mảng chứa các phần tử mà chúng ta cần xử lý.</li>
             </ul>
             <p>
-              Khi sử dụng phương thức <b>map()</b> thì tham số <b>phần tử</b> là yêu cầu bắt buộc phải có nha. Còn hai
+              Khi sử dụng phương thức <b>every()</b> thì tham số <b>phần tử</b> là yêu cầu bắt buộc phải có nha. Còn hai
               tham số <b>vị trí chỉ mục</b> và <b>mảng</b>
               thì bạn có thể gọi hay không đều được tùy vào dữ liệu mà bạn cần đưa vào trong hàm để xử lý.
             </p>
             <h4 class="text-white bg-secondary p-2 shadow  title-article-size rounded">
-              Ví Dụ Phương Thức map():
+              Ví dụ phương thức every():
             </h4>
             <p>
-              Để bạn thấy được tiện ích của phương thứ <b><code>map()</code></b> thì mình sẽ đi vào ví dụ là
-              <b>nhân tất cả các phần tử với 2</b>.
-              <br />
-              Với cách thông thường thì chúng ta sẽ sử dụng vòng lặp <b>for</b> để lấy các phần tử trong mảng rồi sau đó
-              nhân với hai.
-              Bây giờ để bạn dễ hình dùng thì chúng ta thử viết đoạn code trên xem sao nhé:
+              Để bạn thấy được tiện ích của phương thứ <b><code>every()</code></b> thì mình sẽ đi vào xử lý vấn đề là
+              <b>kiểm tra tất cả phần tử có lớn hơn 2 không</b> bằng hai cách.
+            </p>
+            <p>
+              Cách thứ nhất là chúng ta sử dụng vòng lặp <b>for</b> để kiểm tra nhé:
             </p>
             <p>
               <mark class="p-1"><b>Đoạn Code:</b></mark>
             </p>
-            <pre><code class="javascript"> let mang = [1, 2, 3, 4, 5];<br/><br/> let ketQua = [];<br/> for(let i=0; i&#60;mang.length; i++){<br/> &nbsp;&nbsp;ketQua.push(mang[i] * 2);<br/> }<br/> console.log(ketQua);</code></pre>
+            <pre><code class="javascript"> let mang = [3, 4, 6, 8, 10];<br/> let ketQua = true;<br/><br/> for(let i=0; i&#60;mang.length; i++){<br/> &nbsp;&nbsp;if(mang[i]&#60; 2){<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ketQua =  false;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br/>&nbsp;&nbsp;&nbsp;}<br/> }<br/> console.log(ketQua);</code></pre>
             <p class="mt-4">
               <mark class="p-1"><b>Kết Quả:</b></mark>
             </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589511230/Method-Array-3/Vong-lap-for-lay-gia-tri-trong-mang_xdhboi.png"
-              alt="Sử dụng vòng lặp for lấy giá trị trong Mảng Javascript">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589547612/Method-Array-4/su-dung-vong-lap-trong-mang-javascript_e76qdh.png"
+              alt="Sử dụng vòng lặp trong Mảng Javascript">
             <p class="mt-4">
-              Chúng ta tạo một biến <b><code>ketQua</code></b> với kiểu dữ liệu mảng để thêm các phần tử trong biến
-              <b><code>mang</code></b>
-              sau khi đã được xử lý bằng phương thức <b><code>push()</code></b>. Bạn có thể tham khảo thêm phương thức
-              này ở đây nhé: <a
-                href="https://www.niemvuilaptrinh.com/article/Cac-Phuong-Thuc-Array-Mang-Trong-Javascript"
-                title="phương thức push">push()</a>.
-              <br />
-              Bây giờ chúng ta sử dụng phương thức <b><code>map()</code></b> để xử lý ví dụ trên nhé:
+              Chúng ta sử dụng vòng lặp để kiểm tra tất cả giá trị phần tử có lớn hơn 2 hay không. Biến <b><code>ketQua</code></b>
+              dùng để lưu giá trị <b>true</b> hoặc <b>false</b> khi kiểm tra phần tử. Lệnh <b><code>break;</code></b> sẽ dừng vòng lặp ngay lập tức 
+              khi có phần tử không thỏa mãn điều kiện.
+            </p>
+            <p>
+              Bây giờ chúng ta sẽ dử dụng phương thức <b><code>every</code></b> để xử lý vấn đề trên nhé:
             </p>
             <p>
               <mark class="p-1"><b>Đoạn Code:</b></mark>
             </p>
-            <pre><code class="javascript"> let mang = [1, 2, 3, 4, 5];<br/> let ketQua = mang.map(phanTu => phanTu * 2);<br/><br/> console.log(ketQua);</code></pre>
+            <pre><code class="javascript"> let mang = [3, 4, 6, 8, 10];<br/> let ketQua = mang.every(function (phanTu){<br/> &nbsp;&nbsp;&nbsp; return phanTu > 2;<br/>});<br/><br/> console.log(ketQua);</code></pre>
             <p class="mt-4">
               <mark class="p-1"><b>Kết Quả:</b></mark>
             </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589511822/Method-Array-3/phuong-thuc-map-trong-mang-js_bofkcj.png"
-              alt="Phuong thức map() trong Mảng Javascript">
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">Phương thức filter() trong Array(Mảng):</h3>
-              </div>
-            </div>
-            <p>
-              Phương thức <b><code>filter()</code></b> sẽ trả về một mảng mới với các phần tử trong mảng chính
-              thỏa mãn điều kiện nào đó mà chúng ta đưa vào.
-            </p>
-            <p> Mình có lưu ý là kết quả mảng mới trả về sẽ <b>không ảnh hưởng</b> đến mảng chính khi nó thay đổi
-              và phương thức này sẽ không thực hiện hàm đối với các phần tử <b>không có giá trị(undefined)</b>.</p>
-            <p>
-              Do cú pháp của nó giống với phương thức <b><code>map</code></b> nên mình sẽ không nói lại mà sẽ đi vào 
-              các ví dụ thực tế để giúp  bạn nắm rõ hơn về phương thức này.
-            </p>
-            <h4 class="text-white bg-secondary p-2 shadow  title-article-size rounded">
-              Ví Dụ Phương Thức filter():
-            </h4>
-            <p>
-              Cũng như ví dụ trên thì mình sẽ đi vào hai cách để bạn hiểu và nắm rõ hơn về phương thức <b><code>filter</code></b>.
-              Bây giờ vấn đề chúng ta cần xử lý là lọc ra <b>những phần tử  nhỏ hơn hoặc bằng  50</b> ở trong mảng.
-            </p>
-            <p class="text-primary">
-              Cách Thông Thường:
-            </p>
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> let mang = [10, 60, 40, 80, 90, 30, 50, 100, 200];<br/> let ketQua = [];<br/><br/> for(let i=0; i&#60;mang.length; i++){<br/> &nbsp;&nbsp;if(mang[i]&#60;= 50){<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ketQua.push(mang[i]);<br/>&nbsp;&nbsp;&nbsp;}<br/> }<br/> console.log(ketQua);</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589513267/Method-Array-3/loc-phan-tu-trong-mang-voi-for-js_of1sr8.png"
-              alt="Lọc phần tử với for() trong Mảng Javascript">
-            <p class="mt-4 text-primary">
-              Sử dụng phương thức <b>filter()</b>:
-            </p>
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> let mang = [10, 60, 40, 80, 90, 30, 50, 100, 200];<br/> let ketQua = mang.filter(phanTu => phanTu &#60;= 50);<br/><br/> console.log(ketQua);</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589513448/Method-Array-3/phuong-thuc-filter-trong-mang-js_rp2k8p.png"
-              alt="Phương thức filter() trong Mảng Javascript">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589548185/Method-Array-4/phuong-thuc-every-trong-mang-javascript_jzyvkj.png"
+              alt="Phương thức every() trong Mảng Javascript">
 
-            <p class="mt-4">
-              Tiếp theo mình sẽ làm thêm ví dụ với phương thức <b><code>filter</code></b> để lọc danh sách các bạn 
-              có tuổi nhỏ hơn 18. Để hiểu rõ hơn bạn xem đoạn code sau nhé:
-            </p>
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> let mang = [<br/> {ten: "An", tuoi: 23},<br/> {ten: "Lan", tuoi: 14},<br/> {ten: "Hưng", tuoi: 16},<br/> {ten: "Hoa", tuoi: 25}<br/>];<br/> let ketQua = mang.filter(phanTu=> phanTu.tuoi &#60;= 18);<br/><br/> console.log(ketQua);</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589514168/Method-Array-3/phuong-thuc-filter-voi-object-trong-mang-js_ejpoqu.png"
-              alt="Phương thức filter() với object trong Mảng Javascript">
-              <div class="row">
-                <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                  <h3 class="text-primary ml-4 title-article-size">Phương thức reduce() trong Array(Mảng):</h3>
-                </div>
-              </div>
-
-              <p>
-                Phuong thức <b><code>reduce()</code></b> sẽ trả về <b>một giá trị duy nhất</b> khi hàm xử lý với các 
-                phần tử ở trong mảng.:
-              </p>
-              <h4 class="text-white bg-secondary p-2 shadow  title-article-size rounded">
-               Cú pháp phương thức reduce():
+              <h4 class="text-white bg-secondary p-2 shadow  mt-4 title-article-size rounded">
+                Kết hợp phương thức every() với arrow function:
               </h4>
               <p>
-                Để hiểu rõ hơn chúng ta cùng xem cú pháp của nó nhé:
+                Đây là cách viết phương thức <b><code>every</code></b> ngắn gọn và dễ nhìn hơn.
+                Để dễ hiểu chúng ta sẽ giải quyết vấn đề là kiểm tra xem các số trong phần tử trong mảng 
+                có chia hết cho 3 hay không thông qua đoạn code sau đây nhé:
               </p>
-              <pre><code class="javascript"> let ketQua = (Mảng).reduce(function(Giá Trị Tích Lũy, Phần Tử, Chỉ mục, Mảng){<br/> &nbsp;&nbsp;/*Mã thực thi*/<br/> }, Giá Trị Thiết Lập)</code></pre>
-
-
-              <ul>
-                <li><b>Giá Trị Tích Lũy:</b> Là kết quả của hàm phía trước sau khi đã xử lý xong mỗi phần tử trong mảng  và sẽ  bằng với <b>giá trị thiết lập</b> lần đầu tiên khi chạy hàm.(Nếu như giá trị thiết lập được cung cấp trong phương thức)</li>
-                <li><b>Phần tử:</b> là giá trị phần tử hiện tại của mảng được xử lý.</li>
-                <li><b>Vị trí chỉ mục:</b> Vị trí chỉ mục của phần tử đó.</li>
-                <li><b>Mảng:</b> Là mảng chứa các phần tử mà chúng ta cần xử lý.</li>
-              </ul>
-
               <p>
-                Nghe hơi phức tạp nhỉ, để hình dùng và nắm rõ hơn chúng ta cùng nhau đi vào ví dụ tế nhé.
+                <mark class="p-1"><b>Đoạn Code:</b></mark>
+              </p>
+              <pre><code class="javascript"> let mang = [3, 4, 6, 8, 10];<br/> let ketQua = mang.every(phanTu => phanTu % 3 == 0);<br/><br/> console.log(ketQua);</code></pre>
+              <p class="mt-4">
+                <mark class="p-1"><b>Kết Quả:</b></mark>
+              </p>
+              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589548624/Method-Array-4/phuong-thuc-every-va-arrow-function-trong-mang-javascript_wy4a1m.png"
+                alt="Phương thức every() với arrow function trong Mảng Javascript">
+              <p class="mt-4">
+                Mình lưu ý là toán tử <b><code>%</code></b> sẽ giúp ta kiểm tra số dư của một biểu thức. 
+                Nếu bạn muốn tham khảo hay tìm hiểu thêm thì có thể xem ở đây nhé:
+                <a href="https://www.w3schools.com/js/js_operators.asp" title="Toán tử trong js">Toán Tử Trong Javascript</a>.
               </p>
 
-              <h4 class="text-white bg-secondary p-2 shadow  title-article-size rounded">
-                Ví dụ với phương thức reduce():
-               </h4>
-               <p>
-                 Bây giờ chúng ta sẽ đi vào ví dụ là <b>tính tổng tất cả các giá trị phần tử</b> có trong một mảng.
-                 Mình cũng sẽ thực hiện theo hai cách, với cách thứ 1 là dùng lặp <b>for</b>:
-               </p>
+              <h4 class="text-white bg-secondary p-2 shadow title-article-size rounded">
+                Sử dụng phương thức every() với object:
+              </h4>
+              <p>
+                Bây giờ chúng ta thử lấy các giá trị thuộc tính của <b>object</b> tạo các biểu thức điều kiện 
+                để xem các phần tử trong mảng có thỏa mãn điều kiện không nhé. Bây giờ để dễ hình dùng hơn bạn xem đoạn code sau nhé:
+              </p>
               
-
-               <p>
+              <p>
                 <mark class="p-1"><b>Đoạn Code:</b></mark>
               </p>
-              <pre><code class="javascript"> let mang = [1, 2, 3, 4, 5, 6];<br/> let ketQua = 0;<br/><br/> for(let i=0; i&#60;mang.length; i++){<br/> &nbsp;&nbsp;ketQua += mang[i];<br/> }<br/> console.log(ketQua);</code></pre>
+              <pre><code class="javascript"> let mang = [4, 6, 8, 10];<br/> let khoangGiaTri = {<br/> &nbsp;&nbsp;soNhoNhat : 2,<br/> &nbsp;&nbsp;soLonNhat : 12<br/> };<br/> let ketQua = mang.every(function(phanTu){<br/> &nbsp;&nbsp;&nbsp; return phanTu &#62; khoangGiaTri.soNhoNhat &&  phanTu &#60;= khoangGiaTri.soLonNhat <br/> });<br/><br/> console.log(ketQua);</code></pre>
               <p class="mt-4">
                 <mark class="p-1"><b>Kết Quả:</b></mark>
               </p>
               <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589515776/Method-Array-3/tinh-tong-bang-for-trong-mang-js_gpor3m.png"
-                alt="Tỉnh tổng bằng vòng lặp for() trong Mảng Javascript">
-              <p class="mt-4">
-                Như bạn thấy chúng ta sẽ dùng biến <b><code>ketQua()</code></b> để lưu trữ giá trị tổng. Cứ qua mỗi vòng lặp thì 
-                giá trị của biến sẽ cộng với phần tử hiện tại trong mảng bằng toán tử <b><code>+=</code></b>. Nó có nghĩa là 
-                <b><code>ketQua = ketQua + mang[i];</code></b>. Và cưới cùng chúng ta có kết quả như trên. Bây giờ bạn và 
-                mình hãy thử dùng phương thức <b><code>reduce()</code></b> để giải quyết vấn đề trên xem sao nhé:
-              </p>
-
-             
-
-              <p>
-                <mark class="p-1"><b>Đoạn Code:</b></mark>
-              </p>
-              <pre><code class="javascript"> let mang = [1, 2, 3, 4, 5, 6];<br/> let ketQua = mang.reduce((tong, phanTu) => tong + phanTu, 0);<br/><br/>  console.log(ketQua);</code></pre>
-              <p class="mt-4">
-                <mark class="p-1"><b>Kết Quả:</b></mark>
-              </p>
-              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589516189/Method-Array-3/tinh-tong-bang-reduce-trong-mang-js_kqeluo.png"
-                alt="Tỉnh tổng bằng reduce() trong Mảng Javascript">
-              <p class="mt-4">
-                Ở đây mình xin giải thích cách hoạt động của phương thức <b><code>reduce()</code> </b>này nhé:
-                <ul>
-                  <li>
-                    Với vòng chạy đầu tiên thì ta có giá trị của <b><code>tong</code></b> = <b><code>giá trị thiết lập</code></b> = 0.
-                    Còn <b><code>phanTu</code></b> sẽ là phần tử thứ nhất ở trong mảng với giá trị là 1. Sau khi thực hiện hàm <b><code>tong + phanTu</code></b> thì giá trị 
-                    của hàm là 1.
-                  </li>
-                  <li>
-                    Với vòng chạy thì hai, phương thức sẽ <b>gán kết quả của hàm lần chạy thứ 1 vào trong biến <b><code>tong</code></b></b>
-                    và thực hiện hàm với phần tử thứ hai trong mảng với giá trị là 2. Kết quả hàm chạy lần thứ hai sẽ bằng <b><code>tong + phanTu</code></b> = 1 + 2 = 3;
-                  </li>
-                  <li>
-                    Cứ như vậy nó sẽ chạy đến khi hết phần tử trong mảng thì trả về kết quả.
-                  </li>
-                </ul>
-              </p>
-              <p>
-                Dưới đây là bảng hiển thị quy trình chạy của  phương thức <b><code>reduce</code></b> với ví dụ trên 
-                mong nó sẽ  giúp bạn nắm rõ và hiểu hơn  về phương thức này:
-              </p>
-
-              <table class="table table-dark">
-                <thead>
-                  <tr>
-                    <th scope="col">Lần chạy</th>
-                    <th scope="col"><b><code>tong</code></b></th>
-                    <th scope="col"><b><code>giá trị của phanTu</code></b></th>
-                    <th scope="col">Kết quả hàm</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">Thứ 1</th>
-                    <td>0</td>
-                    <td>1</td>
-                    <td>1</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Thứ 2</th>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Thứ 3</th>
-                    <td>3</td>
-                    <td>3</td>
-                    <td>6</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Thứ 4</th>
-                    <td>6</td>
-                    <td>4</td>
-                    <td>10</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Thứ 5</th>
-                    <td>10</td>
-                    <td>5</td>
-                    <td>15</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Thứ 6</th>
-                    <td>15</td>
-                    <td>6</td>
-                    <td>21</td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <p class="mt-4">
-                Chúng ta cũng có thể không cần <b>giá trị thiết lập</b> khi sử dụng phương thức <b><code>reduce()</code></b>
-                vì nó sẽ tự động  thiết lập giá trị đầu tiên trong mảng vào giá trị của biến <b><code>tong</code></b> để thực hiện cho các vòng chạy 
-                tiếp theo. Để hiểu rõ hơn bạn xem ví dụ sau đây nhé:
-              </p>
-              <p>
-                <mark class="p-1"><b>Đoạn Code:</b></mark>
-              </p>
-              <pre><code class="javascript"> let mang = [1, 2, 3, 4, 5, 6];<br/> let ketQua = mang.reduce((tong, phanTu) => tong + phanTu);<br/><br/>  console.log(ketQua);</code></pre>
-              <p class="mt-4">
-                <mark class="p-1"><b>Kết Quả:</b></mark>
-              </p>
-              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589518272/Method-Array-3/tinh-tong-bang-reduce-phan2-trong-mang-js_rskg6e.png"
-                alt="Tỉnh tổng bằng reduce() phần 2 trong Mảng Javascript">
+                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589553606/Method-Array-4/phuong-thuc-every-va-object-trong-mang-javascript_caupjq.png"
+                alt="Phương thức every() với object trong Mảng Javascript">
 
                 <h4 class="text-white bg-secondary p-2 shadow mt-4 title-article-size rounded">
-                  Sử dụng  phương thức reduce() với object trong mảng:
-                 </h4>
-                 <p>
-                   Chúng ta có thể sử dụng phương thức <b><code>reduce()</code></b> để xử lý các giá trị thuộc tính của <b>object</b>
-                   ở trong mảng. Bây giờ chúng ta cùng nhau đi vào ví dụ để hiểu rõ hơn nhé:
-                 </p>
-                 <p>
+                  Sử dụng phương thức every() với mảng rỗng:
+                </h4>
+                <p>
+                  Nếu chúng ta dùng phương thức <b><code>every()</code></b> để kiểm tra <b>một mảng rỗng</b> thì kết quả sẽ luôn trả về là 
+                  <b>true</b>. Để dễ hình dung bạn xem đoạn code sau nhé:
+                </p>
+               
+                <p>
                   <mark class="p-1"><b>Đoạn Code:</b></mark>
                 </p>
-                <pre><code class="javascript"> let mang = [{<br/> sanpham: "Sản Phẩm 1",<br/> soLuong: 2,<br/> giaThanh: 50<br/> },<br/> {<br/> sanpham: "Sản Phẩm 2",<br/> soLuong: 3,<br/> giaThanh: 20<br/> }];<br/> let ketQua = mang.reduce(function(tong, phanTu) {<br/> &nbsp;&nbsp;return tong + phanTu.giaThanh * phanTu.soLuong;<br/> }, 0);<br/>  console.log(ketQua);</code></pre>
+                <pre><code class="javascript"> let mang = [];<br/> let ketQua = mang.every(phanTu => phanTu &#60;= 2);<br/> console.log(ketQua);</code></pre>
                 <p class="mt-4">
                   <mark class="p-1"><b>Kết Quả:</b></mark>
                 </p>
                 <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589519045/Method-Array-3/tinh-tong-bang-reduce-voi-object-trong-mang-js_lxfyvp.png"
-                  alt="Tỉnh tổng bằng reduce() với object trong Mảng Javascript">
+                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589553893/Method-Array-4/phuong-thuc-every-va-mang-rong-trong-mang-javascript_lfajph.png"
+                  alt="Phương thức every() với mảng rỗng trong Mảng Javascript">
 
-                <p class="mt-4">
-                  Ví dụ trên chúng ta tính tổng giá của các sản phẩm ở trong mảng. Qua ví dụ này mình mong bạn có thể hiểu hơn khi kết hợp với 
-                  phương thức <b><code>reduce()</code></b> và <b>object</b> ở trong mảng.
-                </p>
-                <div class="row">
-                  <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                    <h3 class="text-primary ml-4 title-article-size">Phương thức sort() trong Array(Mảng):</h3>
+
+                  <div class="row">
+                    <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                      <h3 class="text-primary ml-4 title-article-size">Phương thức some() trong Array(Mảng):</h3>
+                    </div>
                   </div>
-                </div>
-                <p>
-                  Phương thức <b><code>sort()</code></b> giúp chúng ta sắp xếp các phần tử trong mảng theo thứ tự tăng dần hoặc giảm dần.
-                  Phương thức này sẽ chuyển đổi các phần tử trong mảng sang <b>kiểu dữ liệu chuỗi</b> rồi mới thực hiện so sánh.
-                  Do đó nó sẽ làm việc tốt hơn khi so sánh các phần tử là dạng chuỗi, còn với  phần tử số sẽ không được kết quả như ta mong muốn.
-                </p>
-                <p>
-                  Bây giờ để bạn dễ hình dung thì mình thử sử dụng phương thức <b><code>sort()</code></b> để sắp xếp phần tử dạng số trong mảng 
-                  để xem sao nhé:
-                </p>
+                  <p>
+                    Phương thức <b><code>some()</code></b> sẽ kiểm tra mảng theo một điều kiện nhất và kết quả trả trả về sẽ có giá trị là 
+                    <b><code>true</code></b> hoặc <b><code>false</code></b>. Điểm khác biệt chính của nó với phương thức 
+                    <b><code>every()</code></b> là nếu <b>chỉ một phần tử</b> thỏa mãn điều kiện thì sẽ trả về giá trị <b><code>true</code></b>.
+                  </p>
 
-                <p>
-                  <mark class="p-1"><b>Đoạn Code:</b></mark>
-                </p>
-                <pre><code class="javascript"> let mang = [1, 2, 3, 4, 20, 25, 15];<br/> mang.sort();<br/> console.log(mang);</code></pre>
-                <p class="mt-4">
-                  <mark class="p-1"><b>Kết Quả:</b></mark>
-                </p>
-                <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589527540/Method-Array-3/sort-dang-so-trong-mang-js_oox7to.png"
-                  alt="Sử dụng sort() với số trong Mảng Javascript">
-                <p class="mt-4">
-                  Như bạn thấy thì kết quả của nó không như ta mong muốn vì chuỗi "15" sẽ có thứ tự nhỏ hơn so với chuỗi "2"
-                  nên nó sẽ được xếp trước. Và các so sánh còn lại ở ví dụ trên  cũng y như vậy.
-                </p>
-                <p>
-                  Để giải quyết vấn đề trên thì chúng ta cần kết hợp <b>một hàm so sánh</b> với phương thức <b><code>sort()</code></b>.
-                </p>
-                <h4 class="text-white bg-secondary p-2 shadow  title-article-size rounded">
-                  Cú pháp phương thức sort() với hàm so sánh:
-                 </h4>
-                 <p>
-                   Sau đây chúng ta sẽ đi vào cú pháp kết hợp phương thức <b><code>sort()</code></b> với <b>hàm so sánh</b>:
-                 </p>
-                <pre><code class="javascript"> (Mảng).sort(Hàm So Sánh);</code></pre>
-                 <p>
-                   Với <b>hàm so sánh</b> thì nó sẽ chấp nhận hai tham số  và trả về giá trị xác định thứ tự săp xếp với cú pháp như sau:
-                 </p>
-                 <pre><code class="javascript"> function soSanh(a, b){ <br/> &nbsp;&nbsp;/**/<br/> }</code></pre>
-                 <p>
-                   Mình có lưu ý là :
-                   <ul>
-                     <li>
-                       Nếu kết quả trả về của hàm <b><code>bằng 1</code></b> thì phương thức <b><code>sort</code></b>  sẽ sắp xếp <b>a đứng sau b</b>.
-                     </li>
-                     <li>
-                      Nếu kết quả trả về của hàm <b><code>bằng -1</code></b> thì phương thức <b><code>sort</code></b>  sẽ sắp xếp <b>a đứng trước b</b>.
-                    </li>
-                    <li>
-                      Nếu kết quả trả về của hàm <b><code>bằng 0</code></b> thì phương thức <b><code>sort</code></b> vị trí sắp xếp <b>không thay đổi</b>.
-                    </li>
-                   </ul>
-                 </p>
-                 <p>
-                   Nghe hơi phức tạp nhỉ, Bây giờ chúng ta sẽ đi vào ví dụ cụ thể để sắp xếp các phần tử có <b>kiểu dữ liệu số</b>
-                  thông qua ví dụ dưới đây:
-                 </p>
-                
-                 <p>
-                  <mark class="p-1"><b>Đoạn Code:</b></mark>
-                </p>
-                <pre><code class="javascript">&nbsp;function&nbsp;soSanh(a,&nbsp;b)&nbsp;{<br/> &nbsp;&nbsp;&nbsp;if&nbsp;(a&nbsp;>&nbsp;b)&nbsp;return&nbsp;1;<br/> &nbsp;&nbsp;&nbsp;if&nbsp;(a&nbsp;==&nbsp;b)&nbsp;return&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;if&nbsp;(a&nbsp;<&nbsp;b)&nbsp;return&nbsp;-1;<br/> &nbsp;}<br/> <br/> &nbsp;let&nbsp;mang&nbsp;=&nbsp;[1,&nbsp;2,&nbsp;3,&nbsp;4,&nbsp;20,&nbsp;25,&nbsp;15];<br/> &nbsp;mang.sort(soSanh);<br/> &nbsp;console.log(mang);<br/> </code></pre>
-                <p class="mt-4">
-                  <mark class="p-1"><b>Kết Quả:</b></mark>
-                </p>
-                <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589529373/Method-Array-3/sort-voi-ham-so-sanh-trong-mang-js_izbdec.png"
-                  alt="Sử dụng sort() với hàm so sánh trong Mảng Javascript">
-
-                  <h4 class="text-white bg-secondary p-2 shadow  mt-4 title-article-size rounded">
-                   Sử dụng arrow function với phương thức sort():
-                   </h4>
-                   <p>
-                     Cũng như so sánh kiểu dữ liệu số ở ví dụ trên thì ta có thể sử dụng kết hợp giữa <b>arrow function</b> với 
-                     phương thức <b><code>sort()</code></b> để giải quyết vấn đề trên bằng đoạn code dưới đây:
-                   </p>
-                   <p>
+                  <p> Mình có lưu ý là phương thức <b><code>some()</code></b> sẽ <b>không ảnh hưởng</b> đến mảng chính và
+                    phương thức này sẽ không thực hiện hàm đối với các phần tử <b>không có giá trị(undefined)</b>.</p>
+                    <p>
+                  <p>
+                    Do cú pháp của nó giống với <b><code>every()</code></b> nên mình sẽ đi thẳng vào ví dụ để giúp bạn nắm rõ hơn nhé:
+                  </p>
+                  <h4 class="text-white bg-secondary p-2 shadow  title-article-size rounded">
+                    Ví dụ phương thức some():
+                  </h4>
+                  <p>
+                    Bây giờ chúng ta sẽ đi vào giải quyết vấn đề là nếu trong mảng có bất kỳ phần tử nào  nhỏ hơn 10
+                    sẽ trả về <b><code>true</code></b> còn ngược lại sẽ là <b><code>false</code></b>.
+                  </p>
+                  <p>
+                    Mình sẽ giải quyết vấn đề trên theo hai cách để bạn có cái nhìn tổng quát hơn. Đầu tiên chúng ta đi vào cách
+                     sử dụng vòng lặp <b>for</b>:
+                  </p>
+                  <p>
                     <mark class="p-1"><b>Đoạn Code:</b></mark>
                   </p>
-                  <pre><code class="javascript"> let mang = [1, 2, 3, 4, 20, 25, 15];<br/> mang.sort((a, b) => a - b); <br/> console.log(mang);</code></pre>
+                  <pre><code class="javascript"> let mang = [30, 40, 20, 8, 12];<br/> let ketQua = false;<br/><br/> for(let i=0; i&#60;mang.length; i++){<br/> &nbsp;&nbsp;if(mang[i] &#60; 10){<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ketQua =  true;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br/>&nbsp;&nbsp;&nbsp;}<br/> }<br/> console.log(ketQua);</code></pre>
                   <p class="mt-4">
                     <mark class="p-1"><b>Kết Quả:</b></mark>
                   </p>
                   <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                    data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589530278/Method-Array-3/sort-voi-ham-arrow-function-trong-mang-js_jqddau.png"
-                    alt="Sử dụng sort() với hàm arrow function trong Mảng Javascript">
-
+                    data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589594635/Method-Array-4/su-dung-vong-lap-for-voi-mang-js_y4i1lb.png"
+                    alt="Sử dụng vòng lặp với Mảng Javascript">
                   <p class="mt-4">
-                    Nếu như bạn muốn sắp xếp theo hướng <b>giảm dần</b> thì trong arrow function ta sẽ đối thành 
-                    <b><code>b - a</code></b>. Để dễ hình dung hơn bạn xem đoạn code sau nhé:
+                    Như bạn thấy ở vòng lặp trên thì ta sẽ lọc qua tất cả các phần tử trong mảng và nếu <b>chỉ có một phần tử</b> nhỏ hon 10 thì chúng ta 
+                    gán giá trị <b><code>true</code></b> vào cho biến <b><code>ketQua</code></b> và dừng vòng lặp ngay lặp tức bằng lệnh <b><code>break;</code></b>
+                  </p>
+                  <p>
+                    Bây giờ chúng ta sẽ đi vào giải quyết vấn đề trên bằng phương thức <b><code>some()</code></b> nhé:
                   </p>
 
                   <p>
                     <mark class="p-1"><b>Đoạn Code:</b></mark>
                   </p>
-                  <pre><code class="javascript"> let mang = [1, 2, 3, 4, 20, 25, 15];<br/> mang.sort((a, b) => b - a); <br/> console.log(mang);</code></pre>
+                  <pre><code class="javascript"> let mang = [30, 40, 20, 8, 12];<br/> let ketQua = mang.some(function (phanTu){<br/> &nbsp;&nbsp;&nbsp; return phanTu &#60; 10;<br/>});<br/><br/> console.log(ketQua);</code></pre>
                   <p class="mt-4">
                     <mark class="p-1"><b>Kết Quả:</b></mark>
                   </p>
                   <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                    data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589530454/Method-Array-3/sort-voi-ham-arrow-function-giam-dan-trong-mang-js_gv2mdc.png"
-                    alt="Sử dụng sort() với hàm arrow function theo hướng giảm dần trong Mảng Javascript">
-                    <h4 class="text-white bg-secondary p-2 shadow  mt-4 title-article-size rounded">
-                      Sử dụng phương thức sort() với chuỗi:
-                      </h4>
+                    data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589594976/Method-Array-4/phuong-thuc-some-trong-mang-js_knnn1a.png"
+                    alt="Phương thức some() trong Mảng Javascript">
+
+                    <h4 class="text-white bg-secondary p-2 shadow mt-4 title-article-size rounded">
+                      Kết hợp phương thức some() với arrow function:
+                    </h4>
+                    <p>
+                      Bây giờ chúng ta thử giải quyết vấn đề trên bằng cách kết hợp giữa phương thức <b><code>some()</code></b>
+                      và <b>arrow function</b> bằng đoạn code dưới đây nhé:
+                    </p>
+
+                    <p>
+                      <mark class="p-1"><b>Đoạn Code:</b></mark>
+                    </p>
+                    <pre><code class="javascript"> let mang = [30, 40, 20, 8, 12];<br/> let ketQua = mang.some( phanTu => phanTu &#60; 10);<br/> console.log(ketQua);</code></pre>
+                    <p class="mt-4">
+                      <mark class="p-1"><b>Kết Quả:</b></mark>
+                    </p>
+                    <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+                      data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589595273/Method-Array-4/phuong-thuc-some-voi-arrow-functiontrong-mang-js_sis74k.png"
+                      alt="Phương thức some() với arrow function trong Mảng Javascript">
+
+                    <p class="mt-4">
+                      Mình có chú ý là nếu bạn dùng phương thức <b><code>some</code></b> với một <b>mảng rỗng</b>
+                      thì kết quả trả về sẽ luôn có giá trị <b><code>false</code></b> nhé.
+                    </p>
+
+                    <div class="row">
+                      <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                        <h3 class="text-primary ml-4 title-article-size">Phương thức reverse() trong Array(Mảng):</h3>
+                      </div>
+                    </div>
+                    <p>
+                      Phương thức <b><code>reverse()</code></b> sẽ trả về mảng chính được sắp xếp theo hướng <b>ngược lại</b>
+                      so với ban đầu. Cú pháp của nó ở dưới đây nhé:
+                    </p>
+                    <pre><code class="javascript"> (Mảng).reverse();</code></pre>
+                    <p>
+                      Để giúp bạn nắm rõ hơn chúng ta đi vào ví dụ cụ thể sao đây nhé:
+                    </p>
+                    <p>
+                      <mark class="p-1"><b>Đoạn Code:</b></mark>
+                    </p>
+                    <pre><code class="javascript"> let mang = [1, 2, 3, 4];<br/> let ketQua = mang.reverse();<br/> console.log(ketQua);</code></pre>
+                    <p class="mt-4">
+                      <mark class="p-1"><b>Kết Quả:</b></mark>
+                    </p>
+                    <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+                      data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589596245/Method-Array-4/phuong-thuc-reverse-trong-mang-js_q6mlkf.png"
+                      alt="Phương thức reverse() trong Mảng Javascript">
+
+                      <div class="row">
+                        <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                          <h3 class="text-primary ml-4 title-article-size">Phương thức split() với Array(Mảng):</h3>
+                        </div>
+                      </div>
+                  
+                  
                       <p>
-                        Mặc định phương thức <b><code>sort()</code></b> giúp chúng ta sắp xếp các phần tử chuỗi trong mảng theo 
-                        thứ <b>abc</b>. Để dễ hình dung bạn xem đoạn code sau nhé:
+                        Phương thức <b><code>split()</code></b> sẽ giúp chuyển <b>các ký tự trong chuỗi thành các 
+                        phần tử ở trong mảng</b>.
                       </p>
-                     
-                      <p>
+                      <h4 class="text-white bg-secondary p-2 shadow mt-4 title-article-size rounded">
+                        Cú pháp phương thức split() :
+                       </h4>
+                       <p>
+                        Bây giờ chúng ta sẽ đi vào cú pháp của nó nhé:
+                       </p>
+                      <pre><code class="javascript"> (Chuỗi).split(Ký tự, Độ dài);</code></pre>
+                      <ul>
+                        <li>Với <b>Ký tự</b>: Dùng ký tự để <b>xác định vị trí</b> sẽ chia các ký tự trong chuỗi thành mảng.
+                        Ngoài ra chúng ta cũng có thể sử dụng biểu thức để thay cho ký tự.
+                        </li>
+                        <li>
+                          Với <b>Độ dài</b>: Dùng để xác định độ dài của mảng sẽ chứa các ký tự trong chuỗi. Các ký tự nếu vượt quá độ dài này sẽ bị bỏ qua. 
+                        </li>
+                      </ul>
+                      <h4 class="text-white bg-secondary p-2 shadow mt-4 title-article-size rounded">
+                       Ví dụ phương thức split() :
+                       </h4>
+                       <p>
+                         Chúng ta sẽ đi vào ví dụ khi sử dụng <b>ký tự khoảng trắng</b> để làm nơi 
+                         xác định vị trí chuyển chuỗi thành mảng và sẽ không giới hạn độ dài của mảng chứa các ký tự.
+                         Để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
+                       </p>
+
+                       <p>
                         <mark class="p-1"><b>Đoạn Code:</b></mark>
                       </p>
-                      <pre><code class="javascript"> let mang = ["mèo", "chó", "khỉ", "kiến", "ong", "hổ"];<br/> mang.sort();<br/><br/> console.log(mang);</code></pre>
+                      <pre><code class="javascript"> let chuoi = "Xin Chào Các Bạn";<br/> let mangKyTu = chuoi.split(" ");<br/> console.log(mangKyTu);</code></pre>
                       <p class="mt-4">
                         <mark class="p-1"><b>Kết Quả:</b></mark>
                       </p>
                       <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                        data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589531104/Method-Array-3/sort-voi-chuoi-trong-mang-js_um6nsu.png"
-                        alt="Sử dụng sort() với chuỗi trong Mảng Javascript">
+                        data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589598173/Method-Array-4/phuong-thuc-split-voi-mang-js_t1u67v.png"
+                        alt="Phương thức split() với Mảng Javascript">
+
                       <p class="mt-4">
-                        Chúng ta cũng có thể sắp xếp các phần tử với kiểu dữ liệu chuỗi theo hướng <b>giảm dần</b>
-                        bằng cách kết hợp với <b>hàm so sánh</b>. Để hiểu rõ hơn bạn xem đoạn code sau nhé:
+                        Bạn có thể <b>không cần xác định ký tự</b> để xác định vị trí tách chuỗi trong phương thức <b><code>split()</code></b>. Lúc này nó sẽ tự động xác định mỗi ký 
+                        tự trong chuỗi sẽ là một phần tử con trong mảng (Khoảng trắng cũng là ký tự nha). Và với ví dụ trên chúng ta sẽ thử không sử dụng 
+                        ký tự để xem kết quả như thế nào nhé:
                       </p>
                       <p>
                         <mark class="p-1"><b>Đoạn Code:</b></mark>
                       </p>
-                      <pre><code class="javascript">&nbsp;function&nbsp;soSanh(a,&nbsp;b)&nbsp;{<br/> &nbsp;&nbsp;&nbsp;if&nbsp;(a&nbsp;>&nbsp;b)&nbsp;return&nbsp;-1;<br/> &nbsp;&nbsp;&nbsp;if&nbsp;(a&nbsp;==&nbsp;b)&nbsp;return&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;if&nbsp;(a&nbsp;<&nbsp;b)&nbsp;return&nbsp;1;<br/> &nbsp;}<br/> <br/> &nbsp;let&nbsp;mang&nbsp;=&nbsp;["mèo", "chó", "khỉ", "kiến", "ong", "hổ"];<br/> &nbsp;mang.sort(soSanh);<br/> &nbsp;console.log(mang);<br/> </code></pre>
+                      <pre><code class="javascript"> let chuoi = "Xin Chào Các Bạn";<br/> let mangKyTu = chuoi.split("");<br/> console.log(mangKyTu);</code></pre>
                       <p class="mt-4">
                         <mark class="p-1"><b>Kết Quả:</b></mark>
                       </p>
                       <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                        data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589531518/Method-Array-3/sort-voi-chuoi-giam-dan-trong-mang-js_ovarsf.png"
-                        alt="Sử dụng sort() với chuỗi giảm dần trong Mảng Javascript">
+                        data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589598550/Method-Array-4/phuong-thuc-split-voi-mang-2-js_hw44mu.png"
+                        alt="Phương thức split() với Mảng 2 Javascript">
+                      <p class="mt-4">
+                        Tiếp theo chúng ta sẽ đi vào ví dụ với việc sử dụng phương thức <b><code>split()</code></b> với vòng lặp <b><code>for...of</code></b> trong
+                        mảng nhé:
+                      </p>
+
+                      <p>
+                        <mark class="p-1"><b>Đoạn Code:</b></mark>
+                      </p>
+                      <pre><code class="javascript"> let chuoi = "An,Hưng,Lan";<br/> let mangKyTu = chuoi.split(",");<br/><br/> for(let phanTu of mangKyTu){<br/> &nbsp;&nbsp;console.log("Xin chào bạn " + phanTu)<br/> }</code></pre>
+                      <p class="mt-4">
+                        <mark class="p-1"><b>Kết Quả:</b></mark>
+                      </p>
+                      <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+                        data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589599181/Method-Array-4/phuong-thuc-split-voi-for-of-trong-mang-js_jcrn51.png"
+                        alt="Phương thức split() với vòng lặp for...of trong Mảng Javascript">
+
+
+                        <div class="row">
+                          <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                            <h3 class="text-primary ml-4 title-article-size">Phương thức join() trong Array(Mảng):</h3>
+                          </div>
+                        </div>
+                        <p>
+                          Phương thức <b><code>join()</code></b> sẽ trả về kết quả là một chuỗi bằng cách kết hợp các phần tử trong mảng.
+                          Và phương thức này sẽ không ảnh hưởng đến mảng chính nhé.
+                        </p>
+                        <h4 class="text-white bg-secondary p-2 shadow mt-4 title-article-size rounded">
+                         Cú pháp phương thức join() :
+                          </h4>
+                          <p>
+                            Bây giờ chúng ta sẽ đi vào tìm hiểu cú pháp của nó nhé:
+                          </p>
+                          <pre><code class="javascript"> (Mảng).join(Ký tự ngăn cách)</code></pre>
+                          <ul>
+                            <li><b>Ký tự ngăn cách</b> là ký tự phân chia các phần tử trong mảng sau khi đã chuyển sang dạng chuỗi.</li>
+                          </ul>
+
+                          <h4 class="text-white bg-secondary p-2 shadow mt-4 title-article-size rounded">
+                            Ví dụ phương thức join() :
+                          </h4>
+                          <p>
+                            Bây giờ chúng ta thử chuyển các phần tử trong mảng thành dạng chuỗi với ký tự ngăn cách là dấu  
+                            <b><code>&#60;</code></b>. Để dễ hình dung bạn xem ví dụ sau đây nhé:
+                          </p>
+
+                        <p>
+                        <mark class="p-1"><b>Đoạn Code:</b></mark>
+                      </p>
+                      <pre><code class="javascript"> let mang = [2, 4, 6, 8];<br/> let chuoi = mang.join(" &#60; ");<br/><br/> console.log(chuoi);<br/> console.log(typeof chuoi);</code></pre>
+                      <p class="mt-4">
+                        <mark class="p-1"><b>Kết Quả:</b></mark>
+                      </p>
+                      <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+                        data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589600120/Method-Array-4/phuong-thuc-join-trong-mang-js_m4vkqh.png"
+                        alt="Phương thức joint() trong Mảng Javascript">
+
+
+
 
 
 
