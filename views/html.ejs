@@ -26,7 +26,7 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i>Các Phương Thức Mảng Phần 4 Trong Javascript</h2>
+                  aria-hidden="true"></i> Destructuring Assignment Trong Javascript</h2>
             </div>
           </div>
 
@@ -36,371 +36,350 @@
             </div>
           </div>
           <div class="text-content-article mt-5">
-            <p><i>Hôm nay bạn hãy cùng mình đi vào tìm hiểu thêm các phương thức được sử dụng đối với array(mảng)
+            <p><i>Hôm nay bạn hãy cùng mình đi vào tìm hiểu về khái niệm cũng như cách sử dụng Destructuring Assignment
                 trong
                 ngôn
                 ngữ lập trình Javascript để phát triển web nhé.</i>
             </p>
+            <p>
+              <b>Destructuring Assignment</b> là cú pháp được cung cấp trong phiên bản ES6 giúp chúng ta có thể dễ dàng
+              lấy các
+              giá trị trong <b>array(mảng)</b> và <b>object(đối tượng)</b> để gán vào biến mà không cần phải sử dụng
+              vòng lặp
+              hay các phương thức khác. Bây giờ chúng ta sẽ cùng nhau đi vào tìm hiểu cách sử dụng của nó ở dưới đây nhé.
+            </p>
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size"> Destructuring Assignment Với Mảng:</h3>
+              </div>
+            </div>
+
+            <p>
+              Trước khi đi vào vấn đề chính thì mình sẽ minh họa sơ qua cách chúng ta hay lấy giá trị của các
+              phần tử trong mảng thông qua ví dụ dưới đây nhé:
+            </p>
+            <h6 class="text-primary">
+              Cách lấy giá trị phần tử thông thường:
+            </h6>
+            <p>
+              Bây giờ chúng ta sẽ đi vào tìm hiểu cú pháp của nó nhé:
+            </p>
+
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> let mang = ["Màu Xanh", "Màu Đỏ", "Màu Cam"];<br/>/*Cách lấy thông thường*/<br/> let mau1 = mang[0];<br/> let mau2 = mang[1];<br/> let mau3 = mang[2];<br/><br/> console.log(mau1);<br/> console.log(mau2);<br/> console.log(mau3);</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589767487/Destructuring%20Assignment/lay-gia-tri-trong-mang_u7mc5e.png"
+              alt="Lấy giá trị trong mảng  Javascript">
+            <p class="mt-4">
+              Bạn có thể tham khảo thêm mảng(array) ở <a
+                href="https://www.niemvuilaptrinh.com/article/Array-Mang-Trong-Javascript"
+                title="Array Trong Javascript">đường dẫn đây nhé</a>.
+            </p>
+            <p>
+              Bây giờ chúng ta sẽ đi vào tìm hiểu cách sử dụng <b>Destructuring Assignment</b> để lấy các giá trị phần
+              tử
+              trong mảng ở ví dụ trên. Bạn xem đoạn code sau để nắm rõ hơn nhé:
+            </p>
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> let mang = ["Màu Xanh", "Màu Đỏ", "Màu Cam"];<br/>/*Cách lấy phần tử bằng Destructuring Assignment*/<br/> let [mau1, mau2, mau3] = mang;<br/><br/> console.log(mau1);<br/> console.log(mau2);<br/> console.log(mau3);</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589768145/Destructuring%20Assignment/Lay-phan-tu-bang-Destructuring-Assignment-mang-javascript_hbttdl.png"
+              alt="Lấy giá trị trong mảng bằng Destructuring Assignment Javascript">
+            <p class="mt-4">
+              Nó sẽ tự động lấy giá trị theo số vị trí chỉ mục của phần tử trong mảng để gán vào cho biến. Khi sử dụng
+              <b>destructuring assignments</b> nó
+              sẽ giúp cho đoạn code dễ nhìn hơn cũng như giúp chúng ta lấy trị mà mình mong muốn trong mảng một cách
+              nhanh hơn.
+            </p>
+            <h4 class="text-white bg-secondary p-2 shadow title-article-size rounded"> <b>Cách lấy những phần tử mong
+                muốn trong destructuring assignments:</b></h4>
+            <p>
+              Như ví dụ trên nếu như bạn chỉ muốn lấy hai màu <b>"Màu Xanh"</b> và <b>"Màu Cam"</b> và bỏ phần tử ở giữa
+              thì chúng ta
+              có thể sử dụng dấu <b>phẩy</b> để ngăn cách các phần tử mà mình không muốn lấy ở trong mảng. Để dễ hình
+              dung bạn xem
+              đoạn code sau nhé:
+            </p>
+
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> let mang = ["Màu Xanh", "Màu Đỏ", "Màu Cam"];<br/>/*Cách lấy phần tử bằng Destructuring Assignment*/<br/> let [mau1, , mau3] = mang;<br/><br/> console.log(mau1);<br/> console.log(mau3);</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589769222/Destructuring%20Assignment/su-dung-dau-phay-Destructuring-Assignment-mang-javascript_qrdpr5.png"
+              alt="Sử dung dấu phẩy trong Destructuring Assignment Javascript">
+
+            <h4 class="text-white bg-secondary p-2 mt-4 shadow title-article-size rounded">
+              <b>Cách lấy nhiều phần tử trong destructuring assignments:</b>
+            </h4>
+            <p>
+              Cũng với ví dụ trên nếu chúng ta muốn lưu trữ <b>"Màu Xanh"</b> vào một biến và các phần tử còn lại vào
+              trong một biến thì
+              bạn có thể sử dụng dấu <b><code>...</code></b> trước biến đó. Để hiểu rõ hơn bạn xem ví dụ sau nhé:
+            </p>
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> let mang = ["Màu Xanh", "Màu Đỏ", "Màu Cam"];<br/>/*Cách lấy phần tử bằng Destructuring Assignment*/<br/> let [mau1, ...mauConlai] = mang;<br/><br/> console.log(mau1);<br/> console.log(mauConlai);</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589769911/Destructuring%20Assignment/su-dung-dau-ba-cham-Destructuring-Assignment_c72v7r.png"
+              alt="Sử dung dấu ... trong Destructuring Assignment Javascript">
+
+            <h4 class="text-white bg-secondary p-2 mt-4 shadow title-article-size rounded">
+              <b>Sử dụng destructuring assignments với hàm (function):</b>
+            </h4>
+            <p>
+              Chúng ta có thể lấy giá trị trả về của một hàm để gán vào trong biến bằng cách sử dụng <b>destructuring
+                assignments</b>.
+              Để hiểu rõ hơn bạn xem đoạn code sau nhé:
+            </p>
+
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> function mang() {<br/> &nbsp;&nbsp;&nbsp; return ["Màu Xanh", "Màu Đỏ", "Màu Cam"];<br/> }<br/>/*Cách lấy phần tử bằng Destructuring Assignment*/<br/> let [mau1, mau2, mau3] = mang();<br/><br/> console.log(mau1);<br/> console.log(mau2);<br/> console.log(mau3)</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589770919/Destructuring%20Assignment/su-dung-function-voi-Destructuring-Assignment_o8all0.png"
+              alt="Sử dung function với Destructuring Assignment Javascript">
+            <h4 class="text-white bg-secondary p-2 mt-4 shadow title-article-size rounded">
+              <b>Gán kiểu dữ liệu khác với destructuring assignments:</b>
+            </h4>
+            <p>
+              Để dễ hình dung chúng ta sẽ đi vào ví dụ gán giá trị vào các thuộc tính của object khi sử dụng
+              destructuring assignments.
+              Để hiểu rõ hơn bạn xem đoạn code sau nhé:
+            </p>
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> let khachHang = {};<br/> [khachHang.ho, khachHang.ten] = ["Nguyễn", "An"];<br/><br/> console.log(khachHang);</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589771356/Destructuring%20Assignment/su-dung-object-voi-Destructuring-Assignment_ukhw1k.png"
+              alt="Sử dung object với Destructuring Assignment Javascript">
+            <h4 class="text-white bg-secondary p-2 mt-4 shadow title-article-size rounded">
+              <b>Giá trị mặc định trong destructuring assignments:</b>
+            </h4>
+            <p>
+              Ví dụ khi chúng ta sử dụng <b>biến nhiều hơn phần tử hiện có trong mảng</b> thì các giá trị biến dư đó sẽ
+              có giá trị là <b><code>undefined</code></b>. Để dễ hình dung hơn bạn cùng mình xem ví dụ sau nhé:
+            </p>
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> let [mau1, mau2] = ["Màu Xanh"];<br/><br/> console.log("Giá trị biến màu 1: " + mau1);<br/> console.log("Giá trị biến màu 2: " + mau2);</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589771925/Destructuring%20Assignment/gi-tri-mac-dinh-trong-Destructuring-Assignment_wg6iak.png"
+              alt="Giá trị mặc dịnh trong  Destructuring Assignment Javascript">
+            <p class="mt-4">
+              Thì lúc này chúng ta có thể sử dụng <b>giá trị mặc định</b> để có thể khai báo giá trị cho biến. Bạn xem
+              ví
+              dụ sau đây để hiểu rõ hơn nhé:
+            </p>
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> let [mau1, mau2 = "Màu Đỏ"] = ["Màu Xanh"];<br/><br/> console.log("Giá trị biến màu 1: " + mau1);<br/> console.log("Giá trị biến màu 2: " + mau2);</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589772067/Destructuring%20Assignment/gi-tri-mac-dinh-2-trong-Destructuring-Assignment_uqpdxv.png"
+              alt="Giá trị mặc dịnh 2 trong  Destructuring Assignment Javascript">
+            <h4 class="text-white bg-secondary p-2 mt-4 shadow title-article-size rounded">
+              <b>Hoán đổi giá trị trong destructuring assignments:</b>
+            </h4>
+            <p>
+              Khi bạn hoán đổi giá trị giữa các biến thì chúng ta có thể sử dụng destructuring assignments để giải quyết
+              vấn đề trên.
+              Để bạn hiểu rõ hơn chúng ta cùng nhau đi vào tìm hiểu ví dụ sau nhé:
+            </p>
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> let ten = "Nguyễn";<br/> let ho = "An";<br/> [ten, ho] = [ho, ten]<br/><br/> console.log(ho);<br/> console.log(ten);</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589772546/Destructuring%20Assignment/hoan-doi-gia-tri-trong-Destructuring-Assignment_vdhf6a.png"
+              alt="Hoán đổi giá trị trong  Destructuring Assignment Javascript">
+
 
             <div class="row">
               <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">Phương thức every() trong Array(Mảng):</h3>
+                <h3 class="text-primary ml-4 title-article-size"> Destructuring Assignment Với Đối Tượng(Object):</h3>
               </div>
             </div>
             <p>
-
-            </p>
-            <p>
-              Phương thức <b><code>every()</code></b> sẽ <b>kiểm tra tất cả phần tử</b> trong mảng có
-              thỏa mãn điều kiện nào đó mà chúng ta đưa ra hay không. Và kết quả trả về của nó sẽ có giá trị là <b><code>true</code></b>
-              hoặc <b><code>false</code></b>.
-            </p>
-            <p> Mình có lưu ý là phương thức <b><code>every()</code></b> sẽ <b>không ảnh hưởng</b> đến mảng chính và
-              phương thức này sẽ không thực hiện hàm đối với các phần tử <b>không có giá trị(undefined)</b>.</p>
-              <p>
-                Nếu chỉ có <b>một phần tử</b> không thỏa mãn điều kiện thì phương thức <b><code>every()</code></b> 
-                sẽ ngay lập tức trả về giá trị <b><code>false</code></b> nhé.
-              </p>
-            <h4 class="text-white bg-secondary p-2 shadow  title-article-size rounded">
-              Cú pháp của phương thức  every():
-            </h4>
-            <p>
-              Bây giờ chúng ta đi vào tìm hiểu cú pháp của phương thức <b><code>every()</code></b> ở phía dưới đây nhé:
-            </p>
-            <pre><code class="javascript"> let ketQua = (Mảng).every(function (Phần Tử, Vị Trí Chỉ Mục, Mảng){<br/> &nbsp;&nbsp;/*Mã Thực Thi*/<br/> }) => Biểu thức</code></pre>
-            <ul>
-              <li><b>Phần tử:</b> là giá trị phần tử hiện tại của mảng được xử lý.</li>
-              <li><b>Vị trí chỉ mục:</b> Vị trí chỉ mục của phần tử đó.</li>
-              <li><b>Mảng:</b> Là mảng chứa các phần tử mà chúng ta cần xử lý.</li>
-            </ul>
-            <p>
-              Khi sử dụng phương thức <b>every()</b> thì tham số <b>phần tử</b> là yêu cầu bắt buộc phải có nha. Còn hai
-              tham số <b>vị trí chỉ mục</b> và <b>mảng</b>
-              thì bạn có thể gọi hay không đều được tùy vào dữ liệu mà bạn cần đưa vào trong hàm để xử lý.
-            </p>
-            <h4 class="text-white bg-secondary p-2 shadow  title-article-size rounded">
-              Ví dụ phương thức every():
-            </h4>
-            <p>
-              Để bạn thấy được tiện ích của phương thứ <b><code>every()</code></b> thì mình sẽ đi vào xử lý vấn đề là
-              <b>kiểm tra tất cả phần tử có lớn hơn 2 không</b> bằng hai cách.
-            </p>
-            <p>
-              Cách thứ nhất là chúng ta sử dụng vòng lặp <b>for</b> để kiểm tra nhé:
+              Đối với kiểu dữ liệu <b>object</b> thì chúng ta cũng có thể lấy <b>các giá trị của thuộc tính đối tượng đó
+                để gán vào trong biến</b>.
+              Cách nó hoạt động thì cũng có nhiều nét tương đồng so với kiểu dữ liệu mảng. Bây giờ chúng ta sẽ đi vào
+              cách lấy dữ liệu bằng cách
+              thông thường với kiểu dữ liệu <b>object</b> thông qua ví dụ dưới đây nhé:
             </p>
             <p>
               <mark class="p-1"><b>Đoạn Code:</b></mark>
             </p>
-            <pre><code class="javascript"> let mang = [3, 4, 6, 8, 10];<br/> let ketQua = true;<br/><br/> for(let i=0; i&#60;mang.length; i++){<br/> &nbsp;&nbsp;if(mang[i]&#60; 2){<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ketQua =  false;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br/>&nbsp;&nbsp;&nbsp;}<br/> }<br/> console.log(ketQua);</code></pre>
+            <pre><code class="javascript"> let khachHang = {<br/> &nbsp;&nbsp; ten: "An",<br/> &nbsp;&nbsp; ho: "Nguyễn"<br/> }<br/> let tenKhachHang = khachHang.ten;<br/> let hoKhachHang = khachHang.ho;<br/><br/> console.log(hoKhachHang);<br/> console.log(tenKhachHang);</code></pre>
             <p class="mt-4">
               <mark class="p-1"><b>Kết Quả:</b></mark>
             </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589547612/Method-Array-4/su-dung-vong-lap-trong-mang-javascript_e76qdh.png"
-              alt="Sử dụng vòng lặp trong Mảng Javascript">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589773359/Destructuring%20Assignment/lay-gia-tri-trong-object_fg5viw.png"
+              alt="Lấy giá trị trong Object">
             <p class="mt-4">
-              Chúng ta sử dụng vòng lặp để kiểm tra tất cả giá trị phần tử có lớn hơn 2 hay không. Biến <b><code>ketQua</code></b>
-              dùng để lưu giá trị <b>true</b> hoặc <b>false</b> khi kiểm tra phần tử. Lệnh <b><code>break;</code></b> sẽ dừng vòng lặp ngay lập tức 
-              khi có phần tử không thỏa mãn điều kiện.
+              Nếu bạn muốn xem lại hoặc tham khảo thêm về object (đối tượng) thì nhấn vào <a
+                href="https://www.niemvuilaptrinh.com/article/Object-Trong-Javascript"
+                title="object trong javascript">đây nhé</a>.
             </p>
             <p>
-              Bây giờ chúng ta sẽ dử dụng phương thức <b><code>every</code></b> để xử lý vấn đề trên nhé:
+              Bây giờ chúng ta sẽ đi vào sử dụng <b>destructuring assignment</b> để lấy giá trị đối với kiểu dữ liệu
+              object bằng ví dụ
+              dưới đây nhé:
             </p>
             <p>
               <mark class="p-1"><b>Đoạn Code:</b></mark>
             </p>
-            <pre><code class="javascript"> let mang = [3, 4, 6, 8, 10];<br/> let ketQua = mang.every(function (phanTu){<br/> &nbsp;&nbsp;&nbsp; return phanTu > 2;<br/>});<br/><br/> console.log(ketQua);</code></pre>
+            <pre><code class="javascript"> let khachHang = {<br/> &nbsp;&nbsp; ten: "An",<br/> &nbsp;&nbsp; ho: "Nguyễn"<br/> };<br/> let {ten, ho} = khachHang;<br/><br/> console.log(ten);<br/> console.log(ho);</code></pre>
             <p class="mt-4">
               <mark class="p-1"><b>Kết Quả:</b></mark>
             </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589548185/Method-Array-4/phuong-thuc-every-trong-mang-javascript_jzyvkj.png"
-              alt="Phương thức every() trong Mảng Javascript">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589774030/Destructuring%20Assignment/lay-gia-tri-trong-object-destructuring_assignment_uj1obp.png"
+              alt="Lấy giá trị trong Object bằng destructuring assignment js">
+            <p class="mt-4">
+              Với các giá trị thuộc tính <b><code>ten</code></b> và <b><code>ho</code></b>, dù bạn có chuyển vị trí nó trong
+              việc khởi tạo biến
+              thì giá trị của nó cũng sẽ <b>không thay đổi</b> nhé.
+            </p>
+            <p>
+              Nếu bạn gán <b>tên biến khác so với tên thuộc tính</b> của đối tượng thì kết quả trả về sẽ như thế nào
+              nhỉ?
+              <br />
+              Để giải quyết vấn đề trên thì bạn thử xem đoạn code sau nhé:
+            </p>
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> let khachHang = {<br/> &nbsp;&nbsp; ten: "An",<br/> &nbsp;&nbsp; ho: "Nguyễn"<br/> };<br/> let {tenKhachHang, hoKhachHang}= khachHang;<br/><br/> console.log(tenKhachHang);<br/> console.log(hoKhachHang);</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589775137/Destructuring%20Assignment/gi-tri-mac-dinh-phan-2-trong-Destructuring-Assignment_alf6uo.png"
+              alt="Lấy giá trị trong Object phần 2 bằng destructuring assignment js">
+            <p class="mt-4">
+              Như bạn thấy thì chúng ta nhận được giá trị của hai biến là <b><code>undefined</code></b>.
+            </p>
+            <p>
+              Nhưng trong <b>destructuring assignment</b> có cung cấp cho chúng ta một cách để xác định tên khác cho
+              biến không
+              cần tuân theo quy tắc là đặt tên giống với thuộc tính của object. Để hiểu rõ hơn chúng ta cùng nhau đi vào
+              ví dụ sau nhé:
+            </p>
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> let khachHang = {<br/> &nbsp;&nbsp; ten: "An",<br/> &nbsp;&nbsp; ho: "Nguyễn"<br/> };<br/> let {ten: tenKhachHang, ho: hoKhachHang}= khachHang;<br/><br/> console.log(tenKhachHang);<br/> console.log(hoKhachHang);</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589775334/Destructuring%20Assignment/gi-tri-mac-dinh-phan-3-trong-Destructuring-Assignment_wibyu4.png"
+              alt="Lấy giá trị trong Object phần 3 bằng destructuring assignment js">
 
-              <h4 class="text-white bg-secondary p-2 shadow  mt-4 title-article-size rounded">
-                Kết hợp phương thức every() với arrow function:
+            <h4 class="text-white bg-secondary p-2 mt-4 shadow title-article-size rounded">
+              <b>Giá trị mặc định trong destructuring assignments với object:</b>
+            </h4>
+            <p>
+              Chúng ta có thể chỉnh sửa giá trị hay thêm mới các thuộc tính trong object nếu như thuộc tính đó không tồn
+              tại.
+              Để nắm rõ hơn chúng ta cùng nhau đi vào tìm hiểu ví dụ sau nhé:
+            </p>
+
+          
+
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> let khachHang = {<br/> &nbsp;&nbsp; ten: "An",<br/> &nbsp;&nbsp; ho: "Nguyễn"<br/> };<br/> let {ten, ho, tuoi = 18, gioiTinh = "Nam"}= khachHang;<br/><br/> console.log("Tên khách hàng là " + ten);<br/> console.log("Tuổi khách hàng là " + tuoi);</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589775906/Destructuring%20Assignment/gia-tri-mac-dinh-trong-object-Destructuring-Assignment_zonuli.png"
+              alt="Giá trị mặc định trong object với destructuring assignment js">
+              <h4 class="text-white bg-secondary p-2 mt-4 shadow title-article-size rounded">
+                <b>Lấy các thuộc tính  trong destructuring assignments với object:</b>
               </h4>
+
               <p>
-                Đây là cách viết phương thức <b><code>every</code></b> ngắn gọn và dễ nhìn hơn.
-                Để dễ hiểu chúng ta sẽ giải quyết vấn đề là kiểm tra xem các số trong phần tử trong mảng 
-                có chia hết cho 3 hay không thông qua đoạn code sau đây nhé:
+                Cũng giống như mảng thì chúng ta có thể sử dụng dấu <b><code>...</code></b> để lấy các thuộc tính trong 
+                kiểu dữ liệu object (đối tượng). Để hiểu rõ hơn bạn xem đoạn code sau nhé:
               </p>
               <p>
                 <mark class="p-1"><b>Đoạn Code:</b></mark>
               </p>
-              <pre><code class="javascript"> let mang = [3, 4, 6, 8, 10];<br/> let ketQua = mang.every(phanTu => phanTu % 3 == 0);<br/><br/> console.log(ketQua);</code></pre>
+              <pre><code class="javascript"> let khachHang = {<br/> &nbsp;&nbsp; ten: "An",<br/> &nbsp;&nbsp; ho: "Nguyễn",<br/> &nbsp;&nbsp; tuoi: 18<br/> };<br/> let {ten, ...thongtinKhac}= khachHang;<br/><br/> console.log(ten);<br/> console.log(thongtinKhac);</code></pre>
               <p class="mt-4">
                 <mark class="p-1"><b>Kết Quả:</b></mark>
               </p>
               <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589548624/Method-Array-4/phuong-thuc-every-va-arrow-function-trong-mang-javascript_wy4a1m.png"
-                alt="Phương thức every() với arrow function trong Mảng Javascript">
-              <p class="mt-4">
-                Mình lưu ý là toán tử <b><code>%</code></b> sẽ giúp ta kiểm tra số dư của một biểu thức. 
-                Nếu bạn muốn tham khảo hay tìm hiểu thêm thì có thể xem ở đây nhé:
-                <a href="https://www.w3schools.com/js/js_operators.asp" title="Toán tử trong js">Toán Tử Trong Javascript</a>.
-              </p>
-
-              <h4 class="text-white bg-secondary p-2 shadow title-article-size rounded">
-                Sử dụng phương thức every() với object:
-              </h4>
-              <p>
-                Bây giờ chúng ta thử lấy các giá trị thuộc tính của <b>object</b> tạo các biểu thức điều kiện 
-                để xem các phần tử trong mảng có thỏa mãn điều kiện không nhé. Bây giờ để dễ hình dùng hơn bạn xem đoạn code sau nhé:
-              </p>
-              
-              <p>
-                <mark class="p-1"><b>Đoạn Code:</b></mark>
-              </p>
-              <pre><code class="javascript"> let mang = [4, 6, 8, 10];<br/> let khoangGiaTri = {<br/> &nbsp;&nbsp;soNhoNhat : 2,<br/> &nbsp;&nbsp;soLonNhat : 12<br/> };<br/> let ketQua = mang.every(function(phanTu){<br/> &nbsp;&nbsp;&nbsp; return phanTu &#62; khoangGiaTri.soNhoNhat &&  phanTu &#60;= khoangGiaTri.soLonNhat <br/> });<br/><br/> console.log(ketQua);</code></pre>
-              <p class="mt-4">
-                <mark class="p-1"><b>Kết Quả:</b></mark>
-              </p>
-              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589553606/Method-Array-4/phuong-thuc-every-va-object-trong-mang-javascript_caupjq.png"
-                alt="Phương thức every() với object trong Mảng Javascript">
-
-                <h4 class="text-white bg-secondary p-2 shadow mt-4 title-article-size rounded">
-                  Sử dụng phương thức every() với mảng rỗng:
-                </h4>
-                <p>
-                  Nếu chúng ta dùng phương thức <b><code>every()</code></b> để kiểm tra <b>một mảng rỗng</b> thì kết quả sẽ luôn trả về là 
-                  <b>true</b>. Để dễ hình dung bạn xem đoạn code sau nhé:
-                </p>
+                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589776255/Destructuring%20Assignment/lay-nhieu-thuoc-tinh-trong-object-Destructuring-Assignment_cp1bfb.png"
+                alt="Lấy nhiều thuộc tính trong object với destructuring assignment js">
                
-                <p>
-                  <mark class="p-1"><b>Đoạn Code:</b></mark>
-                </p>
-                <pre><code class="javascript"> let mang = [];<br/> let ketQua = mang.every(phanTu => phanTu &#60;= 2);<br/> console.log(ketQua);</code></pre>
-                <p class="mt-4">
-                  <mark class="p-1"><b>Kết Quả:</b></mark>
-                </p>
-                <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589553893/Method-Array-4/phuong-thuc-every-va-mang-rong-trong-mang-javascript_lfajph.png"
-                  alt="Phương thức every() với mảng rỗng trong Mảng Javascript">
-
-
-                  <div class="row">
-                    <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                      <h3 class="text-primary ml-4 title-article-size">Phương thức some() trong Array(Mảng):</h3>
-                    </div>
-                  </div>
-                  <p>
-                    Phương thức <b><code>some()</code></b> sẽ kiểm tra mảng theo một điều kiện nhất và kết quả trả trả về sẽ có giá trị là 
-                    <b><code>true</code></b> hoặc <b><code>false</code></b>. Điểm khác biệt chính của nó với phương thức 
-                    <b><code>every()</code></b> là nếu <b>chỉ một phần tử</b> thỏa mãn điều kiện thì sẽ trả về giá trị <b><code>true</code></b>.
-                  </p>
-
-                  <p> Mình có lưu ý là phương thức <b><code>some()</code></b> sẽ <b>không ảnh hưởng</b> đến mảng chính và
-                    phương thức này sẽ không thực hiện hàm đối với các phần tử <b>không có giá trị(undefined)</b>.</p>
-                    <p>
-                  <p>
-                    Do cú pháp của nó giống với <b><code>every()</code></b> nên mình sẽ đi thẳng vào ví dụ để giúp bạn nắm rõ hơn nhé:
-                  </p>
-                  <h4 class="text-white bg-secondary p-2 shadow  title-article-size rounded">
-                    Ví dụ phương thức some():
+                  <h4 class="text-white bg-secondary p-2 mt-4 shadow title-article-size rounded">
+                    <b>Lấy các thuộc tính của object lồng nhau trong destructuring assignments:</b>
                   </h4>
+    
                   <p>
-                    Bây giờ chúng ta sẽ đi vào giải quyết vấn đề là nếu trong mảng có bất kỳ phần tử nào  nhỏ hơn 10
-                    sẽ trả về <b><code>true</code></b> còn ngược lại sẽ là <b><code>false</code></b>.
-                  </p>
-                  <p>
-                    Mình sẽ giải quyết vấn đề trên theo hai cách để bạn có cái nhìn tổng quát hơn. Đầu tiên chúng ta đi vào cách
-                     sử dụng vòng lặp <b>for</b>:
+                    Như bạn biết thì một <b>object</b> có thể chứa được thêm nhiều các object khác. Do đó phần này chúng ta sẽ 
+                    đi vào tìm hiểu cách  lấy giá trị thuộc tính của object con đó. Để hiểu rõ hơn bạn xem đoạn code sau nhé:
                   </p>
                   <p>
                     <mark class="p-1"><b>Đoạn Code:</b></mark>
                   </p>
-                  <pre><code class="javascript"> let mang = [30, 40, 20, 8, 12];<br/> let ketQua = false;<br/><br/> for(let i=0; i&#60;mang.length; i++){<br/> &nbsp;&nbsp;if(mang[i] &#60; 10){<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ketQua =  true;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br/>&nbsp;&nbsp;&nbsp;}<br/> }<br/> console.log(ketQua);</code></pre>
+                  <pre><code class="javascript"> let khachHang = {<br/> &nbsp;&nbsp;gioiTinh: "Nam",<br/> &nbsp;&nbsp;tuoi: 18,<br/> &nbsp;&nbsp;hoTen:{<br/> &nbsp;&nbsp;&nbsp;&nbsp; ten: "An",<br/> &nbsp;&nbsp;&nbsp;&nbsp; ho: "Nguyễn",<br/> &nbsp;&nbsp;}<br/> };<br/> let {hoTen: {ten, ho}}= khachHang;<br/><br/> console.log(ten);<br/> console.log(ho);</code></pre>
                   <p class="mt-4">
                     <mark class="p-1"><b>Kết Quả:</b></mark>
                   </p>
                   <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                    data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589594635/Method-Array-4/su-dung-vong-lap-for-voi-mang-js_y4i1lb.png"
-                    alt="Sử dụng vòng lặp với Mảng Javascript">
-                  <p class="mt-4">
-                    Như bạn thấy ở vòng lặp trên thì ta sẽ lọc qua tất cả các phần tử trong mảng và nếu <b>chỉ có một phần tử</b> nhỏ hon 10 thì chúng ta 
-                    gán giá trị <b><code>true</code></b> vào cho biến <b><code>ketQua</code></b> và dừng vòng lặp ngay lặp tức bằng lệnh <b><code>break;</code></b>
-                  </p>
-                  <p>
-                    Bây giờ chúng ta sẽ đi vào giải quyết vấn đề trên bằng phương thức <b><code>some()</code></b> nhé:
-                  </p>
-
-                  <p>
-                    <mark class="p-1"><b>Đoạn Code:</b></mark>
-                  </p>
-                  <pre><code class="javascript"> let mang = [30, 40, 20, 8, 12];<br/> let ketQua = mang.some(function (phanTu){<br/> &nbsp;&nbsp;&nbsp; return phanTu &#60; 10;<br/>});<br/><br/> console.log(ketQua);</code></pre>
-                  <p class="mt-4">
-                    <mark class="p-1"><b>Kết Quả:</b></mark>
-                  </p>
-                  <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                    data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589594976/Method-Array-4/phuong-thuc-some-trong-mang-js_knnn1a.png"
-                    alt="Phương thức some() trong Mảng Javascript">
-
-                    <h4 class="text-white bg-secondary p-2 shadow mt-4 title-article-size rounded">
-                      Kết hợp phương thức some() với arrow function:
-                    </h4>
-                    <p>
-                      Bây giờ chúng ta thử giải quyết vấn đề trên bằng cách kết hợp giữa phương thức <b><code>some()</code></b>
-                      và <b>arrow function</b> bằng đoạn code dưới đây nhé:
-                    </p>
-
-                    <p>
-                      <mark class="p-1"><b>Đoạn Code:</b></mark>
-                    </p>
-                    <pre><code class="javascript"> let mang = [30, 40, 20, 8, 12];<br/> let ketQua = mang.some( phanTu => phanTu &#60; 10);<br/> console.log(ketQua);</code></pre>
-                    <p class="mt-4">
-                      <mark class="p-1"><b>Kết Quả:</b></mark>
-                    </p>
-                    <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                      data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589595273/Method-Array-4/phuong-thuc-some-voi-arrow-functiontrong-mang-js_sis74k.png"
-                      alt="Phương thức some() với arrow function trong Mảng Javascript">
-
-                    <p class="mt-4">
-                      Mình có chú ý là nếu bạn dùng phương thức <b><code>some</code></b> với một <b>mảng rỗng</b>
-                      thì kết quả trả về sẽ luôn có giá trị <b><code>false</code></b> nhé.
-                    </p>
-
-                    <div class="row">
-                      <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                        <h3 class="text-primary ml-4 title-article-size">Phương thức reverse() trong Array(Mảng):</h3>
-                      </div>
-                    </div>
-                    <p>
-                      Phương thức <b><code>reverse()</code></b> sẽ trả về mảng chính được sắp xếp theo hướng <b>ngược lại</b>
-                      so với ban đầu. Cú pháp của nó ở dưới đây nhé:
-                    </p>
-                    <pre><code class="javascript"> (Mảng).reverse();</code></pre>
-                    <p>
-                      Để giúp bạn nắm rõ hơn chúng ta đi vào ví dụ cụ thể sao đây nhé:
-                    </p>
-                    <p>
-                      <mark class="p-1"><b>Đoạn Code:</b></mark>
-                    </p>
-                    <pre><code class="javascript"> let mang = [1, 2, 3, 4];<br/> let ketQua = mang.reverse();<br/> console.log(ketQua);</code></pre>
-                    <p class="mt-4">
-                      <mark class="p-1"><b>Kết Quả:</b></mark>
-                    </p>
-                    <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                      data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589596245/Method-Array-4/phuong-thuc-reverse-trong-mang-js_q6mlkf.png"
-                      alt="Phương thức reverse() trong Mảng Javascript">
-
-                      <div class="row">
-                        <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                          <h3 class="text-primary ml-4 title-article-size">Phương thức split() với Array(Mảng):</h3>
-                        </div>
-                      </div>
-                  
-                  
-                      <p>
-                        Phương thức <b><code>split()</code></b> sẽ giúp chuyển <b>các ký tự trong chuỗi thành các 
-                        phần tử ở trong mảng</b>.
-                      </p>
-                      <h4 class="text-white bg-secondary p-2 shadow mt-4 title-article-size rounded">
-                        Cú pháp phương thức split() :
-                       </h4>
-                       <p>
-                        Bây giờ chúng ta sẽ đi vào cú pháp của nó nhé:
-                       </p>
-                      <pre><code class="javascript"> (Chuỗi).split(Ký tự, Độ dài);</code></pre>
-                      <ul>
-                        <li>Với <b>Ký tự</b>: Dùng ký tự để <b>xác định vị trí</b> sẽ chia các ký tự trong chuỗi thành mảng.
-                        Ngoài ra chúng ta cũng có thể sử dụng biểu thức để thay cho ký tự.
-                        </li>
-                        <li>
-                          Với <b>Độ dài</b>: Dùng để xác định độ dài của mảng sẽ chứa các ký tự trong chuỗi. Các ký tự nếu vượt quá độ dài này sẽ bị bỏ qua. 
-                        </li>
-                      </ul>
-                      <h4 class="text-white bg-secondary p-2 shadow mt-4 title-article-size rounded">
-                       Ví dụ phương thức split() :
-                       </h4>
-                       <p>
-                         Chúng ta sẽ đi vào ví dụ khi sử dụng <b>ký tự khoảng trắng</b> để làm nơi 
-                         xác định vị trí chuyển chuỗi thành mảng và sẽ không giới hạn độ dài của mảng chứa các ký tự.
-                         Để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
-                       </p>
-
-                       <p>
-                        <mark class="p-1"><b>Đoạn Code:</b></mark>
-                      </p>
-                      <pre><code class="javascript"> let chuoi = "Xin Chào Các Bạn";<br/> let mangKyTu = chuoi.split(" ");<br/> console.log(mangKyTu);</code></pre>
-                      <p class="mt-4">
-                        <mark class="p-1"><b>Kết Quả:</b></mark>
-                      </p>
-                      <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                        data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589598173/Method-Array-4/phuong-thuc-split-voi-mang-js_t1u67v.png"
-                        alt="Phương thức split() với Mảng Javascript">
-
-                      <p class="mt-4">
-                        Bạn có thể <b>không cần xác định ký tự</b> để xác định vị trí tách chuỗi trong phương thức <b><code>split()</code></b>. Lúc này nó sẽ tự động xác định mỗi ký 
-                        tự trong chuỗi sẽ là một phần tử con trong mảng (Khoảng trắng cũng là ký tự nha). Và với ví dụ trên chúng ta sẽ thử không sử dụng 
-                        ký tự để xem kết quả như thế nào nhé:
-                      </p>
-                      <p>
-                        <mark class="p-1"><b>Đoạn Code:</b></mark>
-                      </p>
-                      <pre><code class="javascript"> let chuoi = "Xin Chào Các Bạn";<br/> let mangKyTu = chuoi.split("");<br/> console.log(mangKyTu);</code></pre>
-                      <p class="mt-4">
-                        <mark class="p-1"><b>Kết Quả:</b></mark>
-                      </p>
-                      <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                        data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589598550/Method-Array-4/phuong-thuc-split-voi-mang-2-js_hw44mu.png"
-                        alt="Phương thức split() với Mảng 2 Javascript">
-                      <p class="mt-4">
-                        Tiếp theo chúng ta sẽ đi vào ví dụ với việc sử dụng phương thức <b><code>split()</code></b> với vòng lặp <b><code>for...of</code></b> trong
-                        mảng nhé:
-                      </p>
-
-                      <p>
-                        <mark class="p-1"><b>Đoạn Code:</b></mark>
-                      </p>
-                      <pre><code class="javascript"> let chuoi = "An,Hưng,Lan";<br/> let mangKyTu = chuoi.split(",");<br/><br/> for(let phanTu of mangKyTu){<br/> &nbsp;&nbsp;console.log("Xin chào bạn " + phanTu)<br/> }</code></pre>
-                      <p class="mt-4">
-                        <mark class="p-1"><b>Kết Quả:</b></mark>
-                      </p>
-                      <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                        data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589599181/Method-Array-4/phuong-thuc-split-voi-for-of-trong-mang-js_jcrn51.png"
-                        alt="Phương thức split() với vòng lặp for...of trong Mảng Javascript">
+                    data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589776986/Destructuring%20Assignment/lay-thuoc-tinh-trong-object-con-Destructuring-Assignment_dk5eyi.png"
+                    alt="Lấy nhiều thuộc tính trong object con với destructuring assignment js">
 
 
-                        <div class="row">
-                          <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                            <h3 class="text-primary ml-4 title-article-size">Phương thức join() trong Array(Mảng):</h3>
-                          </div>
-                        </div>
-                        <p>
-                          Phương thức <b><code>join()</code></b> sẽ trả về kết quả là một chuỗi bằng cách kết hợp các phần tử trong mảng.
-                          Và phương thức này sẽ không ảnh hưởng đến mảng chính nhé.
-                        </p>
-                        <h4 class="text-white bg-secondary p-2 shadow mt-4 title-article-size rounded">
-                         Cú pháp phương thức join() :
-                          </h4>
-                          <p>
-                            Bây giờ chúng ta sẽ đi vào tìm hiểu cú pháp của nó nhé:
-                          </p>
-                          <pre><code class="javascript"> (Mảng).join(Ký tự ngăn cách)</code></pre>
-                          <ul>
-                            <li><b>Ký tự ngăn cách</b> là ký tự phân chia các phần tử trong mảng sau khi đã chuyển sang dạng chuỗi.</li>
-                          </ul>
 
-                          <h4 class="text-white bg-secondary p-2 shadow mt-4 title-article-size rounded">
-                            Ví dụ phương thức join() :
-                          </h4>
-                          <p>
-                            Bây giờ chúng ta thử chuyển các phần tử trong mảng thành dạng chuỗi với ký tự ngăn cách là dấu  
-                            <b><code>&#60;</code></b>. Để dễ hình dung bạn xem ví dụ sau đây nhé:
-                          </p>
 
-                        <p>
-                        <mark class="p-1"><b>Đoạn Code:</b></mark>
-                      </p>
-                      <pre><code class="javascript"> let mang = [2, 4, 6, 8];<br/> let chuoi = mang.join(" &#60; ");<br/><br/> console.log(chuoi);<br/> console.log(typeof chuoi);</code></pre>
-                      <p class="mt-4">
-                        <mark class="p-1"><b>Kết Quả:</b></mark>
-                      </p>
-                      <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                        data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589600120/Method-Array-4/phuong-thuc-join-trong-mang-js_m4vkqh.png"
-                        alt="Phương thức joint() trong Mảng Javascript">
+
+
+
+
+
 
 
 
@@ -420,7 +399,7 @@
             <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
 
 
-            <p>Qua đây mình mong bài viết sẽ giúp bạn hiểu được <b>cách sử dụng các phương thức với mảng</b>
+            <p>Qua đây mình mong bài viết sẽ giúp bạn hiểu được <b>khái niệm và cách sử dụng  destructuring assignments</b>
               trong ngôn ngữ
               Javascript và
               nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất
