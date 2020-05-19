@@ -26,7 +26,7 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i> Destructuring Assignment Trong Javascript</h2>
+                  aria-hidden="true"></i> Phạm Vi Biến Trong Javascript</h2>
             </div>
           </div>
 
@@ -36,349 +36,226 @@
             </div>
           </div>
           <div class="text-content-article mt-5">
-            <p><i>Hôm nay bạn hãy cùng mình đi vào tìm hiểu về khái niệm cũng như cách sử dụng Destructuring Assignment
+            <p><i>Hôm nay bạn hãy cùng mình đi vào tìm hiểu về phạm vi của biến cũng như cách sử dụng  khai bao biến bằng var, let và const
                 trong
                 ngôn
                 ngữ lập trình Javascript để phát triển web nhé.</i>
             </p>
             <p>
-              <b>Destructuring Assignment</b> là cú pháp được cung cấp trong phiên bản ES6 giúp chúng ta có thể dễ dàng
-              lấy các
-              giá trị trong <b>array(mảng)</b> và <b>object(đối tượng)</b> để gán vào biến mà không cần phải sử dụng
-              vòng lặp
-              hay các phương thức khác. Bây giờ chúng ta sẽ cùng nhau đi vào tìm hiểu cách sử dụng của nó ở dưới đây nhé.
+              Điểm quan trọng khi ta <b>xác định phạm vi cho biến</b> là sẽ bảo đảm cho đoạn mã của của chúng ta được an toàn.
+              Nó chỉ cho phép người dùng truy cập vào những thông tin mà chúng ta muốn thông qua việc hiển thị và phân quyền truy cập vào biến lưu trữ.
+              Ngoài ra giúp chúng ta tăng khả năng nhận biết lỗi một cách dễ dàng
             </p>
+            <p>
+              Trong Javascript chúng ta có 3 cách khai báo biến là dùng từ khóa <b><code>let</code></b>,
+              <b><code>var</code></b> và <b><code>const</code></b>. Hôm nay chúng ta sẽ đi vào tìm hiểu phạm vi biến  của mỗi cách khai báo 
+              ở phần dưới đây nhé.
+            </p>
+         
             <div class="row">
-              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size"> Destructuring Assignment Với Mảng:</h3>
+              <div class="col-sm-12 bg-light p-2 mb-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">Biến Toàn Cục:</h3>
               </div>
             </div>
 
             <p>
-              Trước khi đi vào vấn đề chính thì mình sẽ minh họa sơ qua cách chúng ta hay lấy giá trị của các
-              phần tử trong mảng thông qua ví dụ dưới đây nhé:
+              <b>Biến toàn cục</b> là những biến được khai báo bên ngoài tất cả các <b>function (hàm)</b>
+              hoặc bên ngoài dấu <b><code>{}</code></b>. Đối với một biến toàn cục thì bạn có thể truy cập ở 
+              dữ liệu của  biến ở bất cứ đâu trong chương trình. Bây giờ chúng ta sẽ đi vào ví dụ cụ thể để hiểu rõ hơn nhé:
             </p>
-            <h6 class="text-primary">
-              Cách lấy giá trị phần tử thông thường:
-            </h6>
             <p>
-              Bây giờ chúng ta sẽ đi vào tìm hiểu cú pháp của nó nhé:
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
             </p>
+            <pre><code class="javascript"> let ten = "Nguyễn An";<br/> console.log(ten);<br/> function xinChao() {<br/> &nbsp;&nbsp;&nbsp;console.log("Xin Chào " + ten);<br/> }<br/> xinChao();</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589858677/Pham-Vi-Bien/vi-du-bien-toan-cuc-trong-js_byh6p0.png"
+              alt="Ví dụ biến toàn cục trong Javascript">
 
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> let mang = ["Màu Xanh", "Màu Đỏ", "Màu Cam"];<br/>/*Cách lấy thông thường*/<br/> let mau1 = mang[0];<br/> let mau2 = mang[1];<br/> let mau3 = mang[2];<br/><br/> console.log(mau1);<br/> console.log(mau2);<br/> console.log(mau3);</code></pre>
             <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
+              Như bạn thấy thì dù bên ngoài hay bên trong <b>function (hàm)</b> thì chúng ta đều có thể lấy được giá trị của biến <b><code>ten</code></b>.
             </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589767487/Destructuring%20Assignment/lay-gia-tri-trong-mang_u7mc5e.png"
-              alt="Lấy giá trị trong mảng  Javascript">
-            <p class="mt-4">
-              Bạn có thể tham khảo thêm mảng(array) ở <a
-                href="https://www.niemvuilaptrinh.com/article/Array-Mang-Trong-Javascript"
-                title="Array Trong Javascript">đường dẫn đây nhé</a>.
-            </p>
-            <p>
-              Bây giờ chúng ta sẽ đi vào tìm hiểu cách sử dụng <b>Destructuring Assignment</b> để lấy các giá trị phần
-              tử
-              trong mảng ở ví dụ trên. Bạn xem đoạn code sau để nắm rõ hơn nhé:
-            </p>
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> let mang = ["Màu Xanh", "Màu Đỏ", "Màu Cam"];<br/>/*Cách lấy phần tử bằng Destructuring Assignment*/<br/> let [mau1, mau2, mau3] = mang;<br/><br/> console.log(mau1);<br/> console.log(mau2);<br/> console.log(mau3);</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589768145/Destructuring%20Assignment/Lay-phan-tu-bang-Destructuring-Assignment-mang-javascript_hbttdl.png"
-              alt="Lấy giá trị trong mảng bằng Destructuring Assignment Javascript">
-            <p class="mt-4">
-              Nó sẽ tự động lấy giá trị theo số vị trí chỉ mục của phần tử trong mảng để gán vào cho biến. Khi sử dụng
-              <b>destructuring assignments</b> nó
-              sẽ giúp cho đoạn code dễ nhìn hơn cũng như giúp chúng ta lấy trị mà mình mong muốn trong mảng một cách
-              nhanh hơn.
-            </p>
-            <h4 class="text-white bg-secondary p-2 shadow title-article-size rounded"> <b>Cách lấy những phần tử mong
-                muốn trong destructuring assignments:</b></h4>
-            <p>
-              Như ví dụ trên nếu như bạn chỉ muốn lấy hai màu <b>"Màu Xanh"</b> và <b>"Màu Cam"</b> và bỏ phần tử ở giữa
-              thì chúng ta
-              có thể sử dụng dấu <b>phẩy</b> để ngăn cách các phần tử mà mình không muốn lấy ở trong mảng. Để dễ hình
-              dung bạn xem
-              đoạn code sau nhé:
-            </p>
-
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> let mang = ["Màu Xanh", "Màu Đỏ", "Màu Cam"];<br/>/*Cách lấy phần tử bằng Destructuring Assignment*/<br/> let [mau1, , mau3] = mang;<br/><br/> console.log(mau1);<br/> console.log(mau3);</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589769222/Destructuring%20Assignment/su-dung-dau-phay-Destructuring-Assignment-mang-javascript_qrdpr5.png"
-              alt="Sử dung dấu phẩy trong Destructuring Assignment Javascript">
-
-            <h4 class="text-white bg-secondary p-2 mt-4 shadow title-article-size rounded">
-              <b>Cách lấy nhiều phần tử trong destructuring assignments:</b>
-            </h4>
-            <p>
-              Cũng với ví dụ trên nếu chúng ta muốn lưu trữ <b>"Màu Xanh"</b> vào một biến và các phần tử còn lại vào
-              trong một biến thì
-              bạn có thể sử dụng dấu <b><code>...</code></b> trước biến đó. Để hiểu rõ hơn bạn xem ví dụ sau nhé:
-            </p>
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> let mang = ["Màu Xanh", "Màu Đỏ", "Màu Cam"];<br/>/*Cách lấy phần tử bằng Destructuring Assignment*/<br/> let [mau1, ...mauConlai] = mang;<br/><br/> console.log(mau1);<br/> console.log(mauConlai);</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589769911/Destructuring%20Assignment/su-dung-dau-ba-cham-Destructuring-Assignment_c72v7r.png"
-              alt="Sử dung dấu ... trong Destructuring Assignment Javascript">
-
-            <h4 class="text-white bg-secondary p-2 mt-4 shadow title-article-size rounded">
-              <b>Sử dụng destructuring assignments với hàm (function):</b>
-            </h4>
-            <p>
-              Chúng ta có thể lấy giá trị trả về của một hàm để gán vào trong biến bằng cách sử dụng <b>destructuring
-                assignments</b>.
-              Để hiểu rõ hơn bạn xem đoạn code sau nhé:
-            </p>
-
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> function mang() {<br/> &nbsp;&nbsp;&nbsp; return ["Màu Xanh", "Màu Đỏ", "Màu Cam"];<br/> }<br/>/*Cách lấy phần tử bằng Destructuring Assignment*/<br/> let [mau1, mau2, mau3] = mang();<br/><br/> console.log(mau1);<br/> console.log(mau2);<br/> console.log(mau3)</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589770919/Destructuring%20Assignment/su-dung-function-voi-Destructuring-Assignment_o8all0.png"
-              alt="Sử dung function với Destructuring Assignment Javascript">
-            <h4 class="text-white bg-secondary p-2 mt-4 shadow title-article-size rounded">
-              <b>Gán kiểu dữ liệu khác với destructuring assignments:</b>
-            </h4>
-            <p>
-              Để dễ hình dung chúng ta sẽ đi vào ví dụ gán giá trị vào các thuộc tính của object khi sử dụng
-              destructuring assignments.
-              Để hiểu rõ hơn bạn xem đoạn code sau nhé:
-            </p>
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> let khachHang = {};<br/> [khachHang.ho, khachHang.ten] = ["Nguyễn", "An"];<br/><br/> console.log(khachHang);</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589771356/Destructuring%20Assignment/su-dung-object-voi-Destructuring-Assignment_ukhw1k.png"
-              alt="Sử dung object với Destructuring Assignment Javascript">
-            <h4 class="text-white bg-secondary p-2 mt-4 shadow title-article-size rounded">
-              <b>Giá trị mặc định trong destructuring assignments:</b>
-            </h4>
-            <p>
-              Ví dụ khi chúng ta sử dụng <b>biến nhiều hơn phần tử hiện có trong mảng</b> thì các giá trị biến dư đó sẽ
-              có giá trị là <b><code>undefined</code></b>. Để dễ hình dung hơn bạn cùng mình xem ví dụ sau nhé:
-            </p>
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> let [mau1, mau2] = ["Màu Xanh"];<br/><br/> console.log("Giá trị biến màu 1: " + mau1);<br/> console.log("Giá trị biến màu 2: " + mau2);</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589771925/Destructuring%20Assignment/gi-tri-mac-dinh-trong-Destructuring-Assignment_wg6iak.png"
-              alt="Giá trị mặc dịnh trong  Destructuring Assignment Javascript">
-            <p class="mt-4">
-              Thì lúc này chúng ta có thể sử dụng <b>giá trị mặc định</b> để có thể khai báo giá trị cho biến. Bạn xem
-              ví
-              dụ sau đây để hiểu rõ hơn nhé:
-            </p>
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> let [mau1, mau2 = "Màu Đỏ"] = ["Màu Xanh"];<br/><br/> console.log("Giá trị biến màu 1: " + mau1);<br/> console.log("Giá trị biến màu 2: " + mau2);</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589772067/Destructuring%20Assignment/gi-tri-mac-dinh-2-trong-Destructuring-Assignment_uqpdxv.png"
-              alt="Giá trị mặc dịnh 2 trong  Destructuring Assignment Javascript">
-            <h4 class="text-white bg-secondary p-2 mt-4 shadow title-article-size rounded">
-              <b>Hoán đổi giá trị trong destructuring assignments:</b>
-            </h4>
-            <p>
-              Khi bạn hoán đổi giá trị giữa các biến thì chúng ta có thể sử dụng destructuring assignments để giải quyết
-              vấn đề trên.
-              Để bạn hiểu rõ hơn chúng ta cùng nhau đi vào tìm hiểu ví dụ sau nhé:
-            </p>
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> let ten = "Nguyễn";<br/> let ho = "An";<br/> [ten, ho] = [ho, ten]<br/><br/> console.log(ho);<br/> console.log(ten);</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589772546/Destructuring%20Assignment/hoan-doi-gia-tri-trong-Destructuring-Assignment_vdhf6a.png"
-              alt="Hoán đổi giá trị trong  Destructuring Assignment Javascript">
 
 
             <div class="row">
-              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size"> Destructuring Assignment Với Đối Tượng(Object):</h3>
+              <div class="col-sm-12 bg-light p-2 mb-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">Biến  Cục Bộ:</h3>
               </div>
             </div>
             <p>
-              Đối với kiểu dữ liệu <b>object</b> thì chúng ta cũng có thể lấy <b>các giá trị của thuộc tính đối tượng đó
-                để gán vào trong biến</b>.
-              Cách nó hoạt động thì cũng có nhiều nét tương đồng so với kiểu dữ liệu mảng. Bây giờ chúng ta sẽ đi vào
-              cách lấy dữ liệu bằng cách
-              thông thường với kiểu dữ liệu <b>object</b> thông qua ví dụ dưới đây nhé:
+              <b>Biến cục bộ</b> là biến được đặt bên trong <b>function</b> hoặc <b><code>{}</code></b>. Chỉ có hàm chứa nó 
+              mới có quyền truy cập vào dữ liệu của biến đó. Do đó bạn có thể dùng nhiều tên biến khác nhau để đặt trong những hàm khác nhau mà 
+              không ảnh hưởng đến dữ liệu của biến. Bây giờ chúng ta sẽ đi vào hai dạng biến cục bộ là:
+            </p>
+            <h4 class="text-white bg-secondary p-2 mt-4 shadow title-article-size rounded"><b>Biến cục bộ trong function (hàm) Javascript:</b></h4>
+            <p>
+              Khi bạn khai báo biến trong function thì chỉ có hàm đó có thể sử dụng dữ liệu của biến đó.
+              Nếu ta gọi biến bên ngoài hàm thì sẽ xảy ra lỗi. Để nắm rõ hơn bạn xem đoạn code sau nhé:  
             </p>
             <p>
               <mark class="p-1"><b>Đoạn Code:</b></mark>
             </p>
-            <pre><code class="javascript"> let khachHang = {<br/> &nbsp;&nbsp; ten: "An",<br/> &nbsp;&nbsp; ho: "Nguyễn"<br/> }<br/> let tenKhachHang = khachHang.ten;<br/> let hoKhachHang = khachHang.ho;<br/><br/> console.log(hoKhachHang);<br/> console.log(tenKhachHang);</code></pre>
+            <pre><code class="javascript"> function xinChao() {<br/> &nbsp;&nbsp;&nbsp;let ten = "Nguyễn An";<br/> &nbsp;&nbsp;&nbsp;console.log("Xin Chào " + ten);<br/> }<br/> xinChao();<br/> console.log(ten);</code></pre>
             <p class="mt-4">
               <mark class="p-1"><b>Kết Quả:</b></mark>
             </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589773359/Destructuring%20Assignment/lay-gia-tri-trong-object_fg5viw.png"
-              alt="Lấy giá trị trong Object">
-            <p class="mt-4">
-              Nếu bạn muốn xem lại hoặc tham khảo thêm về object (đối tượng) thì nhấn vào <a
-                href="https://www.niemvuilaptrinh.com/article/Object-Trong-Javascript"
-                title="object trong javascript">đây nhé</a>.
-            </p>
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589859564/Pham-Vi-Bien/vi-du-bien-cuc-bo-trong-js_yux0ze.png"
+              alt="Ví dụ biến  cục bộ  trong Javascript">
+              <h4 class="text-white bg-secondary p-2 mt-4 shadow title-article-size rounded"><b>Biến cục bộ trong block statement <b><code>{}</code></b> Javascript:</b></h4>
             <p>
-              Bây giờ chúng ta sẽ đi vào sử dụng <b>destructuring assignment</b> để lấy giá trị đối với kiểu dữ liệu
-              object bằng ví dụ
-              dưới đây nhé:
+              Khi chúng ta khai báo biến với từ khóa <b><code>let</code></b> hay <b><code>const</code></b> trong block statement <b><code>{}</code></b> như 
+              mệnh đề <b>if, switch</b>... thì chúng ta chỉ được phép truy cập biến bên trong block statement đó. Để dễ hình dung 
+              bạn xem ví dụ sau đây nhé:
             </p>
             <p>
               <mark class="p-1"><b>Đoạn Code:</b></mark>
             </p>
-            <pre><code class="javascript"> let khachHang = {<br/> &nbsp;&nbsp; ten: "An",<br/> &nbsp;&nbsp; ho: "Nguyễn"<br/> };<br/> let {ten, ho} = khachHang;<br/><br/> console.log(ten);<br/> console.log(ho);</code></pre>
+            <pre><code class="javascript"> if (true) {<br/>&nbsp;&nbsp;let ten = "Nguyễn An";<br/> &nbsp;console.log("Xin Chào " + ten);<br/> }<br/> console.log(ten);</code></pre>
             <p class="mt-4">
               <mark class="p-1"><b>Kết Quả:</b></mark>
             </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589774030/Destructuring%20Assignment/lay-gia-tri-trong-object-destructuring_assignment_uj1obp.png"
-              alt="Lấy giá trị trong Object bằng destructuring assignment js">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589860190/Pham-Vi-Bien/vi-du-bien-cuc-bo-voi-block-statement-trong-js_hhpofo.png"
+              alt="Ví dụ biến  cục bộ với block statement  trong Javascript">
             <p class="mt-4">
-              Với các giá trị thuộc tính <b><code>ten</code></b> và <b><code>ho</code></b>, dù bạn có chuyển vị trí nó trong
-              việc khởi tạo biến
-              thì giá trị của nó cũng sẽ <b>không thay đổi</b> nhé.
-            </p>
-            <p>
-              Nếu bạn gán <b>tên biến khác so với tên thuộc tính</b> của đối tượng thì kết quả trả về sẽ như thế nào
-              nhỉ?
-              <br />
-              Để giải quyết vấn đề trên thì bạn thử xem đoạn code sau nhé:
+              Nhưng khi chúng ta khai báo biến bằng từ khóa <b><code>var</code></b> thì nó sẽ mặc định là <b>biến toàn cục</b> và cho phép truy cập 
+              dữ liệu của biến khi gọi từ bên trong và bên ngoài block statment <b><code>{}</code></b>. Để hiểu rõ hơn chúng ta 
+              thử đi vào sử dùng ba cách khai báo khác nhau trong block statement để xem kết quả sao nhé:
             </p>
             <p>
               <mark class="p-1"><b>Đoạn Code:</b></mark>
             </p>
-            <pre><code class="javascript"> let khachHang = {<br/> &nbsp;&nbsp; ten: "An",<br/> &nbsp;&nbsp; ho: "Nguyễn"<br/> };<br/> let {tenKhachHang, hoKhachHang}= khachHang;<br/><br/> console.log(tenKhachHang);<br/> console.log(hoKhachHang);</code></pre>
+            <pre><code class="javascript"> if (true) {<br/>&nbsp;&nbsp;let khaiBaoLet = "Khai Báo Biến bằng let";<br/>&nbsp;&nbsp;const khaiBaoConst = "Khai Báo Biến bằng const";<br/>&nbsp;&nbsp;var khaiBaoVar = "Khai Báo Biến bằng var";<br/> }<br/> console.log(khaiBaoVar);<br/> console.log(khaiBaoConst);<br/> console.log(khaiBaoLet);</code></pre>
             <p class="mt-4">
               <mark class="p-1"><b>Kết Quả:</b></mark>
             </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589775137/Destructuring%20Assignment/gi-tri-mac-dinh-phan-2-trong-Destructuring-Assignment_alf6uo.png"
-              alt="Lấy giá trị trong Object phần 2 bằng destructuring assignment js">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589860775/Pham-Vi-Bien/su-dung-var-let-const-block-statement-trong-js_vyx6g1.png"
+              alt="Sử dụng khai báo var, let, const với block statement  trong Javascript">
+
             <p class="mt-4">
-              Như bạn thấy thì chúng ta nhận được giá trị của hai biến là <b><code>undefined</code></b>.
+              Như bạn thấy thì chỉ cách khai báo <b><code>var</code></b>  mới sử dụng được dữ liệu của biến  bên ngoài block statement.
+              Còn hai từ khóa <b><code>let</code></b> và <b><code>var</code></b> thì sẽ xảy ra lỗi cho chường trình.
             </p>
+
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mb-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">Phạm vi biến giữa các Function với nhau:</h3>
+              </div>
+            </div>
             <p>
-              Nhưng trong <b>destructuring assignment</b> có cung cấp cho chúng ta một cách để xác định tên khác cho
-              biến không
-              cần tuân theo quy tắc là đặt tên giống với thuộc tính của object. Để hiểu rõ hơn chúng ta cùng nhau đi vào
-              ví dụ sau nhé:
+              Bây giờ chúng ta sẽ đi vào ví dụ thực tế là sử dụng biến bên ngoài phạm vi của hàm thông qua ví dụ dưới đây nhé:
             </p>
             <p>
               <mark class="p-1"><b>Đoạn Code:</b></mark>
             </p>
-            <pre><code class="javascript"> let khachHang = {<br/> &nbsp;&nbsp; ten: "An",<br/> &nbsp;&nbsp; ho: "Nguyễn"<br/> };<br/> let {ten: tenKhachHang, ho: hoKhachHang}= khachHang;<br/><br/> console.log(tenKhachHang);<br/> console.log(hoKhachHang);</code></pre>
+            <pre><code class="javascript"> function luuTru() {<br/> &nbsp;&nbsp;&nbsp;let ten = "Nguyễn An";<br/> }<br/> function xinChao() {<br/>&nbsp;&nbsp;&nbsp; luuTru();<br/> &nbsp;&nbsp;&nbsp;console.log("Tên khách hàng là: " + ten);<br/> }<br/><br/>xinChao();</code></pre>
             <p class="mt-4">
               <mark class="p-1"><b>Kết Quả:</b></mark>
             </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589775334/Destructuring%20Assignment/gi-tri-mac-dinh-phan-3-trong-Destructuring-Assignment_wibyu4.png"
-              alt="Lấy giá trị trong Object phần 3 bằng destructuring assignment js">
-
-            <h4 class="text-white bg-secondary p-2 mt-4 shadow title-article-size rounded">
-              <b>Giá trị mặc định trong destructuring assignments với object:</b>
-            </h4>
-            <p>
-              Chúng ta có thể chỉnh sửa giá trị hay thêm mới các thuộc tính trong object nếu như thuộc tính đó không tồn
-              tại.
-              Để nắm rõ hơn chúng ta cùng nhau đi vào tìm hiểu ví dụ sau nhé:
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589862512/Pham-Vi-Bien/pham-vi-bien-giua-cac-ham-trong-js_uhvjds.png"
+              alt="Phạm vi biến giữa các hàm  trong Javascript">
+            <p class="mt-4">
+              Như bạn thấy là mặc dù chúng ta có gọi hàm <b><code>luuTru()</code></b> trong hàm <b><code>xinChao()</code></b>
+              thì nó cũng không thể lấy được giá trị lưu trữ trong biến <b><code>ten</code></b>.
             </p>
+            <p>
+              Bây giờ chúng ta thử khai báo bằng từ khóa <b><code>var</code></b> để xem có thể lấy được dữ liệu của biến <b><code>ten</code></b> không nhé:
+            </p>
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> function luuTru() {<br/> &nbsp;&nbsp;&nbsp;var ten = "Nguyễn An";<br/> }<br/> function xinChao() {<br/>&nbsp;&nbsp;&nbsp; luuTru();<br/> &nbsp;&nbsp;&nbsp;console.log("Tên khách hàng là: " + ten);<br/> }<br/><br/>xinChao();</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589863324/Pham-Vi-Bien/pham-vi-bien-giua-cac-ham-khai-bao-var-trong-js_mbgd1m.png"
+              alt="Phạm vi biến giữa các hàm khai báo bằng var trong Javascript">
 
-          
+            <p class="mt-4">
+              Như vậy chúng ta có thể rút ra kết luận là đối với phạm vi <b> biến được khai báo trong hàm</b> thì 
+              việc sử dụng từ khóa <b><code>let</code></b>, <b><code>const</code></b> hay <b><code>var</code></b>
+             cũng sẽ không có quyền truy cập vào dữ liệu của biến đó ở <b>bên ngoài</b> hàm chứa nó.
+            </p>
+            <p>
+              Nhưng có một cách giúp chúng ta giải quyết vần đề trên là <b>không sử dụng từ khóa để khai báo biến</b>.
+              Lúc này phạm vi của biến sẽ là biến toàn cục và chúng ta có thể truy cập dữ liệu của biến ở mọi nơi 
+              trong chương trình. Để dễ hình dung bạn xem đoạn code sau nhé:
+            </p>
 
             <p>
               <mark class="p-1"><b>Đoạn Code:</b></mark>
             </p>
-            <pre><code class="javascript"> let khachHang = {<br/> &nbsp;&nbsp; ten: "An",<br/> &nbsp;&nbsp; ho: "Nguyễn"<br/> };<br/> let {ten, ho, tuoi = 18, gioiTinh = "Nam"}= khachHang;<br/><br/> console.log("Tên khách hàng là " + ten);<br/> console.log("Tuổi khách hàng là " + tuoi);</code></pre>
+            <pre><code class="javascript"> function luuTru() {<br/> &nbsp;&nbsp;&nbsp; ten = "Nguyễn An";<br/> }<br/> function xinChao() {<br/>&nbsp;&nbsp;&nbsp; luuTru();<br/> &nbsp;&nbsp;&nbsp;console.log("Tên khách hàng là: " + ten);<br/> }<br/><br/>xinChao();</code></pre>
             <p class="mt-4">
               <mark class="p-1"><b>Kết Quả:</b></mark>
             </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589775906/Destructuring%20Assignment/gia-tri-mac-dinh-trong-object-Destructuring-Assignment_zonuli.png"
-              alt="Giá trị mặc định trong object với destructuring assignment js">
-              <h4 class="text-white bg-secondary p-2 mt-4 shadow title-article-size rounded">
-                <b>Lấy các thuộc tính  trong destructuring assignments với object:</b>
-              </h4>
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589863755/Pham-Vi-Bien/pham-vi-bien-giua-cac-ham-khong-khai-bao-bien-trong-js_fbqrjv.png"
+              alt="Phạm vi biến giữa các hàm khi không sử dụng từ khóa khai báo trong Javascript">
 
-              <p>
-                Cũng giống như mảng thì chúng ta có thể sử dụng dấu <b><code>...</code></b> để lấy các thuộc tính trong 
-                kiểu dữ liệu object (đối tượng). Để hiểu rõ hơn bạn xem đoạn code sau nhé:
-              </p>
-              <p>
-                <mark class="p-1"><b>Đoạn Code:</b></mark>
-              </p>
-              <pre><code class="javascript"> let khachHang = {<br/> &nbsp;&nbsp; ten: "An",<br/> &nbsp;&nbsp; ho: "Nguyễn",<br/> &nbsp;&nbsp; tuoi: 18<br/> };<br/> let {ten, ...thongtinKhac}= khachHang;<br/><br/> console.log(ten);<br/> console.log(thongtinKhac);</code></pre>
-              <p class="mt-4">
-                <mark class="p-1"><b>Kết Quả:</b></mark>
-              </p>
-              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589776255/Destructuring%20Assignment/lay-nhieu-thuoc-tinh-trong-object-Destructuring-Assignment_cp1bfb.png"
-                alt="Lấy nhiều thuộc tính trong object với destructuring assignment js">
-               
-                  <h4 class="text-white bg-secondary p-2 mt-4 shadow title-article-size rounded">
-                    <b>Lấy các thuộc tính của object lồng nhau trong destructuring assignments:</b>
-                  </h4>
-    
-                  <p>
-                    Như bạn biết thì một <b>object</b> có thể chứa được thêm nhiều các object khác. Do đó phần này chúng ta sẽ 
-                    đi vào tìm hiểu cách  lấy giá trị thuộc tính của object con đó. Để hiểu rõ hơn bạn xem đoạn code sau nhé:
-                  </p>
-                  <p>
-                    <mark class="p-1"><b>Đoạn Code:</b></mark>
-                  </p>
-                  <pre><code class="javascript"> let khachHang = {<br/> &nbsp;&nbsp;gioiTinh: "Nam",<br/> &nbsp;&nbsp;tuoi: 18,<br/> &nbsp;&nbsp;hoTen:{<br/> &nbsp;&nbsp;&nbsp;&nbsp; ten: "An",<br/> &nbsp;&nbsp;&nbsp;&nbsp; ho: "Nguyễn",<br/> &nbsp;&nbsp;}<br/> };<br/> let {hoTen: {ten, ho}}= khachHang;<br/><br/> console.log(ten);<br/> console.log(ho);</code></pre>
-                  <p class="mt-4">
-                    <mark class="p-1"><b>Kết Quả:</b></mark>
-                  </p>
-                  <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                    data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589776986/Destructuring%20Assignment/lay-thuoc-tinh-trong-object-con-Destructuring-Assignment_dk5eyi.png"
-                    alt="Lấy nhiều thuộc tính trong object con với destructuring assignment js">
+            <p class="mt-4">
+              Cách này mình khuyên chỉ sử dụng trong trường hợp cần thiết thôi nhé nếu không sẽ gây ra sự lộn xộn 
+              và dễ hiểu lầm phạm vi của biến trong đoạn code của chúng ta.
+            </p>
+
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mb-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">Lexical Scope</h3>
+              </div>
+            </div>
+            <p>
+              <b>Lexical Scope</b> là việc sử dụng các hàm lồng vào nhau. Và hàm con sẽ có quyền truy cập 
+              các biến của hàm cha nhưng hàm cha sẽ <b>không</b> có quyền truy cập và sử dụng  các biến của hàm con.
+              Để dễ hiểu thì chúng ta sẽ đi vào ví dụ thực tế sau đây nhé:
+            </p>
 
 
-
-
-
-
-
-
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> function hamCha () {<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let bienCha = "Tôi là biến Cha";<br/><br/> &nbsp;&nbsp;function hamCon() {<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; let bienCon = "Tôi là biến Con";<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(bienCha);<br/> &nbsp;&nbsp;}<br/><br/> &nbsp;&nbsp;console.log(bienCon);<br/> }<br/> hamCha();</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589875636/Pham-Vi-Bien/Lexical-Scope-trong-js_jaer08.png"
+              alt="Lexical Scope trong Javascript">
+            <p class="mt-4">
+              Như bạn thấy thì khi chúng ta dùng <b><code>bienCha</code></b> trong <b><code>hamCon</code></b> thì sẽ được cho phép còn ngược lại nếu chúng ta truy cập <b><code>bienCon</code></b>
+              bên ngoài hàm của nó thì sẽ xảy ra lỗi như trên.
+            </p>
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mb-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">Closures</h3>
+              </div>
+            </div>
+            <p>
+             Như ví dụ trên khi ta tạo một <b><code>hamCon</code></b> nằm bên trong <b><code>hamCha</code></b>
+             thì lúc này chúng ta cũng đã tạo một <b>clouser</b>. Với <b><code>hamCon</code></b> chính là <b>clouser</b>.
+             Và clouser này sẽ được quyền truy cập biến của hàm cha dù hàm đó có được trả về  hay không. Điều này giúp nó duy trì 
+             quyền truy cập vào dữ liệu của các biến ở hàm cha. Nghe hơi khó hiểu nhỉ, bây giờ chúng ta sẽ đi vào ví dụ cụ thể sau đây nhé:
+            </p>
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> function hamCha () {<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let bienCha = "Tôi là biến Cha";<br/><br/> &nbsp;&nbsp;function hamCon() {<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(bienCha);<br/> &nbsp;&nbsp;}<br/><br/> return hamCon;<br/> }<br/> hamCha()();</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589877996/Pham-Vi-Bien/Clouser-trong-js_lbrgey.png"
+              alt="Clouser trong Javascript">
+            <p class="mt-4">
+              Đây là cách mà chúng ta khi muốn gọi và sử dụng <b><code>hamCon</code></b> trong hai hàm lồng vào nhau.
+              Cái này mình sẽ có một bài giải thích kỹ hơn khi chúng ta học về cách tương tác với trình duyệt trong javascript nhé.
+              Nếu bạn muốn tìm hiểu hay tham khảo thêm thì xem ở đây nha <a href="https://developer.mozilla.org/vi/docs/Web/JavaScript/Closures" title="clouser">Clouser</a>.
+            </p>
 
 
 
@@ -398,8 +275,8 @@
 
             <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
 
-
-            <p>Qua đây mình mong bài viết sẽ giúp bạn hiểu được <b>khái niệm và cách sử dụng  destructuring assignments</b>
+            
+            <p>Qua đây mình mong bài viết sẽ giúp bạn hiểu được <b>phạm vi biến</b>
               trong ngôn ngữ
               Javascript và
               nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất
