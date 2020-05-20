@@ -48,7 +48,7 @@
               biến hay vào một phần tử trong mảng hoặc xem hàm như một tham số để truyền vào cho một hàm khác...
             </p>
             <p>
-              Bây giờ chúng ta cùng nhau đi tìm hiểu <b>function object</b> nhé.
+              Bây giờ chúng ta cùng nhau đi tìm hiểu <b>function object</b> và các tính năng thêm của <b>function</b> nhé.
             </p>
 
 
@@ -112,7 +112,131 @@
             </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
               data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589946675/Function-Object/length-cua-function-object-vs-rest-parameters_dczdcx.png"
-              alt="Chiều dại một function object với rest parameters">
+              alt="Chiều dài một function object với rest parameters">
+
+              <div class="row">
+                <div class="col-sm-12 bg-light p-2 mb-4 shadow mt-4 rounded-pill">
+                  <h3 class="text-primary ml-4 title-article-size">Thuộc tính Tên Trong Function Object:</h3>
+                </div>
+              </div>
+              <p>
+                Chúng ta có thể lấy tên của hàm thông qua thuộc tính là <b>name</b>. Để hiểu rõ hơn bạn xem đoạn code sau nhé:
+              </p>
+              <p>
+                <mark class="p-1"><b>Đoạn Code:</b></mark>
+              </p>
+              <pre><code class="javascript"> function xinChao(a, ...b) {<br/> &nbsp;&nbsp;&nbsp;console.log(a + b);<br/> }<br/><br/> console.log(xinChao.name);</code></pre>
+              <p class="mt-4">
+                <mark class="p-1"><b>Kết Quả:</b></mark>
+              </p>
+              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589957223/Function-Object/lay-ten-trong-function-object_qnswmj.png"
+                alt="Lấy tên trong function object">
+
+                <div class="row">
+                  <div class="col-sm-12 bg-light p-2 mb-4 shadow mt-4 rounded-pill">
+                    <h3 class="text-primary ml-4 title-article-size">Thiết Lập Thuộc Tính Riêng Trong Function Object:</h3>
+                  </div>
+                </div>
+
+                <p>
+                  Cũng giống như một object bình thường thì chúng ta có thể <b>thiết lập một số thuộc tính cho hàm</b>
+                  theo cặp giá trị <i>key:value</i>. Để dễ hình dung thì mình sẽ đi vào ví dụ thiết lập cho hàm một thuộc tính 
+                  để lưu giá trị số lần hàm được gọi trong chương trình thông qua đoạn code sau nhé:
+                </p>
+                <p>
+                  <mark class="p-1"><b>Đoạn Code:</b></mark>
+                </p>
+                <pre><code class="javascript"> function xinChao() {<br/> &nbsp;&nbsp;&nbsp;console.log("Xin Chào Các Bạn");<br/>&nbsp;&nbsp;&nbsp; /*Thuộc tính Số lần gọi của hàm*/<br/> &nbsp;&nbsp;&nbsp;xinChao.soLanGoi++;<br/> }<br/> xinChao.soLanGoi = 0;<br/><br/> xinChao();<br/> xinChao();<br/> console.log(xinChao.soLanGoi);</code></pre>
+                <p class="mt-4">
+                  <mark class="p-1"><b>Kết Quả:</b></mark>
+                </p>
+                <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589958705/Function-Object/tao-thuoc-tinh-trong-function-object_egqgpi.png"
+                  alt="Tạo thuộc tính trong function object">
+
+                <p class="mt-4">
+                  Đầu tiên chúng ta khai báo một hàm với thuộc tính của nó là <b><code>soLanGoi</code></b> và giá trị bằng 0.
+                  Sau đó ta sẽ tăng giá trị lên 1 đơn vị mỗi khi hàm được gọi bằng cách <b><code>xinChao.soLanGoi++</code></b>. Cuối cùng chúng ta có được kết quả như hình ảnh phía trên.
+                </p>
+                <p>
+                  Qua các ví dụ trên mình mong là  đã giúp bạn hiểu được phần nào về <b>function object</b>.
+                  Thật ra nó cũng chỉ là một hàm bình thường trong javascript và chúng ta chỉ đang đi tìm hiểu thêm thêm về thuộc tính object có sẵn ở trong nó mà thôi.
+                </p>
+                <p>
+                  Bây giờ chúng ta sẽ tiếp tục đi vào tìm hiểu các <b>phương thức được sử dụng với function object</b> nhé.
+                </p>
+                <div class="row">
+                  <div class="col-sm-12 bg-light p-2 mb-4 shadow  rounded-pill">
+                    <h3 class="text-primary ml-4 title-article-size"> Phương Thức call() Với Function Object:</h3>
+                  </div>
+                </div>
+                <p>
+                  Phương thức <b><code>call()</code></b> sẽ gọi một hàm với giá trị được truyền vào <b><code>this</code></b>
+                  và các tham số. Để hiểu rõ hơn bạn xem đoạn code sau nhé:
+                </p>
+                <p>
+                  <mark class="p-1"><b>Đoạn Code:</b></mark>
+                </p>
+                <pre><code class="javascript"> let khachHang = {ho: "Nguyễn", ten: "An"};<br/> function xinChao(loiChao) {<br/> &nbsp;&nbsp;&nbsp;console.log(loiChao + this.ho + " " + this.ten);<br/> }<br/><br/> xinChao.call(khachHang, "Xin chào ");</code></pre>
+                <p class="mt-4">
+                  <mark class="p-1"><b>Kết Quả:</b></mark>
+                </p>
+                <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589960703/Function-Object/phuong-thuc-call-function-object_mfyrnb.png"
+                  alt="Phương thức call trong function object">
+                <p class="mt-4">
+                  Ở ví dụ trên nó giúp chúng ta truyền object như một tham số  vào trong hàm để xử lý. Và để gọi giá trị trong object đó thì chúng ta chỉ cần việc gọi <b>this.(Tên thuộc tính)</b>.
+                  Và tham số <b>loiChao</b> trong hàm sẽ bằng với chuỗi <b>"Xin chào "</b><br/>
+                  Phương thức <b><code>call</code></b> giúp chúng ta linh hoạt trong việc xử lý dữ liệu được truyền  vào với tham số đầu tiên 
+                  chính là <b><code>this</code></b> và các tham số còn lại được truyền vào trong hàm như cách thông thường mà chúng ta vẫn hay sử dụng.
+
+                </p>
+                <div class="row">
+                  <div class="col-sm-12 bg-light p-2 mb-4 shadow  rounded-pill">
+                    <h3 class="text-primary ml-4 title-article-size"> Phương Thức apply() Với Function Object:</h3>
+                  </div>
+                </div>
+
+                <p>
+                  Phương thức <b><code>apply</code></b> này có cách hoạt động khá giống so với <b><code>call</code></b>
+                  , điểm khác biệt của nó là cách chúng ta truyền tham số vào cho hàm. Để hiểu rõ hơn bạn xem đoạn code sau nhé:
+                </p>
+                <p>
+                  <mark class="p-1"><b>Đoạn Code:</b></mark>
+                </p>
+                <pre><code class="javascript"> let khachHang = {ho: "Nguyễn", ten: "An"};<br/> function xinChao(loiChao) {<br/> &nbsp;&nbsp;&nbsp;console.log(loiChao + this.ho + " " + this.ten);<br/> }<br/><br/> xinChao.apply(khachHang, ["Xin chào "]);</code></pre>
+                <p class="mt-4">
+                  <mark class="p-1"><b>Kết Quả:</b></mark>
+                </p>
+                <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589961710/Function-Object/phuong-thuc-apply-function-object_kdzaho.png"
+                  alt="Phương thức apply trong function object">
+
+                  <div class="row">
+                    <div class="col-sm-12 bg-light p-2 mb-4 shadow mt-4 rounded-pill">
+                      <h3 class="text-primary ml-4 title-article-size"> Phương Thức bind() Với Function Object:</h3>
+                    </div>
+                  </div>
+                  <p>
+                    Phương thức <b><code>bind()</code></b> sẽ sử dụng giá trị <b><code>this</code></b>  trong một hàm để liên kết với đối tượng mà 
+                    chúng ta muốn lấy dữ liệu. Để dễ hình dung bạn xem đoạn code sau nhé:
+                  </p>
+                  <p>
+                    <mark class="p-1"><b>Đoạn Code:</b></mark>
+                  </p>
+                  <pre><code class="javascript">let khachHang1 = {<br/> ten: "An",<br/> xinChao: function() {<br/>&nbsp;&nbsp; console.log("Xin Chao" + this.ten);<br/> }<br/>}<br/>let khachHang2 = {ten: "Lan"};<br/><br/> let xinChaoKhachHang = khachHang1.xinChao.bind(khachHang2);<br/> xinChaoKhachHang()</code></pre>
+                  <p class="mt-4">
+                    <mark class="p-1"><b>Kết Quả:</b></mark>
+                  </p>
+                  <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+                    data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589962316/Function-Object/phuong-thuc-bind-function-object_il3bxi.png"
+                    alt="Phương thức bind trong function object">
+                  <p class="mt-4">
+                    Nó giúp chúng ta có thể sử dụng phương thức của <b>khachHang1</b> với dữ liệu truyền 
+                    vào là <b><code>khachHang2</code></b> được định danh bằng từ khóa <b><code>whis</code></b>.
+                    Phương thức <b><code>bind</code></b> nhìn chung là cho phép  một object mượn phương thức của một object khác mà không cần phải thực hiện hành động sao chép phương thức.
+                  </p>
 
 
 
@@ -120,6 +244,29 @@
 
 
 
+
+                <div class="row">
+                  <div class="col-sm-12 bg-light p-2 mb-4 shadow mt-4 rounded-pill">
+                    <h3 class="text-primary ml-4 title-article-size">Tạo Function Bằng Từ Khóa <b><code>new</code></b>:</h3>
+                  </div>
+                </div>
+                <p class="text-primary">Kiến thức  thêm về function</p>
+                <p>
+                  Chúng ta đã được học một số cách khai báo hàm trong javascript thì ở  bài này mình xin giới thiệu thêm một cách tạo hàm 
+                  mới là sử dụng từ khóa <b><code>new</code></b>. Để hiểu rõ hơn chúng ta sẽ đi vào tìm hiểu cú pháp của nó nhé:
+                </p>
+                <pre><code> let ham = new Function(tham số 1, tham số 2... tham số n, Đoạn mã thực thi);</code></pre>
+                <b>với tham số 1,2...</b> là tham số được truyền vào để tính toán bằng đoạn mã thực thi ở trong hàm. Để hiểu rõ hơn bạn xem ví dụ sau đây nhé:
+                <p>
+                  <mark class="p-1"><b>Đoạn Code:</b></mark>
+                </p>
+                <pre><code class="javascript"> let tong = new Function('a', 'b', 'return a +b');<br/> console.log(tong(2, 3));</code></pre>
+                <p class="mt-4">
+                  <mark class="p-1"><b>Kết Quả:</b></mark>
+                </p>
+                <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589957740/Function-Object/tao-ham-bang-tu-khoa-new_c4bbz7.png"
+                  alt="Tạo hàm bằng từ khóa new">
 
 
 
@@ -145,7 +292,7 @@
             <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
 
 
-            <p>Qua đây mình mong bài viết sẽ giúp bạn hiểu được <b>Spread Operator Và Rest Parameters</b>
+            <p>Qua đây mình mong bài viết sẽ giúp bạn hiểu được <b>Function Object</b>
               trong ngôn ngữ
               Javascript và
               nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất
