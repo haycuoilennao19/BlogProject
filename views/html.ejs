@@ -26,7 +26,7 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i>  Spread Operator Và Rest Parameters Trong Javascript</h2>
+                  aria-hidden="true"></i> Tìm Hiểu Về Function Object Trong Javascript</h2>
             </div>
           </div>
 
@@ -36,277 +36,94 @@
             </div>
           </div>
           <div class="text-content-article mt-5">
-            <p><i>Hôm nay bạn hãy cùng mình đi vào tìm hiểu về khái niệm cũng như cách sử dụng  Spread Operator và Rest Parameters
+            <p><i>Hôm nay bạn hãy cùng mình đi vào tìm hiểu về khái niệm cũng như các phương thức của Function Object
                 trong
                 ngôn
                 ngữ lập trình Javascript để phát triển web nhé.</i>
             </p>
             <p>
-              Trong phiên bản es6 có cung cấp cho  hai tiện ích là  spread operator và rest parameters để  chúng ta có thể dễ dàng làm việc với tham số 
-              trong hàm, mảng, object... Bây giờ để hiểu rõ hơn chúng ta cùng nhau đi vào tìm hiểu nhé.
+              Trong ngôn ngữ Javascript thì tất cả các <b>function (hàm)</b> đều là <b>object (đối tượng)</b>. Do đó
+              chúng ta có thể
+              áp dụng các phương thức và thuộc tính của object vào cho function. Ví dụ như việc chúng ta gán hàm vào một
+              biến hay vào một phần tử trong mảng hoặc xem hàm như một tham số để truyền vào cho một hàm khác...
             </p>
-         
-         
+            <p>
+              Bây giờ chúng ta cùng nhau đi tìm hiểu <b>function object</b> nhé.
+            </p>
+
+
             <div class="row">
               <div class="col-sm-12 bg-light p-2 mb-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">Rest Parameters(<b><code>...</code></b>):</h3>
+                <h3 class="text-primary ml-4 title-article-size">Kiểm tra Function Object:</h3>
               </div>
             </div>
 
             <p>
-              Để hiểu công dụng của nó thì mình sẽ đi vào thử viết hàm tính tổng của các tham  số  để xem hàm sẽ xử lý thế nào nhé:
+              Bây giờ chúng ta sẽ làm một bài kiểm tra nhỏ để xác định function là một trường hợp của object trong
+              javascript thông qua việc sử dụng hai phương thức là
+              <b><code>typeof</code></b> và <b><code>instanceof</code></b>. Để hiểu rõ hơn bạn xem đoạn code sau nhé:
             </p>
             <p>
               <mark class="p-1"><b>Đoạn Code:</b></mark>
             </p>
-            <pre><code class="javascript"> function tinhTong(a, b) {<br/> &nbsp;&nbsp;&nbsp;return a + b;<br/> }<br/> console.log(tinhTong(1,2,3,4,5,6));</code></pre>
+            <pre><code class="javascript"> function xinChao() {<br/> &nbsp;&nbsp;&nbsp;console.log("Xin Chào Các Bạn");<br/> } <br/><br/> console.log(typeof xinChao);<br/> console.log(xinChao instanceof Object)</code></pre>
             <p class="mt-4">
               <mark class="p-1"><b>Kết Quả:</b></mark>
             </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589889973/Spread-Operator-Rest-Parameters/tinh-tong-nhieu-tham-so-js_u9jana.png"
-              alt="Tính tổng nhiều tham số">
-
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589943604/Function-Object/kiem-tra-function-la-object_bf4xyv.png"
+              alt="Kiểm tra function là một object">
             <p class="mt-4">
-              Mình có lưu ý là với một hàm bạn có thể  truyền bao nhiêu tham số tùy ý mà không cần quan tâm đến cách khai báo hàm nha. Ở ví dụ trên thì hàm <b><code>tinhTong</code></b>
-              chỉ lấy hai tham số đầu để xử lý là <b>1 và 2</b> nên chúng ta có kết quả ngoài màn hình là 3.<br/> Vậy làm thế nào để nó có thể tính tổng 
-               <b>tất cả tham số</b>  chúng ta truyền vào? 
-            </p>
-            <p>
-              Đó chính là lý do mình muốn giới thiệu về tiện ích <b>Rest Parameters</b> trong javascript. Nó cho phép chúng ta 
-              biểu thị các tham số còn lại thành kiểu dữ liệu mảng và được đi theo với dấu <b><code>...</code></b>.
-              Để nắm rõ hơn bạn xem cú pháp của nó nhé:
-            </p>
-            <pre><code class="javascript"> function Tên Hàm (...Tham Số) {<br/> &nbsp;&nbsp;/*Đoạn mã thực thi*/<br/> }</code></pre>
-            <p>
-              <b>...Tham Số Còn Lại</b> chính là rest parameters. Nó  lưu giữ tất cả tham số được truyền vào
-              dưới <b>kiễu dữ liệu mảng</b> giúp chúng ta có thể lấy phần tử và tính toán linh hoạt hơn. Bây giờ chúng ta dùng rest 
-              parameters để thử giải quyết vấn đề trên xem sao nhé:
-            </p>
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> function tinhTong(...mang) {<br/> let ketQua = 0;<br/> &nbsp;for( let phanTu of mang) {<br/>  &nbsp;&nbsp; ketQua += phanTu;<br/>  &nbsp;}<br/>  &nbsp;return ketQua;<br/>&nbsp;}<br/> console.log(tinhTong(1,2,3,4,5,6));<br/> console.log(tinhTong(1,2,3,4));<br/> console.log(tinhTong(1,2,3));</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589891864/Spread-Operator-Rest-Parameters/tinh-tong-bang-rest-parameters_guw7um.png"
-              alt="Tính tổng bằng rest parameters">
-            <p class="mt-4">
-              Ở ví dụ trên chúng ta sẽ sử dụng biến <b><code>ketQua</code></b> để lưu trữ giá trị tổng khi cộng với các phần tử trong mảng bằng
-              vòng lặp <b><code>for...of</code></b> . Bây giờ bạn truyền bao nhiêu tham số thì hàm <b><code>tinhTong</code></b> 
-              đều có thể trả về kết quả giá trị tổng của các tham số đó. Thật tiện lợi phải không nào!<br/>
+              Qua ví dụ trên chúng ta có thể thấy hàm là một loại đối tượng đặc biệt trong object. Tiếp theo chúng ta sẽ 
+              đi vào tìm hiểu các thuộc tính của <b><i>function object</i></b> ở bên dưới nhé.
             </p>
 
-            <h4 class="text-white bg-secondary p-2 shadow title-article-size rounded"> <b>Sử dụng rest parameters với arrow function:</b></h4>
-            <p>
-              Chúng ta có thể kết hợp với rest parameters với arrow function để giải quyết vấn đề trên một cách nhanh chóng bằng 
-              phương thức <b><code>reduce()</code></b>. Để hiểu rõ hơn bạn xem đoạn code sau nhé:
-            </p>
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> function tinhTong(...mang) {<br/> &nbsp;&nbsp;return mang.reduce((tong, phanTu) => tong + phanTu, 0);<br/> }<br/> console.log(tinhTong(1,2,3,4,5,6));<br/> console.log(tinhTong(1,2,3,4));<br/> console.log(tinhTong(1,2,3));</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589892668/Spread-Operator-Rest-Parameters/rest-parameters-va-arrow-function_lumm5z.png"
-              alt="rest parameters và arrow function">
-            <p class="mt-4">
-              Nếu như bạn muốn tìm hiểu thêm hay tham khảo về phương thức <b><code>reduce()</code></b> thì nhấn vào <a href="https://www.niemvuilaptrinh.com/article/Cac-Phuong-Thuc-Mang-Phan-3-Trong-Javascript" title="phương thức mảng">đây nhé!</a>
-            </p>
-            <h4 class="text-white bg-secondary p-2 shadow title-article-size rounded">
-              <b>Sử dụng rest parameters với các tham số khác:</b>
-            </h4>
-            <p>
-              Nãy giờ chúng ta chỉ sử dụng nó là tham số chính và duy nhất trong hàm. Phần nay ta sẽ đi vào kết hợp 
-              rest parameters với các tham số khác được  truyền vào trong hàm thông qua ví dụ dưới đây nhé:
-            </p>
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> function xinChao(chu1, chu2, ...mang) {<br/> &nbsp;&nbsp;console.log(chu1 + " " + chu2);<br/> &nbsp;&nbsp;console.log(mang[0]);<br/>&nbsp;&nbsp; console.log(mang[1]);<br/> }<br/> xinChao("Xin", "Chào", "Các", "Bạn");</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589893832/Spread-Operator-Rest-Parameters/rest-parameters-va-nhieu-tham-so_ajmwhn.png"
-              alt="rest parameters với nhiều tham số">
-            <p class="mt-4">
-              Ở ví dụ trên khi chúng ta khai báo như hàm <b><code>xinChao</code></b> thì hai tham số đầu tiên sẽ được gán vào biến 
-              là <b><code>chu1</code></b> và <b><code>chu2</code></b>. Còn các tham số còn lại sẽ được chứa trong biến <b><code>mang</code></b>.
-              Và khi muốn sử dụng các tham số đó thì chúng ta lấy phần tử như bình thường khi làm việc với kiểu dữ liệu mảng.
-            </p>
-            <p>
-              Mình có lưu ý quan trọng là <b>rest parameters</b> phải được  đặt ở <b>vị trí cuối cùng</b> khi khai báo tham số trong hàm nha.
-              Nếu không nó sẽ gây ra lỗi như hình ảnh bên dưới:
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589894390/Spread-Operator-Rest-Parameters/loi-khi-dung-rest-parameters_lhuvai.png"
-            alt="Lỗi khi dùng rest parameters">
-
-            <h4 class="text-white bg-secondary mt-4 p-2 shadow title-article-size rounded">
-              <b>Sử dụng biến arguments:</b>
-            </h4>
-            <p>
-              <b>Trước khi tiện ích rest parameters được giới thiệu</b> và sử dụng rộng rãi như ngày nay thì chúng ta chỉ có một cách để lấy tất cả tham số cho hàm 
-              bằng cách sử dụng <b><code>arguments</code></b>. Giá trị trả về của nó là một đối tượng giống như mảng nhưng
-              chúng ta <b>không thể sử dụng phương thức mảng</b> với giá trị này như <b><code>Mảng.map</code></b>, <b><code>Mảng.filter</code></b>...
-              Bây giờ chúng ta thử lấy các phần tử bằng biến <b><code>arguments</code></b> thông qua ví dụ sau nhé:
-            </p>
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> function xinChao() {<br/> &nbsp;&nbsp;console.log(arguments.length);<br/> &nbsp;&nbsp;console.log(arguments[0]);<br/>&nbsp;&nbsp; console.log(arguments[1]);<br/> }<br/> xinChao("Xin", "Chào", "Các", "Bạn");</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589895076/Spread-Operator-Rest-Parameters/su-dung-bien-arguments_tuf2lt.png"
-              alt="Sử dụng biến arguments">
-
-
-              <div class="row">
-                <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                  <h3 class="text-primary ml-4 title-article-size">Spread Operator(<b><code>...</code></b>):</h3>
-                </div>
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mb-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">Thuộc tính Length Trong Function Object:</h3>
               </div>
-              <p>
-                <b>Spread Operator</b> cũng là một tiện ích được cung cấp trong phiên bản ES6 được sử dụng với dấu <b><code>...</code></b>
-               cho phép chúng ta mở rộng một đối tượng nào đó. Và nó thường được sử dụng với kiểu dữ liệu là <b>Mảng, Map và Set</b>.
-              <br/>
-              Bây giờ để dễ hình dung chúng ta sẽ đi ví dụ nối mảng bằng hai cách để bạn có thể thấy được sự hữu ích của nó nhé.
-              </p>
-              <h6 class="text-primary mb-4"><b>Nối mảng bằng phương thức <code>concat()</code>:</b></h6>
-              <p>
-                <mark class="p-1"><b>Đoạn Code:</b></mark>
-              </p>
-              <pre><code class="javascript"> let mang1 = [1, 2, 3];<br/> let mang2 = [4, 5, 6];<br/> let ketQua = mang1.concat(mang2);<br/><br/> console.log(ketQua);</code></pre>
-              <p class="mt-4">
-                <mark class="p-1"><b>Kết Quả:</b></mark>
-              </p>
-              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589896113/Spread-Operator-Rest-Parameters/noi-mang-bang-concat_vnqm4d.png"
-                alt="Nối mảng bằng concat">
+            </div>
+            <p>
+              Thuộc tính <b>length</b> được sử dụng trong hàm để xác định <b>số lượng tham số</b> được truyền vào trong hàm đó.
+              Để dễ hình dung bạn xem đoạn code sau nhé:
+            </p>
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> function xinChao(a, b) {<br/> &nbsp;&nbsp;&nbsp;console.log(a + b);<br/> } <br/><br/> console.log(xinChao.length);</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589946418/Function-Object/length-cua-function-object_s7kqil.png"
+              alt="Chiều dại một function object">
+            <p class="mt-4">
+              Nhưng nếu bạn sử dụng tham số <b>rest parameters</b> thì nó sẽ không được tính vào chiều dài của hàm nha.
+              Bạn có thể tham khảo <b>rest parameters</b> ở <a href="https://www.niemvuilaptrinh.com/article/Spread-Operator-Va-Rest-Parameters-Trong-Javascript" title="rest parameters">đây nhé</a>.
+            </p>
 
-                <h6 class="text-primary mt-4 mb-4"><b>Nối mảng bằng sử dụng toán tử <code>spread</code>:</b></h6>
 
-                <p>
-                  <mark class="p-1"><b>Đoạn Code:</b></mark>
-                </p>
-                <pre><code class="javascript"> let mang1 = [4, 5, 6];<br/> let ketQua = [1, 2, 3, ...mang1];<br/><br/> console.log(ketQua);</code></pre>
-                <p class="mt-4">
-                  <mark class="p-1"><b>Kết Quả:</b></mark>
-                </p>
-                <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589896293/Spread-Operator-Rest-Parameters/noi-mang-bang-spread_csqjjz.png"
-                  alt="Nối mảng bằng spread">
-                <p class="mt-4">
-                  Như bạn thấy khi chúng ta sử dụng toán tử <b>spread</b> giúp đoạn mã dễ nhìn hơn, tiết kiệm được thời gian và  công sức hơn.
-                </p>
-                <p>
-                  Không giống như <b>rest parameters</b>, vị trí của nó phải là tham số  cuối cùng trong khai báo hàm. Thì với toán tử <b>spread</b> thì bạn có thể đặt 
-                  ở bất cứ đâu tùy vào mục đích của chúng ta. Để nắm rõ hơn bạn xem đoạn code sau nhé:
-                </p>
-                <p>
-                  <mark class="p-1"><b>Đoạn Code:</b></mark>
-                </p>
-                <pre><code class="javascript"> let mang1 = [4, 5, 6];<br/> let ketQua = [...mang1, 1, 2, 3];<br/><br/> console.log(ketQua);</code></pre>
-                <p class="mt-4">
-                  <mark class="p-1"><b>Kết Quả:</b></mark>
-                </p>
-                <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589896716/Spread-Operator-Rest-Parameters/vi-tri-cua-spread_u5ycek.png"
-                  alt="Vị trí của spread trong mảng">
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> function xinChao(a, ...b) {<br/> &nbsp;&nbsp;&nbsp;console.log(a + b);<br/> } <br/><br/> console.log(xinChao.length);</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589946675/Function-Object/length-cua-function-object-vs-rest-parameters_dczdcx.png"
+              alt="Chiều dại một function object với rest parameters">
 
-                  <h4 class="text-white bg-secondary mt-4 p-2 shadow title-article-size rounded">
-                    <b>Sử dụng nhiều toán tử spread:</b>
-                  </h4>
-                  <p>
-                    Do tính linh hoạt của nó nên chúng ta có thể kết hợp nhiều toán tử <b>spread</b> 
-                    lại với nhau. Bây giờ để hiểu rõ hơn bạn xem đoạn code sau nhé:
-                  </p>
 
-                  <p>
-                    <mark class="p-1"><b>Đoạn Code:</b></mark>
-                  </p>
-                  <pre><code class="javascript"> let mang1 = [4, 5, 6];<br/> let mang2 = [10, 11, 12];<br/> let ketQua = [1, 2, 3, ...mang1, 7, 8, 9, ...mang2];<br/><br/> console.log(ketQua);</code></pre>
-                  <p class="mt-4">
-                    <mark class="p-1"><b>Kết Quả:</b></mark>
-                  </p>
-                  <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                    data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589897065/Spread-Operator-Rest-Parameters/ket-hop-nhieu-spread_cqjxp3.png"
-                    alt="Kết hộp nhiều toán tử spread trong mảng">
 
-                    <h4 class="text-white bg-secondary mt-4 p-2 shadow title-article-size rounded">
-                      <b>Sao chép mảng bằng toán tử spread:</b>
-                    </h4>
-                    <p>
-                      Chúng ta có thể sao chép mảng bằng toán tử <b>spread</b>. Và khi  mảng sao chép thay đối thì nó 
-                      cũng không ảnh hưởng đến mảng chính nha. Bây giờ chúng ta sẽ đi vào ví dụ chi tiết sau đây nhé:
-                    </p>
-                    <p>
-                      <mark class="p-1"><b>Đoạn Code:</b></mark>
-                    </p>
-                    <pre><code class="javascript"> let mang1 = [4, 5, 6];<br/> let mang2 = [...mang1];<br/> mang2[0] = 10;<br/><br/> console.log(mang1);<br/> console.log(mang2);</code></pre>
-                    <p class="mt-4">
-                      <mark class="p-1"><b>Kết Quả:</b></mark>
-                    </p>
-                    <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                      data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589897449/Spread-Operator-Rest-Parameters/sao-chep-mang-bang-spread_qczfgx.png"
-                      alt="Sao chép mảng bằng toán tử spread">
 
-                      <h4 class="text-white bg-secondary mt-4 p-2 shadow title-article-size rounded">
-                        <b>Sử dụng toán tử spread và chuỗi:</b>
-                      </h4>
-                      <p>
-                        Thông thường khi bạn muốn tách một chuỗi thành mảng thì chúng ta thường dùng phương thức là <b><code>split()</code></b>.
-                        Toán tử <b>spread</b> cũng giúp chúng ta thực hiện điều tương tự phía trên. Để hiểu rõ hơn bạn xem đoạn code sau nhé:
-                      </p>
-                      <p>
-                        <mark class="p-1"><b>Đoạn Code:</b></mark>
-                      </p>
-                      <pre><code class="javascript"> let mang = ['A', ...'BC', 'D'];<br/> console.log(mang);</code></pre>
-                      <p class="mt-4">
-                        <mark class="p-1"><b>Kết Quả:</b></mark>
-                      </p>
-                      <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                        data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589897754/Spread-Operator-Rest-Parameters/toan-tu-spread-voi-chuoi_glatvs.png"
-                        alt="Toán tử spread với chuỗi">
 
-                        <h4 class="text-white bg-secondary mt-4 p-2 shadow title-article-size rounded">
-                          <b>Sử dụng toán tử spread và Math:</b>
-                        </h4>
-                        <p>
-                          Bây giờ chúng ta sẽ thử đi vào ví dụ tìm hiểu cách lấy số nhỏ nhất bằng phương thức <b><code>Math.min()</code></b>
-                          nhé:
-                        </p>
-                        <p>
-                          <mark class="p-1"><b>Đoạn Code:</b></mark>
-                        </p>
-                        <pre><code class="javascript"> let soNhoNhat = Math.min(10, 50, 40, 5);<br/> console.log(soNhoNhat);</code></pre>
-                        <p class="mt-4">
-                          <mark class="p-1"><b>Kết Quả:</b></mark>
-                        </p>
-                        <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589898025/Spread-Operator-Rest-Parameters/su-dung-Math-min_gjbijm.png"
-                          alt="Sử dụng Math.min()">
-                        <p class="mt-4">
-                          Ta cũng có thể truyền  một mảng  như tham số vào trong phương thức <b><code>Math.min()</code></b> bằng cách sử dụng toán tử 
-                          <b>spread</b>. Để hiểu rõ hơn bạn xem đoạn code sau nhé:
-                        </p>
-                        <p>
-                          <mark class="p-1"><b>Đoạn Code:</b></mark>
-                        </p>
-                        <pre><code class="javascript"> let mang = [10, 50, 40, 5];<br/> let soNhoNhat = Math.min(...mang);<br/> console.log(soNhoNhat);</code></pre>
-                        <p class="mt-4">
-                          <mark class="p-1"><b>Kết Quả:</b></mark>
-                        </p>
-                        <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589898294/Spread-Operator-Rest-Parameters/su-dung-Math-min-voi-spread_mhyxis.png"
-                          alt="Sử dụng Math.min() với spread">
+
+
+
+
+
+
 
 
 
@@ -327,7 +144,7 @@
 
             <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
 
-            
+
             <p>Qua đây mình mong bài viết sẽ giúp bạn hiểu được <b>Spread Operator Và Rest Parameters</b>
               trong ngôn ngữ
               Javascript và
