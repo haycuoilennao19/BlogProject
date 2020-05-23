@@ -26,217 +26,574 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i> Tìm Hiểu Về Function Object Trong Javascript</h2>
+                  aria-hidden="true"></i> Tìm Hiểu Prototype Trong Javascript</h2>
             </div>
           </div>
-    
+
           <div class="article-title">
             <div class="progress-wrapper">
               <div class="progress-label"></div><progress></progress>
             </div>
           </div>
           <div class="text-content-article mt-5">
-            <p><i>Hôm nay bạn hãy cùng mình đi vào tìm hiểu về khái niệm cũng như các phương thức của Function Object
+            <p><i>Hôm nay bạn hãy cùng mình đi vào tìm hiểu về khái niệm cũng như cách sử dụng prototype
                 trong
                 ngôn
                 ngữ lập trình Javascript để phát triển web nhé.</i>
             </p>
             <p>
-              Trong ngôn ngữ Javascript thì tất cả các <b>function (hàm)</b> đều là <b>object (đối tượng)</b>. Do đó
-              chúng ta có thể
-              áp dụng các phương thức và thuộc tính của object vào cho function. Ví dụ như việc chúng ta gán hàm vào một
-              biến hay vào một phần tử trong mảng hoặc xem hàm như một tham số để truyền vào cho một hàm khác...
+              <b>Prototype Javascript</b> là một trong những khái niệm cực kỳ quan trọng mà bạn cần phải nắm khi học về
+              ngôn ngữ
+              lập trình Javascript. Nó là <b>prototype-based language</b>(ngôn ngữ dựa trên nguyên mẫu) cho phép chia sẻ
+              các thuộc tính và phương thức của một
+              object thông qua một đối tượng tổng quát có khả năng nhân bản và mở rộng.
+
             </p>
             <p>
-              Bây giờ chúng ta cùng nhau đi tìm hiểu <b>function object</b> và các tính năng thêm của <b>function</b> nhé.
-            </p>
-
-
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mb-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">Kiểm tra Function Object:</h3>
-              </div>
-            </div>
-
-            <p>
-              Bây giờ chúng ta sẽ làm một bài kiểm tra nhỏ để xác định function là một trường hợp của object trong
-              javascript thông qua việc sử dụng hai phương thức là
-              <b><code>typeof</code></b> và <b><code>instanceof</code></b>. Để hiểu rõ hơn bạn xem đoạn code sau nhé:
+              Nếu cảm thấy khó hiểu thì bạn có thể tìm hiểu thêm về <b>prototype-based language</b> <a
+                href="https://vi.wikipedia.org/wiki/L%E1%BA%ADp_tr%C3%ACnh_d%E1%BB%B1a_tr%C3%AAn_nguy%C3%AAn_m%E1%BA%ABu"
+                title="prototype-based language">ở đây nhé</a>.
             </p>
             <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> function xinChao() {<br/> &nbsp;&nbsp;&nbsp;console.log("Xin Chào Các Bạn");<br/> } <br/><br/> console.log(typeof xinChao);<br/> console.log(xinChao instanceof Object)</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589943604/Function-Object/kiem-tra-function-la-object_bf4xyv.png"
-              alt="Kiểm tra function là một object">
-            <p class="mt-4">
-              Qua ví dụ trên chúng ta có thể thấy hàm là một loại đối tượng đặc biệt trong object. Tiếp theo chúng ta sẽ 
-              đi vào tìm hiểu các thuộc tính của <b><i>function object</i></b> ở bên dưới nhé.
+              Và mình có lưu ý trước khi ta đi vào tìm hiểu về bài này, bạn cần nắm vững về khái niệm và cách sử dụng
+              <b>object</b>
+              trong javascript đã nhé. Nếu bạn muốn tham khảo hay xem lại về object thì nhấn <a
+                href="https://www.niemvuilaptrinh.com/article/Object-Trong-Javascript" title="Object trong javascript">ở
+                đây nha</a>.
             </p>
 
             <div class="row">
               <div class="col-sm-12 bg-light p-2 mb-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">Thuộc tính Length Trong Function Object:</h3>
+                <h3 class="text-primary ml-4 title-article-size">Prototype Trong Javascript</h3>
               </div>
             </div>
             <p>
-              Thuộc tính <b>length</b> được sử dụng trong hàm để xác định <b>số lượng tham số</b> được truyền vào trong hàm đó.
-              Để dễ hình dung bạn xem đoạn code sau nhé:
+              Trong javascript thì tất cả các object đều có <b>prototype</b>. Và các object đó sẽ kế thừa thuộc tính
+              cũng như phương thức từ <b>prototype</b> của nó. Ví dụ như là :
+              <ul>
+                <li>
+                  Một object được tạo bằng <b><code>new Date()</code></b> thì nó sẽ kế thừa từ <b>Date.prototype</b>.
+                </li>
+                <li>
+                  Một array được tạo bằng <b><code>new Array()</code></b> thì nó sẽ kế thừa từ <b>Array.prototype</b>.
+                </li>
+                <li>
+                  Một object khachHang sẽ kế thừa từ <b>khachHang.prototype</b>.
+                </li>
+              </ul>
             </p>
+            <p>
+              Nhưng tất cả các object đó (Date, Array, Function...) thì đều được kế thừa từ <b>Object.prototype</b>. Để
+              hiểu
+              rõ hơn bạn xem hình ảnh bên dưới nhé:
+            </p>
+            <img class=" lazyload" height="300"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590114853/Javascript-prototype/javascript-prototype_dyv9of.svg"
+              alt="Object.prototype trong javascript">
+            <p>
+              Trong javascript, Các object(đối tượng) có một thuộc tính ẩn nội bộ là <b><code>[[Prototype]]</code></b>
+              với giá trị là <b><code>null</code></b> hoặc <b>tham chiếu đến một đối tượng khác</b>. Lúc này các đối
+              tượng được tham chiếu sẽ gọi là <b>prototype(nguyên mẫu)</b>.<br /><br />
+
+              Khi chúng ta muốn lấy một thuộc tính nào đó trong <b>object</b> nhưng  nếu nó <b>không có</b> trong object đó thì
+              javascript sẽ tự động lấy nó từ <b>prototype</b>. Cách thức hoạt động này sẽ được gọi là <b>prototypal
+                inheritance</b>
+              (kế thừa nguyên mẫu).<br /><br />
+              Để dễ hình dung thì bạn có thể tưởng tượng <b>prototype</b> là một lớp cha và <b>kế thừa nguyên mẫu</b> sẽ
+              là phương thức cho phép
+              thằng con lấy và sử dụng các thuộc tính được thừa hưởng từ thằng cha.
+            </p>
+            <p>
+              Vậy làm sao chúng ta có thể thiết lập <b>prototype</b> cho một object và đọc thuộc tính từ nó?
+            </p>
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mb-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size"><b>Sử dụng __proto__</b></h3>
+              </div>
+            </div>
+       
+            <p>
+              Đây là thuộc tính giúp chúng ta có thể truy cập và thiết lập <b><code>[[prototype]]</code></b> cho một đối
+              tượng nào đó.<br />
+
+              Thuộc tính này không phải là một tiện ích ở trong javascript đâu nhé mà nó được cung cấp bởi trình duyệt
+              mà chúng ta đang sử dụng.
+              Nhưng bạn cũng đừng quá lo lắng vì các trình duyệt phổ biến hiện tại thì đều hỗ trợ thuộc tính
+              <b><code>__proto__</code></b>.
+              <br />
+              Bây giờ chúng ta sẽ cùng nhau đi vào ví dụ cụ thể để dễ hình dung hơn nhé:
+            </p>
+
             <p>
               <mark class="p-1"><b>Đoạn Code:</b></mark>
             </p>
-            <pre><code class="javascript"> function xinChao(a, b) {<br/> &nbsp;&nbsp;&nbsp;console.log(a + b);<br/> } <br/><br/> console.log(xinChao.length);</code></pre>
+            <pre><code class="javascript"> &nbsp;let&nbsp;dongVat&nbsp;=&nbsp;{<br/> &nbsp;&nbsp;&nbsp;an&nbsp;:&nbsp;true<br/> &nbsp;};<br/> &nbsp;let&nbsp;meo&nbsp;=&nbsp;{<br/> &nbsp;&nbsp;&nbsp;chay:&nbsp;true<br/> &nbsp;};<br/>&nbsp;meo.__proto__&nbsp;=&nbsp;dongVat;<br/> &nbsp;<br/> &nbsp;console.log(meo.an);<br/> &nbsp;console.log(meo.chay);<br/></code></pre>
             <p class="mt-4">
               <mark class="p-1"><b>Kết Quả:</b></mark>
             </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589946418/Function-Object/length-cua-function-object_s7kqil.png"
-              alt="Chiều dại một function object">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590120012/Javascript-prototype/__proto__-trong-javascript_evysvn.png"
+              alt="__proto__ trong javascript">
             <p class="mt-4">
-              Nhưng nếu bạn sử dụng tham số <b>rest parameters</b> thì nó sẽ không được tính vào chiều dài của hàm nha.
-              Bạn có thể tham khảo <b>rest parameters</b> ở <a href="https://www.niemvuilaptrinh.com/article/Spread-Operator-Va-Rest-Parameters-Trong-Javascript" title="rest parameters">đây nhé</a>.
+              Ở đây mình chọn động vật là thằng cha, mèo sẽ là thằng con. Vậy để <b>kế thừa thuộc tính của thằng cha</b>
+              thì chúng ta sử dụng đoạn code như trên là:<br />
+              <b><code>meo.__proto__ = dongVat;</code></b>
+
+              <br />
+              Lúc này phương thức kế thừa nguyên mẫu sẽ hoạt động như sau:
+              <ul>
+                <li>Khi chúng ta gọi <b><code>meo.an</code></b> thì javascrip sẽ tìm trong đối tượng <b>meo</b> có thuộc
+                  tính <b><code>an</code></b> hay không.</li>
+                <li>Nếu không có, thì javascrip sẽ tiếp tục tham chiếu đến <b><code>[[prototype]]</code></b> mà bây giờ
+                  chính là đối tượng <b><code>dongVat</code></b>.</li>
+                <li>Nó tiếp tục tìm trong đối tượng <b><code>dongVat</code></b> nếu thấy thuộc tính <b><code>an</code>
+                    thì trả về kết quả.</b></li>
+              </ul>
+              Bạn có thể xem hình bên dưới để hiểu rõ hơn nhé:
+            </p>
+            <div class="row">
+              <div class="col-md-4 col-sm-12">
+                <img class=" lazyload" width="100"
+                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590133095/Javascript-prototype/prototype-in-javascript_ot1xr4.svg"
+                  alt="Ví dụ __proto__ trong prototype javascript">
+              </div>
+            </div>
+
+
+            <p class="mt-4">
+              Ở đây chúng ta  có thể nói là <b>dongVat</b> sẽ là một <b>prototype(nguyên mẫu)</b> của <b>meo</b> hay
+              <b>meo</b> là kế thừa nguyên mẫu từ <b>dongVat</b>.<br/>
+              Không những chúng ta có thể sử dụng thuộc tính mà còn thừa kế <b>phương thức từ prototype</b> nữa.
+              Để hiểu rõ hơn bạn xem đoạn code sau nhé:
             </p>
 
+            <!--433089-->
 
             <p>
               <mark class="p-1"><b>Đoạn Code:</b></mark>
             </p>
-            <pre><code class="javascript"> function xinChao(a, ...b) {<br/> &nbsp;&nbsp;&nbsp;console.log(a + b);<br/> } <br/><br/> console.log(xinChao.length);</code></pre>
+            <pre><code class="javascript"> &nbsp;let&nbsp;dongVat&nbsp;=&nbsp;{<br/> &nbsp;&nbsp;&nbsp;an&nbsp;:&nbsp;true,<br/> &nbsp;&nbsp;&nbsp;uongNuoc() {<br/> &nbsp;&nbsp;&nbsp;&nbsp;console.log("Động vật uống nước");<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;};<br/> &nbsp;let&nbsp;meo&nbsp;=&nbsp;{<br/> &nbsp;&nbsp;&nbsp;chay:&nbsp;true<br/> &nbsp;};<br/>&nbsp;meo.__proto__&nbsp;=&nbsp;dongVat;<br/> &nbsp;<br/>&nbsp;meo.uongNuoc();</code></pre>
             <p class="mt-4">
               <mark class="p-1"><b>Kết Quả:</b></mark>
             </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589946675/Function-Object/length-cua-function-object-vs-rest-parameters_dczdcx.png"
-              alt="Chiều dài một function object với rest parameters">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590134016/Javascript-prototype/ke-thua-phuong-thuc-proto_dcfbx5.png"
+              alt="Kế thừa phương thức bằng __proto__ trong javascript">
+
+            <p class="mt-4">
+              Như bạn thấy là javascript sẽ tự động tìm kiếm phương thức từ <b>prototype</b> nếu phương thức đó không tồn tại trong object <b><code>meo</code></b>.
+              Để hiểu rõ hơn bạn xem hình ảnh dưới đây  nhé:
+            </p>
+            <div class="row">
+              <div class="col-md-4 col-sm-12">
+                <img class=" lazyload" width="100"
+                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590134434/Javascript-prototype/lay-phuong-thuc-tu-prototype_wxd2xx.svg"
+                  alt="Lấy phương thức bằng __proto__ trong prototype javascript">
+              </div>
+            </div>
+            
+            <p>
+              Mình có lưu ý nhỏ là <b>prototype</b> chỉ cho phép chúng ta đọc thuộc tính. Do đó nếu bạn muốn <b>xác định 
+             lại một phương thức nào đó</b> cho đối tượng kế thừa thì chúng ta có thể gán trực tiếp vào trong object đó.
+             Để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
+            </p>
+           
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> &nbsp;let&nbsp;dongVat&nbsp;=&nbsp;{<br/> &nbsp;&nbsp;&nbsp;an&nbsp;:&nbsp;true,<br/> &nbsp;&nbsp;&nbsp;uongNuoc() {<br/> &nbsp;&nbsp;&nbsp;&nbsp;console.log("Động vật uống nước");<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;};<br/> &nbsp;let&nbsp;meo&nbsp;=&nbsp;{<br/> &nbsp;&nbsp;&nbsp;chay:&nbsp;true<br/> &nbsp;};<br/>&nbsp;meo.__proto__&nbsp;=&nbsp;dongVat;<br/> meo.uongNuoc = function() {<br/> &nbsp;&nbsp;console.log("Mèo uống nước!");<br/> };<br/>&nbsp;meo.uongNuoc();</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590137549/Javascript-prototype/xac-dinh-lai-phuong-thuc-proto_p7b7yg.png"
+              alt="Xác định lại phương thức bằng __proto__ trong javascript">
+            <p class="mt-4">
+              Như bạn thấy thì khi chúng ta gọi <b><code> meo.uongNuoc();</code></b> thì nó sẽ tìm phương thức đó trong đối tượng <b><code>meo</code></b>
+              và thực hiện ngay lập tức.<br/>
+              Chỉ khi nào nó không tìm thấy phương thức trong đối tượng <b><code>meo</code></b> thì lúc đó  javascript mới sử dụng đến  <b>prototype</b>.
+            </p>
+
+            <div class="row">
+              <div class="col-md-4 col-sm-12">
+                <img class=" lazyload" width="100"
+                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590138356/Javascript-prototype/xac-dinh-lai-phuong-thuc-trong-prototype_r2yxp0.svg"
+                  alt="Xác định lại phương thức bằng __proto__ trong prototype javascript">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">Sử Dụng Giá Trị <code>this</code> Trong Prototype</h3>
+              </div>
+            </div>
+            <p>
+              Khi bạn có một object cha chứa nhiều phương thức, thuộc tính và được kế thừa bởi nhiều object con thì 
+              các phương thức trong object cha phải được viết dạng tổng quát để có thể được sử dụng cho nhiều object con.<br/>
+              Ví dụ bạn có một mô hình kế thừa như sau:
+            </p>
+
+            <div class="row">
+              <div class="col-md-8 col-sm-12">
+                <img class=" lazyload"
+                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590139575/Javascript-prototype/vi-du-minh-hoa-this-prototype_ntre2e.svg"
+                  alt="Xác định lại phương thức bằng __proto__ trong prototype javascript">
+              </div>
+            </div>
+            <p>
+              Vậy cứ mỗi khi có một object con mới thì chúng ta <b>phải xác định lại</b> phương thức <b><code>an</code></b> để phù hợp với object đó.
+              Trong thực tế thì cách này rất ít khi được sử dụng vì nó sẽ gây ra sự cồng kềnh khó hiểu cho đoạn mã cũng như gây lãng phí thời gian,
+              công sức của bạn.
+            </p>
+            <p>
+              Để giải quyết vấn đề trên thì bạn có thể sử dụng từ khóa <b><code>this</code></b>. Nó giúp chúng ta ghi hàm một cách tổng quát và 
+              có thể gọi cho bất kỳ object con nào. Bây giờ chúng ta thử đi vào ví dụ để hiểu rõ hơn nhé:
+            </p>  
+
+           
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> &nbsp;let&nbsp;dongVat&nbsp;=&nbsp;{<br/> &nbsp;&nbsp;&nbsp;ten:&nbsp;"Động Vật",<br/> &nbsp;&nbsp;&nbsp;uongNuoc() {<br/> &nbsp;&nbsp;&nbsp;&nbsp;console.log(this.ten + " đang uống nước");<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;};<br/> &nbsp;let&nbsp;meo&nbsp;=&nbsp;{<br/> &nbsp;&nbsp;&nbsp;ten:&nbsp;"Mèo"<br/> &nbsp;};<br/> &nbsp;let&nbsp;cho&nbsp;=&nbsp;{<br/> &nbsp;&nbsp;&nbsp;ten:&nbsp;"Chó"<br/> &nbsp;};<br/>&nbsp;meo.__proto__&nbsp;=&nbsp;dongVat;<br/>&nbsp;cho.__proto__&nbsp;=&nbsp;dongVat;<br/><br/> meo.uongNuoc();/*Mèo đang uống nước*/<br/> cho.uongNuoc();/*Chó đang uống nước*/</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590146284/Javascript-prototype/ke-thua-phuong-thuc-trong-prototype_fkrjrk.png"
+              alt="Kế thừa  phương thức btrong prototype javascript">
+            <p class="mt-4">
+              Như bạn thấy thì các object <b><code>meo</code></b> và <b><code>cho</code></b> có thể sử dụng phương thức chung của <b><code>dongVat</code></b>
+              mà không cần phải định nghĩa lại phương thức cho những object con đó. Khi bạn thêm các object khác như <b><code>chim</code></b>, <b><code>khi</code></b>... thì chúng ta đều sử dụng lại được phương thức <b><code>uongNuoc</code></b> trong
+              <b><code>dongVat</code></b>.
+            </p>
+
+
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">Sử Dụng Vòng Lặp <code>for...of</code> Để Lấy Thuộc Tính</h3>
+              </div>
+            </div>
+            <p>
+              Khi bạn cần lặp qua các thuộc tính ở trong object con và những object mà nó được kế thừa thì chúng ta có 
+              thể sử dụng vòng lặp <b><code>for...of</code></b>. Để nắm rõ hơn bạn xem đoạn code sau nhé:
+            </p>
+
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> &nbsp;let&nbsp;dongVat&nbsp;=&nbsp;{<br/> &nbsp;&nbsp;&nbsp;an&nbsp;:&nbsp;true<br/> &nbsp;};<br/> &nbsp;let&nbsp;meo&nbsp;=&nbsp;{<br/> &nbsp;&nbsp;&nbsp;chay:&nbsp;true<br/> &nbsp;};<br/>&nbsp;meo.__proto__&nbsp;=&nbsp;dongVat;<br/> &nbsp;<br/> for(let thuocTinh in meo) console.log(thuocTinh);</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590147180/Javascript-prototype/for-of-lay-thuoc-tinh-trong-object_psxszo.png"
+              alt="for...of lấy thuộc tính trong object javascript">
+            <p class="mt-4">
+              Nếu như bạn muốn lấy <b>thuộc tính object con đó sở hữu</b> thì có thể sử dụng phương thức <b><code>Object.keys()</code></b>.
+              Để hiểu rõ hơn chúng ta cùng đi vào ví dụ cụ thể sau đây nhé:
+            </p>
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> &nbsp;let&nbsp;dongVat&nbsp;=&nbsp;{<br/> &nbsp;&nbsp;&nbsp;an&nbsp;:&nbsp;true<br/> &nbsp;};<br/> &nbsp;let&nbsp;meo&nbsp;=&nbsp;{<br/> &nbsp;&nbsp;&nbsp;chay:&nbsp;true<br/> &nbsp;};<br/>&nbsp;meo.__proto__&nbsp;=&nbsp;dongVat;<br/> &nbsp;<br/> console.log(Object.keys(meo));</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590147685/Javascript-prototype/su-dung-Object.keys_erxkjx.png"
+              alt="Sử dụng Object.keys() trong object javascript">
+
+
+
 
               <div class="row">
-                <div class="col-sm-12 bg-light p-2 mb-4 shadow mt-4 rounded-pill">
-                  <h3 class="text-primary ml-4 title-article-size">Thuộc tính Tên Trong Function Object:</h3>
+                <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                  <h3 class="text-primary ml-4 title-article-size">Thuộc Tính Prototype Trong Function Javascript</h3>
                 </div>
               </div>
               <p>
-                Chúng ta có thể lấy tên của hàm thông qua thuộc tính là <b>name</b>. Để hiểu rõ hơn bạn xem đoạn code sau nhé:
+                Trước khi javascript cho phép chúng ta thiết lập <b>prototype</b> bằng <b><code>__proto__</code></b>. Thì ngày xưa 
+                ta có một cách khác để thiết lập là sử dụng thuộc tính <b>"prototype"</b> của <b>constructor function</b>.
+                Mục đích của mình khi nói về phần này là giúp bạn có thể hiểu và sử dụng khi lỡ gặp nó trong quá trình lập trình.
+              </p>
+              <p>
+                Trước khi đi vào vấn đề chính thì bạn cần hiểu  và sử dụng được <b>constructor function</b> đã nhé. Nếu bạn muốn xem lại hay tham khảo 
+                thêm thì nhấn <a href="https://www.niemvuilaptrinh.com/article/Constructor-Function-Trong-Javascript" title="constructor function">vào đây nha</a>.
+              </p>
+
+              <p>
+                Bây giờ chúng ta sẽ đi vào ví dụ cụ thể để dễ hình dung hơn nhé:
+              </p>
+
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> &nbsp;let&nbsp;dongVat=&nbsp;{<br/> &nbsp;&nbsp;&nbsp;an:&nbsp;true<br/> &nbsp;};<br/>&nbsp;function&nbsp;Meo(ten)&nbsp;{<br/> &nbsp;&nbsp;&nbsp;this.ten&nbsp;=&nbsp;ten;<br/> &nbsp;}<br/><br/>&nbsp;Meo.prototype&nbsp;=&nbsp;dongVat;<br/> /*Cách gán phía dưới bằng với phương thức meo.__proto__ = dongVat*/ <br/>&nbsp;let&nbsp;meo&nbsp;=&nbsp;new&nbsp;Meo("Mèo&nbsp;Đen");<br/>&nbsp;console.log(meo.an);<br/> console.log(meo.ten);</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590149958/Javascript-prototype/constructor-function-prototype-javascript_uzlwm3.png"
+              alt="Constructor function prototype javascript">
+              <p>
+                Mình có lưu ý là  chỉ khi <b>(Function).prototype</b> là một object thì chúng ta mới có thể sử dụng từ khóa <b><code>new</code></b> để thiết lập <b><code>[[Prototype]]</code></b>
+                đến cho một đối tượng mới. Như ví dụ trên là chúng ta gán <b><code>Meo.prototype = dongVat</code></b>. Thì tất cả các đối tượng được tạo từ hàm <b><code>Meo</code></b>
+                sẽ thừa hưởng được các thuộc tính và phương thức của <b><code>dongVat</code></b>. Và để dễ hình dung hơn bạn xem hình ảnh sau nhé:
+              </p>
+
+            <div class="row">
+              <div class="col-md-8 col-sm-12">
+                <img class=" lazyload"
+                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590151606/Javascript-prototype/hinh-anh-minh-hoa-prototype-function_jlxuue.svg"
+                  alt="Hình ảnh minh họa về prototype function javascript">
+              </div>
+            </div>
+           
+
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">Prototype Mặc Định Trong Function Javascript</h3>
+              </div>
+            </div>
+            <p>
+              Tất cả các function trong javascript đều có thuộc tính <b><code>prototype</code></b> mặc định được định nghĩa sẵn dù chúng ta 
+              có thiết lập cho nó hay không.<br/>
+               Thuộc tính <b><code>prototype</code></b> mặc định này là một object. Nó chỉ có một thuộc tính là <b>constructor</b> để trỏ về lại hàm của nó.
+               Để hiểu rõ hơn bạn xem đoạn code sau nhé:
+            </p>
+           
+
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> function Meo() {}<br/> /*prototype mặc định*/<br/> /*Meo.prototype = {constructor: Meo};*/ <br/><br/> console.log(Meo.prototype.constructor == Meo)</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590154441/Javascript-prototype/prototype-constructor-function-javascript_ogbese.png"
+              alt="prototype.constructor trong function javascript">
+
+            <p class="mt-4">
+              Để dễ hình dung bạn xem hình ảnh miêu tả ở dưới đây nhé:
+            </p>
+         <div class="row">
+                <div class="col-md-10 col-sm-12">
+                  <img class=" lazyload"
+                    data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590154965/Javascript-prototype/prototype-constructor-function_h27stk.svg"
+                    alt="prototype constructor function javascript">
+                </div>
+              </div>
+
+
+              <p class="mt-4">
+                Và khi chúng ta tạo một <b>object</b>  bằng function (hàm) với từ khóa <b><code>new</code></b> thì tất cả các object đó 
+                đều kế thừa thuộc tính <b><code>constructor</code></b> thông qua  <b><code>[[Prototype]]</code></b>. Để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
               </p>
               <p>
                 <mark class="p-1"><b>Đoạn Code:</b></mark>
               </p>
-              <pre><code class="javascript"> function xinChao(a, ...b) {<br/> &nbsp;&nbsp;&nbsp;console.log(a + b);<br/> }<br/><br/> console.log(xinChao.name);</code></pre>
+              <pre><code class="javascript"> function Meo() {}<br/> /*prototype mặc định*/<br/> /*Meo.prototype = {constructor: Meo};*/ <br/><br/> let meoDen = new Meo();<br/> console.log(meoDen.constructor == Meo);</code></pre>
               <p class="mt-4">
                 <mark class="p-1"><b>Kết Quả:</b></mark>
               </p>
               <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589957223/Function-Object/lay-ten-trong-function-object_qnswmj.png"
-                alt="Lấy tên trong function object">
+                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590155880/Javascript-prototype/vi-du-prototype-constructor-function-javascript_ylarfc.png"
+                alt=" Ví dụ prototype.constructor trong function javascript">
+
+              <p class="mt-4">
+                Để dễ hiểu hơn bạn xem hình ảnh miêu tả dưới đây nhé:
+              </p>
+              <div class="row">
+                <div class="col-md-10 col-sm-12">
+                  <img class=" lazyload"
+                    data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590156175/Javascript-prototype/V%C3%AD_d%E1%BB%A5_prototype.constructor-2_icuuc9.svg"
+                    alt="prototype constructor function 2 javascript">
+                </div>
+              </div>
+
+
+
+              <div class="row">
+                <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                  <h3 class="text-primary ml-4 title-article-size"> Object.prototype Trong Javascript</h3>
+                </div>
+              </div>
+              <p>
+                Như bạn đã biết thì tất cả các object trong javascript đều tham chiếu đến <b>Object.prototype</b>.
+               Phần này chúng ta sẽ đi vào tìm hiểu <b>Object.prototype</b> có những gì nhé.
+              </p>
+              <p>
+                Để xem được <b>Object.prototype</b> thì đơn giản bạn chỉ cần tạo một object trong Javascript
+                như  đoạn code sau đây:
+              </p>
+
+              <p>
+                <mark class="p-1"><b>Đoạn Code:</b></mark>
+              </p>
+              <pre><code class="javascript"> let doiTuong = {}; <br/> console.log(doiTuong);</code></pre>
+              <p class="mt-4">
+                <mark class="p-1"><b>Kết Quả:</b></mark>
+              </p>
+              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590158283/Javascript-prototype/xem-object-prototype-javascript_unovcq.png"
+                alt="Xem Object.prototype trong  javascript">
+              <p class="mt-4">
+                Để thấy được <b><code>Object.prototype()</code></b> thì bạn nhấn vào dấu mũi tên  trong console ở google developer để hiển thị các phương thức, thuộc tính của nó nhé.
+                <br/>
+                Như ví dụ trên ta có thể thấy nó có các thuộc tính như là <b><code>toString()</code></b>, <b><code>valueOf()</code></b>...
+                và cũng có thuộc tính tên <b><code>constructor</code></b> để trỏ về hàm <b><code>Object()</code></b>.
+                Khi việc tạo mới một đối tượng bằng <b><code>new Object()</code></b> hay <b><code>{}</code></b> 
+                thì <b><code>[[prototype]]</code></b> sẽ được thiết  lập và tham chiếu đến  <b><code>Object.prototype()</code></b>. Do đó  
+                object <b><code>doiTuong</code></b> có thể sử dụng các phương thức từ <b><code>Object.prototype()</code></b>.
+                <br/>Để dễ hình dung bạn xem hình ảnh sau đây nhé:
+              </p>
+
+              <div class="row">
+                <div class="col-md-10 col-sm-12">
+                  <img class=" lazyload"
+                    data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590160947/Javascript-prototype/minh-hoa-Object-prototype_qlrumo.svg"
+                    alt="Minh họa Object.prototype">
+                </div>
+              </div>
+              <p class="mt-4">
+                Bây giờ chúng ta thử gọi  thuộc tính <b><code>toString()</code></b> được lấy từ <b><code>Object.prototype</code></b>
+                bằng đoạn code dưới đây nhé:
+              </p>
+
+              <p>
+                <mark class="p-1"><b>Đoạn Code:</b></mark>
+              </p>
+              <pre><code class="javascript"> let doiTuong = {}; <br/> console.log(doiTuong.toString());<br/> console.log(typeof doiTuong.toString());</code></pre>
+              <p class="mt-4">
+                <mark class="p-1"><b>Kết Quả:</b></mark>
+              </p>
+              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590197852/Javascript-prototype/toString-Object-prototype_rn5qed.png"
+                alt="Phuong thức toString() Object.prototype trong  javascript">
+              <p class="mt-4">
+                Đối với <b><code>Object.prototype</code></b> thì nó sẽ không có <b><code>[[Prototype]]</code></b>
+                nào nữa. Bạn có thể hình dung như sau,  nó là đối tượng lớn nhất trong javascript  và chỉ có các object khác kế thừa từ nó chứ nó 
+                không kế thừa bất cứ đối tượng nào trong Javascript. Bây giờ để bạn hiểu rõ hơn thì chúng ta sẽ sử dụng <b><code>__proto__</code></b> 
+                để kiểm tra thử nhé:
+              </p>
+              <p>
+                <mark class="p-1"><b>Đoạn Code:</b></mark>
+              </p>
+              <pre><code class="javascript">console.log(Object.prototype.__proto__); //Kết quả sẽ là null</code></pre>
+              <p class="mt-4">
+                <mark class="p-1"><b>Kết Quả:</b></mark>
+              </p>
+              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590199079/Javascript-prototype/check-Object-prototype-bang-proto_zg5gm6.png"
+                alt="Kiểm tra Object.prototype bằng __proto__">
+
 
                 <div class="row">
-                  <div class="col-sm-12 bg-light p-2 mb-4 shadow mt-4 rounded-pill">
-                    <h3 class="text-primary ml-4 title-article-size">Thiết Lập Thuộc Tính Riêng Trong Function Object:</h3>
+                  <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                    <h3 class="text-primary ml-4 title-article-size"> Tại Sao Mọi Thứ Đều Kế Thừa Từ Object?</h3>
+                  </div>
+                </div>
+                <p>
+                  Phần này mình sẽ giúp bạn trả lời câu hỏi <b>tại sao mọi thứ đều kế thừa từ object</b> trong ngôn ngữ lập trình javascript.
+                  Khi bạn tạo một <b><code>mảng (array)</code></b>, <b><code>ngày (date)</code></b>, <b><code>hàm (function)</code></b> hay các đối tượng khác 
+                  thì các phương thức sẽ được giữ trong prototype tương ứng của nó.
+                </p>
+                <p>
+                  Nghĩa là khi bạn tạo một mảng với phần tử là <b><code>[1, 2, 3]</code></b> thì mặc định javascript sẽ tự động thiết lập 
+                  <b><code>new Array()</code></b> để lưu giữ các phương thức trong <b><code>Array.prototype</code></b>.
+                  Để dễ hình dung bạn xem hình ảnh sau đây sẽ rõ nhé:
+                </p>
+
+                <div class="row">
+                  <div class="col-md-10 col-sm-12">
+                    <img class=" lazyload" width="100"
+                      data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590201678/Javascript-prototype/vi-du-minh-hoa-cap-bac-prototype-js_sqnaqd.svg"
+                      alt="Ví dụ về cấp bậc prototype javascript">
                   </div>
                 </div>
 
-                <p>
-                  Cũng giống như một object bình thường thì chúng ta có thể <b>thiết lập một số thuộc tính cho hàm</b>
-                  theo cặp giá trị <i>key:value</i>. Để dễ hình dung thì mình sẽ đi vào ví dụ thiết lập cho hàm một thuộc tính 
-                  để lưu giá trị số lần hàm được gọi trong chương trình thông qua đoạn code sau nhé:
+                <p class="mt-4">
+                  Nhưng như vậy chúng ta cũng chưa thể khẳng định cho câu định nghĩa trên vì <b>các kiểu dữ liệu nguyên thủy</b> như số, chuỗi, boolean...
+                  thì nó có kế thừa <b>Object.prototype</b> hay không?
                 </p>
+                <p>
+                  Mặc dù chúng không phải là kiểu dữ liệu object nhưng nếu chúng ta thử truy cập thuộc tính của nó thì các object sẽ được tạo ra bằng cách sử dụng 
+                 constructor <b><code>Number</code></b>, <b><code>String</code></b>, <b><code>Boolean</code></b>. Và những object này sẽ bị ẩn đi 
+                 và chúng ta chỉ thấy được nó khi sử dụng <b><code>__proto__</code></b>. Để dễ hiểu bạn xem đoạn giải thích về chuỗi sau đây nhé.
+                </p>
+                <p>
+                 Bạn còn nhớ chúng ta có thể <b>đếm ký tự trong chuỗi</b> bằng lệnh <b><code>(Chuỗi).length</code></b>. Nhưng chuỗi là kiểu dữ liệu nguyên thủy vậy thì phương thức này được lấy từ đâu?
+                </p>
+                <p>
+                 Trong trường hợp này thì giá trị chuỗi sẽ được ép vào một đối tượng String nên chúng ta có thể sử dụng được phương thức đó
+                 thông qua <b><code>String.prototype</code></b>.
+                </p>
+                <p>
+                  Bây giờ chúng ta thử đi vào xem <b>String.prototype</b> bằng đoạn code bên dưới nhé:
+                </p>
+
                 <p>
                   <mark class="p-1"><b>Đoạn Code:</b></mark>
                 </p>
-                <pre><code class="javascript"> function xinChao() {<br/> &nbsp;&nbsp;&nbsp;console.log("Xin Chào Các Bạn");<br/>&nbsp;&nbsp;&nbsp; /*Thuộc tính Số lần gọi của hàm*/<br/> &nbsp;&nbsp;&nbsp;xinChao.soLanGoi++;<br/> }<br/> xinChao.soLanGoi = 0;<br/><br/> xinChao();<br/> xinChao();<br/> console.log(xinChao.soLanGoi);</code></pre>
+                <pre><code class="javascript"> let chuoi = "Xin Chào Các Bạn";<br/> console.log(chuoi.__proto__);</code></pre>
                 <p class="mt-4">
                   <mark class="p-1"><b>Kết Quả:</b></mark>
                 </p>
                 <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589958705/Function-Object/tao-thuoc-tinh-trong-function-object_egqgpi.png"
-                  alt="Tạo thuộc tính trong function object">
+                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590203726/Javascript-prototype/Kiem-tra-String-prototype-bang-proto_sxawbu.png"
+                  alt="Kiểm tra String.prototype bằng __proto__">
+                <p class="mt-4">
+                  Như bạn thấy nó có rất nhiều phương thức được kế thừa từ <b>String.prototype</b>. Và khi nó đã là 
+                  object thì nó cũng sẽ kế thừa từ <b><code>Object.prototype</code></b>. Để dễ hình dung bạn xem hình ảnh sau đây nhé:
+                </p>
+
+                <div class="row">
+                  <div class="col-md-4 col-sm-8">
+                    <img class=" lazyload" width="100"
+                      data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590204060/Javascript-prototype/vi-du-String-prototype_ejmztv.svg"
+                      alt="Ví dụ String.prototype javascript">
+                  </div>
+                </div>
 
                 <p class="mt-4">
-                  Đầu tiên chúng ta khai báo một hàm với thuộc tính của nó là <b><code>soLanGoi</code></b> và giá trị bằng 0.
-                  Sau đó ta sẽ tăng giá trị lên 1 đơn vị mỗi khi hàm được gọi bằng cách <b><code>xinChao.soLanGoi++</code></b>. Cuối cùng chúng ta có được kết quả như hình ảnh phía trên.
+                 Bây giờ  chúng ta có thể trả lời câu hỏi trên rồi nhé.
                 </p>
-                <p>
-                  Qua các ví dụ trên mình mong là  đã giúp bạn hiểu được phần nào về <b>function object</b>.
-                  Thật ra nó cũng chỉ là một hàm bình thường trong javascript và chúng ta chỉ đang đi tìm hiểu thêm thêm về thuộc tính object có sẵn ở trong nó mà thôi.
-                </p>
-                <p>
-                  Bây giờ chúng ta sẽ tiếp tục đi vào tìm hiểu các <b>phương thức được sử dụng với function object</b> nhé.
-                </p>
+
                 <div class="row">
-                  <div class="col-sm-12 bg-light p-2 mb-4 shadow  rounded-pill">
-                    <h3 class="text-primary ml-4 title-article-size"> Phương Thức call() Với Function Object:</h3>
+                  <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                    <h3 class="text-primary ml-4 title-article-size"><b>Không Sử Dụng __proto__</b></h3>
                   </div>
                 </div>
                 <p>
-                  Phương thức <b><code>call()</code></b> sẽ gọi một hàm với giá trị được truyền vào <b><code>this</code></b>
-                  và các tham số. Để hiểu rõ hơn bạn xem đoạn code sau nhé:
+                  Ngày nay thì <b><code>__proto__</code></b> thì ít được sử dụng hơn  vì trong phiên bản Javascript
+                  mới thì có cung cấp thêm cho chúng ta một số phương thức tiện ích hơn như là:
+                  <ul>
+                    <li>
+                      <b>Object.create()</b>: Tạo một đối tượng rỗng, sử dụng đối tượng hiện có để làm <b><code>prototype</code></b> (nguyên mẫu) cho đối tượng đó.
+                    </li>
+                    <li>
+                      <b>Object.getPrototypeOf()</b>: Trả về <b>prototype</b> của một đối tượng xác định.
+                    </li>
+                    <li>
+                      <b>Object.setPrototypeOf()</b>: Thiết lập <b>prototype</b> của một đối tượng xác định cho một đối tượng khác.
+                    </li>
+                  </ul>
+                </p>
+                <p>
+                  Để hiểu rõ hơn bạn xem đoạn code sau nhé:
                 </p>
                 <p>
                   <mark class="p-1"><b>Đoạn Code:</b></mark>
                 </p>
-                <pre><code class="javascript"> let khachHang = {ho: "Nguyễn", ten: "An"};<br/> function xinChao(loiChao) {<br/> &nbsp;&nbsp;&nbsp;console.log(loiChao + this.ho + " " + this.ten);<br/> }<br/><br/> xinChao.call(khachHang, "Xin chào ");</code></pre>
+                <pre><code class="javascript"> let dongVat= {<br/> an: true<br/> };<br/> /* Tạo một đối tượng mới với dongVat là prototype */<br/> let meo = Object.create(dongVat);<br/> console.log(meo.an);<br/>  /*Kiểm tra prototype cua meo*/<br/> console.log(Object.getPrototypeOf(meo) === dongVat);/*true*/<br/> /*Thiết lập thuộc prototype khác cho đối tượng meo*/<br/> Object.setPrototypeOf(meo, {}); // thay đổi prototype cua meo đến {} (Object)<br/></code></pre>
                 <p class="mt-4">
                   <mark class="p-1"><b>Kết Quả:</b></mark>
                 </p>
                 <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589960703/Function-Object/phuong-thuc-call-function-object_mfyrnb.png"
-                  alt="Phương thức call trong function object">
-                <p class="mt-4">
-                  Ở ví dụ trên nó giúp chúng ta truyền object như một tham số  vào trong hàm để xử lý. Và để gọi giá trị trong object đó thì chúng ta chỉ cần việc gọi <b>this.(Tên thuộc tính)</b>.
-                  Và tham số <b>loiChao</b> trong hàm sẽ bằng với chuỗi <b>"Xin chào "</b><br/>
-                  Phương thức <b><code>call</code></b> giúp chúng ta linh hoạt trong việc xử lý dữ liệu được truyền  vào với tham số đầu tiên 
-                  chính là <b><code>this</code></b> và các tham số còn lại được truyền vào trong hàm như cách thông thường mà chúng ta vẫn hay sử dụng.
-
-                </p>
-                <div class="row">
-                  <div class="col-sm-12 bg-light p-2 mb-4 shadow  rounded-pill">
-                    <h3 class="text-primary ml-4 title-article-size"> Phương Thức apply() Với Function Object:</h3>
-                  </div>
-                </div>
-
-                <p>
-                  Phương thức <b><code>apply</code></b> này có cách hoạt động khá giống so với <b><code>call</code></b>
-                  , điểm khác biệt của nó là cách chúng ta truyền tham số vào cho hàm. Để hiểu rõ hơn bạn xem đoạn code sau nhé:
-                </p>
-                <p>
-                  <mark class="p-1"><b>Đoạn Code:</b></mark>
-                </p>
-                <pre><code class="javascript"> let khachHang = {ho: "Nguyễn", ten: "An"};<br/> function xinChao(loiChao) {<br/> &nbsp;&nbsp;&nbsp;console.log(loiChao + this.ho + " " + this.ten);<br/> }<br/><br/> xinChao.apply(khachHang, ["Xin chào "]);</code></pre>
-                <p class="mt-4">
-                  <mark class="p-1"><b>Kết Quả:</b></mark>
-                </p>
-                <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589961710/Function-Object/phuong-thuc-apply-function-object_kdzaho.png"
-                  alt="Phương thức apply trong function object">
-
-                  <div class="row">
-                    <div class="col-sm-12 bg-light p-2 mb-4 shadow mt-4 rounded-pill">
-                      <h3 class="text-primary ml-4 title-article-size"> Phương Thức bind() Với Function Object:</h3>
-                    </div>
-                  </div>
-                  <p>
-                    Phương thức <b><code>bind()</code></b> sẽ sử dụng giá trị <b><code>this</code></b>  trong một hàm để liên kết với đối tượng mà 
-                    chúng ta muốn lấy dữ liệu. Để dễ hình dung bạn xem đoạn code sau nhé:
-                  </p>
-                  <p>
-                    <mark class="p-1"><b>Đoạn Code:</b></mark>
-                  </p>
-                  <pre><code class="javascript">let khachHang1 = {<br/> ten: "An",<br/> xinChao: function() {<br/>&nbsp;&nbsp; console.log("Xin Chao" + this.ten);<br/> }<br/>}<br/>let khachHang2 = {ten: "Lan"};<br/><br/> let xinChaoKhachHang = khachHang1.xinChao.bind(khachHang2);<br/> xinChaoKhachHang()</code></pre>
-                  <p class="mt-4">
-                    <mark class="p-1"><b>Kết Quả:</b></mark>
-                  </p>
-                  <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                    data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589962316/Function-Object/phuong-thuc-bind-function-object_il3bxi.png"
-                    alt="Phương thức bind trong function object">
-                  <p class="mt-4">
-                    Nó giúp chúng ta có thể sử dụng phương thức của <b>khachHang1</b> với dữ liệu truyền 
-                    vào là <b><code>khachHang2</code></b> được định danh bằng từ khóa <b><code>whis</code></b>.
-                    Phương thức <b><code>bind</code></b> nhìn chung là cho phép  một object mượn phương thức của một object khác mà không cần phải thực hiện hành động sao chép phương thức.
-                  </p>
+                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590206760/Javascript-prototype/object-prototype-create-get-set_qllu6j.png"
+                  alt="Object prototype create get set">
+               
 
 
 
@@ -245,28 +602,7 @@
 
 
 
-                <div class="row">
-                  <div class="col-sm-12 bg-light p-2 mb-4 shadow mt-4 rounded-pill">
-                    <h3 class="text-primary ml-4 title-article-size">Tạo Function Bằng Từ Khóa <b><code>new</code></b>:</h3>
-                  </div>
-                </div>
-                <p class="text-primary">Kiến thức  thêm về function</p>
-                <p>
-                  Chúng ta đã được học một số cách khai báo hàm trong javascript thì ở  bài này mình xin giới thiệu thêm một cách tạo hàm 
-                  mới là sử dụng từ khóa <b><code>new</code></b>. Để hiểu rõ hơn chúng ta sẽ đi vào tìm hiểu cú pháp của nó nhé:
-                </p>
-                <pre><code> let ham = new Function(tham số 1, tham số 2... tham số n, Đoạn mã thực thi);</code></pre>
-                <b>với tham số 1,2...</b> là tham số được truyền vào để tính toán bằng đoạn mã thực thi ở trong hàm. Để hiểu rõ hơn bạn xem ví dụ sau đây nhé:
-                <p>
-                  <mark class="p-1"><b>Đoạn Code:</b></mark>
-                </p>
-                <pre><code class="javascript"> let tong = new Function('a', 'b', 'return a +b');<br/> console.log(tong(2, 3));</code></pre>
-                <p class="mt-4">
-                  <mark class="p-1"><b>Kết Quả:</b></mark>
-                </p>
-                <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1589957740/Function-Object/tao-ham-bang-tu-khoa-new_c4bbz7.png"
-                  alt="Tạo hàm bằng từ khóa new">
+
 
 
 
@@ -292,7 +628,7 @@
             <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
 
 
-            <p>Qua đây mình mong bài viết sẽ giúp bạn hiểu được <b>Function Object</b>
+            <p>Qua đây mình mong bài viết sẽ giúp bạn hiểu được <b>khái niệm cũng như cách sử dụng prototype</b>
               trong ngôn ngữ
               Javascript và
               nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất
