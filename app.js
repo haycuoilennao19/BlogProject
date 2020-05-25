@@ -19,7 +19,17 @@ let ejs = require('ejs')
 let LRU = require('lru-cache')
 
 var app = express();
-
+app.use((req, res, next) => {
+  if (process.env.NODE_ENV === 'production') {
+      if (req.headers.host === 'https://murmuring-refuge-88823.herokuapp.com/')
+          return res.redirect(301, 'https://www.niemvuilaptrinh.com');
+      if (req.headers['x-forwarded-proto'] !== 'https')
+          return res.redirect('https://' + req.headers.host + req.url);
+      else
+          return next();
+  } else
+      return next();
+});
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
