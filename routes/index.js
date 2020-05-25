@@ -10,7 +10,11 @@ router.get('/0', function(req, res, next) {
   })
 
  
-  
+    
+router.get('/sitemap.xml', function(req, res, next) {
+    res.sendFile('/sitemap.xml');
+ });
+
 router.get('/about', function(req, res, next) {
     res.render('about')
  });
