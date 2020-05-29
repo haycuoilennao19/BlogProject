@@ -26,7 +26,7 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i> Tìm Hiểu Class Trong Javascript</h2>
+                  aria-hidden="true"></i> Tìm Hiểu Promise Trong Javascript</h2>
             </div>
           </div>
 
@@ -36,496 +36,338 @@
             </div>
           </div>
           <div class="text-content-article mt-5">
-            <p><i>Cũng như các ngôn ngữ khác thì Javascript cần phải được cải tiến để giúp người lập trình
-                có thể dễ dàng hiểu và làm việc với nó được tốt hơn. Do đó trong phiên bản ES6 có cung cấp
-                cho chúng ta một tiện ích tên là <b>Class</b> giúp hỗ trợ việc lập trình hướng đối tượng trong
-                Javascript
-                được tốt hơn. Hôm nay bạn hãy cùng mình đi vào tìm hiểu về khái niệm cũng như cách sử dụng class
-                trong
-                ngôn
-                ngữ lập trình Javascript để phát triển web nhé.</i>
+            <p><i>
+                Promise được giới thiệu trong phiên bản ES6 giúp giải quyết một số vấn đề mà callback function chưa thể xử lý được.
+                Hôm nay chúng ta hãy cùng nhau đi vào tìm hiểu về khái niệm cũng như cách sử dụng promise
+                trong ngôn ngữ lập trình Javascript để phát triển web nhé.</i>
             </p>
 
             <p>
-              Như chúng ta đã học ở bài trước thì việc kế thừa trong javascript có thể thực hiện thông qua
-              <a href="https://www.niemvuilaptrinh.com/article/Tim-Hieu-Prototype-Trong-Javascript"
-                title="kế thừa nguyên mẫu"><b>Prototypal inheritance</b></a>(Kế thừa nguyên mẫu).
-              Nhưng đối với các bạn khi học đã học ngôn ngữ khác như Python, Java... thì sẽ hơi khó để có thiểu hiểu
-              cách hoạt động của phương thức này. Do đó <b>class</b> được cung cấp để giải quyết vấn đề trên.
-              <br />
-              Và một vấn đề quan trọng là <b>class</b> trong javascript sẽ không giống như <b>class ở các ngôn ngữ
-                khác</b>
-              vì cốt lõi của nó được xây dựng dựa trên <b>prototype</b> và <b>constructor function</b> nhưng cách hoạt
-              động sẽ gần giống so vói các ngôn ngữ còn lại như kế thừa các phương thức, thuộc tính...
+              Trước khi đi vào định nghĩa <b>promise</b> thì mình có một ví dụ về đời sống để giúp bạn hiểu được khái
+              niệm về nó một cách đơn giản hơn.<br />
+              <span class="text-primary">Ví dụ:</span>
             </p>
             <p>
-              Nếu bạn muốn tìm hiểu thêm về lập trình hướng đối tượng thì có thể xem <a
-                href="https://vi.wikipedia.org/wiki/L%E1%BA%ADp_tr%C3%ACnh_h%C6%B0%E1%BB%9Bng_%C4%91%E1%BB%91i_t%C6%B0%E1%BB%A3ng"
-                title="Lập trình hướng đối tượng">ở đây nhé</a>. Bây giờ chúng ta sẽ cùng nhau đi vào tìm hiểu về nó
-              nhé.
+              Chị bạn đang làm việc ở nước ngoài và <b>hứa (promise)</b> sẽ gửi cho bạn một quyển sách lập trình mà bạn
+              rất thích vào tháng tới.<br />
+              Nhưng bạn sẽ không biết tháng tới mình có nhận được quyển sách đó hay không. Vì chị bạn có thể mua cho bạn
+              hoặc vì
+              bận công việc gì đó mà không thể gởi cho bạn vào tháng tới.
+            </p>
+            <p>
+              Lúc này <b>lời hứa(promise)</b> sẽ có 3 trạng thái là:
+              <ul>
+                <li><b>Pending</b> (Đang chờ xử lý): Bạn không biết mình có nhận được quyển sách vào tháng tới hay
+                  không.</li>
+                <li><b>Fulfilled</b> (Hoàn thành): Bạn đã nhận được sách từ chị của mình vào tháng tới.</li>
+                <li><b>Rejected</b> (Từ chối): Bạn không nhận được sách vì một lý do nào đó chị của bạn không thể gửi
+                  được.</li>
+              </ul>
+            </p>
+            <p>
+              Trong Javascript thì <b>promise</b> khi mới tạo sẽ có trạng thái là <code>pending</code>. Nếu kết quả là
+              đã hoàn thành thì sẽ có trạng thái <code>fulfilled</code> hoặc xảy ra lỗi thì nó sẽ có trạng thái
+              <code>rejected</code>.
+            </p>
+            <p>
+              Bây giờ chúng ta sẽ cùng nhau đi vào tìm hiểu cách tạo một <b>promise</b> nhé.
             </p>
 
             <div class="row">
               <div class="col-sm-12 bg-light p-2 mb-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">Cú Pháp Class Trong Javascript</h3>
+                <h3 class="text-primary ml-4 title-article-size">Cách Tạo Promise Trong Javascript</h3>
+              </div>
+            </div>
+            <p>
+              Đầu tiên chúng ta sẽ đi vào tìm hiểu cú pháp tổng quát của <b>promise</b> ở dưới đây nhé:
+            </p>
+            <pre><code> let promise = new Promise(function(resolve, reject){ <br/> /*executor*/ <br/>})</code></pre>
+
+            <p>
+              Bây giờ để dễ hình dung thì chúng ta sẽ đi vào ví dụ chi tiết sau đây nhé:
+            </p>
+
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> let duocGoiSach = true; <br/> let sach = new Promise(function (resolve, reject){<br/> &nbsp;&nbsp;if(duocGoiSach) {<br/> &nbsp;&nbsp;&nbsp;&nbsp;resolve("Bạn đã được chị gửi sách. :)");<br/> &nbsp;&nbsp;} else {<br/> &nbsp;&nbsp;&nbsp;&nbsp;reject("Bạn không được chị gửi sách. :(");<br/> &nbsp;&nbsp;}<br/> });<br/> console.log(sach)</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590670815/Promise-Javascript/promise-resolved-trong-javascript_wnm2uh.png"
+              alt="Promise resolved trong javascript">
+
+
+            <p class="mt-4">
+              Thì lúc này bạn có thể thấy trạng thái của <b>promise</b> đã được thay đổi sang <code>resolved</code> và
+              giá trị của
+              <b>promise</b> là một chuỗi mà chúng ta đã truyền vào cho hàm <code>resolve()</code>. Bạn có thể hình dung
+              cách chạy của nó như sau:
+              <ul>
+                <li><b>Exexutor</b> sẽ được gọi tự động và ngay lập tức khi <code>new Promise</code> được chạy.</li>
+                <li><b>Executor</b> nhận hai đối số là <b>resolve</b> và <b>reject</b>. Những hàm được truyền vào này sẽ
+                  được định nghĩa lại thông qua
+                  Javascript. Chúng ta chỉ gọi chúng sau khi đã sẵn sàng.</li>
+                <li>Bên trong <b>executor</b>
+                  chúng ta sẽ gọi hàm <code>resolve()</code> nếu chương trình thực hiện thành công hoặc gọi hàm
+                  <code>reject()</code> nếu chương trình xảy ra lỗi </li>
+              </ul>
+            </p>
+            <p>
+              Bây giờ chúng ta sẽ đi vào xem trạng thái <code>pending</code> của nó bằng hàm <code>setTimeout</code>
+              thông qua đoạn code dưới đây nhé:
+            </p>
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> let duocGoiSach = true; <br/> let sach = new Promise(function (resolve, reject){<br/> &nbsp;setTimeout(() => {<br/> &nbsp;&nbsp;if(duocGoiSach) {<br/> &nbsp;&nbsp;&nbsp;&nbsp;resolve("Bạn đã được chị gửi sách. :)");<br/> &nbsp;&nbsp;} else {<br/> &nbsp;&nbsp;&nbsp;&nbsp;reject("Bạn không được chị gửi sách. :(");<br/> &nbsp;&nbsp;}<br/> &nbsp;}, 3000);<br/> });<br/> console.log(sach)</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590676055/Promise-Javascript/promise-pending-trong-javascript_urrwgl.png"
+              alt="Promise pending trong javascript">
+            <p class="mt-4">
+              Như vậy giá trị khi mà <b>promise</b> đang ở trạng thái <code>pending</code> là <code>undefined</code>.
+              Giá trị của nó sẽ được trả về khi <b>promise</b> được hoàn thành sau khoảng thời gian 3s.
+            </p>
+            <p>
+              Tiếp theo chúng ta sẽ đi vào xem trạng thái của nó khi mà chương trình thực thi không thành công
+              bằng cách gán <code>duocGoiSach = false</code>. Để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
+            </p>
+            <p>
+              <mark class="p-1"><b>Đoạn Code:</b></mark>
+            </p>
+            <pre><code class="javascript"> let duocGoiSach = false; <br/> let sach = new Promise(function (resolve, reject){<br/> &nbsp;&nbsp;if(duocGoiSach) {<br/> &nbsp;&nbsp;&nbsp;&nbsp;resolve("Bạn đã được chị gửi sách. :)");<br/> &nbsp;&nbsp;} else {<br/> &nbsp;&nbsp;&nbsp;&nbsp;reject("Bạn không được chị gửi sách. :(");<br/> &nbsp;&nbsp;}<br/> });<br/> console.log(sach)</code></pre>
+            <p class="mt-4">
+              <mark class="p-1"><b>Kết Quả:</b></mark>
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590676611/Promise-Javascript/promise-reject-trong-javascript_ulvorn.png"
+              alt="Promise reject trong javascript">
+
+            <p class="mt-4">
+              Vậy qua 3 ví dụ trên thì chúng ta có thể rút ra một sơ đồ như sau:
+            </p>
+
+            <div class="row">
+              <div class="col-md-6 col-sm-12"> <img class=" lazyload" width="100"
+                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590677285/Promise-Javascript/vi-du-minh-hoa-promise_x9uezm.svg"
+                  alt="Minh họa promise trong javascript">
+              </div>
+            </div>
+            <p class="mt-4">
+              Mình có một số lưu ý là khi <b>promise</b> đã chuyển sang trạng thái <code>fulfilled </code> hoặc
+              <code>rejected</code>
+              thì chúng ta khổng thể thay đối trạng thái cho nó. Nghĩa là bạn không thể chuyển từ trạng thái
+              <code>fulfilled </code> sang <code>rejected</code>
+              hoặc theo chiều ngược lại.
+            </p>
+            <p>
+              Do trạng thái và kết quả của đối tượng promise là nội bộ do đó chúng ta không thể sử dụng cách truy cập
+              trực tiếp.
+              Nhưng chúng ta có thể sử dụng các phương thức <code>.then</code>, <code>.catch</code> và
+              <code>.finally</code> để làm điều đó.
+              Để hiểu rõ hơn bạn cùng mình hãy cùng nhau đi vào tìm hiểu nhé.
+            </p>
+
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mb-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">Phuong Thức <code>then</code> </h3>
               </div>
             </div>
             <p>
               Bây giờ chúng ta sẽ đi vào tìm hiểu cú pháp của nó nhé:
             </p>
-            <pre><code class="javascript"> class (Tên Class){<br/> &nbsp;&nbsp;constructor() {}<br/> &nbsp;&nbsp;Phương thức 1() {} <br/> &nbsp;&nbsp;Phương thức 2() {} <br/> &nbsp;&nbsp;...<br/> }</code></pre>
+            <pre><code class="javascript"> promise.then(<br/> &nbsp;&nbsp;function(result) { /*Xử lý kết quả thành công*/ }<br/> &nbsp;&nbsp;function(err) { /*xử lý kết quả lỗi*/ }<br/> );</code></pre>
             <p>
-              Chúng ta có thể sử dụng <code>let đối tượng = new (Tên Class)</code> để tạo một object(đối tượng) với các
-              phương thức được
-              tích hợp sẵn ở trong class đó.
-              Và khi một đối tượng được tạo mới từ class bằng từ khóa <code>new</code> thì phương thức
-              <code>constructor()</code> sẽ tự động được gọi, với
-              tham số được truyền vào trong <code>constructor</code> là các thuộc tính thiết lập cho object đó.
-              Bây giờ chúng ta sẽ cùng nhau đi vào ví dụ để dễ hình dung nhé.
+              Với tham số đầu tiên là hàm chúng ta sẽ chạy khi <b>promise</b> được hoàn thành (fulfilled).<br />
+              Tham số thứ hai là hàm chúng ta sẽ chạy khi <b>promise</b> bị từ chối (rejected).
             </p>
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mb-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">Ví Dụ Class Trong Javascript</h3>
-              </div>
-            </div>
             <p>
-              Bây giờ chúng ta sẽ tạo một class tên là <code>KhachHang</code> dùng để chứa phương thức hiển thị tên
-              khách
-              hàng ra ngoài màn hình và
-              <code>ten</code> là tham số mà chúng ta truyền vào cho <code>constructor</code>. Để hiểu rõ hơn bạn xem
-              đoạn code sau nhé:
+              Đầu tiên sẽ tạo một hàm dùng để trả về đối tượng <code>Promise</code>:
+            </p>
+
+            <pre><code class="javascript"> function taoPromise(duocGoiSach) {<br/>  return new Promise(function (resolve, reject){<br/> &nbsp;setTimeout(() => {<br/> &nbsp;&nbsp;if(duocGoiSach) {<br/> &nbsp;&nbsp;&nbsp;&nbsp;resolve("Bạn đã được chị gửi sách. :)");<br/> &nbsp;&nbsp;} else {<br/> &nbsp;&nbsp;&nbsp;&nbsp;reject("Bạn không được chị gửi sách. :(");<br/> &nbsp;&nbsp;}<br/> &nbsp;}, 3000);<br/> });<br/>}</code></pre>
+
+            <p>
+              Sau đó chúng ta sẽ gọi hàm <code>taoPromise</code> và thực thi phương thức <code>then</code> cho đối tượng
+              promise:
+            </p>
+            <pre><code class="javascript"> let sach = taoPromise(true);<br/> sach.then(<br/> &nbsp;&nbsp;result => console.log(result),<br/> &nbsp;&nbsp;error => console.log(error)<br/> );</code></pre>
+            <p>
+              Bây giờ chúng ta sẽ kết hợp hai đoạn code trên để xem kết quả sao nhé:
             </p>
 
             <p>
               <mark class="p-1"><b>Đoạn Code:</b></mark>
             </p>
-            <pre><code class="javascript"> class KhachHang { <br/> &nbsp;&nbsp;constructor(ten) {<br/> &nbsp;&nbsp;&nbsp;&nbsp;this.ten = ten;<br/> &nbsp;&nbsp;}<br/> &nbsp;&nbsp;xinChao() {<br/> &nbsp;&nbsp;&nbsp;&nbsp;console.log("Tên Khách Hàng là " + this.ten);<br/> &nbsp;&nbsp;}<br/> }<br/><br/> /*Tạo object mới từ Class*/<br/> let an = new KhachHang("An");<br/> an.xinChao();</code></pre>
+            <pre><code class="javascript"> function taoPromise(duocGoiSach) {<br/>  return new Promise(function (resolve, reject){<br/> &nbsp;setTimeout(() => {<br/> &nbsp;&nbsp;if(duocGoiSach) {<br/> &nbsp;&nbsp;&nbsp;&nbsp;resolve("Bạn đã được chị gửi sách. :)");<br/> &nbsp;&nbsp;} else {<br/> &nbsp;&nbsp;&nbsp;&nbsp;reject("Bạn không được chị gửi sách. :(");<br/> &nbsp;&nbsp;}<br/> &nbsp;}, 3000);<br/> });<br/>}<br/><br/>let sach = taoPromise(true);<br/> sach.then(<br/> &nbsp;&nbsp;result => console.log(result),<br/> &nbsp;&nbsp;error => console.log(error)<br/> );</code></pre>
             <p class="mt-4">
               <mark class="p-1"><b>Kết Quả:</b></mark>
             </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590462728/Class-Trong-Javascript/tao-object-tu-class-js_nys9kr.png"
-              alt="Tạo object từ Class trong javascript">
-
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590723921/Promise-Javascript/phuong-thuc-then-trong-promise_pq4ql2.png"
+              alt="Phương thức then trong promise javascript">
             <p class="mt-4">
-              Khi mà <code>new khachHang("An")</code> được gọi thì một object mới sẽ được tạo từ class
-              <code>KhachHang</code> và lưu vào trong biến <code>an</code>, sau đó phương thức
-              <code>constructor</code>
-              sẽ tự động chạy với tham số truyền vào là tên khách hàng dùng để gán giá trị cho thuộc tính
-              <code>ten</code> của đối tượng đó.
-            </p>
-            <p>
-              Mình cũng có một số lưu ý khi bạn sử dụng <b>class</b> là:
-              <ul>
-                <li>
-                  <b>Class</b> chỉ chứa định nghĩa phương thức chứ không chứa thuộc tính của đối tượng.
-                </li>
-                <li>
-                  Khi bạn định nghĩa các phương thức trong <b>class</b> thì không sử dấu <b>phẩy(,)</b> để ngăn cách
-                  chúng như trong object đâu nhé.
-                </li>
-                <li>
-                  Bạn có thể tham chiếu đến thuộc tính của một object được xây dựng bằng <b>class</b> thông qua
-                  cách gọi trực tiếp. (Như ví dụ trên để lấy giá trị tên thì ta có thể gọi <code>an.ten</code> ).
-                </li>
-              </ul>
+               Promise đang ở trạng thái <code>pending</code> là do chúng ta thiết lập thời gian chạy hàm  bằng <code>setTimeout</code>.
+               Sau 3s thì hàm phía trên sẽ chạy và trả về đối tượng <b>promise</b> với trạng thái thành công như bạn thấy ở hình trên . Sau đó phương thức <code>then</code> sẽ nhận giá trị từ đối tượng promise và 
+               hiển thị ra ngoài màn hình.
             </p>
 
+            <p>
+              Ngoài ra phương thức <code>then</code> cũng cho phép bạn sử dụng một tham số để chỉ xử lý cho trường hợp thành công hoặc trường hợp lỗi:
+            </p>
+            <pre><code class="javascript"> sach.then( <br/> &nbsp;&nbsp; value => console.log(value)<br/> )</code></pre>
             <div class="row">
               <div class="col-sm-12 bg-light p-2 mb-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">Ví Dụ Constructor Function Trong Javascript</h3>
+                <h3 class="text-primary ml-4 title-article-size">Phương Thức <code>catch</code> </h3>
               </div>
             </div>
             <p>
-              Để bạn hiểu được <b>cốt lõi</b> của tiện ích <b>class</b> thì mình sẽ thực hiện kế thừa phương thức như ví
-              dụ
-              trên nhưng thay vì sử dụng
-              <b>class</b> thì sẽ dùng <b>constructor function</b> trong Javascript. Để hiểu rõ hơn bạn xem đoạn code
-              sau nhé:
+              Nếu như bạn muốn  hiển thị lỗi  khi đối tượng <b>promise</b> ở trạng thái <code>reject</code> thì chúng 
+              ta có thể sử dụng hai cách sau:
+            </p>
+            <h5 class="text-primary">
+              Sử dụng <code>catch(hàm xử lý lỗi)</code>:
+            </h5>
+            <pre><code class="javascript"> sach.catch( <br/> &nbsp;&nbsp; error => console.log(error)<br/> ) </code></pre>
+            <p>Và kết quả bạn sẽ được như hình sau đây:</p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590724496/Promise-Javascript/phuong-thuc-catch-trong-promise_udax53.png"
+            alt="Phương thức catch trong promise javascript">
+            <h5 class="text-primary mt-4">
+              Sử dụng <code>then(null, hàm xử lý lỗi)</code>:
+            </h5>
+            <pre><code class="javascript"> sach.then( <br/> &nbsp;&nbsp;null,<br/>&nbsp;&nbsp; error => console.log(error)<br/> ) </code></pre>
+            <p>Và kết quả bạn sẽ được như hình sau đây:</p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590724775/Promise-Javascript/phuong-thuc-then-null-trong-promise_hogmnb.png"
+            alt="Phương thức then null trong promise javascript">
+
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">Phương Thức <code>finally</code> </h3>
+              </div>
+            </div>
+            <p>
+              Phương thức <code>finally()</code> sẽ trả về một <b>Promise</b>. Khi kết quả trả về của <b>promise</b>
+              là <code>fulfilled</code> (hoàn thành) hay <code>rejected</code> (từ chối) thì đoạn code trong hàm callback của <code>finally</code> cũng sẽ được thực thi. 
+            </p>
+            <p>
+              Để bạn dễ hiểu chúng ta sẽ đi vào ví dụ sau đây nhé:
             </p>
             <p>
               <mark class="p-1"><b>Đoạn Code:</b></mark>
             </p>
-            <pre><code class="javascript"> function KhachHang(ten) {<br/> &nbsp;&nbsp;this.ten = ten;<br/> }<br/> KhachHang.prototype.xinChao = function() {<br/> &nbsp;&nbsp;console.log("Tên Khách Hàng là " + this.ten);<br/> };<br/> let an = new KhachHang("An");<br/> an.xinChao(); </code></pre>
+            <pre><code class="javascript"> function taoPromise(duocGoiSach) {<br/>  return new Promise(function (resolve, reject){<br/> &nbsp;setTimeout(() => {<br/> &nbsp;&nbsp;if(duocGoiSach) {<br/> &nbsp;&nbsp;&nbsp;&nbsp;resolve("Bạn đã được chị gửi sách. :)");<br/> &nbsp;&nbsp;} else {<br/> &nbsp;&nbsp;&nbsp;&nbsp;reject("Bạn không được chị gửi sách. :(");<br/> &nbsp;&nbsp;}<br/> &nbsp;}, 3000);<br/> });<br/>}<br/><br/>let sach = taoPromise(true);<br/> sach<br/> &nbsp;&nbsp;&nbsp;&nbsp;.finally(() => console.log("Kết quả sẽ có sau 3s"))<br/> &nbsp;&nbsp;&nbsp;&nbsp;.then(<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result => console.log(result),<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;error => console.log(error)<br/> &nbsp;&nbsp;&nbsp;&nbsp;);</code></pre>
             <p class="mt-4">
               <mark class="p-1"><b>Kết Quả:</b></mark>
             </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590464361/Class-Trong-Javascript/su-dung-prototype-thay-the-class_hxasjl.png"
-              alt="Sử dụng prototype thay thế class">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590726526/Promise-Javascript/phuong-thuc-finally-trong-promise_ijvsmu.png"
+              alt="Phương thức finally trong promise javascript">
             <p class="mt-4">
-              Cách thức hoạt động của <b>constructor function</b> là:
+              Ở đây mình có một số lưu ý sau là:
               <ul>
+                <li><code>finally</code> sẽ không có tham số truyền vào. Nó sẽ được gọi mà không cần quan tâm đến kết quả trả về là 
+                thành công hay bị từ chối của <code>promise</code>.</li>
                 <li>
-                  Nó sẽ tạo một hàm <code>KhachHang</code> như là một constructor function với thuộc tính là
-                  <code>ten</code>.
+                  Nó không xử lý kết quả trả về từ <code>promise</code> mà chỉ chuyển sang các phương thức sau để xử lý.
                 </li>
                 <li>
-                  Phương thức <code>xinChao()</code> sẽ được gán vào trong <b>prototype</b> của nó
-                  (KhachHang.prototype).
-                  Do đó nó có thể sử dụng phương thức cho các đối tượng được tạo bằng <b><code>new
-                      KhachHang()</code></b>.
-                </li>
-              </ul>
-            </p>
-            <p>
-              Để bạn thấy được sự tương đồng thì chúng ta sẽ kiểm tra loại của <b>class</b> bằng lệnh
-              <code>typeof()</code> và các
-              phương thức trong <b>prototype</b>
-              của nó bằng lệnh <code>getOwnPropertyNames()</code> để xem kết quả sao nhé.
-
-            </p>
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> class KhachHang { <br/> &nbsp;&nbsp;constructor(ten) {<br/> &nbsp;&nbsp;&nbsp;&nbsp;this.ten = ten;<br/> &nbsp;&nbsp;}<br/> &nbsp;&nbsp;xinChao() {<br/> &nbsp;&nbsp;&nbsp;&nbsp;console.log("Tên Khách Hàng là " + this.ten);<br/> &nbsp;&nbsp;}<br/> }<br/><br/> console.log("Kiểu của class là " + (typeof KhachHang));<br/> console.log("Phương thức trong class là " + Object.getOwnPropertyNames(KhachHang.prototype));</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590466450/Class-Trong-Javascript/kiem-tra-kieu-du-lieu-class_q0ayos.png"
-              alt="Kiểm tra kiểu dữ liệu class">
-            <p class="mt-4">
-              Ở hai ví dụ trên bạn có thể thấy mối quan hệ giữa phương thức <code>xinChao</code> và class
-              <code>KhachHang</code> cũng giống như
-              mối quan hệ giữa phương thức <code>xinChao</code> và <code>KhachHang.prototype</code>.
-            </p>
-            <p>
-              Do đó chúng ta có thể xem <b>class</b> là <b>syntactic sugar (cú pháp ngọt ngào)</b> của <b>constructor
-                function</b>.<br />
-              Mình có lưu ý một tý, syntactic sugar là cú pháp được thiết kế để làm mọi thứ trở nên dễ hiểu hơn dựa trên
-              những cái có sẵn trong ngôn ngữ lập trình.
-            </p>
-
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mb-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">Một Số Điểm Khác Biệt Giữa Class Và Constructor
-                  Function</h3>
-              </div>
-            </div>
-            <p>
-              Tuy hai cách trên có khá nhiều điểm tương đồng về cách hoạt động nhưng nó cũng có một số điểm khác biệt mà
-              bạn cần chú ý là:
-              <ul>
-                <li>
-                  Khi chúng ta tạo mới một đối tượng từ class thì bắt buộc phải sử dụng từ khóa <code>new</code> nếu
-                  không thì chương trình sẽ
-                  xảy ra lỗi.
-                  <img class="img-thumbnail img-fluid shadow p-2 lazyload mt-2"
-                    data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590479036/Class-Trong-Javascript/loi-khong-su-tu-koa-new-trong-class_qmh8hf.png"
-                    alt="Lỗi không sử dụng từ khóa new trong class">
-                </li>
-                <li class="mt-2">
-                  Tất cả đoạn mã trong class sẽ tự động thực hiện trong <b>strict mode</b>. Bạn có thể tham khảo thêm về
-                  <i>strict mode</i> ở
-                  <a href="https://www.w3schools.com/js/js_strict.asp" title="strict mode">đây nhé</a>.
-                </li>
-                <li>
-                  Các phương thức trong class là <b>non-enumerable</b>. Nghĩa là các phương thức đó sẽ <b>không hiển thị
-                    trong vòng lặp</b>. Bạn có thể tham khảo thêm về tính chất này ở
-                  <a href="https://www.niemvuilaptrinh.com/article/Thiet-Lap-Thuoc-Tinh-Object-Trong-Javascript"
-                    title="Tính Chất enumerable">đây nhé</a>.
-                </li>
-                <li>
-                  Không giống như hàm bình thường là chúng ta có thể gọi hàm trước rồi mới định nghĩa sau. Thì trong
-                  class không cho phép chúng ta
-                  làm điều đó. Ví dụ như chúng ta gọi đoạn mã tạo đối tượng <b><code>let an = new
-                      KhachHang("An");</code></b> <b>trước khi khai báo class KhachHang</b>
-                  thì sẽ xảy ra lỗi.
-                  <img class="img-thumbnail img-fluid shadow p-2 lazyload mt-2"
-                    data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590480516/Class-Trong-Javascript/loi-khai-bao-trong-class_o9msuc.png"
-                    alt="Lỗi khai báo trong class">
+                  Nó giúp chúng ta hạn chế gọi cùng một hàm ở cả trong <code>then</code> và <code>catch</code>.
+                  Để hiểu rõ hơn bạn xem đoạn code sau nhé:
+                  <pre><code class="javascript"> function&nbsp;ketQua()&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;/*&nbsp;...&nbsp;*/<br/> }<br/>sach<br/> &nbsp;&nbsp;&nbsp;&nbsp;.then(<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(result)&nbsp;=>&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(result);<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ketQua();<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;&nbsp;&nbsp;&nbsp;).catch(<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(error)&nbsp;=>&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(error);<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ketQua();<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;&nbsp;&nbsp;&nbsp;);<br/></code></pre>
+                  <p class="mt-2">
+                    Như bạn thấy thì hai phương thức <code>catch</code> và <code>then</code> đều gọi hàm <code>ketQua()</code>.
+                    Do đó chúng ta có thể sử dụng <code>finally</code> để giảm sự lặp lại bằng đoạn code như sau:
+                  </p>
+                  <pre><code class="javascript"> sach<br/> &nbsp;&nbsp;.then(result => console.log(result))<br/> &nbsp;&nbsp;.catch(error => console.log(error));<br/> &nbsp;&nbsp;.finally(() => ketQua());</code></pre>
                 </li>
               </ul>
             </p>
 
             <div class="row">
               <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">Class Expression (Biểu Thức Class)</h3>
+                <h3 class="text-primary ml-4 title-article-size"> Promise Chaining Trong Javascript </h3>
               </div>
             </div>
             <p>
-              Giống như hàm thì class có thể được định nghĩa bên trong một biểu thức khác, hay sử dụng trong một khai
-              báo biến
-              để chuyển nó vào hàm như là một tham số... Để hiểu rõ hơn bạn xem đoạn code sau nhé:
+              Nãy giờ thì chúng ta chỉ học các định nghĩa và phương thức của nó. Phần này chúng ta tìm hiểu 
+              về <b>promise chain</b> dùng để xử lý bắt đồng bộ trong Javascript giống như <b>callback function</b> đã làm được. Bây giờ bạn cùng mình cùng tìm hiểu qua 
+              ví dụ để nắm rõ hơn nhé.
             </p>
             <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
+              Đầu tiên chúng ta sẽ tạo một <code>promise</code> với trạng thái hoàn thành và trả về giá trị là 10 sau 2s.
+              Trong đoạn code mình sẽ dùng hàm <code>setTimeout</code> để mô phỏng sự bất đồng bộ từ đó giúp bạn thấy được cách xử lý thông qua <code>promise</code>.
+              Để dễ hình dung hơn bạn xem đoạn code sau nhé
+              :
             </p>
-            <pre><code class="javascript"> let KhachHang = class { <br/> &nbsp;&nbsp;xinChao() {<br/> &nbsp;&nbsp;&nbsp;&nbsp;console.log("Xin chào các bạn");<br/> &nbsp;&nbsp;}<br/> }<br/><br/> /*Tạo object mới từ biến KhachHang*/<br/> let an = new KhachHang();<br/> an.xinChao();</code></pre>
+            <pre><code class="javascript"> let doiTuongPromise = new Promise((resolve, rejects) => {<br/> &nbsp;&nbsp;setTimeout(() => {<br/> &nbsp;&nbsp;&nbsp;&nbsp;resolve(8);<br/> &nbsp;&nbsp;}, 2000);<br/> })</code></pre>
+         
             <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590481528/Class-Trong-Javascript/khai-bao-class-trong-bien_y4ikjh.png"
-              alt="Khai báo class trong biến">
-
-            <p class="mt-4">
-              Chúng ta cũng có thể <b>khai báo một class và trả nó về từ một hàm</b> trong javascript .
+              Sau đó chúng ta sử dụng phương thức <code>then()</code> để gọi hàm xử lý khi  <code>doiTuongPromise</code>
+              trả về trạng thái thành công. Trong hàm đó thì chúng ta sẽ lấy kết quả  của <code>doiTuongPromise</code> cộng thêm cho 10.
               Để hiểu rõ hơn bạn xem đoạn code sau nhé:
             </p>
+            <pre><code class="javascript"> doiTuongPromise.then((ketQua) => {<br/> &nbsp;&nbsp;console.log(ketQua);<br/> &nbsp;&nbsp;return ketQua + 10;<br/> });</code></pre>
+
+            <p>
+             Phương thức <code>then</code> thì sẽ trả về một đối tượng <code>promise</code> mới với giá trị là kết quả trả về khi thực hiện thành công.<br/>
+             Do đó bạn có thể sử dụng nhiều phương thức <code>then</code> liên tiếp với nhau như đoạn code sau đây:
+            </p>
             <p>
               <mark class="p-1"><b>Đoạn Code:</b></mark>
             </p>
-            <pre><code class="javascript"> function TaoClass (ten) { <br/> &nbsp;&nbsp; return class {<br/> &nbsp;&nbsp;&nbsp;&nbsp;xinChao() {<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log("Xin chào " + ten);<br/> &nbsp;&nbsp;&nbsp;&nbsp;};<br/> &nbsp;&nbsp;};<br/> }<br/><br/> /*Tạo một class mới*/<br/> let KhachHang = TaoClass("Các Bạn");<br/> let khachHang1 = new KhachHang();<br/> khachHang1.xinChao();</code></pre>
+            <pre><code class="javascript"> let doiTuongPromise = new Promise((resolve, rejects) => {<br/> &nbsp;&nbsp;setTimeout(() => {<br/> &nbsp;&nbsp;&nbsp;&nbsp;resolve(8);<br/> &nbsp;&nbsp;}, 2000);<br/> })<br/><br/> doiTuongPromise.then((ketQua) => {<br/> &nbsp;&nbsp;console.log(ketQua);<br/> &nbsp;&nbsp;return ketQua + 10;<br/> })<br/> .then((ketQua) => {<br/> &nbsp;&nbsp;console.log(ketQua);<br/> &nbsp;&nbsp;return ketQua + 20;<br/> })</code></pre>
             <p class="mt-4">
               <mark class="p-1"><b>Kết Quả:</b></mark>
             </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590483587/Class-Trong-Javascript/tra-ve-class-tu-ham_fq4xi4.png"
-              alt="Trả về Class từ hàm">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590740670/Promise-Javascript/goi-then-nhieu-lan-trong-promise-chaining_yfmjfj.png"
+              alt="Gọi then nhiều lần trong promise javascript">
             <p class="mt-4">
-              Với cách tạo trên thì bạn có thể tùy chỉnh giá trị truyền vào cho phương thức <code>xinChao()</code> ở
-              trong class.
+              Ví dụ trên chính là minh họa cho <b>promise chain</b>.
+              Các phương thức của <code>Promise</code> như <code>then()</code>, <code>catch()</code>, <code>finally</code>
+              thì sẽ trả về một đối tượng <code>Promise</code>. Do đó chúng ta có thể gọi liên tiếp 
+              các phương thức này theo một cách tuần tự. Và như bạn cũng thấy là ở ví dụ trên chúng ta đã xử lý sự kiện bất đồng bộ trong Javascript 
+              bằng <b>promise chain</b>. Và dưới đây là hình ảnh minh họa mà nó hoạt động là: 
+
             </p>
 
             <div class="row">
-              <div class="col-sm-12 bg-light p-2 mb-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">Getter Và Setter</h3>
+              <div class="col-md-4 col-sm-10"> <img class=" lazyload" width="100"
+                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590741768/Promise-Javascript/dong-chay-promise-trong-js_mjhac4.svg"
+                  alt="Dòng chảy (flow) promise trong javascript">
               </div>
             </div>
+
             <p>
-              Cũng giống như object thì nó cũng có tính chất thuộc tính là <b>get</b> và <b>set</b> dùng để đọc và gán
-              giá trị cho thuộc tính. Bạn có thể tham khảo về hai tính chất này ở
-              <a href="https://www.niemvuilaptrinh.com/article/Thiet-Lap-Thuoc-Tinh-Object-Trong-Javascript"
-                title="Get and Set Trong JS">đây nhé</a>.
-              Bây giờ để dễ hình dung thì chúng ta sẽ đi vào ví dụ sau đây:
+              Nếu bạn gọi các phương thức <code>then()</code> một cách độc lập thì chúng ta sẽ <b>không thể truyền kết quả</b>
+              từ phương thức này sang phương thức khác vì nó không có mối quan hệ với nhau. Để hiểu rõ hơn bạn xem ví dụ sau đây nhé:
             </p>
-
-
-
-
             <p>
               <mark class="p-1"><b>Đoạn Code:</b></mark>
             </p>
-            <pre><code class="javascript"> class&nbsp;KhachHang&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;constructor(ho,&nbsp;ten)&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.ho&nbsp;=&nbsp;ho;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.ten&nbsp;=&nbsp;ten;<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/> &nbsp;&nbsp;&nbsp;&nbsp;/*Lấy&nbsp;giá&nbsp;trị&nbsp;bằng&nbsp;get*/<br/> &nbsp;&nbsp;&nbsp;&nbsp;get&nbsp;hoTen()&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;this.ho&nbsp;+&nbsp;'&nbsp;'&nbsp;+&nbsp;this.ten;<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;&nbsp;&nbsp;&nbsp;/*Thiết&nbsp;lập&nbsp;giá&nbsp;trị&nbsp;mới&nbsp;bằng&nbsp;set*/<br/> &nbsp;&nbsp;&nbsp;&nbsp;set&nbsp;hoTen(chuoi)&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;hoVaTen&nbsp;=&nbsp;chuoi.split('&nbsp;');<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(hoVaTen.length&nbsp;===&nbsp;2)&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.ho&nbsp;=&nbsp;hoVaTen[0];<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.ten&nbsp;=&nbsp;hoVaTen[1];<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;else&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw&nbsp;'Tên&nbsp;Không&nbsp;Hợp&nbsp;Lệ';<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> }<br/><br/> let&nbsp;an&nbsp;=&nbsp;new&nbsp;KhachHang('Nguyễn',&nbsp;'An');<br/> console.log("Lấy giá trị Họ Tên là " + an.hoTen);<br/> <br/> /*Thiết&nbsp;lập&nbsp;tên&nbsp;mới&nbsp;cho&nbsp;đối&nbsp;tượng*/<br/> an.fullName&nbsp;=&nbsp;'Đỗ&nbsp;Lan';<br/> console.log("Thiết lập giá trị mới Họ Tên là " + an.fullName);</code></pre>
+            <pre><code class="javascript"> let doiTuongPromise = new Promise((resolve, rejects) => {<br/> &nbsp;&nbsp;setTimeout(() => {<br/> &nbsp;&nbsp;&nbsp;&nbsp;resolve(8);<br/> &nbsp;&nbsp;}, 2000);<br/> })<br/><br/> doiTuongPromise.then((ketQua) => {<br/> &nbsp;&nbsp;console.log(ketQua);<br/> &nbsp;&nbsp;return ketQua + 10;<br/> })<br/><br/> doiTuongPromise.then((ketQua) => {<br/> &nbsp;&nbsp;console.log(ketQua);<br/> &nbsp;&nbsp;return ketQua + 20;<br/> })</code></pre>
             <p class="mt-4">
               <mark class="p-1"><b>Kết Quả:</b></mark>
             </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590485003/Class-Trong-Javascript/thuoc-tinh-get-va-set-trong-class_auwunb.png"
-              alt="Thuộc tính gat va set trong class">
-
-            <p class="mt-4">
-              Chúng ta sẽ khởi tạo một class <code>KhachHang</code> có phương thức <code>hoTen</code> như là một getter
-              và setter.<br />
-              Với phương thức getter sẽ trả về giá trị của khách hàng bằng việc nối hai tham số là <code>ho</code> và
-              <code>ten</code>.
-              <br />
-              Phương thức setter sẽ xử lý chuỗi được truyền vào và gán hai giá trị được tách từ chuỗi vào cho thuộc tính
-              <code>ho</code> và <code>ten</code>.
-              Sau đó trả về kết quả họ và tên của khách hàng.
-            </p>
-
-
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">Thiết Lập Tên Phương Thức Bằng Dấu <code>[...]</code>
-                </h3>
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590742589/Promise-Javascript/goi-then-doc-lap-trong-promise_llmlym.png"
+              alt="Gọi then độc lập trong promise javascript">
+              <p class="mt-4">
+                Như bạn thấy thì kết quả sẽ không thay đổi khi chúng ta gọi các phương thức <code>then()</code> một cách độc lập.
+                Để dễ hình dung bạn xem hình ảnh mô tả cách nó hoạt động sau nhé:
+              </p>
+              <div class="row">
+                <div class="col-md-6 col-sm-12"> <img class=" lazyload" width="100"
+                    data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590742837/Promise-Javascript/goi-then-doc-lap_qwqbxg.svg"
+                    alt="Gọi then độc lập promise trong javascript">
+                </div>
               </div>
-            </div>
-            <p>
-              Bạn có thiết lập tên cho phương thức bằng cách nối các chuỗi lại với nhau thông qua dấu <code>[]</code>.
-              Để hiểu rõ hơn bạn xem đoạn code sau nhé:
-            </p>
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> class KhachHang { <br/> &nbsp;&nbsp;['xin' + 'Chao']() {<br/> &nbsp;&nbsp;&nbsp;&nbsp;console.log("Xin Chào các bạn");<br/> &nbsp;&nbsp;}<br/> }<br/><br/> /*Tạo object mới từ class*/<br/> let khachHang = new KhachHang();<br/> khachHang.xinChao();</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590494285/Class-Trong-Javascript/thiet-lap-ten-phuong-thuc-cho-class_trgrd1.png"
-              alt="Thiết lập tên phương thức trong class">
-
-
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size"> Kế Thừa Trong Class Bằng extends</code></h3>
-              </div>
-            </div>
-            <p>
-              Trước khi ES6 được phát hành thì một trong những cách được sử dụng nhiều nhất để kế thừa
-              từ các đối tượng khác là <b>prototypal inheritance</b> (kế thừa nguyên mẫu). Bạn có thể tham
-              khảo phương thức này ở <a
-                href="https://www.niemvuilaptrinh.com/article/Tim-Hieu-Prototype-Trong-Javascript"
-                title="prototypal inheritance">đây nhé</a>.<br />
-              Trong phần này thì chúng ta sẽ dùng cách khác đó là sử dụng từ khóa <code>extend</code> để kế thừa phương
-              thức, constructor từ các
-              class khác.
-              Đầu tiên chúng ta sẽ đi vào tạo một class tên là <code>DongVat</code> với các phương thức <code>an</code>,
-              <code>ngu</code>:
-            </p>
-            <h5 class="text-primary">Class Động Vật:</h5>
-            <pre><code class="javascript"> class DongVat { <br/> &nbsp;&nbsp;constructor(ten) {<br/> &nbsp;&nbsp;&nbsp;&nbsp;this.ten = ten;<br/> &nbsp;&nbsp;}<br/> &nbsp;&nbsp;an() {<br/> &nbsp;&nbsp;&nbsp;&nbsp;console.log(`${this.ten} đang ăn.`);<br/> &nbsp;&nbsp;}<br/> &nbsp;&nbsp;ngu() {<br/> &nbsp;&nbsp;&nbsp;&nbsp;console.log(`${this.ten} đang ngủ.`);<br/>  &nbsp;&nbsp;}<br/> } </code></pre>
-
-            <p class="mt-2"></p>Bây giờ chúng ta sẽ tạo một class với tên là <code>meo</code> và nó được kế thừa các
-            phương thức từ class
-            <code>DongVat</code> bằng cách sử dụng từ khóa <code>extends</code>.</p>
-            <h5 class="text-primary">Class Mèo:</h5>
-            <pre><code class="javascript"> class Meo extends DongVat {<br/> &nbsp;&nbsp;nhay() {<br/> &nbsp;&nbsp;&nbsp;&nbsp;console.log(`${this.ten} đang nhảy.`);<br/> &nbsp;&nbsp;}<br/> }<br/> let meoDen = new Meo("Mèo Đen");<br/> meoDen.ngu();<br/> meoDen.nhay();</code></pre>
-            <p class="mt-2">
-              <b>Extends</b> (mở rộng) trong trường hợp này bạn có thể hiểu là lớp con sẽ được <b>mở rộng</b> từ lớp cha
-              bằng cách tổng hợp các phương thức từ lớp con và lớp cha. <br />
-              Và khi bạn muốn kế thừa một phương thức thì có thể thực hiện theo cú pháp sau: <code>class (Lớp Con)
-                extends (Lớp Cha)</code>
-            </p>
-            <p>
-              Bây giờ chúng ta sẽ đi kết hợp hai đoạn code trên để xem kết quả sao nhé:
-            </p>
-
-
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> class DongVat { <br/> &nbsp;&nbsp;constructor(ten) {<br/> &nbsp;&nbsp;&nbsp;&nbsp;this.ten = ten;<br/> &nbsp;&nbsp;}<br/> &nbsp;&nbsp;an() {<br/> &nbsp;&nbsp;&nbsp;&nbsp;console.log(`${this.ten} đang ăn.`);<br/> &nbsp;&nbsp;}<br/> &nbsp;&nbsp;ngu() {<br/> &nbsp;&nbsp;&nbsp;&nbsp;console.log(`${this.ten} đang ngủ.`);<br/>  &nbsp;&nbsp;}<br/> }<br/><br/> class Meo extends DongVat {<br/> &nbsp;&nbsp;nhay() {<br/> &nbsp;&nbsp;&nbsp;&nbsp;console.log(`${this.ten} đang nhảy.`);<br/> &nbsp;&nbsp;}<br/> }<br/> let meoDen = new Meo("Mèo Đen");<br/> meoDen.ngu(); /*Mèo Đen đang ngủ.*/<br/> meoDen.nhay(); /*Mèo Đen đang nhảy.*/</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590503352/Class-Trong-Javascript/tu-khoa-extends-trong-class_dyfun7.png"
-              alt="Từ khóa extends trong class">
-            <p class="mt-4">
-              Bạn có thể hình dung cách nó chạy như sau:
-              <ul>
-                <li>
-                  Đầu tiên ta sẽ tạo một object là <code>meoDen</code> dựa trên class <code>Meo</code>.
-                </li>
-                <li>
-                  Khi chúng ta gọi các phương thức <code>ngu</code> và <code>nhay</code> của đối tượng, thì trước tiên
-                  nó sẽ tìm trong prototype của đối tượng đó là <b>MeoDen.prototype</b> (Chỉ có phương thức
-                  <code>nhay</code>).
-                </li>
-                <li>
-                  Sau đó nó truy vấn ngược lên prototype của lớp cha là <code>DongVat.prototype</code>, tìm và trả về
-                  phương thức
-                  <code>ngu</code> còn thiếu.
-                </li>
-              </ul>
-            </p>
-
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mb-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size"> Sử Dụng Từ Khóa super Trong Class</code></h3>
-              </div>
-            </div>
-            <p>
-              Nếu bạn cần <b>điều chỉnh hay mở rộng</b> hàm của lớp cha nhưng không muốn thay thế nó hoàn toàn thì ta có
-              thể sử dụng
-              <code>super</code> để giải quyết vấn đề trên. Và nó cũng có thể gọi <code>constructor</code> của lớp cha
-              để sử dụng trong lớp con.
-              Bây giờ chúng ta sẽ xem cú pháp của nó sau nhé:
-              <ul>
-                <li><b>super.(Phương thức)(...)</b> dùng để gọi phương thức của lớp cha.</li>
-                <li><b>super(...)</b> dùng để gọi constructor của lớp cha.</li>
-              </ul>
-            </p>
-
-            <h4 class="text-white bg-secondary p-2 shadow title-article-size rounded">
-              <b>Gọi phương thức trong lớp cha:</b>
-            </h4>
-            <p>
-              Bây giờ chúng ta sẽ đi vào cách để gọi một phương thức cha trong phương thức con bằng <code>super</code>
-              thông qua ví dụ dưới đây nhé:
-            </p>
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> class DongVat { <br/> &nbsp;&nbsp;constructor(ten) {<br/> &nbsp;&nbsp;&nbsp;&nbsp;this.ten = ten;<br/> &nbsp;&nbsp;}<br/> &nbsp;&nbsp;an() {<br/> &nbsp;&nbsp;&nbsp;&nbsp;console.log(`${this.ten} đang ăn.`);<br/> &nbsp;&nbsp;}<br/> &nbsp;&nbsp;ngu() {<br/> &nbsp;&nbsp;&nbsp;&nbsp;console.log(`${this.ten} đang ngủ.`);<br/>  &nbsp;&nbsp;}<br/> }<br/><br/> class Meo extends DongVat {<br/> &nbsp;&nbsp;uong() {<br/> &nbsp;&nbsp;&nbsp;&nbsp;console.log(`${this.ten} đang uống.`);<br/> &nbsp;&nbsp;} <br/>&nbsp;&nbsp; an() {<br/> &nbsp;&nbsp;&nbsp;&nbsp;/*Gọi phương thức từ lớp cha*/<br/> &nbsp;&nbsp;&nbsp;&nbsp;super.an();<br/> &nbsp;&nbsp;&nbsp;&nbsp;/*Gọi phương thức trong lớp con*/<br/> &nbsp;&nbsp;&nbsp;&nbsp;this.uong();<br/> &nbsp;&nbsp;}<br/> }<br/> let meoDen = new Meo("Mèo Đen");<br/> meoDen.an();</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590506477/Class-Trong-Javascript/goi-phuong-thuc-trong-lop-cha-bang-super_xsuggs.png"
-              alt="Gọi Phương thức trong lớp cha bằng super">
-
-            <h4 class="text-white bg-secondary p-2 mt-4 shadow title-article-size rounded">
-              <b>Gọi constructor từ lớp cha:</b>
-            </h4>
-            <p>
-              Khi bạn thiết lập lớp con <code>Meo</code> với từ khóa <code>extends</code> thì <b>constructor</b> của nó
-              sẽ được thừa hưởng từ lớp cha <code>DongVat</code>
-              . Do đó nó không sở hữu <b>constructor</b> riêng cho mình và sẽ được tự động tạo ra như sau:
-            </p>
-            <pre><code class="javascript"> class Meo extends DongVat {<br/> &nbsp;&nbsp;constructor(...args) {<br/> &nbsp;&nbsp;&nbsp;&nbsp; super(...args);<br/> &nbsp;&nbsp;}<br/> }</code></pre>
-            <p class="mt-4">
-              Bây giờ chúng ta sẽ đi vào tìm hiểu cách tự tạo một <b>constructor</b> riêng cho class <code>Meo</code>
-              bằng cách định nghĩa lại <b>constructor</b> của lớp cha (<code>Animal</code>) thông qua từ khóa
-              <code>super</code> nhé:
-            </p>
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> class DongVat { <br/> &nbsp;&nbsp;constructor(ten) {<br/> &nbsp;&nbsp;&nbsp;&nbsp;this.ten = ten;<br/> &nbsp;&nbsp;}<br/> &nbsp;&nbsp;an() {<br/> &nbsp;&nbsp;&nbsp;&nbsp;console.log(`${this.ten} đang ăn.`);<br/> &nbsp;&nbsp;}<br/> &nbsp;&nbsp;ngu() {<br/> &nbsp;&nbsp;&nbsp;&nbsp;console.log(`${this.ten} đang ngủ.`);<br/>  &nbsp;&nbsp;}<br/> }<br/><br/> class Meo extends DongVat {<br/> &nbsp;&nbsp;constructor(ten, mauSac){<br/> &nbsp;&nbsp;&nbsp;&nbsp;/*Thừa hưởng thuộc tính từ lớp cha*/<br/> &nbsp;&nbsp;&nbsp;&nbsp;super(ten);<br/> &nbsp;&nbsp;&nbsp;&nbsp;/*Xác định thuộc tính con*/<br/> &nbsp;&nbsp;&nbsp;&nbsp;this.mauSac = mauSac;<br/> &nbsp;&nbsp;}<br/> &nbsp;&nbsp;uong() {<br/> &nbsp;&nbsp;&nbsp;&nbsp;console.log(`${this.ten} ${this.mauSac} đang uống nước.`);<br/> &nbsp;&nbsp;} <br/>}<br/> let meoDen = new Meo("Mèo", "Đen");<br/> meoDen.uong();</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590547718/Class-Trong-Javascript/thua-ke-constructor-tu-class_lfigu8.png"
-              alt="Thừa kế constructor từ class">
-
-            <p class="mt-4">
-              Khi bạn sử dụng <code>extends</code> thì class <code>DongVat</code> được gọi là <i>baseclass</i> (Lớp cha)
-              và class <code>Meo</code> được gọi là <i>derived class</i> (Lớp con). Javascript sẽ yêu cầu
-              <i>derived class</i> (lớp con) muốn sở hữu <b>constructor riêng</b> thì phải gọi <code>super()</code>
-              trước khi sử dụng <code>this</code>.
-              <br />Để dễ hình dung thì cũng như ví dụ trên mình sẽ bỏ đi <code>super</code> để xem kết quả sao nhé:
-            </p>
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> class DongVat { <br/> &nbsp;&nbsp;constructor(ten) {<br/> &nbsp;&nbsp;&nbsp;&nbsp;this.ten = ten;<br/> &nbsp;&nbsp;}<br/> &nbsp;&nbsp;an() {<br/> &nbsp;&nbsp;&nbsp;&nbsp;console.log(`${this.ten} đang ăn.`);<br/> &nbsp;&nbsp;}<br/> &nbsp;&nbsp;ngu() {<br/> &nbsp;&nbsp;&nbsp;&nbsp;console.log(`${this.ten} đang ngủ.`);<br/>  &nbsp;&nbsp;}<br/> }<br/><br/> class Meo extends DongVat {<br/> &nbsp;&nbsp;constructor(ten, mauSac){<br/> &nbsp;&nbsp;&nbsp;&nbsp;/*Sẽ gây ra lỗi khi ta không sử dụng từ khóa super*/<br/> &nbsp;&nbsp;&nbsp;&nbsp;this.ten = ten;<br/> &nbsp;&nbsp;&nbsp;&nbsp;/*Xác định thuộc tính con*/<br/> &nbsp;&nbsp;&nbsp;&nbsp;this.mauSac = mauSac;<br/> &nbsp;&nbsp;}<br/> &nbsp;&nbsp;uong() {<br/> &nbsp;&nbsp;&nbsp;&nbsp;console.log(`${this.ten} ${this.mauSac} đang uống nước.`);<br/> &nbsp;&nbsp;} <br/>}<br/> let meoDen = new Meo("Mèo", "Đen");<br/> meoDen.uong();</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590549599/Class-Trong-Javascript/loi-voi-tu-khoa-super-trong-class_x7i6ie.png"
-              alt="Lỗi với từ khóa super trong class">
-
-
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size"> Static Method (Phương thức tĩnh)</code></h3>
-              </div>
-            </div>
-            <p>
-              <b>Static method</b> sẽ được gọi mà không cần phải tạo mới đối tượng từ class đó và nó sẽ không sử dụng
-              được khi lớp đó đã khởi tạo. Hay nói một cách dễ hiểu hơn là <b>static method</b> sẽ không có quyền truy
-              cập vào
-              dữ liệu được lưu trữ trong một đối tượng xác định.
-              <br />
-              Để dễ hình dung chúng ta sẽ đi vào ví dụ cụ thể sau đây nhé:
-            </p>
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> class KhachHang { <br/> &nbsp;&nbsp;constructor(ten) {<br/> &nbsp;&nbsp;&nbsp;&nbsp;this.ten = ten;<br/> &nbsp;&nbsp;}<br/> &nbsp;&nbsp;static xinChao() {<br/> &nbsp;&nbsp;&nbsp;&nbsp;console.log("Xin Chào Các Bạn!");<br/> &nbsp;&nbsp;}<br/> }<br/><br/> /*Gọi trực tiếp không cần khởi tạo đối tượng*/<br/> KhachHang.xinChao();<br/> /*Không sử dụng được khi lớp đó đã khởi tạo*/<br/> let an = new KhachHang("An");<br/> an.xinChao();</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590551308/Class-Trong-Javascript/su-dung-method-static-trong-class_msmavs.png"
-              alt="Sử dụng method static trong class">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -537,7 +379,7 @@
             <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
 
 
-            <p>Qua đây mình mong bài viết sẽ giúp bạn hiểu được <b>khái niệm cũng như cách sử dụng class</b>
+            <p>Qua đây mình mong bài viết sẽ giúp bạn hiểu được <b>khái niệm cũng như cách sử dụng promise</b>
               trong ngôn ngữ
               Javascript và
               nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất
