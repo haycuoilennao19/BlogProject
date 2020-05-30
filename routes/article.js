@@ -33,6 +33,7 @@ router.get("/css", function(req, res) {
     var perpage = 6;
     var page = req.params.page || 1
     var category = "css"
+    
     Blog
         .find({category:"CSS"})
         .sort({_id: -1})
@@ -49,16 +50,17 @@ router.get("/css", function(req, res) {
 
 router.get('/css/:page', function(req, res, next) {
     var perpage = 6;
-    var page = req.params.page || 1
+    var page = req.params.page || 1;
+    var category = "css"
     Blog
         .find({category:"CSS"})
         .sort({_id: -1})
         .skip((perpage * page) - perpage)
         .limit(perpage)
         .exec(function(err, products) {
-            Blog.countDocuments().exec(function(err, count) {
+            Blog.countDocuments({category:"CSS"}).exec(function(err, count) {
                 if(err) return next(err)
-                res.render('products',{posts: products, current:parseInt(page), pages: Math.ceil(count / perpage)})
+                res.render('products-category',{posts: products, current:parseInt(page), pages: Math.ceil(count / perpage), category: category})
             })
         })
 })
@@ -81,22 +83,23 @@ router.get("/html", function(req, res) {
 })
 
 
+
 router.get('/html/:page', function(req, res, next) {
     var perpage = 6;
-    var page = req.params.page || 1
+    var page = req.params.page || 1;
+    var category = "html"
     Blog
         .find({category:"HTML"})
         .sort({_id: -1})
         .skip((perpage * page) - perpage)
         .limit(perpage)
         .exec(function(err, products) {
-            Blog.countDocuments().exec(function(err, count) {
+            Blog.countDocuments({category:"HTML"}).exec(function(err, count) {
                 if(err) return next(err)
-                res.render('products',{posts: products, current:parseInt(page), pages: Math.ceil(count / perpage)})
+                res.render('products-category',{posts: products, current:parseInt(page), pages: Math.ceil(count / perpage), category: category})
             })
         })
 })
-
 router.get("/Javascript", function(req, res) {
 
     var perpage = 6;
@@ -116,11 +119,49 @@ router.get("/Javascript", function(req, res) {
 })
 
 
+
+
 router.get('/Javascript/:page', function(req, res, next) {
+    var perpage = 6;
+    var page = req.params.page || 1;
+    var category = "Javascript"
+    Blog
+        .find({category:"Javascript"})
+        .sort({_id: -1})
+        .skip((perpage * page) - perpage)
+        .limit(perpage)
+        .exec(function(err, products) {
+            Blog.countDocuments({category:"Javascript"}).exec(function(err, count) {
+                if(err) return next(err)
+                res.render('products-category',{posts: products, current:parseInt(page), pages: Math.ceil(count / perpage), category: category})
+            })
+        })
+})
+
+router.get("/Resource", function(req, res) {
+
+    var perpage = 6;
+    var page = req.params.page || 1
+    var category = "Resource"
+    Blog
+        .find({category:"Resource"})
+        .sort({_id: -1})
+        .skip((perpage * page) - perpage)
+        .limit(perpage)
+        .exec(function(err, products) {
+            Blog.countDocuments().exec(function(err, count) {
+                if(err) return next(err)
+                res.render('products-category',{posts: products, current:page, pages: Math.ceil(count / perpage), category: category})
+            })
+        })
+})
+
+
+router.get('/Resource/:page', function(req, res, next) {
     var perpage = 6;
     var page = req.params.page || 1
     Blog
-        .find({category:"Javascript"})
+        .find({category:"Resource"})
         .sort({_id: -1})
         .skip((perpage * page) - perpage)
         .limit(perpage)
@@ -131,7 +172,6 @@ router.get('/Javascript/:page', function(req, res, next) {
             })
         })
 })
-
 
 
 router.get("/Bootstrap", function(req, res) {

@@ -45,10 +45,11 @@
   <style>
     /*! * Hover.css (http://ianlunn.github.io/Hover/) * Version: 2.3.2 * Author: Ian Lunn @IanLunn * Author URL: http://ianlunn.co.uk/ * Github: https://github.com/IanLunn/Hover* Hover.css Copyright Ian Lunn 2017. Generated with Sass. */.hvr-underline-from-left { display: inline-block; vertical-align: middle; -webkit-transform: perspective(1px) translateZ(0); transform: perspective(1px) translateZ(0); box-shadow: 0 0 1px transparent; position: relative; overflow: hidden }.hvr-underline-from-left:before { content: ""; position: absolute; z-index: -1; left: 0; right: 100%; bottom: 0; background: #fff; height: 2px; -webkit-transition-property: right; transition-property: right; -webkit-transition-duration: .3s; transition-duration: .3s; -webkit-transition-timing-function: ease-out; transition-timing-function: ease-out }.hvr-underline-from-left:active:before, .hvr-underline-from-left:focus:before, .hvr-underline-from-left:hover:before { right: 0 }.hvr-underline-from-center { display: inline-block; vertical-align: middle; -webkit-transform: perspective(1px) translateZ(0); transform: perspective(1px) translateZ(0); box-shadow: 0 0 1px transparent; position: relative; overflow: hidden }.hvr-underline-from-center:before { content: ""; position: absolute; z-index: -1; left: 51%; right: 51%; bottom: 0; background: #5edfff; height: 2px; -webkit-transition-property: left, right; transition-property: left, right; -webkit-transition-duration: .3s; transition-duration: .3s; -webkit-transition-timing-function: ease-out; transition-timing-function: ease-out }.hvr-underline-from-center:active:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:hover:before { left: 0; right: 0 }.hvr-underline-from-right { display: inline-block; vertical-align: middle; -webkit-transform: perspective(1px) translateZ(0); transform: perspective(1px) translateZ(0); box-shadow: 0 0 1px transparent; position: relative; overflow: hidden }.hvr-underline-from-right:before { content: ""; position: absolute; z-index: -1; left: 100%; right: 0; bottom: 0; background: #2098d1; height: 4px; -webkit-transition-property: left; transition-property: left; -webkit-transition-duration: .3s; transition-duration: .3s; -webkit-transition-timing-function: ease-out; transition-timing-function: ease-out }.hvr-underline-from-right:active:before, .hvr-underline-from-right:focus:before, .hvr-underline-from-right:hover:before { left: 0 }
   </style>
+  <style>/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}</style>
 <style>
   body{font-family:'Open Sans',sans-serif;padding:0!important;margin:0!important;color:#2d132c;box-sizing:border-box}.navbar{transition:all .1s;background-color:transparent!important}.navbar .nav-link{color:#fff!important;font-size:1rem;font-family:'Open Sans',sans-serif}.navbar .nav-link:focus,.navbar .nav-link:hover{color:#fff;text-decoration:none}.navbar .navbar-brand{color:#fff!important}.navbar.active{background:#3e64ff!important;box-shadow:1px 2px 10px rgba(0,0,0,.5)}.navbar.active .nav-link{color:#fff!important}.navbar.active .nav-link:focus,.navbar.active .nav-link:hover{color:#555;text-decoration:none}.navbar.active .navbar-brand{color:#555}@media (max-width:991.98px){.navbar{background:#3e64ff!important}.navbar .nav-link,.navbar .navbar-brand{color:#fff!important;padding:1rem;font-size:1rem}.fa-navicon{color:#fff;font-size:1.5 rem}.fa-navicon:hover{cursor:pointer}}.card-title a{text-decoration:none!important;color:#1b2a49!important}.image-slider{position:relative;font-family:Montserrat,sans-serif;padding:0!important;margin:0!important}.content-header{font-size:2rem!important}.content-image{height:400px!important;display:table;background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590374006/library-438389_1920_r4octh.jpg);width:100%;height:600px;background-size:cover!important;background-position:center;overflow:hidden}.content-image::after{width:100%;height:600px;background-color:#2d132c;z-index:3}.content{z-index:2;color:#fff;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}.blockquote-footer{font-size:1.5rem!important}.card-header{padding:0!important}.card{margin:2rem!important;box-sizing:border-box!important}.button-article{margin:0!important}.card-body{padding-top:0!important}.card-title{font-family:Montserrat,sans-serif;font-weight:600;font-size:1.8rem}.btn-reading{background-color:#000;color:#fff}.btn-reading:hover{background-color:#e65100!important;color:#fff!important}.footer{background-color:#1b2a49;padding:4rem;font-family:Montserrat,sans-serif;color:#c9d1d3}.icon-footer{width:50px;height:50px;border:1px solid #c9d1d3;font-size:1.5rem!important;margin-right:2rem;text-align:center;line-height:50px!important;border-radius:50%}.icon-footer:hover{background-color:#c9d1d3;color:#1b2a49;cursor:pointer}.form-title{color:#1b2a49}.form-login{border:2px solid #ccc}.header-text{font-family:Montserrat,sans-serif;font-weight:700}.header-content{font-family:Montserrat,sans-serif;font-size:2rem;font-weight:600;border-top:2px solid #fe5f55;border-bottom:2px solid #fe5f55;padding:.5rem}.CSS{background-color:#0091ea!important;border-color:#0091ea!important}.HTML{background-color:#e65100!important;border-color:#e65100!important}.card{margin:1rem!important}.card-header-search{font-size:1.5rem;background-color:#fff!important;font-weight:600}.form-seacrh .form-control-underlined{border-width:0;border-bottom-width:1px;border-radius:0;padding-left:0}.form-seacrh .form-control::placeholder{border-width:0;border-bottom-width:1px;border-radius:0;padding-left:0}.form-seacrh .form-control:focus{box-shadow:none}.card-search{border:none!important}.card-body-search{padding:0!important}.card-header-category{background-color:#fff!important;font-size:1.5rem;font-weight:600}.text-email-subscribe{border-left:3.5px solid #5f6769;padding-left:.5rem;margin-left:.5rem}#mc_embed_signup{font-family:Roboto,sans-serif!important}.label-email{font-size:1rem!important}#mc_embed_signup .mc-field-group input{padding:12px 0!important}#mc_embed_signup .button{background-color:#5f6769!important}.mce_inline_error{margin-bottom:0!important;padding-bottom:0!important;color:#fe5f55!important}.response{font-size:1rem;font-weight:400!important;margin:0!important;padding:0!important;margin-bottom:.5rem!important}.send-email-header{background:linear-gradient(to right,#f2709c,#ff9472)!important;width:100%;height:100%;background-size:cover}.send-email-header-text{line-height:2rem!important;text-align:center;font-size:1.2rem}.send-email-content{padding:3rem!important}.send-email-content label{color:#6ba8a9;font-size:1rem}.input-style{border-radius:50px!important;padding:12px 15px 12px 15px!important;width:100%;box-sizing:border-box;border:none!important;border:1px solid #f3e5f5!important;font-size:16px!important;font-weight:400}.text-area-style{border-radius:25px!important}.fb-page{width:500!important}.icon-social{text-decoration:none!important;color:#c9d1d3!important}button{position:relative;display:inline-block;cursor:pointer;outline:0;border:0;vertical-align:middle;text-decoration:none;background:0 0;padding:0;font-size:inherit;font-family:inherit}button.learn-more{width:12rem;height:auto}button.learn-more .circle{transition:all .45s cubic-bezier(.65,0,.076,1);position:relative;display:block;margin:0;width:3rem;height:3rem;background:#282936;border-radius:1.625rem}button.learn-more .circle .icon{transition:all .45s cubic-bezier(.65,0,.076,1);position:absolute;top:0;bottom:0;margin:auto;background:#fff}button.learn-more .circle .icon.arrow{transition:all .45s cubic-bezier(.65,0,.076,1);left:.625rem;width:1.125rem;height:.125rem;background:0 0}button.learn-more .circle .icon.arrow::before{position:absolute;content:'';top:-.25rem;right:.0625rem;width:.625rem;height:.625rem;border-top:.125rem solid #fff;border-right:.125rem solid #fff;transform:rotate(45deg)}button.learn-more .button-text{transition:all .45s cubic-bezier(.65,0,.076,1);position:absolute;top:0;left:0;right:0;bottom:0;padding:.75rem 0;margin:0 0 0 1.85rem;color:#1b2a49;font-weight:700;line-height:1.6;text-align:center}button:hover .circle{width:100%}button:hover .circle .icon.arrow{background:#fff;transform:translate(1rem,0)}button:hover .button-text{color:#fff;cursor:pointer!important}.button-text:hover{cursor:pointer!important}:root{--progress-bar-height:4px;--progress-bar-color:gainsboro;--progress-bar-value-color:dodgerblue;--progress-bar-value:20%}article{position:relative;width:100%}.article-title{position:sticky;top:5rem}img{width:100%}.progress-wrapper{position:relative}.progress-label{position:absolute;right:0;bottom:0;font-size:16px;line-height:18px;color:#1e90ff}progress{appearance:none;position:absolute;width:100%;height:var(--progress-bar-height);background-color:var(--progress-bar-color);border:none}progress::-moz-progress-bar{background-color:var(--progress-bar-value-color)}progress::-webkit-progress-bar{background-color:var(--progress-bar-color)}progress::-webkit-progress-value{background-color:var(--progress-bar-value-color)}progress::-ms-fill{background-color:var(--progress-bar-value-color)}.page-link{padding:1rem;background-color:#3e64ff!important;box-shadow:0 1px 5px rgba(0,0,0,.15)!important;color:#fff!important}.social-meadia-icon{margin:0;padding:0;display:flex}.social-meadia-icon-item{list-style:none}.social-meadia-icon-item a{position:relative;width:60px;height:60px;display:block;text-align:center;margin:0 10px;border-radius:50%;padding:6px;box-sizing:border-box;text-decoration:none;box-shadow:0 10px 15px rgba(0,0,0,.3);background:linear-gradient(0deg,#ddd,#fff);transition:.5s}.social-meadia-icon-item a:hover{box-shadow:0 2px 5px rgba(0,0,0,.3)!important}.social-meadia-icon-item a .fa{width:100%;height:100%;display:block;background:linear-gradient(0deg,#fff,#ddd);border-radius:50%;line-height:calc(60px - 12px);font-size:24px;color:#262626;transition:.5s}.social-meadia-icon-item:nth-child(1) a:hover .fa{color:#3b5998}.social-meadia-icon-item:nth-child(2) a:hover .fa{color:#00aced}.social-meadia-icon-item:nth-child(3) a:hover .fa{color:#dd4b39}.social-meadia-icon-item:nth-child(4) a:hover .fa{color:#007bb6}.social-meadia-icon-item:nth-child(5) a:hover .fa{color:#e4405f}a:hover{cursor:pointer!important}.mailtoui-modal{background-color:#5edfff;color:#fff}.mailtoui-modal-head{background-color:#21262c}.mailtoui-modal-title{color:#fff}.mailtoui-modal-close:focus,.mailtoui-modal-close:hover{color:#fff}.mailtoui-modal-body{background-color:#3e64ff}.mailtoui-button:focus .mailtoui-button-content{background-color:#3e64ff;color:#fff}.mailtoui-button-content,.mailtoui-button-copy{background-color:#3e64ff;color:#fff}.mailtoui-button-content:focus,.mailtoui-button-content:hover,.mailtoui-button-copy:focus,.mailtoui-button-copy:hover{background-color:#fff;color:#3e64ff}.mailtoui-button-copy-clicked,.mailtoui-button-copy-clicked:focus,.mailtoui-button-copy-clicked:hover{background-color:#1f9d55;color:#fff}.mailtoui-email-address{background-color:#ffff;color:#21262c}.content-detail-text{line-height:2rem!important}.circle{counter-reset:list-counter!important;list-style:none;float:left}.fa-arrow-right{padding:.8rem!important}.text-content-article{line-height:1.8rem!important}@media (max-width:991.98px){.progress-label{display:none}}.dropdown-menu{padding:0!important}.dropdown-item:hover{background-color:#5edfff!important;color:#fff}.card-row-article{width:32%}@media screen and (min-width:1200px){.card-row-article{width:30%}}@media screen and (min-width:768px) and (max-width:1200px){.card-row-article{width:45%;font-size:95%}.card-title{font-size:1.6rem!important}.title-article-size{font-size:1.5rem!important}}@media screen and (max-width:768px){.card-row-article{width:100%;font-size:90%}.title-article-size{font-size:1.2rem!important}.card-title{font-size:1.4rem!important}}.about-content{padding:4rem 0;font-family:Roboto,sans-serif;background:#70e1f5;background:-webkit-linear-gradient(to right,#ffd194,#70e1f5);background:linear-gradient(to right,#ffd194,#70e1f5);background-size:cover}.noi_dung_1{margin-top:2.5rem!important;width:100%;padding:30px;background:#fff;box-sizing:border-box;border-radius:10px;box-shadow:0 15px 50px rgba(0,0,0 .2)}.hinh_anh_about{width:500px;height:500px;background:url(/images/IMG_1347_loixz1.jpg);transform:rotate(-30deg);border-radius:50%;float:left;shape-outside:circle();margin:20px 20px 20px 0}pre{border-radius:25px;font-family:'Open Sans',sans-serif!important;-webkit-box-shadow:2px 2px 2px 2px #ccc;-moz-box-shadow:2px 2px 2px 2px #ccc;box-shadow:2px 2px 2px 2px #ccc}@media screen and (max-width:768px){pre{border-radius:0}}.bg-bootstrap-color{background-color:#563d7c!important;color:#fff}.bg-bootstrap-color:hover{color:#fff}
 </style>
-<style>/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}</style>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta name="google-site-verification" content="SXEFa5YhgCrmAOJhBwsuDms_fUALYxrM8ZUql8KHgNM" />
 </head>
@@ -57,51 +58,58 @@
 
 
   <!--Navbar-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top p-2">
-    <a class="navbar-brand" title="Niềm Vui Lập Trình" href="/">Niềm Vui Lập Trình</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span><i class="fa fa-navicon"></i></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link mr-5 hvr-underline-from-left" title="Trang Chủ" href="/">Trang Chủ <span
-              class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item dropdown ">
-          <a class="nav-link dropdown-toggle  mr-5 hvr-underline-from-left" data-toggle="dropdown" href="#"
-            role="button" aria-haspopup="true" aria-expanded="false" title="Xem Khóa Học">Ngôn Ngữ</a>
-          <div class="dropdown-menu mt-2">
-            <a class="dropdown-item" title="Hướng Dẫn Về HTML" href="/article/html">HTML</a>
-            <a class="dropdown-item" title="Hướng Dẫn Về CSS" href="/article/css">CSS</a>
-            <a class="dropdown-item" title="Hướng Dẫn Về Javascript" href="/article/Javascript">Javascript</a>
-            <a class="dropdown-item" title="Hướng Dẫn Về Bootstrap 4" href="/article/Bootstrap">Hướng Dẫn Bootstrap4</a>
-            <a class="dropdown-item" title="Hướng Dẫn Về Javascript" href="/article/Hoc-Javascript">Hướng Dẫn Học
-              Javascript</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link hvr-underline-from-left mr-5" title="Giới Thiệu Bản Thân" href="/about">Giới Thiệu</a>
-        </li>
-
-
-
+  <div class="row">
+    <div class="col-sm-12">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top p-2">
+        <a class="navbar-brand" title="Niềm Vui Lập Trình" href="/">Niềm Vui Lập Trình</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span><i class="fa fa-navicon"></i></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link mr-5 hvr-underline-from-left" title="Trang Chủ" href="/">Trang Chủ <span
+                  class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle  mr-5 hvr-underline-from-left" data-toggle="dropdown" href="#"
+                role="button" aria-haspopup="true" aria-expanded="false" title="Xem Khóa Học">Ngôn Ngữ</a>
+              <div class="dropdown-menu mt-2">
+                <a class="dropdown-item" title="Hướng Dẫn Về HTML" href="/article/html">HTML</a>
+                <a class="dropdown-item" title="Hướng Dẫn Về CSS" href="/article/css">CSS</a>
+                <a class="dropdown-item" title="Hướng Dẫn Về Javascript" href="/article/Javascript">Javascript</a>
+                <a class="dropdown-item" title="Hướng Dẫn Về Bootstrap 4" href="/article/Bootstrap">Hướng Dẫn Bootstrap4</a>
+                <a class="dropdown-item" title="Hướng Dẫn Về Javascript" href="/article/Hoc-Javascript">Hướng Dẫn Học
+                  Javascript</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hvr-underline-from-left mr-5" title="Giới Thiệu Bản Thân" href="/about">Giới Thiệu</a>
+            </li>
+    
+    
+    
+        </div>
+      </nav>
     </div>
-  </nav>
+  </div>
+
   <!--Content-->
   <div class="jumbotron jumbotron-fluid image-slider">
+    <div class="container-fluid">
     <div class="row">
-      <div class="col-lg-12 col-md-12 col-xs-12">
+    
         <div class="content-image">
           <div class="content">
             <blockquote class="blockquote">
-              <h4 class="mb-2 content-header">Tôi không có tài năng gì cả. Tôi chỉ đam mê hiểu biết</h4>
+              <h4 class="mb-2 title-article-size">Tôi không có tài năng gì cả. Tôi chỉ đam mê hiểu biết</h4>
               <footer class="blockquote-footer text-right text-white">Albert Einstein</footer>
             </blockquote>
           </div>
         </div>
-      </div>
+      
+    </div>
     </div>
   </div>
   <div class="header-text text-center mt-5 ">
@@ -139,25 +147,43 @@
       <% }) %>
     </div>
   </div>
-  <div class="container mt-3 mx-auto justify-content-center">
 
+<div class="container">
+<div class="row justify-content-center">
+  <div class="col-sm-6">
+  <% if (pages > 0) { %>
+      <ul class="pagination text-center text-white">
+          <% if (current == 1) { %>
+              <li class="disabled page-item"><a class="page-link">Đầu</a></li>
+          <% } else { %>
+              <li class="page-item"><a class="page-link" href="/1">Đầu</a></li>
+          <% } %>
+          <% var i = (Number(current) > 5 ? Number(current) - 2 : 1) %>
+          <% if (i !== 1) { %>
+              <li class="disabled page-item"><a class="page-link">...</a></li>
+          <% } %>
+          <% for (; i <= (Number(current) + 2) && i <= pages; i++) { %>
+              <% if (i == current) { %>
+                  <li class=" page-item active"><a class="page-link"><%= i %></a></li>
+              <% } else { %>
+                  <li class="page-item"><a class="page-link" href="/<%= i %>"><%= i %></a></li>
+              <% } %>
+              <% if (i == Number(current) + 2 && i < pages) { %>
+                  <li class="disabled page-item"><a class="page-link">...</a></li>
+              <% } %>
+          <% } %>
+          <% if (current == pages) { %>
+              <li class="disabled page-item"><a class="page-link">Cuối</a></li>
+          <% } else { %>
+              <li class="page-item" ><a href="/<%= pages %>" class="page-link">Cuối</a></li>
+          <% } %>
+      </ul>
+  <% } %>
+    </div>
+  </div>
+</div>
+</div>
 
-    <div class="row">
-      <div class="col-sm-6 order-6 text-right" style="font-size:2rem">
-        <% if (pages > 0 && current < pages) { %>
-        <a class="btn btn-outline-dark hvr-underline-from-center shadow-sm rounded-pill p-2" title="Next"
-          href="<%=current= current + 1%>">Trang Sau <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> </a>
-        <%}  %>
-      </div>
-      <div class="col-sm-6" style="font-size:2rem">
-        <% if (pages > 2 && current < pages +1 ) { %>
-        <a class="btn btn-outline-dark hvr-underline-from-center shadow-sm rounded-pill p-2" title="Previous"
-          href="<%=current= current - 2%>"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Trang Trước</a>
-        <%}%>
-      
-       </div>
-      
- </div>
 </div>
     <div class="container">
       <div class="row">

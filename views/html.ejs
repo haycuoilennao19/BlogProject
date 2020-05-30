@@ -26,7 +26,7 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i> Tìm Hiểu Promise Trong Javascript</h2>
+                  aria-hidden="true"></i> Trình Duyệt Và Javascript</h2>
             </div>
           </div>
 
@@ -37,337 +37,62 @@
           </div>
           <div class="text-content-article mt-5">
             <p><i>
-                Promise được giới thiệu trong phiên bản ES6 giúp giải quyết một số vấn đề mà callback function chưa thể xử lý được.
-                Hôm nay chúng ta hãy cùng nhau đi vào tìm hiểu về khái niệm cũng như cách sử dụng promise
-                trong ngôn ngữ lập trình Javascript để phát triển web nhé.</i>
-            </p>
-
-            <p>
-              Trước khi đi vào định nghĩa <b>promise</b> thì mình có một ví dụ về đời sống để giúp bạn hiểu được khái
-              niệm về nó một cách đơn giản hơn.<br />
-              <span class="text-primary">Ví dụ:</span>
+                Ngôn ngữ Javascript với mục đích ban đầu khi được tạo ra là dành cho trình duyệt. Theo thời gian thì nó
+                ngày càng phát triển và trở thành một ngôn ngữ được sử dụng cho nhiều nền tảng khác nhau. Bây giờ chúng
+                ta sẽ đi vào tìm hiểu
+                sự hình thành của trình duyệt và cách javascript tương tác với nó nhé.</i>
             </p>
             <p>
-              Chị bạn đang làm việc ở nước ngoài và <b>hứa (promise)</b> sẽ gửi cho bạn một quyển sách lập trình mà bạn
-              rất thích vào tháng tới.<br />
-              Nhưng bạn sẽ không biết tháng tới mình có nhận được quyển sách đó hay không. Vì chị bạn có thể mua cho bạn
-              hoặc vì
-              bận công việc gì đó mà không thể gởi cho bạn vào tháng tới.
+              Ngày nay các nền tảng mà javascript có thể sử dụng rất đa dạng như là trình duyệt (browser), web-server...
+              với mỗi nền tảng khác nhau sẽ cung cấp cho chúng ta các chức năng để làm việc với nó. Ví dụ trình duyệt
+              web
+              sẽ cho phép ta điều khiển trang web hay Nodejs sẽ cung cấp các tiện ích để làm việc bên phía server.
+              Và dưới đây là sơ đồ khi Javascript được chạy trên trình duyệt web:
             </p>
-            <p>
-              Lúc này <b>lời hứa(promise)</b> sẽ có 3 trạng thái là:
-              <ul>
-                <li><b>Pending</b> (Đang chờ xử lý): Bạn không biết mình có nhận được quyển sách vào tháng tới hay
-                  không.</li>
-                <li><b>Fulfilled</b> (Hoàn thành): Bạn đã nhận được sách từ chị của mình vào tháng tới.</li>
-                <li><b>Rejected</b> (Từ chối): Bạn không nhận được sách vì một lý do nào đó chị của bạn không thể gửi
-                  được.</li>
-              </ul>
-            </p>
-            <p>
-              Trong Javascript thì <b>promise</b> khi mới tạo sẽ có trạng thái là <code>pending</code>. Nếu kết quả là
-              đã hoàn thành thì sẽ có trạng thái <code>fulfilled</code> hoặc xảy ra lỗi thì nó sẽ có trạng thái
-              <code>rejected</code>.
-            </p>
-            <p>
-              Bây giờ chúng ta sẽ cùng nhau đi vào tìm hiểu cách tạo một <b>promise</b> nhé.
-            </p>
-
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mb-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">Cách Tạo Promise Trong Javascript</h3>
-              </div>
-            </div>
-            <p>
-              Đầu tiên chúng ta sẽ đi vào tìm hiểu cú pháp tổng quát của <b>promise</b> ở dưới đây nhé:
-            </p>
-            <pre><code> let promise = new Promise(function(resolve, reject){ <br/> /*executor*/ <br/>})</code></pre>
-
-            <p>
-              Bây giờ để dễ hình dung thì chúng ta sẽ đi vào ví dụ chi tiết sau đây nhé:
-            </p>
-
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> let duocGoiSach = true; <br/> let sach = new Promise(function (resolve, reject){<br/> &nbsp;&nbsp;if(duocGoiSach) {<br/> &nbsp;&nbsp;&nbsp;&nbsp;resolve("Bạn đã được chị gửi sách. :)");<br/> &nbsp;&nbsp;} else {<br/> &nbsp;&nbsp;&nbsp;&nbsp;reject("Bạn không được chị gửi sách. :(");<br/> &nbsp;&nbsp;}<br/> });<br/> console.log(sach)</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590670815/Promise-Javascript/promise-resolved-trong-javascript_wnm2uh.png"
-              alt="Promise resolved trong javascript">
-
-
-            <p class="mt-4">
-              Thì lúc này bạn có thể thấy trạng thái của <b>promise</b> đã được thay đổi sang <code>resolved</code> và
-              giá trị của
-              <b>promise</b> là một chuỗi mà chúng ta đã truyền vào cho hàm <code>resolve()</code>. Bạn có thể hình dung
-              cách chạy của nó như sau:
-              <ul>
-                <li><b>Exexutor</b> sẽ được gọi tự động và ngay lập tức khi <code>new Promise</code> được chạy.</li>
-                <li><b>Executor</b> nhận hai đối số là <b>resolve</b> và <b>reject</b>. Những hàm được truyền vào này sẽ
-                  được định nghĩa lại thông qua
-                  Javascript. Chúng ta chỉ gọi chúng sau khi đã sẵn sàng.</li>
-                <li>Bên trong <b>executor</b>
-                  chúng ta sẽ gọi hàm <code>resolve()</code> nếu chương trình thực hiện thành công hoặc gọi hàm
-                  <code>reject()</code> nếu chương trình xảy ra lỗi </li>
-              </ul>
-            </p>
-            <p>
-              Bây giờ chúng ta sẽ đi vào xem trạng thái <code>pending</code> của nó bằng hàm <code>setTimeout</code>
-              thông qua đoạn code dưới đây nhé:
-            </p>
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> let duocGoiSach = true; <br/> let sach = new Promise(function (resolve, reject){<br/> &nbsp;setTimeout(() => {<br/> &nbsp;&nbsp;if(duocGoiSach) {<br/> &nbsp;&nbsp;&nbsp;&nbsp;resolve("Bạn đã được chị gửi sách. :)");<br/> &nbsp;&nbsp;} else {<br/> &nbsp;&nbsp;&nbsp;&nbsp;reject("Bạn không được chị gửi sách. :(");<br/> &nbsp;&nbsp;}<br/> &nbsp;}, 3000);<br/> });<br/> console.log(sach)</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590676055/Promise-Javascript/promise-pending-trong-javascript_urrwgl.png"
-              alt="Promise pending trong javascript">
-            <p class="mt-4">
-              Như vậy giá trị khi mà <b>promise</b> đang ở trạng thái <code>pending</code> là <code>undefined</code>.
-              Giá trị của nó sẽ được trả về khi <b>promise</b> được hoàn thành sau khoảng thời gian 3s.
-            </p>
-            <p>
-              Tiếp theo chúng ta sẽ đi vào xem trạng thái của nó khi mà chương trình thực thi không thành công
-              bằng cách gán <code>duocGoiSach = false</code>. Để hiểu rõ hơn bạn xem đoạn code sau đây nhé:
-            </p>
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> let duocGoiSach = false; <br/> let sach = new Promise(function (resolve, reject){<br/> &nbsp;&nbsp;if(duocGoiSach) {<br/> &nbsp;&nbsp;&nbsp;&nbsp;resolve("Bạn đã được chị gửi sách. :)");<br/> &nbsp;&nbsp;} else {<br/> &nbsp;&nbsp;&nbsp;&nbsp;reject("Bạn không được chị gửi sách. :(");<br/> &nbsp;&nbsp;}<br/> });<br/> console.log(sach)</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590676611/Promise-Javascript/promise-reject-trong-javascript_ulvorn.png"
-              alt="Promise reject trong javascript">
-
-            <p class="mt-4">
-              Vậy qua 3 ví dụ trên thì chúng ta có thể rút ra một sơ đồ như sau:
-            </p>
-
             <div class="row">
               <div class="col-md-6 col-sm-12"> <img class=" lazyload" width="100"
-                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590677285/Promise-Javascript/vi-du-minh-hoa-promise_x9uezm.svg"
-                  alt="Minh họa promise trong javascript">
+                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590808105/Bom-Javascript/Javascript-Trong-Tr%C3%ACnh-Duy%E1%BB%87t_c8wwru.svg"
+                  alt="Javascript Trong Trình Duyệt">
               </div>
             </div>
             <p class="mt-4">
-              Mình có một số lưu ý là khi <b>promise</b> đã chuyển sang trạng thái <code>fulfilled </code> hoặc
-              <code>rejected</code>
-              thì chúng ta khổng thể thay đối trạng thái cho nó. Nghĩa là bạn không thể chuyển từ trạng thái
-              <code>fulfilled </code> sang <code>rejected</code>
-              hoặc theo chiều ngược lại.
+              Bây giờ chúng ta cùng nhau đi vào tìm hiểu về khái niệm cũng như cách sử dụng <b>DOM</b> ở dưới đây
+              đây nhé.
             </p>
-            <p>
-              Do trạng thái và kết quả của đối tượng promise là nội bộ do đó chúng ta không thể sử dụng cách truy cập
-              trực tiếp.
-              Nhưng chúng ta có thể sử dụng các phương thức <code>.then</code>, <code>.catch</code> và
-              <code>.finally</code> để làm điều đó.
-              Để hiểu rõ hơn bạn cùng mình hãy cùng nhau đi vào tìm hiểu nhé.
-            </p>
-
             <div class="row">
               <div class="col-sm-12 bg-light p-2 mb-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">Phuong Thức <code>then</code> </h3>
+                <h3 class="text-primary ml-4 title-article-size">
+                  DOM Là Gì?</h3>
               </div>
             </div>
             <p>
-              Bây giờ chúng ta sẽ đi vào tìm hiểu cú pháp của nó nhé:
-            </p>
-            <pre><code class="javascript"> promise.then(<br/> &nbsp;&nbsp;function(result) { /*Xử lý kết quả thành công*/ }<br/> &nbsp;&nbsp;function(err) { /*xử lý kết quả lỗi*/ }<br/> );</code></pre>
-            <p>
-              Với tham số đầu tiên là hàm chúng ta sẽ chạy khi <b>promise</b> được hoàn thành (fulfilled).<br />
-              Tham số thứ hai là hàm chúng ta sẽ chạy khi <b>promise</b> bị từ chối (rejected).
-            </p>
-            <p>
-              Đầu tiên sẽ tạo một hàm dùng để trả về đối tượng <code>Promise</code>:
+              <b>DOM</b> là một giao diện lập trình ứng dụng (API) và là chữ viết tắt của từ  <b>Document Object Model</b>.
+              Nhiệm vụ chính của nó là giúp chúng ta thao tác với các tài liệu HTML và XHTML.<br/>
+              Như bạn đã biết  <b>xương sống</b> (thành phần chính) của HTML được xây dựng bởi các <b>thẻ (tag)</b>. Dựa vào <b>DOM</b> thì
+              các thẻ HTML được chuyển thành các <b>đối tượng (object)</b> và chúng ta có thể truy cập chúng thông qua Javascript.
+              Từ đó  ta có thể  thêm, sửa , xóa các thành phần trong trang HTML.
             </p>
 
-            <pre><code class="javascript"> function taoPromise(duocGoiSach) {<br/>  return new Promise(function (resolve, reject){<br/> &nbsp;setTimeout(() => {<br/> &nbsp;&nbsp;if(duocGoiSach) {<br/> &nbsp;&nbsp;&nbsp;&nbsp;resolve("Bạn đã được chị gửi sách. :)");<br/> &nbsp;&nbsp;} else {<br/> &nbsp;&nbsp;&nbsp;&nbsp;reject("Bạn không được chị gửi sách. :(");<br/> &nbsp;&nbsp;}<br/> &nbsp;}, 3000);<br/> });<br/>}</code></pre>
 
-            <p>
-              Sau đó chúng ta sẽ gọi hàm <code>taoPromise</code> và thực thi phương thức <code>then</code> cho đối tượng
-              promise:
-            </p>
-            <pre><code class="javascript"> let sach = taoPromise(true);<br/> sach.then(<br/> &nbsp;&nbsp;result => console.log(result),<br/> &nbsp;&nbsp;error => console.log(error)<br/> );</code></pre>
-            <p>
-              Bây giờ chúng ta sẽ kết hợp hai đoạn code trên để xem kết quả sao nhé:
-            </p>
 
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> function taoPromise(duocGoiSach) {<br/>  return new Promise(function (resolve, reject){<br/> &nbsp;setTimeout(() => {<br/> &nbsp;&nbsp;if(duocGoiSach) {<br/> &nbsp;&nbsp;&nbsp;&nbsp;resolve("Bạn đã được chị gửi sách. :)");<br/> &nbsp;&nbsp;} else {<br/> &nbsp;&nbsp;&nbsp;&nbsp;reject("Bạn không được chị gửi sách. :(");<br/> &nbsp;&nbsp;}<br/> &nbsp;}, 3000);<br/> });<br/>}<br/><br/>let sach = taoPromise(true);<br/> sach.then(<br/> &nbsp;&nbsp;result => console.log(result),<br/> &nbsp;&nbsp;error => console.log(error)<br/> );</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590723921/Promise-Javascript/phuong-thuc-then-trong-promise_pq4ql2.png"
-              alt="Phương thức then trong promise javascript">
-            <p class="mt-4">
-               Promise đang ở trạng thái <code>pending</code> là do chúng ta thiết lập thời gian chạy hàm  bằng <code>setTimeout</code>.
-               Sau 3s thì hàm phía trên sẽ chạy và trả về đối tượng <b>promise</b> với trạng thái thành công như bạn thấy ở hình trên . Sau đó phương thức <code>then</code> sẽ nhận giá trị từ đối tượng promise và 
-               hiển thị ra ngoài màn hình.
-            </p>
 
-            <p>
-              Ngoài ra phương thức <code>then</code> cũng cho phép bạn sử dụng một tham số để chỉ xử lý cho trường hợp thành công hoặc trường hợp lỗi:
-            </p>
-            <pre><code class="javascript"> sach.then( <br/> &nbsp;&nbsp; value => console.log(value)<br/> )</code></pre>
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mb-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">Phương Thức <code>catch</code> </h3>
-              </div>
-            </div>
-            <p>
-              Nếu như bạn muốn  hiển thị lỗi  khi đối tượng <b>promise</b> ở trạng thái <code>reject</code> thì chúng 
-              ta có thể sử dụng hai cách sau:
-            </p>
-            <h5 class="text-primary">
-              Sử dụng <code>catch(hàm xử lý lỗi)</code>:
-            </h5>
-            <pre><code class="javascript"> sach.catch( <br/> &nbsp;&nbsp; error => console.log(error)<br/> ) </code></pre>
-            <p>Và kết quả bạn sẽ được như hình sau đây:</p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590724496/Promise-Javascript/phuong-thuc-catch-trong-promise_udax53.png"
-            alt="Phương thức catch trong promise javascript">
-            <h5 class="text-primary mt-4">
-              Sử dụng <code>then(null, hàm xử lý lỗi)</code>:
-            </h5>
-            <pre><code class="javascript"> sach.then( <br/> &nbsp;&nbsp;null,<br/>&nbsp;&nbsp; error => console.log(error)<br/> ) </code></pre>
-            <p>Và kết quả bạn sẽ được như hình sau đây:</p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590724775/Promise-Javascript/phuong-thuc-then-null-trong-promise_hogmnb.png"
-            alt="Phương thức then null trong promise javascript">
 
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">Phương Thức <code>finally</code> </h3>
-              </div>
-            </div>
-            <p>
-              Phương thức <code>finally()</code> sẽ trả về một <b>Promise</b>. Khi kết quả trả về của <b>promise</b>
-              là <code>fulfilled</code> (hoàn thành) hay <code>rejected</code> (từ chối) thì đoạn code trong hàm callback của <code>finally</code> cũng sẽ được thực thi. 
-            </p>
-            <p>
-              Để bạn dễ hiểu chúng ta sẽ đi vào ví dụ sau đây nhé:
-            </p>
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> function taoPromise(duocGoiSach) {<br/>  return new Promise(function (resolve, reject){<br/> &nbsp;setTimeout(() => {<br/> &nbsp;&nbsp;if(duocGoiSach) {<br/> &nbsp;&nbsp;&nbsp;&nbsp;resolve("Bạn đã được chị gửi sách. :)");<br/> &nbsp;&nbsp;} else {<br/> &nbsp;&nbsp;&nbsp;&nbsp;reject("Bạn không được chị gửi sách. :(");<br/> &nbsp;&nbsp;}<br/> &nbsp;}, 3000);<br/> });<br/>}<br/><br/>let sach = taoPromise(true);<br/> sach<br/> &nbsp;&nbsp;&nbsp;&nbsp;.finally(() => console.log("Kết quả sẽ có sau 3s"))<br/> &nbsp;&nbsp;&nbsp;&nbsp;.then(<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result => console.log(result),<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;error => console.log(error)<br/> &nbsp;&nbsp;&nbsp;&nbsp;);</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590726526/Promise-Javascript/phuong-thuc-finally-trong-promise_ijvsmu.png"
-              alt="Phương thức finally trong promise javascript">
-            <p class="mt-4">
-              Ở đây mình có một số lưu ý sau là:
-              <ul>
-                <li><code>finally</code> sẽ không có tham số truyền vào. Nó sẽ được gọi mà không cần quan tâm đến kết quả trả về là 
-                thành công hay bị từ chối của <code>promise</code>.</li>
-                <li>
-                  Nó không xử lý kết quả trả về từ <code>promise</code> mà chỉ chuyển sang các phương thức sau để xử lý.
-                </li>
-                <li>
-                  Nó giúp chúng ta hạn chế gọi cùng một hàm ở cả trong <code>then</code> và <code>catch</code>.
-                  Để hiểu rõ hơn bạn xem đoạn code sau nhé:
-                  <pre><code class="javascript"> function&nbsp;ketQua()&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;/*&nbsp;...&nbsp;*/<br/> }<br/>sach<br/> &nbsp;&nbsp;&nbsp;&nbsp;.then(<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(result)&nbsp;=>&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(result);<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ketQua();<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;&nbsp;&nbsp;&nbsp;).catch(<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(error)&nbsp;=>&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(error);<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ketQua();<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;&nbsp;&nbsp;&nbsp;);<br/></code></pre>
-                  <p class="mt-2">
-                    Như bạn thấy thì hai phương thức <code>catch</code> và <code>then</code> đều gọi hàm <code>ketQua()</code>.
-                    Do đó chúng ta có thể sử dụng <code>finally</code> để giảm sự lặp lại bằng đoạn code như sau:
-                  </p>
-                  <pre><code class="javascript"> sach<br/> &nbsp;&nbsp;.then(result => console.log(result))<br/> &nbsp;&nbsp;.catch(error => console.log(error));<br/> &nbsp;&nbsp;.finally(() => ketQua());</code></pre>
-                </li>
-              </ul>
-            </p>
 
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size"> Promise Chaining Trong Javascript </h3>
-              </div>
-            </div>
-            <p>
-              Nãy giờ thì chúng ta chỉ học các định nghĩa và phương thức của nó. Phần này chúng ta tìm hiểu 
-              về <b>promise chain</b> dùng để xử lý bắt đồng bộ trong Javascript giống như <b>callback function</b> đã làm được. Bây giờ bạn cùng mình cùng tìm hiểu qua 
-              ví dụ để nắm rõ hơn nhé.
-            </p>
-            <p>
-              Đầu tiên chúng ta sẽ tạo một <code>promise</code> với trạng thái hoàn thành và trả về giá trị là 10 sau 2s.
-              Trong đoạn code mình sẽ dùng hàm <code>setTimeout</code> để mô phỏng sự bất đồng bộ từ đó giúp bạn thấy được cách xử lý thông qua <code>promise</code>.
-              Để dễ hình dung hơn bạn xem đoạn code sau nhé
-              :
-            </p>
-            <pre><code class="javascript"> let doiTuongPromise = new Promise((resolve, rejects) => {<br/> &nbsp;&nbsp;setTimeout(() => {<br/> &nbsp;&nbsp;&nbsp;&nbsp;resolve(8);<br/> &nbsp;&nbsp;}, 2000);<br/> })</code></pre>
-         
-            <p class="mt-4">
-              Sau đó chúng ta sử dụng phương thức <code>then()</code> để gọi hàm xử lý khi  <code>doiTuongPromise</code>
-              trả về trạng thái thành công. Trong hàm đó thì chúng ta sẽ lấy kết quả  của <code>doiTuongPromise</code> cộng thêm cho 10.
-              Để hiểu rõ hơn bạn xem đoạn code sau nhé:
-            </p>
-            <pre><code class="javascript"> doiTuongPromise.then((ketQua) => {<br/> &nbsp;&nbsp;console.log(ketQua);<br/> &nbsp;&nbsp;return ketQua + 10;<br/> });</code></pre>
 
-            <p>
-             Phương thức <code>then</code> thì sẽ trả về một đối tượng <code>promise</code> mới với giá trị là kết quả trả về khi thực hiện thành công.<br/>
-             Do đó bạn có thể sử dụng nhiều phương thức <code>then</code> liên tiếp với nhau như đoạn code sau đây:
-            </p>
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> let doiTuongPromise = new Promise((resolve, rejects) => {<br/> &nbsp;&nbsp;setTimeout(() => {<br/> &nbsp;&nbsp;&nbsp;&nbsp;resolve(8);<br/> &nbsp;&nbsp;}, 2000);<br/> })<br/><br/> doiTuongPromise.then((ketQua) => {<br/> &nbsp;&nbsp;console.log(ketQua);<br/> &nbsp;&nbsp;return ketQua + 10;<br/> })<br/> .then((ketQua) => {<br/> &nbsp;&nbsp;console.log(ketQua);<br/> &nbsp;&nbsp;return ketQua + 20;<br/> })</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590740670/Promise-Javascript/goi-then-nhieu-lan-trong-promise-chaining_yfmjfj.png"
-              alt="Gọi then nhiều lần trong promise javascript">
-            <p class="mt-4">
-              Ví dụ trên chính là minh họa cho <b>promise chain</b>.
-              Các phương thức của <code>Promise</code> như <code>then()</code>, <code>catch()</code>, <code>finally</code>
-              thì sẽ trả về một đối tượng <code>Promise</code>. Do đó chúng ta có thể gọi liên tiếp 
-              các phương thức này theo một cách tuần tự. Và như bạn cũng thấy là ở ví dụ trên chúng ta đã xử lý sự kiện bất đồng bộ trong Javascript 
-              bằng <b>promise chain</b>. Và dưới đây là hình ảnh minh họa mà nó hoạt động là: 
 
-            </p>
 
-            <div class="row">
-              <div class="col-md-4 col-sm-10"> <img class=" lazyload" width="100"
-                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590741768/Promise-Javascript/dong-chay-promise-trong-js_mjhac4.svg"
-                  alt="Dòng chảy (flow) promise trong javascript">
-              </div>
-            </div>
 
-            <p>
-              Nếu bạn gọi các phương thức <code>then()</code> một cách độc lập thì chúng ta sẽ <b>không thể truyền kết quả</b>
-              từ phương thức này sang phương thức khác vì nó không có mối quan hệ với nhau. Để hiểu rõ hơn bạn xem ví dụ sau đây nhé:
-            </p>
-            <p>
-              <mark class="p-1"><b>Đoạn Code:</b></mark>
-            </p>
-            <pre><code class="javascript"> let doiTuongPromise = new Promise((resolve, rejects) => {<br/> &nbsp;&nbsp;setTimeout(() => {<br/> &nbsp;&nbsp;&nbsp;&nbsp;resolve(8);<br/> &nbsp;&nbsp;}, 2000);<br/> })<br/><br/> doiTuongPromise.then((ketQua) => {<br/> &nbsp;&nbsp;console.log(ketQua);<br/> &nbsp;&nbsp;return ketQua + 10;<br/> })<br/><br/> doiTuongPromise.then((ketQua) => {<br/> &nbsp;&nbsp;console.log(ketQua);<br/> &nbsp;&nbsp;return ketQua + 20;<br/> })</code></pre>
-            <p class="mt-4">
-              <mark class="p-1"><b>Kết Quả:</b></mark>
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590742589/Promise-Javascript/goi-then-doc-lap-trong-promise_llmlym.png"
-              alt="Gọi then độc lập trong promise javascript">
-              <p class="mt-4">
-                Như bạn thấy thì kết quả sẽ không thay đổi khi chúng ta gọi các phương thức <code>then()</code> một cách độc lập.
-                Để dễ hình dung bạn xem hình ảnh mô tả cách nó hoạt động sau nhé:
-              </p>
-              <div class="row">
-                <div class="col-md-6 col-sm-12"> <img class=" lazyload" width="100"
-                    data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1590742837/Promise-Javascript/goi-then-doc-lap_qwqbxg.svg"
-                    alt="Gọi then độc lập promise trong javascript">
-                </div>
-              </div>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

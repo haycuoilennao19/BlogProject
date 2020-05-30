@@ -135,24 +135,41 @@
       <% }) %>
     </div>
   </div>
-  <div class="container mt-3 mx-auto justify-content-center">
- 
-    
-    <div class="row">          
-      <div class="col-sm-6 order-6 text-right"  style="font-size:2rem">
-       <% if (pages > 0 && current < pages) { %>
-       <a class="btn btn-outline-dark hvr-underline-from-center shadow-sm rounded-pill p-2"  title="Next" href="/article/<%-category-%>/<%=current= current + 1%>">Trang Sau <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> </a>
-       <%}  %>
-     </div>
-     <div class="col-sm-6" style="font-size:2rem">
-       <% if (pages > 2 && current < pages +1 ) { %>
-        <a class="btn btn-outline-dark hvr-underline-from-center shadow-sm rounded-pill p-2"  title="Previous" href="/article/<%-category-%>/<%=current= current - 2%>"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i>  Trang Trước</a>
-         <%}%>
-      
-       </div>
-      
- </div>
-</div>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-sm-6">
+    <% if (pages > 0) { %>
+        <ul class="pagination text-center text-white">
+            <% if (current == 1) { %>
+                <li class="disabled page-item"><a class="page-link">Đầu</a></li>
+            <% } else { %>
+                <li class="page-item"><a class="page-link" href="/article/<%-category%>/1">Đầu</a></li>
+            <% } %>
+            <% var i = (Number(current) > 5 ? Number(current) - 2 : 1) %>
+            <% if (i !== 1) { %>
+                <li class="disabled page-item"><a class="page-link">...</a></li>
+            <% } %>
+            <% for (; i <= (Number(current) + 2) && i <= pages; i++) { %>
+                <% if (i == current) { %>
+                    <li class=" page-item active"><a class="page-link"><%= i %></a></li>
+                <% } else { %>
+                    <li class="page-item"><a class="page-link" href="/article/<%-category-%>/<%= i %>"><%= i %></a></li>
+                <% } %>
+                <% if (i == Number(current) + 2 && i < pages) { %>
+                    <li class="disabled page-item"><a class="page-link">...</a></li>
+                <% } %>
+            <% } %>
+            <% if (current == pages) { %>
+                <li class="disabled page-item"><a class="page-link">Cuối</a></li>
+            <% } else { %>
+                <li class="page-item" ><a href="/article/<%-category-%>/<%= pages %>" class="page-link">Cuối</a></li>
+            <% } %>
+        </ul>
+    <% } %>
+      </div>
+    </div>
+  </div>
     <div class="container">
       <div class="row">
         <div class="col-lg-12 context-box-scroll-right col-md-12 col-xs-12">

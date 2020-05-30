@@ -60,7 +60,7 @@ router.get('/:page', function(req, res, next) {
     var perpage = 6;
     var page = req.params.page || 1
     Blog
-        .find()
+        .find({})
         .sort({_id: -1})
         .skip((perpage * page) - perpage)
         .limit(perpage)
