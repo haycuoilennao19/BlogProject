@@ -23,6 +23,9 @@ router.get('/about', function(req, res, next) {
   router.get('/html/0', function(req, res, next) {
     res.render('404page')
   })
+  router.get('/Resource/0', function(req, res, next) {
+    res.render('404page')
+  })
 
   router.get('/Javascript/0', function(req, res, next) {
     res.render('404page')
@@ -149,7 +152,7 @@ router.get("/Resource", function(req, res) {
         .skip((perpage * page) - perpage)
         .limit(perpage)
         .exec(function(err, products) {
-            Blog.countDocuments().exec(function(err, count) {
+            Blog.countDocuments({category:"Resource"}).exec(function(err, count) {
                 if(err) return next(err)
                 res.render('products-category',{posts: products, current:page, pages: Math.ceil(count / perpage), category: category})
             })
@@ -166,7 +169,7 @@ router.get('/Resource/:page', function(req, res, next) {
         .skip((perpage * page) - perpage)
         .limit(perpage)
         .exec(function(err, products) {
-            Blog.countDocuments().exec(function(err, count) {
+            Blog.countDocuments({category:"Resource"}).exec(function(err, count) {
                 if(err) return next(err)
                 res.render('products',{posts: products, current:parseInt(page), pages: Math.ceil(count / perpage)})
             })
