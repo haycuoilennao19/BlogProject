@@ -177,7 +177,18 @@ body{font-family:'Open Sans',sans-serif;padding:0!important;margin:0!important;c
      "image": "<%-article.file%>",
      "editor": "Thái Viết Nhật", 
      "datePublished": "<%=dateModified%>",
-     
+     "dateModified":"<%=dateModified%>",
+     "publisher": {
+			"@type": "Organization",
+			"name": "Thái Viết Nhật",
+			"url": "https://www.niemvuilaptrinh.com/about",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "https://res.cloudinary.com/dn4nxz7f0/image/upload/v1577462219/IMG_1347_loixz1.jpg",
+				"width":"400",
+				"height":"55"
+			}
+		},
      "author": {
 			"@type": "Person",
 			"name": "Thái Viết Nhật",
@@ -187,8 +198,8 @@ body{font-family:'Open Sans',sans-serif;padding:0!important;margin:0!important;c
      "dateCreated": "<%=article.date%>",
 
      "description": "Mình muốn chia sẻ tài liệu bổ ích về lập trình đến với mọi người.",
-     "articleBody": "<%=article.subtitle%>"
-      
+     "articleBody": "<%=article.subtitle%>",
+     "mainEntityOfPage": "True"
      }
     </script>
   <script>
