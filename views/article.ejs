@@ -176,17 +176,17 @@ body{font-family:'Open Sans',sans-serif;padding:0!important;margin:0!important;c
      "alternativeHeadline": "<%=article.subtitle%>",
      "image": "<%-article.file%>",
      "editor": "Thái Viết Nhật",  
-     "publisher": "Thái Viết Nhật",
+     "author": {
+			"@type": "Person",
+			"name": "Thái Viết Nhật",
+			"url": "https://www.niemvuilaptrinh.com/about"
+		},
      "url": "https://www.niemvuilaptrinh.com/article/<%-article.slug%>",
-     "datePublished": "<%=article.date%>",
      "dateCreated": "<%=article.date%>",
-     "dateModified": "<%=article.date%>",
+
      "description": "Mình muốn chia sẻ tài liệu bổ ích về lập trình đến với mọi người.",
-     "articleBody": "<%=article.subtitle%>",
-       "author": {
-        "@type": "Person",
-        "name": "Nhật"
-      }
+     "articleBody": "<%=article.subtitle%>"
+      
      }
     </script>
   <script>
