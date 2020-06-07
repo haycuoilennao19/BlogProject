@@ -208,7 +208,11 @@ router.get("/:slug", function(req, res) {
     var slug = req.params.slug;
     Blog.findOne({slug: slug}, function(err, data) {
         if(data){
-            res.render("article", {article: data})
+    
+            let dateCreate = (data.date.split(" "));
+            let dateModified = dateCreate[6] + "-" + dateCreate[3] + "-" + dateCreate[1];
+         
+            res.render("article", {article: data, dateModified: dateModified})
         }
         else{
             res.render('404page')
