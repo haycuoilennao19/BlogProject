@@ -169,7 +169,26 @@ body{font-family:'Open Sans',sans-serif;padding:0!important;margin:0!important;c
       </div>
     </div>
   </div>
-
+  <script type="application/ld+json">
+    { "@context": "https://schema.org", 
+     "@type": "BlogPosting",
+     "headline": <%=article.title%>",
+     "alternativeHeadline": "<%=article.subtitle%>",
+     "image": "<%-article.file%>",
+     "editor": "Thái Viết Nhật",  
+     "publisher": "Thái Viết Nhật",
+     "url": "https://www.niemvuilaptrinh.com/article/<%-article.slug%>",
+     "datePublished": "<%=article.date%>",
+     "dateCreated": "<%=article.date%>",
+     "dateModified": "<%=article.date%>",
+     "description": "Mình muốn chia sẻ tài liệu bổ ích về lập trình đến với mọi người.",
+     "articleBody": "<%=article.subtitle%>",
+       "author": {
+        "@type": "Person",
+        "name": "Nhật"
+      }
+     }
+    </script>
   <script>
     var container = document.getElementById('content-box');
     
