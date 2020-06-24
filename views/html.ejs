@@ -26,7 +26,7 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i> Những Công Cụ Soạn Thảo Văn Bản WYSIWYG  2020</h2>
+                  aria-hidden="true"></i> Những Thư Viện Tạo Chế Độ Xem 360 Độ Cho Web Năm 2020</h2>
             </div>
           </div>
 
@@ -37,395 +37,304 @@
           </div>
           <div class="text-content-article mt-5">
             <p><i>
-               Công cụ soạn thảo văn bản WYSIWYG cho phép người dùng tạo các tài liệu như văn bản, hình ảnh, video...
-              ở ngay trên trang web một cách đơn giản. Ý nghĩa của từ WYSIWYG là "what you see is what you get".
-              Theo mình thấy nó hay được sử dụng cho việc viết bài cho blog, chỉnh sử nội dung...
-              Bây giờ bạn cùng mình hãy cùng nhau đi vào tìm hiểu nhựng công cụ WYSIWYG được sử dụng phổ biến trong năm 2020 nhé.
+                <b>Chế độ xem 360 độ là gì?</b> Ngày nay với sự phát triển mạnh mẽ của công nghệ thì bạn có thể dễ dàng
+                chụp những hình ảnh
+                toàn cảnh(360 độ). Nhưng việc hiển thị các hình ảnh đó trên trang web của bạn thì thật sự rất khó khăn
+                vì nó yêu cầu rất cao
+                về mặt kỹ thuật để có thể hiện thị toàn cảnh hình ảnh của bạn cũng như giúp người dùng dễ dàng tương tác
+                nhất có thể.
+                Do đó bài viết hôm nay mình sẽ giới thiệu đến bạn các thư viện Javascript giúp chúng ta giải quyết vấn
+                đề trên
+                và làm tăng trải nghiệm người dùng hơn. Nào hãy cùng mình đi vào tìm hiểu nhé!
+
+
+
               </i>
             </p>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size"> <a href="https://pchen66.github.io/Panolens/"
+                  target="_blank" title="Panolens.js">Panolens.js</a></h3>
+            </div>
             <p>
-              Trước khi đi vào vấn đề chính thì mình có để đường dẫn bên dưới để có thể giúp bạn hiểu rõ hơn về WYSIWYG nhé.
-              <br/>
-              <a href="https://vi.wikipedia.org/wiki/WYSIWYG#:~:text=WYSIWYG%20(vi%E1%BA%BFt%20t%E1%BA%AFt%20c%E1%BB%A7a%20What,%2C%20thi%E1%BA%BFt%20k%E1%BA%BF%20web..." target="_blank" title="WYSIWYG">WYSIWYG</a>
+              <b>Panolens.js</b> là một thư viện mã nguồn được xây dựng dựa trên Three.JS (3D framework) giúp bạn hiển
+              thị hình ảnh, video
+              dưới dạng 360 độ, thực tế ảo... Để sử dụng thì bạn chỉ cần tải 2 file là <code>three.min.js</code>
+              và <code>panolens.min.js</code>, sau đó gán vào chương trình và khởi tạo đối tượng <code>PANOLENS</code>
+              bằng mã Javascript (Phần này bạn xem thêm ở DOCUMENTATION nhé). Điểm mình thích ở thư viện này là có từng
+              ví dụ chi tiết
+              cho mỗi chức năng như là video dưới dạng 360 độ, cho phép chú thích nội dung vào hình ảnh video, tích hợp
+              các nút điều khiển hướng...
+              Phần này bạn có thể tham khảo thêm ở mục EXAMPLE của trang demo nhé!
+
             </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1592965155/thu-vien-javascript-hien-thi-hinh-anh-360-do/Panolensjs_dcxqdv.png"
+              alt="Panolens.js">
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://pchen66.github.io/Panolens/" target="_blank" title="Panolens.js"> Nguồn
+                Panolens.js
+              </a> </button>
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size"> <a href="https://pannellum.org/" target="_blank"
+                  title="Pannellum">Pannellum</a></h3>
+            </div>
+            <p>
+              <b>Pannellum</b> là thư viện mã nguồn mở được xây dựng bằng sự kết hợp giữa HTML5, CSS3, Javascript và
+              WebGL
+              với kích thước chỉ khoảng 21kb(sau khi nén). Nó giúp bạn tạo trình xem ảnh hay video 360 độ một cách dễ
+              dàng và nhanh chóng cho trang web.
+              Ngoài ra thì Pannellum cũng tương thích với đa số trình duyệt phổ biến ngày nay như là Chrome 24+ (phiên
+              bản 24 trở lên),
+              Firefox 23+, Safari 8+, Internet Explorer 11+ và Edge. Và nó cũng có hỗ trợ một số tính năng hữu ích như
+              là
+              thêm các nút điều khiển, autoload, thêm chú thích và tác giả...
+
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1592966042/thu-vien-javascript-hien-thi-hinh-anh-360-do/Pannellum_iuxuvl.png"
+              alt="Pannellum">
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white" href="https://pannellum.org/"
+                target="_blank" title="Pannellum"> Nguồn
+                Pannellum
+              </a> </button>
+
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size"> <a href="https://www.marzipano.net/" target="_blank"
+                  title="Marzipano">Marzipano</a></h3>
+            </div>
+            <p>
+              <b>Marzipano</b> là thư viện mã nguồn mở giúp bạn dễ dàng tạo trình xem phương tiện 360 độ cho trang web.
+              Nó được thiết kế dựa trên các công nghệ web tiêu chuẩn, cung cấp API Javascript mạnh mẽ và hiển thị trên
+              nhiều màn hình
+              thiết bị khác nhau. Ngoài hỗ trợ các trình duyệt hiện đại thì nó cũng cấp các tính năng giúp bạn dễ dàng
+              áp dụng trên những trình duyệt cũ như là IE8.
+              Điểm mình thích ở thư viện này là nó cung cấp thêm công cụ giúp bạn tạo trực tiếp trình xem phương tiện
+              360 độ
+              mà không cần phải tải thư viện về máy. Bạn chỉ cần nhúng đoạn mã được cung cấp từ công cụ đó vào trang web
+              là có thể sử dụng rồi.
+
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1592966992/thu-vien-javascript-hien-thi-hinh-anh-360-do/Marzipano_vdbgfx.png"
+              alt="Marzipano">
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white" href="https://www.marzipano.net/"
+                target="_blank" title="Marzipano"> Nguồn
+                Marzipano
+              </a> </button>
+
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size"> <a href="https://naver.github.io/egjs-view360/"
+                  target="_blank" title="view360">view360</a></h3>
+            </div>
+            <p>
+              <b>view360</b> là thư viện mã nguồn mở cung cấp giải pháp trình xem phương tiện 360 độ một cách toàn diện
+              cho trang web của bạn. Với các tính năng hữu ích như là có thể sử dụng cho video hoặc hình ảnh,
+              giúp người dùng tương tác dễ hơn trên thiết bị điện thoại thông qua xoay hoặc vuốt,
+              load hình ảnh hay video thông qua URL... Nó được chia thành 2 dạng hiển thị chính là PanoViewer và
+              SpinViewer.
+              Đối với mỗi loại hiển thị thì đều có ví dụ chi tiết cho từng chức năng để giúp bạn dễ dàng hình dung và áp
+              dụng vào trang web của mình.
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1592968224/thu-vien-javascript-hien-thi-hinh-anh-360-do/view360_ygmfrr.png"
+              alt="view360">
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://naver.github.io/egjs-view360/" target="_blank" title="view360"> Nguồn
+                view360
+              </a> </button>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size"> <a
+                  href="https://scaleflex.github.io/js-cloudimage-360-view/" target="_blank"
+                  title="JS Cloudimage 360 View">JS Cloudimage 360 View</a></h3>
+            </div>
+            <p>
+              <b>JS Cloudimage 360 View</b> là thư viện mã nguồn mở với kích thước nhỏ gọn được viết bằng Javascript
+              giúp bạn
+              dễ dàng hiển thị hình ảnh dưới dạng 360 độ cũng như cung cấp thêm nhiều tính năng giúp người dùng tương
+              tác
+              thuận lợi hơn như là hiển thị toàn màn hình, chức năng lazyload, công cụ phóng to hình ảnh... Ngoài ra nó
+              cũng cấp CDN
+              giúp bạn có thể sử dụng trực tiếp cho trang web với cách thiết lập cũng rất đơn giản là gọi các thuộc tính
+              mà nó cung cấp sẵn vào trong đối tượng HTML mà ta muốn
+              hiển thị hình ảnh 360 độ.
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1592968932/thu-vien-javascript-hien-thi-hinh-anh-360-do/JS_Cloudimage_360_View_sroen7.png"
+              alt="JS Cloudimage 360 View">
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://scaleflex.github.io/js-cloudimage-360-view/" target="_blank"
+                title="JS Cloudimage 360 View"> Nguồn
+                JS Cloudimage 360 View
+              </a> </button>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size"> <a href="https://aframe.io/" target="_blank"
+                  title="A-Frame">A-Frame</a></h3>
+            </div>
+            <p>
+              <b>A-Frame</b> ngoài giúp bạn xây dựng các trình phương tiện 360 độ thì nó cũng cung cấp thêm nhiều tính
+              năng khác giúp bạn
+              tăng cường trải nghiệm thực tế ảo cho trang web. Bạn chỉ cần sử dụng CDN để gọi A-Frame và sau đó sử dụng
+              thẻ <code>&#60;a-scene&#62;</code>
+              để thiết lập các thuộc tính cho trình xem phương tiện 360 độ. Do viết bằng HTML nên nó dễ dàng đọc, hiểu
+              và áp dụng vào dựa án
+              web một cách dễ dàng. Nó cũng được nhiều công ty lớn tin tưởng và sử dụng như là Google, Disney, Samsung,
+              Toyota...
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1592970224/thu-vien-javascript-hien-thi-hinh-anh-360-do/A-Frame_ccxngh.png"
+              alt="A-Frame">
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white" href="https://aframe.io/"
+                target="_blank" title="A-Frame"> Nguồn
+                A-Frame
+              </a> </button>
+
+
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size"> <a
+                  href="https://developers.google.com/vr/develop/web/vrview-web" target="_blank" title="VR View">VR
+                  View</a></h3>
+            </div>
+            <p>
+              <b>VR View</b> là thư viện mã nguồn mở được xây dựng bằng Javascript do Google cung cấp giúp bạn có thể dễ
+              dàng nhúng hay thêm trình xem phương tiện 360 độ cho trang web của mình.
+              Nó hỗ trợ tốt nhất đối với hình ảnh là loại jpeg và video là mp4. Ngoài ra nó cũng cung cấp cho bạn một số
+              thuộc tính để tùy chỉnh
+              phù hợp với mục đích sử dụng như là xác định hiển thị góc ban đầu của vị trí camera, xác định độ rộng và
+              cao cho trình phương tiện,
+              sử dụng chế độ toàn màn hình...
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1592971481/thu-vien-javascript-hien-thi-hinh-anh-360-do/VR_View_lmqf0h.png"
+              alt="VR View">
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://developers.google.com/vr/develop/web/vrview-web" target="_blank" title="VR View"> Nguồn
+                VR View
+              </a> </button>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size"> <a href="https://photo-sphere-viewer.js.org/"
+                  target="_blank" title="Photo Sphere Viewer">
+                  Photo Sphere Viewer
+                </a></h3>
+            </div>
+            <p>
+              <b>Photo Sphere Viewer</b> là một thư viện Javascript được xây dựng dựa trên three.js giúp bạn dễ dàng
+              hiển thị hình ảnh dưới dạng toàn cảnh (360 độ)
+              cho trang web. Nó hiển thị được trên nhiều màn hình thiết bị khác nhau và cung cấp nhiều thuộc tính,
+              phương thức giúp bạn có thể
+              tinh chỉnh trình xem hình ảnh một cách dễ dàng như là hiển thị thanh phóng to thu nhỏ, nút tải hình ảnh về
+              máy tính, thêm tiêu đề nội dung vào hình ảnh...
+
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1592972185/thu-vien-javascript-hien-thi-hinh-anh-360-do/Photo_Sphere_Viewer_we67tf.png"
+              alt="Photo Sphere Viewer">
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://photo-sphere-viewer.js.org/" target="_blank" title="Photo Sphere Viewer"> Nguồn
+                Photo Sphere Viewer
+              </a> </button>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size"> <a href="https://github.com/thiagopnts/kaleidoscope"
+                  target="_blank" title="Kaleidoscope">
+                  Kaleidoscope
+                </a></h3>
+            </div>
+            <p>
+              <b>Kaleidoscope</b> là một thư viện Javascript mã nguồn mở giúp bạn dễ dàng xây dựng trình xem phương tiện
+              360 độ cho hình ảnh hoặc video.
+              Nếu bạn cần một thư viện nhỏ gọn, không sử dụng thư viện bổ sung và có thể đáp ứng những yếu tố cơ bản về
+              việc hiển thị video, hình ảnh toàn cảnh thì mình nghĩ thư
+              viện này là một lựa chọn tốt cho trang web của bạn.
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1592981974/thu-vien-javascript-hien-thi-hinh-anh-360-do/Kaleidoscope_ys8hp9.png"
+              alt="Kaleidoscoper">
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://github.com/thiagopnts/kaleidoscope" target="_blank" title="Kaleidoscope"> Nguồn
+                Kaleidoscope
+              </a> </button>
+
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size"> <a href="https://github.com/Jam3/360-image-viewer"
+                  target="_blank" title="360-image-viewer">
+                  360-image-viewer
+                </a></h3>
+            </div>
+            <p>
+              <b>360-image-viewer</b> là cũng là một thư viện giống như ở trên giúp bạn hiển thị toàn cảnh cho hình ảnh, video và 
+              responsive trên nhiều màn hình thiết bị khác nhau. Với kích thước chỉ khoảng 46kb(sau khi nén) giúp bạn dễ dàng tối ưu hiệu suất cho trang web khi sử dụng 
+              thư viện này.
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1592982237/thu-vien-javascript-hien-thi-hinh-anh-360-do/360-image-viewer_zmypkk.png"
+              alt="360-image-viewer">
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://github.com/Jam3/360-image-viewer" target="_blank" title="360-image-viewer"> Nguồn
+                360-image-viewer
+              </a> </button>
+
+              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size"> 
+                    Một số thư viện khác
+                </h3>
+              </div>
             
-           
+              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1592983828/thu-vien-javascript-hien-thi-hinh-anh-360-do/React_360_oo0gbv.png"
+                alt="React 360">
+              <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                  href="https://facebook.github.io/react-360/" target="_blank" title="React 360"> Nguồn
+                  React 360
+                </a> </button>
+
+                <hr>
+                <img class="img-thumbnail img-fluid mt-4 shadow p-2 lazyload"
+                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1592983919/thu-vien-javascript-hien-thi-hinh-anh-360-do/2VR_l1pibq.png"
+                alt="2VR">
+              <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                  href="http://www.2vr.in/" target="_blank" title="2VR"> Nguồn
+                  2VR
+                </a> </button>
+
+
+                <hr>
+                <img class="img-thumbnail img-fluid mt-4 shadow p-2 lazyload"
+                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1592984060/thu-vien-javascript-hien-thi-hinh-anh-360-do/Panoraven_gr40rv.png"
+                alt="Panoraven">
+              <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                  href="https://panoraven.com/en" target="_blank" title="Panoraven"> Nguồn
+                  Panoraven
+                </a> </button>
+
+                <hr>
+                <img class="img-thumbnail img-fluid mt-4 shadow p-2 lazyload"
+                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1592984407/thu-vien-javascript-hien-thi-hinh-anh-360-do/theasy_esf234.png"
+                alt="Theasys 360°">
+              <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                  href="https://www.theasys.io/samples/" target="_blank" title="Theasys 360°"> Nguồn
+                  Theasys 360°
+                </a> </button>
 
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mb-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">
-                  <a href="https://ckeditor.com/" title="CKEditor" target="_blank">
-                    Trình Soạn Thảo Văn Bản CKEditor
-                  </a>
-                </h3>
-              </div>
-            </div>
-            <p>
-              <b>CKEditor</b> với hơn 10 năm kinh nghiệm phát triển thì bạn có thể hoàn toàn yên tâm về chất lượng của trình soạn thảo văn bản này nhé.
-              Nó hỗ trợ hơn 70 ngôn ngữ trong đó có cả Việt Nam và được nhiều lập trình viên sử dụng thì mình nghĩ đây là sự lựa chọn tốt cho trang web của bạn.
-              Không chỉ vậy nó còn có thể chạy trên nhiều trình duyệt khác nhau, làm việc tốt với hầu hết framework front end hiện nay,
-              bạn có thể sử dụng CDN để nhúng trực tiếp vào trang HTML của mình... <br/>
-              Hiện nay nó có hai phiên bản chạy song song là CKEditor 4 và CKEditor5, tùy vào mục đích sử dụng mà bạn sẽ chọn trình soạn thảo phù hợp với mình nhé.
-              Trên trang chủ cũng có miêu tả chi tiết về hai chương trình này bạn có thể tìm hiểu thêm nha.
-            </p>
 
 
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1591709739/trinh-soan-thao-van-ban-web/trinh-so%E1%BA%A1n-thao-van-ban-CKEditor_a7fwhv.png"
-              alt="Trình Soạn Thảo Văn Bản CKEditor ">
-            <button type="button " class="btn btn-dark mt-4">
-              <a class="text-white" href="https://ckeditor.com/" target="_blank" title="CKEditor">
-                Nguồn CKEditor
-              </a>
-            </button>
-
-
-
-
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">
-                  <a href="https://alex-d.github.io/Trumbowyg/" title="Trumbowyg" target="_blank">
-                    Trình Soạn Thảo Văn Bản Trumbowyg
-                  </a>
-                </h3>
-              </div>
-            </div>
-            <p>
-              <b>Trumbowyg</b> là một trình sửa mã được tối ưu cho HTML5 và nó hỗ trợ hầu hết các trình duyệt phổ biến như 
-              IE9+, Firefox, Chrome... Theo mình thấy nó chứa tất cả các công cụ dành cho soạn thảo văn bản với dung lượng chỉ có 20Kb. 
-              Thật nhẹ phải không nào, nó sẽ giúp trang web của bạn có thể chạy mượt mà hơn. 
-              <br/>
-              Ngoài ra nó cũng có các plugin hỗ trợ khác giúp bạn có thể làm việc tốt hơn như chèn biểu tượng cảm xúc, hỗ trợ ngôn ngữ các 
-              quốc gia khác (bao gồm  Việt Nam luôn nhé), thêm âm thanh, chèn ký tự đặc biệt...
-            </p>
-
-
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1591710836/trinh-soan-thao-van-ban-web/trinh-so%E1%BA%A1n-thao-van-ban-Trumbowyg_n52ei6.png"
-              alt="Trình Soạn Thảo Văn Bản Trumbowyg ">
-            <button type="button " class="btn btn-dark mt-4">
-              <a class="text-white" href="https://alex-d.github.io/Trumbowyg/" target="_blank" title="Trumbowyg">
-                Nguồn Trumbowyg
-              </a>
-            </button>
-
-
-
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">
-                  <a href="https://www.tiny.cloud/features/" title="TinyMCE 5" target="_blank">
-                    Trình Soạn Thảo Văn Bản TinyMCE 5
-                  </a>
-                </h3>
-              </div>
-            </div>
-            <p>
-              <b>TinyMCE 5</b> là một trình soạn thảo giúp bạn có thể linh hoạt chỉnh sửa thêm bớt những phần mình mong muốn trong
-              chương trình này một cách dễ dàng. Ngoài các yếu tố cơ bản cho một trình soạn thảo thì mình thấy 
-            nó cũng cung cấp nhiều hỗ trợ nhằm giúp trải nghiệm người dùng tốt hơn như là thêm comment, kiểm tra đường dẫn, 
-            cung cấp icon và skin cao cấp, kiểm tra lỗi chính tả cho nội dung... Tuy nhiên đây cũng là điểm yếu của nó vì nếu bạn muốn sử dụng các công cụ cao cấp thì phí rơi vào khoảng 
-            25 $ cho một tháng.
-            </p>
-
-
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1591711510/trinh-soan-thao-van-ban-web/trinh-so%E1%BA%A1n-thao-van-ban-TinyMCE5_xcfo0b.png"
-              alt="Trình Soạn Thảo Văn Bản TinyMCE 5 ">
-            <button type="button " class="btn btn-dark mt-4">
-              <a class="text-white" href="https://www.tiny.cloud/features/" target="_blank" title="TinyMCE 5">
-                Nguồn TinyMCE 5
-              </a>
-            </button>
-
-
-
-
-
-
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">
-                  <a href="https://quilljs.com/" title="Quill" target="_blank">
-                    Trình Soạn Thảo Văn Bản Quill
-                  </a>
-                </h3>
-              </div>
-            </div>
-            <p>
-              <b>Quill</b> là một trình soạn thảo mã nguồn mở nên bạn cứ yên tâm sử dụng cho tất cả loại trang web thương mại hay phi 
-              thương mại nhé. Nó được xây dựng với nhiều chức năng như thêm đường dẫn, hình ảnh, video hay thêm các đoạn code vào nội dung...
-              Điểm mình thích ở Quill là cách thiết lập dễ dàng, hiển thị được trên tất cả các trình duyệt web hiện đại và responsive trên nhiều màn hình thiết bị,   có các bài hướng dẫn chi tiết về các vấn đề thường hay gặp  khi sử dụng nó.
-            </p>
-
-
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1591712371/trinh-soan-thao-van-ban-web/trinh-so%E1%BA%A1n-thao-van-ban-Quill_o64fwu.png"
-              alt="Trình Soạn Thảo Văn Bản Quill ">
-            <button type="button " class="btn btn-dark mt-4">
-              <a class="text-white" href="https://quilljs.com/" target="_blank" title="Quill">
-                Nguồn Quill
-              </a>
-            </button>
-
-
-
-
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">
-                  <a href="https://trix-editor.org/" title="Trix" target="_blank">
-                    Trình Soạn Thảo Văn Bản Trix
-                  </a>
-                </h3>
-              </div>
-            </div>
-            <p>
-              <b>Trix</b> là một trình soạn thảo mã nguồn mở  giúp bạn có thể soạn tin nhắn, viết bình luận, viết bài... trong trang web một cách dễ dàng.
-              Nó được đánh giá hơn 15K sao trên github và được nhiều lập trình viên sử dụng. Nếu bạn chỉ cần các chức năng cần thiết cho việc tạo nội dung 
-              thì Trix theo mình thấy là một lựa chọn tuyệt vời.
-            </p>
-
-
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1591713139/trinh-soan-thao-van-ban-web/trinh-so%E1%BA%A1n-thao-van-ban-Trix_isasfv.png"
-              alt="Trình Soạn Thảo Văn Bản Trix ">
-            <button type="button " class="btn btn-dark mt-4">
-              <a class="text-white" href="https://trix-editor.org/" target="_blank" title="Trix">
-                Nguồn Trix
-              </a>
-            </button>
-
-
-
-
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">
-                  <a href="https://xdsoft.net/jodit/" title="Jodit Editor 3" target="_blank">
-                    Trình Soạn Thảo Văn Bản Jodit Editor 3
-                  </a>
-                </h3>
-              </div>
-            </div>
-            <p>
-              <b>Jodit Editor 3</b> là một trình soạn thảo mã nguồn mở trên github được viết bằng TypeScript thuần mà không sử dụng thêm các thư viện bổ sung nào.
-              Nó cho phép bạn thiết lập bằng nhiều cách như qua npm, tải về, dùng CDN... cho trang web của mình.
-              Điểm mình thấy thích ở nó là ngoài các bài hướng dẫn chi tiết thì còn có thêm chương trình giúp chúng ta có thể  tự do trong việc lựa chọn những  
-              công cụ để gắn vào Jodit Editor thông qua đoạn code chứa các thuộc tính  được tự động thiết lập ở bên dưới.(Cái này ở phần examples nhé)
-            </p>
-
-
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1591714089/trinh-soan-thao-van-ban-web/trinh-so%E1%BA%A1n-thao-van-ban-Jodit_Editor_3_xoxbli.png"
-              alt="Trình Soạn Thảo Văn Bản Jodit Editor 3 ">
-            <button type="button " class="btn btn-dark mt-4">
-              <a class="text-white" href="https://xdsoft.net/jodit/" target="_blank" title="Jodit Editor 3">
-                Nguồn Jodit Editor 3
-              </a>
-            </button>
-
-
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">
-                  <a href="https://summernote.org/" title="Summernote" target="_blank">
-                    Trình Soạn Thảo Văn Bản Summernote 
-                  </a>
-                </h3>
-              </div>
-            </div>
-            <p>
-              <b>Summernote</b> là một trình soạn thảo mã nguồn mở trên github với hơn 9K sao bình chọn. Nó được thiết kế thông qua framework Bootstrap 
-              với đầy đủ các tính năng cần thiết cho việc tạo nội dung trên trang web. Bạn chỉ cần tải source file css, js của nó và thêm  framework Bootstrap(Hỗ trợ hai phiên bản 3 và 4 luôn nhé)
-              là đã có thể sử dụng cho trang web của mình rồi.
-            </p>
-
-
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1591714967/trinh-soan-thao-van-ban-web/trinh-so%E1%BA%A1n-thao-van-ban-Summernote_htijia.png"
-              alt="Trình Soạn Thảo Văn Bản Summernote">
-            <button type="button " class="btn btn-dark mt-4">
-              <a class="text-white" href="https://summernote.org/" target="_blank" title="Summernote">
-                Nguồn Summernote 
-              </a>
-            </button>
-
-
-
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">
-                  <a href="https://editorjs.io/" title="Editor.js" target="_blank">
-                    Trình Soạn Thảo Văn Bản Editor.js 
-                  </a>
-                </h3>
-              </div>
-            </div>
-            <p>
-              <b>Editor.js</b> là một trình soạn thảo mã nguồn mở theo kiểu block-styled. Nó sẽ không sử dụng 
-              các thẻ HTML như các trình soạn thảo thông thường mà nó sẽ xuất nội dung dưới dạng JSON giúp chúng ta 
-              có thể dễ dàng quản lý hơn. Nó  cũng có các plugin hỗ trợ thông qua việc sử dụng API. Nhờ chức năng này nên bất kỳ 
-              lập trình viên nào đều có thể đóng góp thêm nhiều plugin thú vị và hữu ích cho chương trình này. 
-            </p>
-
-
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1591755055/trinh-soan-thao-van-ban-web/trinh-so%E1%BA%A1n-thao-van-ban-Editorjs_w65pcp.png"
-              alt="Trình Soạn Thảo Văn Bản Editor.js">
-            <button type="button " class="btn btn-dark mt-4">
-              <a class="text-white" href="https://editorjs.io/" target="_blank" title="Editor.js">
-                Nguồn Editor.js 
-              </a>
-            </button>
-
-
-
-
-
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">
-                  <a href="http://yabwe.github.io/medium-editor/" title="MediumEditor" target="_blank">
-                    Trình Soạn Thảo Văn Bản MediumEditor
-                  </a>
-                </h3>
-              </div>
-            </div>
-            <p>
-              <b>MediumEditor</b> là một trình soạn thảo mã nguồn mở được xây dựng chỉnh sửa nội dung giống với trang web <a href="https://medium.com/" title="Medium" target="_blank">Medium</a> dành chuyên cho những người viết blog.
-              Nó chỉ chứa những tiện ích cơ bản cần thiết cho trình soạn thảo vì vậy dung lượng chỉ khoảng 28kB. Điều này sẽ giúp trang web bạn được tối ưu hơn.
-              Ngoài ra nếu chúng ta muốn thêm các tính năng khác để tối ưu hóa việc chỉnh sửa   thì MediumEditor cũng cung cấp thêm những công cụ
-              tiện ích bên ngoài được  cập nhật thường xuyên.
-
-            </p>
-
-
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1591757229/trinh-soan-thao-van-ban-web/trinh-so%E1%BA%A1n-thao-van-ban-MediumEditor_vrt5yn.png"
-              alt="Trình Soạn Thảo Văn Bản MediumEditor">
-            <button type="button " class="btn btn-dark mt-4">
-              <a class="text-white" href="http://yabwe.github.io/medium-editor/" target="_blank" title="MediumEditor">
-                Nguồn MediumEditor
-              </a>
-            </button>
-
-
-
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">
-                  <a href="http://wysihtml.com/" title="Wysihtml" target="_blank">
-                    Trình Soạn Thảo Văn Bản Wysihtml
-                  </a>
-                </h3>
-              </div>
-            </div>
-            <p>
-              <b>Wysihtml</b> là một trình soạn thảo mã nguồn mở được xây dựng bởi nhóm Voog.
-              Nó có đầy đủ chức năng để giúp bạn có thể soạn thảo văn bản một cách dễ dàng và hỗ trợ hầu hết 
-              trên các trình duyệt hiện đại, màn hình thiết bị ngày nay. Có một số công cụ mình khá thích ở nó là 
-              tự động chuyển đổi các thẻ HTML không hợp lệ, tự động phân tích nội dung khi được sao chép từ Word, PDF 
-              , hiển thị nội dung dưới dạng HTML...
-
-            </p>
-
-
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1591758385/trinh-soan-thao-van-ban-web/trinh-so%E1%BA%A1n-thao-van-ban-Wysihtml_kedl4u.png"
-              alt="Trình Soạn Thảo Văn Bản Wysihtml">
-            <button type="button " class="btn btn-dark mt-4">
-              <a class="text-white" href="http://wysihtml.com/" target="_blank" title="Wysihtml">
-                Nguồn Wysihtml
-              </a>
-            </button>
-
-
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">
-                  <a href="https://getcontenttools.com/demo" title="ContentTools" target="_blank">
-                    Trình Soạn Thảo Văn Bản ContentTools
-                  </a>
-                </h3>
-              </div>
-            </div>
-            <p>
-              <b>ContentTools</b> là một trình soạn thảo mã nguồn mở được xây dựng giúp chỉnh sửa nội dung HTML một cách dễ dàng.
-              Nó cung cấp đầy đủ các tiện ích cho việc soạn thảo nội dung và bạn cũng có thêm các thư viện, tiện ích khác vào trong chương trình 
-              một cách dễ dàng (Xem ở phần API nhé).  Ngoài ra mình thấy nó có những bài viết về cách thiết lập, thêm hay bỏ những chức năng trong chương trình... rất chi tiết và tỉ mỉ.
-
-
-            </p>
-
-
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1591759196/trinh-soan-thao-van-ban-web/trinh-so%E1%BA%A1n-thao-van-ban-ContentTools_lkot1y.png"
-              alt="Trình Soạn Thảo Văn Bản ContentTools">
-            <button type="button " class="btn btn-dark mt-4">
-              <a class="text-white" href="https://getcontenttools.com/demo" target="_blank" title="ContentTools">
-                Nguồn ContentTools
-              </a>
-            </button>
-
-
-
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">
-                  <a href="https://froala.com/wysiwyg-editor/tour/" title="Froala" target="_blank">
-                    Trình Soạn Thảo Văn Bản Froala
-                  </a>
-                </h3>
-              </div>
-            </div>
-            <p>
-              <b>Froala</b> là một trình soạn thảo dễ dàng thiết lập cho trang web  cũng như cho phép bạn có thể mở rộng các tính năng tùy vào mục đích sử dụng.
-              Do được viết bằng javascript thuần nên bạn có thể sử dụng cho hầu hết các framework front-end hiện đại ngày nay.
-              Ngoài ra nó cung cấp rất nhiều công cụ hữu ích như là chỉnh sửa hình ảnh,  thêm  hay chỉnh sửa video, 
-              thêm icon, quản lý bảng... Tuy vậy nếu bạn muốn sử dụng cho mục đích thương mại  thì phải mua giấy phép nhé.
-
-
-            </p>
-
-
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1591760657/trinh-soan-thao-van-ban-web/trinh-so%E1%BA%A1n-thao-van-ban-Froala_xzhtsu.png"
-              alt="Trình Soạn Thảo Văn Bản Froala">
-            <button type="button " class="btn btn-dark mt-4">
-              <a class="text-white" href="https://froala.com/wysiwyg-editor/tour/" target="_blank" title="Froala">
-                Nguồn Froala
-              </a>
-            </button>
-
-
-
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">
-                  <a href="https://imperavi.com/redactor/" title="Redactor" target="_blank">
-                    Trình Soạn Thảo Văn Bản Redactor
-                  </a>
-                </h3>
-              </div>
-            </div>
-            <p>
-              <b>Redactor</b> là một trình soạn thảo cung cấp đầy đủ chức năng với thiết kế đơn giản và đẹp mắt.
-              Với hơn 9 năm phát triển bao gồm nhiều plugin hỗ trợ thì mình nghĩ đây là một sản phẩm tốt để bạn 
-              dùng cho trang web của mình. Ngoài ra nó có các ví dụ cực kỳ chi tiết cho từng vấn đề các lập trình hay gặp trong quá trình sử dụng chương trình.
-              Tuy vậy nó cũng có điểm hạn chế là bạn sẽ phải mua giấy phép khi sử dụng cho mục đích thương mại.
-            </p>
-
-
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1591759900/trinh-soan-thao-van-ban-web/trinh-so%E1%BA%A1n-thao-van-ban-Redactor_c4ost0.png"
-              alt="Trình Soạn Thảo Văn Bản Redactor">
-            <button type="button " class="btn btn-dark mt-4">
-              <a class="text-white" href="https://imperavi.com/redactor/" target="_blank" title="Redactor">
-                Nguồn Redactor
-              </a>
-            </button>
 
 
 
@@ -448,8 +357,13 @@
             <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
 
 
-            <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những công cụ WYSIWYG  hữu ích dành cho việc phát triển, thiết kế web
-       và
+            <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những thư viện tạo chế độ xem 360 độ hữu ích
+              dành
+              cho
+              việc
+              phát
+              triển, thiết kế web
+              và
               nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất
               mong bạn tiếp tục ủng
               hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
