@@ -26,7 +26,7 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i> Những Thư Viện Tạo Chế Độ Xem 360 Độ Cho Web Năm 2020</h2>
+                  aria-hidden="true"></i> Những Thư Viện Giúp Bạn Tạo Chức Năng Upload File Cho Web (Năm 2020)</h2>
             </div>
           </div>
 
@@ -37,309 +37,463 @@
           </div>
           <div class="text-content-article mt-5">
             <p><i>
-                <b>Chế độ xem 360 độ là gì?</b> Ngày nay với sự phát triển mạnh mẽ của công nghệ thì bạn có thể dễ dàng
-                chụp những hình ảnh
-                toàn cảnh(360 độ). Nhưng việc hiển thị các hình ảnh đó trên trang web của bạn thì thật sự rất khó khăn
-                vì nó yêu cầu rất cao
-                về mặt kỹ thuật để có thể hiện thị toàn cảnh hình ảnh của bạn cũng như giúp người dùng dễ dàng tương tác
-                nhất có thể.
-                Do đó bài viết hôm nay mình sẽ giới thiệu đến bạn các thư viện Javascript giúp chúng ta giải quyết vấn
-                đề trên
-                và làm tăng trải nghiệm người dùng hơn. Nào hãy cùng mình đi vào tìm hiểu nhé!
-
-
-
+                Ngày hôm nay chúng ta sẽ đi vào tìm hiểu lý do tại sao lại cần những thư viện upload file cũng như
+                những thư viện nào được lập trình sử dụng phổ biến trong việc phát triển web năm 2020. Nào bạn hãy cùng
+                mình đi vào tìm hiểu nhé!
               </i>
             </p>
+            <p>
+              <b>Tại sao chúng ta lại cần thư viện để  xây dựng chức năng upload file cho trang web?</b>
+            </p>
+            <p>
+              Ví dụ bạn có một trang web bán hàng thì việc tải hình ảnh sản phẩm lên trên máy chủ để lưu trữ là
+              chức năng không thể thiếu trong trang web
+              hay các trang diễn đàn cần dùng chức năng này để có thể lấy hình ảnh thông tin từ người dùng...
+              Nó không chỉ gói gọn trong hình ảnh mà các tệp tải lên có thể là video, pdf, word...<br />
+              Tuy nhiên để viết mã cho chức năng này thì tốn rất nhiều công sức và thời gian. Do đó các thư viện upload file
+              ra đời giúp bạn dễ dàng thiết kế và phát triển chức năng này với nhiều tính năng tiện ích cộng thêm như là
+              cho phép tải nhiều tệp cùng một lúc, hiển thị thanh tiến trình cho quá trình tải file, thêm chức năng kéo
+              thả...
+              Bài hôm nay chúng ta sẽ đi vào những thư viện upload file phổ biến trong năm 2020 nhé!
 
+            </p>
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size"> <a href="https://pchen66.github.io/Panolens/"
-                  target="_blank" title="Panolens.js">Panolens.js</a></h3>
+              <h3 class="text-primary ml-4 title-article-size"> <a href="https://pqina.nl/filepond/" target="_blank"
+                  title="Filepond">Filepond</a></h3>
             </div>
             <p>
-              <b>Panolens.js</b> là một thư viện mã nguồn được xây dựng dựa trên Three.JS (3D framework) giúp bạn hiển
-              thị hình ảnh, video
-              dưới dạng 360 độ, thực tế ảo... Để sử dụng thì bạn chỉ cần tải 2 file là <code>three.min.js</code>
-              và <code>panolens.min.js</code>, sau đó gán vào chương trình và khởi tạo đối tượng <code>PANOLENS</code>
-              bằng mã Javascript (Phần này bạn xem thêm ở DOCUMENTATION nhé). Điểm mình thích ở thư viện này là có từng
-              ví dụ chi tiết
-              cho mỗi chức năng như là video dưới dạng 360 độ, cho phép chú thích nội dung vào hình ảnh video, tích hợp
-              các nút điều khiển hướng...
-              Phần này bạn có thể tham khảo thêm ở mục EXAMPLE của trang demo nhé!
+              <b>Filepond</b> là một thư viện mã nguồn mở được xây dựng bằng Javascript thuần giúp bạn có thể tải lên
+              bất cứ thứ gì
+              cho trang web. Ngoài ra nó còn có chức năng tối ưu hình ảnh giúp việc tải file được nhanh hơn. Nó cũng
+              được thiết kế
+              theo hướng hiện đại mang lại cảm giác thú vị cũng như nâng cao trải nghiệm cho người dùng khi sử dụng chức
+              năng này. Một số điểm mạnh của thư viện này là
+              nhận nhiều định dạng đầu vào như là tệp, thư mục, URL dữ liệu..., chức năng kéo thả tệp, điều hướng thông
+              qua bàn phím
+              hay là hiển thị được trên nhiều màn hình thiết bị khác nhau bằng cách chia tỷ lệ tự động dựa theo không
+              gian có sẵn.
+              Còn nhiều chức năng khác bạn có thể xem thêm ở trang chính của nó nhé.<br />
+              Điểm mình thích của thư viện này là bạn có thể sử dụng cho các framework front-end phổ biến hiện nay như
+              là Vue, Reat, Angular và Jquery.
 
             </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1592965155/thu-vien-javascript-hien-thi-hinh-anh-360-do/Panolensjs_dcxqdv.png"
-              alt="Panolens.js">
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://pchen66.github.io/Panolens/" target="_blank" title="Panolens.js"> Nguồn
-                Panolens.js
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593053894/thu-vien-javascript-upload-file/Filepond_mxyfaa.png"
+              alt="Filepond">
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white" href="https://pqina.nl/filepond/"
+                target="_blank" title="Filepond"> Nguồn
+                Filepond
               </a> </button>
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size"> <a href="https://pannellum.org/" target="_blank"
-                  title="Pannellum">Pannellum</a></h3>
+              <h3 class="text-primary ml-4 title-article-size"> <a href="https://www.dropzonejs.com/" target="_blank"
+                  title="DropzoneJS">DropzoneJS</a></h3>
             </div>
             <p>
-              <b>Pannellum</b> là thư viện mã nguồn mở được xây dựng bằng sự kết hợp giữa HTML5, CSS3, Javascript và
-              WebGL
-              với kích thước chỉ khoảng 21kb(sau khi nén). Nó giúp bạn tạo trình xem ảnh hay video 360 độ một cách dễ
-              dàng và nhanh chóng cho trang web.
-              Ngoài ra thì Pannellum cũng tương thích với đa số trình duyệt phổ biến ngày nay như là Chrome 24+ (phiên
-              bản 24 trở lên),
-              Firefox 23+, Safari 8+, Internet Explorer 11+ và Edge. Và nó cũng có hỗ trợ một số tính năng hữu ích như
+              <b>DropzoneJS</b> là một thư viện mã nguồn mở nhỏ gọn giúp bạn xây dựng chức năng upload file
+              bằng cách kéo thả tệp hay chọn tệp bằng cách thông thường. Ngoài ra sau khi tải xong file thì nó sẽ hiển
+              thị hình ảnh của tệp được tải lên
+              để người dùng biết là
+              mình đã tải đúng file hay chưa. Nó cũng cung cấp cho bạn một số thiết lập để dễ dàng tùy chỉnh chức năng
+              này
+              như là xác định kích thước tối đa cho file tải lên, có cho phép tải nhiều file lên cùng một lúc hay không,
+              điều chỉnh hình ảnh hiển thị sau khi file được tải lên... Cái này bạn thêm khảo thêm trong phần
+              Configuration của trang nó nhé.
+
+
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593054546/thu-vien-javascript-upload-file/DropzoneJS_d8xyxd.png"
+              alt="DropzoneJS">
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white" href="https://www.dropzonejs.com/"
+                target="_blank" title="DropzoneJS"> Nguồn
+                DropzoneJS
+              </a> </button>
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size"> <a href="https://uppy.io/" target="_blank"
+                  title="Uppy">Uppy</a></h3>
+            </div>
+            <p>
+              <b>Uppy</b> là một thư viện mã nguồn mở giúp bạn dễ dàng tải file lên cho máy chủ từ máy tính hay
+              thông qua các trang web lưu trữ như là Google Driver, Dropbox, OneDrive, Instagramn...
+              Với các tính năng hữu ích khác như là kích thước nhỏ gọn, được chia thành nhiều mô đun để bạn
+              có thể loại bỏ những chức năng không sử dụng, có thể khôi phục tệp nếu gặp sự cố thông qua Golden
+              Retriever,
+              có hỗ trợ nhiều ngôn ngữ (Có Việt Nam nhé)... Bạn có thể xem các hướng dẫn thiết lập sử dụng trong phần
+              Document hay các bài viêt cập nhật
+              tính năng cho từng phiên bản ở trong Blog nhé.
+
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593055792/thu-vien-javascript-upload-file/Uppy_lu6z9w.png"
+              alt="Uppy">
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white" href="https://uppy.io/"
+                target="_blank" title="Uppy"> Nguồn
+                Uppy
+              </a> </button>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size"> <a href="https://blueimp.github.io/jQuery-File-Upload/"
+                  target="_blank" title="jQuery File Upload">jQuery File Upload</a></h3>
+            </div>
+            <p>
+              <b>jQuery File Upload</b> là một thư viện xây dựng Jquery giúp bạn có thể tải tệp lên cho trang web với
+              nhiều tính
+              năng tích hợp như là lựa chọn tải nhiều tệp cùng một lúc, kéo thả tệp, xác thực và xem trước hình ảnh hiển
+              thị.
+              Nó hoạt động tốt với mọi nên tảng từ phía máy chủ như là NodeJS, Java, PHP, Python... Ngoài ra bạn có xác
+              định thêm một số thuộc tính như là
+              lựa chọn loại file được phép tải lên, giới hạn kích thước file, thêm tiêu đề và chú thích...
+
+
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593056314/thu-vien-javascript-upload-file/jQuery_File_Upload_aipvv7.png"
+              alt="jQuery File Upload">
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://blueimp.github.io/jQuery-File-Upload/" target="_blank" title="jQuery File Upload"> Nguồn
+                jQuery File Upload
+              </a> </button>
+
+
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size"> <a href="https://uppload.js.org/" target="_blank"
+                  title="Uppload">Uppload</a></h3>
+            </div>
+            <p>
+              <b>Uppload</b> là một thư viện mã nguồn mở giúp bạn tạo chức năng upload hình ảnh một cách dễ dàng và
+              nhanh chóng cho
+              trang web. Với khả năng tùy biến cao thông qua việc cung cấp hơn 30 plugin hỗ trợ. Một sổ điểm mạnh của nó
               là
-              thêm các nút điều khiển, autoload, thêm chú thích và tác giả...
+              chức năng kéo thả, lấy hình ảnh từ các dịch vụ web, có thể chỉnh sửa hình ảnh trược khi tải lên, hoạt động
+              trên hầu hết
+              các trình duyệt hiện nay, hỗ trợ cho các front-end framework phổ biến như là Vue, React...
+
 
             </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1592966042/thu-vien-javascript-hien-thi-hinh-anh-360-do/Pannellum_iuxuvl.png"
-              alt="Pannellum">
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white" href="https://pannellum.org/"
-                target="_blank" title="Pannellum"> Nguồn
-                Pannellum
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593056895/thu-vien-javascript-upload-file/Uppload_an9wis.png"
+              alt="Uppload">
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white" href="https://uppload.js.org/"
+                target="_blank" title="Uppload"> Nguồn
+                Uppload
               </a> </button>
 
 
 
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size"> <a href="https://www.marzipano.net/" target="_blank"
-                  title="Marzipano">Marzipano</a></h3>
-            </div>
-            <p>
-              <b>Marzipano</b> là thư viện mã nguồn mở giúp bạn dễ dàng tạo trình xem phương tiện 360 độ cho trang web.
-              Nó được thiết kế dựa trên các công nghệ web tiêu chuẩn, cung cấp API Javascript mạnh mẽ và hiển thị trên
-              nhiều màn hình
-              thiết bị khác nhau. Ngoài hỗ trợ các trình duyệt hiện đại thì nó cũng cấp các tính năng giúp bạn dễ dàng
-              áp dụng trên những trình duyệt cũ như là IE8.
-              Điểm mình thích ở thư viện này là nó cung cấp thêm công cụ giúp bạn tạo trực tiếp trình xem phương tiện
-              360 độ
-              mà không cần phải tải thư viện về máy. Bạn chỉ cần nhúng đoạn mã được cung cấp từ công cụ đó vào trang web
-              là có thể sử dụng rồi.
-
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1592966992/thu-vien-javascript-hien-thi-hinh-anh-360-do/Marzipano_vdbgfx.png"
-              alt="Marzipano">
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white" href="https://www.marzipano.net/"
-                target="_blank" title="Marzipano"> Nguồn
-                Marzipano
-              </a> </button>
-
-
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size"> <a href="https://naver.github.io/egjs-view360/"
-                  target="_blank" title="view360">view360</a></h3>
+              <h3 class="text-primary ml-4 title-article-size"> <a href="https://fineuploader.com/index.html"
+                  target="_blank" title="FineUploader">FineUploader</a></h3>
             </div>
             <p>
-              <b>view360</b> là thư viện mã nguồn mở cung cấp giải pháp trình xem phương tiện 360 độ một cách toàn diện
-              cho trang web của bạn. Với các tính năng hữu ích như là có thể sử dụng cho video hoặc hình ảnh,
-              giúp người dùng tương tác dễ hơn trên thiết bị điện thoại thông qua xoay hoặc vuốt,
-              load hình ảnh hay video thông qua URL... Nó được chia thành 2 dạng hiển thị chính là PanoViewer và
-              SpinViewer.
-              Đối với mỗi loại hiển thị thì đều có ví dụ chi tiết cho từng chức năng để giúp bạn dễ dàng hình dung và áp
-              dụng vào trang web của mình.
+              <b>FineUploader</b> là một thư viện xây dựng bằng Javascript giúp bạn có thể xây dựng chức năng upload
+              file cho hầu hết các định dạng tệp
+              và chạy được nhiều nền tảng khác nhau bên phía máy chủ. Ngoài ra nó còn có một số tính năng hữu ích như là
+              dễ dàng chỉnh sửa, thiết lập style cho thanh tiến trình, chức năng kéo và thả, tự động tải lại khi có sự
+              cố về mạng,
+              tải trực tiếp lên các dịch vụ đám mây như Amazone S3, Microsoft Azure..., xem trước hình ảnh hiển thị,
+              giới hạn số lượng file được phép tải lên...
             </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1592968224/thu-vien-javascript-hien-thi-hinh-anh-360-do/view360_ygmfrr.png"
-              alt="view360">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593058134/thu-vien-javascript-upload-file/FineUploader_arivoq.png"
+              alt="FineUploader">
             <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://naver.github.io/egjs-view360/" target="_blank" title="view360"> Nguồn
-                view360
+                href="https://fineuploader.com/index.html" target="_blank" title="FineUploader"> Nguồn
+                FineUploader
               </a> </button>
-
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size"> <a
-                  href="https://scaleflex.github.io/js-cloudimage-360-view/" target="_blank"
-                  title="JS Cloudimage 360 View">JS Cloudimage 360 View</a></h3>
+              <h3 class="text-primary ml-4 title-article-size"> <a href="http://www.resumablejs.com/" target="_blank"
+                  title="Resumable.js">Resumable.js</a></h3>
             </div>
             <p>
-              <b>JS Cloudimage 360 View</b> là thư viện mã nguồn mở với kích thước nhỏ gọn được viết bằng Javascript
-              giúp bạn
-              dễ dàng hiển thị hình ảnh dưới dạng 360 độ cũng như cung cấp thêm nhiều tính năng giúp người dùng tương
-              tác
-              thuận lợi hơn như là hiển thị toàn màn hình, chức năng lazyload, công cụ phóng to hình ảnh... Ngoài ra nó
-              cũng cấp CDN
-              giúp bạn có thể sử dụng trực tiếp cho trang web với cách thiết lập cũng rất đơn giản là gọi các thuộc tính
-              mà nó cung cấp sẵn vào trong đối tượng HTML mà ta muốn
-              hiển thị hình ảnh 360 độ.
+              <b>Resumable.js</b> là một thư viện Javascript cho phép bạn tạo chức năng tải nhiều file cùng một lúc
+              thông qua HTML5 File API.
+              Nó được thiết kế để chịu tải các file có kích thước lớn thông qua HTTP bằng cách chia tệp ra thành từng
+              file nhỏ
+              và nếu có lỗi thì nó sẽ tự động thực hiện lại quá trình tải file. Và nó hỗ trợ hai trình duyệt chính là
+              Firefox 4+ and Chrome 11+.
+              Phần hướng dẫn và thiết lập bạn có thể tham khảo trong trang demo của nó nhé!
             </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1592968932/thu-vien-javascript-hien-thi-hinh-anh-360-do/JS_Cloudimage_360_View_sroen7.png"
-              alt="JS Cloudimage 360 View">
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://scaleflex.github.io/js-cloudimage-360-view/" target="_blank"
-                title="JS Cloudimage 360 View"> Nguồn
-                JS Cloudimage 360 View
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593059212/thu-vien-javascript-upload-file/Resumablejs_d26zpf.png"
+              alt="Resumable.js">
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white" href="http://www.resumablejs.com/"
+                target="_blank" title="Resumable.js"> Nguồn
+                Resumable.js
               </a> </button>
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size"> <a href="https://aframe.io/" target="_blank"
-                  title="A-Frame">A-Frame</a></h3>
-            </div>
-            <p>
-              <b>A-Frame</b> ngoài giúp bạn xây dựng các trình phương tiện 360 độ thì nó cũng cung cấp thêm nhiều tính
-              năng khác giúp bạn
-              tăng cường trải nghiệm thực tế ảo cho trang web. Bạn chỉ cần sử dụng CDN để gọi A-Frame và sau đó sử dụng
-              thẻ <code>&#60;a-scene&#62;</code>
-              để thiết lập các thuộc tính cho trình xem phương tiện 360 độ. Do viết bằng HTML nên nó dễ dàng đọc, hiểu
-              và áp dụng vào dựa án
-              web một cách dễ dàng. Nó cũng được nhiều công ty lớn tin tưởng và sử dụng như là Google, Disney, Samsung,
-              Toyota...
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1592970224/thu-vien-javascript-hien-thi-hinh-anh-360-do/A-Frame_ccxngh.png"
-              alt="A-Frame">
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white" href="https://aframe.io/"
-                target="_blank" title="A-Frame"> Nguồn
-                A-Frame
-              </a> </button>
-
 
 
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size"> <a
-                  href="https://developers.google.com/vr/develop/web/vrview-web" target="_blank" title="VR View">VR
-                  View</a></h3>
+                  href="https://danielmg.org/demo/java-script/uploader/single-upload" target="_blank"
+                  title="jQuery Ajax File Uploader Widget">jQuery Ajax File Uploader Widget</a></h3>
             </div>
             <p>
-              <b>VR View</b> là thư viện mã nguồn mở được xây dựng bằng Javascript do Google cung cấp giúp bạn có thể dễ
-              dàng nhúng hay thêm trình xem phương tiện 360 độ cho trang web của mình.
-              Nó hỗ trợ tốt nhất đối với hình ảnh là loại jpeg và video là mp4. Ngoài ra nó cũng cung cấp cho bạn một số
-              thuộc tính để tùy chỉnh
-              phù hợp với mục đích sử dụng như là xác định hiển thị góc ban đầu của vị trí camera, xác định độ rộng và
-              cao cho trình phương tiện,
-              sử dụng chế độ toàn màn hình...
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1592971481/thu-vien-javascript-hien-thi-hinh-anh-360-do/VR_View_lmqf0h.png"
-              alt="VR View">
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://developers.google.com/vr/develop/web/vrview-web" target="_blank" title="VR View"> Nguồn
-                VR View
-              </a> </button>
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size"> <a href="https://photo-sphere-viewer.js.org/"
-                  target="_blank" title="Photo Sphere Viewer">
-                  Photo Sphere Viewer
-                </a></h3>
-            </div>
-            <p>
-              <b>Photo Sphere Viewer</b> là một thư viện Javascript được xây dựng dựa trên three.js giúp bạn dễ dàng
-              hiển thị hình ảnh dưới dạng toàn cảnh (360 độ)
-              cho trang web. Nó hiển thị được trên nhiều màn hình thiết bị khác nhau và cung cấp nhiều thuộc tính,
-              phương thức giúp bạn có thể
-              tinh chỉnh trình xem hình ảnh một cách dễ dàng như là hiển thị thanh phóng to thu nhỏ, nút tải hình ảnh về
-              máy tính, thêm tiêu đề nội dung vào hình ảnh...
+              <b>jQuery Ajax File Uploader Widget</b> là một thư viện mã nguồn mở được xây dựng bằng Jquery
+              giúp bạn dễ dàng xây dựng chức năng upload file thông qua việc sử dụng AJAX.
+              Với kích thước nhỏ gọn chỉ khoảng 8kb, cho phép thiết lập các điều chỉnh bắt đầu hay dừng quá trình tải
+              file,
+              thêm ghi chú vào cho công cụ, hiển thị hình ảnh xem trước... thì mình nghĩ đây là một thư viện tốt để xây
+              dựng
+              chức năng tải file cho trang web. Nó cũng có đầy đủ ví dụ về các tính năng, bạn có thể tham khảo trong
+              trang demo nhé!
 
             </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1592972185/thu-vien-javascript-hien-thi-hinh-anh-360-do/Photo_Sphere_Viewer_we67tf.png"
-              alt="Photo Sphere Viewer">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593059958/thu-vien-javascript-upload-file/jQuery_Ajax_File_Uploader_Widget_a43zko.png"
+              alt="jQuery Ajax File Uploader Widget">
             <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://photo-sphere-viewer.js.org/" target="_blank" title="Photo Sphere Viewer"> Nguồn
-                Photo Sphere Viewer
-              </a> </button>
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size"> <a href="https://github.com/thiagopnts/kaleidoscope"
-                  target="_blank" title="Kaleidoscope">
-                  Kaleidoscope
-                </a></h3>
-            </div>
-            <p>
-              <b>Kaleidoscope</b> là một thư viện Javascript mã nguồn mở giúp bạn dễ dàng xây dựng trình xem phương tiện
-              360 độ cho hình ảnh hoặc video.
-              Nếu bạn cần một thư viện nhỏ gọn, không sử dụng thư viện bổ sung và có thể đáp ứng những yếu tố cơ bản về
-              việc hiển thị video, hình ảnh toàn cảnh thì mình nghĩ thư
-              viện này là một lựa chọn tốt cho trang web của bạn.
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1592981974/thu-vien-javascript-hien-thi-hinh-anh-360-do/Kaleidoscope_ys8hp9.png"
-              alt="Kaleidoscoper">
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://github.com/thiagopnts/kaleidoscope" target="_blank" title="Kaleidoscope"> Nguồn
-                Kaleidoscope
+                href="https://danielmg.org/demo/java-script/uploader/single-upload" target="_blank"
+                title="jQuery Ajax File Uploader Widget"> Nguồn
+                jQuery Ajax File Uploader Widget
               </a> </button>
 
 
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size"> <a href="https://github.com/Jam3/360-image-viewer"
-                  target="_blank" title="360-image-viewer">
-                  360-image-viewer
-                </a></h3>
+              <h3 class="text-primary ml-4 title-article-size"> <a
+                  href="https://github.com/kartik-v/bootstrap-fileinput" target="_blank"
+                  title="Bootstrap-fileinput">Bootstrap-fileinput</a></h3>
             </div>
             <p>
-              <b>360-image-viewer</b> là cũng là một thư viện giống như ở trên giúp bạn hiển thị toàn cảnh cho hình ảnh, video và 
-              responsive trên nhiều màn hình thiết bị khác nhau. Với kích thước chỉ khoảng 46kb(sau khi nén) giúp bạn dễ dàng tối ưu hiệu suất cho trang web khi sử dụng 
-              thư viện này.
+              <b>Bootstrap-fileinput</b> là một thư viện mã nguồn mở được xây dựng cho Bootstrap 3 và Bootstrap 4. Nó
+              giúp chúng ta có thể tạo chức năng upload file cho trang web với nhiều tính năng bổ sung như là hiển thị
+              thông tin file,
+              cho phép thêm sửa xóa khi upload nhiều tệp, hiển thị thanh tiến trình trong quá trình tải file, chức năng
+              kéo thả cho các phần tử...
+              Ngoài hình ảnh thì bạn có thể tải nhiều định dạng khác như video, audio, chữ... Theo mình thấy đây là một
+              thư viện dễ dàng cài đặt và thiết kế đẹp mắt
+              với những bạn yêu thích sử dụng Bootstrap.
             </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1592982237/thu-vien-javascript-hien-thi-hinh-anh-360-do/360-image-viewer_zmypkk.png"
-              alt="360-image-viewer">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593067709/thu-vien-javascript-upload-file/Bootstrap-fileinput_easgkm.png"
+              alt="Bootstrap-fileinput">
             <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://github.com/Jam3/360-image-viewer" target="_blank" title="360-image-viewer"> Nguồn
-                360-image-viewer
+                href="https://github.com/kartik-v/bootstrap-fileinput" target="_blank" title="Bootstrap-fileinput">
+                Nguồn
+                Bootstrap-fileinput
+              </a> </button>
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size"> <a href="https://www.lpology.com/code/ajaxuploader/"
+                  target="_blank" title="Simple Ajax Uploader">Simple Ajax Uploader</a></h3>
+            </div>
+            <p>
+              <b>Simple Ajax Uploader</b> là thư viện giúp bạn tạo một chức năng upload cho trang web một cách nhanh
+              chóng và dễ dàng. Mặc dù thiết kế đơn giản và kích thước nhỏ nhưng nó vẫn đảm bảo cung cấp đầy đủ các tính
+              năng cho người dùng.
+              Nó có một số điểm mạnh là hỗ trợ tải nhiều tệp cùng một lúc, chức năng kéo thả, hiển thị thanh tiến trình
+              trong quá trình tải file,
+              hỗ trợ các trình duyệt phổ biến và đối với IE là từ phiên bản IE7+ trở lên.
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593068455/thu-vien-javascript-upload-file/Simple_Ajax_Uploader_hlyojz.png"
+              alt="Simple Ajax Uploader">
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://www.lpology.com/code/ajaxuploader/" target="_blank" title="Simple Ajax Uploader">
+                Nguồn
+                Simple Ajax Uploader
+              </a> </button>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size"> <a href="https://tus.io/" target="_blank"
+                  title="Tus-js-client">Tus-js-client</a></h3>
+            </div>
+            <p>
+              <b>Tus-js-client</b> là một thư viện javascript giúp bạn tạo chức năng upload file cho trang web thông qua
+              giao thức HTTP.
+              Điểm mạnh của nó là khi gặp sự cố làm gián đoạn trong quá trình tải lên thì nó sẽ tự động thực thi lại mà
+              không cần phải tải lại dữ liệu trước đó.
+              Ngoài chạy được trên các trình duyệt phổ biến hiện nay thì nó còn được dùng trên Node.js, React Native và
+              Apache Cordova.
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593069319/thu-vien-javascript-upload-file/Tus-js-client_p8alvm.png"
+              alt="Tus-js-client">
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white" href="https://tus.io/"
+                target="_blank" title="Tus-js-client">
+                Nguồn
+                Tus-js-client
+              </a> </button>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size"> <a href="https://pekebyte.github.io/pekeUpload/"
+                  target="_blank" title="PekeUpload">PekeUpload</a></h3>
+            </div>
+            <p>
+              <b>PekeUpload</b> là một plugin Jquery cho phép bạn dễ dàng tạo chức năng upload file cho trang HTML5.
+              Với thiết kế đơn giản, nhỏ gọn nhưng vẫn cung cấp nhiều tính năng để tinh chỉnh chương trình phù hợp cho
+              trang web như là
+              giới hạn kích thước tệp, tùy chỉnh nội dung thông báo, hiển thị thanh tiến trình, hỗ trợ chức năng kéo và
+              thả,
+              hiển thị trước hình ảnh kết quả...
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593070624/thu-vien-javascript-upload-file/PekeUpload_kptney.png"
+              alt="PekeUpload">
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://pekebyte.github.io/pekeUpload/" target="_blank" title="PekeUpload">
+                Nguồn
+                PekeUpload
+              </a> </button>
+
+
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size"> <a
+                  href="https://promosis.github.io/file-upload-with-preview/" target="_blank"
+                  title="File-upload-with-preview">File-upload-with-preview</a></h3>
+            </div>
+            <p>
+              <b>File-upload-with-preview</b> là một thư viện mã nguồn mở nhỏ gọn giúp bạn dễ dạng tạo chức năng upload
+              file cho hình ảnh
+              . Như tên của nó thì chức năng này sẽ cho chúng ta xem trước các kết quả hiển thị để xác minh. Với việc
+              viết bằng javascript thuần,
+              không sử dụng thêm thư viện bổ sung và kích thước chỉ khoảng 13.55kb sau khi nén thì thư viện này sẽ giúp
+              bạn tối ưu mạnh mẽ hiệu suất cho trang web cũng như có thể áp dụng cho nhiều loại dự án web khác nhau.
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593071319/thu-vien-javascript-upload-file/file-upload-with-preview_onruur.png"
+              alt="File-upload-with-preview">
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://promosis.github.io/file-upload-with-preview/" target="_blank"
+                title="File-upload-with-preview">
+                Nguồn
+                File-upload-with-preview
               </a> </button>
 
               <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size"> 
-                    Một số thư viện khác
-                </h3>
+                <h3 class="text-primary ml-4 title-article-size">
+                  Một số thư viện khác
+                 </h3>
               </div>
-            
+              <p>
+                Phần này mình sẻ để hình ảnh minh họa và nguồn thư viện thôi nhé!
+              </p>
+
+              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">
+                  Flow.js
+                 </h3>
+              </div>
               <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1592983828/thu-vien-javascript-hien-thi-hinh-anh-360-do/React_360_oo0gbv.png"
-                alt="React 360">
-              <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                  href="https://facebook.github.io/react-360/" target="_blank" title="React 360"> Nguồn
-                  React 360
-                </a> </button>
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593072639/thu-vien-javascript-upload-file/Flowjs_1_ly9kmj.png"
+              alt="Flow.js">
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://flowjs.github.io/ng-flow/" target="_blank"
+                title="Flow.js">
+                Nguồn
+                Flow.js
+              </a> </button>
 
-                <hr>
-                <img class="img-thumbnail img-fluid mt-4 shadow p-2 lazyload"
-                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1592983919/thu-vien-javascript-hien-thi-hinh-anh-360-do/2VR_l1pibq.png"
-                alt="2VR">
-              <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                  href="http://www.2vr.in/" target="_blank" title="2VR"> Nguồn
-                  2VR
-                </a> </button>
+              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">
+                  Plupload
+                 </h3>
+              </div>
+              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593072762/thu-vien-javascript-upload-file/Plupload_zjvsug.png"
+              alt="Plupload">
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://www.plupload.com/examples/" target="_blank"
+                title="Plupload">
+                Nguồn
+                Plupload
+              </a> </button>
+
+              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">
+                  HTML5 Drag & Drop Ajax File Uploader
+                 </h3>
+              </div>
+              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593072878/thu-vien-javascript-upload-file/HTML5_Drag_Drop_Ajax_File_Uploader_wxywyl.png"
+              alt="HTML5 Drag & Drop Ajax File Uploader">
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://www.devbridge.com/sourcery/components/drag-and-drop-uploader/" target="_blank"
+                title="HTML5 Drag & Drop Ajax File Uploader">
+                Nguồn
+                HTML5 Drag & Drop Ajax File Uploader
+              </a> </button>
+
+              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">
+                  FileAPI
+                 </h3>
+              </div>
+              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593073254/thu-vien-javascript-upload-file/FileAPI_rsseuo.png"
+              alt="FileAPI">
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://mailru.github.io/FileAPI/" target="_blank"
+                title="FileAPI">
+                Nguồn
+                FileAPI
+              </a> </button>
 
 
-                <hr>
-                <img class="img-thumbnail img-fluid mt-4 shadow p-2 lazyload"
-                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1592984060/thu-vien-javascript-hien-thi-hinh-anh-360-do/Panoraven_gr40rv.png"
-                alt="Panoraven">
-              <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                  href="https://panoraven.com/en" target="_blank" title="Panoraven"> Nguồn
-                  Panoraven
-                </a> </button>
-
-                <hr>
-                <img class="img-thumbnail img-fluid mt-4 shadow p-2 lazyload"
-                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1592984407/thu-vien-javascript-hien-thi-hinh-anh-360-do/theasy_esf234.png"
-                alt="Theasys 360°">
-              <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                  href="https://www.theasys.io/samples/" target="_blank" title="Theasys 360°"> Nguồn
-                  Theasys 360°
-                </a> </button>
+              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">
+                  simpleUpload.js
+                 </h3>
+              </div>
+              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593073360/thu-vien-javascript-upload-file/simpleUploadjs_zlmhfy.png"
+              alt="simpleUpload.js">
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="http://simpleupload.michaelcbrook.com/" target="_blank"
+                title="simpleUpload.js">
+                Nguồn
+                simpleUpload.js
+              </a> </button>
 
 
+              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">
+                  FileDrop
+                 </h3>
+              </div>
+              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593073849/thu-vien-javascript-upload-file/FileDrop_fbhsor.png"
+              alt="FileDrop">
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://filedropjs.org/" target="_blank"
+                title="FileDrop">
+                Nguồn
+                FileDrop
+              </a> </button>
+
+              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">
+                  Formstone
+                 </h3>
+              </div>
+              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593075569/thu-vien-javascript-upload-file/Formstone_x7a1r0.png"
+              alt="Formstone">
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://formstone.it/components/upload/" target="_blank"
+                title="Formstone">
+                Nguồn
+                Formstone
+              </a> </button>
 
 
-
-
-
-
+              <p class="mt-4">
+                Nếu bạn muốn tìm hiểu thêm các ví dụ về chức năng upload file cho trang web thì có thể xem 
+                <a href="https://www.niemvuilaptrinh.com/article/Nhung-Snippet-Upload-File-Nam-2020" title="upload file"> ở đây nhé</a>
+              </p>
 
 
 
@@ -357,7 +511,8 @@
             <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
 
 
-            <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những thư viện tạo chế độ xem 360 độ hữu ích
+            <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những thư viện upload file  hữu
+              ích
               dành
               cho
               việc

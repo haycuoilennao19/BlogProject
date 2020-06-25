@@ -5,11 +5,11 @@
   <title><%=article.title%></title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <meta name="description" content="<%-article.subtitle%>">
-  <link rel="alternate" href="http://www.niemvuilaptrinh.com/" hreflang="vi-vn" />
+  <link rel="alternate" href="http://www.niemvuilaptrinh.com" hreflang="vi-vn" />
   <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586594935/logo-via-logohub_2_a9ubsa.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel='stylesheet' href='/stylesheets/darcula.css' />
-
+  <link rel="canonical" href="https://www.niemvuilaptrinh.com/article/<%-article.slug%>">
   <!-- <meta property="og:image" content="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576511394/Niemvuilaptrinh_jgc0rn.png"> -->
   <meta property="og:url"                content="http://www.niemvuilaptrinh.com/article/<%-article.slug%>" />
   <meta property="og:type"               content="article" />
@@ -17,9 +17,10 @@
   <meta property="og:description"        content="<%-article.subtitle%>" />
   <meta property="og:image"              content="<%-article.file%>" />
   <meta property="fb:app_id" content="2121975281235443" />
-  <meta name="keywords" content="<%-article.category%>">
+  <meta name="keywords" content="<%-article.title%>">
   <meta name="author" content="Thái Viết Nhật">
   <meta name="copyright" content="Niềm Vui Lập Trình" />
+  <meta name="robots" content="index,follow" />
   <!--Font Logo-->
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Crimson+Text&display=swap" rel="stylesheet">
