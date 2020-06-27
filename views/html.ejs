@@ -26,7 +26,7 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i> Những Thư Viện Giúp Bạn Tạo Chức Năng Upload File Cho Web (Năm 2020)</h2>
+                  aria-hidden="true"></i> 30 Visual Studio Code Extension Tốt Nhất Cho Phát Triển Web(2020)</h2>
             </div>
           </div>
 
@@ -37,463 +37,874 @@
           </div>
           <div class="text-content-article mt-5">
             <p><i>
-                Ngày hôm nay chúng ta sẽ đi vào tìm hiểu lý do tại sao lại cần những thư viện upload file cũng như
-                những thư viện nào được lập trình sử dụng phổ biến trong việc phát triển web năm 2020. Nào bạn hãy cùng
-                mình đi vào tìm hiểu nhé!
+                Trong bài viết hôm này chúng ta sẽ đi vào tìm hiểu những extension mở rộng trong Visual Studio Code giúp
+                bạn cải thiện hiệu suất
+                cũng như thời gian làm việc. Nào chúng ta hãy cùng nhau đi vào tìm hiểu 30 Visual Studio Code Extension
+                được sử dụng phổ biến trong lập trình và thiết kế web năm 2020 nhé!
               </i>
             </p>
             <p>
-              <b>Tại sao chúng ta lại cần thư viện để  xây dựng chức năng upload file cho trang web?</b>
+              Trước khi đi vào vấn đề chính thì mình sẽ giải thích sơ qua về Visual Studio Code tí nhé!
             </p>
             <p>
-              Ví dụ bạn có một trang web bán hàng thì việc tải hình ảnh sản phẩm lên trên máy chủ để lưu trữ là
-              chức năng không thể thiếu trong trang web
-              hay các trang diễn đàn cần dùng chức năng này để có thể lấy hình ảnh thông tin từ người dùng...
-              Nó không chỉ gói gọn trong hình ảnh mà các tệp tải lên có thể là video, pdf, word...<br />
-              Tuy nhiên để viết mã cho chức năng này thì tốn rất nhiều công sức và thời gian. Do đó các thư viện upload file
-              ra đời giúp bạn dễ dàng thiết kế và phát triển chức năng này với nhiều tính năng tiện ích cộng thêm như là
-              cho phép tải nhiều tệp cùng một lúc, hiển thị thanh tiến trình cho quá trình tải file, thêm chức năng kéo
-              thả...
-              Bài hôm nay chúng ta sẽ đi vào những thư viện upload file phổ biến trong năm 2020 nhé!
-
+              Visual Studio Code là một mã nguồn mở và được phát triển bởi Microsoft nên các bạn cứ yên tâm sử dụng vì
+              nó hoàn toàn miễn phí và luôn được cập nhật những phiên bản mới nhất. Không chỉ vậy nó còn rất thích hợp
+              cho việc phát triển các dự án lớn, phức tạp ngoài ra còn hỗ trợ việc tích hợp Git. Công cụ này còn cung
+              cấp các phần mở rộng(extension) giúp chúng ta có thể code một cách nhanh hơn, quản lý file hiệu quả...
+            </p>
+            <p>
+              Nếu bạn muốn tim hiểu thêm hay tải về thì có thể xem <a href="https://code.visualstudio.com/Download#"
+                target="_blank" title="Visual Studio Code">ở đây nhé</a>.
             </p>
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size"> <a href="https://pqina.nl/filepond/" target="_blank"
-                  title="Filepond">Filepond</a></h3>
+              <h3 class="text-primary ml-4 title-article-size">
+                Debugger for Chrome
+              </h3>
             </div>
             <p>
-              <b>Filepond</b> là một thư viện mã nguồn mở được xây dựng bằng Javascript thuần giúp bạn có thể tải lên
-              bất cứ thứ gì
-              cho trang web. Ngoài ra nó còn có chức năng tối ưu hình ảnh giúp việc tải file được nhanh hơn. Nó cũng
-              được thiết kế
-              theo hướng hiện đại mang lại cảm giác thú vị cũng như nâng cao trải nghiệm cho người dùng khi sử dụng chức
-              năng này. Một số điểm mạnh của thư viện này là
-              nhận nhiều định dạng đầu vào như là tệp, thư mục, URL dữ liệu..., chức năng kéo thả tệp, điều hướng thông
-              qua bàn phím
-              hay là hiển thị được trên nhiều màn hình thiết bị khác nhau bằng cách chia tỷ lệ tự động dựa theo không
-              gian có sẵn.
-              Còn nhiều chức năng khác bạn có thể xem thêm ở trang chính của nó nhé.<br />
-              Điểm mình thích của thư viện này là bạn có thể sử dụng cho các framework front-end phổ biến hiện nay như
-              là Vue, Reat, Angular và Jquery.
-
+              <b>Debugger for Chrome</b> giúp bạn có thể debug lỗi mã chương trình ngay trong VS Code
+              mà không cần mở Google Chrome để sử dụng developer tool. Nó có nhiều tính năng hữu ích như là thiết lập
+              breakpoints,
+              hiển thị console...
             </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593053894/thu-vien-javascript-upload-file/Filepond_mxyfaa.png"
-              alt="Filepond">
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white" href="https://pqina.nl/filepond/"
-                target="_blank" title="Filepond"> Nguồn
-                Filepond
-              </a> </button>
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size"> <a href="https://www.dropzonejs.com/" target="_blank"
-                  title="DropzoneJS">DropzoneJS</a></h3>
-            </div>
-            <p>
-              <b>DropzoneJS</b> là một thư viện mã nguồn mở nhỏ gọn giúp bạn xây dựng chức năng upload file
-              bằng cách kéo thả tệp hay chọn tệp bằng cách thông thường. Ngoài ra sau khi tải xong file thì nó sẽ hiển
-              thị hình ảnh của tệp được tải lên
-              để người dùng biết là
-              mình đã tải đúng file hay chưa. Nó cũng cung cấp cho bạn một số thiết lập để dễ dàng tùy chỉnh chức năng
-              này
-              như là xác định kích thước tối đa cho file tải lên, có cho phép tải nhiều file lên cùng một lúc hay không,
-              điều chỉnh hình ảnh hiển thị sau khi file được tải lên... Cái này bạn thêm khảo thêm trong phần
-              Configuration của trang nó nhé.
-
-
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593054546/thu-vien-javascript-upload-file/DropzoneJS_d8xyxd.png"
-              alt="DropzoneJS">
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white" href="https://www.dropzonejs.com/"
-                target="_blank" title="DropzoneJS"> Nguồn
-                DropzoneJS
-              </a> </button>
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size"> <a href="https://uppy.io/" target="_blank"
-                  title="Uppy">Uppy</a></h3>
-            </div>
-            <p>
-              <b>Uppy</b> là một thư viện mã nguồn mở giúp bạn dễ dàng tải file lên cho máy chủ từ máy tính hay
-              thông qua các trang web lưu trữ như là Google Driver, Dropbox, OneDrive, Instagramn...
-              Với các tính năng hữu ích khác như là kích thước nhỏ gọn, được chia thành nhiều mô đun để bạn
-              có thể loại bỏ những chức năng không sử dụng, có thể khôi phục tệp nếu gặp sự cố thông qua Golden
-              Retriever,
-              có hỗ trợ nhiều ngôn ngữ (Có Việt Nam nhé)... Bạn có thể xem các hướng dẫn thiết lập sử dụng trong phần
-              Document hay các bài viêt cập nhật
-              tính năng cho từng phiên bản ở trong Blog nhé.
-
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593055792/thu-vien-javascript-upload-file/Uppy_lu6z9w.png"
-              alt="Uppy">
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white" href="https://uppy.io/"
-                target="_blank" title="Uppy"> Nguồn
-                Uppy
-              </a> </button>
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size"> <a href="https://blueimp.github.io/jQuery-File-Upload/"
-                  target="_blank" title="jQuery File Upload">jQuery File Upload</a></h3>
-            </div>
-            <p>
-              <b>jQuery File Upload</b> là một thư viện xây dựng Jquery giúp bạn có thể tải tệp lên cho trang web với
-              nhiều tính
-              năng tích hợp như là lựa chọn tải nhiều tệp cùng một lúc, kéo thả tệp, xác thực và xem trước hình ảnh hiển
-              thị.
-              Nó hoạt động tốt với mọi nên tảng từ phía máy chủ như là NodeJS, Java, PHP, Python... Ngoài ra bạn có xác
-              định thêm một số thuộc tính như là
-              lựa chọn loại file được phép tải lên, giới hạn kích thước file, thêm tiêu đề và chú thích...
-
-
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593056314/thu-vien-javascript-upload-file/jQuery_File_Upload_aipvv7.png"
-              alt="jQuery File Upload">
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://blueimp.github.io/jQuery-File-Upload/" target="_blank" title="jQuery File Upload"> Nguồn
-                jQuery File Upload
-              </a> </button>
-
-
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size"> <a href="https://uppload.js.org/" target="_blank"
-                  title="Uppload">Uppload</a></h3>
-            </div>
-            <p>
-              <b>Uppload</b> là một thư viện mã nguồn mở giúp bạn tạo chức năng upload hình ảnh một cách dễ dàng và
-              nhanh chóng cho
-              trang web. Với khả năng tùy biến cao thông qua việc cung cấp hơn 30 plugin hỗ trợ. Một sổ điểm mạnh của nó
-              là
-              chức năng kéo thả, lấy hình ảnh từ các dịch vụ web, có thể chỉnh sửa hình ảnh trược khi tải lên, hoạt động
-              trên hầu hết
-              các trình duyệt hiện nay, hỗ trợ cho các front-end framework phổ biến như là Vue, React...
-
-
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593056895/thu-vien-javascript-upload-file/Uppload_an9wis.png"
-              alt="Uppload">
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white" href="https://uppload.js.org/"
-                target="_blank" title="Uppload"> Nguồn
-                Uppload
-              </a> </button>
-
-
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size"> <a href="https://fineuploader.com/index.html"
-                  target="_blank" title="FineUploader">FineUploader</a></h3>
-            </div>
-            <p>
-              <b>FineUploader</b> là một thư viện xây dựng bằng Javascript giúp bạn có thể xây dựng chức năng upload
-              file cho hầu hết các định dạng tệp
-              và chạy được nhiều nền tảng khác nhau bên phía máy chủ. Ngoài ra nó còn có một số tính năng hữu ích như là
-              dễ dàng chỉnh sửa, thiết lập style cho thanh tiến trình, chức năng kéo và thả, tự động tải lại khi có sự
-              cố về mạng,
-              tải trực tiếp lên các dịch vụ đám mây như Amazone S3, Microsoft Azure..., xem trước hình ảnh hiển thị,
-              giới hạn số lượng file được phép tải lên...
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593058134/thu-vien-javascript-upload-file/FineUploader_arivoq.png"
-              alt="FineUploader">
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://fineuploader.com/index.html" target="_blank" title="FineUploader"> Nguồn
-                FineUploader
-              </a> </button>
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size"> <a href="http://www.resumablejs.com/" target="_blank"
-                  title="Resumable.js">Resumable.js</a></h3>
-            </div>
-            <p>
-              <b>Resumable.js</b> là một thư viện Javascript cho phép bạn tạo chức năng tải nhiều file cùng một lúc
-              thông qua HTML5 File API.
-              Nó được thiết kế để chịu tải các file có kích thước lớn thông qua HTTP bằng cách chia tệp ra thành từng
-              file nhỏ
-              và nếu có lỗi thì nó sẽ tự động thực hiện lại quá trình tải file. Và nó hỗ trợ hai trình duyệt chính là
-              Firefox 4+ and Chrome 11+.
-              Phần hướng dẫn và thiết lập bạn có thể tham khảo trong trang demo của nó nhé!
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593059212/thu-vien-javascript-upload-file/Resumablejs_d26zpf.png"
-              alt="Resumable.js">
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white" href="http://www.resumablejs.com/"
-                target="_blank" title="Resumable.js"> Nguồn
-                Resumable.js
-              </a> </button>
-
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size"> <a
-                  href="https://danielmg.org/demo/java-script/uploader/single-upload" target="_blank"
-                  title="jQuery Ajax File Uploader Widget">jQuery Ajax File Uploader Widget</a></h3>
-            </div>
-            <p>
-              <b>jQuery Ajax File Uploader Widget</b> là một thư viện mã nguồn mở được xây dựng bằng Jquery
-              giúp bạn dễ dàng xây dựng chức năng upload file thông qua việc sử dụng AJAX.
-              Với kích thước nhỏ gọn chỉ khoảng 8kb, cho phép thiết lập các điều chỉnh bắt đầu hay dừng quá trình tải
-              file,
-              thêm ghi chú vào cho công cụ, hiển thị hình ảnh xem trước... thì mình nghĩ đây là một thư viện tốt để xây
-              dựng
-              chức năng tải file cho trang web. Nó cũng có đầy đủ ví dụ về các tính năng, bạn có thể tham khảo trong
-              trang demo nhé!
-
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593059958/thu-vien-javascript-upload-file/jQuery_Ajax_File_Uploader_Widget_a43zko.png"
-              alt="jQuery Ajax File Uploader Widget">
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://danielmg.org/demo/java-script/uploader/single-upload" target="_blank"
-                title="jQuery Ajax File Uploader Widget"> Nguồn
-                jQuery Ajax File Uploader Widget
-              </a> </button>
-
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size"> <a
-                  href="https://github.com/kartik-v/bootstrap-fileinput" target="_blank"
-                  title="Bootstrap-fileinput">Bootstrap-fileinput</a></h3>
-            </div>
-            <p>
-              <b>Bootstrap-fileinput</b> là một thư viện mã nguồn mở được xây dựng cho Bootstrap 3 và Bootstrap 4. Nó
-              giúp chúng ta có thể tạo chức năng upload file cho trang web với nhiều tính năng bổ sung như là hiển thị
-              thông tin file,
-              cho phép thêm sửa xóa khi upload nhiều tệp, hiển thị thanh tiến trình trong quá trình tải file, chức năng
-              kéo thả cho các phần tử...
-              Ngoài hình ảnh thì bạn có thể tải nhiều định dạng khác như video, audio, chữ... Theo mình thấy đây là một
-              thư viện dễ dàng cài đặt và thiết kế đẹp mắt
-              với những bạn yêu thích sử dụng Bootstrap.
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593067709/thu-vien-javascript-upload-file/Bootstrap-fileinput_easgkm.png"
-              alt="Bootstrap-fileinput">
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://github.com/kartik-v/bootstrap-fileinput" target="_blank" title="Bootstrap-fileinput">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593224484/visual-studio-code-extension/Debugger_for_Chrome_u7isq8.png"
+              alt="Debugger for Chrome">
+            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
+                href="https://github.com/microsoft/vscode-chrome-debug" target="_blank" title="Debugger for Chrome">
                 Nguồn
-                Bootstrap-fileinput
+                Debugger for Chrome
               </a> </button>
 
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size"> <a href="https://www.lpology.com/code/ajaxuploader/"
-                  target="_blank" title="Simple Ajax Uploader">Simple Ajax Uploader</a></h3>
-            </div>
-            <p>
-              <b>Simple Ajax Uploader</b> là thư viện giúp bạn tạo một chức năng upload cho trang web một cách nhanh
-              chóng và dễ dàng. Mặc dù thiết kế đơn giản và kích thước nhỏ nhưng nó vẫn đảm bảo cung cấp đầy đủ các tính
-              năng cho người dùng.
-              Nó có một số điểm mạnh là hỗ trợ tải nhiều tệp cùng một lúc, chức năng kéo thả, hiển thị thanh tiến trình
-              trong quá trình tải file,
-              hỗ trợ các trình duyệt phổ biến và đối với IE là từ phiên bản IE7+ trở lên.
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593068455/thu-vien-javascript-upload-file/Simple_Ajax_Uploader_hlyojz.png"
-              alt="Simple Ajax Uploader">
             <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://www.lpology.com/code/ajaxuploader/" target="_blank" title="Simple Ajax Uploader">
-                Nguồn
-                Simple Ajax Uploader
+                href="https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome&ssr=false#overview"
+                target="_blank" title="Debugger for Chrome"> Trang Cài Đặt
+                Debugger for Chrome
               </a> </button>
 
-
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size"> <a href="https://tus.io/" target="_blank"
-                  title="Tus-js-client">Tus-js-client</a></h3>
+              <h3 class="text-primary ml-4 title-article-size">
+                JavaScript (ES6) code snippets
+              </h3>
             </div>
             <p>
-              <b>Tus-js-client</b> là một thư viện javascript giúp bạn tạo chức năng upload file cho trang web thông qua
-              giao thức HTTP.
-              Điểm mạnh của nó là khi gặp sự cố làm gián đoạn trong quá trình tải lên thì nó sẽ tự động thực thi lại mà
-              không cần phải tải lại dữ liệu trước đó.
-              Ngoài chạy được trên các trình duyệt phổ biến hiện nay thì nó còn được dùng trên Node.js, React Native và
-              Apache Cordova.
+              <b>JavaScript (ES6) code snippets</b> giúp bạn có thể gọi cấu trúc của một hàm hay thuộc tính... một cách
+              nhanh chóng thông qua những cú pháp được cung cấp sẵn.
+              Ví dụ khi bạn gõ là <code>clg</code> thì nó sẽ tự động biên dịch thành <code>console.log(object)</code>.
+              Cái này bạn có thể tham khảo thêm
+              bảng chú thích trong trang cài đặt của nó nhé. Ngoài ra nó cũng hỗ trợ nhiều ngôn ngữ trong file extension
+              như là
+              TypeScript, JavaScript React, TypeScript React, Html và Vue.
             </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593069319/thu-vien-javascript-upload-file/Tus-js-client_p8alvm.png"
-              alt="Tus-js-client">
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white" href="https://tus.io/"
-                target="_blank" title="Tus-js-client">
-                Nguồn
-                Tus-js-client
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593225363/visual-studio-code-extension/JavaScript_ES6_code_snippets_fjn7er.png"
+              alt="JavaScript (ES6) code snippets">
+            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
+                href="https://github.com/xabikos/vscode-javascript" target="_blank"
+                title="JavaScript (ES6) code snippets"> Nguồn
+                JavaScript (ES6) code snippets
               </a> </button>
 
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size"> <a href="https://pekebyte.github.io/pekeUpload/"
-                  target="_blank" title="PekeUpload">PekeUpload</a></h3>
-            </div>
-            <p>
-              <b>PekeUpload</b> là một plugin Jquery cho phép bạn dễ dàng tạo chức năng upload file cho trang HTML5.
-              Với thiết kế đơn giản, nhỏ gọn nhưng vẫn cung cấp nhiều tính năng để tinh chỉnh chương trình phù hợp cho
-              trang web như là
-              giới hạn kích thước tệp, tùy chỉnh nội dung thông báo, hiển thị thanh tiến trình, hỗ trợ chức năng kéo và
-              thả,
-              hiển thị trước hình ảnh kết quả...
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593070624/thu-vien-javascript-upload-file/PekeUpload_kptney.png"
-              alt="PekeUpload">
             <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://pekebyte.github.io/pekeUpload/" target="_blank" title="PekeUpload">
-                Nguồn
-                PekeUpload
+                href="https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets" target="_blank"
+                title="JavaScript (ES6) code snippets"> Trang Cài Đặt
+                JavaScript (ES6) code snippets
               </a> </button>
-
 
 
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size"> <a
-                  href="https://promosis.github.io/file-upload-with-preview/" target="_blank"
-                  title="File-upload-with-preview">File-upload-with-preview</a></h3>
+              <h3 class="text-primary ml-4 title-article-size">
+                Live Server
+              </h3>
             </div>
             <p>
-              <b>File-upload-with-preview</b> là một thư viện mã nguồn mở nhỏ gọn giúp bạn dễ dạng tạo chức năng upload
-              file cho hình ảnh
-              . Như tên của nó thì chức năng này sẽ cho chúng ta xem trước các kết quả hiển thị để xác minh. Với việc
-              viết bằng javascript thuần,
-              không sử dụng thêm thư viện bổ sung và kích thước chỉ khoảng 13.55kb sau khi nén thì thư viện này sẽ giúp
-              bạn tối ưu mạnh mẽ hiệu suất cho trang web cũng như có thể áp dụng cho nhiều loại dự án web khác nhau.
+              <b> Live Server</b> giúp khởi chạy local server một cách nhanh chóng với tính năng tự động tải lại trực
+              tiếp cho các
+              trang web tĩnh và động. Ví dụ khi bạn thay đổi một thông tin trên trang HTML thì nó sẽ tự động cập nhật mà
+              không cần chúng ta
+              phải nhấn reload trên trình duyệt. Nó cũng có nhiều lựa chọn cho việc thiết lập sử dụng như là tùy chỉnh
+              số port, thiết lập trình duyệt mặc định,
+              hỗ trợ SVG, https, proxy...
             </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593071319/thu-vien-javascript-upload-file/file-upload-with-preview_onruur.png"
-              alt="File-upload-with-preview">
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://promosis.github.io/file-upload-with-preview/" target="_blank"
-                title="File-upload-with-preview">
-                Nguồn
-                File-upload-with-preview
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593226198/visual-studio-code-extension/Live_Server_yvtlly.png"
+              alt="Live Server">
+            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
+                href="https://github.com/ritwickdey/vscode-live-server" target="_blank" title="Live Server"> Nguồn
+                Live Server
               </a> </button>
 
-              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">
-                  Một số thư viện khác
-                 </h3>
-              </div>
-              <p>
-                Phần này mình sẻ để hình ảnh minh họa và nguồn thư viện thôi nhé!
-              </p>
-
-              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">
-                  Flow.js
-                 </h3>
-              </div>
-              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593072639/thu-vien-javascript-upload-file/Flowjs_1_ly9kmj.png"
-              alt="Flow.js">
             <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://flowjs.github.io/ng-flow/" target="_blank"
-                title="Flow.js">
-                Nguồn
-                Flow.js
-              </a> </button>
-
-              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">
-                  Plupload
-                 </h3>
-              </div>
-              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593072762/thu-vien-javascript-upload-file/Plupload_zjvsug.png"
-              alt="Plupload">
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://www.plupload.com/examples/" target="_blank"
-                title="Plupload">
-                Nguồn
-                Plupload
-              </a> </button>
-
-              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">
-                  HTML5 Drag & Drop Ajax File Uploader
-                 </h3>
-              </div>
-              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593072878/thu-vien-javascript-upload-file/HTML5_Drag_Drop_Ajax_File_Uploader_wxywyl.png"
-              alt="HTML5 Drag & Drop Ajax File Uploader">
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://www.devbridge.com/sourcery/components/drag-and-drop-uploader/" target="_blank"
-                title="HTML5 Drag & Drop Ajax File Uploader">
-                Nguồn
-                HTML5 Drag & Drop Ajax File Uploader
-              </a> </button>
-
-              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">
-                  FileAPI
-                 </h3>
-              </div>
-              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593073254/thu-vien-javascript-upload-file/FileAPI_rsseuo.png"
-              alt="FileAPI">
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://mailru.github.io/FileAPI/" target="_blank"
-                title="FileAPI">
-                Nguồn
-                FileAPI
+                href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank"
+                title="Live Server"> Trang Cài Đặt
+                Live Server
               </a> </button>
 
 
-              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">
-                  simpleUpload.js
-                 </h3>
-              </div>
-              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593073360/thu-vien-javascript-upload-file/simpleUploadjs_zlmhfy.png"
-              alt="simpleUpload.js">
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="http://simpleupload.michaelcbrook.com/" target="_blank"
-                title="simpleUpload.js">
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Auto Close Tag
+              </h3>
+            </div>
+            <p>
+              <b> Auto Close Tag</b> được xây dựng để giúp bạn tự động đóng thẻ khi bạn mở thẻ. Ví dụ như là
+              khi bạn gõ <code>&#60;html&#62;</code> thì nó sẽ tự động thêm <code>&#60;/html&#62;</code>. Ngoài ra nó
+              cũng hỗ trợ cho nhiều ngôn
+              ngữ khác như là XML, PHP, Vue, JavaScript, TypeScript, JSX, TSX... nó cũng có một số thiết lập giúp bạn dễ
+              dàng tinh chỉnh như là
+              đặt danh sách thẻ không tự động đóng, sử dụng phím tắt để thêm thẻ đóng thủ công...
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593226920/visual-studio-code-extension/Auto_Close_Tag_pkrhon.png"
+              alt="Auto Close Tag">
+            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
+                href="https://github.com/formulahendry/vscode-auto-close-tag" target="_blank" title="Auto Close Tag">
                 Nguồn
-                simpleUpload.js
+                Auto Close Tag
+              </a> </button>
+
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag" target="_blank"
+                title="Auto Close Tag"> Trang Cài Đặt
+                Auto Close Tag
               </a> </button>
 
 
-              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">
-                  FileDrop
-                 </h3>
-              </div>
-              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593073849/thu-vien-javascript-upload-file/FileDrop_fbhsor.png"
-              alt="FileDrop">
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://filedropjs.org/" target="_blank"
-                title="FileDrop">
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Prettier - Code formatter
+              </h3>
+            </div>
+            <p>
+              <b>Prettier - Code formatter</b> giúp bạn định dạng lại code một cách tự động và tạo ra một phong cách
+              code chung cho team lập trình thông qua quy tắc riêng được quy định bởi extension. Nó cũng hỗ trợ cho đa
+              dạng loại ngôn ngữ như là
+              JavaScript, TypeScript, Flow, JSX, JSON, HTML, Vue, Angular...
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593227478/visual-studio-code-extension/Prettier_-_Code_formatter_imhzwq.png"
+              alt="Prettier - Code formatter">
+            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
+                href="https://github.com/prettier/prettier-vscode" target="_blank" title="Prettier - Code formatter">
                 Nguồn
-                FileDrop
+                Prettier - Code formatter
               </a> </button>
 
-              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">
-                  Formstone
-                 </h3>
-              </div>
-              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593075569/thu-vien-javascript-upload-file/Formstone_x7a1r0.png"
-              alt="Formstone">
             <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://formstone.it/components/upload/" target="_blank"
-                title="Formstone">
-                Nguồn
-                Formstone
+                href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode" target="_blank"
+                title="Prettier - Code formatter"> Trang Cài Đặt
+                Prettier - Code formatter
               </a> </button>
 
 
-              <p class="mt-4">
-                Nếu bạn muốn tìm hiểu thêm các ví dụ về chức năng upload file cho trang web thì có thể xem 
-                <a href="https://www.niemvuilaptrinh.com/article/Nhung-Snippet-Upload-File-Nam-2020" title="upload file"> ở đây nhé</a>
-              </p>
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                TODO Highlight
+              </h3>
+            </div>
+            <p>
+              <b>TODO Highlight</b> giúp bạn làm nổi bật các comment quan trọng trong code để những người lập trình sau
+              hay chính bản thân chúng ta
+              có thể nắm được những điều cần lưu ý hay những việc cần phải làm trước khi sử dụng và lập trình code.
+              Ngoài ra nó còn có một số theme được thiết kế đẹp mắt,
+              hỗ trợ trên nhiều ngôn ngữ như javascript, html, css, php...
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593228102/visual-studio-code-extension/TODO_Highlight_w2un9k.png"
+              alt="TODO Highlight">
+            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
+                href="https://github.com/wayou/vscode-todo-highlight" target="_blank" title="TODO Highlight">
+                Nguồn
+                TODO Highlight
+              </a> </button>
+
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight" target="_blank"
+                title="TODO Highlight"> Trang Cài Đặt
+                TODO Highlight
+              </a> </button>
+
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Auto Rename Tag
+              </h3>
+            </div>
+            <p>
+              <b>Auto Rename Tag</b> giúp tự động đổi tên cả cặp thẻ trong HTML, XML. Ví dụ khi bạn thay đổi tên thẻ mở
+              thì thẻ đóng tương ứng cũng sẽ được tự động thay đổi theo.
+              Bạn có thể xem ví dụ chi tiết trong phần Usages nhé.
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593228669/visual-studio-code-extension/Auto_Rename_Tag_nygubc.png"
+              alt="Auto Rename Tag">
+            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
+                href="https://github.com/formulahendry/vscode-auto-rename-tag" target="_blank" title="Auto Rename Tag">
+                Nguồn
+                Auto Rename Tag
+              </a> </button>
+
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag" target="_blank"
+                title="Auto Rename Tag"> Trang Cài Đặt
+                Auto Rename Tag
+              </a> </button>
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Better Comments
+              </h3>
+            </div>
+            <p>
+              <b>Better Comments</b> hiển thị comment theo từng loại riêng biệt giúp dễ dàng phân loại và hình dung hơn
+              ví dụ như là các thông báo quan trọng cần làm nổi bật, các cảnh báo, những việc phải làm...
+              Ngoài ra bạn cũng có thể tùy chỉnh để phù hợp với mục đích và sở thích của mình như thiết lập các cú pháp
+              comment, chỉnh sửa màu sắc màu nền cho comment.
+
+
+
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593229580/visual-studio-code-extension/Better_Comments_nqpbry.png"
+              alt="Better Comments">
+            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
+                href="https://github.com/aaron-bond/better-comments" target="_blank" title="Better Comments">
+                Nguồn
+                Better Comments
+              </a> </button>
+
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments" target="_blank"
+                title="Better Comments"> Trang Cài Đặt
+                Better Comments
+              </a> </button>
+
+
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                ESLint
+              </h3>
+            </div>
+            <p>
+              <b>ESLint</b> là một công cụ phân tích đoạn mã trong chương trình
+              để đưa ra các lỗi cũng như những đoạn mã cần phải cải thiện. Ngoài ra nó cũng cung cấp cho bạn những
+              giải pháp để tối ưu hay sửa lỗi một cách nhanh hơn.
+              Bạn cũng có thể tùy chỉnh trình phân tích cú pháp của ESLint để phù hợp với mục đích hay dự án của mình.
+
+
+
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593237075/visual-studio-code-extension/ESLint_yr1i9z.png"
+              alt="ESLint">
+            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
+                href="https://github.com/Microsoft/vscode-eslint" target="_blank" title="ESLint">
+                Nguồn
+                ESLint
+              </a> </button>
+
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint" target="_blank"
+                title="ESLint"> Trang Cài Đặt
+                ESLint
+              </a> </button>
+
+
+
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Beautify
+              </h3>
+            </div>
+            <p>
+              <b>Beautify</b> là một tiện ích giúp bạn có thể định dạng lại cách hiển thị code
+              một cách đẹp mắt hơn. Nó hỗ trợ cho các ngôn ngữ phổ biến hiện nay như là Javascript, JSON, CSS, Sass và
+              HTML.
+
+
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593237384/visual-studio-code-extension/Beautify_ucakmz.png"
+              alt="Beautify">
+            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
+                href="https://github.com/HookyQR/VSCodeBeautify" target="_blank" title="Beautify">
+                Nguồn
+                Beautify
+              </a> </button>
+
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify" target="_blank"
+                title="Beautify"> Trang Cài Đặt
+                Beautify
+              </a> </button>
+
+
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Bracket Pair Colorizer
+              </h3>
+            </div>
+            <p>
+              <b>Bracket Pair Colorizer</b> là tiện ích mở rộng giúp làm nổi bật những dấu ngoặc tương ứng trong đoạn mã
+              với nhau bằng cách sử dụng màu sắc. Nó giúp bạn có thể dễ dàng
+              phát hiện những dấu ngoặc còn thiếu hay có cái nhìn trực quan khi có quá nhiều ngoặc lồng vào nhau trong
+              đoạn code.
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593238040/visual-studio-code-extension/Bracket_Pair_Colorizer_mysmgq.png"
+              alt="Bracket Pair Colorizer">
+            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
+                href="https://github.com/CoenraadS/BracketPair" target="_blank" title="Bracket Pair Colorizer">
+                Nguồn
+                Bracket Pair Colorizer
+              </a> </button>
+
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer"
+                target="_blank" title="Bracket Pair Colorizer"> Trang Cài Đặt
+                Bracket Pair Colorizer
+              </a> </button>
+
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Path Intellisense
+              </h3>
+            </div>
+            <p>
+              <b>Path Intellisense</b> là tiện ích mở rộng giúp bạn tự động thực hiện tên cho file (autocompletes
+              filenames)
+              thông qua cách gợi ý các đường dẫn mỗi khi bạn gõ đường dẫn đến nơi lưu trữ file.
+
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593238405/visual-studio-code-extension/Path_Intellisense_rh6ftt.png"
+              alt="Path Intellisense">
+            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
+                href="https://github.com/ChristianKohler/PathIntellisense" target="_blank" title="Path Intellisense">
+                Nguồn
+                Path Intellisense
+              </a> </button>
+
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense&ssr=false#overview"
+                target="_blank" title="Path Intellisense"> Trang Cài Đặt
+                Path Intellisense
+              </a> </button>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Import Cost
+              </h3>
+            </div>
+            <p>
+              <b>Import Cost</b> giúp bạn có thể kiểm tra kích thước của các file import một cách dễ dàng thông qua
+              thông tin được hiển thị
+              trực tiếp bên đoạn mã khi ta thực hiện import.
+
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593239178/visual-studio-code-extension/Import_Cost_zw4euh.png"
+              alt="Import Cost">
+            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
+                href="https://github.com/wix/import-cost" target="_blank" title="Import Cost">
+                Nguồn
+                Import Cost
+              </a> </button>
+
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost" target="_blank"
+                title="Import Cost"> Trang Cài Đặt
+                Import Cost
+              </a> </button>
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Code Time
+              </h3>
+            </div>
+            <p>
+              <b>Code Time</b> giúp bạn có thể tính toán thời gian mình làm việc trên visual studio code. Ngoài ra nó
+              cũng tổng hợp thời gian bạn dành cho mỗi dự án,
+              mức độ làm việc với code thông qua biểu đồ của các ngày trong tuần, hiển thị giá trị thời gian trung bình
+              bạn làm việc trong một tháng...
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593239711/visual-studio-code-extension/Code_Time_f2qfm9.png"
+              alt="Code Time">
+            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
+                href="https://github.com/swdotcom/swdc-vscode" target="_blank" title="Code Time">
+                Nguồn
+                Code Time
+              </a> </button>
+
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://marketplace.visualstudio.com/items?itemName=softwaredotcom.swdc-vscode" target="_blank"
+                title="Code Time"> Trang Cài Đặt
+                Code Time
+              </a> </button>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                CSS Peek
+              </h3>
+            </div>
+            <p>
+              <b>CSS Peek</b> tiện ích mở rộng giúp tìm các id hoặc class của các thẻ HTML trong những file CSS mà chứa
+              những class hay thuộc tính đó.
+              Ngoài ra nó cũng cho phép bạn đi đến các file CSS đó ngay lập tức.
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593240106/visual-studio-code-extension/CSS_Peek_fzhzks.png"
+              alt="CSS Peek">
+            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
+                href="https://github.com/pranaygp/vscode-css-peek" target="_blank" title="CSS Peek">
+                Nguồn
+                CSS Peek
+              </a> </button>
+
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek" target="_blank"
+                title="CSS Peek"> Trang Cài Đặt
+                CSS Peek
+              </a> </button>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Project Manager
+              </h3>
+            </div>
+            <p>
+              <b>Project Manager</b> tiện ích mở rộng giúp bạn dễ dàng chuyển đổi giữa các dự án trong VS Code.
+              Nó cung cấp một menu phụ giúp bạn có thể lưu trữ các dự cần làm việc và chuyển đổi qua lại một cách nhanh
+              chóng.
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593240819/visual-studio-code-extension/Project_Manager_ioxwnb.png"
+              alt="Project Manager">
+            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
+                href="https://github.com/alefragnani/vscode-project-manager" target="_blank" title="Project Manager">
+                Nguồn
+                Project Manager
+              </a> </button>
+
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager&ssr=false#overview"
+                target="_blank" title="Project Manager"> Trang Cài Đặt
+                Project Manager
+              </a> </button>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Browser Preview
+              </h3>
+            </div>
+            <p>
+              <b>Browser Preview</b> hiển thị trình duyệt ngay trên Visual Studio Code giúp bạn có thể xem kết quả cũng
+              như debug
+              cho chương trình một cách dễ dàng hơn.
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593241103/visual-studio-code-extension/Browser_Preview_anpfkc.png"
+              alt="Browser Preview">
+            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
+                href="https://github.com/auchenberg/vscode-browser-preview" target="_blank" title="Browser Preview">
+                Nguồn
+                Browser Preview
+              </a> </button>
+
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://marketplace.visualstudio.com/items?itemName=auchenberg.vscode-browser-preview"
+                target="_blank" title="Browser Preview"> Trang Cài Đặt
+                Browser Preview
+              </a> </button>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                GitLens — Git supercharged
+              </h3>
+            </div>
+            <p>
+              <b>GitLens — Git supercharged</b> là tiện ích cung cấp nhiều tính năng hữu ích giúp bạn làm việc với Git
+              một cách tốt hơn như là
+              hiển thị chú thích cho từng dòng code về lập trình viên commit, hiển thị thông tin chi tiết các lần sửa
+              đổi đoạn mã trong File...
+
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593242560/visual-studio-code-extension/GitLens_Git_supercharged_vslnyl.png"
+              alt="GitLens — Git supercharged">
+            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
+                href="https://github.com/eamodio/vscode-gitlens" target="_blank" title="GitLens — Git supercharged">
+                Nguồn
+                GitLens — Git supercharged
+              </a> </button>
+
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens" target="_blank"
+                title="GitLens — Git supercharged"> Trang Cài Đặt
+                GitLens — Git supercharged
+              </a> </button>
+
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Polacode
+              </h3>
+            </div>
+            <p>
+              <b>Polacode</b> là tiện ích giúp bạn chụp hình đoạn code của mình và lưu lại ngay trên máy tính một cách
+              dễ dàng.
+              Ngoài ra bạn cũng có thể chọn những bộ theme được thiết kế sẵn giúp đoạn mã được nổi bật và đẹp hơn trong
+              quá trình chụp.
+
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593242894/visual-studio-code-extension/Polacode_gulbip.png"
+              alt="Polacode">
+            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
+                href="https://github.com/octref/polacode" target="_blank" title="Polacode">
+                Nguồn
+                Polacode
+              </a> </button>
+
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://marketplace.visualstudio.com/items?itemName=pnp.polacode" target="_blank"
+                title="Polacode"> Trang Cài Đặt
+                Polacode
+              </a> </button>
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                vscode-icons
+              </h3>
+            </div>
+            <p>
+              <b>vscode-icons</b> là tiện ích chúng ta có thể thiết lập nhiều icon đẹp mắt cho Visual Studio Code.
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593243152/visual-studio-code-extension/vscode-icons_k1i5au.png"
+              alt="vscode-icons">
+            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
+                href="https://github.com/vscode-icons/vscode-icons" target="_blank" title="vscode-icons">
+                Nguồn
+                vscode-icons
+              </a> </button>
+
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons"
+                target="_blank" title="vscode-icons"> Trang Cài Đặt
+                vscode-icons
+              </a> </button>
+
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Settings Sync
+              </h3>
+            </div>
+            <p>
+              <b>Settings Sync</b> giúp bạn có thể lưu lại các thiết lập cho Visual Studio Code trên máy tính của mình
+              lên trên Github và sử dụng cho các máy khác một cách dễ dàng
+              ví dụ như là các thông tin về extension, hay các cài đặt mà mình đã thiết lập... Lúc này bạn dễ dàng thiết
+              lập cho nhiều máy khác nhau mà không cần phải nhớ lại
+              các extension, các thiết lập mà mình đã cài đặt cho VS Code.
+
+
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593243794/visual-studio-code-extension/Settings_Sync_quqygb.png"
+              alt="Settings Sync">
+            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
+                href="https://github.com/shanalikhan/code-settings-sync" target="_blank" title="Settings Sync">
+                Nguồn
+                Settings Sync
+              </a> </button>
+
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync" target="_blank"
+                title="Settings Sync"> Trang Cài Đặt
+                Settings Sync
+              </a> </button>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Quokka
+              </h3>
+            </div>
+            <p>
+              <b>Quokka</b> giúp bạn có thể test từng đoạn code nhỏ Javascript, TypeScript và hiển thị trực tiếp trên VS
+              Code mà không cần sử dụng
+              <code>console.log()</code> để hiển thị trong trình duyệt.
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593244498/visual-studio-code-extension/Quokka_ciroz3.png"
+              alt="Quokka">
+            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
+                href="https://quokkajs.com/docs/index.html" target="_blank" title="Quokka">
+                Nguồn
+                Quokka
+              </a> </button>
+
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode" target="_blank"
+                title="Quokka"> Trang Cài Đặt
+                Quokka
+              </a> </button>
+
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                EditorConfig
+              </h3>
+            </div>
+            <p>
+              <b>EditorConfig</b> là một tiện ích mở rộng giúp duy trì sự thống nhất style code cho nhiều lập trình viên
+              khi làm cùng một dự án.
+              Và mỗi lập trình viên có thể làm việc trên nhiều trình soạn thảo mã khác nhau như VSCode, Atom,
+              Notepad++...
+              thì nó đều hỗ trợ các plugin trên mỗi nền tảng giúp lập trình viên có thể đọc và chỉnh sửa style code một
+              cách dễ dàng.
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593245740/visual-studio-code-extension/EditorConfig_irg5ui.png"
+              alt="EditorConfig">
+            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
+                href="https://editorconfig.org/" target="_blank" title="EditorConfig">
+                Nguồn
+                EditorConfig
+              </a> </button>
+
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig" target="_blank"
+                title="EditorConfig"> Trang Cài Đặt
+                EditorConfig
+              </a> </button>
+
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Material Icon Theme
+              </h3>
+            </div>
+            <p>
+              <b>Material Icon Theme</b> là một tiện ích thiết lập icon Material Design cho Visual Studio Code.
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593246197/visual-studio-code-extension/Material_Icon_Theme_xu2pys.png"
+              alt="Material Icon Theme">
+            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
+                href="https://github.com/PKief/vscode-material-icon-theme" target="_blank" title="Material Icon Theme">
+                Nguồn
+                Material Icon Theme
+              </a> </button>
+
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme" target="_blank"
+                title="Material Icon Theme"> Trang Cài Đặt
+                Material Icon Theme
+              </a> </button>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Color Highlight
+              </h3>
+            </div>
+            <p>
+              <b>Color Highlight</b> là một tiện ích giúp bạn hiển thị màu cho các đối tượng được tìm thấy trong trang.
+              Ví dụ nhiều mã màu mà VS Code không hiển thị được
+              thì tiện ích này là một lựa chọn tuyệt vời cho bạn.
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593256969/visual-studio-code-extension/Color_Highlight_xcewxz.png"
+              alt="Color Highlight">
+            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
+                href="https://github.com/egonyans/vscode-ext-color-highlight" target="_blank" title="Color Highlight">
+                Nguồn
+                Color Highlight
+              </a> </button>
+
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight" target="_blank"
+                title="Color Highlight"> Trang Cài Đặt
+                Color Highlight
+              </a> </button>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                REST Client
+              </h3>
+            </div>
+            <p>
+              <b>REST Client</b> cho phép bạn gửi các yêu cầu HTTP và có thể xem kết quả trực tiếp trên Visual Studio
+              Code.
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593257244/visual-studio-code-extension/REST_Client_fshbyg.png"
+              alt="REST Client">
+            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
+                href="https://github.com/Huachao/vscode-restclient" target="_blank" title="REST Client">
+                Nguồn
+                REST Client
+              </a> </button>
+
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://marketplace.visualstudio.com/items?itemName=humao.rest-client" target="_blank"
+                title="REST Client"> Trang Cài Đặt
+                REST Client
+              </a> </button>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Live Share
+              </h3>
+            </div>
+            <p>
+              <b>Live Share</b> giúp những lập trình viên trong team có thể chia sẻ đoạn mã trong chương trình theo thời
+              gian thực để
+              dễ dàng trong việc chỉnh sửa cũng như debug cho chương trình như là chia sẻ debugging sessions, terminal
+              instances, localhost web apps,
+              voice calls...
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593258251/visual-studio-code-extension/Live_Share_sbka18.png"
+              alt="Live Share">
+            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
+                href="https://github.com/MicrosoftDocs/live-share" target="_blank" title="Live Share">
+                Nguồn
+                Live Share
+              </a> </button>
+
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare" target="_blank"
+                title="Live Share"> Trang Cài Đặt
+                Live Share
+              </a> </button>
+
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Code Spell Checker
+              </h3>
+            </div>
+            <p>
+              <b>Code Spell Checker</b> giúp bạn kiểm tra lỗi chính tả của đoạn mã trong chương trình. Tuy nhiên nó chỉ
+              hỗ trợ các ngôn ngữ như tiếng Anh,
+              Thụy Điển, Pháp, Đức... và chưa có tiếng Viết Nam nha.
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593258514/visual-studio-code-extension/Code_Spell_Checker_uze8cu.png"
+              alt="Code Spell Checker">
+            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
+                href="https://github.com/MicrosoftDocs/live-share" target="_blank" title="Code Spell Checker">
+                Nguồn
+                Code Spell Checker
+              </a> </button>
+
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker"
+                target="_blank" title="Code Spell Checker"> Trang Cài Đặt
+                Code Spell Checker
+              </a> </button>
+
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Vetur
+              </h3>
+            </div>
+            <p>
+              <b>Vetur</b> là tiện ích mở rộng cung cấp các công cụ hữu ích cho VueJS như là debug, kiểm tra lỗi,
+              Syntax-highlighting, snippet...
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593259105/visual-studio-code-extension/Vetur_cf6trt.png"
+              alt="Vetur">
+            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
+                href="https://github.com/vuejs/vetur" target="_blank" title="Vetur">
+                Nguồn
+                Vetur
+              </a> </button>
+
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://marketplace.visualstudio.com/items?itemName=octref.vetur" target="_blank" title="Vetur">
+                Trang Cài Đặt
+                Vetur
+              </a> </button>
+
+
+
+           
+
+
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                ES7 React/Redux/GraphQL/React-Native snippets
+              </h3>
+            </div>
+            <p>
+              <b>ES7 React/Redux/GraphQL/React-Native snippets</b> là tiện ích mở rộng cung cấp các snippet cho
+              React, Redux và Graphql trong JS/TS với ccu1 pháp ES7.
+              Bạn có thể tham khảo  bảng cú pháp trong trang chính của nó
+              nhé!
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593259571/visual-studio-code-extension/ES7_React_Redux_GraphQL_React-Native_snippets_iiz1wh.png"
+              alt="	ES7 React/Redux/GraphQL/React-Native snippets">
+            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
+                href="https://github.com/dsznajder/vscode-es7-javascript-react-snippets" target="_blank" title=" ES7 React/Redux/GraphQL/React-Native snippets">
+                Nguồn
+                ES7 React/Redux/GraphQL/React-Native snippets
+              </a> </button>
+
+            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
+                href="https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets"
+                target="_blank" title="	ES7 React/Redux/GraphQL/React-Native snippets"> Trang Cài Đặt
+                ES7 React/Redux/GraphQL/React-Native snippets
+              </a> </button>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -511,7 +922,7 @@
             <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
 
 
-            <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những thư viện upload file  hữu
+            <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những extension Visual Studio Code hữu
               ích
               dành
               cho

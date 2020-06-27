@@ -40,7 +40,8 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <meta name="google-site-verification" content="SXEFa5YhgCrmAOJhBwsuDms_fUALYxrM8ZUql8KHgNM" />
-
+  <link rel='stylesheet' href='/stylesheets/theme.css' />
+  <link rel='stylesheet' href='/stylesheets/style1.css' />
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163462128-1"></script>
 <script>
@@ -57,52 +58,61 @@
 
 
   <!--Navbar-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top p-2">
-    <a class="navbar-brand" title="Niềm Vui Lập Trình" href="/">Niềm Vui Lập Trình</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span><i class="fa fa-navicon"></i></span>
-    </button>
+  <div class="row">
+    <div class="col-sm-12">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary  fixed-top p-2">
+        <a class="navbar-brand" title="Niềm Vui Lập Trình" href="/">Niềm Vui Lập Trình</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span><i class="fa fa-navicon"></i></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link mr-5 hvr-underline-from-left" title="Trang Chủ" href="/">Trang Chủ <span
+                  class="sr-only">(current)</span></a>
+            </li>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link mr-5 hvr-underline-from-left" title="Trang Chủ" href="/">Trang Chủ <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link mr-5 hvr-underline-from-left" title="Nguồn Lập Trình" href="/article/Resource">Nguồn Lập Trình</a>
-        </li>
-        <li class="nav-item dropdown ">
-          <a class="nav-link dropdown-toggle  mr-5 hvr-underline-from-left" data-toggle="dropdown" href="#"
-            role="button" aria-haspopup="true" aria-expanded="false" title="Xem Khóa Học">Ngôn Ngữ</a>
-          <div class="dropdown-menu mt-2">
-            <a class="dropdown-item" title="Hướng Dẫn Về HTML" href="/article/html">HTML</a>
-            <a class="dropdown-item" title="Hướng Dẫn Về CSS" href="/article/css">CSS</a>
-            <a class="dropdown-item" title="Hướng Dẫn Về Javascript" href="/article/Javascript">Javascript</a>
-            <a class="dropdown-item" title="Hướng Dẫn Về Bootstrap 4" href="/article/Bootstrap">Hướng Dẫn Bootstrap4</a>
-            <a class="dropdown-item" title="Hướng Dẫn Về Javascript" href="/article/Hoc-Javascript">Hướng Dẫn Học Javascript</a>
-          </li>
-        <li class="nav-item">
-          <a class="nav-link hvr-underline-from-left mr-5" title="Giới Thiệu Bản Thân" href="/about">Giới Thiệu</a>
-        </li>
-
-
-
+            <li class="nav-item active">
+              <a class="nav-link mr-5 hvr-underline-from-left" title="Nguồn Lập Trình" href="/article/Resource">Nguồn Lập Trình</a>
+            </li>
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle  mr-5 hvr-underline-from-left" data-toggle="dropdown" href="#"
+                role="button" aria-haspopup="true" aria-expanded="false" title="Xem Khóa Học">Ngôn Ngữ</a>
+              <div class="dropdown-menu mt-2">
+                <a class="dropdown-item" title="Hướng Dẫn Về HTML" href="/article/html">HTML</a>
+                <a class="dropdown-item" title="Hướng Dẫn Về CSS" href="/article/css">CSS</a>
+                <a class="dropdown-item" title="Hướng Dẫn Về Javascript" href="/article/Javascript">Javascript</a>
+                <a class="dropdown-item" title="Hướng Dẫn Về Bootstrap 4" href="/article/Bootstrap">Hướng Dẫn Bootstrap4</a>
+                <a class="dropdown-item" title="Hướng Dẫn Về Javascript" href="/article/Hoc-Javascript">Hướng Dẫn Học
+                  Javascript</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link hvr-underline-from-left mr-5" title="Giới Thiệu Bản Thân" href="/about">Giới Thiệu</a>
+            </li>
+    
+    
+    
+        </div>
+      </nav>
     </div>
-  </nav>
+  </div>
   <!--Content-->
   <div class="jumbotron jumbotron-fluid image-slider">
+    <div class="container-fluid">
     <div class="row">
-      <div class="col-lg-12 col-md-12 col-xs-12">
+    
         <div class="content-image">
           <div class="content">
             <blockquote class="blockquote">
-              <h4 class="mb-2 content-header">Tôi không có tài năng gì cả. Tôi chỉ đam mê hiểu biết</h4>
+              <h4 class="mb-2 title-article-size2">Tôi không có tài năng gì cả. Tôi chỉ đam mê hiểu biết</h4>
               <footer class="blockquote-footer text-right text-white">Albert Einstein</footer>
             </blockquote>
           </div>
         </div>
-      </div>
+      
+    </div>
     </div>
   </div>
   <div class="header-text text-center mt-5 ">
@@ -184,15 +194,15 @@
             </div>
             <div class="card-body card-body-search mt-4">
               <h3 class="button-article"><a title="Thông Tin Về CSS" href="/article/css"><button type="button"
-                class="CSS btn shadow-sm rounded btn-success m-1 pl-2 pr-2 hvr-shrink"><i class="fa fa-tag" aria-hidden="true"></i> CSS</button></a>
+                class="btn shadow-sm rounded btn-secondary m-1 pl-2 pr-2 hvr-shrink"><i class="fa fa-tag" aria-hidden="true"></i> CSS</button></a>
                 <a href="/article/html" title="Thông Tin Về HTML"><button type="button"
-                class="HTML btn shadow-sm rounded btn-success m-1 pl-2 pr-2 hvr-shrink"><i class="fa fa-tag" aria-hidden="true"></i> HTML</button></a>
+                class="btn shadow-sm rounded btn-secondary m-1 pl-2 pr-2 hvr-shrink"><i class="fa fa-tag" aria-hidden="true"></i> HTML</button></a>
                 <a href="/article/Javascript" title="Thông Tin Về Javascript">
                 <button type="button"
-                class="btn shadow-sm rounded btn-success m-1 pl-2 pr-2 hvr-shrink"><i class="fa fa-tag" aria-hidden="true"></i> Javascript</button></a>
+                class="btn shadow-sm rounded btn-secondary m-1 pl-2 pr-2 hvr-shrink"><i class="fa fa-tag" aria-hidden="true"></i> Javascript</button></a>
                 <a href="/article/Bootstrap" title="Thông Tin Về Bootstrap">
                   <button type="button"
-                  class="btn shadow-sm rounded m-1 pl-2 pr-2 hvr-shrink bg-bootstrap-color"><i class="fa fa-tag" aria-hidden="true"></i> Bootstrap</button></a>
+                  class="btn shadow-sm rounded m-1 pl-2 pr-2 hvr-shrink  btn-secondary "><i class="fa fa-tag" aria-hidden="true"></i> Bootstrap</button></a>
               </h3>
             </div>
           </div>
