@@ -26,7 +26,7 @@
   <meta id="metaDescription" name="description"
     content="Nơi bạn có thể tìm thấy các nguồn lập trình cho việc phát triển web như là HTML, CSS, Javascript, Bootstrap.">
   <meta property="og:type" content="website" />
-
+  <meta name="theme-color" content="#288cff">
 
 
   <meta property="og:url" content="https://www.niemvuilaptrinh.com/" />
@@ -132,13 +132,14 @@
             alt="<%-post.title%>">
         </h5>
         <h3 class="button-article"><button type="button"
-            class="<%-post.category%> btn shadow-sm rounded btn-success m-3 pl-5 pr-5"><%=post.category%></button></h3>
+            class="<%-post.category%> btn shadow-sm rounded btn-success m-3 pl-3 pr-3"><%=post.category%></button></h3>
         <div class="card-body">
-          <h5 class="card-title"><a class="hvr-underline-from-center pt-1 pb-1" title="<%-post.title%>"
-              href="/article/<%-post.slug%>"><%=post.title%></a></h5>
+          <h5 class="card-title"><%=post.title%></h5>
           <hr />
           <p class="card-text text-justify"><%-post.subtitle%></p>
-          <p class="text-muted"><i class="fa fa-clock-o" aria-hidden="true"></i> <%=post.date%></p>
+          <p class="text-date"><i class="fa fa-clock-o" aria-hidden="true"></i> <%=post.date%></p>
+       
+     
           <div class="d-flex justify-content-end">
             <button class="learn-more">
              
@@ -257,11 +258,11 @@
             <p> © 2020 Copyrigh: Niềm Vui Lập Trình (Thái Viết Nhật).</p>
           </div>
         </div>
-        <div class="col-lg-2 col-md-2 col-xs-4">
+        <!-- <div class="col-lg-2 col-md-2 col-xs-4">
           <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Niềm Vui Lập Trình</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Thái Viết Nhật</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</col-sm-12>
           <br/>
           <a href="//www.dmca.com/Protection/Status.aspx?ID=6545c799-e02b-45a3-9404-3f68e3f1d967" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/dmca_protected_sml_120am.png?ID=6545c799-e02b-45a3-9404-3f68e3f1d967"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
-        </div>
+        </div> -->
 
       </div>
     

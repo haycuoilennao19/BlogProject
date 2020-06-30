@@ -26,7 +26,7 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i> 30 Visual Studio Code Extension Tốt Nhất Cho Phát Triển Web(2020)</h2>
+                  aria-hidden="true"></i> Thư Viện Tạo HTML5 Video Tốt Nhất Cho Phát Triển Web(2020) </h2>
             </div>
           </div>
 
@@ -37,138 +37,153 @@
           </div>
           <div class="text-content-article mt-5">
             <p><i>
-                Trong bài viết hôm này chúng ta sẽ đi vào tìm hiểu những extension mở rộng trong Visual Studio Code giúp
-                bạn cải thiện hiệu suất
-                cũng như thời gian làm việc. Nào chúng ta hãy cùng nhau đi vào tìm hiểu 30 Visual Studio Code Extension
-                được sử dụng phổ biến trong lập trình và thiết kế web năm 2020 nhé!
+                Trong bài viết hôm nay mình sẽ giới thiệu đến bạn những thư viện giúp tạo HTML5 Video cho trang web mà
+                được lập trình viên tin tưởng và sử dụng trong năm 2020
+
+                nhé!
               </i>
             </p>
             <p>
-              Trước khi đi vào vấn đề chính thì mình sẽ giải thích sơ qua về Visual Studio Code tí nhé!
+              Trước khi đi vào vấn đề chính thì mình sẽ giải thích sơ qua về HTML5 Video tí nhé!
             </p>
             <p>
-              Visual Studio Code là một mã nguồn mở và được phát triển bởi Microsoft nên các bạn cứ yên tâm sử dụng vì
-              nó hoàn toàn miễn phí và luôn được cập nhật những phiên bản mới nhất. Không chỉ vậy nó còn rất thích hợp
-              cho việc phát triển các dự án lớn, phức tạp ngoài ra còn hỗ trợ việc tích hợp Git. Công cụ này còn cung
-              cấp các phần mở rộng(extension) giúp chúng ta có thể code một cách nhanh hơn, quản lý file hiệu quả...
+              Đây là một tính năng mới được giới thiệu trong phiên bản HTML5. Nó được tạo ra để giúp người dùng có thể
+              hiển thị video trên trang web một cách dễ dàng mà không cần sử dụng plugin bên thứ ba như là Adobe Flash.
+              Video HTML5 sẽ cho phép người dùng tải video và nhúng trực tiếp vào trang HTML. Nó cũng chạy được trên
+              nhiều trình duyệt phổ biến hiện nay như Google Chrome,
+              Firefox, Opera, Safari, IE9+...<br />
+
+              Một số tính năng hữu ích khi chúng ta sử dụng HTML5 là:
+              <ul>
+                <li>Cho phép thêm chú thích và phụ đề cho video.</li>
+                <li>Hiển thị video trên nhiều màn hình thiết bị khác nhau.</li>
+                <li>
+                  Sử dụng <a
+                    href="https://techblog.vn/web-speech-recognition#:~:text=The%20Web%20Speech%20API%20enables,n%C3%B3%20c%C5%A9ng%20kh%C3%A1%20l%C3%BD%20th%C3%BA."
+                    title=" Web Speech API" target="_blank">Web Speech API</a> để điều khiển HTML5 Video.
+                </li>
+                <li>
+                  Có thể ẩn các nút điều khiển ở trong chế độ toàn màn hình.
+                </li>
+                <li>
+                  Dễ dàng nhúng video vào trang web thông qua thẻ <code>&#60;video&#62;</code>
+                </li>
+              </ul>
             </p>
             <p>
-              Nếu bạn muốn tim hiểu thêm hay tải về thì có thể xem <a href="https://code.visualstudio.com/Download#"
-                target="_blank" title="Visual Studio Code">ở đây nhé</a>.
+              Tuy vậy để có thể làm việc với nhiều trình duyệt cũ hơn hay thêm các tính năng mới cho việc tùy chỉnh
+              video trong trang web thì chúng ta cần sử dụng thư viện để giải quyết
+              những vấn đề này.
+              Bây giờ bạn hãy cùng mình đi vào tìm hiểu nhé!
             </p>
+
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Debugger for Chrome
+                Plyr
               </h3>
             </div>
             <p>
-              <b>Debugger for Chrome</b> giúp bạn có thể debug lỗi mã chương trình ngay trong VS Code
-              mà không cần mở Google Chrome để sử dụng developer tool. Nó có nhiều tính năng hữu ích như là thiết lập
-              breakpoints,
-              hiển thị console...
+              <b>Plyr</b> là một thư viện mã nguồn mở nhỏ gọn giúp bạn dễ dàng truy cập và chỉnh sửa video cho HTML5,
+              Youtube hay Vimeo và chạy được trên hầu hết các trinh duyệt phổ biến hiện nay.
+              Bạn có thể điều chỉnh style trong <code>plyr.css</code> để thiết kế trình phát video phù hợp với trang web
+              của mình như là chọn màu chủ đạo, kích thước border,
+              màu cho chú thích trong video, lựa chọn font chữ... Cài này bạn tham khảo thêm trong phần "Customizing the
+              CSS" nhé. Ngoài ra nó có một số tính năng hữu ích khác như là
+              hiển thị trên nhiều màn hình thiết bị khác nhau, thiết lập các phương thức thông qua API, sử dụng các phím
+              tắt trong bàn phím để điều khiển trình phát video,
+              có các phiên bản dành cho nhiều framework và ngôn ngữ khác như là React, Vue, Angular, WordPress, Neos...
             </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593224484/visual-studio-code-extension/Debugger_for_Chrome_u7isq8.png"
-              alt="Debugger for Chrome">
-            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
-                href="https://github.com/microsoft/vscode-chrome-debug" target="_blank" title="Debugger for Chrome">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593431728/thu-vien-html5-video/plyr_tldlb8.png"
+              alt="Plyr">
+            <button type="button " class="btn  btn-outline-dark mt-4"> <a href="https://plyr.io/" target="_blank"
+                title="Plyr">
                 Nguồn
-                Debugger for Chrome
+                Plyr
               </a> </button>
 
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome&ssr=false#overview"
-                target="_blank" title="Debugger for Chrome"> Trang Cài Đặt
-                Debugger for Chrome
-              </a> </button>
 
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                JavaScript (ES6) code snippets
-              </h3>
-            </div>
-            <p>
-              <b>JavaScript (ES6) code snippets</b> giúp bạn có thể gọi cấu trúc của một hàm hay thuộc tính... một cách
-              nhanh chóng thông qua những cú pháp được cung cấp sẵn.
-              Ví dụ khi bạn gõ là <code>clg</code> thì nó sẽ tự động biên dịch thành <code>console.log(object)</code>.
-              Cái này bạn có thể tham khảo thêm
-              bảng chú thích trong trang cài đặt của nó nhé. Ngoài ra nó cũng hỗ trợ nhiều ngôn ngữ trong file extension
-              như là
-              TypeScript, JavaScript React, TypeScript React, Html và Vue.
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593225363/visual-studio-code-extension/JavaScript_ES6_code_snippets_fjn7er.png"
-              alt="JavaScript (ES6) code snippets">
-            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
-                href="https://github.com/xabikos/vscode-javascript" target="_blank"
-                title="JavaScript (ES6) code snippets"> Nguồn
-                JavaScript (ES6) code snippets
-              </a> </button>
-
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets" target="_blank"
-                title="JavaScript (ES6) code snippets"> Trang Cài Đặt
-                JavaScript (ES6) code snippets
-              </a> </button>
 
 
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Live Server
+                HLS.js
               </h3>
             </div>
             <p>
-              <b> Live Server</b> giúp khởi chạy local server một cách nhanh chóng với tính năng tự động tải lại trực
-              tiếp cho các
-              trang web tĩnh và động. Ví dụ khi bạn thay đổi một thông tin trên trang HTML thì nó sẽ tự động cập nhật mà
-              không cần chúng ta
-              phải nhấn reload trên trình duyệt. Nó cũng có nhiều lựa chọn cho việc thiết lập sử dụng như là tùy chỉnh
-              số port, thiết lập trình duyệt mặc định,
-              hỗ trợ SVG, https, proxy...
+              <b>HLS.js</b> là một thư viện mã nguồn được xây dựng bằng Javascript giúp bạn có thể thực hiện HTTP Live
+              Streaming.
+              Ở đây HTTP Live Streaming là một kỹ thuật truyền phát các file media dựa trên giao thức HTTP và được phát
+              triển bởi Apple.
+              Bạn có thể hiểu đơn giản là nó giúp chúng ta chia một file media thành nhiều file nhỏ hơn và trình phát
+              video trong trình duyệt sẽ
+              gởi các yêu cầu để lấy những file nhỏ đó giúp tránh được tình trạng phải chờ tải xong toàn bộ video thì
+              mới có hiển thị trên trình duyệt.
+              Ngoài ra nó cũng dựa vào băng thông mạng của người dùng để lựa chọn chất lượng video hợp lý( như 480, 720,
+              1080p). Bạn có thể
+              tham khảo thêm ở đây nhé <a href="https://en.wikipedia.org/wiki/HTTP_Live_Streaming" target="_blank"
+                title="HTTP Live Streaming">HTTP Live Streaming</a>.<br />
+              HLS.js làm việc trực tiếp với thẻ <code>&#60;video&#62;</code> HTML mà không cần sử dụng thêm trình phương
+              phát phương tiện nào. Ngoài ra nó cũng một số tiện ích như là
+              lựa chọn chế độ streaming, tự động phục hồi khi video bị lỗi, phát video dưới dạng mp3...
+
             </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593226198/visual-studio-code-extension/Live_Server_yvtlly.png"
-              alt="Live Server">
-            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
-                href="https://github.com/ritwickdey/vscode-live-server" target="_blank" title="Live Server"> Nguồn
-                Live Server
-              </a> </button>
-
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank"
-                title="Live Server"> Trang Cài Đặt
-                Live Server
-              </a> </button>
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Auto Close Tag
-              </h3>
-            </div>
-            <p>
-              <b> Auto Close Tag</b> được xây dựng để giúp bạn tự động đóng thẻ khi bạn mở thẻ. Ví dụ như là
-              khi bạn gõ <code>&#60;html&#62;</code> thì nó sẽ tự động thêm <code>&#60;/html&#62;</code>. Ngoài ra nó
-              cũng hỗ trợ cho nhiều ngôn
-              ngữ khác như là XML, PHP, Vue, JavaScript, TypeScript, JSX, TSX... nó cũng có một số thiết lập giúp bạn dễ
-              dàng tinh chỉnh như là
-              đặt danh sách thẻ không tự động đóng, sử dụng phím tắt để thêm thẻ đóng thủ công...
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593226920/visual-studio-code-extension/Auto_Close_Tag_pkrhon.png"
-              alt="Auto Close Tag">
-            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
-                href="https://github.com/formulahendry/vscode-auto-close-tag" target="_blank" title="Auto Close Tag">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593434811/thu-vien-html5-video/hlsjs_bnhlfg.png"
+              alt="HLS.js">
+            <button type="button " class="btn  btn-outline-dark mt-4"> <a href="https://hls-js.netlify.app/demo/"
+                target="_blank" title="HLS.js">
                 Nguồn
-                Auto Close Tag
+                HLS.js
               </a> </button>
 
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag" target="_blank"
-                title="Auto Close Tag"> Trang Cài Đặt
-                Auto Close Tag
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                VideoJS
+              </h3>
+            </div>
+            <p>
+              <b>VideoJS</b> là trình phát video được xây dựng từ nền tảng Video HTML5 hỗ trợ cho nhiều định loại định
+              dạng khác nhau như Youtube, Vimeo, streaming...
+              Nó được phát triển vào giữa năm 2010, được hàng trăm lập trình viên đóng góp vào dự án và hiện có hơn
+              450.000 trang web đang sử dụng thư viện này.
+              Một số điểm mạnh của VideoJS là được thiết kế với tính thẩm mỹ cao, có nhiều theme để lựa chọn phù hợp cho
+              trình phát media, có thể chạy trên cả máy tính cũng như điện thoại,
+              cung cấp hơn 100 plugin giúp bạn có thể tính chỉnh cũng như thêm tính năng mới một cách dễ dàng...
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593435532/thu-vien-html5-video/VideoJS_deoygc.png"
+              alt="VideoJS">
+            <button type="button " class="btn  btn-outline-dark mt-4"> <a href="https://videojs.com/" target="_blank"
+                title="VideoJS">
+                Nguồn
+                VideoJS
+              </a> </button>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Fluid Player
+              </h3>
+            </div>
+            <p>
+              <b>Fluid Player</b> là một trình phát HTML Video nhỏ gọn giúp bạn có thể dễ dàng tùy biến trình phát video
+              cho trang web của mình.
+              Ngoài ra nó còn có một số tính năng hữu ích khác là hiển thị trên nhiều màn hình thiết bị khác nhau,
+              có nhiều lựa chọn cho chất lượng video, xác định hình ảnh thumbnail trước khi load video, cho phép hiển
+              thị các banner quảng cáo,
+              hỗ trợ cho Vue, React và WordPress...
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593438036/thu-vien-html5-video/Fluid_Player_u2zdwc.png"
+              alt="Fluid Player">
+            <button type="button " class="btn  btn-outline-dark mt-4"> <a href="https://www.fluidplayer.com/"
+                target="_blank" title="Fluid Player">
+                Nguồn
+                Fluid Player
               </a> </button>
 
 
@@ -176,145 +191,72 @@
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Prettier - Code formatter
+                MediaElementPlayer
               </h3>
             </div>
             <p>
-              <b>Prettier - Code formatter</b> giúp bạn định dạng lại code một cách tự động và tạo ra một phong cách
-              code chung cho team lập trình thông qua quy tắc riêng được quy định bởi extension. Nó cũng hỗ trợ cho đa
-              dạng loại ngôn ngữ như là
-              JavaScript, TypeScript, Flow, JSX, JSON, HTML, Vue, Angular...
+              <b>MediaElementPlayer</b> là thư viện mã nguồn mở giúp bạn xây dựng trình phát video và audio một cách
+              nhanh chóng và dễ dàng cho trang web.
+              Nó cũng hỗ trợ làm việc với các trình phát media nhúng cho trang web như là Youtube, Vimeo, Twitch,
+              DailyMotion, Facebook, và SoundCloud.
+              Ngoài ra MediaElementPlayer cũng cung cấp một số thiết lập giúp bạn tùy chỉnh trình phát media để phù hợp
+              cho trang web như là cho dùng phím để điều khiển,
+              xác định vị trí của âm lượng, định dạng thời gian hiển thị trên trình phát media...
             </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593227478/visual-studio-code-extension/Prettier_-_Code_formatter_imhzwq.png"
-              alt="Prettier - Code formatter">
-            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
-                href="https://github.com/prettier/prettier-vscode" target="_blank" title="Prettier - Code formatter">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593438723/thu-vien-html5-video/MediaElementPlayer_b4btyg.png"
+              alt="MediaElementPlayer">
+            <button type="button " class="btn  btn-outline-dark mt-4"> <a href="http://www.mediaelementjs.com/"
+                target="_blank" title="MediaElementPlayer">
                 Nguồn
-                Prettier - Code formatter
+                MediaElementPlayer
               </a> </button>
 
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode" target="_blank"
-                title="Prettier - Code formatter"> Trang Cài Đặt
-                Prettier - Code formatter
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Accessible HTML5 Video Player
+              </h3>
+            </div>
+            <p>
+              <b>Accessible HTML5 Video Player</b> là một thư viện mã nguồn mở được xây dựng bằng javascript thuần, kích
+              thước nhỏ gọn giúp bạn có thể dễ dàng thiết lập trình phát video cho
+              nhiều dự án web khác nhau. Một số điểm mạnh của thư viện này là hỗ trợ các chú thích cho video, sử dụng
+              form control HTML5 cho âm lượng và thanh tiến trình (phòng trường hợp javascript không được bật),
+              hỗ trợ cho front-end framework React.
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593439573/thu-vien-html5-video/Accessible_HTML5_Video_Player_zcpcsg.png"
+              alt="Accessible HTML5 Video Player">
+            <button type="button " class="btn  btn-outline-dark mt-4"> <a
+                href="https://github.com/paypal/accessible-html5-video-player" target="_blank"
+                title="Accessible HTML5 Video Player">
+                Nguồn
+                Accessible HTML5 Video Player
               </a> </button>
 
 
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                TODO Highlight
+                Indigo-player
               </h3>
             </div>
             <p>
-              <b>TODO Highlight</b> giúp bạn làm nổi bật các comment quan trọng trong code để những người lập trình sau
-              hay chính bản thân chúng ta
-              có thể nắm được những điều cần lưu ý hay những việc cần phải làm trước khi sử dụng và lập trình code.
-              Ngoài ra nó còn có một số theme được thiết kế đẹp mắt,
-              hỗ trợ trên nhiều ngôn ngữ như javascript, html, css, php...
+              <b>Indigo-player</b> là một thư viện mã nguồn mở được xây dựng bằng Javascript giúp bạn dễ dàng tạo các
+              trình phát media hiện đại và có tính tùy biến cao.
+              Với hệ thống được chia thành những mô đun nhỏ giúp bạn có thể loại bỏ những chức năng mà mình không cần sử
+              dụng đến. Ngoài ra nó có thể chạy được với các media như là mp4, Dash, HLS...
+              và hỗ trợ hầu hết các trình duyệt phổ biến hiện nay. Nó cũng có phần hướng dẫn thiết lập và sử dụng chi
+              tiết giúp bạn có thể dễ dàng áp dụng vào cho trang web của mình.
             </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593228102/visual-studio-code-extension/TODO_Highlight_w2un9k.png"
-              alt="TODO Highlight">
-            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
-                href="https://github.com/wayou/vscode-todo-highlight" target="_blank" title="TODO Highlight">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593441742/thu-vien-html5-video/Indigo-player_ostpoq.png"
+              alt="indigo-player">
+            <button type="button " class="btn  btn-outline-dark mt-4"> <a
+                href="https://matvp91.github.io/indigo-player/#/" target="_blank" title="indigo-player">
                 Nguồn
-                TODO Highlight
-              </a> </button>
-
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight" target="_blank"
-                title="TODO Highlight"> Trang Cài Đặt
-                TODO Highlight
-              </a> </button>
-
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Auto Rename Tag
-              </h3>
-            </div>
-            <p>
-              <b>Auto Rename Tag</b> giúp tự động đổi tên cả cặp thẻ trong HTML, XML. Ví dụ khi bạn thay đổi tên thẻ mở
-              thì thẻ đóng tương ứng cũng sẽ được tự động thay đổi theo.
-              Bạn có thể xem ví dụ chi tiết trong phần Usages nhé.
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593228669/visual-studio-code-extension/Auto_Rename_Tag_nygubc.png"
-              alt="Auto Rename Tag">
-            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
-                href="https://github.com/formulahendry/vscode-auto-rename-tag" target="_blank" title="Auto Rename Tag">
-                Nguồn
-                Auto Rename Tag
-              </a> </button>
-
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag" target="_blank"
-                title="Auto Rename Tag"> Trang Cài Đặt
-                Auto Rename Tag
-              </a> </button>
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Better Comments
-              </h3>
-            </div>
-            <p>
-              <b>Better Comments</b> hiển thị comment theo từng loại riêng biệt giúp dễ dàng phân loại và hình dung hơn
-              ví dụ như là các thông báo quan trọng cần làm nổi bật, các cảnh báo, những việc phải làm...
-              Ngoài ra bạn cũng có thể tùy chỉnh để phù hợp với mục đích và sở thích của mình như thiết lập các cú pháp
-              comment, chỉnh sửa màu sắc màu nền cho comment.
-
-
-
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593229580/visual-studio-code-extension/Better_Comments_nqpbry.png"
-              alt="Better Comments">
-            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
-                href="https://github.com/aaron-bond/better-comments" target="_blank" title="Better Comments">
-                Nguồn
-                Better Comments
-              </a> </button>
-
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments" target="_blank"
-                title="Better Comments"> Trang Cài Đặt
-                Better Comments
-              </a> </button>
-
-
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                ESLint
-              </h3>
-            </div>
-            <p>
-              <b>ESLint</b> là một công cụ phân tích đoạn mã trong chương trình
-              để đưa ra các lỗi cũng như những đoạn mã cần phải cải thiện. Ngoài ra nó cũng cung cấp cho bạn những
-              giải pháp để tối ưu hay sửa lỗi một cách nhanh hơn.
-              Bạn cũng có thể tùy chỉnh trình phân tích cú pháp của ESLint để phù hợp với mục đích hay dự án của mình.
-
-
-
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593237075/visual-studio-code-extension/ESLint_yr1i9z.png"
-              alt="ESLint">
-            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
-                href="https://github.com/Microsoft/vscode-eslint" target="_blank" title="ESLint">
-                Nguồn
-                ESLint
-              </a> </button>
-
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint" target="_blank"
-                title="ESLint"> Trang Cài Đặt
-                ESLint
+                Indigo-player
               </a> </button>
 
 
@@ -323,29 +265,156 @@
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Beautify
+                jPlayer
               </h3>
             </div>
             <p>
-              <b>Beautify</b> là một tiện ích giúp bạn có thể định dạng lại cách hiển thị code
-              một cách đẹp mắt hơn. Nó hỗ trợ cho các ngôn ngữ phổ biến hiện nay như là Javascript, JSON, CSS, Sass và
-              HTML.
+              <b>jPlayer</b> là một thư viện mã nguồn mở và hoàn toàn miễn phí được xây dựng bằng Jquery giúp bạn có thể
+              nhanh chóng xây dừng trình phát video cũng như audio cho trang web của mình.
+              Nó cung cấp nhiều tính năng giúp bạn dễ dàng mở rộng và thiết lập style cho trình phát media thông qua
+              HTML, CSS. Ngoài ra jPlayer cũng có thể chạy được trên nhiều nền tảng và trình duyệt khác nhau như là
+              Chrome, Firefox, Internet Explorer, Safari, Opera, IE6+, iOS, Android...
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593481068/thu-vien-html5-video/jPlayer_uyzrwg.png"
+              alt="jPlayer">
+            <button type="button " class="btn  btn-outline-dark mt-4"> <a href="http://jplayer.org/" target="_blank"
+                title="jPlayer">
+                Nguồn
+                jPlayer
+              </a> </button>
 
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Xigua Video Player(HTML5)
+              </h3>
+            </div>
+            <p>
+              <b>Xigua Video Player(HTML5)</b> là một thư viện dành cho việc phát video, âm thanh cho trang web. Nó được
+              thiết kế thành những UI riêng biệt giúp bạn có thể linh hoạt
+              trong việc xây dựng trình phát media dễ dàng. Ngoài ra nó cũng cung cấp một số tính năng hữu ích khác như
+              là Picture-in-Picture: giúp hiển thị video trong cửa sổ nhỏ
+              để người dùng có thể vừa đọc thông tin và xem video cùng một lúc trên trang web, chế độ toàn màn hình,
+              chức năng chụp hình video đang chạy một cách nhanh chóng,
+              định dạng lại ngôn ngữ cho trình phát media, tùy chỉnh thiết kế thông qua thuộc tính <code>style</code>...
+              Nó có công cụ generate giúp bạn có thể tự điều chỉnh
+              trình phát media một cách trực quan thông qua cách thêm bớt các thông tin, thuộc tính và chức năng mà bạn
+              muốn, Sau đó công cụ này sẽ tự động xuất ra đoạn mã và hiển thị trình phát video tương ứng với những thông
+              tin đó.
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593482379/thu-vien-html5-video/Xigua_Video_Player_HTML5_utz1vy.png"
+              alt="Xigua Video Player(HTML5)">
+            <button type="button " class="btn  btn-outline-dark mt-4"> <a href="http://h5player.bytedance.com/en/"
+                target="_blank" title="Xigua Video Player(HTML5)">
+                Nguồn
+                Xigua Video Player(HTML5)
+              </a> </button>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Clappr
+              </h3>
+            </div>
+            <p>
+              <b>Clappr</b> là một trình phát media mở rộng cho trang web. Nó là tổng hợp của hai dựa án khác nhau là
+              @clappr/core và @clappr/plugins.
+              Với @clappr/core là nơi chứa các chức năng cơ bản như các class, kiến trúc plugin, xử lý sự kiện... và
+              @clappr/plugins là nởi tổng hợp các plugin mà
+              bạn có tích hợp vào trình phát media như là hiển thị video 360 độ, Picture-in-Picture, các nút điều
+              khiển... Và nó hiển thị được trên nhiều màn hình thiết bị khác nhau cũng như chạy trên hầu hết các
+              trình duyệt phổ biến hiện nay. Bạn có thể tham khảo thêm cách thiết lập và sử dụng thư viện này trong phần
+              Documentation của trang demo nhé.
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593483685/thu-vien-html5-video/Clappr_xpgohd.png"
+              alt="Clappr">
+            <button type="button " class="btn  btn-outline-dark mt-4"> <a href="http://clappr.io/" target="_blank"
+                title="Clappr">
+                Nguồn
+                Clappr
+              </a> </button>
+
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Shaka Player
+              </h3>
+            </div>
+            <p>
+              <b>Shaka Player</b> là một thư viện mã nguồn mở được xây dựng bằng Javascript giúp bạn có thể thiết lập
+              trình phát media dễ dàng cho trang web.
+              Một điểm mạnh của thư viện này là có thể chạy các adaptive media formats (như là DASH và HLS) trong trình
+              duyệt mà không cần sử dụng thư viện bổ sung.
+              Nó cũng hỗ trợ lưu trữ ngoại tuyến và phát lại video thông qua IndexedDB trên trình duyệt (tuy nhiên cũng
+              có một số trình duyệt không hỗ trợ nhé).
+              Với sự hình thành phát triển từ năm 2014 và được nâng cấp cập qua nhiều giai đoạn với nhiều tính năng hữu
+              ích thì mình nghĩ đây là một thư viện bạn nên sử dụng để tạo trình phát media cho trnag web của mình.
 
             </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593237384/visual-studio-code-extension/Beautify_ucakmz.png"
-              alt="Beautify">
-            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
-                href="https://github.com/HookyQR/VSCodeBeautify" target="_blank" title="Beautify">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593484820/thu-vien-html5-video/Shaka_Player_v1vy5k.png"
+              alt="Shaka Player">
+            <button type="button " class="btn  btn-outline-dark mt-4"> <a href="https://github.com/google/shaka-player"
+                target="_blank" title="Shaka Player">
                 Nguồn
-                Beautify
+                Shaka Player
               </a> </button>
 
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify" target="_blank"
-                title="Beautify"> Trang Cài Đặt
-                Beautify
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Một số thư viện video cho ReactJS
+              </h3>
+            </div>
+            <p>
+              Tiếp theo mình sẽ tổng hợp một số thư viện video cho ReactJS ở bên dưới đây nhé!
+            </p>
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Video-React
+              </h3>
+            </div>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593485753/thu-vien-html5-video/Video-React_pmfusu.png"
+              alt=" Video-React">
+            <button type="button " class="btn  btn-outline-dark mt-4"> <a href="https://video-react.js.org/"
+                target="_blank" title=" Video-React">
+                Nguồn
+                Video-React
+              </a> </button>
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                ReactPlayer
+              </h3>
+            </div>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593485995/thu-vien-html5-video/ReactPlayer_fnnhno.png"
+              alt="ReactPlayer">
+            <button type="button " class="btn  btn-outline-dark mt-4"> <a
+                href="https://github.com/CookPete/react-player" target="_blank" title="ReactPlayer">
+                Nguồn
+                ReactPlayer
+              </a> </button>
+
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                React Media Player
+              </h3>
+            </div>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593486339/thu-vien-html5-video/React_Media_Player_d6ihip.png"
+              alt="React Media Player">
+            <button type="button " class="btn  btn-outline-dark mt-4"> <a
+                href="https://github.com/souporserious/react-media-player" target="_blank" title="React Media Player">
+                Nguồn
+                React Media Player
               </a> </button>
 
 
@@ -353,548 +422,229 @@
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Bracket Pair Colorizer
+                react-html5video
               </h3>
             </div>
-            <p>
-              <b>Bracket Pair Colorizer</b> là tiện ích mở rộng giúp làm nổi bật những dấu ngoặc tương ứng trong đoạn mã
-              với nhau bằng cách sử dụng màu sắc. Nó giúp bạn có thể dễ dàng
-              phát hiện những dấu ngoặc còn thiếu hay có cái nhìn trực quan khi có quá nhiều ngoặc lồng vào nhau trong
-              đoạn code.
-            </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593238040/visual-studio-code-extension/Bracket_Pair_Colorizer_mysmgq.png"
-              alt="Bracket Pair Colorizer">
-            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
-                href="https://github.com/CoenraadS/BracketPair" target="_blank" title="Bracket Pair Colorizer">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593486918/thu-vien-html5-video/react-html5video_shvvhk.png"
+              alt="react-html5video">
+            <button type="button " class="btn  btn-outline-dark mt-4"> <a
+                href="https://github.com/mderrick/react-html5video" target="_blank" title="react-html5video">
                 Nguồn
-                Bracket Pair Colorizer
+                react-html5video
               </a> </button>
 
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer"
-                target="_blank" title="Bracket Pair Colorizer"> Trang Cài Đặt
-                Bracket Pair Colorizer
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                React Video
+              </h3>
+            </div>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593487132/thu-vien-html5-video/React_Video_oej3a4.png"
+              alt="React Video">
+            <button type="button " class="btn  btn-outline-dark mt-4"> <a
+                href="https://github.com/pedronauck/react-video" target="_blank" title="React Video">
+                Nguồn
+                React Video
               </a> </button>
 
 
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Path Intellisense
+                Một số thư viện video cho VueJS
               </h3>
             </div>
             <p>
-              <b>Path Intellisense</b> là tiện ích mở rộng giúp bạn tự động thực hiện tên cho file (autocompletes
-              filenames)
-              thông qua cách gợi ý các đường dẫn mỗi khi bạn gõ đường dẫn đến nơi lưu trữ file.
-
+              Tiếp theo mình sẽ tổng hợp một số thư viện video cho VueJS ở bên dưới đây nhé!
             </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593238405/visual-studio-code-extension/Path_Intellisense_rh6ftt.png"
-              alt="Path Intellisense">
-            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
-                href="https://github.com/ChristianKohler/PathIntellisense" target="_blank" title="Path Intellisense">
-                Nguồn
-                Path Intellisense
-              </a> </button>
 
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense&ssr=false#overview"
-                target="_blank" title="Path Intellisense"> Trang Cài Đặt
-                Path Intellisense
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Vue-Video-Player
+              </h3>
+            </div>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593487333/thu-vien-html5-video/Vue-Video-Player_mq8cl3.png"
+              alt="Vue-Video-Player">
+            <button type="button " class="btn  btn-outline-dark mt-4"> <a
+                href="https://github.surmon.me/vue-video-player/" target="_blank" title="Vue-Video-Player">
+                Nguồn
+                Vue-Video-Player
               </a> </button>
 
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Import Cost
+                vue-core-video-player
               </h3>
             </div>
-            <p>
-              <b>Import Cost</b> giúp bạn có thể kiểm tra kích thước của các file import một cách dễ dàng thông qua
-              thông tin được hiển thị
-              trực tiếp bên đoạn mã khi ta thực hiện import.
-
-            </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593239178/visual-studio-code-extension/Import_Cost_zw4euh.png"
-              alt="Import Cost">
-            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
-                href="https://github.com/wix/import-cost" target="_blank" title="Import Cost">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593487687/thu-vien-html5-video/vue-core-video-player_eszuru.png"
+              alt="vue-core-video-player">
+            <button type="button " class="btn  btn-outline-dark mt-4"> <a
+                href="https://core-player.github.io/vue-core-video-player/get-started.html" target="_blank"
+                title="vue-core-video-player">
                 Nguồn
-                Import Cost
-              </a> </button>
-
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost" target="_blank"
-                title="Import Cost"> Trang Cài Đặt
-                Import Cost
-              </a> </button>
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Code Time
-              </h3>
-            </div>
-            <p>
-              <b>Code Time</b> giúp bạn có thể tính toán thời gian mình làm việc trên visual studio code. Ngoài ra nó
-              cũng tổng hợp thời gian bạn dành cho mỗi dự án,
-              mức độ làm việc với code thông qua biểu đồ của các ngày trong tuần, hiển thị giá trị thời gian trung bình
-              bạn làm việc trong một tháng...
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593239711/visual-studio-code-extension/Code_Time_f2qfm9.png"
-              alt="Code Time">
-            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
-                href="https://github.com/swdotcom/swdc-vscode" target="_blank" title="Code Time">
-                Nguồn
-                Code Time
-              </a> </button>
-
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://marketplace.visualstudio.com/items?itemName=softwaredotcom.swdc-vscode" target="_blank"
-                title="Code Time"> Trang Cài Đặt
-                Code Time
-              </a> </button>
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                CSS Peek
-              </h3>
-            </div>
-            <p>
-              <b>CSS Peek</b> tiện ích mở rộng giúp tìm các id hoặc class của các thẻ HTML trong những file CSS mà chứa
-              những class hay thuộc tính đó.
-              Ngoài ra nó cũng cho phép bạn đi đến các file CSS đó ngay lập tức.
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593240106/visual-studio-code-extension/CSS_Peek_fzhzks.png"
-              alt="CSS Peek">
-            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
-                href="https://github.com/pranaygp/vscode-css-peek" target="_blank" title="CSS Peek">
-                Nguồn
-                CSS Peek
-              </a> </button>
-
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek" target="_blank"
-                title="CSS Peek"> Trang Cài Đặt
-                CSS Peek
-              </a> </button>
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Project Manager
-              </h3>
-            </div>
-            <p>
-              <b>Project Manager</b> tiện ích mở rộng giúp bạn dễ dàng chuyển đổi giữa các dự án trong VS Code.
-              Nó cung cấp một menu phụ giúp bạn có thể lưu trữ các dự cần làm việc và chuyển đổi qua lại một cách nhanh
-              chóng.
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593240819/visual-studio-code-extension/Project_Manager_ioxwnb.png"
-              alt="Project Manager">
-            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
-                href="https://github.com/alefragnani/vscode-project-manager" target="_blank" title="Project Manager">
-                Nguồn
-                Project Manager
-              </a> </button>
-
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager&ssr=false#overview"
-                target="_blank" title="Project Manager"> Trang Cài Đặt
-                Project Manager
-              </a> </button>
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Browser Preview
-              </h3>
-            </div>
-            <p>
-              <b>Browser Preview</b> hiển thị trình duyệt ngay trên Visual Studio Code giúp bạn có thể xem kết quả cũng
-              như debug
-              cho chương trình một cách dễ dàng hơn.
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593241103/visual-studio-code-extension/Browser_Preview_anpfkc.png"
-              alt="Browser Preview">
-            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
-                href="https://github.com/auchenberg/vscode-browser-preview" target="_blank" title="Browser Preview">
-                Nguồn
-                Browser Preview
-              </a> </button>
-
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://marketplace.visualstudio.com/items?itemName=auchenberg.vscode-browser-preview"
-                target="_blank" title="Browser Preview"> Trang Cài Đặt
-                Browser Preview
-              </a> </button>
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                GitLens — Git supercharged
-              </h3>
-            </div>
-            <p>
-              <b>GitLens — Git supercharged</b> là tiện ích cung cấp nhiều tính năng hữu ích giúp bạn làm việc với Git
-              một cách tốt hơn như là
-              hiển thị chú thích cho từng dòng code về lập trình viên commit, hiển thị thông tin chi tiết các lần sửa
-              đổi đoạn mã trong File...
-
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593242560/visual-studio-code-extension/GitLens_Git_supercharged_vslnyl.png"
-              alt="GitLens — Git supercharged">
-            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
-                href="https://github.com/eamodio/vscode-gitlens" target="_blank" title="GitLens — Git supercharged">
-                Nguồn
-                GitLens — Git supercharged
-              </a> </button>
-
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens" target="_blank"
-                title="GitLens — Git supercharged"> Trang Cài Đặt
-                GitLens — Git supercharged
+                vue-core-video-player
               </a> </button>
 
 
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Polacode
+                vue-video-module
               </h3>
             </div>
-            <p>
-              <b>Polacode</b> là tiện ích giúp bạn chụp hình đoạn code của mình và lưu lại ngay trên máy tính một cách
-              dễ dàng.
-              Ngoài ra bạn cũng có thể chọn những bộ theme được thiết kế sẵn giúp đoạn mã được nổi bật và đẹp hơn trong
-              quá trình chụp.
-
-            </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593242894/visual-studio-code-extension/Polacode_gulbip.png"
-              alt="Polacode">
-            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
-                href="https://github.com/octref/polacode" target="_blank" title="Polacode">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593488205/thu-vien-html5-video/vue-video-module_kfcixe.png"
+              alt="vue-video-module">
+            <button type="button " class="btn  btn-outline-dark mt-4"> <a
+                href="https://github.com/iapYang/vue-video-module" target="_blank" title="vue-video-module">
                 Nguồn
-                Polacode
+                vue-video-module
               </a> </button>
 
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://marketplace.visualstudio.com/items?itemName=pnp.polacode" target="_blank"
-                title="Polacode"> Trang Cài Đặt
-                Polacode
-              </a> </button>
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                vscode-icons
+                Vue-DPlayer
               </h3>
             </div>
-            <p>
-              <b>vscode-icons</b> là tiện ích chúng ta có thể thiết lập nhiều icon đẹp mắt cho Visual Studio Code.
-            </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593243152/visual-studio-code-extension/vscode-icons_k1i5au.png"
-              alt="vscode-icons">
-            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
-                href="https://github.com/vscode-icons/vscode-icons" target="_blank" title="vscode-icons">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593488322/thu-vien-html5-video/Vue-DPlayer_gcaosm.png"
+              alt="Vue-DPlayer">
+            <button type="button " class="btn  btn-outline-dark mt-4"> <a
+                href="https://github.com/MoePlayer/vue-dplayer" target="_blank" title="Vue-DPlayer">
                 Nguồn
-                vscode-icons
+                Vue-DPlayer
               </a> </button>
 
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons"
-                target="_blank" title="vscode-icons"> Trang Cài Đặt
-                vscode-icons
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                vue-youtube-ssr-app
+              </h3>
+            </div>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593488556/thu-vien-html5-video/vue-youtube-ssr-app_q1ztxo.png"
+              alt="vue-youtube-ssr-app">
+            <button type="button " class="btn  btn-outline-dark mt-4"> <a href="https://vue-youtube.herokuapp.com/"
+                target="_blank" title="vue-youtube-ssr-app">
+                Nguồn
+                vue-youtube-ssr-app
               </a> </button>
 
 
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Settings Sync
+                Một số thư viện video cho Angular
               </h3>
             </div>
             <p>
-              <b>Settings Sync</b> giúp bạn có thể lưu lại các thiết lập cho Visual Studio Code trên máy tính của mình
-              lên trên Github và sử dụng cho các máy khác một cách dễ dàng
-              ví dụ như là các thông tin về extension, hay các cài đặt mà mình đã thiết lập... Lúc này bạn dễ dàng thiết
-              lập cho nhiều máy khác nhau mà không cần phải nhớ lại
-              các extension, các thiết lập mà mình đã cài đặt cho VS Code.
-
-
+              Tiếp theo mình sẽ tổng hợp một số thư viện video cho Angular ở bên dưới đây nhé!
             </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593243794/visual-studio-code-extension/Settings_Sync_quqygb.png"
-              alt="Settings Sync">
-            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
-                href="https://github.com/shanalikhan/code-settings-sync" target="_blank" title="Settings Sync">
-                Nguồn
-                Settings Sync
-              </a> </button>
-
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync" target="_blank"
-                title="Settings Sync"> Trang Cài Đặt
-                Settings Sync
-              </a> </button>
 
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Quokka
+                mat-video
               </h3>
             </div>
-            <p>
-              <b>Quokka</b> giúp bạn có thể test từng đoạn code nhỏ Javascript, TypeScript và hiển thị trực tiếp trên VS
-              Code mà không cần sử dụng
-              <code>console.log()</code> để hiển thị trong trình duyệt.
-            </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593244498/visual-studio-code-extension/Quokka_ciroz3.png"
-              alt="Quokka">
-            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
-                href="https://quokkajs.com/docs/index.html" target="_blank" title="Quokka">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593489337/thu-vien-html5-video/mat-video_rsqhs2.png"
+              alt="mat-video">
+            <button type="button " class="btn  btn-outline-dark mt-4"> <a href="https://nkoehler.github.io/mat-video/"
+                target="_blank" title="mat-video">
                 Nguồn
-                Quokka
-              </a> </button>
-
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode" target="_blank"
-                title="Quokka"> Trang Cài Đặt
-                Quokka
+                mat-video
               </a> </button>
 
 
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                EditorConfig
+                Videogular
               </h3>
             </div>
-            <p>
-              <b>EditorConfig</b> là một tiện ích mở rộng giúp duy trì sự thống nhất style code cho nhiều lập trình viên
-              khi làm cùng một dự án.
-              Và mỗi lập trình viên có thể làm việc trên nhiều trình soạn thảo mã khác nhau như VSCode, Atom,
-              Notepad++...
-              thì nó đều hỗ trợ các plugin trên mỗi nền tảng giúp lập trình viên có thể đọc và chỉnh sửa style code một
-              cách dễ dàng.
-            </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593245740/visual-studio-code-extension/EditorConfig_irg5ui.png"
-              alt="EditorConfig">
-            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
-                href="https://editorconfig.org/" target="_blank" title="EditorConfig">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593489540/thu-vien-html5-video/Videogular_d3fvw1.png"
+              alt="Videogular">
+            <button type="button " class="btn  btn-outline-dark mt-4"> <a
+                href="https://videogular.github.io/videogular2/" target="_blank" title="Videogular">
                 Nguồn
-                EditorConfig
+                Videogular
               </a> </button>
 
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig" target="_blank"
-                title="EditorConfig"> Trang Cài Đặt
-                EditorConfig
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                ngx-embed-video
+              </h3>
+            </div>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593489699/thu-vien-html5-video/ngx-embed-video_vwnyql.png"
+              alt="ngx-embed-video">
+            <button type="button " class="btn  btn-outline-dark mt-4"> <a
+                href="https://github.com/SamirHodzic/ngx-embed-video" target="_blank" title="ngx-embed-video">
+                Nguồn
+                ngx-embed-video
+              </a> </button>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Một số thư viện video cho trang web khác
+              </h3>
+            </div>
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                JW Player's
+              </h3>
+            </div>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593490051/thu-vien-html5-video/JW_Player_s_f59xt6.png"
+              alt="JW Player's">
+            <button type="button " class="btn  btn-outline-dark mt-4"> <a
+                href="https://www.jwplayer.com/html5-video-player/" target="_blank" title="JW Player's">
+                Nguồn
+                JW Player's
               </a> </button>
 
 
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Material Icon Theme
+                Flowplayer
               </h3>
             </div>
-            <p>
-              <b>Material Icon Theme</b> là một tiện ích thiết lập icon Material Design cho Visual Studio Code.
-            </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593246197/visual-studio-code-extension/Material_Icon_Theme_xu2pys.png"
-              alt="Material Icon Theme">
-            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
-                href="https://github.com/PKief/vscode-material-icon-theme" target="_blank" title="Material Icon Theme">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593490299/thu-vien-html5-video/Flowplayer_e4gayp.png"
+              alt="Flowplayer">
+            <button type="button " class="btn  btn-outline-dark mt-4"> <a href="https://flowplayer.com/features/player"
+                target="_blank" title="Flowplayer">
                 Nguồn
-                Material Icon Theme
-              </a> </button>
-
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme" target="_blank"
-                title="Material Icon Theme"> Trang Cài Đặt
-                Material Icon Theme
+                Flowplayer
               </a> </button>
 
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Color Highlight
+                Vplayed
               </h3>
             </div>
-            <p>
-              <b>Color Highlight</b> là một tiện ích giúp bạn hiển thị màu cho các đối tượng được tìm thấy trong trang.
-              Ví dụ nhiều mã màu mà VS Code không hiển thị được
-              thì tiện ích này là một lựa chọn tuyệt vời cho bạn.
-            </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593256969/visual-studio-code-extension/Color_Highlight_xcewxz.png"
-              alt="Color Highlight">
-            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
-                href="https://github.com/egonyans/vscode-ext-color-highlight" target="_blank" title="Color Highlight">
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593490525/thu-vien-html5-video/Vplayed_f4wi1x.png"
+              alt="Vplayed">
+            <button type="button " class="btn  btn-outline-dark mt-4"> <a
+                href="https://www.vplayed.com/hls-html-player.php" target="_blank" title="Vplayed">
                 Nguồn
-                Color Highlight
+                Vplayed
               </a> </button>
-
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight" target="_blank"
-                title="Color Highlight"> Trang Cài Đặt
-                Color Highlight
-              </a> </button>
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                REST Client
-              </h3>
-            </div>
-            <p>
-              <b>REST Client</b> cho phép bạn gửi các yêu cầu HTTP và có thể xem kết quả trực tiếp trên Visual Studio
-              Code.
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593257244/visual-studio-code-extension/REST_Client_fshbyg.png"
-              alt="REST Client">
-            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
-                href="https://github.com/Huachao/vscode-restclient" target="_blank" title="REST Client">
-                Nguồn
-                REST Client
-              </a> </button>
-
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://marketplace.visualstudio.com/items?itemName=humao.rest-client" target="_blank"
-                title="REST Client"> Trang Cài Đặt
-                REST Client
-              </a> </button>
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Live Share
-              </h3>
-            </div>
-            <p>
-              <b>Live Share</b> giúp những lập trình viên trong team có thể chia sẻ đoạn mã trong chương trình theo thời
-              gian thực để
-              dễ dàng trong việc chỉnh sửa cũng như debug cho chương trình như là chia sẻ debugging sessions, terminal
-              instances, localhost web apps,
-              voice calls...
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593258251/visual-studio-code-extension/Live_Share_sbka18.png"
-              alt="Live Share">
-            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
-                href="https://github.com/MicrosoftDocs/live-share" target="_blank" title="Live Share">
-                Nguồn
-                Live Share
-              </a> </button>
-
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare" target="_blank"
-                title="Live Share"> Trang Cài Đặt
-                Live Share
-              </a> </button>
-
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Code Spell Checker
-              </h3>
-            </div>
-            <p>
-              <b>Code Spell Checker</b> giúp bạn kiểm tra lỗi chính tả của đoạn mã trong chương trình. Tuy nhiên nó chỉ
-              hỗ trợ các ngôn ngữ như tiếng Anh,
-              Thụy Điển, Pháp, Đức... và chưa có tiếng Viết Nam nha.
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593258514/visual-studio-code-extension/Code_Spell_Checker_uze8cu.png"
-              alt="Code Spell Checker">
-            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
-                href="https://github.com/MicrosoftDocs/live-share" target="_blank" title="Code Spell Checker">
-                Nguồn
-                Code Spell Checker
-              </a> </button>
-
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker"
-                target="_blank" title="Code Spell Checker"> Trang Cài Đặt
-                Code Spell Checker
-              </a> </button>
-
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Vetur
-              </h3>
-            </div>
-            <p>
-              <b>Vetur</b> là tiện ích mở rộng cung cấp các công cụ hữu ích cho VueJS như là debug, kiểm tra lỗi,
-              Syntax-highlighting, snippet...
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593259105/visual-studio-code-extension/Vetur_cf6trt.png"
-              alt="Vetur">
-            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
-                href="https://github.com/vuejs/vetur" target="_blank" title="Vetur">
-                Nguồn
-                Vetur
-              </a> </button>
-
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://marketplace.visualstudio.com/items?itemName=octref.vetur" target="_blank" title="Vetur">
-                Trang Cài Đặt
-                Vetur
-              </a> </button>
-
-
-
-           
-
-
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                ES7 React/Redux/GraphQL/React-Native snippets
-              </h3>
-            </div>
-            <p>
-              <b>ES7 React/Redux/GraphQL/React-Native snippets</b> là tiện ích mở rộng cung cấp các snippet cho
-              React, Redux và Graphql trong JS/TS với ccu1 pháp ES7.
-              Bạn có thể tham khảo  bảng cú pháp trong trang chính của nó
-              nhé!
-            </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1593259571/visual-studio-code-extension/ES7_React_Redux_GraphQL_React-Native_snippets_iiz1wh.png"
-              alt="	ES7 React/Redux/GraphQL/React-Native snippets">
-            <button type="button " class="btn mr-md-4  btn-dark mt-4"> <a class="text-white"
-                href="https://github.com/dsznajder/vscode-es7-javascript-react-snippets" target="_blank" title=" ES7 React/Redux/GraphQL/React-Native snippets">
-                Nguồn
-                ES7 React/Redux/GraphQL/React-Native snippets
-              </a> </button>
-
-            <button type="button " class="btn btn-dark mt-4"> <a class="text-white"
-                href="https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets"
-                target="_blank" title="	ES7 React/Redux/GraphQL/React-Native snippets"> Trang Cài Đặt
-                ES7 React/Redux/GraphQL/React-Native snippets
-              </a> </button>
-
-
-
 
 
 
@@ -922,7 +672,7 @@
             <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
 
 
-            <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những extension Visual Studio Code hữu
+            <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những thư viện HTML5 Video hữu
               ích
               dành
               cho
@@ -946,20 +696,7 @@
   </div>
   <div class="col-lg-12 col-md-12 col-xs-12">
     <div class="mt-5"></div>
-    <div class="card card-search">
-      <div class="card-header card-header-category">
-        Từ Khóa
-      </div>
-      <div class="card-body card-body-search mt-4">
-        <h3 class="button-article"><a href="/article/css"><button type="button"
-              class="CSS btn shadow-sm rounded btn-success m-2 pl-3 pr-3">CSS</button></a>
-          <a href="/article/html"><button type="button"
-              class="HTML btn shadow-sm rounded btn-success m-2 pl-3 pr-3">HTML</button></a>
-          <a href="/article/nodejs">
-            <button type="button" class="btn shadow-sm rounded btn-success m-2 pl-3 pr-3">NodeJS</button></a>
-        </h3>
-      </div>
-    </div>
+
 
 
   </div>
