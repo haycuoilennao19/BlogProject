@@ -2,20 +2,17 @@
 <html lang="vi">
 
 <head>
-  <meta name='dmca-site-verification' content='NkZ4TjFDZjNMMVlJbEJJWFV2aDdWQXB1SDQ3cXg1TlRnakR1elZuVXJDRT01' />
   <link rel="canonical" href="https://www.niemvuilaptrinh.com/">
-
   <meta name="robots" content="index,follow" />
-  
   <title>Niềm Vui Lập Trình - Chia Sẻ Kiến Thức Về Lập Trình</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="alternate" href="http://www.niemvuilaptrinh.com/" hreflang="vi-vn" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="article:author" content="https://www.facebook.com/Ni%E1%BB%81m-Vui-L%E1%BA%ADp-Tr%C3%ACnh-103123311194043/" />
   <meta name="keywords" content="HTML,CSS,JavaScript, Bootstrap 4, Front End Web">
   <meta name="author" content="Thái Viết Nhật">
   <meta name="copyright" content="Niềm Vui Lập Trình" />
-  <link rel="icon" async type="image/x-icon"
+  <link rel="icon"  type="image/x-icon"
   href="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586594935/logo-via-logohub_2_a9ubsa.png">
   <meta property="og:image"
     content="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576511394/Niemvuilaptrinh_jgc0rn.png">
@@ -62,8 +59,7 @@
 
 
   <!--Navbar-->
-  <div class="row">
-    <div class="col-sm-12">
+
       <nav class="navbar navbar-expand-lg navbar-dark bg-primary  fixed-top p-2">
         <a class="navbar-brand" title="Niềm Vui Lập Trình" href="/">Niềm Vui Lập Trình</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -100,8 +96,7 @@
     
         </div>
       </nav>
-    </div>
-  </div>
+    
 
   <!--Content-->
   <div class="jumbotron jumbotron-fluid image-slider">
@@ -127,14 +122,14 @@
     <div class="row justify-content-center">
       <% posts.forEach(function(post){ %>
       <div class="card border-0 shadow card-row-article">
-
-        <h5 class="card-header"> <img data-src="<%-post.file%>" class="card-img-top header-img lazyload"
+        <div class="card-header"> <img data-src="<%-post.file%>" class="card-img-top header-img img-fluid lazyload"
             alt="<%-post.title%>">
-        </h5>
-        <h3 class="button-article"><button type="button"
-            class="<%-post.category%> btn shadow-sm rounded btn-success m-3 pl-3 pr-3"><%=post.category%></button></h3>
+        </div>
+        
         <div class="card-body">
-          <h5 class="card-title"><%=post.title%></h5>
+          <button type="button"
+            class="<%-post.category%> btn shadow-sm rounded btn-success mt-2 mb-2 pl-2 pr-2"><%=post.category%></button><br/>
+          <h2 ><%=post.title%></h2>
           <hr />
           <p class="card-text text-justify"><%-post.subtitle%></p>
           <p class="text-date"><i class="fa fa-clock-o" aria-hidden="true"></i> <%=post.date%></p>
@@ -211,14 +206,16 @@
                 <a href="/article/Bootstrap" title="Thông Tin Về Bootstrap">
                   <button type="button"
                   class="btn shadow-sm rounded m-1 pl-2 pr-2 hvr-shrink  btn-secondary "><i class="fa fa-tag" aria-hidden="true"></i> Bootstrap</button></a>
-              </h3>
+                <a href="article/Resource" title="Nguồn Lập Trình">
+                  <button type="button"
+                class="btn shadow-sm rounded m-1 pl-2 pr-2 hvr-shrink  btn-secondary "><i class="fa fa-tag" aria-hidden="true"></i> Nguồn Lập Trình</button></a>
+                </h3>
             </div>
           </div>
           <div class="card card-search">
-
             <div class="fb-page"
               data-href="https://www.facebook.com/Ni&#x1ec1;m-Vui-L&#x1ead;p-Tr&#xec;nh-103123311194043/" data-tabs=""
-              data-width="500" data-height="340" data-small-header="false" data-adapt-container-width="true"
+               data-small-header="false" data-adapt-container-width="true"
               data-hide-cover="false" data-show-facepile="false">
               <blockquote cite="https://www.facebook.com/Ni&#x1ec1;m-Vui-L&#x1ead;p-Tr&#xec;nh-103123311194043/"
                 class="fb-xfbml-parse-ignore"><a
@@ -310,7 +307,7 @@
 
   gtag('config', 'UA-163462128-1');
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       </body>
 
 </html>
