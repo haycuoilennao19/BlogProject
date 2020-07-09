@@ -163,6 +163,7 @@ router.get("/Resource", function(req, res) {
 router.get('/Resource/:page', function(req, res, next) {
     var perpage = 6;
     var page = req.params.page || 1
+    var category = "Resource"
     Blog
         .find({category:"Resource"})
         .sort({_id: -1})
@@ -171,7 +172,7 @@ router.get('/Resource/:page', function(req, res, next) {
         .exec(function(err, products) {
             Blog.countDocuments({category:"Resource"}).exec(function(err, count) {
                 if(err) return next(err)
-                res.render('products',{posts: products, current:parseInt(page), pages: Math.ceil(count / perpage)})
+                res.render('products-category',{posts: products, current:page, pages: Math.ceil(count / perpage), category: category})
             })
         })
 })

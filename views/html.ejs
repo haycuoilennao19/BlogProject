@@ -35,7 +35,7 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i> 20 Thủ thuật CSS Hữu ích Dành Cho Bạn Năm 2020 </h2>
+                  aria-hidden="true"></i> Những Thư Viện Javascript Form Validation Năm 2020 </h2>
             </div>
           </div>
 
@@ -46,630 +46,384 @@
           </div>
           <div class="text-content-article mt-5">
             <p><i>
-                Bài viết hôm nay chúng ta sẽ cùng nhau đi vào tìm hiểu các thủ thuật CSS hay được lập trình viên sử dụng
-                để giúp
-                bạn cũng như mình có thể hiểu hơn về CSS cũng như tăng hiệu quả trong công việc và học tập nhé!
+                Form là một yếu tố mà hầu hết trong tất cả các web hiện nay đều sử dụng để thu thập thông tin, khảo sát
+                ý kiến, nhận đặt hàng online từ người dùng...
+                Và để tránh tình trạng khách hàng nhập sai hay đưa ra thông báo nếu form có lỗi thì hôm nay mình sẽ giới
+                thiệu đến các bạn những
+                thư viện javascript form validation được lập trình viên sử dụng phổ biến trong năm 2020 nhé!
               </i>
             </p>
+
+
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Các hiệu ứng hình ảnh với CSS
+                VALIDATE.JS
               </h3>
             </div>
             <p>
-              Trong CSS cho phép chúng ta tạo các hiệu ứng trực tiếp cho hình ảnh mà không cần sử dụng đến Photoshop và
-              thường được dùng với thẻ <code>&#60;img&#62;.</code> Sau đây là một số thuộc tính thông dụng, bạn tham
-              khảo ở bên dưới nhé:
-              <ul>
-                <li><code>blur</code>: Áp dụng hiệu ứng làm mờ cho hình ảnh</li>
-                <li><code>grayscale</code>: Chuyển đổi hình ảnh theo grayscale(đơn vị là % nhé)</li>
-                <li>
-                  <code>brightness</code>: Điều chỉnh độ sáng cho hình ảnh.
-                </li>
-                <li>
-                  <code>saturate</code>: Điều chỉnh độ bão hòa cho hình ảnh.
-                </li>
-                <li>
-                  <code>invert</code>: Đảo ngược chiều các mẫu trong hình ảnh.
-                </li>
-                <li>
-                  <code>hue-rotate</code>: Áp dụng góc màu cho hình ảnh.
-                </li>
-              </ul>
+              <b>VALIDATE.JS</b> là một thư viện mã nguồn mở cung cấp cho bạn cách thức để kiểm tra các đối tượng
+              Javascript trong trang web.
+              Mục tiêu chính của nó là thiết lập các validation dưới dạng JSON và có thể chia sẻ qua lại giữa trình
+              duyệt và máy chủ. Nó cung cấp cho chúng ta
+              rất nhiều các phương thức validate như là xác thực ngày tháng, email, format, kiểm tra loại của đối tượng...
+              VALIDATE.JS có thể chạy trên cả hai môi trường là trình duyệt và máy chủ(Nodejs). Các ví dụ và cách sử
+              dụng bạn tham khảo thêm trong trang demo nhé!
             </p>
-            <p>
-              Trên đây là một số thuộc tính thông dụng cho hiệu ứng hình ảnh và nếu cảm thấy khó hiểu thì bạn xem ví dụ
-              để có cái nhìn trực quan hơn nhé!
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result"
-              data-user="haycuoilennao19" data-slug-hash="JjGLRLo" data-preview="true"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="hieu ung hinh anh CSS">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/JjGLRLo">
-                  hieu ung hinh anh CSS</a> by haycuoilennao19 (<a
-                  href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594261835/thu-vien-form-validation-javascript/VALIDATEJS_zhf9ts.png"
+              alt="VALIDATE.JS">
 
             <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/haycuoilennao19/pen/JjGLRLo" target="_blank"
-                title="Các hiệu ứng hình ảnh với CSS">
+                href="https://validatejs.org/" target="_blank" title="VALIDATE.JS">
                 Nguồn
-                Các hiệu ứng hình ảnh với CSS
+                VALIDATE.JS
+              </a> </button>
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Parsley
+              </h3>
+            </div>
+            <p>
+              <b>Parsley</b> là một thư viện validation form được xây dựng bằng Javascript với nhiều tính mạnh mẽ và dễ
+              dàng sử dụng cho lập trình viên để phát triển web.
+              Một số điểm mạnh của thư viện này là nó được tích hợp rất nhiều trường hợp xác thực cho form của bạn thông
+              qua việc đóng góp từ cộng đồng lập trình viên đông đảo,
+              nó có thể chạy trên hầu hết trên trình duyệt phổ biến hiện nay (Với IE là IE8+), tự động phát hiện các sửa
+              đổi từ form để thông báo ngay lập tức cho người dùng,
+              cung cấp các thuộc tính UI/UX để bạn dễ dàng tùy chỉnh cho form như là vị trí hiển thị thông báo lỗi, nội
+              dung của thông báo lỗi...
+              Với cách thiết lập đơn giản và có các đầy đủ hướng dẫn chi tiết thì mình nghĩ đây là một thư viện nên dùng
+              để validate form trong trang web của bạn.
+
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594262624/thu-vien-form-validation-javascript/Parsley_khpwvg.png"
+              alt="Parsley">
+
+            <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
+                href="http://parsleyjs.org/" target="_blank" title="Parsley">
+                Nguồn
+                Parsley
+              </a> </button>
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                jQuery Validation Plugin
+              </h3>
+            </div>
+            <p>
+              <b>jQuery Validation Plugin</b> là một thư viện được xây dựng bằng Jquery cung cấp nhiều validation cho
+              form trong trang web của bạn. Thư viện này là một lựa chọn tốt cho bạn khi bắt đầu xây dựng form từ đầu
+              với các plugin cung cấp các phương thức xác thực phổ biến như email, URL, số thẻ tín dụng...
+              cũng như API để bạn có thể viết các phương thức validate cho riêng mình. Ngoài việc hiển thị lỗi mặc định
+              bằng tiếng Anh thì
+              nó còn hỗ trợ thêm 37 ngôn ngữ khác ở trên thế giới.
+
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594264133/thu-vien-form-validation-javascript/jQuery_Validation_Plugin_sxxnjc.png"
+              alt="jQuery Validation Plugin">
+
+            <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
+                href="https://jqueryvalidation.org/" target="_blank" title="jQuery Validation Plugin">
+                Nguồn
+                jQuery Validation Plugin
               </a> </button>
 
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Cách rút gọn đoạn văn bằng CSS
+                xtype
               </h3>
             </div>
-
             <p>
-              Thông thường khi muốn rút gọn chiều dài của đoạn văn thì chúng ta thường hay sử dụng Javascript để thực
-              hiện. Nhưng trong CSS cũng có chức năng giúp bạn dễ dàng
-              giải quyết vấn đề trên. Và để hiểu rõ hơn bạn xem ví dụ sau nhé:
+              <b>xtype</b> là nơi giúp bạn tạo các validate súc tích, hiệu suất cao và thiết lập dễ dàng cho form. Với
+              việc cải thiện hiệu quả và khả năng đọc
+              các form bằng cách thống nhất những dữ liệu cơ bản như là chuỗi, số, mảng, group... Ngoài ra bạn cũng có
+              thể thêm các phương thức validate riêng biết để sử dụng phù hợp với mục đích của trang web.
+
             </p>
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result"
-              data-user="haycuoilennao19" data-slug-hash="xxZWEyG"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Cách rút gọn đoạn văn bằng CSS">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/xxZWEyG">
-                  Cách rút gọn đoạn văn bằng CSS</a> by haycuoilennao19 (<a
-                  href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594265406/thu-vien-form-validation-javascript/xtype_oweqsc.png"
+              alt="xtype">
 
             <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/haycuoilennao19/pen/xxZWEyG" target="_blank"
-                title="  Cách rút gọn đoạn văn bằng CSS">
+                href="https://xtype.js.org/overview" target="_blank" title="xtype">
                 Nguồn
-                Cách rút gọn đoạn văn bằng CSS
+                xtype
               </a> </button>
 
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Thay đổi màu khi chọn đoạn văn CSS
+                Smoke
               </h3>
             </div>
-
             <p>
-              Thông thường nếu bạn tô đen đoạn văn trong trang web thì nó sẽ thường có màu xanh dương mặc định của trình
-              duyệt.
-              Chúng ta có thể thay đổi màu sắc đó thông qua thuộc tính <code>::selection</code> trong CSS. Và để hiểu rõ
-              hơn bạn xem ví dụ sau nhé!
+              <b>Smoke</b> là thư viện giúp bạn có thể dễ dàng tạo các form validation an toàn cho trang web với nhiều
+              phương thức xác thực được cung cấp như là
+              kiểm tra url được nhập vào, password, thời gian, số lượng ký tự trong chuỗi...
 
             </p>
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result"
-              data-user="haycuoilennao19" data-slug-hash="zYrWKeY"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Thay đổi màu khi chọn đoạn văn CSS">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/zYrWKeY">
-                  Thay đổi màu khi chọn đoạn văn CSS</a> by haycuoilennao19 (<a
-                  href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594265856/thu-vien-form-validation-javascript/Smoke_xgfc40.png"
+              alt="Smoke">
 
             <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/haycuoilennao19/pen/zYrWKeY" target="_blank"
-                title="Thay đổi màu khi chọn đoạn văn CSS">
+                href="http://alfredobarron.github.io/smoke/#/validate" target="_blank" title="Smoke">
                 Nguồn
-                Thay đổi màu khi chọn đoạn văn CSS
-              </a> </button>
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Hiệu Ứng Phóng To Khi Hover Vào Hình Ảnh
-              </h3>
-            </div>
-
-            <p>
-              Đôi lúc bạn muốn làm cho hình ảnh thêm một chút thú vị thì có thể sử dụng thuộc tính <code>scale</code>
-              để tạo hiệu ứng phóng to khi người dùng hover vào ảnh.
-              <ul>
-                <li>Với hình ảnh ban đầu sẽ có scale = 1</li>
-                <li>Với hình ảnh nhỏ hơn ảnh gốc sẽ có scale &#60; 1</li>
-                <li>Với hình ảnh lớn hơn ảnh gốc sẽ có scale &#62; 1</li>
-              </ul>
-            </p>
-            <p>
-              Để hiểu rõ hơn bạn xem ví dụ sau nhé:
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result"
-              data-user="haycuoilennao19" data-slug-hash="eYJMdaq"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title=" Hiệu Ứng Phóng To Khi Hover Vào Hình Ảnh">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/eYJMdaq">
-                  Hiệu Ứng Phóng To Khi Hover Vào Hình Ảnh</a> by haycuoilennao19 (<a
-                  href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-
-
-            <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/haycuoilennao19/pen/eYJMdaq" target="_blank"
-                title="Hiệu Ứng Phóng To Khi Hover Vào Hình Ảnh">
-                Nguồn
-                Hiệu Ứng Phóng To Khi Hover Vào Hình Ảnh
-              </a> </button>
-
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Hiệu Ứng Hòa Trộn Chữ Với Background Trong CSS
-              </h3>
-            </div>
-
-            <p>
-              Nếu bạn muốn làm nổi bật nội dung của mình thì có thể sử dụng thuộc tính <code>mix-blend-mode</code> trong
-              CSS
-              để kết hợp một phần tử với background của phần tử chứa nó. Để dễ hình dùng hơn bạn xem ví dụ dưới đây nhé!
-            </p>
-            <p>
-              Nếu bạn muốn tìm hiểu thêm các thuộc tính của <code>mix-blend-mode</code> thì có thể xem
-              <a href="https://www.w3schools.com/cssref/pr_mix-blend-mode.asp" target="_blank" rel="noopener noreferrer"
-                title="mix-blend-mode">ở đây nhé</a>.
-            </p>
-
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result"
-              data-user="haycuoilennao19" data-slug-hash="gOPeLae"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Hiệu Ứng Hòa Trộn Chữ Với Background Trong CSS">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/gOPeLae">
-                  Hiệu Ứng Hòa Trộn Chữ Với Background Trong CSS</a> by haycuoilennao19 (<a
-                  href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-
-
-            <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/haycuoilennao19/pen/gOPeLae" target="_blank"
-                title="Hiệu Ứng Hòa Trộn Chữ Với Background Trong CSS">
-                Nguồn
-                Hiệu Ứng Hòa Trộn Chữ Với Background Trong CSS
+                Smoke
               </a> </button>
 
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Cách Tạo Hình Ảnh Với Đoạn Văn Trong CSS
+                International Telephone Input
               </h3>
             </div>
-
             <p>
-              Đôi khi bạn cần hình ảnh minh họa trong đoạn văn của mình và thật tuyệt khi chúng ta có thể làm nó giống
-              như trong Word là
-              để chữ hiển thị xung quanh hình ảnh. Và ví dụ này sẽ giúp bạn giải quyết vấn đế đó thông qua các thuộc
-              tính có sẵn trong CSS.
+              <b>International Telephone Input</b> là một plugin javascript xây dựng form nhập và xác thực các số điện
+              thoại quốc tế.
+              Bạn dễ dàng lựa chọn các quốc gia mà mình mong muốn thông qua component dropdown được cung cấp sẵn hay
+              tự động xác định kiểu nhập số điện thoại thông qua địa chỉ IP quốc gia của người dùng.
 
             </p>
-
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result"
-              data-user="haycuoilennao19" data-slug-hash="xxZWRdg"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="xxZWRdg">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/xxZWRdg">
-                  xxZWRdg</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594266926/thu-vien-form-validation-javascript/International_Telephone_Input_oyk5gb.png"
+              alt="International Telephone Input">
 
             <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/haycuoilennao19/pen/xxZWRdg" target="_blank"
-                title="  Cách Tạo Hình Ảnh Với Đoạn Văn Trong CSS">
+                href="https://intl-tel-input.com/" target="_blank" title="International Telephone Input">
                 Nguồn
-                Cách Tạo Hình Ảnh Với Đoạn Văn Trong CSS
+                International Telephone Input
               </a> </button>
-
-
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Sử dụng clip path trong CSS
+                Jquery credit card validator
               </h3>
             </div>
-
             <p>
-              Clip path là thuộc tính giúp chúng ta có thể xác định hình ảnh sẽ hiển thị như thế nào trong trang web như
-              là hình tròn,
-              ellipse, polygon... Và nó cũng có các thêm các thuộc tính nâng cao khác bạn có thể tham khảo thêm
-              <a href="https://www.w3schools.com/cssref/css3_pr_clip-path.asp" target="_blank" title="clip path"
-                rel="noopener noreferrer">ở đây nhé!</a>
-
+              <b>Jquery credit card validator</b> là thư viện xây dựng bằng Jquery giúp bạn có thể dễ dàng xác định loại
+              thẻ mà người dùng nhập
+              để từ đó hiển thị cách thức nhập cho ô input, validate chiều dài cũng như loại thẻ để xác định thẻ đó có
+              hợp lệ hay không. Ngoài ra nó
+              cũng cung cấp validate cho hầu hết các thẻ phổ biến hiện nay như là American Express, MasterCard, Visa,
+              JCB...
             </p>
-
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result"
-              data-user="haycuoilennao19" data-slug-hash="ExPENwN"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Sử dụng clip path trong CSS">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/ExPENwN">
-                  Sử dụng clip path trong CSS</a> by haycuoilennao19 (<a
-                  href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594267523/thu-vien-form-validation-javascript/Jquery_credit_card_validator_ihbubu.png"
+              alt="Jquery credit card validator">
 
             <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/haycuoilennao19/pen/ExPENwN" target="_blank"
-                title=" Sử dụng clip path trong CSS">
+                href="https://jquerycreditcardvalidator.com/" target="_blank" title="Jquery credit card validator">
                 Nguồn
-                Sử dụng clip path trong CSS
-              </a> </button>
-
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Thiết Kế chữ Cái Đầu Tiên Trong Đoạn Văn
-              </h3>
-            </div>
-
-            <p>
-              Khi bạn đọc sách báo thì sẽ thường thấy các chữ cái đầu tiên trong nội dung được viết lớn hơn so với các
-              chữ còn lại.
-              Và chúng ta có thể thiết kế màu sắc, cỡ chữ... cho chữ cái đầu tiên của đoạn văn thông qua cách gọi
-              <code>:first-child::first-letter</code>
-              trong CSS. Và để hiểu rõ hơn bạn xem ví dụ sau đây nhé!
-            </p>
-
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result"
-              data-user="haycuoilennao19" data-slug-hash="xxZWRWd"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Thiết Kế chữ Cái Đầu Tiên Trong Đoạn Văn">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/xxZWRWd">
-                  Thiết Kế chữ Cái Đầu Tiên Trong Đoạn Văn</a> by haycuoilennao19 (<a
-                  href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/haycuoilennao19/pen/xxZWRWd" target="_blank"
-                title="Thiết Kế chữ Cái Đầu Tiên Trong Đoạn Văn">
-                Nguồn
-                Thiết Kế chữ Cái Đầu Tiên Trong Đoạn Văn
-              </a> </button>
-
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Thiết lập vị trí phần tử ở giữa thông qua grid CSS
-              </h3>
-            </div>
-
-            <p>
-              Khi bạn cần thiết lập một phần tử nào đó ở vị trí chính giữa trong phần tử cha thì chúng ta có thể sử dụng
-              thuộc tính <code>display:grid;</code> trong CSS. Để hiểu rõ hơn bạn xem đoạn code sau nhé:
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result"
-              data-user="haycuoilennao19" data-slug-hash="rNxdWrM" data-preview="true"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title=" Thiết lập vị trí phần tử ở giữa thông qua grid CSS">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/rNxdWrM">
-                  Thiết lập vị trí phần tử ở giữa thông qua grid CSS</a> by haycuoilennao19 (<a
-                  href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/haycuoilennao19/pen/rNxdWrM" target="_blank"
-                title="Thiết lập vị trí phần tử ở giữa thông qua grid CSS">
-                Nguồn
-                Thiết lập vị trí phần tử ở giữa thông qua grid CSS
+                Jquery credit card validator
               </a> </button>
 
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Cách căn giữa phần tử theo chiều dọc
+                validator.js
               </h3>
             </div>
-
             <p>
-              Trong ví dụ này mình sẽ đi vào cách căn giữa các phần tử theo chiều dọc thông qua việc sử dụng thuộc tính
-              <code> display: flex;</code>. Để hiểu rõ hơn bạn xem đoạn code dưới đây nhé:
+              <b>validator.js</b> là thư viện được viết bằng Javascript để chuyên kiểm tra kiểu dữ liệu chuỗi trong form
+              như là validate một chuỗi nhập vào có phải là thẻ ngân hàng hay
+              là tiền tệ, email hay chuỗi chỉ chứa toàn số...
             </p>
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result"
-              data-user="haycuoilennao19" data-slug-hash="dyGmvLO"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="  Cách căn giữa phần tử theo chiều dọc">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/dyGmvLO">
-                  Cách căn giữa phần tử theo chiều dọc</a> by haycuoilennao19 (<a
-                  href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594268648/thu-vien-form-validation-javascript/validatorjs_kjr7ub.png"
+              alt="validator.js">
 
             <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/haycuoilennao19/pen/dyGmvLO" target="_blank"
-                title="Cách căn giữa phần tử theo chiều dọc">
+                href="https://github.com/validatorjs/validator.js" target="_blank" title="validator.js">
                 Nguồn
-                Cách căn giữa phần tử theo chiều dọc
+                validator.js
               </a> </button>
-
-
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Hiển thị hình ảnh minh họa cho file trong CSS
+                ApproveJs
               </h3>
             </div>
-
             <p>
-              Giả sử bạn có một đường dẫn để tải một file nào đó nhưng muốn người dùng biết được đuôi file là gì thì
-              chúng ta có thể sử dụng hình ảnh
-              để minh họa. Và nó được đặt nằm cuối đường dẫn bằng việc dùng thuộc tính <code>after</code> trong CSS. Để
-              hiểu rõ hơn bạn xem ví dụ sau nhé:
+              <b>ApproveJs</b> là thư viện Javascript đơn giản giúp bạn có thể tự động validation theo ý mình muốn.
+              Nó không thể tự động lắng nghe sự thay đổi của ô input hay sự kiện submit từ form. Và nó cũng không xử lý
+              DOM bằng cách tự hiển thị lỗi trong trang web.
             </p>
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result"
-              data-user="haycuoilennao19" data-slug-hash="NWxYjWO" data-preview="true"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title=" Hiển thị hình ảnh minh họa cho file trong CSS">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/NWxYjWO">
-                  Hiển thị hình ảnh minh họa cho file trong CSS</a> by haycuoilennao19 (<a
-                  href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594278607/thu-vien-form-validation-javascript/ApproveJs_qfykcu.png"
+              alt="ApproveJs">
 
             <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/haycuoilennao19/pen/NWxYjWO" target="_blank"
-                title="Hiển thị hình ảnh minh họa cho file trong CSS">
+                href="https://charlgottschalk.github.io/approvejs/docs/" target="_blank" title="ApproveJs">
                 Nguồn
-                Hiển thị hình ảnh minh họa cho file trong CSS
+                ApproveJs
               </a> </button>
-
-
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Cách thay đổi màu khi người dùng nhấn vào checkbox trong CSS
+                Validator
               </h3>
             </div>
-
             <p>
-              Giả sử bạn có một đường dẫn để tải một file nào đó nhưng muốn người dùng biết được đuôi file là gì thì
-              chúng ta có thể sử dụng hình ảnh
-              để minh họa. Và nó được đặt nằm cuối đường dẫn bằng việc dùng thuộc tính <code>after</code> trong CSS. Để
-              hiểu rõ hơn bạn xem ví dụ sau nhé:
+              <b>Validator</b> là một thư viện giúp bạn có thể validate dữ liệu các ô input trong form một cách dễ
+              dàng như là tel, email, number,
+              date, time, checkbox và url.
             </p>
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result"
-              data-user="haycuoilennao19" data-slug-hash="abdYWvN"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title=" Cách thay đổi màu khi người dùng nhấn vào checkbox trong CSS">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/abdYWvN">
-                  Cách thay đổi màu khi người dùng nhấn vào checkbox trong CSS</a> by haycuoilennao19 (<a
-                  href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594279155/thu-vien-form-validation-javascript/Validator_gxh1sf.png"
+              alt="validator">
 
             <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/haycuoilennao19/pen/abdYWvN" target="_blank"
-                title=" Cách thay đổi màu khi người dùng nhấn vào checkbox trong CSS">
+                href="https://github.com/yairEO/validator" target="_blank" title="Validator">
                 Nguồn
-                Cách thay đổi màu khi người dùng nhấn vào checkbox trong CSS
+                Validator
+              </a> </button>
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                v8n
+              </h3>
+            </div>
+            <p>
+              <b>v8n</b> hướng tới mục đích là trở thành thư viện validate với cách thiết lập nhanh chóng đơn giản và có
+              thể sử dụng cho nhiều ngữ cảnh khác nhau.
+              Nó cung cấp một API dễ hiểu và dễ dàng tạo các validation phức tạp với bất cứ đối tượng nào trong trang web của
+              bạn.
+              Ngoài việc cung cấp các phương thức kiểm tra hữu ích mặc định thì bạn cũng có thể thêm các quy tắc riêng
+              vào v8n để sử dụng phù hợp với mục đích của mình.
+
+
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594279867/thu-vien-form-validation-javascript/v8n_cchag3.png"
+              alt="v8n">
+
+            <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
+                href="https://imbrn.github.io/v8n/#what-s-v8n" target="_blank" title="v8n">
+                Nguồn
+                v8n
               </a> </button>
 
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Thay đổi màu nền bằng CSS Animation
+                React-Formal
               </h3>
             </div>
-
             <p>
-              Giả sử bạn có một đường dẫn để tải một file nào đó nhưng muốn người dùng biết được đuôi file là gì thì
-              chúng ta có thể sử dụng hình ảnh
-              để minh họa. Và nó được đặt nằm cuối đường dẫn bằng việc dùng thuộc tính <code>after</code> trong CSS. Để
-              hiểu rõ hơn bạn xem ví dụ sau nhé:
+              <b>React-Formal</b> là một thư viện dành cho framework ReactJS dùng để xử lý nhanh chóng các validate
+              trong form của bạn.
+              Nó cung cấp một API giúp bạn có thể sử dụng trong nhiều trường hợp khác nhau từ đơn giản đến phức tạp và
+              cung cấp bạn quyền
+              tinh chỉnh nội dung hay thiết kế style cho các thông báo lỗi ở trong form.
+
+
             </p>
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result"
-              data-user="haycuoilennao19" data-slug-hash="zYrWwqv"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Thay đổi màu nền bằng CSS Animation">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/zYrWwqv">
-                  Thay đổi màu nền bằng CSS Animation</a> by haycuoilennao19 (<a
-                  href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594281209/thu-vien-form-validation-javascript/React_Formal_twttzp.png"
+              alt="React-Formal">
 
             <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/haycuoilennao19/pen/zYrWwqv" target="_blank"
-                title="Thay đổi màu nền bằng CSS Animation">
+                href="http://jquense.github.io/react-formal/api/Form" target="_blank" title="React-Formal">
                 Nguồn
-                Thay đổi màu nền bằng CSS Animation
+                React-Formal
               </a> </button>
-
 
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-               Sử dụng transition trong CSS
+                React Forms
               </h3>
             </div>
-
             <p>
-             Ví dụ khi người dùng hover vào một hình ảnh, button, đối tượng HTML... thì bạn không muốn hiệu ứng hiển thị ngay lập tức 
-             mà nên chuyển dần từ từ theo một thời gian nhất định thì chúng ta có thể sử dụng <code>transition</code> để giải quyết vấn đề trên.
+              <b>React Forms</b> là thư viện cung cấp cho bạn các cộng cụ sử dụng với React để xử lý
+              trong quá trình render form cũng như là validation.
+
+
             </p>
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="haycuoilennao19" data-slug-hash="OJMvmvr" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="  Sử dụng transition trong CSS">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/OJMvmvr">
-                Sử dụng transition trong CSS</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594281533/thu-vien-form-validation-javascript/React_Forms_z5ngd7.png"
+              alt="React Forms">
 
             <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/haycuoilennao19/pen/OJMvmvr" target="_blank"
-                title="Sử dụng transition trong CSS">
+                href="https://github.com/prometheusresearch-archive/react-forms" target="_blank" title="React Forms">
                 Nguồn
-                Sử dụng transition trong CSS
+                React Forms
               </a> </button>
 
 
+            
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                VeeValidate
+              </h3>
+            </div>
+            <p>
+              <b>VeeValidate</b> là thư viện dành cho Vuejs và cho phép bạn validate các input trong form và hiển thị
+              lỗi.
+              Ngoài ra nó còn hỗ trợ với hơn 40 ngôn ngữ trên thế giới và không sử dụng thêm bất kỳ thư viện bổ sung
+              nào.
+
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594282489/thu-vien-form-validation-javascript/VeeValidate_evu0vi.png"
+              alt="VeeValidate">
+
+            <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
+                href="https://logaretm.github.io/vee-validate/" target="_blank" title="VeeValidate">
+                Nguồn
+                VeeValidate
+              </a> </button>
 
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Hiển thị thông báo khi đường dẫn hình ảnh không hoạt động
+                Vuelidate
               </h3>
             </div>
-
             <p>
-              Nếu bạn không may có một hình ảnh nào đó mà đường dẫn của nó không hiển thị được trong trang web thì ngoài
-              thuộc tính <code>alt</code>,
-              ta cũng có thể sử dụng <code>before</code> và <code>after</code> để thiết kế style cho thông báo. Để hiểu
-              rõ hơn bạn xem ví dụ sau đây nhé:
+              <b>Vuelidate</b> là thư viện nhỏ gọn được xây dựng cho Vuejs2.0 với nhiều tính năng hữu ích như là
+              hỗ trợ nhiều các trường hợp validate phổ biến, dễ dàng tính chỉnh các phương thức kiểm tra... 
+
+
             </p>
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result"
-              data-user="haycuoilennao19" data-slug-hash="zYrWwwq"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="zYrWwwq">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/zYrWwwq">
-                  zYrWwwq</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594283241/thu-vien-form-validation-javascript/Vuelidate_qrotr5.png"
+              alt="Vuelidate">
 
             <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/haycuoilennao19/pen/zYrWwwq" target="_blank"
-                title="Hiển thị thông báo khi đường dẫn hình ảnh không hoạt động">
+                href="https://vuelidate.js.org/" target="_blank" title="Vuelidate">
                 Nguồn
-                Hiển thị thông báo khi đường dẫn hình ảnh không hoạt động
+                Vuelidate
               </a> </button>
 
 
               <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
                 <h3 class="text-primary ml-4 title-article-size">
-                  Hiển thị hình ảnh responsive
+                  Angular-Validator
                 </h3>
               </div>
-  
               <p>
-               Để hiển thị hình ảnh trên nhiều màn hình thiết bị khác nhau thì bạn có thể sử dụng thuộc tính CSS sau đây cho 
-               thẻ <code>img</code>:
+                <b>Angular-Validator</b> là thư viện dành cho framework Angular cho phép bạn sử dụng nhiều cách xác thực khác nhau như regex, HTML5 hoặc là tự tùy chỉnh.
+                Ngoài ra nó cũng hoạt động tốt với các validation của Angular gốc cũng như các thuộc tính nguyên thủy của HTML5.
+                Để hiểu rõ hơn bạn tham khảo thêm trong trang demo nhé!
+  
+  
               </p>
-              <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="BajrZBg" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title=" Hiển thị hình ảnh responsive">
-                <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/BajrZBg">
-                 Hiển thị hình ảnh responsive</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-              </p>
+              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594283797/thu-vien-form-validation-javascript/Angular-Validator_wrqtas.png"
+                alt="Angular-Validator">
+  
               <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                  href="https://codepen.io/haycuoilennao19/pen/BajrZBg" target="_blank"
-                  title=" Hiển thị hình ảnh responsive">
+                  href="https://github.com/turinggroup/angular-validator" target="_blank" title="Angular-Validator">
                   Nguồn
-                  Hiển thị hình ảnh responsive
+                  Angular-Validator
                 </a> </button>
-
-                <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                  <h3 class="text-primary ml-4 title-article-size">
-                    Tạo hình tròn với border radius trong CSS
-                  </h3>
-                </div>
-    
-                <p>
-                 Để tạo hình tròn cho đối tượng trong trang HTML thì chúng ta có thể sử dụng thuộc tính 
-                 <code>border-radius</code> trong CSS:
-                </p>
-                <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="haycuoilennao19" data-slug-hash="WNrzOvv" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="  Tạo hình tròn với border radius trong CSS">
-                  <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/WNrzOvv">
-                    Tạo hình tròn với border radius trong CSS</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                  on <a href="https://codepen.io">CodePen</a>.</span>
-                </p>
-                <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                    href="https://codepen.io/haycuoilennao19/pen/WNrzOvv" target="_blank"
-                    title="Tạo hình tròn với border radius trong CSS">
-                    Nguồn
-                    Tạo hình tròn với border radius trong CSS
-                  </a> </button>
-
-
-                  <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                    <h3 class="text-primary ml-4 title-article-size">
-                      Tạo tam giác với border width trong CSS
-                    </h3>
-                  </div>
-      
-                  <p>
-                   Để tạo hình tam giác cho đối tượng trong trang HTML thì chúng ta có thể sử dụng thuộc tính 
-                   <code>border-width</code> trong CSS:
-                  </p>
-                  <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="haycuoilennao19" data-slug-hash="RwrMgWv" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title=" Tạo tam giác với border width trong CSS">
-                    <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/RwrMgWv">
-                     Tạo tam giác với border width trong CSS</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                    on <a href="https://codepen.io">CodePen</a>.</span>
-                  </p>
-                  <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                      href="https://codepen.io/haycuoilennao19/pen/RwrMgWv" target="_blank"
-                      title=" Tạo tam giác với border width trong CSS">
-                      Nguồn
-                      Tạo tam giác với border width trong CSS
-                    </a> </button>
-
-
-
-                    <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                      <h3 class="text-primary ml-4 title-article-size">
-                       Hiển thị hình ảnh toàn màn hình trong CSS
-                      </h3>
-                    </div>
-        
-                    <p>
-                     Trong phần này mình sẽ dùng hình ảnh làm background hiển thị toàn màn hình thông qua thuộc tính là 
-                     <code>background</code> và <code> background-size</code>. Ngoài ra bạn cũng nên tham khảo thêm cách một cách 
-                     mới để thiết lập đối tượng với vị trị chính giữa thông qua thuộc tính <code>position: absolute;</code>. Để nắm rõ hơn bạn xem đoạn code sau nhé:
-                    </p>
-                    <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="haycuoilennao19" data-slug-hash="BajrZRy" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Hiển thị hình ảnh toàn màn hình trong CSS">
-                      <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/BajrZRy">
-                      Hiển thị hình ảnh toàn màn hình trong CSS</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                      on <a href="https://codepen.io">CodePen</a>.</span>
-                    </p>
-                    <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                        href="https://codepen.io/haycuoilennao19/pen/BajrZRy" target="_blank"
-                        title="Hiển thị hình ảnh toàn màn hình trong CSS">
-                        Nguồn
-                        Hiển thị hình ảnh toàn màn hình trong CSS
-                      </a> </button>
-
-
-
-                      <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                        <h3 class="text-primary ml-4 title-article-size">
-                        Lựa chọn đối tượng mong muốn bằng CSS
-                        </h3>
-                      </div>
-          
-                      <p>
-                        Giả sử bạn có một danh sách và bao gồm rất nhiều thành phần con. Và nếu bạn muốn thiết lập style 
-                        cho một đối tượng xác định trong danh sách như vậy sẽ rất khó khăn. Do đó CSS cung cấp cho bạn một thuộc tính là 
-                        <code>:nth-child</code> giúp chúng ta có thể dễ dàng xác định đối tượng mà mình mong muốn.
-                        Để hiểu rõ hơn bạn xem đoạn code sau nhé:
-                      </p>
-                      <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="pogLwxr" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title=" Lựa chọn đối tượng mong muốn bằng CSS">
-                        <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/pogLwxr">
-                         Lựa chọn đối tượng mong muốn bằng CSS</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                        on <a href="https://codepen.io">CodePen</a>.</span>
-                      </p>
-                      <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                          href="https://codepen.io/haycuoilennao19/pen/pogLwxr" target="_blank"
-                          title="Lựa chọn đối tượng mong muốn bằng CSS">
-                          Nguồn
-                          Lựa chọn đối tượng mong muốn bằng CSS
-                        </a> </button>
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -685,7 +439,7 @@
             <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
 
 
-            <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những thủ thuật CSS
+            <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những thư viện validation javascript
               hữu
               ích
               dành
