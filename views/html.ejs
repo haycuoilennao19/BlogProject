@@ -35,7 +35,7 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i> Cách Tạo  Video background Bằng CSS Và Javascript Cho Trang Web Năm 2020 </h2>
+                  aria-hidden="true"></i> Những Kỹ Thuật Viết Mã Dành Cho Người Mới Bắt Đầu Javascript (2020)</h2>
             </div>
           </div>
 
@@ -46,429 +46,232 @@
           </div>
           <div class="text-content-article mt-5">
             <p><i>
-                Với sự phát triển web ngày càng hiện đại thì để đáp ứng nhu cầu trải nghiệm của người dùng cũng như làm
-                thương hiệu trang web của bạn nổi bật hơn
-                thì hôm nay mình sẽ giới thiệu đến bạn một số ví dụ về video background được sáng tạo bởi những bạn lập
-                trình viên tài năng trong năm 2020 nhé!
+                Trong bài viết hôm nay chúng ta sẽ đi vào tìm hiểu những kỹ thuật viết mã tối ưu trong Javascript được đúc kết trong quá trình 
+                làm việc và học tập của các bạn lập trình viên trên thế giới. Và bây giờ chúng ta hãy cùng nhau đi vào tìm hiểu nhé! 
               </i>
             </p>
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Kỹ thuật rút ngắn vòng lặp trong Javascript
+              </h3>
+            </div>
             <p>
-              Trước khi đi vào bài thì mình có một số lưu ý khi bạn <b>sử dụng video background cho website</b> là:
-              <ul>
-                <li>Hãy cố gắng nén dung lượng video của bạn xuống mức trung bình vì sẽ giảm được thời gian load cho
-                  trang web. </li>
-                <li>
-                  Thời gian của video cũng không nên quá dài, chỉ khoảng 30 đến 40 giây là hợp lý rồi nhé.
-                </li>
-                <li>
-                  Bạn cũng nên quan tâm đến độ tương phản màu của nội dung với background video.
-                </li>
-                <li>
-                  Đảm bảo background video có thể chạy trên nhiều màn hình thiết bị. Nhưng đối với những màn hình như
-                  điện thoại thì mình
-                  nghĩ chúng ta không nên sử dụng vì thời gian tải trang web của những thiết bị này thường lâu hơn các
-                  thiết bị khác cũng như không mang lại trải nghiệm tốt cho người dùng.
-                </li>
-              </ul>
+              Thông thường khi chúng ta muốn sử dụng vòng lặp thì sẽ thực hiện như sau:
             </p>
+            <pre><code class="javascript"> var lopHoc = ["Nam", "Như", "An"];<br/> for (let i = 0; i &#60; lopHoc.length; i++)</code></pre>
+            <p class="mt-4">
+              Và đây là cách bạn có thể rút gắn vòng lặp như sau:
+            </p>
+            <pre><code class="javascript"> for (let hocSinh of lopHoc)</code></pre>
+            <p class="mt-2">
+              Nếu bạn muốn truy cập vị trí index thông qua vòng lặp thì có thể thực hiện như sau:
+            </p>
+            <pre><code class="javascript">for (let index in lopHoc)</code></pre>
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Responsive HTML5 Background Video Demo
+                Kỹ thuật rút ngắn câu điều kiện trong Javascript
               </h3>
             </div>
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result"
-              data-user="GusRuss89" data-slug-hash="bVwNrE" data-preview="true"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Responsive HTML5 Background Video Demo">
-              <span>See the Pen <a href="https://codepen.io/GusRuss89/pen/bVwNrE">
-                  Responsive HTML5 Background Video Demo</a> by Angus Russell (<a
-                  href="https://codepen.io/GusRuss89">@GusRuss89</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <p>
+              Thông thường khi chúng ta muốn viết câu điều kiện trong javascript thì hay sử dụng câu lệnh <code>if...else</code> như ví dụ sau đây:
             </p>
-            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-
-            <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/GusRuss89/pen/bVwNrE" target="_blank"
-                title="Responsive HTML5 Background Video Demo">
-                Nguồn
-                Responsive HTML5 Background Video Demo
-              </a> </button>
-
+            <pre><code class="javascript"> const&nbsp;a&nbsp;=&nbsp;6;<br/>&nbsp;let&nbsp;ketqua&nbsp;;<br/>&nbsp;if&nbsp;(a&nbsp;>&nbsp;10)&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ketqua&nbsp;=&nbsp;"Giá&nbsp;trị&nbsp;lớn&nbsp;hơn&nbsp;10";<br/> &nbsp;}&nbsp;else&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ketqua&nbsp;=&nbsp;&nbsp;"Giá&nbsp;trị&nbsp;nhỏ&nbsp;hơn&nbsp;10";<br/> &nbsp;}</code></pre>
+            <p class="mt-2">
+              Và dưới đây là cách chúng ta có thể viết rút ngắn câu điều kiện phía trên:
+            </p>
+            <pre><code class="javascript"> const ketQua = a &#62; 10 ? "Giá trị lớn hơn 10" : "Giá trị nhỏ hơn 10";</code></pre>
+            <p class="mt-2">
+              Ngoài ra bạn cũng có thể thêm các điều kiện vào trong cách rút gọn như ở ví dụ dưới đây:
+            </p>
+            <pre><code class="javascript"> const ketQua = a > 10 ? "Giá trị lớn hơn 10" : x &#60; 5 ? "Giá trị nhỏ hơn 5" : "Giá trị trong khoảng từ 5 đến 10";</code></pre>
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Video Background Slider
+                Kỹ thuật rút ngắn kiểm tra điều kiện boolean Javascript
               </h3>
             </div>
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="1wdtv"
-              data-slug-hash="jbjZeb" data-preview="true"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Video Background Slider">
-              <span>See the Pen <a href="https://codepen.io/1wdtv/pen/jbjZeb">
-                  Video Background Slider</a> by 1WD.tv - Freelance Web Designer Training (<a
-                  href="https://codepen.io/1wdtv">@1wdtv</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <p>
+              Thông thường khi kiểm tra một điều kiện boolean thì chúng ta sẽ làm như sau:
             </p>
+            <pre><code class="javascript"> if (hocJavascript === true)</code></pre>
+            <p class="mt-2">
+              Và đây là cách rút ngọn của ví dụ trên nhé:
+            </p>
+            <pre><code class="javascript"> if (hocJavascript)</code></pre>
 
-            <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/1wdtv/pen/jbjZeb" target="_blank" title="Video Background Slider">
-                Nguồn
-                Video Background Slider
-              </a> </button>
-
+            <p class="mt-2">
+              Còn đây là ví dụ chúng ta xét với trường hợp <code>false</code> nha:
+            </p>
+            <pre><code class="javascript"> let a;<br/> if(a !== true){<br/> &nbsp;&nbsp; /*Đoạn Mã*/<br/> }</code></pre>
+            <p class="mt-2">
+              Cách rút gọn ví dụ trên:
+            </p>
+            <pre><code class="javascript"> let a;<br/> if(!a){<br/>  &nbsp;&nbsp; /*Đoạn Mã*/<br/> }</code></pre>
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Video Landing Page
+                Kỹ Thuật Rút Ngắn Với Arrow Function
               </h3>
             </div>
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result"
-              data-user="bradtraversy" data-slug-hash="BaoWWjb" data-preview="true"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Video Landing Page">
-              <span>See the Pen <a href="https://codepen.io/bradtraversy/pen/BaoWWjb">
-                  Video Landing Page</a> by Brad Traversy (<a href="https://codepen.io/bradtraversy">@bradtraversy</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <p>
+              Đầu tiên là chúng ta sẽ đi vào viết một hàm theo cách thông thường:
             </p>
+            <pre><code class="javascript"> function xinChao(ten) {<br/> &nbsp;&nbsp; console.log("Xin Chào Bạn " + ten);<br/> }</code></pre>
+            <p class="mt-2">
+              Cách rút gọn:
+            </p>
+            <pre><code class="javascript"> xinChao = ten => console.log("Xin Chào Bạn " + ten)</code></pre>
 
-            <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/bradtraversy/pen/BaoWWjb" target="_blank" title="Video Landing Page">
-                Nguồn
-                Video Landing Page
-              </a> </button>
-
+            <p class="mt-4">
+              Ví dụ 2 là cách chúng ta sử dụng với lệnh <code>forEach</code>: 
+            </p>
+            <pre><code class="jvascript"> danhSach.forEach(function(phanTu){<br/> &nbsp;&nbsp;console.log(phanTu);<br/> });</code></pre>
+            <p class="mt-2">
+              Cách rút gọn:
+            </p>
+            <pre><code class="javascript"> danhSach.forEach(phanTu => console.log(phanTu));</code></pre>
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Fullscreen Video Background Demo
+                Kỹ Thuật Rút Ngắn Lũy Thừa Trong Javascript
               </h3>
             </div>
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result"
-              data-user="simsketch" data-slug-hash="qaeEeJ" data-preview="true"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Fullscreen Video Background Demo">
-              <span>See the Pen <a href="https://codepen.io/simsketch/pen/qaeEeJ">
-                  Fullscreen Video Background Demo</a> by Elon Zito (<a
-                  href="https://codepen.io/simsketch">@simsketch</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <p>
+              Thông thường khi bạn muốn thực hiện hành động lũy thữa một số thì ta sẽ sử dụng <code>Math.pow</code> như ví dụ sau đây:
             </p>
-
-            <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/simsketch/pen/qaeEeJ" target="_blank" title="Fullscreen Video Background Demo">
-                Nguồn
-                Fullscreen Video Background Demo
-              </a> </button>
+            <pre><code class="javascript"> Math.pow(2,2); /*Kết quả là 4*/<br/> Math.pow(2,3); /*Kết quả là 8*/</code></pre>
+            <p>
+              Và đây là cách rút gọn với việc sử dụng <code>**</code>:
+            </p>
+            <pre><code class="javascript"> 2**2 /*Kết quả là 4*/<br/> 2**3 /*Kết quả là 8*/</code></pre>
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Video Background Transparent Navbar
+              Kỹ Thuật chuyển đổi từ kiểu dữ liệu chuỗi sang số
               </h3>
             </div>
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="casuru"
-              data-slug-hash="RPMyyp" data-preview="true"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Video Background Transparent Navbar">
-              <span>See the Pen <a href="https://codepen.io/casuru/pen/RPMyyp">
-                  Video Background Transparent Navbar</a> by Chineye Asuru (<a
-                  href="https://codepen.io/casuru">@casuru</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <p>
+              Khi lập trình với javascript, nếu chúng ta muốn chuyển đổi kiểu dữ liệu từ chuỗi sang số thì sẽ dùng hai lệnh là 
+              <code>parseInt</code> (Kiểu số nguyên) và <code>parseFloat</code> (Kiểu số thập phân) như ví dụ sau:
             </p>
-
-            <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/casuru/pen/RPMyyp" target="_blank" title="Video Background Transparent Navbar">
-                Nguồn
-                Video Background Transparent Navbar
-              </a> </button>
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Responsive Video Knockout Text (Pure CSS)
-              </h3>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result"
-              data-user="GeorgePark" data-slug-hash="LBPJGV" data-preview="true"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Responsive Video Knockout Text (Pure CSS)">
-              <span>See the Pen <a href="https://codepen.io/GeorgePark/pen/LBPJGV">
-                  Responsive Video Knockout Text (Pure CSS)</a> by George W. Park (<a
-                  href="https://codepen.io/GeorgePark">@GeorgePark</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <pre><code class="javascript"> const so1 = parseInt("5");<br/> const so2 = parseInt("5.5");</code></pre>
+            <p class="mt-2">
+              Cách rút gọn (Bạn sẽ thêm dấu cộng phía trước chuỗi chứa số):
             </p>
-
-            <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/GeorgePark/pen/LBPJGV" target="_blank"
-                title="Responsive Video Knockout Text (Pure CSS)">
-                Nguồn
-                Responsive Video Knockout Text (Pure CSS)
-              </a> </button>
+            <pre><code class="javascript"> const so1 = +"5";<br/> const so2 = +"5.5";</code></pre>
 
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Background Video
+               Kỹ thuật rút ngắn khi thực hiện <code>return</code> trong hàm
               </h3>
             </div>
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result"
-              data-user="rcrooks1969" data-slug-hash="YxjrMr" data-preview="true"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Background Video">
-              <span>See the Pen <a href="https://codepen.io/team/rcrooks1969/pen/YxjrMr">
-                  Background Video</a> by Brightcove Learning Services (<a
-                  href="https://codepen.io/rcrooks1969">@rcrooks1969</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <p>
+              Đối với một hàm thông thường chúng ta sẽ sử dụng <code>return</code> để trả về một kết quả như sau đây:
             </p>
-
-            <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/team/rcrooks1969/pen/YxjrMr" target="_blank" title="Background Video">
-                Nguồn
-                Background Video
-              </a> </button>
+            <pre><code class="javascript"> function phepCong(a, b) {<br/> &nbsp;&nbsp; return a + b;<br/> }</code></pre>
+            <p class="mt-2">
+              Cách viết rút gọn:
+            </p>
+            <pre><code class="javascript"> const phepCong = (a, b) => (a + b);</code></pre>
 
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Fullscreen HTML5 Video Background With Cover Effect
+               Kỹ thuật rút ngắn số mũ thập phân
               </h3>
             </div>
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js,result"
-              data-user="xtianmiller" data-slug-hash="ojexyo" data-preview="true"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Fullscreen HTML5 Video Background With Cover Effect">
-              <span>See the Pen <a href="https://codepen.io/xtianmiller/pen/ojexyo">
-                  Fullscreen HTML5 Video Background With Cover Effect</a> by XTIAN (<a
-                  href="https://codepen.io/xtianmiller">@xtianmiller</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <p>
+              Đoạn code dưới đây sẽ giúp bạn giảm được cách phải viết nhiều số 0 cho một số. Và để hiểu rõ hơn bạn xem ví dụ sau đây nhé:
             </p>
+            <pre><code class="javascript"> /*Cách viết rút gọn của các số*/<br/> 1e0 === 1;<br/> 1e1 === 10;<br/> 1e2 === 100;<br/> 1e3 === 1000;<br/> 1e4 === 10000;<br/> 1e5 === 100000;<br/> 1e6 === 1000000;</code></pre>
+         
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+               Sử dụng Spread Operator
+              </h3>
+            </div>
+            <p>
+              Khi bạn muốn nối mảng trong javascript thì sẽ sử dụng <code>concat</code> và sao chép một mảng sẽ sử dụng <code>slice</code> như ví dụ sau đây:
+            </p>
+            <pre><code class="javascript"> /*thực hiện nối mảng*/ <br/> var mang1 = [4,5,6];<br/> var mang2 = [1, 2, 3].concat(mang1); /*[1, 2, 3, 4, 5, 6]*/<br/><br/> /*Thực hiện sao chép mảng*/ <br/> var mang1 = [1, 2, 3];<br/> var mang2 = mang1.slice(); /*[1, 2, 3]*/</code></pre>
+            <p class="mt-2">
+              Còn đây là cách rút gọn khi ta sử dụng spread operator
+            </p>
+            <pre><code class="javascript">/*thực hiện nối mảng*/ <br/> var mang1 = [4,5,6];<br/> var mang2 = [1, 2, 3, ...mang1]; /*[1, 2, 3, 4, 5, 6]*/<br/><br/> /*Thực hiện sao chép mảng*/ <br/> var mang1 = [1, 2, 3];<br/> var mang2 = [...mang1]; /*[1, 2, 3]*/</code></pre>
 
-            <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/xtianmiller/pen/ojexyo" target="_blank"
-                title="Fullscreen HTML5 Video Background With Cover Effect">
-                Nguồn
-                Fullscreen HTML5 Video Background With Cover Effect
-              </a> </button>
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+               Kỹ thuật khai báo biến
+              </h3>
+            </div>
+            <p>
+             Thông thường chúng ta sẽ khai báo biến như sau:
+            </p>
+            <pre><code class="javascript"> let a;<br/> let b;<br/> let c = 4;</code></pre>
+            <p class="mt-2">
+              Cách viết rút gọn:
+            </p>
+            <pre><code class="javascript"> let a, b, c = 4;</code></pre>
 
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Responsive YouTube video background
+               Sử dụng <code>Object.assign</code>
               </h3>
             </div>
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js,result" data-user="skapalon"
-              data-slug-hash="PqwMab" data-preview="true"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Responsive YouTube video background">
-              <span>See the Pen <a href="https://codepen.io/skapalon/pen/PqwMab">
-                  Responsive YouTube video background</a> by SKAPALÓN (<a
-                  href="https://codepen.io/skapalon">@skapalon</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <p>
+              Khi bạn muốn gộp hai hay nhiều đối tượng và trong một object thì ta có thể sử dụng <code>Object.assign</code> như ví dụ sau đây nhé
             </p>
-
-            <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/skapalon/pen/PqwMab" target="_blank"
-                title="Responsive YouTube video background">
-                Nguồn
-                Responsive YouTube video background
-              </a> </button>
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Embedded video header
-              </h3>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result"
-              data-user="SquishyAndroid" data-slug-hash="uyFBb" data-preview="true"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Embedded video header">
-              <span>See the Pen <a href="https://codepen.io/SquishyAndroid/pen/uyFBb">
-                  Embedded video header</a> by Bradley Engelhardt (<a
-                  href="https://codepen.io/SquishyAndroid">@SquishyAndroid</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/SquishyAndroid/pen/uyFBb" target="_blank" title="Embedded video header">
-                Nguồn
-                Embedded video header
-              </a> </button>
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Video Background, Form Submission
-              </h3>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="dpchamps"
-              data-slug-hash="ZGzEjM" data-preview="true"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Video Background, Form Submission">
-              <span>See the Pen <a href="https://codepen.io/dpchamps/pen/ZGzEjM">
-                  Video Background, Form Submission</a> by DChamps (<a href="https://codepen.io/dpchamps">@dpchamps</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/dpchamps/pen/ZGzEjM" target="_blank" title="Video Background, Form Submission">
-                Nguồn
-                Video Background, Form Submission
-              </a> </button>
+            <pre><code class="javascript"> let ho = {ho : "Nguyễn"};<br/> let ten = {ten : "An"};<br/> /*Thực hiện gộp hai đối tượng*/<br/> let hoTen = Object.assign(ho, ten); /*{ho: "Nguyễn", ten: "An"}*/</code></pre>
 
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Litmus SVG/Video Background
+               Sử dụng <code>Object.entries()</code>
               </h3>
             </div>
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="cwikked"
-              data-slug-hash="rVezoz" data-preview="true"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Litmus SVG/Video Background">
-              <span>See the Pen <a href="https://codepen.io/cwikked/pen/rVezoz">
-                  Litmus SVG/Video Background</a> by Matt (<a href="https://codepen.io/cwikked">@cwikked</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <p>
+              <code>Object.entries()</code> cho phép bạn có thể chuyển đổi các đối tượng thành các cặp giá trị mảng:
             </p>
+            <pre><code class="javascript"> let doiTuong = {ho: "Nguyễn", ten: "An"};<br/> let mang = Object.entries(doiTuong); /*[["ho", "Nguyễn"], ["ten", "An"]]*/</code></pre>
 
-            <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/cwikked/pen/rVezoz" target="_blank" title="Video Background, Form Submission">
-                Nguồn
-                Litmus SVG/Video Background
-              </a> </button>
-
-
-
+          
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+              Cách chuyển đổi số sang chuỗi
+              </h3>
+            </div>
+            <p>
+              Đoạn code dưới đây giúp chúng ta có thể chuyển đổi các kiểu dữ liệu trong Javascript sang dạng chuỗi:
+            </p>
+            <pre><code class="javascript"> let so = 5;<br/> let chuoi = "" + so; /*(typeof chuoi) : string*/</code></pre>
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Full-Screen Background Video using CSS Grid & object-fit
+              Cách tự động gọi hàm
               </h3>
             </div>
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result"
-              data-user="GeorgePark" data-slug-hash="zpRjRK" data-preview="true"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Full-Screen Background Video using CSS Grid &amp;amp; object-fit">
-              <span>See the Pen <a href="https://codepen.io/GeorgePark/pen/zpRjRK">
-                  Full-Screen Background Video using CSS Grid &amp; object-fit</a> by George W. Park (<a
-                  href="https://codepen.io/GeorgePark">@GeorgePark</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <p>
+              Sau đây là đoạn mã giúp bạn có thể tự động gọi hàm trong Javascript:
             </p>
-
-            <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/GeorgePark/pen/zpRjRK" target="_blank"
-                title=" Full-Screen Background Video using CSS Grid & object-fit">
-                Nguồn
-                Full-Screen Background Video using CSS Grid & object-fit
-              </a> </button>
-
-
+            <pre><code class="javascript">(function(){<br/> &nbsp;&nbsp; /*Đoạn mã thực thi*/<br/> })();</code></pre>
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Materialize - Transparent Navbar
+                Kỹ thuật rút ngắn lấy ký tự trong chuỗi 
               </h3>
             </div>
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result"
-              data-user="j_holtslander" data-slug-hash="RVXzqm" data-preview="true"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Materialize - Transparent Navbar">
-              <span>See the Pen <a href="https://codepen.io/j_holtslander/pen/RVXzqm">
-                  Materialize - Transparent Navbar</a> by Jay Holtslander (<a
-                  href="https://codepen.io/j_holtslander">@j_holtslander</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <p>
+              Thông thường khi chúng ta muốn lấy ký tự trong chuỗi thì sẽ sử dụng <code>charAt()</code> như ví dụ sau đây:
             </p>
-
-            <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/j_holtslander/pen/RVXzqm" target="_blank"
-                title="Materialize - Transparent Navbar">
-                Nguồn
-                Materialize - Transparent Navbar
-              </a> </button>
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Fullscreen Video
-              </h3>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result"
-              data-user="theprojectsomething" data-slug-hash="NNYqrQ" data-preview="true"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Fullscreen Video">
-              <span>See the Pen <a href="https://codepen.io/theprojectsomething/pen/NNYqrQ">
-                  Fullscreen Video</a> by Som (<a
-                  href="https://codepen.io/theprojectsomething">@theprojectsomething</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+              <pre><code class="javascript"> 'chuỗi'.charAt(1) /*h*/</code></pre>
+            <p>
+              Cách rút gọn:
             </p>
-
-            <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/theprojectsomething/pen/NNYqrQ" target="_blank" title="Fullscreen Video">
-                Nguồn
-                Fullscreen Video
-              </a> </button>
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Full Page Video: Full Then Scroll
-              </h3>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result"
-              data-user="chriscoyier" data-slug-hash="WjOdxX" data-preview="true"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Full Page Video: Full Then Scroll">
-              <span>See the Pen <a href="https://codepen.io/chriscoyier/pen/WjOdxX">
-                  Full Page Video: Full Then Scroll</a> by Chris Coyier (<a
-                  href="https://codepen.io/chriscoyier">@chriscoyier</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/chriscoyier/pen/WjOdxX" target="_blank"
-                title="Full Page Video: Full Then Scroll">
-                Nguồn
-                Full Page Video: Full Then Scroll
-              </a> </button>
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Css: Background Video
-              </h3>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result"
-              data-user="alainrodriguezz" data-slug-hash="GqgbBE" data-preview="true"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Css: Background Video">
-              <span>See the Pen <a href="https://codepen.io/alainrodriguezz/pen/GqgbBE">
-                  Css: Background Video</a> by Alain Rodriguez (<a
-                  href="https://codepen.io/alainrodriguezz">@alainrodriguezz</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/alainrodriguezz/pen/GqgbBE" target="_blank" title="Css: Background Video">
-                Nguồn
-                Css: Background Video
-              </a> </button>
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Responsive Background Video
-              </h3>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="zitrusfrisch" data-slug-hash="vymGI" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Responsive Background Video">
-              <span>See the Pen <a href="https://codepen.io/zitrusfrisch/pen/vymGI">
-              Responsive Background Video</a> by Daniel Riemer (<a href="https://codepen.io/zitrusfrisch">@zitrusfrisch</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn  btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/zitrusfrisch/pen/vymGI" target="_blank" title="Responsive Background Video">
-                Nguồn
-                Responsive Background Video
-              </a> </button>
-
-
-
-
-
+            <pre><code class="javascript"> 'chuỗi'[1] /*h*/</code></pre>
 
 
 
@@ -476,7 +279,7 @@
             <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
 
 
-            <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những ví dụ về video background
+            <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những kỹ thuật viết mã Javascript
               hữu
               ích
               dành

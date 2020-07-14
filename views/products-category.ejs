@@ -122,30 +122,30 @@
   <div class="container-fluid mt-5">
     <div class="row justify-content-center">
       <% posts.forEach(function(post){ %>
-      <div class="card border-0 shadow card-row-article">
-
-        <h5 class="card-header"> <img data-src="<%-post.file%>" class="card-img-top header-img lazyload" alt="<%-post.title%>">
-        </h5>
-        <h3 class="button-article"><button type="button"
-            class="<%-post.category%> btn shadow-sm rounded btn-success m-3 pl-5 pr-5"><%=post.category%></button></h3>
-        <div class="card-body">
-          <h5 class="card-title"><a class="hvr-underline-from-center pt-1 pb-1"
-            title="<%-post.title%>" href="/article/<%-post.slug%>"><%=post.title%></a></h5>
-          <hr />
-          <p class="card-text text-justify text-truncate"><%-post.subtitle%></p>
-          <p class="text-muted"><i class="fa fa-clock-o" aria-hidden="true"></i> <%=post.date%></p>
-          <div class="d-flex justify-content-end">
-            <button class="learn-more">
-              <span class="circle">
-                <span class="icon arrow"></span>
-              </span>
-              <a class="button-text" title="<%-post.title%>" href="/article/<%-post.slug%>">
-                <span">Tiếp tục đọc</span>
-              </a>
-            </button>
+        <div class="card border-0 shadow card-row-article">
+          <div class="card-header"> <img data-src="<%-post.file%>" class="card-img-top header-img img-fluid lazyload"
+              alt="<%-post.title%>">
+          </div>
+          
+          <div class="card-body">
+            <button type="button"
+              class="<%-post.category%> btn shadow-sm rounded btn-success mt-2 mb-2 pl-2 pr-2"><%=post.category%></button><br/>
+            <h2 class="card-title-article"><%=post.title%></h2>
+            <hr />
+            <p class="card-text text-justify text-truncate"><%-post.subtitle%></p>
+            <p class="text-date"><i class="fa fa-clock-o" aria-hidden="true"></i> <%=post.date%></p>
+         
+       
+            <div class="d-flex justify-content-end">
+              <button class="learn-more">
+               
+                <a class="btn btn-outline-secondary" title="<%-post.title%>" href="/article/<%-post.slug%>">
+                  <span">Tiếp tục đọc</span>
+                </a>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
       <div class="mb-5"></div>
       <% }) %>
     </div>
