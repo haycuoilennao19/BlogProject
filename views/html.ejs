@@ -35,7 +35,7 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i> Những Kỹ Thuật Viết Mã Dành Cho Người Mới Bắt Đầu Javascript (2020)</h2>
+                  aria-hidden="true"></i> Cách Thiết Kế Và Những Thư Viện Scrollbar Cho Trang Web (2020)</h2>
             </div>
           </div>
 
@@ -46,232 +46,207 @@
           </div>
           <div class="text-content-article mt-5">
             <p><i>
-                Trong bài viết hôm nay chúng ta sẽ đi vào tìm hiểu những kỹ thuật viết mã tối ưu trong Javascript được đúc kết trong quá trình 
-                làm việc và học tập của các bạn lập trình viên trên thế giới. Và bây giờ chúng ta hãy cùng nhau đi vào tìm hiểu nhé! 
+                Scollbar là một phần trong trình duyệt giúp chúng ta có thể xem được nội dung khi vượt quá màn hình của
+                trang.
+                Bây giờ chúng ta hãy cùng nhau đi vào tìm hiểu cách thiết kế một scrollbar trong trang web nhé!
               </i>
             </p>
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Kỹ thuật rút ngắn vòng lặp trong Javascript
+                Những Nội Dung Cần Nắm Khi Thiết Kế Scrollbar
               </h3>
             </div>
             <p>
-              Thông thường khi chúng ta muốn sử dụng vòng lặp thì sẽ thực hiện như sau:
+              <ul>
+                <li>
+                  <code>::-webkit-scrollbar</code>: thanh cuộn trong trang web để thiết lập style.
+                </li>
+                <li>
+                  <code>::-webkit-scrollbar-button</code>: các nút trên thanh cuộn(mũi tên chỉ lên và chỉ xuống).
+                </li>
+                <li>
+                  <code>::-webkit-scrollbar-thumb</code>: có thể thay đổi kích cỡ phần tử cuộn.
+                </li>
+                <li>
+                  <code>::-webkit-scrollbar-track</code>: khoảng trống nằm bên dưới track (thanh tiến trình) của
+                  scrollbar.
+                </li>
+                <li>
+                  <code>::-webkit-scrollbar-track-piece</code>: phần trên cùng của thanh tiến trình không bị che bởi
+                  thumb.
+                </li>
+                <li>
+                  <code>::-webkit-scrollbar-corner</code>: góc dưới cùng của thanh cuộn, nơi mà hai scrollbar ngang và
+                  dọc gặp nhau.
+                </li>
+                <li>
+                  <code>::-webkit-resize</code>: chỉnh sửa lại kích thước có thể kéo được xuất hiện phía trên thanh cuộn
+                  ở góc dưới cùng của một số phần tử.
+                </li>
+              </ul>
             </p>
-            <pre><code class="javascript"> var lopHoc = ["Nam", "Như", "An"];<br/> for (let i = 0; i &#60; lopHoc.length; i++)</code></pre>
+            <p>
+              Mình có một lưu ý nhỏ là các thuộc tính trên thì có thể sử dụng được trên trình duyệt là <b>Chrome, Edge,
+                Safari</b>.
+              Còn đối với trình duyệt <b>Firefox</b> thì chúng ta sử dụng các CSS Scrollbars API như là
+              <code>scrollbar-color, scrollbar-width...</code>
+              Cái này mình sẽ nói rõ hơn ở các ví dụ bên dưới nhé!
+            </p>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Xây Dựng Và Thiết Kế Scrollbar
+              </h3>
+            </div>
+
+            <p>
+              Bây giờ chúng ta sẽ đi vào thiết lập Scrollbar cho trang Web Bằng CSS nhé:
+            </p>
+            <pre><code class="css">/* Xác định độ rộng cho scrollbar*/<br/> ::-webkit-scrollbar {<br/> width: 8px;<br/> }<br/>/* Thiết lập màu nền xám cho Track (Thanh Tiến Trình)*/<br/> ::-webkit-scrollbar-track {<br/> background: LightGray;<br/> }<br/> /* chọn màu nền xanh cho thumb */<br/> ::-webkit-scrollbar-thumb {<br/> background: DodgerBlue;<br/> }<br/>/* tao hiều ứng thay đổi màu nền đỏ khi hover */<br/> ::-webkit-scrollbar-thumb:hover {<br/> background: Tomato;<br/> }</code></pre>
+            <p class="mt-2">
+              Và dưới đây là kết quả nha:
+            </p>
+            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result"
+              data-user="haycuoilennao19" data-slug-hash="pogOQVm"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Ví Dụ Scrollbar">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/pogOQVm">
+                  Ví Dụ Scrollbar</a> by haycuoilennao19 (<a
+                  href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Xây Dựng Và Thiết Kế Scrollbar Cho Firefox
+              </h3>
+            </div>
+            <p>
+              Để thiết kế lại scrollbar mặc định trên trình duyệt Firefox thì ta sẽ sử dụng hai yếu tố chính sau đây
+              <code>scrollbar-color</code>: màu sắc cho thanh cuộn và <code>scrollbar-width</code>: xác định độ rộng cho
+              scrollbar.
+              Và dưới đây là ví dụ thiết kế scrollbar chạy trên Firefox nhé (Nhưng khi bạn muốn kiểm tra ví dụ này thì
+              phải chuyển sang sử dụng Firefox thì mới thấy kết quả nha):
+            </p>
+
+            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result"
+              data-user="haycuoilennao19" data-slug-hash="NWxLEoo"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="scrollbar cho Firefox">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/NWxLEoo">
+                  scrollbar cho Firefox</a> by haycuoilennao19 (<a
+                  href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Cách Ẩn Scrollbar trên trình duyệt
+              </h3>
+            </div>
+            <p>
+              Nếu bạn muốn ẩn scrollbar nhưng vẫn cho phép người dùng có thể cuộn chuột xuống để xem nội dung trong
+              trang thì có thể
+              sử dụng thuộc tính sau nhé:
+            </p>
+            <pre><code class="css">/*Ẩn scrollbar trên Chrome, Safari và Opera*/<br/> body::-webkit-scrollbar {<br/> &nbsp; display:none;<br/> }<br/><br/> /*Ẩn scrollbar cho IE, Edge và Firefox*/<br/> body {<br/> &nbsp;-ms-overflow-style: none;  /* IE và Edge */;<br/> &nbsp; scrollbar-width: none;  /* Firefox */<br/> }</code></pre>
+            <p class="mt-2">
+              Và để dễ hình dùng hơn bạn xem ví dụ nhé:
+            </p>
+
+            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result"
+              data-user="haycuoilennao19" data-slug-hash="mdVGQNK"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Ẩn Scrollbar">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/mdVGQNK">
+                  Ẩn Scrollbar</a> by haycuoilennao19 (<a
+                  href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Xây Dựng Và Thiết Kế Scrollbar Với Thư Viện Overlay Scrollbars
+              </h3>
+            </div>
+            <p>
+              Bây giờ chúng ta sẽ đi vào xây dựng với thư viện Overlay Scrollbars để tạo thêm nhiều chức năng cũng như
+              các thiết kế cho thanh cuộn nhé!
+            </p>
+            <p>
+              Thư viện này ngoài sử dùng bằng Javascript thuần thì nó cũng có các phiên bản cho front-end framework phổ
+              biển hiện nay như là React, Vue, Angular và Jquery.
+              Một điểm mình cảm thấy nên sử dụng thư viện này là bạn có thể thiết kế scrollbar chạy trên nhiều trình
+              duyệt khác nhau mà không cần phải xác định lại thuộc tính trong CSS.
+            </p>
+            <p>
+              Đầu tiên chúng ta sẽ đi vào các cài đặt nhé (Ở đây mình sẽ sử dụng CDN):
+            </p>
+            <pre><code class="html"> &#60;script src="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.12.0/js/OverlayScrollbars.min.js"&#62;&#60;/script&#62;<br/> &#60;link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.12.0/css/OverlayScrollbars.min.css' /&#62;</code></pre>
+            <p class="mt-2">
+              Và bạn có thể xem chi tiết <a href="https://cdnjs.com/libraries/overlayscrollbars" target="_blank"
+                title="CDN Overlay Scrollbars" rel="noopener noreferrer">ở đây nhé!</a>
+            </p>
+            <p>
+              Và bước tiếp theo sau khi cài đặt thì chúng ta sẽ khởi tạo nó bằng lệnh Javascript như đoạn code sau đây
+              nhé:
+            </p>
+            <pre><code class="javascript">document.addEventListener("DOMContentLoaded",&nbsp;function()&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;OverlayScrollbars(document.querySelectorAll('body'),&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;className:&nbsp;"os-theme-round-dark",<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scrollbars&nbsp;:&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clickScrolling&nbsp;:&nbsp;true<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;&nbsp;&nbsp;&nbsp;});<br/> });<br/></code></pre>
+            <p class="mt-2">
+              Đoạn code Javascript ở trên sẽ được chạy mỗi khi trang web được tải thông qua sự kiện
+              <code>DOMContentLoaded</code>.
+              Và <code>className</code> là tên theme được thiết sẵn cho scrollbar được cung cấp bởi thư viện. Và bạn có
+              thể xem chi tiết các theme
+              <a href="https://kingsora.github.io/OverlayScrollbars/#!themes" title="theme Overlay Scrollbars"
+                target="_blank" rel="noopener noreferrer">ở đây nhé</a>.
+            </p>
+            <p>
+              Và kết quả cuối cùng của chúng ta:
+            </p>
+            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result"
+              data-user="haycuoilennao19" data-slug-hash="gOPdZoy"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Scrollbar su dung thu vien  Overlay Scrollbars">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/gOPdZoy">
+                  Scrollbar su dung thu vien Overlay Scrollbars</a> by haycuoilennao19 (<a
+                  href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
             <p class="mt-4">
-              Và đây là cách bạn có thể rút gắn vòng lặp như sau:
+              Các bạn có thể tìm hiểu thêm tại trang chủ của thư viện <a
+                href="https://kingsora.github.io/OverlayScrollbars/#!overview" title="Overlay Scrollbars"
+                target="_blank" rel="noopener noreferrer">Overlay Scrollbars</a>.
             </p>
-            <pre><code class="javascript"> for (let hocSinh of lopHoc)</code></pre>
-            <p class="mt-2">
-              Nếu bạn muốn truy cập vị trí index thông qua vòng lặp thì có thể thực hiện như sau:
-            </p>
-            <pre><code class="javascript">for (let index in lopHoc)</code></pre>
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Kỹ thuật rút ngắn câu điều kiện trong Javascript
+                Một Số Thư Viện Xây Dựng Scrollbar Khác
               </h3>
             </div>
             <p>
-              Thông thường khi chúng ta muốn viết câu điều kiện trong javascript thì hay sử dụng câu lệnh <code>if...else</code> như ví dụ sau đây:
+              Thư Viện Smooth Scrollbar: <a href="https://idiotwu.github.io/smooth-scrollbar/" target="_blank"
+                rel="noopener noreferrer" title="Smooth Scrollbar">Đường Dẫn Thư Viện Smooth Scrollbar</a>
             </p>
-            <pre><code class="javascript"> const&nbsp;a&nbsp;=&nbsp;6;<br/>&nbsp;let&nbsp;ketqua&nbsp;;<br/>&nbsp;if&nbsp;(a&nbsp;>&nbsp;10)&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ketqua&nbsp;=&nbsp;"Giá&nbsp;trị&nbsp;lớn&nbsp;hơn&nbsp;10";<br/> &nbsp;}&nbsp;else&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ketqua&nbsp;=&nbsp;&nbsp;"Giá&nbsp;trị&nbsp;nhỏ&nbsp;hơn&nbsp;10";<br/> &nbsp;}</code></pre>
-            <p class="mt-2">
-              Và dưới đây là cách chúng ta có thể viết rút ngắn câu điều kiện phía trên:
-            </p>
-            <pre><code class="javascript"> const ketQua = a &#62; 10 ? "Giá trị lớn hơn 10" : "Giá trị nhỏ hơn 10";</code></pre>
-            <p class="mt-2">
-              Ngoài ra bạn cũng có thể thêm các điều kiện vào trong cách rút gọn như ở ví dụ dưới đây:
-            </p>
-            <pre><code class="javascript"> const ketQua = a > 10 ? "Giá trị lớn hơn 10" : x &#60; 5 ? "Giá trị nhỏ hơn 5" : "Giá trị trong khoảng từ 5 đến 10";</code></pre>
 
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Kỹ thuật rút ngắn kiểm tra điều kiện boolean Javascript
-              </h3>
-            </div>
             <p>
-              Thông thường khi kiểm tra một điều kiện boolean thì chúng ta sẽ làm như sau:
+              Thư Viện SimpleBar : <a href="http://grsmto.github.io/simplebar/" target="_blank"
+                rel="noopener noreferrer" title="SimpleBar ">Đường Dẫn Thư Viện SimpleBar </a>
             </p>
-            <pre><code class="javascript"> if (hocJavascript === true)</code></pre>
-            <p class="mt-2">
-              Và đây là cách rút ngọn của ví dụ trên nhé:
-            </p>
-            <pre><code class="javascript"> if (hocJavascript)</code></pre>
 
-            <p class="mt-2">
-              Còn đây là ví dụ chúng ta xét với trường hợp <code>false</code> nha:
-            </p>
-            <pre><code class="javascript"> let a;<br/> if(a !== true){<br/> &nbsp;&nbsp; /*Đoạn Mã*/<br/> }</code></pre>
-            <p class="mt-2">
-              Cách rút gọn ví dụ trên:
-            </p>
-            <pre><code class="javascript"> let a;<br/> if(!a){<br/>  &nbsp;&nbsp; /*Đoạn Mã*/<br/> }</code></pre>
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Kỹ Thuật Rút Ngắn Với Arrow Function
-              </h3>
-            </div>
             <p>
-              Đầu tiên là chúng ta sẽ đi vào viết một hàm theo cách thông thường:
+              Thư Viện gemini-scrollbar : <a href="https://noeldelgado.github.io/gemini-scrollbar/" target="_blank"
+                rel="noopener noreferrer" title="gemini-scrollbar ">Đường Dẫn Thư Viện gemini-scrollbar </a>
             </p>
-            <pre><code class="javascript"> function xinChao(ten) {<br/> &nbsp;&nbsp; console.log("Xin Chào Bạn " + ten);<br/> }</code></pre>
-            <p class="mt-2">
-              Cách rút gọn:
-            </p>
-            <pre><code class="javascript"> xinChao = ten => console.log("Xin Chào Bạn " + ten)</code></pre>
 
-            <p class="mt-4">
-              Ví dụ 2 là cách chúng ta sử dụng với lệnh <code>forEach</code>: 
-            </p>
-            <pre><code class="jvascript"> danhSach.forEach(function(phanTu){<br/> &nbsp;&nbsp;console.log(phanTu);<br/> });</code></pre>
-            <p class="mt-2">
-              Cách rút gọn:
-            </p>
-            <pre><code class="javascript"> danhSach.forEach(phanTu => console.log(phanTu));</code></pre>
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Kỹ Thuật Rút Ngắn Lũy Thừa Trong Javascript
-              </h3>
-            </div>
             <p>
-              Thông thường khi bạn muốn thực hiện hành động lũy thữa một số thì ta sẽ sử dụng <code>Math.pow</code> như ví dụ sau đây:
+              Thư Viện fakescroll : <a href="http://yaireo.github.io/fakescroll/" target="_blank"
+                rel="noopener noreferrer" title="fakescroll">Đường Dẫn Thư Viện fakescroll </a>
             </p>
-            <pre><code class="javascript"> Math.pow(2,2); /*Kết quả là 4*/<br/> Math.pow(2,3); /*Kết quả là 8*/</code></pre>
-            <p>
-              Và đây là cách rút gọn với việc sử dụng <code>**</code>:
-            </p>
-            <pre><code class="javascript"> 2**2 /*Kết quả là 4*/<br/> 2**3 /*Kết quả là 8*/</code></pre>
 
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-              Kỹ Thuật chuyển đổi từ kiểu dữ liệu chuỗi sang số
-              </h3>
-            </div>
-            <p>
-              Khi lập trình với javascript, nếu chúng ta muốn chuyển đổi kiểu dữ liệu từ chuỗi sang số thì sẽ dùng hai lệnh là 
-              <code>parseInt</code> (Kiểu số nguyên) và <code>parseFloat</code> (Kiểu số thập phân) như ví dụ sau:
-            </p>
-            <pre><code class="javascript"> const so1 = parseInt("5");<br/> const so2 = parseInt("5.5");</code></pre>
-            <p class="mt-2">
-              Cách rút gọn (Bạn sẽ thêm dấu cộng phía trước chuỗi chứa số):
-            </p>
-            <pre><code class="javascript"> const so1 = +"5";<br/> const so2 = +"5.5";</code></pre>
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-               Kỹ thuật rút ngắn khi thực hiện <code>return</code> trong hàm
-              </h3>
-            </div>
-            <p>
-              Đối với một hàm thông thường chúng ta sẽ sử dụng <code>return</code> để trả về một kết quả như sau đây:
-            </p>
-            <pre><code class="javascript"> function phepCong(a, b) {<br/> &nbsp;&nbsp; return a + b;<br/> }</code></pre>
-            <p class="mt-2">
-              Cách viết rút gọn:
-            </p>
-            <pre><code class="javascript"> const phepCong = (a, b) => (a + b);</code></pre>
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-               Kỹ thuật rút ngắn số mũ thập phân
-              </h3>
-            </div>
-            <p>
-              Đoạn code dưới đây sẽ giúp bạn giảm được cách phải viết nhiều số 0 cho một số. Và để hiểu rõ hơn bạn xem ví dụ sau đây nhé:
-            </p>
-            <pre><code class="javascript"> /*Cách viết rút gọn của các số*/<br/> 1e0 === 1;<br/> 1e1 === 10;<br/> 1e2 === 100;<br/> 1e3 === 1000;<br/> 1e4 === 10000;<br/> 1e5 === 100000;<br/> 1e6 === 1000000;</code></pre>
-         
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-               Sử dụng Spread Operator
-              </h3>
-            </div>
-            <p>
-              Khi bạn muốn nối mảng trong javascript thì sẽ sử dụng <code>concat</code> và sao chép một mảng sẽ sử dụng <code>slice</code> như ví dụ sau đây:
-            </p>
-            <pre><code class="javascript"> /*thực hiện nối mảng*/ <br/> var mang1 = [4,5,6];<br/> var mang2 = [1, 2, 3].concat(mang1); /*[1, 2, 3, 4, 5, 6]*/<br/><br/> /*Thực hiện sao chép mảng*/ <br/> var mang1 = [1, 2, 3];<br/> var mang2 = mang1.slice(); /*[1, 2, 3]*/</code></pre>
-            <p class="mt-2">
-              Còn đây là cách rút gọn khi ta sử dụng spread operator
-            </p>
-            <pre><code class="javascript">/*thực hiện nối mảng*/ <br/> var mang1 = [4,5,6];<br/> var mang2 = [1, 2, 3, ...mang1]; /*[1, 2, 3, 4, 5, 6]*/<br/><br/> /*Thực hiện sao chép mảng*/ <br/> var mang1 = [1, 2, 3];<br/> var mang2 = [...mang1]; /*[1, 2, 3]*/</code></pre>
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-               Kỹ thuật khai báo biến
-              </h3>
-            </div>
-            <p>
-             Thông thường chúng ta sẽ khai báo biến như sau:
-            </p>
-            <pre><code class="javascript"> let a;<br/> let b;<br/> let c = 4;</code></pre>
-            <p class="mt-2">
-              Cách viết rút gọn:
-            </p>
-            <pre><code class="javascript"> let a, b, c = 4;</code></pre>
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-               Sử dụng <code>Object.assign</code>
-              </h3>
-            </div>
-            <p>
-              Khi bạn muốn gộp hai hay nhiều đối tượng và trong một object thì ta có thể sử dụng <code>Object.assign</code> như ví dụ sau đây nhé
-            </p>
-            <pre><code class="javascript"> let ho = {ho : "Nguyễn"};<br/> let ten = {ten : "An"};<br/> /*Thực hiện gộp hai đối tượng*/<br/> let hoTen = Object.assign(ho, ten); /*{ho: "Nguyễn", ten: "An"}*/</code></pre>
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-               Sử dụng <code>Object.entries()</code>
-              </h3>
-            </div>
-            <p>
-              <code>Object.entries()</code> cho phép bạn có thể chuyển đổi các đối tượng thành các cặp giá trị mảng:
-            </p>
-            <pre><code class="javascript"> let doiTuong = {ho: "Nguyễn", ten: "An"};<br/> let mang = Object.entries(doiTuong); /*[["ho", "Nguyễn"], ["ten", "An"]]*/</code></pre>
-
-          
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-              Cách chuyển đổi số sang chuỗi
-              </h3>
-            </div>
-            <p>
-              Đoạn code dưới đây giúp chúng ta có thể chuyển đổi các kiểu dữ liệu trong Javascript sang dạng chuỗi:
-            </p>
-            <pre><code class="javascript"> let so = 5;<br/> let chuoi = "" + so; /*(typeof chuoi) : string*/</code></pre>
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-              Cách tự động gọi hàm
-              </h3>
-            </div>
-            <p>
-              Sau đây là đoạn mã giúp bạn có thể tự động gọi hàm trong Javascript:
-            </p>
-            <pre><code class="javascript">(function(){<br/> &nbsp;&nbsp; /*Đoạn mã thực thi*/<br/> })();</code></pre>
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Kỹ thuật rút ngắn lấy ký tự trong chuỗi 
-              </h3>
-            </div>
-            <p>
-              Thông thường khi chúng ta muốn lấy ký tự trong chuỗi thì sẽ sử dụng <code>charAt()</code> như ví dụ sau đây:
-            </p>
-              <pre><code class="javascript"> 'chuỗi'.charAt(1) /*h*/</code></pre>
-            <p>
-              Cách rút gọn:
-            </p>
-            <pre><code class="javascript"> 'chuỗi'[1] /*h*/</code></pre>
 
 
 
@@ -279,7 +254,7 @@
             <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
 
 
-            <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những kỹ thuật viết mã Javascript
+            <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những kiến thức về scrollbar
               hữu
               ích
               dành

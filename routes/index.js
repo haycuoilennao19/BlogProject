@@ -50,6 +50,14 @@ router.get('/', function(req, res, next) {
         .exec(function(err, products) {
             Blog.countDocuments().exec(function(err, count) {
                 if(err) return next(err)
+                products.forEach(function (product) { 
+                    if(product.file.includes(".jpg")){
+                        product.file =  product.file.replace(".jpg", ".webp");
+                    } else if( product.file.includes(".png")){
+                        product.file =  product.file.replace(".png", ".webp");
+                    }
+                }); 
+               
                 res.render('products',{posts: products, current:page, pages: Math.ceil(count / perpage)})
             })
         })
@@ -67,6 +75,13 @@ router.get('/:page', function(req, res, next) {
         .exec(function(err, products) {
             Blog.countDocuments().exec(function(err, count) {
                 if(err) return next(err)
+                products.forEach(function (product) { 
+                    if(product.file.includes(".jpg")){
+                        product.file =  product.file.replace(".jpg", ".webp");
+                    } else if( product.file.includes(".png")){
+                        product.file =  product.file.replace(".png", ".webp");
+                    }
+                }); 
                 res.render('products',{posts: products, current:parseInt(page), pages: Math.ceil(count / perpage)})
             })
         })

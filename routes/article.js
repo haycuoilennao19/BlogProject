@@ -45,6 +45,13 @@ router.get("/css", function(req, res) {
         .exec(function(err, products) {
             Blog.countDocuments().exec(function(err, count) {
                 if(err) return next(err)
+                products.forEach(function (product) { 
+                    if(product.file.includes(".jpg")){
+                        product.file =  product.file.replace(".jpg", ".webp");
+                    } else if( product.file.includes(".png")){
+                        product.file =  product.file.replace(".png", ".webp");
+                    }
+                }); 
                 res.render('products-category',{posts: products, current:page, pages: Math.ceil(count / perpage), category: category})
             })
         })
@@ -63,6 +70,13 @@ router.get('/css/:page', function(req, res, next) {
         .exec(function(err, products) {
             Blog.countDocuments({category:"CSS"}).exec(function(err, count) {
                 if(err) return next(err)
+                products.forEach(function (product) { 
+                    if(product.file.includes(".jpg")){
+                        product.file =  product.file.replace(".jpg", ".webp");
+                    } else if( product.file.includes(".png")){
+                        product.file =  product.file.replace(".png", ".webp");
+                    }
+                }); 
                 res.render('products-category',{posts: products, current:parseInt(page), pages: Math.ceil(count / perpage), category: category})
             })
         })
@@ -80,6 +94,13 @@ router.get("/html", function(req, res) {
         .exec(function(err, products) {
             Blog.countDocuments().exec(function(err, count) {
                 if(err) return next(err)
+                products.forEach(function (product) { 
+                    if(product.file.includes(".jpg")){
+                        product.file =  product.file.replace(".jpg", ".webp");
+                    } else if( product.file.includes(".png")){
+                        product.file =  product.file.replace(".png", ".webp");
+                    }
+                }); 
                 res.render('products-category',{posts: products, current:page, pages: Math.ceil(count / perpage), category: category})
             })
         })
@@ -99,6 +120,13 @@ router.get('/html/:page', function(req, res, next) {
         .exec(function(err, products) {
             Blog.countDocuments({category:"HTML"}).exec(function(err, count) {
                 if(err) return next(err)
+                products.forEach(function (product) { 
+                    if(product.file.includes(".jpg")){
+                        product.file =  product.file.replace(".jpg", ".webp");
+                    } else if( product.file.includes(".png")){
+                        product.file =  product.file.replace(".png", ".webp");
+                    }
+                }); 
                 res.render('products-category',{posts: products, current:parseInt(page), pages: Math.ceil(count / perpage), category: category})
             })
         })
@@ -116,6 +144,13 @@ router.get("/Javascript", function(req, res) {
         .exec(function(err, products) {
             Blog.countDocuments().exec(function(err, count) {
                 if(err) return next(err)
+                products.forEach(function (product) { 
+                    if(product.file.includes(".jpg")){
+                        product.file =  product.file.replace(".jpg", ".webp");
+                    } else if( product.file.includes(".png")){
+                        product.file =  product.file.replace(".png", ".webp");
+                    }
+                }); 
                 res.render('products-category',{posts: products, current:page, pages: Math.ceil(count / perpage), category: category})
             })
         })
@@ -136,6 +171,13 @@ router.get('/Javascript/:page', function(req, res, next) {
         .exec(function(err, products) {
             Blog.countDocuments({category:"Javascript"}).exec(function(err, count) {
                 if(err) return next(err)
+                products.forEach(function (product) { 
+                    if(product.file.includes(".jpg")){
+                        product.file =  product.file.replace(".jpg", ".webp");
+                    } else if( product.file.includes(".png")){
+                        product.file =  product.file.replace(".png", ".webp");
+                    }
+                }); 
                 res.render('products-category',{posts: products, current:parseInt(page), pages: Math.ceil(count / perpage), category: category})
             })
         })
@@ -154,6 +196,13 @@ router.get("/Resource", function(req, res) {
         .exec(function(err, products) {
             Blog.countDocuments({category:"Resource"}).exec(function(err, count) {
                 if(err) return next(err)
+                products.forEach(function (product) { 
+                    if(product.file.includes(".jpg")){
+                        product.file =  product.file.replace(".jpg", ".webp");
+                    } else if( product.file.includes(".png")){
+                        product.file =  product.file.replace(".png", ".webp");
+                    }
+                }); 
                 res.render('products-category',{posts: products, current:page, pages: Math.ceil(count / perpage), category: category})
             })
         })
@@ -172,6 +221,13 @@ router.get('/Resource/:page', function(req, res, next) {
         .exec(function(err, products) {
             Blog.countDocuments({category:"Resource"}).exec(function(err, count) {
                 if(err) return next(err)
+                products.forEach(function (product) { 
+                    if(product.file.includes(".jpg")){
+                        product.file =  product.file.replace(".jpg", ".webp");
+                    } else if( product.file.includes(".png")){
+                        product.file =  product.file.replace(".png", ".webp");
+                    }
+                }); 
                 res.render('products-category',{posts: products, current:page, pages: Math.ceil(count / perpage), category: category})
             })
         })
@@ -186,6 +242,13 @@ router.get("/Bootstrap", function(req, res) {
         .exec(function(err, data) {
             Blog.countDocuments().exec(function(err, count) {
                 if(err) return next(err)
+                data.forEach(function (item) { 
+                    if(item.file.includes(".jpg")){
+                        item.file =  item.file.replace(".jpg", ".webp");
+                    } else if( item.file.includes(".png")){
+                        item.file =  item.file.replace(".png", ".webp");
+                    }
+                }); 
                 res.render('category',{data: data})
             })
         })
@@ -212,7 +275,13 @@ router.get("/:slug", function(req, res) {
     
             let dateCreate = (data.date.split(" "));
             let dateModified = dateCreate[6] + "-" + dateCreate[3] + "-" + dateCreate[1];
-         
+           
+                if(data.file.includes(".jpg")){
+                    data.file =  data.file.replace(".jpg", ".webp");
+                } else if( data.file.includes(".png")){
+                    data.file =  data.file.replace(".png", ".webp");
+                }
+          
             res.render("article", {article: data, dateModified: dateModified})
         }
         else{
