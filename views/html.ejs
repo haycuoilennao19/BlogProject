@@ -35,7 +35,7 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i> Cách Thiết Kế Và Những Thư Viện Scrollbar Cho Trang Web (2020)</h2>
+                  aria-hidden="true"></i> 25 Thư Viện Và Công Cụ Giúp Bạn Thiết Kế Web Tốt Hơn Năm 2020</h2>
             </div>
           </div>
 
@@ -46,206 +46,590 @@
           </div>
           <div class="text-content-article mt-5">
             <p><i>
-                Scollbar là một phần trong trình duyệt giúp chúng ta có thể xem được nội dung khi vượt quá màn hình của
-                trang.
-                Bây giờ chúng ta hãy cùng nhau đi vào tìm hiểu cách thiết kế một scrollbar trong trang web nhé!
+                Trong sự phát triển nhanh chóng của các công nghệ web thì chúng ta ngày càng có nhiều công cụ ra đời để
+                hỗ trợ việc thiết kế và phát triển web một cách nhanh chóng và tối ưu hơn.
+                Do đó bài viết hôm nay mình sẽ giới thiệu đến bạn những công cụ hữu ích trong việc thiết kế, xây dựng
+                web được sử dụng phổ biến trong năm 2020 nhé!
               </i>
             </p>
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Những Nội Dung Cần Nắm Khi Thiết Kế Scrollbar
+                Unscreen
               </h3>
             </div>
             <p>
-              <ul>
-                <li>
-                  <code>::-webkit-scrollbar</code>: thanh cuộn trong trang web để thiết lập style.
-                </li>
-                <li>
-                  <code>::-webkit-scrollbar-button</code>: các nút trên thanh cuộn(mũi tên chỉ lên và chỉ xuống).
-                </li>
-                <li>
-                  <code>::-webkit-scrollbar-thumb</code>: có thể thay đổi kích cỡ phần tử cuộn.
-                </li>
-                <li>
-                  <code>::-webkit-scrollbar-track</code>: khoảng trống nằm bên dưới track (thanh tiến trình) của
-                  scrollbar.
-                </li>
-                <li>
-                  <code>::-webkit-scrollbar-track-piece</code>: phần trên cùng của thanh tiến trình không bị che bởi
-                  thumb.
-                </li>
-                <li>
-                  <code>::-webkit-scrollbar-corner</code>: góc dưới cùng của thanh cuộn, nơi mà hai scrollbar ngang và
-                  dọc gặp nhau.
-                </li>
-                <li>
-                  <code>::-webkit-resize</code>: chỉnh sửa lại kích thước có thể kéo được xuất hiện phía trên thanh cuộn
-                  ở góc dưới cùng của một số phần tử.
-                </li>
-              </ul>
+              Đây là một công cụ giúp bạn có thể loại bỏ background khỏi video một cách dễ dàng và hoàn toàn tự động
+              thông qua một cú click chuột.
+              Nó cũng hỗ trợ những định dạng video phổ biến hiện nay như là .mp4, .webm, .ogg, .mov, .gif và được sử
+              dụng hoàn toàn miễn phí nhé!
+              Một điểm mình thích ở nó là việc cung cấp thêm các background như hình ảnh, video ngắn để kết hợp với
+              video của chúng ta nhằm giúp làm nó nổi bật và đẹp hơn.
             </p>
-            <p>
-              Mình có một lưu ý nhỏ là các thuộc tính trên thì có thể sử dụng được trên trình duyệt là <b>Chrome, Edge,
-                Safari</b>.
-              Còn đối với trình duyệt <b>Firefox</b> thì chúng ta sử dụng các CSS Scrollbars API như là
-              <code>scrollbar-color, scrollbar-width...</code>
-              Cái này mình sẽ nói rõ hơn ở các ví dụ bên dưới nhé!
-            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594953605/cong-cu-thiet-ke-web/Unscreen_q6mk7a.png"
+              alt="Unscreen"
+              >
+            <button type="button " class="btn btn-outline-dark mt-4"> 
+              <a rel="external nofollow noopener noreferrer"
+                href="https://www.unscreen.com/" target="_blank" title="Unscreen">
+                 Nguồn
+             </a> </button>
 
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Xây Dựng Và Thiết Kế Scrollbar
+                Generative Media
               </h3>
             </div>
-
             <p>
-              Bây giờ chúng ta sẽ đi vào thiết lập Scrollbar cho trang Web Bằng CSS nhé:
-            </p>
-            <pre><code class="css">/* Xác định độ rộng cho scrollbar*/<br/> ::-webkit-scrollbar {<br/> width: 8px;<br/> }<br/>/* Thiết lập màu nền xám cho Track (Thanh Tiến Trình)*/<br/> ::-webkit-scrollbar-track {<br/> background: LightGray;<br/> }<br/> /* chọn màu nền xanh cho thumb */<br/> ::-webkit-scrollbar-thumb {<br/> background: DodgerBlue;<br/> }<br/>/* tao hiều ứng thay đổi màu nền đỏ khi hover */<br/> ::-webkit-scrollbar-thumb:hover {<br/> background: Tomato;<br/> }</code></pre>
-            <p class="mt-2">
-              Và dưới đây là kết quả nha:
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result"
-              data-user="haycuoilennao19" data-slug-hash="pogOQVm"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Ví Dụ Scrollbar">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/pogOQVm">
-                  Ví Dụ Scrollbar</a> by haycuoilennao19 (<a
-                  href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+              <b> Generative Media</b> là một trang web cung cấp cho bạn hàng ngàn khuôn mặt để có thể áp dụng vào thiết kế web mà không lo sợ về vấn đề bản quyền.
+              Điểm đặc biệt mình thích nhất ở trang web này là nó sử dụng AI để tạo ra những khuôn mặt người không tồn tại trên thế giới dựa trên cơ sở dữ liệu  hình ảnh không lồ.
+              Ngoài ra nó cũng được nhiều công ty lớn tin tưởng và sử dụng như là BBC, Daily Mail...
 
 
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594954683/cong-cu-thiet-ke-web/Generative_Media_p6notf.png"
+              alt="Generative Media"
+              >
+            <button type="button " class="btn btn-outline-dark mt-4"> 
+              <a rel="external nofollow noopener noreferrer"
+                href="https://generated.photos/" target="_blank" title="Generative Media">
+                 Nguồn
+             </a> </button>
+
+
+             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Xây Dựng Và Thiết Kế Scrollbar Cho Firefox
+                Avataaars generator
               </h3>
             </div>
             <p>
-              Để thiết kế lại scrollbar mặc định trên trình duyệt Firefox thì ta sẽ sử dụng hai yếu tố chính sau đây
-              <code>scrollbar-color</code>: màu sắc cho thanh cuộn và <code>scrollbar-width</code>: xác định độ rộng cho
-              scrollbar.
-              Và dưới đây là ví dụ thiết kế scrollbar chạy trên Firefox nhé (Nhưng khi bạn muốn kiểm tra ví dụ này thì
-              phải chuyển sang sử dụng Firefox thì mới thấy kết quả nha):
-            </p>
+              <b> Avataaars generator</b> là một web app giúp bạn có thể tạo avatar cho mình một cách dễ dàng thông qua các 
+              thông tin lựa chọn được cung cấp sẵn như là màu tóc, mắt, mũi... Và để dễ dàng sử dụng trong trang web thì ngoài việc cho xuất file ảnh png thì bạn 
+              cũng có thể xuất file dưới định dạng SVG, React hay thẻ <code>img</code> trong HTML.
 
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result"
-              data-user="haycuoilennao19" data-slug-hash="NWxLEoo"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="scrollbar cho Firefox">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/NWxLEoo">
-                  scrollbar cho Firefox</a> by haycuoilennao19 (<a
-                  href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594955174/cong-cu-thiet-ke-web/Avataaars_generator_mfvd4a.png"
+              alt="Avataaars generator"
+              >
+            <button type="button " class="btn btn-outline-dark mt-4"> 
+              <a rel="external nofollow noopener noreferrer"
+                href="https://getavataaars.com/" target="_blank" title="Avataaars generator">
+                 Nguồn
+             </a> </button>
+
+             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Cách Ẩn Scrollbar trên trình duyệt
+                Responsive
               </h3>
             </div>
             <p>
-              Nếu bạn muốn ẩn scrollbar nhưng vẫn cho phép người dùng có thể cuộn chuột xuống để xem nội dung trong
-              trang thì có thể
-              sử dụng thuộc tính sau nhé:
-            </p>
-            <pre><code class="css">/*Ẩn scrollbar trên Chrome, Safari và Opera*/<br/> body::-webkit-scrollbar {<br/> &nbsp; display:none;<br/> }<br/><br/> /*Ẩn scrollbar cho IE, Edge và Firefox*/<br/> body {<br/> &nbsp;-ms-overflow-style: none;  /* IE và Edge */;<br/> &nbsp; scrollbar-width: none;  /* Firefox */<br/> }</code></pre>
-            <p class="mt-2">
-              Và để dễ hình dùng hơn bạn xem ví dụ nhé:
-            </p>
+              <b>Responsive</b> là một ứng dụng mà một lập trình viên front-end nên có vì nó có thể xem cách trang web hiển thị trên nhiều màn hình 
+              thiết bị cùng một lúc. Để từ đó giúp bạn có cài nhìn tổng quan nhất về layout trang web cũng như chỉnh sửa lỗi responsive trên website  dễ dàng hơn.
 
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result"
-              data-user="haycuoilennao19" data-slug-hash="mdVGQNK"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Ẩn Scrollbar">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/mdVGQNK">
-                  Ẩn Scrollbar</a> by haycuoilennao19 (<a
-                  href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+
             </p>
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594956452/cong-cu-thiet-ke-web/Responsive_drmuly.png"
+              alt="Responsive"
+              >
+            <button type="button " class="btn btn-outline-dark mt-4"> 
+              <a rel="external nofollow noopener noreferrer"
+                href="https://responsively.app/" target="_blank" title="Responsive">
+                 Nguồn
+             </a> </button>
+
+
+             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Xây Dựng Và Thiết Kế Scrollbar Với Thư Viện Overlay Scrollbars
+                Separator Generator
               </h3>
             </div>
             <p>
-              Bây giờ chúng ta sẽ đi vào xây dựng với thư viện Overlay Scrollbars để tạo thêm nhiều chức năng cũng như
-              các thiết kế cho thanh cuộn nhé!
-            </p>
-            <p>
-              Thư viện này ngoài sử dùng bằng Javascript thuần thì nó cũng có các phiên bản cho front-end framework phổ
-              biển hiện nay như là React, Vue, Angular và Jquery.
-              Một điểm mình cảm thấy nên sử dụng thư viện này là bạn có thể thiết kế scrollbar chạy trên nhiều trình
-              duyệt khác nhau mà không cần phải xác định lại thuộc tính trong CSS.
-            </p>
-            <p>
-              Đầu tiên chúng ta sẽ đi vào các cài đặt nhé (Ở đây mình sẽ sử dụng CDN):
-            </p>
-            <pre><code class="html"> &#60;script src="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.12.0/js/OverlayScrollbars.min.js"&#62;&#60;/script&#62;<br/> &#60;link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.12.0/css/OverlayScrollbars.min.css' /&#62;</code></pre>
-            <p class="mt-2">
-              Và bạn có thể xem chi tiết <a href="https://cdnjs.com/libraries/overlayscrollbars" target="_blank"
-                title="CDN Overlay Scrollbars" rel="noopener noreferrer">ở đây nhé!</a>
-            </p>
-            <p>
-              Và bước tiếp theo sau khi cài đặt thì chúng ta sẽ khởi tạo nó bằng lệnh Javascript như đoạn code sau đây
-              nhé:
-            </p>
-            <pre><code class="javascript">document.addEventListener("DOMContentLoaded",&nbsp;function()&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;OverlayScrollbars(document.querySelectorAll('body'),&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;className:&nbsp;"os-theme-round-dark",<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scrollbars&nbsp;:&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clickScrolling&nbsp;:&nbsp;true<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;&nbsp;&nbsp;&nbsp;});<br/> });<br/></code></pre>
-            <p class="mt-2">
-              Đoạn code Javascript ở trên sẽ được chạy mỗi khi trang web được tải thông qua sự kiện
-              <code>DOMContentLoaded</code>.
-              Và <code>className</code> là tên theme được thiết sẵn cho scrollbar được cung cấp bởi thư viện. Và bạn có
-              thể xem chi tiết các theme
-              <a href="https://kingsora.github.io/OverlayScrollbars/#!themes" title="theme Overlay Scrollbars"
-                target="_blank" rel="noopener noreferrer">ở đây nhé</a>.
-            </p>
-            <p>
-              Và kết quả cuối cùng của chúng ta:
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result"
-              data-user="haycuoilennao19" data-slug-hash="gOPdZoy"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Scrollbar su dung thu vien  Overlay Scrollbars">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/gOPdZoy">
-                  Scrollbar su dung thu vien Overlay Scrollbars</a> by haycuoilennao19 (<a
-                  href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <p class="mt-4">
-              Các bạn có thể tìm hiểu thêm tại trang chủ của thư viện <a
-                href="https://kingsora.github.io/OverlayScrollbars/#!overview" title="Overlay Scrollbars"
-                target="_blank" rel="noopener noreferrer">Overlay Scrollbars</a>.
-            </p>
+              <b>Separator Generator</b> giúp bạn có thể tạo background với chức năng tùy chỉnh được cung cấp sẵn. Bạn chỉ cần lựa chọn background phù hợp với mình và sau đó nó sẽ tự động render code HTML và CSS tương ứng.
 
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594957473/cong-cu-thiet-ke-web/Separator_Generator_uhhohf.png"
+              alt="Separator Generator"
+              >
+            <button type="button " class="btn btn-outline-dark mt-4"> 
+              <a rel="external nofollow noopener noreferrer"
+                href="https://wweb.dev/resources/css-separator-generator" target="_blank" title="Separator Generator">
+                 Nguồn
+             </a> </button>
+
+
+             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Một Số Thư Viện Xây Dựng Scrollbar Khác
+                Screely
               </h3>
             </div>
             <p>
-              Thư Viện Smooth Scrollbar: <a href="https://idiotwu.github.io/smooth-scrollbar/" target="_blank"
-                rel="noopener noreferrer" title="Smooth Scrollbar">Đường Dẫn Thư Viện Smooth Scrollbar</a>
-            </p>
+              <b>Screely</b> là công cụ giúp bạn có thể chỉnh sửa ảnh chụp màn hình với nhiều tính năng hỗ trợ như là thêm cửa sổ trình duyệt vào hình ảnh, 
+              chọn màu background... Ngoài ra nó cũng cho phép bạn có thể tải xuống theo 3 định dạng hình ảnh là PNG, SVG và JPG.
 
-            <p>
-              Thư Viện SimpleBar : <a href="http://grsmto.github.io/simplebar/" target="_blank"
-                rel="noopener noreferrer" title="SimpleBar ">Đường Dẫn Thư Viện SimpleBar </a>
-            </p>
 
-            <p>
-              Thư Viện gemini-scrollbar : <a href="https://noeldelgado.github.io/gemini-scrollbar/" target="_blank"
-                rel="noopener noreferrer" title="gemini-scrollbar ">Đường Dẫn Thư Viện gemini-scrollbar </a>
             </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594958216/cong-cu-thiet-ke-web/Screely_pfvsy8.png"
+              alt="Screely"
+              >
+            <button type="button " class="btn btn-outline-dark mt-4"> 
+              <a rel="external nofollow noopener noreferrer"
+                href="https://www.screely.com/" target="_blank" title="Screely">
+                 Nguồn
+             </a> </button>
 
+
+             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Font In Logo
+              </h3>
+            </div>
             <p>
-              Thư Viện fakescroll : <a href="http://yaireo.github.io/fakescroll/" target="_blank"
-                rel="noopener noreferrer" title="fakescroll">Đường Dẫn Thư Viện fakescroll </a>
+              <b>Font In Logo</b> là công cụ giúp bạn tìm loại font  đang được  những công ty nổi tiếng sử dụng để làm logo như là Google,
+              Amazon, Disney... Ngoài ra nó cũng cung cấp đường dẫn để tải font cho những logo mình thích.
+
+
             </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594958563/cong-cu-thiet-ke-web/Font_In_Logo_qg633f.png"
+              alt="Font In Logo"
+              >
+            <button type="button " class="btn btn-outline-dark mt-4"> 
+              <a rel="external nofollow noopener noreferrer"
+                href="https://www.fontinlogo.com/" target="_blank" title="Font In Logo">
+                 Nguồn
+             </a> </button>
+
+
+             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Tutorialist
+              </h3>
+            </div>
+            <p>
+              <b>Tutorialist</b> là trang web sưu tầm những khóa học lập trình miễn phí với nhiều thể loại như là front-end, back-end, 
+              databases, mobile apps... Tuy khối lượng sưu tầm video chưa lớn nhưng mình thấy nó có khá nhiều video hữu ích được chọn lọc kỹ càng cũng như phân loại rõ ràng.
+
+
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594959189/cong-cu-thiet-ke-web/Tutorialist_bchlnr.png"
+              alt="Tutorialist"
+              >
+            <button type="button " class="btn btn-outline-dark mt-4"> 
+              <a rel="external nofollow noopener noreferrer"
+                href="https://www.tutorialist.io/" target="_blank" title="Tutorialist">
+                 Nguồn
+             </a> </button>
+
+
+             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                IMAGE COMPARE VIEWER
+              </h3>
+            </div>
+            <p>
+              <b> IMAGE COMPARE VIEWER</b> là một thư viện được xây dựng bằng Javascript giúp bạn có thể dễ dàng so sánh hình ảnh trước và sau khi sử dụng hiệu ứng
+              thông qua một thanh điều chỉnh qua lại được đặt giữa màn hình.
+
+
+
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594959688/cong-cu-thiet-ke-web/IMAGE_COMPARE_VIEWER_oxlnft.png"
+              alt="IMAGE COMPARE VIEWER"
+              >
+            <button type="button " class="btn btn-outline-dark mt-4"> 
+              <a rel="external nofollow noopener noreferrer"
+                href="https://image-compare-viewer.netlify.app/" target="_blank" title="IMAGE COMPARE VIEWER">
+                 Nguồn
+             </a> </button>
+
+
+             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Midori
+              </h3>
+            </div>
+            <p>
+              <b>Midori</b> là một thư viện được xây dựng dựa trên  three.js và WebGL. Với mục đích chính là  giúp bạn tạo hiệu ứng chuyển động  background 
+              trong trang web một cách nhanh chóng, dễ dàng cùng nhiều hiệu ứng đẹp mắt.
+
+
+
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594969300/cong-cu-thiet-ke-web/Midori_nfrgs4.png"
+              alt="Midori"
+              >
+            <button type="button " class="btn btn-outline-dark mt-4"> 
+              <a rel="external nofollow noopener noreferrer"
+                href="https://github.com/aeroheim/midori" target="_blank" title="Midori">
+                 Nguồn
+             </a> </button>
+
+
+             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                The Hero Generator
+              </h3>
+            </div>
+            <p>
+              <b>The Hero Generator</b> một trang web giúp bạn xây dựng hero header bằng cách tải ảnh của mình lên và tình chỉnh những thông tin có sẵn. Sau đó đoạn code 
+              HTML và CSS tương ứng sẽ được tạo ra cho bạn. Tuy vậy nó chỉ tinh chỉnh CSS do đó bạn phải chỉnh lại nội dung HTML mặc định của nó để phù hợp với mục đích của mình nhé!
+
+
+
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594970542/cong-cu-thiet-ke-web/The_Hero_Generator_ixxq0b.png"
+              alt="The Hero Generator"
+              >
+            <button type="button " class="btn btn-outline-dark mt-4"> 
+              <a rel="external nofollow noopener noreferrer"
+                href="https://hero-generator.netlify.app/" target="_blank" title="The Hero Generator">
+                 Nguồn
+             </a> </button>
+
+
+
+
+             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Rakuten Rapid API
+              </h3>
+            </div>
+            <p>
+              <b>Rakuten Rapid API</b> là trang web giúp bạn có thể tìm thấy và kết nối với hàng ngàn API khác nhau.
+
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594973175/cong-cu-thiet-ke-web/Rakuten_Rapid_API_kmqwi6.png"
+              alt="Rakuten Rapid API"
+              >
+            <button type="button " class="btn btn-outline-dark mt-4"> 
+              <a rel="external nofollow noopener noreferrer"
+                href="https://english.api.rakuten.net/" target="_blank" title="Rakuten Rapid API">
+                 Nguồn
+             </a> </button>
+
+
+             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Animista
+              </h3>
+            </div>
+            <p>
+              <b>Animista</b> là trang web giúp bạn có thể tạo ra nhiều hiệu ứng CSS thông qua thuộc tính cung cấp sẵn.
+              Ngoài ra nó cũng phân chia thành nhiều loại khác nhau để giúp bạn dễ dàng lựa chọn như là animation căn bản, animation cho chữ,  background...
+
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594973722/cong-cu-thiet-ke-web/Animista_oc145e.png"
+              alt="Animista"
+              >
+            <button type="button " class="btn btn-outline-dark mt-4"> 
+              <a rel="external nofollow noopener noreferrer"
+                href="https://animista.net/play/basic" target="_blank" title="Animista">
+                 Nguồn
+             </a> </button>
+
+
+             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                SpreadSimple
+              </h3>
+            </div>
+            <p>
+              <b>SpreadSimple</b> là một ứng dụng sử dụng dữ liệu(data) từ Google spreadsheet  để thiết kế và tạo trang web
+              một cách nhanh chóng và dễ dàng. 
+              Ngoài ra nó cũng có một số thuộc tính hữu ích là lọc, tìm kiếm, hỗ trợ HTTPS/SSL, cung cấp theme sẵn có để thiết kế web...
+
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594974803/cong-cu-thiet-ke-web/SpreadSimple_edisyv.png"
+              alt="SpreadSimple"
+              >
+            <button type="button " class="btn btn-outline-dark mt-4"> 
+              <a rel="external nofollow noopener noreferrer"
+                href="https://spreadsimple.com/" target="_blank" title="SpreadSimple">
+                 Nguồn
+             </a> </button>
+
+
+
+             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Free Logo Maker
+              </h3>
+            </div>
+            <p>
+              <b>Free Logo Maker</b> là ứng dụng web giúp bạn tạo logo hoàn toàn miễn phí cho trang web và được xây dựng  bởi Namecheap.
+
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594975740/cong-cu-thiet-ke-web/Free_Logo_Maker_jeucf4.png"
+              alt="Free Logo Maker"
+              >
+            <button type="button " class="btn btn-outline-dark mt-4"> 
+              <a rel="external nofollow noopener noreferrer"
+                href="https://www.namecheap.com/logo-maker/" target="_blank" title="Free Logo Maker">
+                 Nguồn
+             </a> </button>
+
+
+             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Error404 Pages Illustrations
+              </h3>
+            </div>
+            <p>
+              <b>  Error404 Pages Illustrations</b> là một bộ sưu tập các hình ảnh cho trang 404 (nghĩa là trang này không tìm thấy hay gặp phải lỗi truy cập) trong website của bạn.
+
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594985504/cong-cu-thiet-ke-web/Error404_Pages_Illustrations_skznc4.png"
+              alt="Error404 Pages Illustrations"
+              >
+            <button type="button " class="btn btn-outline-dark mt-4"> 
+              <a rel="external nofollow noopener noreferrer"
+                href="https://error404.fun/" target="_blank" title=" Error404 Pages Illustrations">
+                 Nguồn
+             </a> </button>
+
+
+             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                iHateRegex
+              </h3>
+            </div>
+            <p>
+              <b>iHateRegex</b> là được xem là nơi giúp bạn dễ dàng tìm kiếm những đoạn mã regex cho việc kiểm tra email, tên, số điện thoại, ngày tháng...
+              Ngoài ra nó cũng có ví dụ chi tiết cho từng mã xác thực cũng như giải thích từng chức năng được sử dụng trong mã regex đó.
+
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594985817/cong-cu-thiet-ke-web/iHateRegex_ftx0vf.png"
+              alt="iHateRegex"
+              >
+            <button type="button " class="btn btn-outline-dark mt-4"> 
+              <a rel="external nofollow noopener noreferrer"
+                href="https://ihateregex.io/" target="_blank" title="iHateRegex">
+                 Nguồn
+             </a> </button>
+
+             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Custom Shape Dividers
+              </h3>
+            </div>
+            <p>
+              <b>Custom Shape Dividers</b> là một công cụ online giúp bạn có thể tạo ra những background theo nhiều hình dạng khác nhau cho trang web như 
+              là hình gợn sóng, hình tam giác, hình mũi tên... Bạn chỉ cần copy đoạn mã HTML, CSS của background mình thích và chép vào dự án web là có thể sử dụng được rồi nhé!
+
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594986247/cong-cu-thiet-ke-web/Custom_Shape_Dividers_ni72wy.png"
+              alt="Custom Shape Dividers"
+              >
+            <button type="button " class="btn btn-outline-dark mt-4"> 
+              <a rel="external nofollow noopener noreferrer"
+                href="https://www.shapedivider.app/" target="_blank" title="Custom Shape Dividers">
+                 Nguồn
+             </a> </button>
+
+             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Pattern-css
+              </h3>
+            </div>
+            <p>
+              <b>Pattern-css</b> là một thư viện được xây dựng bằng CSS với kích thước chỉ khoảng 1kb sau khi nén. Với nhiệm vụ chính của nó là cung cấp cho bạn những background 
+              kết hợp với hoa văn được thiết kế đẹp mắt.
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594986568/cong-cu-thiet-ke-web/Pattern-css_snjxhr.png"
+              alt="Pattern-css"
+              >
+            <button type="button " class="btn btn-outline-dark mt-4"> 
+              <a rel="external nofollow noopener noreferrer"
+                href="https://bansal.io/pattern-css" target="_blank" title="Pattern-css">
+                 Nguồn
+             </a> </button>
+
+
+             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Webframe
+              </h3>
+            </div>
+            <p>
+              <b>Webframe</b> là một trang web sưu tập hàng ngàn thiết kế  dựa trên những trang web đang được sử dụng trên thế giới.
+              Theo mình thấy đây là nơi giúp chúng ta dễ dàng tìm kiếm những thiết kế web trending, phổ biến hiện nay cũng như học hỏi thêm về  thiết kế web từ nhiều những mẫu design đó.
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594987122/cong-cu-thiet-ke-web/Webframe_xtatfl.png"
+              alt="Webframe"
+              >
+            <button type="button " class="btn btn-outline-dark mt-4"> 
+              <a rel="external nofollow noopener noreferrer"
+                href="https://webframe.xyz/" target="_blank" title="Webframe">
+                 Nguồn
+             </a> </button>
+
+
+             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                MINIFIER
+              </h3>
+            </div>
+            <p>
+              <b>MINIFIER</b> là một web app giúp bạn có thể giảm dung lượng file CSS và Javascript thông qua cách loại bỏ khoảng trắng, bình luận trong mã...
+              Nó giúp trang web của thể tải được nhanh hơn mà không thay đổi chức năng của code.
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594988026/cong-cu-thiet-ke-web/MINIFIER_1_q7kt3b.png"
+              alt="MINIFIER"
+              >
+            <button type="button " class="btn btn-outline-dark mt-4"> 
+              <a rel="external nofollow noopener noreferrer"
+                href="https://www.minifier.org/" target="_blank" title="MINIFIER">
+                 Nguồn
+             </a> </button>
+
+
+             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Favicon & App Icon Generator
+              </h3>
+            </div>
+            <p>
+              <b>Favicon & App Icon Generator</b>  giúp bạn có thể tạo favicon một cách dễ dàng thông qua cách tải hình muốn lên trên web app này. Sau đó nó sẽ tự động 
+              thực hiện tạo ra các favicon với nhiều kích thước khác nhau cho trang web cũng như cung cấp đoạn mã được viết sẵn để bạn có thể dễ dàng áp dụng vào dự án của mình.(favicon là hình ảnh nằm kế bên tiêu đề của thẻ tab trong trình duyệt nhé)
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594988477/cong-cu-thiet-ke-web/Favicon_App_Icon_Generator_aepsbg.png"
+              alt="Favicon & App Icon Generator"
+              >
+            <button type="button " class="btn btn-outline-dark mt-4"> 
+              <a rel="external nofollow noopener noreferrer"
+                href="https://www.favicon-generator.org/" target="_blank" title="Favicon & App Icon Generator">
+                 Nguồn
+             </a> </button>
+
+
+
+             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                DevDocs
+              </h3>
+            </div>
+            <p>
+              <b>DevDocs</b> là một trang web tổng hợp hầu hết các document của những những ngôn ngữ lập trình, framework front-end,
+              framework back-end... phổ biến hiện này và  được trình bày một cách trực quan rõ ràng cùng với nhiều ví dụ  minh họa. Bạn có thể tham khảo thêm trong trang chính của nó nhé. 
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594989268/cong-cu-thiet-ke-web/DevDocs_o2hg3h.png"
+              alt="DevDocs"
+              >
+            <button type="button " class="btn btn-outline-dark mt-4"> 
+              <a rel="external nofollow noopener noreferrer"
+                href="https://devdocs.io/" target="_blank" title="DevDocs">
+                 Nguồn
+             </a> </button>
+
+
+             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                FontSpark
+              </h3>
+            </div>
+            <p>
+              <b>FontSpark</b> là một ứng dụng web giúp bạn có thể lựa chọn font yêu thích của mình thông qua việc nhập nội dung vào ứng dụng và nó sẽ
+              tự động thay đổi font hiển thị nội dung đó mỗi lần bạn nhấp vào nút <i>Generate</i>. Ngoài ra nguồn font của  nó được lấy từ Google Font nên bạn yên tâm có thể sử dụng hoàn toàn miễn phí nhé.
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594989765/cong-cu-thiet-ke-web/FontSpark_ki0ti9.png"
+              alt="FontSpark"
+              >
+            <button type="button " class="btn btn-outline-dark mt-4"> 
+              <a rel="external nofollow noopener noreferrer"
+                href="https://fontspark.app/" target="_blank" title="FontSpark">
+                 Nguồn
+             </a> </button>
+
+
+             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                GetTerms
+              </h3>
+            </div>
+            <p>
+              <b>GetTerms</b> một ứng dụng web giúp bạn có thể tạo các chính sách bảo mật và điều khoản dịch vụ ( Privacy Policy and Terms of Service statement ) cho trang web một cách nhanh chóng và dễ dàng.
+              Tùy vào từng mục đích thì nó cung cấp các gói khác nhau nhé từ cơ bản đến nâng cao để bạn sử dụng với giá từ  miễn phí đến $49.
+            </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1594990539/cong-cu-thiet-ke-web/GetTerms_wyu3m7.png"
+              alt="GetTerms"
+              >
+            <button type="button " class="btn btn-outline-dark mt-4"> 
+              <a rel="external nofollow noopener noreferrer"
+                href="https://getterms.io/" target="_blank" title="GetTerms">
+                 Nguồn
+             </a> </button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -254,7 +638,7 @@
             <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
 
 
-            <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những kiến thức về scrollbar
+            <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những thư viện cà công cụ
               hữu
               ích
               dành
