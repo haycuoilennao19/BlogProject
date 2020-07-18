@@ -32,14 +32,8 @@ router.get('/superplaceholer', function(req, res, next) {
 })
 
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-    // var blog = new Blog({title:'Article1', content:'lorem With supporting text below as a natural lead-in to additional content. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt culpa nisi porro dignissimos ab a debitis officiis consequatur. Animi, corrupti aliquid. Labore nisi impedit aperiam atque voluptatem dolore sed deleniti.'})
-    // blog.save(function (err, fluffy) {
-    //     if (err) return console.error(err);
-    //     console.log("Save database success")
-    //   });
-    
+
+router.get('/', function(req, res, next) { 
     var perpage = 6;
     var page = req.params.page || 1
     Blog
