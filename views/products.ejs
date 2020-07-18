@@ -96,6 +96,8 @@
     
 
   <!--Content-->
+ 
+
   <div class="jumbotron jumbotron-fluid image-slider">
     <div class="container-fluid">
     <div class="row">
@@ -134,17 +136,15 @@
           <p class="text-date"><i class="fa fa-clock-o" aria-hidden="true"></i> <%=post.date%></p>
        
      
-          <div class="d-flex justify-content-end">
+          <div class="d-flex justify-content-end "mb-5">
             <button class="learn-more">
-             
-              <a class="btn btn-outline-secondary" title="<%-post.title%>" href="/article/<%-post.slug%>">
+              <p><a class="btn btn-outline-secondary" title="<%-post.title%>" href="/article/<%-post.slug%>">
                 <span">Tiếp tục đọc</span>
               </a>
-            </button>
+            </button></p>
           </div>
         </div>
       </div>
-      <div class="mb-5"></div>
       <% }) %>
     </div>
   </div>
