@@ -35,7 +35,7 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i> Những Profile Card  Trong Thiết Kế Và Phát Triển Web 2020</h2>
+                  aria-hidden="true"></i> Sử Dụng Grid JS Cho Xây Dựng Bảng Trong Website </h2>
             </div>
           </div>
 
@@ -46,435 +46,243 @@
           </div>
           <div class="text-content-article mt-5">
             <p><i>
-              Profile Card giống như một tấm danh thiếp  giúp khách hàng, người dùng có thể biết rõ những thông tin cơ bản của một người nào đó mà chúng ta muốn giới thiệu
-              trong trang web. Với sự phát triển ngày càng cao thì tính thẩm mỹ cho profile card cũng là một yếu tố hết sức quan trọng để thu hút sự chú ý của người dùng cũng như mang lại cảm giác chuyên nghiệp cho website. 
-              Do đó bài hôm nay chúng ta sẽ cùng nhau tìm hiểu những mẫu profile card đẹp trong năm 2020 nhé.
-
+                Bài viết hôm nay chúng ta sẽ đi vào tìm hiểu thư viện Grid.js với nhiệm vụ chính là giúp bạn có thể
+                làm việc với bảng trong trang web được dễ dàng hơn. Và để hiểu rõ hơn thì chúng ta hãy cùng nhau đi vào
+                tìm hiểu nhé!
               </i>
             </p>
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Profile Card
+                Grid.js là gì?
               </h3>
             </div>
-     
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="JavaScriptJunkie" data-slug-hash="jvRGZy" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Profile Card">
-              <span>See the Pen <a href="https://codepen.io/JavaScriptJunkie/pen/jvRGZy">
-              Profile Card</a> by Muhammed Erdem (<a href="https://codepen.io/JavaScriptJunkie">@JavaScriptJunkie</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
+            <p>
+              <b>Grid.js</b> là một thư viện mã nguồn mở được viết bằng TypeScript. Nó làm việc được với hầu hết
+              framework phổ biến hiện nay như là
+              React, Angular, Vue. Nhưng trong bài viết này thì mình sẽ hướng dẫn bạn sử dụng thư viện với Javascript
+              thuần thôi nhé!
             </p>
-            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-
-            <button type="button " class="btn btn-outline-dark mt-4"> 
-              <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/JavaScriptJunkie/pen/jvRGZy" target="_blank">
-                 Nguồn
-             </a> </button>
-
-             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Profile Cards
-              </h3>
-            </div>
-     
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="Paolo-Duzioni" data-slug-hash="vgOgbJ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Profile Cards">
-              <span>See the Pen <a href="https://codepen.io/Paolo-Duzioni/pen/vgOgbJ">
-              Profile Cards</a> by Paolo Duzioni (<a href="https://codepen.io/Paolo-Duzioni">@Paolo-Duzioni</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
+            <p>
+              Dưới đây là một ví dụ về bảng khi được xây dựng bằng Grid.js:
             </p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1595249622/gridjs/gridjs_f7cmig.png"
+              alt="GridJS"
+              >
+
+              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">
+                  Cách Cài Đặt Grid.js
+                </h3>
+              </div>
+
+              <p>
+                Bạn có thể thiết lập nó thông qua hai cách là sử dụng npm và CDN. Để thuận tiện trong việc sử dụng thì mình sẽ sử dụng cách CDN với hai file chính là:
+                <ul>
+                  <li><code>gridjs</code> với đường dẫn CDN là <code>https://unpkg.com/gridjs</code></li>
+                  <li><code>theme</code>(chủ đề cho bảng) với đường dẫn CDN là <code>https://unpkg.com/gridjs/dist/theme/mermaid.min.css</code></li>
+                </ul>
+              </p>
+              <p>
+                Nếu bạn muốn sử dụng npm để thiết lập thì có thể xem <a href="https://www.npmjs.com/package/gridjs" title="gridjs" target="_blank" rel="noopener noreferrer">ở đây nhé</a>.<br/>
+                Tiếp theo chúng ta sẽ tạo cấu trúc HTML và gắn các CDN vào trang web nhé:
+              </p>
+              <pre><code class="html">&#60;html&nbsp;lang="en"&#62;<br/> &nbsp;&nbsp;&#60;head&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" &nbsp;rel="stylesheet" /&#62;<br/> &nbsp;&nbsp;&#60;/head&#62;<br/> &nbsp;&nbsp;&#60;body&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;id="bang"&#62;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;script&nbsp;src="https://unpkg.com/gridjs/dist/gridjs.development.js"&#62;&#60;/script&#62;<br/> &nbsp;&nbsp;&#60;/body&#62;<br/> &#60;/html&#62;<br/></code></pre>
+
+
+              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">
+                  Cách Sử Dụng Grid.js
+                </h3>
+              </div>
+              <p>
+                Sau khi chúng ta đã có những file cần thiết thì bây giờ bạn và mình sẽ đi vào khởi tạo và sử dụng Grid.js để tạo bảng thông qua 
+                đoạn code javascript dưới đây nhé:
+              </p>
+              <pre><code class="javascript"> &#60;script&#62;<br/> new&nbsp;gridjs.Grid({<br/> &nbsp;&nbsp;columns:&nbsp;["Tên",&nbsp;"Email",&nbsp;"Số&nbsp;Điện&nbsp;Thoại"],<br/> &nbsp;&nbsp;data:&nbsp;[<br/> &nbsp;&nbsp;&nbsp;&nbsp;["John",&nbsp;"john@example.com",&nbsp;"(353)&nbsp;01&nbsp;222&nbsp;3333"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Mark",&nbsp;"mark@gmail.com",&nbsp;"(01)&nbsp;22&nbsp;888&nbsp;4444"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Eoin",&nbsp;"eoin@gmail.com",&nbsp;"0097&nbsp;22&nbsp;654&nbsp;00033"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Sarah",&nbsp;"sarahcdd@gmail.com",&nbsp;"+322&nbsp;876&nbsp;1233"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Afshin",&nbsp;"afshin@mail.com",&nbsp;"(353)&nbsp;22&nbsp;87&nbsp;8356"]<br/> &nbsp;&nbsp;]<br/> }).render(document.getElementById("bang"));<br/> &#60;/script&#62;<br/></code></pre>
+              <p class="mt-4">
+                Ở phía trên mình có một tý lưu ý là:
+                <ul>
+                  <li><code>new gridjs.Grid</code>: dùng để khởi tạo đối tượng bảng trong thư viện Grid.js</li>
+                  <li><code>columns</code>: dùng để xác định tiêu đề cũng như số cột trong bảng</li>
+                  <li><code>data</code>: là dữ liệu mà bảng sẽ hiển thị</li>
+                  <li><code>render(document.getElementById("bang"))</code>: Chọn thẻ div có id là <code>bang</code> để hiển thị table trong trang web.</li>
+                </ul>
+              </p>
+              <p>
+                Và dưới đây là kết quả bảng của chúng ta trong trang web:
+              </p>
+              <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="haycuoilennao19" data-slug-hash="KKVbNRN" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Sử dụng gridjs để tạo bảng">
+                <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/KKVbNRN">
+                Sử dụng gridjs để tạo bảng</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+              </p>
+              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">
+                 Thêm Chức Năng Cho Bảng Bằng Grid.js
+                </h3>
+              </div>
+              <p>
+               Bạn có tự hỏi là tại sao mình lại sử dụng thư viện này để tạo một bảng đơn giản như ở trên?<br/>
+               Thì thật ra đó chính là bước khởi đầu để giúp bạn có thể cách hình dung mà thư viện này hoạt động trong trang web.
+               Ở phần này chúng ta sẽ thiết lập những chức năng hữu ích để phát triển bảng HTML thông qua các thuộc tính được cung cấp sẵn  nhé!
+              </p>
+              <div class="shadow p-2 mb-2 bg-dark text-white rounded">
+                <h4>Tạo phân trang  trong bảng:</h4>
+              </div>
+              <p>
+                Thư viện có cung cấp cho chúng ta một thuộc tính là <code>pagination</code> với hai giá trị <code>true</code> và <code>false</code> giúp bạn có thể tạo phân trang cho bảng 
+                một cách dễ dàng. Và để dễ hình dung hơn thì chúng ta sẽ xem đoạn code sau nhé (Các cấu trúc HTML thì bạn cứ sử dụng ở ví dụ trên nha):
+              </p>
+              <pre><code class="javascript">​&nbsp;new&nbsp;gridjs.Grid({<br/> &nbsp;&nbsp;columns:&nbsp;["Tên",&nbsp;"Email",&nbsp;"Số&nbsp;Điện&nbsp;Thoại"],<br/> &nbsp;&nbsp;&nbsp;/*Tạo&nbsp;phân&nbsp;trang&nbsp;cho&nbsp;bảng*/<br/> &nbsp;&nbsp;&nbsp;pagination:&nbsp;true,<br/> &nbsp;&nbsp;data:&nbsp;[<br/> &nbsp;&nbsp;&nbsp;&nbsp;["John",&nbsp;"john@example.com",&nbsp;"(353)&nbsp;01&nbsp;222&nbsp;3333"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Mark",&nbsp;"mark@gmail.com",&nbsp;"(01)&nbsp;22&nbsp;888&nbsp;4444"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Eoin",&nbsp;"eoin@gmail.com",&nbsp;"0097&nbsp;22&nbsp;654&nbsp;00033"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Sarah",&nbsp;"sarahcdd@gmail.com",&nbsp;"+322&nbsp;876&nbsp;1233"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Afshin",&nbsp;"afshin@mail.com",&nbsp;"(353)&nbsp;22&nbsp;87&nbsp;8356"]<br/> &nbsp;&nbsp;]<br/> }).render(document.getElementById("bang"));<br/></code></pre>
+              <p class="mt-4">
+                Và kết quả của chúng ta sẽ như hình dưới nhé:
+              </p>
+              <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="haycuoilennao19" data-slug-hash="VweqPYJ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="tạo phân trang với gridjs">
+                <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/VweqPYJ">
+                tạo phân trang với gridjs</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+              </p>
+              <p class="mt-4">
+                Nếu như bạn muốn <b>giới hạn số lượng phần tử</b> được hiển thị trong một trang thì có thể sử dụng giá trị <code>limit</code> trong thuộc tính <code>pagination</code>
+                như đoạn code dưới đây nhé:
+              </p>
+              <pre><code class="javascript">&nbsp;new&nbsp;gridjs.Grid({<br/> &nbsp;&nbsp;columns:&nbsp;["Tên",&nbsp;"Email",&nbsp;"Số&nbsp;Điện&nbsp;Thoại"],<br/> &nbsp;&nbsp;&nbsp;/*Tạo&nbsp;phân&nbsp;trang&nbsp;cho&nbsp;bảng*/<br/> &nbsp;&nbsp;&nbsp;pagination:&nbsp;{<br/> &nbsp;&nbsp;&nbsp;/*Giới&nbsp;hạn&nbsp;2&nbsp;phần&nbsp;tử&nbsp;được&nbsp;hiển&nbsp;thị&nbsp;trên&nbsp;mỗi&nbsp;trang*/<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;limit:&nbsp;2<br/> &nbsp;&nbsp;&nbsp;},<br/> &nbsp;&nbsp;data:&nbsp;[<br/> &nbsp;&nbsp;&nbsp;&nbsp;["John",&nbsp;"john@example.com",&nbsp;"(353)&nbsp;01&nbsp;222&nbsp;3333"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Mark",&nbsp;"mark@gmail.com",&nbsp;"(01)&nbsp;22&nbsp;888&nbsp;4444"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Eoin",&nbsp;"eoin@gmail.com",&nbsp;"0097&nbsp;22&nbsp;654&nbsp;00033"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Sarah",&nbsp;"sarahcdd@gmail.com",&nbsp;"+322&nbsp;876&nbsp;1233"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Afshin",&nbsp;"afshin@mail.com",&nbsp;"(353)&nbsp;22&nbsp;87&nbsp;8356"]<br/> &nbsp;&nbsp;]<br/> }).render(document.getElementById("bang"));<br/></code></pre>
+              <p class="mt-4">
+                Và kết quả ở bên dưới nhé:
+              </p>
+              <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="haycuoilennao19" data-slug-hash="ExPGZyO" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="gioi han phan tu trong bang voi gridjs">
+                <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/ExPGZyO">
+                gioi han phan tu trong bang voi gridjs</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+              </p>
+
+              <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
+                <h4>Tạo chức năng lọc  cho bảng:</h4>
+              </div>
+              <p>
+                Ở đây khi bạn muốn lọc các phần tử trong bảng theo bảng chữ cái hay số... thì ta chỉ cần thêm một thuộc tính là <code>sort: true</code> thì nó sẽ tự động tạo chức năng lọc cho bảng.
+                Và để dễ hình dung hơn chúng ta sẽ đi vào đoạn code sau đây nhé:
+              </p>
+              <pre><code class="javascript">&nbsp;new&nbsp;gridjs.Grid({<br/> &nbsp;&nbsp;columns:&nbsp;["Tên",&nbsp;"Email",&nbsp;"Số&nbsp;Điện&nbsp;Thoại"],<br/> &nbsp;&nbsp;/*Tạo&nbsp;chức&nbsp;năng&nbsp;lọc&nbsp;cho&nbsp;bảng*/<br/> &nbsp;&nbsp;sort:true,<br/> &nbsp;&nbsp;data:&nbsp;[<br/> &nbsp;&nbsp;&nbsp;&nbsp;["John",&nbsp;"john@example.com",&nbsp;"(353)&nbsp;01&nbsp;222&nbsp;3333"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Mark",&nbsp;"mark@gmail.com",&nbsp;"(01)&nbsp;22&nbsp;888&nbsp;4444"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Eoin",&nbsp;"eoin@gmail.com",&nbsp;"0097&nbsp;22&nbsp;654&nbsp;00033"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Sarah",&nbsp;"sarahcdd@gmail.com",&nbsp;"+322&nbsp;876&nbsp;1233"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Afshin",&nbsp;"afshin@mail.com",&nbsp;"(353)&nbsp;22&nbsp;87&nbsp;8356"]<br/> &nbsp;&nbsp;]<br/> }).render(document.getElementById("bang"));<br/></code></pre>
+              <p class="mt-4">
+                Và kết quả bạn xem ở bên dưới nhé:
+              </p>
+              <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="haycuoilennao19" data-slug-hash="QWyzdvq" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="tạo chức năng lọc cho bảng gridjs">
+                <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/QWyzdvq">
+                tạo chức năng lọc cho bảng gridjs</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+              </p>
 
-            <button type="button " class="btn btn-outline-dark mt-4"> 
-              <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/Paolo-Duzioni/pen/vgOgbJ" target="_blank">
-                 Nguồn
-             </a> </button>
-
-
-
-             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                 Profile Card
-              </h3>
-            </div>
-     
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="littlesnippets" data-slug-hash="xZapRE" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="#1376 - Profile Card">
-              <span>See the Pen <a href="https://codepen.io/littlesnippets/pen/xZapRE">
-              #1376 - Profile Card</a> by LittleSnippets.net (<a href="https://codepen.io/littlesnippets">@littlesnippets</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4"> 
-              <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/littlesnippets/pen/xZapRE" target="_blank">
-                 Nguồn
-             </a> </button>
-
-
-             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Profile card with image, caption and icons
-              </h3>
-            </div>
-     
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="littlesnippets" data-slug-hash="MaYewV" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="#0045 - Profile card with image, caption and icons">
-              <span>See the Pen <a href="https://codepen.io/littlesnippets/pen/MaYewV">
-              #0045 - Profile card with image, caption and icons</a> by LittleSnippets.net (<a href="https://codepen.io/littlesnippets">@littlesnippets</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4"> 
-              <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/littlesnippets/pen/MaYewV" target="_blank">
-                 Nguồn
-             </a> </button>
-
-
-             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Profile-card-ui
-              </h3>
-            </div>
-     
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="Wandersonjack" data-slug-hash="RMRwbP" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Profile-card-ui">
-              <span>See the Pen <a href="https://codepen.io/Wandersonjack/pen/RMRwbP">
-              Profile-card-ui</a> by Wanderson Jackson (<a href="https://codepen.io/Wandersonjack">@Wandersonjack</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4"> 
-              <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/Wandersonjack/pen/RMRwbP" target="_blank">
-                 Nguồn
-             </a> </button>
-
-
-
-             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Profile Card UI
-              </h3>
-            </div>
-     
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="jotform" data-slug-hash="XWmqoMp" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Profile Card UI">
-              <span>See the Pen <a href="https://codepen.io/team/jotform/pen/XWmqoMp">
-              Profile Card UI</a> by JotForm (<a href="https://codepen.io/jotform">@jotform</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4"> 
-              <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/team/jotform/pen/XWmqoMp" target="_blank">
-                 Nguồn
-             </a> </button>
-
-
-             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Bootstrap 4 Profile Cards
-              </h3>
-            </div>
-     
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="grafreez" data-slug-hash="yjLOjo" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Bootstrap 4 Profile Cards">
-              <span>See the Pen <a href="https://codepen.io/grafreez/pen/yjLOjo">
-              Bootstrap 4 Profile Cards</a> by Grafreez (<a href="https://codepen.io/grafreez">@grafreez</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4"> 
-              <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/grafreez/pen/yjLOjo" target="_blank">
-                 Nguồn
-             </a> </button>
-
-             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Profile Card
-              </h3>
-            </div>
-     
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="romswellparian" data-slug-hash="eNJvNB" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Profile Card">
-              <span>See the Pen <a href="https://codepen.io/romswellparian/pen/eNJvNB">
-              Profile Card</a> by Romswell Roswell Parian Paucar (<a href="https://codepen.io/romswellparian">@romswellparian</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4"> 
-              <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/romswellparian/pen/eNJvNB" target="_blank">
-                 Nguồn
-             </a> </button>
-
-
-             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Profile Card | Css
-              </h3>
-            </div>
-     
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="esparzou" data-slug-hash="VGaNYR" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Profile Card | Css">
-              <span>See the Pen <a href="https://codepen.io/esparzou/pen/VGaNYR">
-              Profile Card | Css</a> by esparzou (<a href="https://codepen.io/esparzou">@esparzou</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4"> 
-              <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/esparzou/pen/VGaNYR" target="_blank">
-                 Nguồn
-             </a> </button>
-
-
-
-             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                My Profile Card
-              </h3>
-            </div>
-     
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="Creative_Srijon" data-slug-hash="vLVxEx" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="My Profile Card">
-              <span>See the Pen <a href="https://codepen.io/Creative_Srijon/pen/vLVxEx">
-              My Profile Card</a> by Srijon Sarker (<a href="https://codepen.io/Creative_Srijon">@Creative_Srijon</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4"> 
-              <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/Creative_Srijon/pen/vLVxEx" target="_blank">
-                 Nguồn
-             </a> </button>
-
-
-             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Profile card with image, caption & icons
-              </h3>
-            </div>
-     
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="littlesnippets" data-slug-hash="GpJZzV" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="#0057 - Profile card with image, caption &amp;amp; icons">
-              <span>See the Pen <a href="https://codepen.io/littlesnippets/pen/GpJZzV">
-              #0057 - Profile card with image, caption &amp; icons</a> by LittleSnippets.net (<a href="https://codepen.io/littlesnippets">@littlesnippets</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4"> 
-              <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/littlesnippets/pen/GpJZzV" target="_blank">
-                 Nguồn
-             </a> </button>
-
-
-             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Profile cards with hover effect
-              </h3>
-            </div>
-     
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="miketricking" data-slug-hash="JXdzpL" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Profile cards with hover effect">
-              <span>See the Pen <a href="https://codepen.io/miketricking/pen/JXdzpL">
-              Profile cards with hover effect</a> by Mike Young (<a href="https://codepen.io/miketricking">@miketricking</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4"> 
-              <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/miketricking/pen/JXdzpL" target="_blank">
-                 Nguồn
-             </a> </button>
-
-
-             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Profile Card
-              </h3>
-            </div>
-     
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="littlesnippets" data-slug-hash="mVqNjw" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="#1336 - Profile Card">
-              <span>See the Pen <a href="https://codepen.io/littlesnippets/pen/mVqNjw">
-              #1336 - Profile Card</a> by LittleSnippets.net (<a href="https://codepen.io/littlesnippets">@littlesnippets</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4"> 
-              <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/littlesnippets/pen/mVqNjw" target="_blank">
-                 Nguồn
-             </a> </button>
-
-
-
-
-             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                UI: Profile Card [CSS3, jQuery]
-              </h3>
-            </div>
-     
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="jasper" data-slug-hash="bpLLZe" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="UI: Profile Card [CSS3, jQuery]">
-              <span>See the Pen <a href="https://codepen.io/jasper/pen/bpLLZe">
-              UI: Profile Card [CSS3, jQuery]</a> by Jasper (<a href="https://codepen.io/jasper">@jasper</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4"> 
-              <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/jasper/pen/bpLLZe" target="_blank">
-                 Nguồn
-             </a> </button>
-
-
-             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                UI Profile Card
-              </h3>
-            </div>
-     
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="Beni7" data-slug-hash="oNXMWNL" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="UI Profile Card">
-              <span>See the Pen <a href="https://codepen.io/Beni7/pen/oNXMWNL">
-              UI Profile Card</a> by Beni (<a href="https://codepen.io/Beni7">@Beni7</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4"> 
-              <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/Beni7/pen/oNXMWNL" target="_blank">
-                 Nguồn
-             </a> </button>
-
-             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Users cards widget, boostrap
-              </h3>
-            </div>
-     
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="digitalavinash" data-slug-hash="rrKOVB" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Users cards widget, boostrap">
-              <span>See the Pen <a href="https://codepen.io/digitalavinash/pen/rrKOVB">
-              Users cards widget, boostrap</a> by Digital Avinash (<a href="https://codepen.io/digitalavinash">@digitalavinash</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4"> 
-              <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/digitalavinash/pen/rrKOVB" target="_blank">
-                 Nguồn
-             </a> </button>
-
-
-             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Profile Card widget
-              </h3>
-            </div>
-     
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="JunaidKhalid" data-slug-hash="OMOYJw" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Profile Card widget">
-              <span>See the Pen <a href="https://codepen.io/JunaidKhalid/pen/OMOYJw">
-              Profile Card widget</a> by Junaid Khalid (<a href="https://codepen.io/JunaidKhalid">@JunaidKhalid</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4"> 
-              <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/JunaidKhalid/pen/OMOYJw" target="_blank">
-                 Nguồn
-             </a> </button>
-
-
-          
-
-
-             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Pure CSS Profile Card Hover Effect
-              </h3>
-            </div>
-     
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="colinkeany" data-slug-hash="XJOvXz" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS Profile Card Hover Effect">
-              <span>See the Pen <a href="https://codepen.io/colinkeany/pen/XJOvXz">
-              Pure CSS Profile Card Hover Effect</a> by Colin (<a href="https://codepen.io/colinkeany">@colinkeany</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4"> 
-              <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/colinkeany/pen/XJOvXz" target="_blank">
-                 Nguồn
-             </a> </button>
-
-
-             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                PuUI #3 - Profile Card
-              </h3>
-            </div>
-     
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="AlbertFeynman" data-slug-hash="YJGjmz" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="UI #3 - Profile Card">
-              <span>See the Pen <a href="https://codepen.io/AlbertFeynman/pen/YJGjmz">
-              UI #3 - Profile Card</a> by Jove Angelevski (<a href="https://codepen.io/AlbertFeynman">@AlbertFeynman</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4"> 
-              <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/AlbertFeynman/pen/YJGjmz" target="_blank">
-                 Nguồn
-             </a> </button>
-
-
-             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Remix CodePen Challenge
-              </h3>
-            </div>
-     
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="bibiangel199" data-slug-hash="warevP" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Remix CodePen Challenge">
-              <span>See the Pen <a href="https://codepen.io/bibiangel199/pen/warevP">
-              Remix CodePen Challenge</a> by nana (<a href="https://codepen.io/bibiangel199">@bibiangel199</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4"> 
-              <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/bibiangel199/pen/warevP" target="_blank">
-                 Nguồn
-             </a> </button>
-
-
-
-
-
-
-            <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
-
-
-            <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những profile card
-              hữu
-              ích
-              dành
-              cho
-              việc
-              phát
-              triển, thiết kế web
-              và
-              nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất
-              mong bạn tiếp tục ủng
-              hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
-
-          </div>
-        </article>
-      </div>
+
+              <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
+                <h4>Tạo chức năng tìm kiếm cho bảng:</h4>
+              </div>
+              <p>
+                Thư viện Grid.js có cung cấp thêm cho chúng ta một chức năng hữu ích khác đó tìm kiếm phần tử trong bảng. Bạn chỉ cần thiết lập thuộc tính 
+                <code>search: true</code> trong quá trình khởi tạo bảng là có thể thực hiện tìm kiếm trên bảng rồi.
+              </p>
+
+              <pre><code class="javascript">&nbsp;new&nbsp;gridjs.Grid({<br/> &nbsp;&nbsp;columns:&nbsp;["Tên",&nbsp;"Email",&nbsp;"Số&nbsp;Điện&nbsp;Thoại"],<br/> &nbsp;&nbsp;/*Tạo&nbsp;chức&nbsp;năng&nbsp;tìm kiếm&nbsp;cho&nbsp;bảng*/<br/> &nbsp;&nbsp;search:true,<br/> &nbsp;&nbsp;data:&nbsp;[<br/> &nbsp;&nbsp;&nbsp;&nbsp;["John",&nbsp;"john@example.com",&nbsp;"(353)&nbsp;01&nbsp;222&nbsp;3333"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Mark",&nbsp;"mark@gmail.com",&nbsp;"(01)&nbsp;22&nbsp;888&nbsp;4444"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Eoin",&nbsp;"eoin@gmail.com",&nbsp;"0097&nbsp;22&nbsp;654&nbsp;00033"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Sarah",&nbsp;"sarahcdd@gmail.com",&nbsp;"+322&nbsp;876&nbsp;1233"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Afshin",&nbsp;"afshin@mail.com",&nbsp;"(353)&nbsp;22&nbsp;87&nbsp;8356"]<br/> &nbsp;&nbsp;]<br/> }).render(document.getElementById("bang"));<br/></code></pre>
+              <p class="mt-4">
+                Và kết quả ở dưới đây nhé:
+              </p>
+              <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="haycuoilennao19" data-slug-hash="LYGMxQP" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="tạo chức năng tìm kiếm bằng gridjs">
+                <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/LYGMxQP">
+                tạo chức năng tìm kiếm bằng gridjs</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+              </p>
+
+              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">
+                 Cách Thiết Lập Style Cho Bảng Trong Grid.js
+                </h3>
+              </div>
+              <p>
+                Đôi khi vì yêu cầu của khách hàng thì chúng ta cần thay đổi màu sắc, màu nền... cho bảng, thì trong thư viện Grid.js có cung cấp cho chúng ta một thuộc tính  
+                <code>style</code> giúp bạn có thể thiết lập style trong quá trình khởi tạo bảng. Và để hiểu rõ hơn bạn xem đoạn code sau nhé:
+              </p>
+              <pre><code class="javascript">&nbsp;new&nbsp;gridjs.Grid({<br/> &nbsp;&nbsp;columns:&nbsp;["Tên",&nbsp;"Email",&nbsp;"Số&nbsp;Điện&nbsp;Thoại"],<br/> &nbsp;&nbsp;data:&nbsp;[<br/> &nbsp;&nbsp;&nbsp;&nbsp;["John",&nbsp;"john@example.com",&nbsp;"(353)&nbsp;01&nbsp;222&nbsp;3333"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Mark",&nbsp;"mark@gmail.com",&nbsp;"(01)&nbsp;22&nbsp;888&nbsp;4444"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Eoin",&nbsp;"eoin@gmail.com",&nbsp;"0097&nbsp;22&nbsp;654&nbsp;00033"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Sarah",&nbsp;"sarahcdd@gmail.com",&nbsp;"+322&nbsp;876&nbsp;1233"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Afshin",&nbsp;"afshin@mail.com",&nbsp;"(353)&nbsp;22&nbsp;87&nbsp;8356"]<br/> &nbsp;&nbsp;],<br/> &nbsp;&nbsp;&nbsp;/*&nbsp;Thiết&nbsp;Lập&nbsp;Style&nbsp;Cho&nbsp;Bảng*/<br/> &nbsp;&nbsp;&nbsp;style:&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;table:&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border:&nbsp;'3px&nbsp;solid&nbsp;#ccc'<br/> &nbsp;&nbsp;&nbsp;&nbsp;},<br/> &nbsp;&nbsp;&nbsp;&nbsp;th:&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'background-color':&nbsp;'#0040ff',<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;'#fff',<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'border-bottom':&nbsp;'3px&nbsp;solid&nbsp;#ccc',<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'text-align':&nbsp;'center'<br/> &nbsp;&nbsp;&nbsp;&nbsp;},<br/> &nbsp;&nbsp;&nbsp;&nbsp;td:&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'text-align':&nbsp;'center'<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;&nbsp;}<br/> }).render(document.getElementById("bang"));<br/></code></pre>
+              <p class="mt-4">
+                Và kết quả bạn xem bên dưới nhé:
+              </p>
+              <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="haycuoilennao19" data-slug-hash="QWyzdzr" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="thiết lập style cho bảng gridjs">
+                <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/QWyzdzr">
+                thiết lập style cho bảng gridjs</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+              </p>
+              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">
+                 Cách Lấy Dữ Liệu Thông Qua API Trong Gridjs
+                </h3>
+              </div>
+              <p>
+                Đôi khi chúng ta sẽ đi cần lấy dữ liệu thông qua API để hiển thị cho bảng. Thư viện có cung cấp cho chúng ta
+                một thuộc tính là <code>url</code>  giúp bạn có thể dễ dàng lấy dữ liệu cho bảng. Để hiểu rõ hơn bạn xem đoạn code sau nhé:
+              </p>
+              <pre><code class="javascript">&nbsp;new&nbsp;gridjs.Grid({<br/> &nbsp;&nbsp;columns:&nbsp;['Name',&nbsp;'Language',&nbsp;'Released&nbsp;At',&nbsp;'Artist'],<br/> &nbsp;&nbsp;server:&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;/*Đường&nbsp;dẫn&nbsp;API&nbsp;cho&nbsp;dử&nbsp;liệu&nbsp;bảng*/<br/> &nbsp;&nbsp;&nbsp;&nbsp;url:&nbsp;'https://api.scryfall.com/cards/search?q=Inspiring',<br/> &nbsp;&nbsp;&nbsp;&nbsp;/*Thực&nbsp;hiện&nbsp;lặp&nbsp;và&nbsp;lấy&nbsp;dữ&nbsp;liệu&nbsp;API*/<br/> &nbsp;&nbsp;&nbsp;&nbsp;then:&nbsp;data&nbsp;=>&nbsp;data.data.map(card&nbsp;=>&nbsp;[card.name,&nbsp;card.lang,&nbsp;card.released_at,&nbsp;card.artist])<br/> &nbsp;&nbsp;}&nbsp;<br/> }).render(document.getElementById("bang"));<br/></code></pre>
+              <p class="mt-4">
+                Và kết quả bạn xem ở bên dưới nhé:
+              </p>
+              <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="haycuoilennao19" data-slug-hash="xxZmqbG" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="goi du lieu thong qua API Gridjs">
+                <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/xxZmqbG">
+                goi du lieu thong qua API Gridjs</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+              </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
+
+
+
+      <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn kiến thức về thư viện Grid.js
+        hữu
+        ích
+        dành
+        cho
+        việc
+        phát
+        triển, thiết kế web
+        và
+        nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất
+        mong bạn tiếp tục ủng
+        hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
+
     </div>
-
-
-
-
-    <div class="mb-5"></div>
+    </article>
   </div>
-  <div class="col-lg-12 col-md-12 col-xs-12">
-    <div class="mt-5"></div>
+</div>
 
 
 
-  </div>
+
+<div class="mb-5"></div>
+</div>
+<div class="col-lg-12 col-md-12 col-xs-12">
+  <div class="mt-5"></div>
+
+
+
+</div>
 </div>
 </div>
 
