@@ -35,7 +35,7 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i> Sử Dụng Grid JS Cho Xây Dựng Bảng Trong Website </h2>
+                  aria-hidden="true"></i> Cách Tạo Nút Toggle Switch Cho Trang Web (2020) </h2>
             </div>
           </div>
 
@@ -46,192 +46,388 @@
           </div>
           <div class="text-content-article mt-5">
             <p><i>
-                Bài viết hôm nay chúng ta sẽ đi vào tìm hiểu thư viện Grid.js với nhiệm vụ chính là giúp bạn có thể
-                làm việc với bảng trong trang web được dễ dàng hơn. Và để hiểu rõ hơn thì chúng ta hãy cùng nhau đi vào
-                tìm hiểu nhé!
+                Bài viết hôm nay chúng ta sẽ đi vào tìm hiểu cách tạo một nút toggle switch cơ bản cũng như sử dụng các
+                thư viện để tạo những nút này trong đẹp mắt hơn cho trang web của bạn. Và để hiểu rõ hơn, chúng ta hãy
+                cùng nhau đi vào tìm hiểu nhé!
               </i>
             </p>
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Grid.js là gì?
+                Toogle Switch Là Gì?
               </h3>
             </div>
             <p>
-              <b>Grid.js</b> là một thư viện mã nguồn mở được viết bằng TypeScript. Nó làm việc được với hầu hết
-              framework phổ biến hiện nay như là
-              React, Angular, Vue. Nhưng trong bài viết này thì mình sẽ hướng dẫn bạn sử dụng thư viện với Javascript
-              thuần thôi nhé!
+              <b>Toggle Switch</b> được xem như là một công tắc giúp bạn có thể chuyển đổi trạng thái của một đối tượng
+              trong trang web.
+              Trong bài này chúng ta sẽ đi vào tìm hiểu vấn đề chính là cách thiết kế nút toggle switch để thu hút sự
+              chú ý của người dùng cũng như mang lại cảm giác hiện đại cho trang web nhé!
             </p>
             <p>
-              Dưới đây là một ví dụ về bảng khi được xây dựng bằng Grid.js:
+              Đầu tiên chúng ta sẽ đi vào tạo cấu trúc HTML cho nút Toogle Switch (Thông thường nút này sẽ được tạo bởi
+              phần tử <code>checkbox</code> trong HTML nhé)
             </p>
-            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1595249622/gridjs/gridjs_f7cmig.png"
-              alt="GridJS"
-              >
+            <pre><code class="html"> &#60;!--&nbsp;Nút&nbsp;Toggle&nbsp;Switch&nbsp;Hình&nbsp;Chữ&nbsp;Nhật&nbsp;--&#62;<br/> &#60;label&nbsp;class="switch"&#62;<br/> &nbsp;&nbsp;&#60;input&nbsp;type="checkbox"&#62;<br/> &nbsp;&nbsp;&#60;span&nbsp;class="slider"&#62;&#60;/span&#62;<br/> &#60;/label&#62;<br/>&#60;!--&nbsp;Nút&nbsp;Toggle&nbsp;Switch&nbsp;Dạng&nbsp;Bo&nbsp;Góc&nbsp;&nbsp;--&#62;<br/> &#60;label&nbsp;class="switch"&#62;<br/> &nbsp;&nbsp;&#60;input&nbsp;type="checkbox"&#62;<br/> &nbsp;&nbsp;&#60;span&nbsp;class="slider&nbsp;round"&#62;&#60;/span&#62;<br/> &#60;/label&#62;<br/></code></pre>
+            <p class="mt-4">
+              Tiếp theo chúng ta sẽ đi vào thiết lập các thuộc tính CSS cho các đối tượng HTML ở phía trên nhé:
+            </p>
+            <pre><code class="css">/*&nbsp;thiết&nbsp;lập&nbsp;CSS&nbsp;cho&nbsp;switch&nbsp;*/<br/> .switch&nbsp;{<br/> &nbsp;&nbsp;position:&nbsp;relative;<br/> &nbsp;&nbsp;display:&nbsp;inline-block;<br/> &nbsp;&nbsp;width:&nbsp;60px;<br/> &nbsp;&nbsp;height:&nbsp;34px;<br/> }<br/>/*&nbsp;Ẩn&nbsp;ô&nbsp;checkbox&nbsp;&nbsp;*/<br/> .switch&nbsp;input&nbsp;{<br/> &nbsp;&nbsp;opacity:&nbsp;0;<br/> &nbsp;&nbsp;width:&nbsp;0;<br/> &nbsp;&nbsp;height:&nbsp;0;<br/> }<br/>/*&nbsp;Thiết&nbsp;lập&nbsp;CSS&nbsp;cho&nbsp;slider&nbsp;*/<br/> .slider&nbsp;{<br/> &nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;cursor:&nbsp;pointer;<br/> &nbsp;&nbsp;top:&nbsp;0;<br/> &nbsp;&nbsp;left:&nbsp;0;<br/> &nbsp;&nbsp;right:&nbsp;0;<br/> &nbsp;&nbsp;bottom:&nbsp;0;<br/> &nbsp;&nbsp;background-color:&nbsp;#ccc;<br/> &nbsp;&nbsp;-webkit-transition:&nbsp;.4s;<br/> &nbsp;&nbsp;transition:&nbsp;.4s;<br/> }<br/>.slider:before&nbsp;{<br/> &nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;content:&nbsp;"";<br/> &nbsp;&nbsp;height:&nbsp;26px;<br/> &nbsp;&nbsp;width:&nbsp;26px;<br/> &nbsp;&nbsp;left:&nbsp;4px;<br/> &nbsp;&nbsp;bottom:&nbsp;4px;<br/> &nbsp;&nbsp;background-color:&nbsp;white;<br/> &nbsp;&nbsp;-webkit-transition:&nbsp;.4s;<br/> &nbsp;&nbsp;transition:&nbsp;.4s;<br/> }</code></pre>
+            <p class="mt-4">
+              Và kết quả bạn xem dưới đây nhé:
 
-              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">
-                  Cách Cài Đặt Grid.js
-                </h3>
-              </div>
-
-              <p>
-                Bạn có thể thiết lập nó thông qua hai cách là sử dụng npm và CDN. Để thuận tiện trong việc sử dụng thì mình sẽ sử dụng cách CDN với hai file chính là:
-                <ul>
-                  <li><code>gridjs</code> với đường dẫn CDN là <code>https://unpkg.com/gridjs</code></li>
-                  <li><code>theme</code>(chủ đề cho bảng) với đường dẫn CDN là <code>https://unpkg.com/gridjs/dist/theme/mermaid.min.css</code></li>
-                </ul>
-              </p>
-              <p>
-                Nếu bạn muốn sử dụng npm để thiết lập thì có thể xem <a href="https://www.npmjs.com/package/gridjs" title="gridjs" target="_blank" rel="noopener noreferrer">ở đây nhé</a>.<br/>
-                Tiếp theo chúng ta sẽ tạo cấu trúc HTML và gắn các CDN vào trang web nhé:
-              </p>
-              <pre><code class="html">&#60;html&nbsp;lang="en"&#62;<br/> &nbsp;&nbsp;&#60;head&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" &nbsp;rel="stylesheet" /&#62;<br/> &nbsp;&nbsp;&#60;/head&#62;<br/> &nbsp;&nbsp;&#60;body&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;id="bang"&#62;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;script&nbsp;src="https://unpkg.com/gridjs/dist/gridjs.development.js"&#62;&#60;/script&#62;<br/> &nbsp;&nbsp;&#60;/body&#62;<br/> &#60;/html&#62;<br/></code></pre>
-
-
-              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">
-                  Cách Sử Dụng Grid.js
-                </h3>
-              </div>
-              <p>
-                Sau khi chúng ta đã có những file cần thiết thì bây giờ bạn và mình sẽ đi vào khởi tạo và sử dụng Grid.js để tạo bảng thông qua 
-                đoạn code javascript dưới đây nhé:
-              </p>
-              <pre><code class="javascript"> &#60;script&#62;<br/> new&nbsp;gridjs.Grid({<br/> &nbsp;&nbsp;columns:&nbsp;["Tên",&nbsp;"Email",&nbsp;"Số&nbsp;Điện&nbsp;Thoại"],<br/> &nbsp;&nbsp;data:&nbsp;[<br/> &nbsp;&nbsp;&nbsp;&nbsp;["John",&nbsp;"john@example.com",&nbsp;"(353)&nbsp;01&nbsp;222&nbsp;3333"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Mark",&nbsp;"mark@gmail.com",&nbsp;"(01)&nbsp;22&nbsp;888&nbsp;4444"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Eoin",&nbsp;"eoin@gmail.com",&nbsp;"0097&nbsp;22&nbsp;654&nbsp;00033"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Sarah",&nbsp;"sarahcdd@gmail.com",&nbsp;"+322&nbsp;876&nbsp;1233"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Afshin",&nbsp;"afshin@mail.com",&nbsp;"(353)&nbsp;22&nbsp;87&nbsp;8356"]<br/> &nbsp;&nbsp;]<br/> }).render(document.getElementById("bang"));<br/> &#60;/script&#62;<br/></code></pre>
-              <p class="mt-4">
-                Ở phía trên mình có một tý lưu ý là:
-                <ul>
-                  <li><code>new gridjs.Grid</code>: dùng để khởi tạo đối tượng bảng trong thư viện Grid.js</li>
-                  <li><code>columns</code>: dùng để xác định tiêu đề cũng như số cột trong bảng</li>
-                  <li><code>data</code>: là dữ liệu mà bảng sẽ hiển thị</li>
-                  <li><code>render(document.getElementById("bang"))</code>: Chọn thẻ div có id là <code>bang</code> để hiển thị table trong trang web.</li>
-                </ul>
-              </p>
-              <p>
-                Và dưới đây là kết quả bảng của chúng ta trong trang web:
-              </p>
-              <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="haycuoilennao19" data-slug-hash="KKVbNRN" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Sử dụng gridjs để tạo bảng">
-                <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/KKVbNRN">
-                Sử dụng gridjs để tạo bảng</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+            </p>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
+              data-user="haycuoilennao19" data-slug-hash="wvMRjQQ"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="thiet lap html css cho check box">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/wvMRjQQ">
+                  thiet lap html css cho check box</a> by haycuoilennao19 (<a
+                  href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
                 on <a href="https://codepen.io">CodePen</a>.</span>
-              </p>
-              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-
-              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">
-                 Thêm Chức Năng Cho Bảng Bằng Grid.js
-                </h3>
-              </div>
-              <p>
-               Bạn có tự hỏi là tại sao mình lại sử dụng thư viện này để tạo một bảng đơn giản như ở trên?<br/>
-               Thì thật ra đó chính là bước khởi đầu để giúp bạn có thể cách hình dung mà thư viện này hoạt động trong trang web.
-               Ở phần này chúng ta sẽ thiết lập những chức năng hữu ích để phát triển bảng HTML thông qua các thuộc tính được cung cấp sẵn  nhé!
-              </p>
-              <div class="shadow p-2 mb-2 bg-dark text-white rounded">
-                <h4>Tạo phân trang  trong bảng:</h4>
-              </div>
-              <p>
-                Thư viện có cung cấp cho chúng ta một thuộc tính là <code>pagination</code> với hai giá trị <code>true</code> và <code>false</code> giúp bạn có thể tạo phân trang cho bảng 
-                một cách dễ dàng. Và để dễ hình dung hơn thì chúng ta sẽ xem đoạn code sau nhé (Các cấu trúc HTML thì bạn cứ sử dụng ở ví dụ trên nha):
-              </p>
-              <pre><code class="javascript">​&nbsp;new&nbsp;gridjs.Grid({<br/> &nbsp;&nbsp;columns:&nbsp;["Tên",&nbsp;"Email",&nbsp;"Số&nbsp;Điện&nbsp;Thoại"],<br/> &nbsp;&nbsp;&nbsp;/*Tạo&nbsp;phân&nbsp;trang&nbsp;cho&nbsp;bảng*/<br/> &nbsp;&nbsp;&nbsp;pagination:&nbsp;true,<br/> &nbsp;&nbsp;data:&nbsp;[<br/> &nbsp;&nbsp;&nbsp;&nbsp;["John",&nbsp;"john@example.com",&nbsp;"(353)&nbsp;01&nbsp;222&nbsp;3333"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Mark",&nbsp;"mark@gmail.com",&nbsp;"(01)&nbsp;22&nbsp;888&nbsp;4444"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Eoin",&nbsp;"eoin@gmail.com",&nbsp;"0097&nbsp;22&nbsp;654&nbsp;00033"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Sarah",&nbsp;"sarahcdd@gmail.com",&nbsp;"+322&nbsp;876&nbsp;1233"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Afshin",&nbsp;"afshin@mail.com",&nbsp;"(353)&nbsp;22&nbsp;87&nbsp;8356"]<br/> &nbsp;&nbsp;]<br/> }).render(document.getElementById("bang"));<br/></code></pre>
-              <p class="mt-4">
-                Và kết quả của chúng ta sẽ như hình dưới nhé:
-              </p>
-              <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="haycuoilennao19" data-slug-hash="VweqPYJ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="tạo phân trang với gridjs">
-                <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/VweqPYJ">
-                tạo phân trang với gridjs</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+            </p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            <p class="mt-4">
+              Trước khi thêm chức năng để nó có thể hoạt động thì mình sẽ giải thích thêm về hai thuộc tính quan trọng
+              được sử dụng để tạo nút toggle switch là <code>input:focus</code> và <code>input:checked</code>.
+              <ul>
+                <li><code>input:focus</code>: Dùng để thiết lập style khi input(ô) đang được focus.</li>
+                <li><code>input:checked</code>: Dùng để thiết lập style khi input(ô) ở trạng thái được chọn.</li>
+              </ul>
+            </p>
+            <p>
+              Và để dễ hình dùng hơn hai cách sử dụng này thì bạn hãy xem ví dụ dưới đây nhé:
+            </p>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result"
+              data-user="haycuoilennao19" data-slug-hash="vYLvjqR"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="ô input voi thuoc tinh focus va checked">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/vYLvjqR">
+                  ô input voi thuoc tinh focus va checked</a> by haycuoilennao19 (<a
+                  href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
                 on <a href="https://codepen.io">CodePen</a>.</span>
-              </p>
-              <p class="mt-4">
-                Nếu như bạn muốn <b>giới hạn số lượng phần tử</b> được hiển thị trong một trang thì có thể sử dụng giá trị <code>limit</code> trong thuộc tính <code>pagination</code>
-                như đoạn code dưới đây nhé:
-              </p>
-              <pre><code class="javascript">&nbsp;new&nbsp;gridjs.Grid({<br/> &nbsp;&nbsp;columns:&nbsp;["Tên",&nbsp;"Email",&nbsp;"Số&nbsp;Điện&nbsp;Thoại"],<br/> &nbsp;&nbsp;&nbsp;/*Tạo&nbsp;phân&nbsp;trang&nbsp;cho&nbsp;bảng*/<br/> &nbsp;&nbsp;&nbsp;pagination:&nbsp;{<br/> &nbsp;&nbsp;&nbsp;/*Giới&nbsp;hạn&nbsp;2&nbsp;phần&nbsp;tử&nbsp;được&nbsp;hiển&nbsp;thị&nbsp;trên&nbsp;mỗi&nbsp;trang*/<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;limit:&nbsp;2<br/> &nbsp;&nbsp;&nbsp;},<br/> &nbsp;&nbsp;data:&nbsp;[<br/> &nbsp;&nbsp;&nbsp;&nbsp;["John",&nbsp;"john@example.com",&nbsp;"(353)&nbsp;01&nbsp;222&nbsp;3333"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Mark",&nbsp;"mark@gmail.com",&nbsp;"(01)&nbsp;22&nbsp;888&nbsp;4444"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Eoin",&nbsp;"eoin@gmail.com",&nbsp;"0097&nbsp;22&nbsp;654&nbsp;00033"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Sarah",&nbsp;"sarahcdd@gmail.com",&nbsp;"+322&nbsp;876&nbsp;1233"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Afshin",&nbsp;"afshin@mail.com",&nbsp;"(353)&nbsp;22&nbsp;87&nbsp;8356"]<br/> &nbsp;&nbsp;]<br/> }).render(document.getElementById("bang"));<br/></code></pre>
-              <p class="mt-4">
-                Và kết quả ở bên dưới nhé:
-              </p>
-              <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="haycuoilennao19" data-slug-hash="ExPGZyO" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="gioi han phan tu trong bang voi gridjs">
-                <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/ExPGZyO">
-                gioi han phan tu trong bang voi gridjs</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+            </p>
+            <p class="mt-4">
+              Sau khi bạn đã hiểu hai thuộc tính này thì chúng ta sẽ đi vào thiết kế để nó có thể chuyển đổi qua lại
+              như một công tắc thông qua đoạn code dưới đây nhé:
+
+            </p>
+            <pre><code class="css">&nbsp;input:checked&nbsp;+&nbsp;.slider&nbsp;{<br/> &nbsp;&nbsp;background-color:&nbsp;#2196F3;<br/> }<br/>input:focus&nbsp;+&nbsp;.slider&nbsp;{<br/> &nbsp;&nbsp;box-shadow:&nbsp;0&nbsp;0&nbsp;1px&nbsp;#2196F3;<br/> }<br/>input:checked&nbsp;+&nbsp;.slider:before&nbsp;{<br/> &nbsp;&nbsp;-webkit-transform:&nbsp;translateX(26px);<br/> &nbsp;&nbsp;-ms-transform:&nbsp;translateX(26px);<br/> &nbsp;&nbsp;transform:&nbsp;translateX(26px);<br/> }<br/>.slider.round&nbsp;{<br/> &nbsp;&nbsp;border-radius:&nbsp;34px;<br/> }<br/>.slider.round:before&nbsp;{<br/> &nbsp;&nbsp;border-radius:&nbsp;50%;<br/> }<br/></code></pre>
+            <p class="mt-4">
+              Và kết quả cuối cùng bạn xem ở dưới đây nhé:
+            </p>
+
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
+              data-user="haycuoilennao19" data-slug-hash="QWyzxLe"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="nút hoàn chỉnh toggle switch">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/QWyzxLe">
+                  nút hoàn chỉnh toggle switch</a> by haycuoilennao19 (<a
+                  href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
                 on <a href="https://codepen.io">CodePen</a>.</span>
-              </p>
+            </p>
+            <p class="mt-2">Nguồn W3School</p>
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Sử Dụng Thư Viện MoreToggles.css Để Tạo Nút Toggle Switch
+              </h3>
+            </div>
+            <p>
+              Việc chúng ta sử dụng thư viện để tạo nút toggle switch sẽ giúp bạn có thể giảm thời gian công sức
+              cho việc viết mã cũng như mang lại tính thẩm cao, sự lựa chọn đa dạng cho trang web của bạn.
+            </p>
 
-              <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
-                <h4>Tạo chức năng lọc  cho bảng:</h4>
-              </div>
-              <p>
-                Ở đây khi bạn muốn lọc các phần tử trong bảng theo bảng chữ cái hay số... thì ta chỉ cần thêm một thuộc tính là <code>sort: true</code> thì nó sẽ tự động tạo chức năng lọc cho bảng.
-                Và để dễ hình dung hơn chúng ta sẽ đi vào đoạn code sau đây nhé:
-              </p>
-              <pre><code class="javascript">&nbsp;new&nbsp;gridjs.Grid({<br/> &nbsp;&nbsp;columns:&nbsp;["Tên",&nbsp;"Email",&nbsp;"Số&nbsp;Điện&nbsp;Thoại"],<br/> &nbsp;&nbsp;/*Tạo&nbsp;chức&nbsp;năng&nbsp;lọc&nbsp;cho&nbsp;bảng*/<br/> &nbsp;&nbsp;sort:true,<br/> &nbsp;&nbsp;data:&nbsp;[<br/> &nbsp;&nbsp;&nbsp;&nbsp;["John",&nbsp;"john@example.com",&nbsp;"(353)&nbsp;01&nbsp;222&nbsp;3333"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Mark",&nbsp;"mark@gmail.com",&nbsp;"(01)&nbsp;22&nbsp;888&nbsp;4444"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Eoin",&nbsp;"eoin@gmail.com",&nbsp;"0097&nbsp;22&nbsp;654&nbsp;00033"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Sarah",&nbsp;"sarahcdd@gmail.com",&nbsp;"+322&nbsp;876&nbsp;1233"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Afshin",&nbsp;"afshin@mail.com",&nbsp;"(353)&nbsp;22&nbsp;87&nbsp;8356"]<br/> &nbsp;&nbsp;]<br/> }).render(document.getElementById("bang"));<br/></code></pre>
-              <p class="mt-4">
-                Và kết quả bạn xem ở bên dưới nhé:
-              </p>
-              <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="haycuoilennao19" data-slug-hash="QWyzdvq" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="tạo chức năng lọc cho bảng gridjs">
-                <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/QWyzdvq">
-                tạo chức năng lọc cho bảng gridjs</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+            <p>
+              Đầu tiên chúng ta sẽ lấy đường dẫn CDN của thư viện để có thể sử dụng trực tiếp trong trang web thông qua
+              đoạn mã sau nhé:
+            </p>
+            <pre><code class="html">&#60;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JNKKKK/MoreToggles.css@0.2.1/output/moretoggles.min.css"&#62;</code></pre>
+            <p class="mt-4">
+              Bạn nhớ đặt đoạn mã trên ở trong thẻ <code>head</code> nha. Việc tiếp theo bạn chỉ cần gọi các class mà
+              thư viện cung cấp là có thể tạo ra được
+              nút toggle như ý muốn của mình rồi. Để hiểu rõ hơn chúng ta sẽ đi vào ví dụ nhé:
+            </p>
+            <pre><code class="html">&#60;head&#62;<br/> &nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="https://cdn.jsdelivr.net/gh/JNKKKK/MoreToggles.css@0.2.1/output/moretoggles.min.css"&#62;<br/> &nbsp;&#60;/head&#62;<br/> &#60;body&#62;<br/>  &nbsp;&#60;div&nbsp;class="mt-ios"&#62;&nbsp;<br/> &nbsp;&nbsp;&nbsp;&#60;input&nbsp;id="1"&nbsp;type="checkbox"&nbsp;/&#62;<br/> &nbsp;&nbsp;&nbsp;&#60;label&nbsp;for="1"&#62;&#60;/label&#62; &nbsp;&#60;/div&#62;<br/> &#60;/body&#62;<br/></code></pre>
+            <p class="mt-4">
+              Với class <code>mt-ios</code> là một style được thiết kế sẵn cho nút toggle switch do thư viện cung cấp.
+              Và bây giờ chúng ta hảy cùng nhau xem kết quả nhé:
+            </p>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result"
+              data-user="haycuoilennao19" data-slug-hash="vYLvrKa"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="sử dụng  moretoggles csss">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/vYLvrKa">
+                  sử dụng moretoggles csss</a> by haycuoilennao19 (<a
+                  href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
                 on <a href="https://codepen.io">CodePen</a>.</span>
-              </p>
-
-
-              <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
-                <h4>Tạo chức năng tìm kiếm cho bảng:</h4>
-              </div>
-              <p>
-                Thư viện Grid.js có cung cấp thêm cho chúng ta một chức năng hữu ích khác đó tìm kiếm phần tử trong bảng. Bạn chỉ cần thiết lập thuộc tính 
-                <code>search: true</code> trong quá trình khởi tạo bảng là có thể thực hiện tìm kiếm trên bảng rồi.
-              </p>
-
-              <pre><code class="javascript">&nbsp;new&nbsp;gridjs.Grid({<br/> &nbsp;&nbsp;columns:&nbsp;["Tên",&nbsp;"Email",&nbsp;"Số&nbsp;Điện&nbsp;Thoại"],<br/> &nbsp;&nbsp;/*Tạo&nbsp;chức&nbsp;năng&nbsp;tìm kiếm&nbsp;cho&nbsp;bảng*/<br/> &nbsp;&nbsp;search:true,<br/> &nbsp;&nbsp;data:&nbsp;[<br/> &nbsp;&nbsp;&nbsp;&nbsp;["John",&nbsp;"john@example.com",&nbsp;"(353)&nbsp;01&nbsp;222&nbsp;3333"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Mark",&nbsp;"mark@gmail.com",&nbsp;"(01)&nbsp;22&nbsp;888&nbsp;4444"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Eoin",&nbsp;"eoin@gmail.com",&nbsp;"0097&nbsp;22&nbsp;654&nbsp;00033"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Sarah",&nbsp;"sarahcdd@gmail.com",&nbsp;"+322&nbsp;876&nbsp;1233"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Afshin",&nbsp;"afshin@mail.com",&nbsp;"(353)&nbsp;22&nbsp;87&nbsp;8356"]<br/> &nbsp;&nbsp;]<br/> }).render(document.getElementById("bang"));<br/></code></pre>
-              <p class="mt-4">
-                Và kết quả ở dưới đây nhé:
-              </p>
-              <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="haycuoilennao19" data-slug-hash="LYGMxQP" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="tạo chức năng tìm kiếm bằng gridjs">
-                <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/LYGMxQP">
-                tạo chức năng tìm kiếm bằng gridjs</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+            </p>
+            <p class="mt-4">
+              Và dưới đây là một số ví khác về nút này khi sử dụng thư viện MoreToggles.css nhé:
+            </p>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result"
+              data-user="haycuoilennao19" data-slug-hash="VweqdKd"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Ví dụ khác về MoreToggles CSS">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/VweqdKd">
+                  Ví dụ khác về MoreToggles CSS</a> by haycuoilennao19 (<a
+                  href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
                 on <a href="https://codepen.io">CodePen</a>.</span>
-              </p>
+            </p>
+            <p class="mt-4">
+              Một lưu ý nhỏ là khi bạn tạo từ 2 nút toggle switch trở lên thì ta phải thiết lập thuộc tính
+              <code>id</code> và <code>for</code> của mỗi nút bắt buộc phải khác nhau.
+              Và nếu bạn muốn tìm hiểu thêm thư viện này thi có thể xem <a
+                href="https://jnkkkk.github.io/MoreToggles.css/allToggles.html" target="_blank"
+                rel="noopener noreferrer">ở đây nhé</a>.
+            </p>
 
-              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">
-                 Cách Thiết Lập Style Cho Bảng Trong Grid.js
-                </h3>
-              </div>
-              <p>
-                Đôi khi vì yêu cầu của khách hàng thì chúng ta cần thay đổi màu sắc, màu nền... cho bảng, thì trong thư viện Grid.js có cung cấp cho chúng ta một thuộc tính  
-                <code>style</code> giúp bạn có thể thiết lập style trong quá trình khởi tạo bảng. Và để hiểu rõ hơn bạn xem đoạn code sau nhé:
-              </p>
-              <pre><code class="javascript">&nbsp;new&nbsp;gridjs.Grid({<br/> &nbsp;&nbsp;columns:&nbsp;["Tên",&nbsp;"Email",&nbsp;"Số&nbsp;Điện&nbsp;Thoại"],<br/> &nbsp;&nbsp;data:&nbsp;[<br/> &nbsp;&nbsp;&nbsp;&nbsp;["John",&nbsp;"john@example.com",&nbsp;"(353)&nbsp;01&nbsp;222&nbsp;3333"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Mark",&nbsp;"mark@gmail.com",&nbsp;"(01)&nbsp;22&nbsp;888&nbsp;4444"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Eoin",&nbsp;"eoin@gmail.com",&nbsp;"0097&nbsp;22&nbsp;654&nbsp;00033"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Sarah",&nbsp;"sarahcdd@gmail.com",&nbsp;"+322&nbsp;876&nbsp;1233"],<br/> &nbsp;&nbsp;&nbsp;&nbsp;["Afshin",&nbsp;"afshin@mail.com",&nbsp;"(353)&nbsp;22&nbsp;87&nbsp;8356"]<br/> &nbsp;&nbsp;],<br/> &nbsp;&nbsp;&nbsp;/*&nbsp;Thiết&nbsp;Lập&nbsp;Style&nbsp;Cho&nbsp;Bảng*/<br/> &nbsp;&nbsp;&nbsp;style:&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;table:&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border:&nbsp;'3px&nbsp;solid&nbsp;#ccc'<br/> &nbsp;&nbsp;&nbsp;&nbsp;},<br/> &nbsp;&nbsp;&nbsp;&nbsp;th:&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'background-color':&nbsp;'#0040ff',<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;'#fff',<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'border-bottom':&nbsp;'3px&nbsp;solid&nbsp;#ccc',<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'text-align':&nbsp;'center'<br/> &nbsp;&nbsp;&nbsp;&nbsp;},<br/> &nbsp;&nbsp;&nbsp;&nbsp;td:&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'text-align':&nbsp;'center'<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;&nbsp;}<br/> }).render(document.getElementById("bang"));<br/></code></pre>
-              <p class="mt-4">
-                Và kết quả bạn xem bên dưới nhé:
-              </p>
-              <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="haycuoilennao19" data-slug-hash="QWyzdzr" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="thiết lập style cho bảng gridjs">
-                <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/QWyzdzr">
-                thiết lập style cho bảng gridjs</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">
+                Những Ví Dụ Về Toggle Switch
+              </h3>
+            </div>
+            <p> Tiếp theo đây chúng ta sẽ đi vào những ví dụ khác về skillbar do các bạn lập trình viên trên Codepen thiết kế và phát triển nhé!<br> Trước khi đi vào ví dụ thì mình có một số chú ý sau là để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> hay nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Nếu file là SCSS thì bạn có thể chuyển sang CSS ở đây nhé : <a href="https://jsonformatter.org/scss-to-css" rel="external nofollow noopener noreferrer" target="_blank">SCSS to CSS</a>. Nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.</p>
+            <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
+              <h4>Pure Css "day and night" toggle:</h4>
+            </div>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="bnthor"
+              data-slug-hash="WQBNxO"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Pure Css &amp;quot;day and night&amp;quot; toggle">
+              <span>See the Pen <a href="https://codepen.io/bnthor/pen/WQBNxO">
+                  Pure Css &quot;day and night&quot; toggle</a> by Benjamin Réthoré (<a
+                  href="https://codepen.io/bnthor">@bnthor</a>)
                 on <a href="https://codepen.io">CodePen</a>.</span>
-              </p>
-              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">
-                 Cách Lấy Dữ Liệu Thông Qua API Trong Gridjs
-                </h3>
-              </div>
-              <p>
-                Đôi khi chúng ta sẽ đi cần lấy dữ liệu thông qua API để hiển thị cho bảng. Thư viện có cung cấp cho chúng ta
-                một thuộc tính là <code>url</code>  giúp bạn có thể dễ dàng lấy dữ liệu cho bảng. Để hiểu rõ hơn bạn xem đoạn code sau nhé:
-              </p>
-              <pre><code class="javascript">&nbsp;new&nbsp;gridjs.Grid({<br/> &nbsp;&nbsp;columns:&nbsp;['Name',&nbsp;'Language',&nbsp;'Released&nbsp;At',&nbsp;'Artist'],<br/> &nbsp;&nbsp;server:&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;/*Đường&nbsp;dẫn&nbsp;API&nbsp;cho&nbsp;dử&nbsp;liệu&nbsp;bảng*/<br/> &nbsp;&nbsp;&nbsp;&nbsp;url:&nbsp;'https://api.scryfall.com/cards/search?q=Inspiring',<br/> &nbsp;&nbsp;&nbsp;&nbsp;/*Thực&nbsp;hiện&nbsp;lặp&nbsp;và&nbsp;lấy&nbsp;dữ&nbsp;liệu&nbsp;API*/<br/> &nbsp;&nbsp;&nbsp;&nbsp;then:&nbsp;data&nbsp;=>&nbsp;data.data.map(card&nbsp;=>&nbsp;[card.name,&nbsp;card.lang,&nbsp;card.released_at,&nbsp;card.artist])<br/> &nbsp;&nbsp;}&nbsp;<br/> }).render(document.getElementById("bang"));<br/></code></pre>
-              <p class="mt-4">
-                Và kết quả bạn xem ở bên dưới nhé:
-              </p>
-              <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="haycuoilennao19" data-slug-hash="xxZmqbG" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="goi du lieu thong qua API Gridjs">
-                <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/xxZmqbG">
-                goi du lieu thong qua API Gridjs</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+            </p>
+            <button type="button " class="btn btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
+                href="https://codepen.io/bnthor/pen/WQBNxO" target="_blank"> Nguồn </a> </button>
+
+            <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
+              <h4>A Confusing Toggle Button:</h4>
+            </div>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
+              data-user="himalayasingh" data-slug-hash="KLRNPr"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="A Confusing Toggle Button">
+              <span>See the Pen <a href="https://codepen.io/himalayasingh/pen/KLRNPr">
+                  A Confusing Toggle Button</a> by Himalaya Singh (<a
+                  href="https://codepen.io/himalayasingh">@himalayasingh</a>)
                 on <a href="https://codepen.io">CodePen</a>.</span>
-              </p>
+            </p>
+            <button type="button " class="btn btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
+                href="https://codepen.io/himalayasingh/pen/KLRNPr" target="_blank"> Nguồn </a> </button>
+
+            <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
+              <h4>Simple CSS Switch / Toggle:</h4>
+            </div>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
+              data-user="aaroniker" data-slug-hash="rNNLQVe"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Simple CSS Switch / Toggle">
+              <span>See the Pen <a href="https://codepen.io/aaroniker/pen/rNNLQVe">
+                  Simple CSS Switch / Toggle</a> by Aaron Iker (<a href="https://codepen.io/aaroniker">@aaroniker</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <button type="button " class="btn btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
+                href="https://codepen.io/aaroniker/pen/rNNLQVe" target="_blank"> Nguồn </a> </button>
+
+
+            <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
+              <h4>Simple CSS Switch / Toggle:</h4>
+            </div>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
+              data-user="aaroniker" data-slug-hash="wvvWNJy"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Simple CSS Switch / Toggle">
+              <span>See the Pen <a href="https://codepen.io/aaroniker/pen/wvvWNJy">
+                  Simple CSS Switch / Toggle</a> by Aaron Iker (<a href="https://codepen.io/aaroniker">@aaroniker</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <button type="button " class="btn btn-outline-dark mt-4">
+              <a rel="external nofollow noopener noreferrer" href="https://codepen.io/aaroniker/pen/wvvWNJy"
+                target="_blank"> Nguồn </a> </button>
+
+
+
+            <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
+              <h4>Springy Switchbox:</h4>
+            </div>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
+              data-user="keyframers" data-slug-hash="JVdxzz"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="✅ Springy Switchbox | Checkbox toggle animation | @keyframers 2.0.0">
+              <span>See the Pen <a href="https://codepen.io/team/keyframers/pen/JVdxzz">
+                  ✅ Springy Switchbox | Checkbox toggle animation | @keyframers 2.0.0</a> by @keyframers (<a
+                  href="https://codepen.io/keyframers">@keyframers</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <button type="button " class="btn btn-outline-dark mt-4">
+              <a rel="external nofollow noopener noreferrer" href="https://codepen.io/team/keyframers/pen/JVdxzz"
+                target="_blank"> Nguồn </a> </button>
+
+            <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
+              <h4>Pure CSS Toggle Buttons:</h4>
+            </div>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
+              data-user="himalayasingh" data-slug-hash="EdVzNL"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Pure CSS Toggle Buttons | ON-OFF Switches">
+              <span>See the Pen <a href="https://codepen.io/himalayasingh/pen/EdVzNL">
+                  Pure CSS Toggle Buttons | ON-OFF Switches</a> by Himalaya Singh (<a
+                  href="https://codepen.io/himalayasingh">@himalayasingh</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <button type="button " class="btn btn-outline-dark mt-4">
+              <a rel="external nofollow noopener noreferrer" href="https://codepen.io/himalayasingh/pen/EdVzNL"
+                target="_blank"> Nguồn </a> </button>
+
+            <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
+              <h4>Checkboxes and Visual Affordance Indicators:</h4>
+            </div>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
+              data-user="adamstuartclark" data-slug-hash="EKJWRx"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Checkboxes and Visual Affordance Indicators">
+              <span>See the Pen <a href="https://codepen.io/adamstuartclark/pen/EKJWRx">
+                  Checkboxes and Visual Affordance Indicators</a> by Adam Clark (<a
+                  href="https://codepen.io/adamstuartclark">@adamstuartclark</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <button type="button " class="btn btn-outline-dark mt-4">
+              <a rel="external nofollow noopener noreferrer" href="https://codepen.io/adamstuartclark/pen/EKJWRx"
+                target="_blank"> Nguồn </a> </button>
+
+
+            <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
+              <h4>I/O Codepen:</h4>
+            </div>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
+              data-user="perry_nt" data-slug-hash="dWXEEp"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="I/O Codepen">
+              <span>See the Pen <a href="https://codepen.io/perry_nt/pen/dWXEEp">
+                  I/O Codepen</a> by Paraskevas Dinakis (<a href="https://codepen.io/perry_nt">@perry_nt</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <button type="button " class="btn btn-outline-dark mt-4">
+              <a rel="external nofollow noopener noreferrer" href="https://codepen.io/perry_nt/pen/dWXEEp"
+                target="_blank"> Nguồn </a> </button>
+
+
+            <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
+              <h4>Pure CSS Minimal Toggle:</h4>
+            </div>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="raubaca"
+              data-slug-hash="BjGKde"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Pure CSS Minimal Toggle">
+              <span>See the Pen <a href="https://codepen.io/raubaca/pen/BjGKde">
+                  Pure CSS Minimal Toggle</a> by Rau (<a href="https://codepen.io/raubaca">@raubaca</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <button type="button " class="btn btn-outline-dark mt-4">
+              <a rel="external nofollow noopener noreferrer" href="https://codepen.io/raubaca/pen/BjGKde"
+                target="_blank"> Nguồn </a> </button>
+
+
+            <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
+              <h4>On/off toggle switch:</h4>
+            </div>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
+              data-user="agoodwin" data-slug-hash="JBvBPr"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="On/off toggle switch">
+              <span>See the Pen <a href="https://codepen.io/agoodwin/pen/JBvBPr">
+                  On/off toggle switch</a> by Anastasia Goodwin (<a href="https://codepen.io/agoodwin">@agoodwin</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <button type="button " class="btn btn-outline-dark mt-4">
+              <a rel="external nofollow noopener noreferrer" href="https://codepen.io/agoodwin/pen/JBvBPr"
+                target="_blank"> Nguồn </a> </button>
+
+
+
+            <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
+              <h4>Checky:</h4>
+            </div>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="ekrembk" data-slug-hash="DfFgb" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Checky">
+              <span>See the Pen <a href="https://codepen.io/ekrembk/pen/DfFgb">
+              Checky</a> by Ekrem Büyükkaya (<a href="https://codepen.io/ekrembk">@ekrembk</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <button type="button " class="btn btn-outline-dark mt-4">
+              <a rel="external nofollow noopener noreferrer" href="https://codepen.io/ekrembk/pen/DfFgb"
+                target="_blank"> Nguồn </a> </button>
+
+
+
+                <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
+                  <h4>Custom Toggle Switch Inspiration (Pure CSS):</h4>
+                </div>
+                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="takeradi" data-slug-hash="ONPXbP" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Custom Toggle Switch Inspiration (Pure CSS)">
+                  <span>See the Pen <a href="https://codepen.io/takeradi/pen/ONPXbP">
+                  Custom Toggle Switch Inspiration (Pure CSS)</a> by Aditya Bhandari (<a href="https://codepen.io/takeradi">@takeradi</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+                <button type="button " class="btn btn-outline-dark mt-4">
+                  <a rel="external nofollow noopener noreferrer" href="https://codepen.io/takeradi/pen/ONPXbP"
+                    target="_blank"> Nguồn </a> </button>
+
+
+                    <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
+                      <h4>switch:</h4>
+                    </div>
+                    <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="stefgeraets" data-slug-hash="ExfBd" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="switch">
+                      <span>See the Pen <a href="https://codepen.io/stefgeraets/pen/ExfBd">
+                      switch</a> by Stef Geraets (<a href="https://codepen.io/stefgeraets">@stefgeraets</a>)
+                      on <a href="https://codepen.io">CodePen</a>.</span>
+                    </p>
+                    <button type="button " class="btn btn-outline-dark mt-4">
+                      <a rel="external nofollow noopener noreferrer" href="https://codepen.io/stefgeraets/pen/ExfBd"
+                        target="_blank"> Nguồn </a> </button>
+
+                        <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
+                          <h4>Day to Night Toggle Switch:</h4>
+                        </div>
+                        <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="aybukeceylan" data-slug-hash="QWWrbyK" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Day to Night Toggle Switch">
+                          <span>See the Pen <a href="https://codepen.io/aybukeceylan/pen/QWWrbyK">
+                          Day to Night Toggle Switch</a> by Aybüke Ceylan (<a href="https://codepen.io/aybukeceylan">@aybukeceylan</a>)
+                          on <a href="https://codepen.io">CodePen</a>.</span>
+                        </p>
+                        <button type="button " class="btn btn-outline-dark mt-4">
+                          <a rel="external nofollow noopener noreferrer" href="https://codepen.io/aybukeceylan/pen/QWWrbyK"
+                            target="_blank"> Nguồn </a> </button>
+
+
+                            <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
+                              <h4>CSS Switch:</h4>
+                            </div>
+                            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="cl0udc0ntr0l" data-slug-hash="xhBtF" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS Switch">
+                              <span>See the Pen <a href="https://codepen.io/cl0udc0ntr0l/pen/xhBtF">
+                              CSS Switch</a> by Randy Lebeau (<a href="https://codepen.io/cl0udc0ntr0l">@cl0udc0ntr0l</a>)
+                              on <a href="https://codepen.io">CodePen</a>.</span>
+                            </p>
+                            <button type="button " class="btn btn-outline-dark mt-4">
+                              <a rel="external nofollow noopener noreferrer" href="https://codepen.io/cl0udc0ntr0l/pen/xhBtF"
+                                target="_blank"> Nguồn </a> </button>
+
+
+                                <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
+                                  <h4>Custom Checkbox / Toggle Switch:</h4>
+                                </div>
+                                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="thelaazyguy" data-slug-hash="MvqpPr" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Custom Checkbox / Toggle Switch">
+                                  <span>See the Pen <a href="https://codepen.io/thelaazyguy/pen/MvqpPr">
+                                  Custom Checkbox / Toggle Switch</a> by thelaazyguy (<a href="https://codepen.io/thelaazyguy">@thelaazyguy</a>)
+                                  on <a href="https://codepen.io">CodePen</a>.</span>
+                                </p>
+                                <button type="button " class="btn btn-outline-dark mt-4">
+                                  <a rel="external nofollow noopener noreferrer" href="https://codepen.io/thelaazyguy/pen/MvqpPr"
+                                    target="_blank"> Nguồn </a> </button>
+
+
+
+                              
 
 
 
@@ -247,42 +443,39 @@
 
 
 
+            <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
 
 
 
-      <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
+            <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn kiến thức về toggle switch
+              hữu
+              ích
+              dành
+              cho
+              việc
+              phát
+              triển, thiết kế web
+              và
+              nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất
+              mong bạn tiếp tục ủng
+              hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
 
-
-
-      <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn kiến thức về thư viện Grid.js
-        hữu
-        ích
-        dành
-        cho
-        việc
-        phát
-        triển, thiết kế web
-        và
-        nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất
-        mong bạn tiếp tục ủng
-        hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
-
+          </div>
+        </article>
+      </div>
     </div>
-    </article>
+
+
+
+
+    <div class="mb-5"></div>
   </div>
-</div>
+  <div class="col-lg-12 col-md-12 col-xs-12">
+    <div class="mt-5"></div>
 
 
 
-
-<div class="mb-5"></div>
-</div>
-<div class="col-lg-12 col-md-12 col-xs-12">
-  <div class="mt-5"></div>
-
-
-
-</div>
+  </div>
 </div>
 </div>
 
