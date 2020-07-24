@@ -35,7 +35,7 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i> Cách Tạo Nút Toggle Switch Cho Trang Web (2020) </h2>
+                  aria-hidden="true"></i> Những Thư Viện Và Cách Sử Dụng Cho Phát Triển Web (2020) </h2>
             </div>
           </div>
 
@@ -46,388 +46,320 @@
           </div>
           <div class="text-content-article mt-5">
             <p><i>
-                Bài viết hôm nay chúng ta sẽ đi vào tìm hiểu cách tạo một nút toggle switch cơ bản cũng như sử dụng các
-                thư viện để tạo những nút này trong đẹp mắt hơn cho trang web của bạn. Và để hiểu rõ hơn, chúng ta hãy
-                cùng nhau đi vào tìm hiểu nhé!
+                Trong bài này chúng ta sẽ cùng nhau đi vào tìm hiểu các thư viện cũng như cách sử dụng của nó để áp dụng
+                vào việc phát triển web nhằm giúp bạn
+                có thể giảm được thời gian và công sức trong quá trình viết mã. Nào bây giờ chúng ta hãy cùng nhau đi
+                vào tìm hiểu nhé!
               </i>
             </p>
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Toogle Switch Là Gì?
+                Thư Viện Btn.css
               </h3>
             </div>
             <p>
-              <b>Toggle Switch</b> được xem như là một công tắc giúp bạn có thể chuyển đổi trạng thái của một đối tượng
-              trong trang web.
-              Trong bài này chúng ta sẽ đi vào tìm hiểu vấn đề chính là cách thiết kế nút toggle switch để thu hút sự
-              chú ý của người dùng cũng như mang lại cảm giác hiện đại cho trang web nhé!
+              <b>Btn.css</b> là một thư viện giúp bạn có thể thiết kế cũng như tạo ra các hiệu ứng đẹp mắt cho button
+              trong trang web một cách dễ dàng.
+              Để sử dụng trực tiếp vào trang HTML thì bạn sử dụng đường dẫn CDN ở dưới đây nhé:
             </p>
+            <pre><code class="html">&#60;link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bttn.css/0.2.4/bttn.css"&#62;</code></pre>
             <p>
-              Đầu tiên chúng ta sẽ đi vào tạo cấu trúc HTML cho nút Toogle Switch (Thông thường nút này sẽ được tạo bởi
-              phần tử <code>checkbox</code> trong HTML nhé)
+              Sau khi thiết lập xong thì bạn chỉ cần việc gọi <code>class</code> của các button mình muốn là có thể sử
+              dụng được rồi.
+              Để hiểu rõ hơn bạn xem ví dụ sau đây nhé:
             </p>
-            <pre><code class="html"> &#60;!--&nbsp;Nút&nbsp;Toggle&nbsp;Switch&nbsp;Hình&nbsp;Chữ&nbsp;Nhật&nbsp;--&#62;<br/> &#60;label&nbsp;class="switch"&#62;<br/> &nbsp;&nbsp;&#60;input&nbsp;type="checkbox"&#62;<br/> &nbsp;&nbsp;&#60;span&nbsp;class="slider"&#62;&#60;/span&#62;<br/> &#60;/label&#62;<br/>&#60;!--&nbsp;Nút&nbsp;Toggle&nbsp;Switch&nbsp;Dạng&nbsp;Bo&nbsp;Góc&nbsp;&nbsp;--&#62;<br/> &#60;label&nbsp;class="switch"&#62;<br/> &nbsp;&nbsp;&#60;input&nbsp;type="checkbox"&#62;<br/> &nbsp;&nbsp;&#60;span&nbsp;class="slider&nbsp;round"&#62;&#60;/span&#62;<br/> &#60;/label&#62;<br/></code></pre>
-            <p class="mt-4">
-              Tiếp theo chúng ta sẽ đi vào thiết lập các thuộc tính CSS cho các đối tượng HTML ở phía trên nhé:
-            </p>
-            <pre><code class="css">/*&nbsp;thiết&nbsp;lập&nbsp;CSS&nbsp;cho&nbsp;switch&nbsp;*/<br/> .switch&nbsp;{<br/> &nbsp;&nbsp;position:&nbsp;relative;<br/> &nbsp;&nbsp;display:&nbsp;inline-block;<br/> &nbsp;&nbsp;width:&nbsp;60px;<br/> &nbsp;&nbsp;height:&nbsp;34px;<br/> }<br/>/*&nbsp;Ẩn&nbsp;ô&nbsp;checkbox&nbsp;&nbsp;*/<br/> .switch&nbsp;input&nbsp;{<br/> &nbsp;&nbsp;opacity:&nbsp;0;<br/> &nbsp;&nbsp;width:&nbsp;0;<br/> &nbsp;&nbsp;height:&nbsp;0;<br/> }<br/>/*&nbsp;Thiết&nbsp;lập&nbsp;CSS&nbsp;cho&nbsp;slider&nbsp;*/<br/> .slider&nbsp;{<br/> &nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;cursor:&nbsp;pointer;<br/> &nbsp;&nbsp;top:&nbsp;0;<br/> &nbsp;&nbsp;left:&nbsp;0;<br/> &nbsp;&nbsp;right:&nbsp;0;<br/> &nbsp;&nbsp;bottom:&nbsp;0;<br/> &nbsp;&nbsp;background-color:&nbsp;#ccc;<br/> &nbsp;&nbsp;-webkit-transition:&nbsp;.4s;<br/> &nbsp;&nbsp;transition:&nbsp;.4s;<br/> }<br/>.slider:before&nbsp;{<br/> &nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;content:&nbsp;"";<br/> &nbsp;&nbsp;height:&nbsp;26px;<br/> &nbsp;&nbsp;width:&nbsp;26px;<br/> &nbsp;&nbsp;left:&nbsp;4px;<br/> &nbsp;&nbsp;bottom:&nbsp;4px;<br/> &nbsp;&nbsp;background-color:&nbsp;white;<br/> &nbsp;&nbsp;-webkit-transition:&nbsp;.4s;<br/> &nbsp;&nbsp;transition:&nbsp;.4s;<br/> }</code></pre>
-            <p class="mt-4">
-              Và kết quả bạn xem dưới đây nhé:
 
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
-              data-user="haycuoilennao19" data-slug-hash="wvMRjQQ"
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result"
+              data-user="haycuoilennao19" data-slug-hash="WNrmNyp"
               style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="thiet lap html css cho check box">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/wvMRjQQ">
-                  thiet lap html css cho check box</a> by haycuoilennao19 (<a
+              data-pen-title="Một số kiểu button  của thư viện btncss">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/WNrmNyp">
+                  Một số kiểu button của thư viện btncss</a> by haycuoilennao19 (<a
                   href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
                 on <a href="https://codepen.io">CodePen</a>.</span>
             </p>
             <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
             <p class="mt-4">
-              Trước khi thêm chức năng để nó có thể hoạt động thì mình sẽ giải thích thêm về hai thuộc tính quan trọng
-              được sử dụng để tạo nút toggle switch là <code>input:focus</code> và <code>input:checked</code>.
-              <ul>
-                <li><code>input:focus</code>: Dùng để thiết lập style khi input(ô) đang được focus.</li>
-                <li><code>input:checked</code>: Dùng để thiết lập style khi input(ô) ở trạng thái được chọn.</li>
-              </ul>
-            </p>
-            <p>
-              Và để dễ hình dùng hơn hai cách sử dụng này thì bạn hãy xem ví dụ dưới đây nhé:
+              Ngoài ra nó cũng cung cấp cho chúng ta một số màu cơ bản để bạn có thể dễ dàng lựa chọn phù hợp cho trang
+              web của mình
+              Và để hiểu rõ hơn bạn xem ví dụ dưới đây nhé:
             </p>
             <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result"
-              data-user="haycuoilennao19" data-slug-hash="vYLvjqR"
+              data-user="haycuoilennao19" data-slug-hash="BajbyBW"
               style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="ô input voi thuoc tinh focus va checked">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/vYLvjqR">
-                  ô input voi thuoc tinh focus va checked</a> by haycuoilennao19 (<a
+              data-pen-title="Màu sắc button của thư viện btn css">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/BajbyBW">
+                  Màu sắc button của thư viện btn css</a> by haycuoilennao19 (<a
                   href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
                 on <a href="https://codepen.io">CodePen</a>.</span>
             </p>
-            <p class="mt-4">
-              Sau khi bạn đã hiểu hai thuộc tính này thì chúng ta sẽ đi vào thiết kế để nó có thể chuyển đổi qua lại
-              như một công tắc thông qua đoạn code dưới đây nhé:
 
-            </p>
-            <pre><code class="css">&nbsp;input:checked&nbsp;+&nbsp;.slider&nbsp;{<br/> &nbsp;&nbsp;background-color:&nbsp;#2196F3;<br/> }<br/>input:focus&nbsp;+&nbsp;.slider&nbsp;{<br/> &nbsp;&nbsp;box-shadow:&nbsp;0&nbsp;0&nbsp;1px&nbsp;#2196F3;<br/> }<br/>input:checked&nbsp;+&nbsp;.slider:before&nbsp;{<br/> &nbsp;&nbsp;-webkit-transform:&nbsp;translateX(26px);<br/> &nbsp;&nbsp;-ms-transform:&nbsp;translateX(26px);<br/> &nbsp;&nbsp;transform:&nbsp;translateX(26px);<br/> }<br/>.slider.round&nbsp;{<br/> &nbsp;&nbsp;border-radius:&nbsp;34px;<br/> }<br/>.slider.round:before&nbsp;{<br/> &nbsp;&nbsp;border-radius:&nbsp;50%;<br/> }<br/></code></pre>
             <p class="mt-4">
-              Và kết quả cuối cùng bạn xem ở dưới đây nhé:
-            </p>
-
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
-              data-user="haycuoilennao19" data-slug-hash="QWyzxLe"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="nút hoàn chỉnh toggle switch">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/QWyzxLe">
-                  nút hoàn chỉnh toggle switch</a> by haycuoilennao19 (<a
-                  href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <p class="mt-2">Nguồn W3School</p>
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Sử Dụng Thư Viện MoreToggles.css Để Tạo Nút Toggle Switch
-              </h3>
-            </div>
-            <p>
-              Việc chúng ta sử dụng thư viện để tạo nút toggle switch sẽ giúp bạn có thể giảm thời gian công sức
-              cho việc viết mã cũng như mang lại tính thẩm cao, sự lựa chọn đa dạng cho trang web của bạn.
-            </p>
-
-            <p>
-              Đầu tiên chúng ta sẽ lấy đường dẫn CDN của thư viện để có thể sử dụng trực tiếp trong trang web thông qua
-              đoạn mã sau nhé:
-            </p>
-            <pre><code class="html">&#60;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JNKKKK/MoreToggles.css@0.2.1/output/moretoggles.min.css"&#62;</code></pre>
-            <p class="mt-4">
-              Bạn nhớ đặt đoạn mã trên ở trong thẻ <code>head</code> nha. Việc tiếp theo bạn chỉ cần gọi các class mà
-              thư viện cung cấp là có thể tạo ra được
-              nút toggle như ý muốn của mình rồi. Để hiểu rõ hơn chúng ta sẽ đi vào ví dụ nhé:
-            </p>
-            <pre><code class="html">&#60;head&#62;<br/> &nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="https://cdn.jsdelivr.net/gh/JNKKKK/MoreToggles.css@0.2.1/output/moretoggles.min.css"&#62;<br/> &nbsp;&#60;/head&#62;<br/> &#60;body&#62;<br/>  &nbsp;&#60;div&nbsp;class="mt-ios"&#62;&nbsp;<br/> &nbsp;&nbsp;&nbsp;&#60;input&nbsp;id="1"&nbsp;type="checkbox"&nbsp;/&#62;<br/> &nbsp;&nbsp;&nbsp;&#60;label&nbsp;for="1"&#62;&#60;/label&#62; &nbsp;&#60;/div&#62;<br/> &#60;/body&#62;<br/></code></pre>
-            <p class="mt-4">
-              Với class <code>mt-ios</code> là một style được thiết kế sẵn cho nút toggle switch do thư viện cung cấp.
-              Và bây giờ chúng ta hảy cùng nhau xem kết quả nhé:
+              Ngoài việc thiết lập kích cỡ button bằng CSS thì thư viện này cũng cung cấp cho chúng ta một số class để
+              điều chỉnh kích thước của button. Để hiểu rõ hơn bạn xem ví dụ sau đây nhé:
             </p>
             <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result"
-              data-user="haycuoilennao19" data-slug-hash="vYLvrKa"
+              data-user="haycuoilennao19" data-slug-hash="YzwgPyy"
               style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="sử dụng  moretoggles csss">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/vYLvrKa">
-                  sử dụng moretoggles csss</a> by haycuoilennao19 (<a
+              data-pen-title="Kích thước của button thư vien btn css">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/YzwgPyy">
+                  Kích thước của button thư vien btn css</a> by haycuoilennao19 (<a
                   href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
                 on <a href="https://codepen.io">CodePen</a>.</span>
             </p>
-            <p class="mt-4">
-              Và dưới đây là một số ví khác về nút này khi sử dụng thư viện MoreToggles.css nhé:
+            <p class="mt-2">
+              Để xem thêm nhiều hiệu ứng khác thì bạn có thể truy cập <a href="https://bttn.surge.sh/" title="btn.css"
+                target="_blank">ở đây nhé</a>!
             </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result"
-              data-user="haycuoilennao19" data-slug-hash="VweqdKd"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Ví dụ khác về MoreToggles CSS">
-              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/VweqdKd">
-                  Ví dụ khác về MoreToggles CSS</a> by haycuoilennao19 (<a
-                  href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <p class="mt-4">
-              Một lưu ý nhỏ là khi bạn tạo từ 2 nút toggle switch trở lên thì ta phải thiết lập thuộc tính
-              <code>id</code> và <code>for</code> của mỗi nút bắt buộc phải khác nhau.
-              Và nếu bạn muốn tìm hiểu thêm thư viện này thi có thể xem <a
-                href="https://jnkkkk.github.io/MoreToggles.css/allToggles.html" target="_blank"
-                rel="noopener noreferrer">ở đây nhé</a>.
-            </p>
-
-
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Những Ví Dụ Về Toggle Switch
+                Công Cụ Generator Shadow
               </h3>
             </div>
-            <p> Tiếp theo đây chúng ta sẽ đi vào những ví dụ khác về skillbar do các bạn lập trình viên trên Codepen thiết kế và phát triển nhé!<br> Trước khi đi vào ví dụ thì mình có một số chú ý sau là để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> hay nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Nếu file là SCSS thì bạn có thể chuyển sang CSS ở đây nhé : <a href="https://jsonformatter.org/scss-to-css" rel="external nofollow noopener noreferrer" target="_blank">SCSS to CSS</a>. Nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.</p>
-            <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
-              <h4>Pure Css "day and night" toggle:</h4>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="bnthor"
-              data-slug-hash="WQBNxO"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Pure Css &amp;quot;day and night&amp;quot; toggle">
-              <span>See the Pen <a href="https://codepen.io/bnthor/pen/WQBNxO">
-                  Pure Css &quot;day and night&quot; toggle</a> by Benjamin Réthoré (<a
-                  href="https://codepen.io/bnthor">@bnthor</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
+            <p>
+              Nếu như bạn cần thiết lập thuộc tính shadow cho một đối tượng trong trang web thì có thể sử dụng công cụ
+              này nhé.
+              Nó cung cấp cho bạn các thuộc tính để có thể tình chỉnh shadow và sau đó sẽ generator đoạn mã CSS tương
+              ứng. Để hiểu rõ hơn bạn xem hình sau đây nha:
             </p>
-            <button type="button " class="btn btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/bnthor/pen/WQBNxO" target="_blank"> Nguồn </a> </button>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1595508778/thu-vien-phat-trien-web-phan-1/Generator_Shadow_ae5rrc.png"
+              alt="Generator Shadow">
 
-            <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
-              <h4>A Confusing Toggle Button:</h4>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
-              data-user="himalayasingh" data-slug-hash="KLRNPr"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="A Confusing Toggle Button">
-              <span>See the Pen <a href="https://codepen.io/himalayasingh/pen/KLRNPr">
-                  A Confusing Toggle Button</a> by Himalaya Singh (<a
-                  href="https://codepen.io/himalayasingh">@himalayasingh</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <button type="button " class="btn btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/himalayasingh/pen/KLRNPr" target="_blank"> Nguồn </a> </button>
-
-            <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
-              <h4>Simple CSS Switch / Toggle:</h4>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
-              data-user="aaroniker" data-slug-hash="rNNLQVe"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Simple CSS Switch / Toggle">
-              <span>See the Pen <a href="https://codepen.io/aaroniker/pen/rNNLQVe">
-                  Simple CSS Switch / Toggle</a> by Aaron Iker (<a href="https://codepen.io/aaroniker">@aaroniker</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <button type="button " class="btn btn-outline-dark mt-4"> <a rel="external nofollow noopener noreferrer"
-                href="https://codepen.io/aaroniker/pen/rNNLQVe" target="_blank"> Nguồn </a> </button>
+            <button type="button " class="btn btn-outline-dark mt-4"> <a title="Generator Shadow"
+                href="https://brumm.af/shadows" target="_blank"> Nguồn </a> </button>
 
 
-            <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
-              <h4>Simple CSS Switch / Toggle:</h4>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
-              data-user="aaroniker" data-slug-hash="wvvWNJy"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Simple CSS Switch / Toggle">
-              <span>See the Pen <a href="https://codepen.io/aaroniker/pen/wvvWNJy">
-                  Simple CSS Switch / Toggle</a> by Aaron Iker (<a href="https://codepen.io/aaroniker">@aaroniker</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <button type="button " class="btn btn-outline-dark mt-4">
-              <a rel="external nofollow noopener noreferrer" href="https://codepen.io/aaroniker/pen/wvvWNJy"
-                target="_blank"> Nguồn </a> </button>
-
-
-
-            <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
-              <h4>Springy Switchbox:</h4>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
-              data-user="keyframers" data-slug-hash="JVdxzz"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="✅ Springy Switchbox | Checkbox toggle animation | @keyframers 2.0.0">
-              <span>See the Pen <a href="https://codepen.io/team/keyframers/pen/JVdxzz">
-                  ✅ Springy Switchbox | Checkbox toggle animation | @keyframers 2.0.0</a> by @keyframers (<a
-                  href="https://codepen.io/keyframers">@keyframers</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <button type="button " class="btn btn-outline-dark mt-4">
-              <a rel="external nofollow noopener noreferrer" href="https://codepen.io/team/keyframers/pen/JVdxzz"
-                target="_blank"> Nguồn </a> </button>
-
-            <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
-              <h4>Pure CSS Toggle Buttons:</h4>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
-              data-user="himalayasingh" data-slug-hash="EdVzNL"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Pure CSS Toggle Buttons | ON-OFF Switches">
-              <span>See the Pen <a href="https://codepen.io/himalayasingh/pen/EdVzNL">
-                  Pure CSS Toggle Buttons | ON-OFF Switches</a> by Himalaya Singh (<a
-                  href="https://codepen.io/himalayasingh">@himalayasingh</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <button type="button " class="btn btn-outline-dark mt-4">
-              <a rel="external nofollow noopener noreferrer" href="https://codepen.io/himalayasingh/pen/EdVzNL"
-                target="_blank"> Nguồn </a> </button>
-
-            <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
-              <h4>Checkboxes and Visual Affordance Indicators:</h4>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
-              data-user="adamstuartclark" data-slug-hash="EKJWRx"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Checkboxes and Visual Affordance Indicators">
-              <span>See the Pen <a href="https://codepen.io/adamstuartclark/pen/EKJWRx">
-                  Checkboxes and Visual Affordance Indicators</a> by Adam Clark (<a
-                  href="https://codepen.io/adamstuartclark">@adamstuartclark</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <button type="button " class="btn btn-outline-dark mt-4">
-              <a rel="external nofollow noopener noreferrer" href="https://codepen.io/adamstuartclark/pen/EKJWRx"
-                target="_blank"> Nguồn </a> </button>
-
-
-            <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
-              <h4>I/O Codepen:</h4>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
-              data-user="perry_nt" data-slug-hash="dWXEEp"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="I/O Codepen">
-              <span>See the Pen <a href="https://codepen.io/perry_nt/pen/dWXEEp">
-                  I/O Codepen</a> by Paraskevas Dinakis (<a href="https://codepen.io/perry_nt">@perry_nt</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <button type="button " class="btn btn-outline-dark mt-4">
-              <a rel="external nofollow noopener noreferrer" href="https://codepen.io/perry_nt/pen/dWXEEp"
-                target="_blank"> Nguồn </a> </button>
-
-
-            <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
-              <h4>Pure CSS Minimal Toggle:</h4>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="raubaca"
-              data-slug-hash="BjGKde"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Pure CSS Minimal Toggle">
-              <span>See the Pen <a href="https://codepen.io/raubaca/pen/BjGKde">
-                  Pure CSS Minimal Toggle</a> by Rau (<a href="https://codepen.io/raubaca">@raubaca</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <button type="button " class="btn btn-outline-dark mt-4">
-              <a rel="external nofollow noopener noreferrer" href="https://codepen.io/raubaca/pen/BjGKde"
-                target="_blank"> Nguồn </a> </button>
-
-
-            <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
-              <h4>On/off toggle switch:</h4>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
-              data-user="agoodwin" data-slug-hash="JBvBPr"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="On/off toggle switch">
-              <span>See the Pen <a href="https://codepen.io/agoodwin/pen/JBvBPr">
-                  On/off toggle switch</a> by Anastasia Goodwin (<a href="https://codepen.io/agoodwin">@agoodwin</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <button type="button " class="btn btn-outline-dark mt-4">
-              <a rel="external nofollow noopener noreferrer" href="https://codepen.io/agoodwin/pen/JBvBPr"
-                target="_blank"> Nguồn </a> </button>
-
-
-
-            <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
-              <h4>Checky:</h4>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="ekrembk" data-slug-hash="DfFgb" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Checky">
-              <span>See the Pen <a href="https://codepen.io/ekrembk/pen/DfFgb">
-              Checky</a> by Ekrem Büyükkaya (<a href="https://codepen.io/ekrembk">@ekrembk</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <button type="button " class="btn btn-outline-dark mt-4">
-              <a rel="external nofollow noopener noreferrer" href="https://codepen.io/ekrembk/pen/DfFgb"
-                target="_blank"> Nguồn </a> </button>
-
-
-
-                <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
-                  <h4>Custom Toggle Switch Inspiration (Pure CSS):</h4>
+                <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+                  <h3 class="text-primary ml-4 title-article-size">
+                    Thư Viện Sharect
+                  </h3>
                 </div>
-                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="takeradi" data-slug-hash="ONPXbP" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Custom Toggle Switch Inspiration (Pure CSS)">
-                  <span>See the Pen <a href="https://codepen.io/takeradi/pen/ONPXbP">
-                  Custom Toggle Switch Inspiration (Pure CSS)</a> by Aditya Bhandari (<a href="https://codepen.io/takeradi">@takeradi</a>)
+                <p>
+                  <b>Sharect</b> giúp bạn có thể lựa chọn nội dung trong trang web và  chia sẽ ngay lập tức trên các mạng xã hội phổ biến hiện nay như 
+                  Facebook, Reddit, Twitter... Để thiết lập cho trang web thì bạn chèn đường dẫn CDN ở dưới đây nhé:
+                </p>
+                <pre><code class="html">&#60;script src="https://unpkg.com/sharect@2.0.0/dist/sharect.min.js"&#62;&#60;/script&#62;</code></pre>
+                <p class="mt-4">
+                  Khi đó bạn chỉ cần gọi <code>Sharect.init()</code> là đã có thể thiết lập chia sẻ nội dung cho trang web rồi. Và mình có lưu ý nhỏ là 
+                  đối với kiểu thiết lập mặc định này thì nó sẽ được chia sẻ trên hai nên tảng mảng xã hội là Facebook và Twitter. Để hiểu rõ hơn bạn xem 
+                  ví dụ sau đây nhé:
+                </p>
+                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="NWxJgpx" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Sử dụng thư viện Sharect">
+                  <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/NWxJgpx">
+                  Sử dụng thư viện Sharect</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
                   on <a href="https://codepen.io">CodePen</a>.</span>
                 </p>
-                <button type="button " class="btn btn-outline-dark mt-4">
-                  <a rel="external nofollow noopener noreferrer" href="https://codepen.io/takeradi/pen/ONPXbP"
-                    target="_blank"> Nguồn </a> </button>
+                <p class="mt-4">
+                  Ngoài ra thư viện cũng cung cấp cho bạn một số thuộc tính để thiết kế lại màu sắc cho icon cũng như background của nút chia sẻ với 
+                  <code>backgroundColor</code> và <code>iconColor</code>. Để hiểu rõ hơn bạn xem ví dụ cách thiết lập dưới đây nhé:
+                </p>
+                <pre><code class="javascript">Sharect.config<br/> ({<br/> &nbsp;&nbsp;facebook:&nbsp;true,<br/> &nbsp;&nbsp;twitter:&nbsp;true,<br/> &nbsp;&nbsp;backgroundColor:&nbsp;'#1E90FF',<br/> &nbsp;&nbsp;iconColor:&nbsp;'#FFF',<br/> }).init()<br/></code></pre>
+                <p class="mt-4">
+                  Và kết quả bạn xem dưới đây nhé:
+                </p>
+                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="dyGrRzw" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="thay doi mau cho icon và background cua thu vien sharect">
+                  <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/dyGrRzw">
+                  thay doi mau cho icon và background cua thu vien sharect</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+                <p class="mt-4">
+                  Nếu bạn muốn tham khảo thêm thì có thể truy cập <a href="https://estevanmaito.github.io/sharect/" title="Thư viện Sharect" target="_blank">ở đây nhé</a>!
+                </p>
+
+                <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+                  <h3 class="text-primary ml-4 title-article-size">
+                    Thư Viện Matter
+                  </h3>
+                </div>
+                <p>
+                  <b>Matter</b> được xây dựng bằng CSS với mục đích là hướng tới thiết kế Material  cho trang web của bạn. 
+                  Với kích thước nhỏ gọn giúp bạn có thể tối ưu hiệu suất khi sử dụng thư viện. Và để thiết lập thì bạn sử dụng CDN dưới đây nhé:
+                </p>
+                <pre><code class="html">&#60;link href="https://res.cloudinary.com/finnhvman/raw/upload/matter/matter-0.2.2.min.css" rel="stylesheet"&#62;</code></pre>
+                <p class="mt-4">
+                  Sau đó bạn chỉ cần gọi các class được thư viện cung cấp cho đối tượng trong web là có thể sử dụng được rồi. Để hiểu rõ hơn bạn xem ví dụ sau đây nhé:
+                </p>
+                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="gOPERqa" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="gOPERqa">
+                  <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/gOPERqa">
+                  gOPERqa</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+                <p class="mt-4">
+                  Và để tham khảo thêm những component khác  thì bạn truy cập <a href="https://github.com/finnhvman/matter" title="thư viện matter" target="_blank">ở đây nhé!</a>
+                </p>
+
+                <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+                  <h3 class="text-primary ml-4 title-article-size">
+                    Thư Viện shareon
+                  </h3>
+                </div>
+                <p>
+                  <b>Shareon</b> giúp bạn có thể tạo ra những nút chia sẻ nội dung một cách dễ dàng cho những mạng xã hội phổ biến hiện nay như là Facebook, Twitter,
+                  Linkedin... Và để thiết lập thì chúng ta cần sử dụng hai đường dẫn CDN sau đây:
+                </p>
+                <p class="text-primary">CSS</p>
+                <pre><code class="html">&#60;link href="https://cdn.jsdelivr.net/npm/shareon@1.2.1/dist/shareon.min.css" rel="stylesheet"&#62;</code></pre>
+                  <p class="text-primary mt-4">Javascript</p>
+                  <pre><code class="html">&#60;script src="https://cdn.jsdelivr.net/npm/shareon@1.2.1/dist/shareon.min.js" type="text/javascript"&#62;&#60;/script&#62;</code></pre>
+                <p class="mt-4">
+                  Đối với file Javascript thì bạn nên đặt dưới cùng của trang để tối ưu hiệu suất cho trang web. Và để dễ hình dung bạn xem đoạn code sau nhé:
+                </p>
+                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="rNxRzzP" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Sử dụng Thư Viện Shareon">
+                  <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/rNxRzzP">
+                  Sử dụng Thư Viện Shareon</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+                <p class="mt-4">
+                  Ở đây mình có một số lưu ý là:
+                  <ul>
+                    <li><code>data-url</code>: là đường dẫn mà bạn muốn người dùng chia sẻ.</li>
+                    <li><code>data-title</code>: là tiêu đề cho đường dẫn được chia sẻ trên mạng xã hội.</li>
+                  </ul>
+                </p>
+                <p>
+                  Các nút này theo mình thấy là hay được sử dụng trong các bài viết trên blog hoặc website với nhiệm vụ là  giúp người dùng dễ dàng chia sẻ bài viết lên các trang mạng xã hội 
+                  nhằm tăng thêm lưu lượng truy cập cho trang web của bạn. Và nếu bạn muốn tìm hiểu thêm thì truy cập 
+                  <a href="https://shareon.js.org/" title="thư viện shareon" target="_blank">ở đây nhé!</a>
+                </p>
+		
+                <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+                  <h3 class="text-primary ml-4 title-article-size">
+                    Thư Viện Quotebacks
+                  </h3>
+                </div>
+                <p>
+                  Thư viện <b>Quotebacks</b> giúp bạn có thể tạo trích dẫn đẹp cho trang web của bạn. Và để sử dụng trực tiếp trong 
+                  trang HTML thì bạn thiết lập đoạn CDN dưới đây nhé:
+                </p>
+                <pre><code class="html">&#60;script note="" src="https://cdn.jsdelivr.net/gh/Blogger-Peer-Review/quotebacks@1/quoteback.js"&#62;&#60;/script&#62;</code></pre>
+                <p class="mt-4">
+                  Và để dễ hình dung bạn xem qua ví dụ dưới đây nhé:
+                </p>
+                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="VweRrYG" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Sử dụng thư viện Quotebacks">
+                  <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/VweRrYG">
+                  Sử dụng thư viện Quotebacks</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+                <p class="mt-4">
+                  Ở đây mình có một số lưu ý là:
+                  <ul>
+                    <li><code>data-title</code>: Tiêu đề cho trích dẫn</li>
+                    <li><code>data-author</code>: Tên tác giả của trích dẫn</li>
+                    <li><code>href</code> trong footer chính là đường dẫn của bài viết.</li>
+                  </ul>
+                </p>
+                <p>
+                  Do để thuận lợi cho việc tạo trích dẫn thì tác giả của thư viện đã tạo một công cụ cung cấp đầy đủ các thông tin ở trên.
+                  Bạn chỉ việc nhập vào và đoạn mã tương ứng sẽ được xuất ra. Để sử dụng dụng công cụ đó bạn xem <a href="https://quotebacks.net/" title="quotebacks" target="_blank">ở đây nhé!</a>
+                </p>
+                <p>
+                  Nếu bạn muốn thay đổi một số thuộc tính thì thư viện chưa cung cấp được, do đó bạn cần tải file javascript của nó về 
+                  để chỉnh sửa nhé. <a href="https://cdn.jsdelivr.net/gh/Blogger-Peer-Review/quotebacks@1/quoteback.js" title="quotebacks" target="_blank">Đường dẫn file Javascript thư viện Quotebacks</a>
+                </p>
+
+                <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+                  <h3 class="text-primary ml-4 title-article-size">
+                    Thư Viện SweetAlert
+                  </h3>
+                </div>
+                <p>
+                  <b>SweetAlert</b> giúp bạn tạo ra thông báo đẹp mắt cho trang web cũng như cung cấp nhiều hiệu ứng animation độc đáo cho thông báo của bạn.
+                  Và để sử dụng trực tiếp vào trang HTML thì bạn thiết lập đường dẫn CDN dưới đây nhé:
+                </p>
+                <pre><code class="html">&#60;script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"&#62;&#60;/script&#62;</code></pre>
+                <p class="mt-4">
+                  Và để dễ hình dung bạn xem ví dụ sau đây nhé:
+                </p>
+                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="haycuoilennao19" data-slug-hash="WNrmXzG" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Sử dụng sweetalert cơ bản">
+                  <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/WNrmXzG">
+                  Sử dụng sweetalert cơ bản</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+                <p class="mt-4">
+                  Ở đây mình có lưu ý là thông báo được tạo từ thư viện sẽ có cấu trúc chung như sau <code>swal("Nội dung thông báo")</code>.<br/>
+                  Nếu bạn muốn tạo một thông báo được chia thành 2 phần bao gồm  nội dung và tiêu đề thì sẽ sử dụng cấu trúc sau:
+                  <br/>
+                  <code>swal({title: "Tiêu đề"}, {text: "Nội dung"})</code>
+                </p>
+                <p>
+                  Và để dễ dàng hình dung bạn xem ví dụ sau đây nhé:
+                </p>
+
+                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="haycuoilennao19" data-slug-hash="mdVoqzd" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="su dung sweetalert phan 2">
+                  <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/mdVoqzd">
+                  su dung sweetalert phan 2</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+
+                <p class="mt-4">
+                  Ngoài ra thư viện này còn cung cấp cho chúng ta một số icon giúp người dùng có thể dễ dàng hiểu được loại thông báo như là 
+                  <ul>
+                    <li><code>success</code>: thành công</li>
+                    <li><code>warning</code>: cảnh báo </li>
+                    <li><code>info</code>: thông tin </li>
+                    <li><code>error</code>: lỗi </li>
+                  </ul>
+                </p>
+                <p>
+                  Và chúng ta sẽ có cấu trúc khi thêm các icon này là:  <code>swal({title: "Tiêu đề"}, {text: "Nội dung"}, {icon: "Tên Icon"})</code>.<br/>
+                  Để dễ hình dung bạn xem đoạn code sau đây nhé:
+                </p>
+                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="haycuoilennao19" data-slug-hash="wvMOPNz" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="su dung sweetalert phan 3">
+                  <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/wvMOPNz">
+                  su dung sweetalert phan 3</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+                <p class="mt-4">
+                  Nếu bạn không thấy rõ thì chuyển sang chế độ 0.5x và 0.25 nha. Nếu bạn muốn tham khảo thêm thì truy cập 
+                  <a href="https://sweetalert.js.org/guides/" title="thư viện sweetalert" target="_blank">ở đây nhé</a>.
+                </p>
 
 
-                    <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
-                      <h4>switch:</h4>
-                    </div>
-                    <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="stefgeraets" data-slug-hash="ExfBd" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="switch">
-                      <span>See the Pen <a href="https://codepen.io/stefgeraets/pen/ExfBd">
-                      switch</a> by Stef Geraets (<a href="https://codepen.io/stefgeraets">@stefgeraets</a>)
-                      on <a href="https://codepen.io">CodePen</a>.</span>
-                    </p>
-                    <button type="button " class="btn btn-outline-dark mt-4">
-                      <a rel="external nofollow noopener noreferrer" href="https://codepen.io/stefgeraets/pen/ExfBd"
-                        target="_blank"> Nguồn </a> </button>
+                <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+                  <h3 class="text-primary ml-4 title-article-size">
+                    Csseffects
+                  </h3>
+                </div>
+                <p>
+                  Đây là một bộ sưu tập những hiệu ứng đẹp mắt được viết bằng CSS thuần nên dễ dàng có thể áp dụng cho nhiều loại dự án web khác nhau. Bạn chỉ việc chọn hiệu ứng 
+                  thì đoạn mã CSS sẽ tự động copy vào bộ nhớ RAM của máy tính(như khi ta dùng chức năng copy trên máy tính).
+                </p>
 
-                        <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
-                          <h4>Day to Night Toggle Switch:</h4>
-                        </div>
-                        <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="aybukeceylan" data-slug-hash="QWWrbyK" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Day to Night Toggle Switch">
-                          <span>See the Pen <a href="https://codepen.io/aybukeceylan/pen/QWWrbyK">
-                          Day to Night Toggle Switch</a> by Aybüke Ceylan (<a href="https://codepen.io/aybukeceylan">@aybukeceylan</a>)
-                          on <a href="https://codepen.io">CodePen</a>.</span>
-                        </p>
-                        <button type="button " class="btn btn-outline-dark mt-4">
-                          <a rel="external nofollow noopener noreferrer" href="https://codepen.io/aybukeceylan/pen/QWWrbyK"
-                            target="_blank"> Nguồn </a> </button>
+                <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1595587742/thu-vien-phat-trien-web-phan-1/Csseffects_whmmp9.png"
+                alt="Csseffects">
+
+                <button type="button " class="btn btn-outline-dark mt-4"> <a title="Csseffects"
+                  href="https://emilkowalski.github.io/css-effects-snippets/" target="_blank"> Nguồn </a> </button>
 
 
-                            <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
-                              <h4>CSS Switch:</h4>
-                            </div>
-                            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="cl0udc0ntr0l" data-slug-hash="xhBtF" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS Switch">
-                              <span>See the Pen <a href="https://codepen.io/cl0udc0ntr0l/pen/xhBtF">
-                              CSS Switch</a> by Randy Lebeau (<a href="https://codepen.io/cl0udc0ntr0l">@cl0udc0ntr0l</a>)
-                              on <a href="https://codepen.io">CodePen</a>.</span>
-                            </p>
-                            <button type="button " class="btn btn-outline-dark mt-4">
-                              <a rel="external nofollow noopener noreferrer" href="https://codepen.io/cl0udc0ntr0l/pen/xhBtF"
-                                target="_blank"> Nguồn </a> </button>
-
-
-                                <div class="shadow p-2 mb-2 mt-4 bg-dark text-white rounded">
-                                  <h4>Custom Checkbox / Toggle Switch:</h4>
-                                </div>
-                                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="thelaazyguy" data-slug-hash="MvqpPr" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Custom Checkbox / Toggle Switch">
-                                  <span>See the Pen <a href="https://codepen.io/thelaazyguy/pen/MvqpPr">
-                                  Custom Checkbox / Toggle Switch</a> by thelaazyguy (<a href="https://codepen.io/thelaazyguy">@thelaazyguy</a>)
-                                  on <a href="https://codepen.io">CodePen</a>.</span>
-                                </p>
-                                <button type="button " class="btn btn-outline-dark mt-4">
-                                  <a rel="external nofollow noopener noreferrer" href="https://codepen.io/thelaazyguy/pen/MvqpPr"
-                                    target="_blank"> Nguồn </a> </button>
+                  <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+                    <h3 class="text-primary ml-4 title-article-size">
+                      Tabler Icons
+                    </h3>
+                  </div>
+                  <p>
+                   Đây là một bộ sưu tập hơn 500 icon cho trang web của bạn. Ngoài ra nó còn có công cụ giúp chúng ta có thể chỉnh sủa màu sắc,
+                   kích thước, độ dày của icon một cách dễ dàng. Để dễ hình dung bạn xem hình ảnh bên dưới nhé!
+                  </p>
+  
+                  <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1595588219/thu-vien-phat-trien-web-phan-1/Tabler_Icons_dli33b.png"
+                  alt=" Tabler Icons">
+  
+                  <button type="button " class="btn btn-outline-dark mt-4"> <a title=" Tabler Icons"
+                    href="https://tablericons.com/" target="_blank"> Nguồn </a> </button>
+  
 
 
 
-                              
+
+
+
+
 
 
 
@@ -447,7 +379,7 @@
 
 
 
-            <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn kiến thức về toggle switch
+            <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những thư viện và công cụ
               hữu
               ích
               dành
