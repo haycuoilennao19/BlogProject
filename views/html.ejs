@@ -35,7 +35,7 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i> Những Hiệu Ứng Hover Đẹp Cho Đường Dẫn  (2020) </h2>
+                  aria-hidden="true"></i> Cách Tạo Chức Năng Scroll Indicator Cho Trang Web(2020)</h2>
             </div>
           </div>
 
@@ -46,484 +46,346 @@
           </div>
           <div class="text-content-article mt-5">
             <p><i>
-                Bài viết hôm nay chúng ta hãy cùng nhau đi vào tìm hiểu những hiệu ứng đẹp cho đường dẫn được xây dựng bằng HTML, CSS,
-                Javascript và sử dụng phổ biến trong năm 2020 nhé!
+                Scroll Indicator là một thanh tiến trình biểu thị vị trí hiện tại của người dùng trong trang web thông
+                qua việc xác định vị trí của thanh cuộn.
+                Và để hiểu rõ hơn thì chúng ta sẽ cùng nhau đi vào tìm hiểu cách tạo nó bằng HTML, CSS và Javascript
+                nhé!
               </i>
             </p>
 
 
 
-           
-            <p class="mt-4">Trước khi đi vào ví dụ thì mình có một số chú ý sau là để xem rõ
-              kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> hay nếu nó không hiển thị thì bạn nhớ <b>xác
-                minh mình là con người</b> trong Codepen mới xem được nhé. Nếu file là SCSS thì bạn có thể chuyển sang
-              CSS ở đây nhé : <a href="https://jsonformatter.org/scss-to-css"
-                rel="external nofollow noopener noreferrer" target="_blank">SCSS to CSS</a>. Nếu chúng ta muốn xem các
-              nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở dưới
-              cùng bên trái của Codepen để xem các đường dẫn CDN nha.</p>
-
-
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                The "Read more" link
+                Xây Dựng Chức Năng Scroll Indicator
               </h3>
             </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="melnik909" data-slug-hash="KGxdjY" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="The &amp;quot;Read more&amp;quot; link">
-              <span>See the Pen <a href="https://codepen.io/melnik909/pen/KGxdjY">
-              The &quot;Read more&quot; link</a> by Stas Melnikov (<a href="https://codepen.io/melnik909">@melnik909</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
+
+            <p>
+              Đầu tiên chúng ta sẽ đi vào tạo cấu trúc phần tử HTML cho nó nhé!
+            </p>
+            <h4 class="text-primary">
+              HTML:
+            </h4>
+            <pre><code class="html"> &#60;!--Nguồn&nbsp;W3School--&#62;<br/> &#60;div&nbsp;class="header"&#62;<br/> &nbsp;&nbsp;&#60;h2&#62;Bạn hãy scroll xuống&#60;/h2&#62;<br/> &nbsp;&nbsp;&#60;div&nbsp;class="progress-container"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="progress-bar"&nbsp;id="myBar"&#62;&#60;/div&#62;<br/> &nbsp;&nbsp;&#60;/div&#62;<br/> &#60;/div&#62;<br/>&#60;!--Phần&nbsp;nội&nbsp;dung&nbsp;để&nbsp;giúp&nbsp;chúng&nbsp;ta&nbsp;dễ&nbsp;dàng&nbsp;&nbsp;minh&nbsp;họa&nbsp;cho&nbsp;chức&nbsp;năng&nbsp;Scroll&nbsp;Indicator--&#62;<br/> &#60;div&nbsp;class="noi_dung"&#62;<br/>&nbsp;&nbsp;&nbsp;&#60;p&#62;Some&nbsp;text&nbsp;to&nbsp;enable&nbsp;scrolling..&nbsp;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet,&nbsp;illum&nbsp;definitiones&nbsp;no&nbsp;quo,&nbsp;maluisset&nbsp;concludaturque&nbsp;et&nbsp;eum,&nbsp;altera&nbsp;fabulas&nbsp;ut&nbsp;quo.&nbsp;Atqui&nbsp;causae&nbsp;gloriatur&nbsp;ius&nbsp;te,&nbsp;id&nbsp;agam&nbsp;omnis&nbsp;evertitur&nbsp;eum.&nbsp;Affert&nbsp;laboramus&nbsp;repudiandae&nbsp;nec&nbsp;et.&nbsp;Inciderint&nbsp;efficiantur&nbsp;his&nbsp;ad.&nbsp;Eum&nbsp;no&nbsp;molestiae&nbsp;voluptatibus.&#60;/p&#62; &nbsp;&nbsp;&#60;p&#62;Some&nbsp;text&nbsp;to&nbsp;enable&nbsp;scrolling..&nbsp;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet,&nbsp;illum&nbsp;definitiones&nbsp;no&nbsp;quo,&nbsp;maluisset&nbsp;concludaturque&nbsp;et&nbsp;eum,&nbsp;altera&nbsp;fabulas&nbsp;ut&nbsp;quo.&nbsp;Atqui&nbsp;causae&nbsp;gloriatur&nbsp;ius&nbsp;te,&nbsp;id&nbsp;agam&nbsp;omnis&nbsp;evertitur&nbsp;eum.&nbsp;Affert&nbsp;laboramus&nbsp;repudiandae&nbsp;nec&nbsp;et.&nbsp;Inciderint&nbsp;efficiantur&nbsp;his&nbsp;ad.&nbsp;Eum&nbsp;no&nbsp;molestiae&nbsp;voluptatibus.&#60;/p&#62;<br/> &nbsp;&nbsp;&#60;p&#62;Some&nbsp;text&nbsp;to&nbsp;enable&nbsp;scrolling..&nbsp;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet,&nbsp;illum&nbsp;definitiones&nbsp;no&nbsp;quo,&nbsp;maluisset&nbsp;concludaturque&nbsp;et&nbsp;eum,&nbsp;altera&nbsp;fabulas&nbsp;ut&nbsp;quo.&nbsp;Atqui&nbsp;causae&nbsp;gloriatur&nbsp;ius&nbsp;te,&nbsp;id&nbsp;agam&nbsp;omnis&nbsp;evertitur&nbsp;eum.&nbsp;Affert&nbsp;laboramus&nbsp;repudiandae&nbsp;nec&nbsp;et.&nbsp;Inciderint&nbsp;efficiantur&nbsp;his&nbsp;ad.&nbsp;Eum&nbsp;no&nbsp;molestiae&nbsp;voluptatibus.&#60;/p&#62; &nbsp;&nbsp;&#60;p&#62;Some&nbsp;text&nbsp;to&nbsp;enable&nbsp;scrolling..&nbsp;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet,&nbsp;illum&nbsp;definitiones&nbsp;no&nbsp;quo,&nbsp;maluisset&nbsp;concludaturque&nbsp;et&nbsp;eum,&nbsp;altera&nbsp;fabulas&nbsp;ut&nbsp;quo.&nbsp;Atqui&nbsp;causae&nbsp;gloriatur&nbsp;ius&nbsp;te,&nbsp;id&nbsp;agam&nbsp;omnis&nbsp;evertitur&nbsp;eum.&nbsp;Affert&nbsp;laboramus&nbsp;repudiandae&nbsp;nec&nbsp;et.&nbsp;Inciderint&nbsp;efficiantur&nbsp;his&nbsp;ad.&nbsp;Eum&nbsp;no&nbsp;molestiae&nbsp;voluptatibus.&#60;/p&#62; &nbsp;&nbsp;&#60;p&#62;Some&nbsp;text&nbsp;to&nbsp;enable&nbsp;scrolling..&nbsp;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet,&nbsp;illum&nbsp;definitiones&nbsp;no&nbsp;quo,&nbsp;maluisset&nbsp;concludaturque&nbsp;et&nbsp;eum,&nbsp;altera&nbsp;fabulas&nbsp;ut&nbsp;quo.&nbsp;Atqui&nbsp;causae&nbsp;gloriatur&nbsp;ius&nbsp;te,&nbsp;id&nbsp;agam&nbsp;omnis&nbsp;evertitur&nbsp;eum.&nbsp;Affert&nbsp;laboramus&nbsp;repudiandae&nbsp;nec&nbsp;et.&nbsp;Inciderint&nbsp;efficiantur&nbsp;his&nbsp;ad.&nbsp;Eum&nbsp;no&nbsp;molestiae&nbsp;voluptatibus.&#60;/p&#62; &nbsp;&nbsp;&#60;p&#62;Some&nbsp;text&nbsp;to&nbsp;enable&nbsp;scrolling..&nbsp;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet,&nbsp;illum&nbsp;definitiones&nbsp;no&nbsp;quo,&nbsp;maluisset&nbsp;concludaturque&nbsp;et&nbsp;eum,&nbsp;altera&nbsp;fabulas&nbsp;ut&nbsp;quo.&nbsp;Atqui&nbsp;causae&nbsp;gloriatur&nbsp;ius&nbsp;te,&nbsp;id&nbsp;agam&nbsp;omnis&nbsp;evertitur&nbsp;eum.&nbsp;Affert&nbsp;laboramus&nbsp;repudiandae&nbsp;nec&nbsp;et.&nbsp;Inciderint&nbsp;efficiantur&nbsp;his&nbsp;ad.&nbsp;Eum&nbsp;no&nbsp;molestiae&nbsp;voluptatibus.&#60;/p&#62;<br/> &nbsp;&nbsp;&#60;p&#62;Some&nbsp;text&nbsp;to&nbsp;enable&nbsp;scrolling..&nbsp;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet,&nbsp;illum&nbsp;definitiones&nbsp;no&nbsp;quo,&nbsp;maluisset&nbsp;concludaturque&nbsp;et&nbsp;eum,&nbsp;altera&nbsp;fabulas&nbsp;ut&nbsp;quo.&nbsp;Atqui&nbsp;causae&nbsp;gloriatur&nbsp;ius&nbsp;te,&nbsp;id&nbsp;agam&nbsp;omnis&nbsp;evertitur&nbsp;eum.&nbsp;Affert&nbsp;laboramus&nbsp;repudiandae&nbsp;nec&nbsp;et.&nbsp;Inciderint&nbsp;efficiantur&nbsp;his&nbsp;ad.&nbsp;Eum&nbsp;no&nbsp;molestiae&nbsp;voluptatibus.&#60;/p&#62; &nbsp;&nbsp;&#60;p&#62;Some&nbsp;text&nbsp;to&nbsp;enable&nbsp;scrolling..&nbsp;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet,&nbsp;illum&nbsp;definitiones&nbsp;no&nbsp;quo,&nbsp;maluisset&nbsp;concludaturque&nbsp;et&nbsp;eum,&nbsp;altera&nbsp;fabulas&nbsp;ut&nbsp;quo.&nbsp;Atqui&nbsp;causae&nbsp;gloriatur&nbsp;ius&nbsp;te,&nbsp;id&nbsp;agam&nbsp;omnis&nbsp;evertitur&nbsp;eum.&nbsp;Affert&nbsp;laboramus&nbsp;repudiandae&nbsp;nec&nbsp;et.&nbsp;Inciderint&nbsp;efficiantur&nbsp;his&nbsp;ad.&nbsp;Eum&nbsp;no&nbsp;molestiae&nbsp;voluptatibus.&#60;/p&#62; &nbsp;&nbsp;&#60;p&#62;Some&nbsp;text&nbsp;to&nbsp;enable&nbsp;scrolling..&nbsp;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet,&nbsp;illum&nbsp;definitiones&nbsp;no&nbsp;quo,&nbsp;maluisset&nbsp;concludaturque&nbsp;et&nbsp;eum,&nbsp;altera&nbsp;fabulas&nbsp;ut&nbsp;quo.&nbsp;Atqui&nbsp;causae&nbsp;gloriatur&nbsp;ius&nbsp;te,&nbsp;id&nbsp;agam&nbsp;omnis&nbsp;evertitur&nbsp;eum.&nbsp;Affert&nbsp;laboramus&nbsp;repudiandae&nbsp;nec&nbsp;et.&nbsp;Inciderint&nbsp;efficiantur&nbsp;his&nbsp;ad.&nbsp;Eum&nbsp;no&nbsp;molestiae&nbsp;voluptatibus.&#60;/p&#62;<br/> &nbsp;&nbsp;&#60;p&#62;Some&nbsp;text&nbsp;to&nbsp;enable&nbsp;scrolling..&nbsp;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet,&nbsp;illum&nbsp;definitiones&nbsp;no&nbsp;quo,&nbsp;maluisset&nbsp;concludaturque&nbsp;et&nbsp;eum,&nbsp;altera&nbsp;fabulas&nbsp;ut&nbsp;quo.&nbsp;Atqui&nbsp;causae&nbsp;gloriatur&nbsp;ius&nbsp;te,&nbsp;id&nbsp;agam&nbsp;omnis&nbsp;evertitur&nbsp;eum.&nbsp;Affert&nbsp;laboramus&nbsp;repudiandae&nbsp;nec&nbsp;et.&nbsp;Inciderint&nbsp;efficiantur&nbsp;his&nbsp;ad.&nbsp;Eum&nbsp;no&nbsp;molestiae&nbsp;voluptatibus.&#60;/p&#62;<br/> &#60;/div&#62;<br/></code></pre>
+            <h4 class="mt-4 text-primary">
+              CSS
+            </h4>
+            <pre><code class="css">body&nbsp;{<br/> &nbsp;&nbsp;margin:&nbsp;0;<br/> &nbsp;&nbsp;font-size:&nbsp;26px;<br/> &nbsp;&nbsp;font-family:&nbsp;Arial,&nbsp;Helvetica,&nbsp;sans-serif;<br/> }<br/>.header&nbsp;{<br/> &nbsp;&nbsp;position:&nbsp;fixed;<br/> &nbsp;&nbsp;top:&nbsp;0;<br/> &nbsp;&nbsp;z-index:&nbsp;1;<br/> &nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;background-color:&nbsp;DodgerBlue;<br/> &nbsp;&nbsp;color:&nbsp;white;<br/> }<br/>.header&nbsp;h2&nbsp;{<br/> &nbsp;&nbsp;text-align:&nbsp;center;<br/> }<br/>.progress-container&nbsp;{<br/> &nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;height:&nbsp;8px;<br/> &nbsp;&nbsp;background:&nbsp;#ccc;<br/> }<br/>.progress-bar&nbsp;{<br/> &nbsp;&nbsp;height:&nbsp;8px;<br/> &nbsp;&nbsp;background:&nbsp;DarkOrange;<br/> &nbsp;&nbsp;width:&nbsp;0%;<br/> }<br/>.noi_dung&nbsp;{<br/> &nbsp;&nbsp;padding:&nbsp;100px&nbsp;0;<br/> &nbsp;&nbsp;margin:&nbsp;50px&nbsp;auto&nbsp;0&nbsp;auto;<br/> &nbsp;&nbsp;width:&nbsp;80%;<br/> }<br/></code></pre>
+            <p class="mt-4">
+              Tiếp theo chúng ta sẽ thêm Javascript để thực hiện chức năng scroll indicator cho nó nhé!
+            </p>
+            <h4 class="text-primary">
+              Javascript
+            </h4>
+            <pre><code class="javascript">/*Hàm&nbsp;sẽ&nbsp;được&nbsp;thực&nbsp;hiện&nbsp;khi&nbsp;người&nbsp;dùng&nbsp;cuộn&nbsp;trang*/<br/> window.onscroll&nbsp;=&nbsp;function()&nbsp;{myFunction()};<br/>function&nbsp;myFunction()&nbsp;{<br/> &nbsp;&nbsp;var&nbsp;winScroll&nbsp;=&nbsp;document.body.scrollTop&nbsp;||&nbsp;document.documentElement.scrollTop;<br/> &nbsp;&nbsp;var&nbsp;height&nbsp;=&nbsp;document.documentElement.scrollHeight&nbsp;-&nbsp;document.documentElement.clientHeight;<br/> &nbsp;&nbsp;var&nbsp;scrolled&nbsp;=&nbsp;(winScroll&nbsp;/&nbsp;height)&nbsp;*&nbsp;100;<br/> &nbsp;&nbsp;document.getElementById("myBar").style.width&nbsp;=&nbsp;scrolled&nbsp;+&nbsp;"%";<br/> }<br/></code></pre>
+            <p class="mt-4">
+              Và kết quả cuối cùng bạn xem ở bên dưới nhé (Bạn nên chuyển sang chế độ scren 0.5x hay 0.25x để thấy kết
+              quả tốt hơn nha):
+            </p>
+
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result"
+              data-user="haycuoilennao19" data-slug-hash="NWNRxRP"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="NWNRxRP">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/NWNRxRP">
+                  NWNRxRP</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
             </p>
             <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-
-
-            <button type="button " class="btn btn-outline-dark mt-4 btn-md">
-              <a href="https://codepen.io/melnik909/pen/KGxdjY" target="_blank" rel="noopener noreferrer">
-                Nguồn </a>
-            </button>
-
+            <button type="button " class="btn btn-outline-dark btn-md mt-4"> <a
+                href="https://codepen.io/haycuoilennao19/pen/NWNRxRP" target="_blank" rel="noopener noreferrer"> Nguồn
+              </a> </button>
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-               Animated Gradient Underline
+                Xây Dựng Chức Năng Scroll Indicator Bằng CSS Thuần
               </h3>
             </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="GeorgePark" data-slug-hash="NXjwaN" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Animated Gradient Underline for Link Hover State">
-              <span>See the Pen <a href="https://codepen.io/GeorgePark/pen/NXjwaN">
-              Animated Gradient Underline for Link Hover State</a> by George W. Park (<a href="https://codepen.io/GeorgePark">@GeorgePark</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
+            <p>
+              Phần tiếp theo mình sẽ giới thiệu đến bạn cách tạo khác cho chức năng này thông qua thuộc tính
+              <code>calc</code>
+              trong CSS. Và để hiểu rõ hơn chúng ta hãy cùng nhau xem đoạn mã bên dưới nhé!
             </p>
+            <h4 class="text-primary">
+              HTML:
+            </h4>
+            <pre><code class="html">&#60;main&#62;<br/> &nbsp;&nbsp;&#60;header&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;h1&#62;Scroll&nbsp;Indicator&#60;/h1&#62;<br/> &nbsp;&nbsp;&#60;/header&#62;<br/> &nbsp;&nbsp; &#60;h2&#62;Bạn&nbsp;hãy&nbsp;kéo&nbsp;xuống&nbsp;để&nbsp;thấy&nbsp;kết&nbsp;quả&nbsp;nhé&#60;/h2&#62;<br/> &#60;p&#62;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet,&nbsp;consectetur&nbsp;adipiscing&nbsp;elit.&nbsp;Aliquam&nbsp;porta&nbsp;arcu&nbsp;sed&nbsp;tellus&nbsp;molestie,&nbsp;at&nbsp;consequat&nbsp;massa&nbsp;tristique.&nbsp;Aenean&nbsp;vulputate&nbsp;erat&nbsp;in&nbsp;ipsum&nbsp;cursus&nbsp;venenatis.&nbsp;In&nbsp;in&nbsp;arcu&nbsp;interdum&nbsp;metus&nbsp;vehicula&nbsp;pharetra.&nbsp;In&nbsp;tristique&nbsp;ipsum&nbsp;in&nbsp;tellus&nbsp;dictum&nbsp;sollicitudin.&nbsp;Pellentesque&nbsp;id&nbsp;semper&nbsp;mi,&nbsp;a&nbsp;finibus&nbsp;eros.&nbsp;Ut&nbsp;hendrerit&nbsp;dictum&nbsp;varius.&nbsp;Nulla&nbsp;facilisi.&nbsp;Donec&nbsp;id&nbsp;turpis&nbsp;tincidunt,&nbsp;semper&nbsp;augue&nbsp;quis,&nbsp;gravida&nbsp;odio.&nbsp;Sed&nbsp;convallis&nbsp;ante&nbsp;vestibulum&nbsp;lobortis&nbsp;rhoncus.&nbsp;Suspendisse&nbsp;potenti.&nbsp;Praesent&nbsp;maximus&nbsp;sapien&nbsp;quis&nbsp;massa&nbsp;mattis,&nbsp;at&nbsp;iaculis&nbsp;neque&nbsp;finibus.&nbsp;Proin&nbsp;pretium&nbsp;blandit&nbsp;dignissim.&nbsp;Aliquam&nbsp;magna&nbsp;mauris,&nbsp;congue&nbsp;vitae&nbsp;eros&nbsp;in,&nbsp;efficitur&nbsp;lobortis&nbsp;mi.&nbsp;Ut&nbsp;porta&nbsp;porta&nbsp;aliquet.&#60;/p&#62;<br/> &#60;p&#62;Quisque&nbsp;sit&nbsp;amet&nbsp;ultricies&nbsp;libero,&nbsp;non&nbsp;eleifend&nbsp;nisi.&nbsp;Proin&nbsp;id&nbsp;sem&nbsp;volutpat,&nbsp;pulvinar&nbsp;neque&nbsp;a,&nbsp;tempus&nbsp;tellus.&nbsp;Aliquam&nbsp;tincidunt&nbsp;libero&nbsp;a&nbsp;dolor&nbsp;posuere&nbsp;dictum.&nbsp;In&nbsp;mattis,&nbsp;nibh&nbsp;eu&nbsp;eleifend&nbsp;gravida,&nbsp;justo&nbsp;elit&nbsp;hendrerit&nbsp;lorem,&nbsp;vitae&nbsp;varius&nbsp;est&nbsp;risus&nbsp;a&nbsp;turpis.&nbsp;Sed&nbsp;vel&nbsp;porttitor&nbsp;velit.&nbsp;Interdum&nbsp;et&nbsp;malesuada&nbsp;fames&nbsp;ac&nbsp;ante&nbsp;ipsum&nbsp;primis&nbsp;in&nbsp;faucibus.&nbsp;Curabitur&nbsp;varius&nbsp;ullamcorper&nbsp;gravida.&nbsp;Maecenas&nbsp;tempus&nbsp;id&nbsp;metus&nbsp;ac&nbsp;consequat.&nbsp;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet,&nbsp;consectetur&nbsp;adipiscing&nbsp;elit.&#60;/p&#62;<br/> &#60;p&#62;Donec&nbsp;neque&nbsp;arcu,&nbsp;tincidunt&nbsp;id&nbsp;nisl&nbsp;sed,&nbsp;luctus&nbsp;pulvinar&nbsp;lectus.&nbsp;Pellentesque&nbsp;ornare&nbsp;interdum&nbsp;justo,&nbsp;sed&nbsp;pretium&nbsp;purus&nbsp;lacinia&nbsp;et.&nbsp;Duis&nbsp;pellentesque&nbsp;et&nbsp;massa&nbsp;in&nbsp;finibus.&nbsp;Sed&nbsp;vehicula&nbsp;nec&nbsp;velit&nbsp;quis&nbsp;rutrum.&nbsp;Vivamus&nbsp;eu&nbsp;lobortis&nbsp;justo,&nbsp;sed&nbsp;hendrerit&nbsp;dolor.&nbsp;Nam&nbsp;vitae&nbsp;tellus&nbsp;vel&nbsp;eros&nbsp;semper&nbsp;malesuada.&nbsp;Cras&nbsp;vel&nbsp;neque&nbsp;dictum,&nbsp;accumsan&nbsp;sapien&nbsp;non,&nbsp;laoreet&nbsp;lacus.&nbsp;Vestibulum&nbsp;et&nbsp;fringilla&nbsp;purus.&nbsp;Pellentesque&nbsp;malesuada&nbsp;arcu&nbsp;sed&nbsp;eros&nbsp;iaculis,&nbsp;ac&nbsp;ultricies&nbsp;metus&nbsp;sodales.&nbsp;Vivamus&nbsp;gravida&nbsp;nulla&nbsp;id&nbsp;dictum&nbsp;fermentum.&nbsp;Etiam&nbsp;iaculis&nbsp;ante&nbsp;quis&nbsp;arcu&nbsp;dapibus&nbsp;ultrices.&nbsp;Nulla&nbsp;venenatis&nbsp;efficitur&nbsp;enim&nbsp;nec&nbsp;dictum.&nbsp;In&nbsp;blandit&nbsp;velit&nbsp;at&nbsp;est&nbsp;ullamcorper,&nbsp;in&nbsp;porta&nbsp;mi&nbsp;molestie.&nbsp;Morbi&nbsp;tincidunt&nbsp;ligula&nbsp;eu&nbsp;leo&nbsp;maximus&nbsp;bibendum.&nbsp;Nam&nbsp;ligula&nbsp;nisl,&nbsp;rutrum&nbsp;quis&nbsp;vulputate&nbsp;placerat,&nbsp;consequat&nbsp;non&nbsp;magna.&#60;/p&#62;<br/> &#60;p&#62;Nullam&nbsp;nunc&nbsp;velit,&nbsp;aliquet&nbsp;a&nbsp;turpis&nbsp;eu,&nbsp;feugiat&nbsp;dapibus&nbsp;lorem.&nbsp;Proin&nbsp;eget&nbsp;egestas&nbsp;enim,&nbsp;ac&nbsp;malesuada&nbsp;risus.&nbsp;Phasellus&nbsp;vel&nbsp;placerat&nbsp;elit,&nbsp;vitae&nbsp;dictum&nbsp;libero.&nbsp;Mauris&nbsp;vel&nbsp;interdum&nbsp;tellus,&nbsp;gravida&nbsp;posuere&nbsp;nunc.&nbsp;In&nbsp;in&nbsp;odio&nbsp;dui.&nbsp;Sed&nbsp;sit&nbsp;amet&nbsp;ultrices&nbsp;leo.&nbsp;Integer&nbsp;auctor&nbsp;ornare&nbsp;elit&nbsp;vitae&nbsp;pellentesque.&nbsp;Integer&nbsp;et&nbsp;mattis&nbsp;massa.&nbsp;Aenean&nbsp;sed&nbsp;massa&nbsp;tincidunt,&nbsp;efficitur&nbsp;nunc&nbsp;eget,&nbsp;tempor&nbsp;magna.&nbsp;Quisque&nbsp;luctus&nbsp;elit&nbsp;lectus,&nbsp;sed&nbsp;scelerisque&nbsp;neque&nbsp;ultrices&nbsp;at.&nbsp;Nunc&nbsp;vel&nbsp;nulla&nbsp;eu&nbsp;libero&nbsp;dignissim&nbsp;accumsan.&nbsp;Nunc&nbsp;eu&nbsp;vestibulum&nbsp;metus.&nbsp;Etiam&nbsp;ac&nbsp;est&nbsp;nec&nbsp;libero&nbsp;eleifend&nbsp;commodo&nbsp;vel&nbsp;ac&nbsp;tellus.&nbsp;Proin&nbsp;malesuada&nbsp;purus&nbsp;sed&nbsp;ante&nbsp;interdum,&nbsp;laoreet&nbsp;pretium&nbsp;mauris&nbsp;ornare.&#60;/p&#62;<br/>&nbsp;&#60;p&#62;Mauris&nbsp;porttitor&nbsp;posuere&nbsp;justo&nbsp;vitae&nbsp;ultricies.&nbsp;Sed&nbsp;in&nbsp;pretium&nbsp;urna.&nbsp;Cras&nbsp;orci&nbsp;nulla,&nbsp;bibendum&nbsp;vel&nbsp;nisl&nbsp;non,&nbsp;convallis&nbsp;mattis&nbsp;nisl.&nbsp;Curabitur&nbsp;lorem&nbsp;odio,&nbsp;vulputate&nbsp;ac&nbsp;mollis&nbsp;eget,&nbsp;vulputate&nbsp;vitae&nbsp;neque.&nbsp;Nullam&nbsp;interdum&nbsp;at&nbsp;lacus&nbsp;at&nbsp;sodales.&nbsp;Nulla&nbsp;lobortis&nbsp;elit&nbsp;rhoncus,&nbsp;aliquet&nbsp;ex&nbsp;id,&nbsp;aliquet&nbsp;lorem.&nbsp;Sed&nbsp;ante&nbsp;urna,&nbsp;porta&nbsp;et&nbsp;lobortis&nbsp;nec,&nbsp;aliquet&nbsp;ut&nbsp;nibh.&nbsp;Praesent&nbsp;et&nbsp;tortor&nbsp;at&nbsp;sapien&nbsp;venenatis&nbsp;dapibus&nbsp;non&nbsp;vitae&nbsp;dolor.&nbsp;Phasellus&nbsp;sit&nbsp;amet&nbsp;dignissim&nbsp;justo.&nbsp;Praesent&nbsp;dignissim&nbsp;finibus&nbsp;sem,&nbsp;vitae&nbsp;accumsan&nbsp;felis&nbsp;rhoncus&nbsp;at.&nbsp;Proin&nbsp;molestie&nbsp;vel&nbsp;quam&nbsp;id&nbsp;dapibus.&nbsp;Vestibulum&nbsp;vel&nbsp;ultricies&nbsp;purus,&nbsp;nec&nbsp;blandit&nbsp;mi.&nbsp;Nulla&nbsp;dapibus&nbsp;ex&nbsp;vitae&nbsp;velit&nbsp;venenatis,&nbsp;ac&nbsp;vehicula&nbsp;magna&nbsp;cursus.&#60;/p&#62;<br/>&#60;/main&#62;<br/></code></pre>
 
-            <button type="button " class="btn btn-outline-dark mt-4 btn-md">
-              <a href="https://codepen.io/GeorgePark/pen/NXjwaN" target="_blank" rel="noopener noreferrer">
-                Nguồn </a>
-            </button>
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Cool CSS3 Link Ideas
-              </h3>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="brenden" data-slug-hash="RNZXqx" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Cool CSS3 Link Ideas">
-              <span>See the Pen <a href="https://codepen.io/brenden/pen/RNZXqx">
-              Cool CSS3 Link Ideas</a> by Brenden Palmer (<a href="https://codepen.io/brenden">@brenden</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
+            <h4 class="text-primary mt-4">
+              CSS:
+            </h4>
+            <pre><code class="css">html,&nbsp;body&nbsp;{<br/> &nbsp;&nbsp;margin:&nbsp;0;<br/> &nbsp;&nbsp;padding:&nbsp;0;<br/> }<br/>header&nbsp;{<br/> &nbsp;&nbsp;position:&nbsp;fixed;<br/> &nbsp;&nbsp;top:&nbsp;0;<br/> &nbsp;&nbsp;height:&nbsp;125px;<br/> &nbsp;&nbsp;width:&nbsp;100vw;<br/> &nbsp;&nbsp;background:&nbsp;#ECF0F1;<br/> }<br/> body&nbsp;{<br/> &nbsp;&nbsp;font-size:&nbsp;1.25rem;<br/> &nbsp;&nbsp;background-color:#fafafa;<br/> &nbsp;&nbsp;background:&nbsp;linear-gradient(to&nbsp;right&nbsp;top,&nbsp;#0089f2&nbsp;50%,&nbsp;#DDD&nbsp;50%);<br/> &nbsp;&nbsp;background-size:&nbsp;100%&nbsp;calc(100%&nbsp;-&nbsp;100vh&nbsp;+&nbsp;129px);<br/> &nbsp;&nbsp;background-repeat:&nbsp;no-repeat;<br/> }<br/> body:before&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;content:&nbsp;'';<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;fixed;<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;128px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;bottom:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;z-index:&nbsp;-1;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;white;<br/> }<br/> main&nbsp;{<br/> &nbsp;&nbsp;margin-top:&nbsp;128px;<br/> }<br/></code></pre>
+            <p class="mt-4">
+              Và kết quả cuối cùng bạn xem ở bên dưới nhé:
             </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4 btn-md">
-              <a href="https://codepen.io/brenden/pen/RNZXqx" target="_blank" rel="noopener noreferrer">
-                Nguồn </a>
-            </button>
-
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Link Effectz
-              </h3>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="geoffgraham" data-slug-hash="bxEVEN" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Link Effectz - Squiggle">
-              <span>See the Pen <a href="https://codepen.io/geoffgraham/pen/bxEVEN">
-              Link Effectz - Squiggle</a> by Geoff Graham (<a href="https://codepen.io/geoffgraham">@geoffgraham</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result"
+              data-user="haycuoilennao19" data-slug-hash="QWNKymE"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="QWNKymE">
+              <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/QWNKymE">
+                  QWNKymE</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
             </p>
+            <button type="button " class="btn btn-outline-dark btn-md mt-4"> <a
+                href="https://codepen.io/haycuoilennao19/pen/QWNKymE" target="_blank" rel="noopener noreferrer"> Nguồn
+              </a> </button>
 
-            <button type="button " class="btn btn-outline-dark mt-4 btn-md">
-              <a href="https://codepen.io/geoffgraham/pen/bxEVEN" target="_blank" rel="noopener noreferrer">
-                Nguồn </a>
-            </button>
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Link effect
-              </h3>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="electerious" data-slug-hash="XzrNwp" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Link effect">
-              <span>See the Pen <a href="https://codepen.io/electerious/pen/XzrNwp">
-              Link effect</a> by Tobias Reich (<a href="https://codepen.io/electerious">@electerious</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4 btn-md">
-              <a href="https://codepen.io/electerious/pen/XzrNwp" target="_blank" rel="noopener noreferrer">
-                Nguồn </a>
-            </button>
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Link with gradient background on hover
-              </h3>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="giuliamalaroda" data-slug-hash="QBOGdG" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="#0001 • Link with gradient background on hover">
-              <span>See the Pen <a href="https://codepen.io/giuliamalaroda/pen/QBOGdG">
-              #0001 • Link with gradient background on hover</a> by Giulia Malaroda (<a href="https://codepen.io/giuliamalaroda">@giuliamalaroda</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4 btn-md">
-              <a href="https://codepen.io/giuliamalaroda/pen/QBOGdG" target="_blank" rel="noopener noreferrer">
-                Nguồn </a>
-            </button>
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Single Element Link Styling
-              </h3>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="abergin" data-slug-hash="LGuJd" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Single Element Link Styling">
-              <span>See the Pen <a href="https://codepen.io/abergin/pen/LGuJd">
-              Single Element Link Styling</a> by Alex Bergin (<a href="https://codepen.io/abergin">@abergin</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4 btn-md">
-              <a href="https://codepen.io/abergin/pen/LGuJd" target="_blank" rel="noopener noreferrer">
-                Nguồn </a>
-            </button>
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Subtle link animations
-              </h3>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="butsuri" data-slug-hash="bKjHz" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Subtle link animations.">
-              <span>See the Pen <a href="https://codepen.io/butsuri/pen/bKjHz">
-              Subtle link animations.</a> by Josip Psihistal (<a href="https://codepen.io/butsuri">@butsuri</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4 btn-md">
-              <a href="https://codepen.io/butsuri/pen/bKjHz" target="_blank" rel="noopener noreferrer">
-                Nguồn </a>
-            </button>
-
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Link Hover Arrow Idea
-              </h3>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="gabriellewee" data-slug-hash="ddjYmY" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Link Hover Arrow Idea">
-              <span>See the Pen <a href="https://codepen.io/gabriellewee/pen/ddjYmY">
-              Link Hover Arrow Idea</a> by Gabrielle Wee 🧧 (<a href="https://codepen.io/gabriellewee">@gabriellewee</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4 btn-md">
-              <a href="https://codepen.io/gabriellewee/pen/ddjYmY" target="_blank" rel="noopener noreferrer">
-                Nguồn </a>
-            </button>
-
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Link Highlight Hover/Click Effect
-              </h3>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="eehayman" data-slug-hash="WoWzWd" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Link Highlight Hover/Click Effect">
-              <span>See the Pen <a href="https://codepen.io/eehayman/pen/WoWzWd">
-              Link Highlight Hover/Click Effect</a> by Emily Hayman (<a href="https://codepen.io/eehayman">@eehayman</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4 btn-md">
-              <a href="https://codepen.io/eehayman/pen/WoWzWd" target="_blank" rel="noopener noreferrer">
-                Nguồn </a>
-            </button>
-
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Menu Hover Line Effect
-              </h3>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="mburakerman" data-slug-hash="xpZJYL" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Menu Hover Line Effect ">
-              <span>See the Pen <a href="https://codepen.io/mburakerman/pen/xpZJYL">
-              Menu Hover Line Effect </a> by Mehmet Burak Erman  (<a href="https://codepen.io/mburakerman">@mburakerman</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4 btn-md">
-              <a href="https://codepen.io/mburakerman/pen/xpZJYL" target="_blank" rel="noopener noreferrer">
-                Nguồn </a>
-            </button>
 
 
 
 
             <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
               <h3 class="text-primary ml-4 title-article-size">
-                Text underline hover effects
+                Các Ví Dụ Về Scroll Indicator
               </h3>
             </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="MishaHahaha" data-slug-hash="AXxYKQ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Text underline hover effects">
-              <span>See the Pen <a href="https://codepen.io/MishaHahaha/pen/AXxYKQ">
-              Text underline hover effects</a> by Misha Heesakkers (<a href="https://codepen.io/MishaHahaha">@MishaHahaha</a>)
+
+            <p class="mt-4">Trước khi đi vào ví dụ thì mình có một số chú ý sau là để xem rõ kết quả hơn bạn chuyển sang
+              chế độ screen <b>0.5x, 0.25x</b> hay nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b>
+              trong Codepen mới xem được nhé. Nếu file là SCSS thì bạn có thể chuyển sang CSS ở đây nhé : <a
+                href="https://jsonformatter.org/scss-to-css" rel="external nofollow noopener noreferrer"
+                target="_blank">SCSS to CSS</a>. Nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết
+              lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường
+              dẫn CDN nha.</p>
+
+            <div class="col-sm-12 bg-primary text-white p-2 mb-4 mt-4 shadow rounded-pill">
+              <h4 class=" ml-4 title-article-size"> Ví Dụ 1</h4>
+            </div>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result"
+              data-user="jbsmith731" data-slug-hash="NPmYEJ"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Scroll Progress">
+              <span>See the Pen <a href="https://codepen.io/jbsmith731/pen/NPmYEJ">
+                  Scroll Progress</a> by Brett Smith (<a href="https://codepen.io/jbsmith731">@jbsmith731</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <button type="button " class="btn btn-outline-dark btn-md mt-4"> <a
+                href="https://codepen.io/jbsmith731/pen/NPmYEJ" target="_blank" rel="noopener noreferrer"> Nguồn
+              </a> </button>
+
+            <div class="col-sm-12 bg-primary text-white p-2 mb-4 mt-4 shadow rounded-pill">
+              <h4 class=" ml-4 title-article-size"> Ví Dụ 2</h4>
+            </div>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
+              data-user="uiswarup" data-slug-hash="wvMMrgo"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="scroll-progress">
+              <span>See the Pen <a href="https://codepen.io/uiswarup/pen/wvMMrgo">
+                  scroll-progress</a> by Swarup Kumar Kuila (<a href="https://codepen.io/uiswarup">@uiswarup</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <button type="button " class="btn btn-outline-dark btn-md mt-4"> <a
+                href="https://codepen.io/uiswarup/pen/wvMMrgo" target="_blank" rel="noopener noreferrer"> Nguồn
+              </a> </button>
+
+
+            <div class="col-sm-12 bg-primary text-white p-2 mb-4 mt-4 shadow rounded-pill">
+              <h4 class=" ml-4 title-article-size"> Ví Dụ 3</h4>
+            </div>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result"
+              data-user="adelciotto" data-slug-hash="zKLrrq"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Scroll Progress Bar">
+              <span>See the Pen <a href="https://codepen.io/adelciotto/pen/zKLrrq">
+                  Scroll Progress Bar</a> by adelciotto (<a href="https://codepen.io/adelciotto">@adelciotto</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+
+            <button type="button " class="btn btn-outline-dark btn-md mt-4"> <a
+                href="https://codepen.io/adelciotto/pen/zKLrrq" target="_blank" rel="noopener noreferrer"> Nguồn
+              </a> </button>
+
+            <div class="col-sm-12 bg-primary text-white p-2 mb-4 mt-4 shadow rounded-pill">
+              <h4 class=" ml-4 title-article-size"> Ví Dụ 4</h4>
+            </div>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result"
+              data-user="hkfoster" data-slug-hash="atCzI"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="SVG Circular Scroll Progress Bar">
+              <span>See the Pen <a href="https://codepen.io/hkfoster/pen/atCzI">
+                  SVG Circular Scroll Progress Bar</a> by Kyle Foster (<a
+                  href="https://codepen.io/hkfoster">@hkfoster</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+
+            <button type="button " class="btn btn-outline-dark btn-md mt-4"> <a
+                href="https://codepen.io/hkfoster/pen/atCzI" target="_blank" rel="noopener noreferrer"> Nguồn
+              </a> </button>
+
+
+            <div class="col-sm-12 bg-primary text-white p-2 mb-4 mt-4 shadow rounded-pill">
+              <h4 class=" ml-4 title-article-size"> Ví Dụ 5</h4>
+            </div>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
+              data-user="EricPorter" data-slug-hash="rNexdrG"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Scroll Progress Bar">
+              <span>See the Pen <a href="https://codepen.io/EricPorter/pen/rNexdrG">
+                  Scroll Progress Bar</a> by Eric Porter (<a href="https://codepen.io/EricPorter">@EricPorter</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+
+            <button type="button " class="btn btn-outline-dark btn-md mt-4"> <a
+                href="https://codepen.io/EricPorter/pen/rNexdrG" target="_blank" rel="noopener noreferrer"> Nguồn
+              </a> </button>
+
+
+            <div class="col-sm-12 bg-primary text-white p-2 mb-4 mt-4 shadow rounded-pill">
+              <h4 class=" ml-4 title-article-size"> Ví Dụ 6</h4>
+            </div>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result"
+              data-user="ayoungh" data-slug-hash="KdhLC"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Scroll Progress Indicator With jQuery and SVG">
+              <span>See the Pen <a href="https://codepen.io/ayoungh/pen/KdhLC">
+                  Scroll Progress Indicator With jQuery and SVG</a> by Anthony Young (<a
+                  href="https://codepen.io/ayoungh">@ayoungh</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+
+            <button type="button " class="btn btn-outline-dark btn-md mt-4"> <a
+                href="https://codepen.io/ayoungh/pen/KdhLC" target="_blank" rel="noopener noreferrer"> Nguồn
+              </a> </button>
+
+
+
+
+
+            <div class="col-sm-12 bg-primary text-white p-2 mb-4 mt-4 shadow rounded-pill">
+              <h4 class=" ml-4 title-article-size"> Ví Dụ 7</h4>
+            </div>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="mel"
+              data-slug-hash="OPXNaq"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="CSS3 Responsive Progress Scroll">
+              <span>See the Pen <a href="https://codepen.io/mel/pen/OPXNaq">
+                  CSS3 Responsive Progress Scroll</a> by Mario Vidov (<a href="https://codepen.io/mel">@mel</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+
+            <button type="button " class="btn btn-outline-dark btn-md mt-4"> <a href="https://codepen.io/mel/pen/OPXNaq"
+                target="_blank" rel="noopener noreferrer"> Nguồn
+              </a> </button>
+
+
+            <div class="col-sm-12 bg-primary text-white p-2 mb-4 mt-4 shadow rounded-pill">
+              <h4 class=" ml-4 title-article-size"> Ví Dụ 8</h4>
+            </div>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="vank0"
+              data-slug-hash="ZOVbpW"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Scroll interactions">
+              <span>See the Pen <a href="https://codepen.io/vank0/pen/ZOVbpW">
+                  Scroll interactions</a> by Ivan (<a href="https://codepen.io/vank0">@vank0</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+
+            <button type="button " class="btn btn-outline-dark btn-md mt-4"> <a
+                href="https://codepen.io/vank0/pen/ZOVbpW" target="_blank" rel="noopener noreferrer"> Nguồn
+              </a> </button>
+
+            <div class="col-sm-12 bg-primary text-white p-2 mb-4 mt-4 shadow rounded-pill">
+              <h4 class=" ml-4 title-article-size"> Ví Dụ 9</h4>
+            </div>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="haja-ran"
+              data-slug-hash="oNvdPxv"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Smoooth Scroll">
+              <span>See the Pen <a href="https://codepen.io/haja-ran/pen/oNvdPxv">
+                  Smoooth Scroll</a> by Haja Randriakoto (<a href="https://codepen.io/haja-ran">@haja-ran</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+
+            <button type="button " class="btn btn-outline-dark btn-md mt-4"> <a
+                href="https://codepen.io/haja-ran/pen/oNvdPxv" target="_blank" rel="noopener noreferrer"> Nguồn
+              </a> </button>
+            <div class="col-sm-12 bg-primary text-white p-2 mb-4 mt-4 shadow rounded-pill">
+              <h4 class=" ml-4 title-article-size"> Ví Dụ 10</h4>
+            </div>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result"
+              data-user="rustemgareev" data-slug-hash="mQLpKw"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="MDC Web Scrolling Progress">
+              <span>See the Pen <a href="https://codepen.io/rustemgareev/pen/mQLpKw">
+                  MDC Web Scrolling Progress</a> by Rustem Gareev (<a
+                  href="https://codepen.io/rustemgareev">@rustemgareev</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+
+            <button type="button " class="btn btn-outline-dark btn-md mt-4"> <a
+                href="https://codepen.io/rustemgareev/pen/mQLpKw" target="_blank" rel="noopener noreferrer"> Nguồn
+              </a> </button>
+
+
+            <div class="col-sm-12 bg-primary text-white p-2 mb-4 mt-4 shadow rounded-pill">
+              <h4 class=" ml-4 title-article-size"> Ví Dụ 11</h4>
+            </div>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="RyanNHG" data-slug-hash="ppzYVZ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Vue: Scroll Progress">
+              <span>See the Pen <a href="https://codepen.io/RyanNHG/pen/ppzYVZ">
+              Vue: Scroll Progress</a> by Ryan (<a href="https://codepen.io/RyanNHG">@RyanNHG</a>)
               on <a href="https://codepen.io">CodePen</a>.</span>
             </p>
 
-            <button type="button " class="btn btn-outline-dark mt-4 btn-md">
-              <a href="https://codepen.io/MishaHahaha/pen/AXxYKQ" target="_blank" rel="noopener noreferrer">
-                Nguồn </a>
-            </button>
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Link Hover Effects w/ mo.js
-              </h3>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="mprquinn" data-slug-hash="OmOMrR" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Link Hover Effects w/ mo.js ">
-              <span>See the Pen <a href="https://codepen.io/mprquinn/pen/OmOMrR">
-              Link Hover Effects w/ mo.js </a> by Mike Quinn (<a href="https://codepen.io/mprquinn">@mprquinn</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4 btn-md">
-              <a href="https://codepen.io/mprquinn/pen/OmOMrR" target="_blank" rel="noopener noreferrer">
-                Nguồn </a>
-            </button>
+            <button type="button " class="btn btn-outline-dark btn-md mt-4"> <a
+                href="https://codepen.io/RyanNHG/pen/ppzYVZ" target="_blank" rel="noopener noreferrer"> Nguồn
+              </a> </button>
 
 
 
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                css link effects
-              </h3>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="samvdh" data-slug-hash="MmZzyR" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="css link effects, by sam van der Heijden">
-              <span>See the Pen <a href="https://codepen.io/samvdh/pen/MmZzyR">
-              css link effects, by sam van der Heijden</a> by Sam van der Heijden (<a href="https://codepen.io/samvdh">@samvdh</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4 btn-md">
-              <a href="https://codepen.io/samvdh/pen/MmZzyR" target="_blank" rel="noopener noreferrer">
-                Nguồn </a>
-            </button>
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Link hover
-              </h3>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="hafizfattah" data-slug-hash="tkgyK" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Link hover">
-              <span>See the Pen <a href="https://codepen.io/hafizfattah/pen/tkgyK">
-              Link hover</a> by hafiz fattah (<a href="https://codepen.io/hafizfattah">@hafizfattah</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4 btn-md">
-              <a href="https://codepen.io/hafizfattah/pen/tkgyK" target="_blank" rel="noopener noreferrer">
-                Nguồn </a>
-            </button>
+              <div class="col-sm-12 bg-primary text-white p-2 mb-4 mt-4 shadow rounded-pill">
+                <h4 class=" ml-4 title-article-size"> Ví Dụ 12</h4>
+              </div>
+              <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="jon_tay" data-slug-hash="XPjdEw" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="React Scroll Progress Indicator">
+                <span>See the Pen <a href="https://codepen.io/jon_tay/pen/XPjdEw">
+                React Scroll Progress Indicator</a> by Jonathan T. (<a href="https://codepen.io/jon_tay">@jon_tay</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+              </p>
+  
+              <button type="button " class="btn btn-outline-dark btn-md mt-4"> <a
+                  href="https://codepen.io/jon_tay/pen/XPjdEw" target="_blank" rel="noopener noreferrer"> Nguồn
+                </a> </button>
 
 
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Anchor Click Canvas Animation
-              </h3>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="nicksheffield" data-slug-hash="NNEoLg" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Anchor Click Canvas Animation">
-              <span>See the Pen <a href="https://codepen.io/nicksheffield/pen/NNEoLg">
-              Anchor Click Canvas Animation</a> by Nick Sheffield (<a href="https://codepen.io/nicksheffield">@nicksheffield</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4 btn-md">
-              <a href="https://codepen.io/nicksheffield/pen/NNEoLg" target="_blank" rel="noopener noreferrer">
-                Nguồn </a>
-            </button>
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Rolling Links
-              </h3>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="hakimel" data-slug-hash="scrhL" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Rolling Links">
-              <span>See the Pen <a href="https://codepen.io/hakimel/pen/scrhL">
-              Rolling Links</a> by Hakim El Hattab (<a href="https://codepen.io/hakimel">@hakimel</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4 btn-md">
-              <a href="https://codepen.io/hakimel/pen/scrhL" target="_blank" rel="noopener noreferrer">
-                Nguồn </a>
-            </button>
+                <div class="col-sm-12 bg-primary text-white p-2 mb-4 mt-4 shadow rounded-pill">
+                  <h4 class=" ml-4 title-article-size"> Ví Dụ 13</h4>
+                </div>
+                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="ricardpriet" data-slug-hash="RjXdPa" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Reading Progess Bar CSS only">
+                  <span>See the Pen <a href="https://codepen.io/ricardpriet/pen/RjXdPa">
+                  Reading Progess Bar CSS only</a> by Ricardo Prieto (<a href="https://codepen.io/ricardpriet">@ricardpriet</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+    
+                <button type="button " class="btn btn-outline-dark btn-md mt-4"> <a
+                    href="https://codepen.io/ricardpriet/pen/RjXdPa" target="_blank" rel="noopener noreferrer"> Nguồn
+                  </a> </button>
 
 
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Animated external link icon
-              </h3>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="ccrch" data-slug-hash="KrjKak" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Animated external link icon">
-              <span>See the Pen <a href="https://codepen.io/ccrch/pen/KrjKak">
-              Animated external link icon</a> by Krz Szzz (<a href="https://codepen.io/ccrch">@ccrch</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
+                  <div class="col-sm-12 bg-primary text-white p-2 mb-4 mt-4 shadow rounded-pill">
+                    <h4 class=" ml-4 title-article-size"> Ví Dụ 14</h4>
+                  </div>
+                  <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="SachaG" data-slug-hash="GkfFe" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="SVG Reading Progress Indicator">
+                    <span>See the Pen <a href="https://codepen.io/SachaG/pen/GkfFe">
+                    SVG Reading Progress Indicator</a> by SachaG (<a href="https://codepen.io/SachaG">@SachaG</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                  <button type="button " class="btn btn-outline-dark btn-md mt-4"> <a
+                      href="https://codepen.io/SachaG/pen/GkfFe" target="_blank" rel="noopener noreferrer"> Nguồn
+                    </a> </button>
 
-            <button type="button " class="btn btn-outline-dark mt-4 btn-md">
-              <a href="https://codepen.io/ccrch/pen/KrjKak" target="_blank" rel="noopener noreferrer">
-                Nguồn </a>
-            </button>
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Animated font weight on hover
-              </h3>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="jesperkc" data-slug-hash="YaGYRr" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Animated font weight on hover">
-              <span>See the Pen <a href="https://codepen.io/jesperkc/pen/YaGYRr">
-              Animated font weight on hover</a> by Jesper Strange Klitgaard Christiansen (<a href="https://codepen.io/jesperkc">@jesperkc</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4 btn-md">
-              <a href="https://codepen.io/jesperkc/pen/YaGYRr" target="_blank" rel="noopener noreferrer">
-                Nguồn </a>
-            </button>
-
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Nice line movement hover
-              </h3>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="brunob182" data-slug-hash="rWxYmW" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Nice line movement hover">
-              <span>See the Pen <a href="https://codepen.io/brunob182/pen/rWxYmW">
-              Nice line movement hover</a> by Bruno Almeida (<a href="https://codepen.io/brunob182">@brunob182</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4 btn-md">
-              <a href="https://codepen.io/brunob182/pen/rWxYmW" target="_blank" rel="noopener noreferrer">
-                Nguồn </a>
-            </button>
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Menu hover effect
-              </h3>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="jasonheecs" data-slug-hash="zodWjz" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Menu hover effect">
-              <span>See the Pen <a href="https://codepen.io/jasonheecs/pen/zodWjz">
-              Menu hover effect</a> by Jason Hee (<a href="https://codepen.io/jasonheecs">@jasonheecs</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4 btn-md">
-              <a href="https://codepen.io/jasonheecs/pen/zodWjz" target="_blank" rel="noopener noreferrer">
-                Nguồn </a>
-            </button>
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Link Style Experiments
-              </h3>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="cssgirl" data-slug-hash="VYGjRj" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Link Style Experiments">
-              <span>See the Pen <a href="https://codepen.io/cssgirl/pen/VYGjRj">
-              Link Style Experiments</a> by Lindsey (<a href="https://codepen.io/cssgirl">@cssgirl</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4 btn-md">
-              <a href="https://codepen.io/cssgirl/pen/VYGjRj" target="_blank" rel="noopener noreferrer">
-                Nguồn </a>
-            </button>
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Hover effect left to right on text color
-              </h3>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="babouz44" data-slug-hash="rPNYVW" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Hover effect left to right on text color">
-              <span>See the Pen <a href="https://codepen.io/babouz44/pen/rPNYVW">
-              Hover effect left to right on text color</a> by Boris (<a href="https://codepen.io/babouz44">@babouz44</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4 btn-md">
-              <a href="https://codepen.io/babouz44/pen/rPNYVW" target="_blank" rel="noopener noreferrer">
-                Nguồn </a>
-            </button>
-
-
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                 Link hover effect
-              </h3>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="ArnaudBalland" data-slug-hash="wBZZNa" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Link hover effect">
-              <span>See the Pen <a href="https://codepen.io/ArnaudBalland/pen/wBZZNa">
-              Link hover effect</a> by Arnaud Balland (<a href="https://codepen.io/ArnaudBalland">@ArnaudBalland</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4 btn-md">
-              <a href="https://codepen.io/ArnaudBalland/pen/wBZZNa" target="_blank" rel="noopener noreferrer">
-                Nguồn </a>
-            </button>
-
-
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Link Fill on Hover
-              </h3>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="kathykato" data-slug-hash="zYYRGRQ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Link Fill on Hover">
-              <span>See the Pen <a href="https://codepen.io/kathykato/pen/zYYRGRQ">
-              Link Fill on Hover</a> by Katherine Kato (<a href="https://codepen.io/kathykato">@kathykato</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4 btn-md">
-              <a href="https://codepen.io/kathykato/pen/zYYRGRQ" target="_blank" rel="noopener noreferrer">
-                Nguồn </a>
-            </button>
-
-
-
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Arrow link :hover effect
-              </h3>
-            </div>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="udyux" data-slug-hash="jrbzZG" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Arrow link :hover effect">
-              <span>See the Pen <a href="https://codepen.io/udyux/pen/jrbzZG">
-              Arrow link :hover effect</a> by Nicolas Udy (<a href="https://codepen.io/udyux">@udyux</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-            <button type="button " class="btn btn-outline-dark mt-4 btn-md">
-              <a href="https://codepen.io/udyux/pen/jrbzZG" target="_blank" rel="noopener noreferrer">
-                Nguồn </a>
-            </button>
-
-
-
-
-
-
-
-
-
-
+                    <div class="col-sm-12 bg-primary text-white p-2 mb-4 mt-4 shadow rounded-pill">
+                      <h4 class=" ml-4 title-article-size"> Ví Dụ 15</h4>
+                    </div>
+                    <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="jpod" data-slug-hash="oqKvw" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Reading Progress Bar">
+                      <span>See the Pen <a href="https://codepen.io/jpod/pen/oqKvw">
+                      Reading Progress Bar</a> by James Podles (<a href="https://codepen.io/jpod">@jpod</a>)
+                      on <a href="https://codepen.io">CodePen</a>.</span>
+                    </p>
+                    
+                    <button type="button " class="btn btn-outline-dark btn-md mt-4"> <a
+                        href="https://codepen.io/jpod/pen/oqKvw" target="_blank" rel="noopener noreferrer"> Nguồn
+                      </a> </button>
 
 
 
@@ -547,7 +409,7 @@
 
 
 
-            <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những hiệu ứng đường dẫn
+            <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những cách tạo  scroll indicato
               hữu
               ích
               dành
