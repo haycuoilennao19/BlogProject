@@ -116,11 +116,10 @@
       <p class="text-muted"><i class="fa fa-clock-o" aria-hidden="true"></i> <%=post.date%></p>
       <div class="d-flex justify-content-end">
         <button class="learn-more">
-          <span class="circle">
-            <span class="icon arrow"></span>
-          </span>
-          <a class="button-text" href="/article/<%-post.slug%>"><span">Tiếp tục đọc</span></a>
-        </button>
+          <a class="btn btn-outline-secondary" title="<%-post.title%>" href="/article/<%-post.slug%>">
+              Tiếp tục đọc
+             </a>
+           </button>
       </div>
     </div>
   </div>
