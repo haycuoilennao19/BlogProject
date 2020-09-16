@@ -50,10 +50,10 @@
 }
   </style>
   <link rel='stylesheet' href='/stylesheets/style1.css' />
+  
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="print" onload="this.media='all'">
-<script data-ad-client="ca-pub-7896774460267824" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
  
 <meta name="google-site-verification" content="SXEFa5YhgCrmAOJhBwsuDms_fUALYxrM8ZUql8KHgNM" />
 <script async src="https://cse.google.com/cse.js?cx=758420e54139c0b82"></script>
@@ -121,6 +121,8 @@
     </div>
     </div>
   </div>
+
+  
   <div class="header-text text-center mt-5 ">
     <div class="container-fluid">
       <div class="row">
@@ -134,42 +136,50 @@
     </div>
     <h1><span class="header-content">Bài Viết Mới Nhất</span> </h1>
   </div>
-  <div class="container-fluid mt-5">
-    <div class="row justify-content-center">
-      <% posts.forEach(function(post){ %>
-      <div class="card border-0 shadow card-row-article">
-        <!-- <div class="card-header"> <img data-src="" class="card-img-top header-img img-fluid lazyload"
-            alt="">
-        </div> -->
-        <div class="card-header"> <img src="<%-post.file%>" class="card-img-top header-img img-fluid "
-          alt="<%-post.title%>">
-      </div>
-        
-        <div class="card-body">
-         <p>
-          <button type="button"
-          class="<%-post.category%> btn shadow-sm rounded btn-success mt-2 mb-2 pl-2 pr-2"><%=post.category%></button>
-         </p> 
-          <h2 class="card-title-article"><%=post.title%></h2>
-          <hr />
-          <p class="card-text text-justify text-truncate"><%-post.subtitle%></p>
-          <p class="text-date"><i class="fa fa-clock-o" aria-hidden="true"></i> <%=post.date%></p>
-       
+
+  
+  <div class="container">
+    <div class="row">
+      
+        <% posts.forEach(function(post){ %>
+          <div class="col-md-12 mb-4">
+        <div class="row mt-4 card-blogpost shadow">
+          <div class="col-md-6 card-blogpost-image">
+            <img src="<%-post.file%>" class="img-fluid"
+            alt="<%-post.title%>">
+            <button type="button"
+              class="<%-post.category%> button-card-category btn  mt-2 mb-2 pl-2 pr-2"><%=post.category%></button>
+              <p class="text-date"><i class="fa fa-clock-o" aria-hidden="true"></i> <%=post.date%></p>
+          </div>
+          <div class="col-md-6">
+            <p>
+              
+             </p> 
+              <h2 class="card-title-article"><%=post.title%></h2>
+              <hr />
+              <p class="card-text text-justify "><%-post.subtitle%></p>
+              
+           
      
-          <div class="d-flex justify-content-end mb-2">
-        
-            <button class="learn-more">
-           <a class="btn btn-outline-secondary" title="<%-post.title%>" href="/article/<%-post.slug%>">
-               Tiếp tục đọc
-              </a>
-            </button>
+            
+                <button class="button-blog-post mb-4">
+               <a  title="<%-post.title%>" href="/article/<%-post.slug%>">
+                   Tiếp tục đọc
+                  </a>
+                </button>
+
+            
           </div>
         </div>
       </div>
-      <% }) %>
+        <% }) %>
+  
     </div>
   </div>
 
+ 
+ 
+  
 <div class="container">
 <div class="row justify-content-center">
   <div class="col-sm-6">
@@ -273,7 +283,6 @@
     </div>
  
     
-
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

@@ -53,7 +53,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <link rel='stylesheet' href='/stylesheets/style1.css' />
-<script data-ad-client="ca-pub-7896774460267824" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
 <style>
   p{
     font-size: 1rem;
@@ -148,20 +148,38 @@
   </div>
   </div>
 </div>
-<div class="container header-text text-center mt-5 ">
-<h1 class="text-white bg-primary p-2 mt-4 mb-4 shadow rounded h3"><%=article.title%></h1>
-</div>
-<div class="container mt-5" id="content-box">
+
+<div class="container mt-5">
   <div class="row">
-    <div class="col-lg-12 col-md-12 col-xs-12">
-     
+    <div class="col-md-12">
+      <h1 class="text-primary card-title-article text-center  p-2 mt-4 mb-4 shadow rounded h3"><%=article.title%></h1>
+    </div>
+  </div>
+  <div class="row">
+    
+    <div class="col-md-2">
+        
+       </div>
+    <div class="col-md-8 card-blogpost-image-article">
       
-        <h2 class="card-header h5"> <img src="<%-article.file%>" class="card-img-top img-thumbnail" alt="<%-article.title%>"></h2>
-        <h3 class="button-article"><button type="button"
-            class="<%-article.category%> btn shadow-sm rounded btn-success mt-3 pl-5 pr-5"><%=article.category%></button></h3>
-            <h6 class="text-muted text-right"><i class="fa fa-clock-o" aria-hidden="true"></i> <%=article.date%></h6>
-          <hr />
-          <div class="card-text text-justify"><%-article.content%></div>
+      <img src="<%-article.file%>" class="img-fluid"
+      alt="<%-article.title%>">
+      <button type="button"
+        class="<%-article.category%> button-card-category btn  mt-2 mb-2 pl-2 pr-2"><%=article.category%></button>
+        <p class="text-date"><i class="fa fa-clock-o" aria-hidden="true"></i> <%=article.date%></p>
+    </div>
+      <div class="col-md-2">
+        
+       </div>
+    </div>
+    <div class="row mt-4">
+      <div class="container">
+        <div class="card-text text-justify"><%-article.content%></div>
+      </div>
+    </div>
+  
+
+
          
         
         
@@ -169,6 +187,7 @@
       <div class="mb-5"></div>
       <div class="fb-comments" data-href="http://www.niemvuilaptrinh.com/article/<%-article.id%>" data-width="" data-numposts="5"></div>
     </div>
+    
     <div class="mb-5"></div>
     <div class="container">
       <div class="row"></div>
