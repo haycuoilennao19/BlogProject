@@ -10,9 +10,9 @@ var Categories = require('../model/categories')
 router.get('/', function(req, res, next) {
   res.send("article")
 });
-router.get('/Hoc-Javascript', function(req, res, next) {
-    res.render('HocJavascript')
-  });
+// router.get('/Hoc-Javascript', function(req, res, next) {
+//     res.render('HocJavascript')
+//   });
 router.get('/about', function(req, res, next) {
    res.render('about')
 });
@@ -234,25 +234,25 @@ router.get('/Resource/:page', function(req, res, next) {
 })
 
 
-router.get("/Bootstrap", function(req, res) {
+// router.get("/Bootstrap", function(req, res) {
 
-    Blog
-        .find({title: {$regex : /Bootstrap/}})
-        .sort({_id: 1})
-        .exec(function(err, data) {
-            Blog.countDocuments().exec(function(err, count) {
-                if(err) return next(err)
-                data.forEach(function (item) { 
-                    if(item.file.includes(".jpg")){
-                        item.file =  item.file.replace(".jpg", ".webp");
-                    } else if( item.file.includes(".png")){
-                        item.file =  item.file.replace(".png", ".webp");
-                    }
-                }); 
-                res.render('category',{data: data})
-            })
-        })
-  })
+//     Blog
+//         .find({title: {$regex : /Bootstrap/}})
+//         .sort({_id: 1})
+//         .exec(function(err, data) {
+//             Blog.countDocuments().exec(function(err, count) {
+//                 if(err) return next(err)
+//                 data.forEach(function (item) { 
+//                     if(item.file.includes(".jpg")){
+//                         item.file =  item.file.replace(".jpg", ".webp");
+//                     } else if( item.file.includes(".png")){
+//                         item.file =  item.file.replace(".png", ".webp");
+//                     }
+//                 }); 
+//                 res.render('category',{data: data})
+//             })
+//         })
+//   })
 
 
 //   router.get("/updateall", function(req, res) {

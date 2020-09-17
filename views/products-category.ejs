@@ -11,7 +11,6 @@
   <link rel="preload" as="style" href="/stylesheets/normalizes.css">
   <link rel='stylesheet' href='/stylesheets/darcula.css' />
   <link rel='stylesheet' href='/stylesheets/hover-min.css' />
-  <link rel='stylesheet' href='/stylesheets/style.css' />
   <meta name="keywords" content="HTML,CSS,JavaScript, Bootstrap 4, Front End Web">
   <meta name="author" content="Thái Viết Nhật">
   <meta name="copyright" content="Niềm Vui Lập Trình" />
@@ -84,9 +83,7 @@
                 <a class="dropdown-item" title="Hướng Dẫn Về HTML" href="/article/html">HTML</a>
                 <a class="dropdown-item" title="Hướng Dẫn Về CSS" href="/article/css">CSS</a>
                 <a class="dropdown-item" title="Hướng Dẫn Về Javascript" href="/article/Javascript">Javascript</a>
-                <a class="dropdown-item" title="Hướng Dẫn Về Bootstrap 4" href="/article/Bootstrap">Hướng Dẫn Bootstrap4</a>
-                <a class="dropdown-item" title="Hướng Dẫn Về Javascript" href="/article/Hoc-Javascript">Hướng Dẫn Học
-                  Javascript</a>
+           
             </li>
             <li class="nav-item active">
               <a class="nav-link hvr-underline-from-left mr-5" title="Giới Thiệu Bản Thân" href="/about">Giới Thiệu</a>
@@ -128,38 +125,39 @@
     </div>
     <h1><span class="header-content">Bài Viết Mới Nhất</span> </h1>
   </div>
-  <div class="container-fluid mt-5">
-    <div class="row justify-content-center">
-      <% posts.forEach(function(post){ %>
-        <div class="card border-0 shadow card-row-article">
-          <div class="card-header"> <img data-src="<%-post.file%>" class="card-img-top header-img img-fluid lazyload"
-              alt="<%-post.title%>">
+  <div class="container">
+    <div class="row">
+      
+        <% posts.forEach(function(post){ %>
+          <div class="col-md-12 mb-4 ">
+        <div class="row mt-4 card-blogpost shadow">
+          <div class="col-md-6 card-blogpost-image">
+            <img src="<%-post.file%>" class="img-fluid shadow"
+            alt="<%-post.title%>">
+            <button type="button"
+              class="<%-post.category%> button-card-category btn  mt-2 mb-2 pl-2 pr-2"><%=post.category%></button>
+              <p class="text-date"><i class="fa fa-clock-o" aria-hidden="true"></i> <%=post.date%></p>
           </div>
-          
-          <div class="card-body">
-            <p>
-              <button type="button"
-              class="<%-post.category%> btn shadow-sm rounded btn-success mt-2 mb-2 pl-2 pr-2"><%=post.category%></button>
-            </p>
-          
-            <h2 class="card-title-article"><%=post.title%></h2>
-            <hr />
-            <p class="card-text text-justify text-truncate"><%-post.subtitle%></p>
-            <p class="text-date"><i class="fa fa-clock-o" aria-hidden="true"></i> <%=post.date%></p>
-         
-       
-            <div class="d-flex justify-content-end">
-              <button class="learn-more">
-               
-                <a class="btn btn-outline-secondary" title="<%-post.title%>" href="/article/<%-post.slug%>">
-                  <span">Tiếp tục đọc</span>
-                </a>
-              </button>
-            </div>
+          <div class="col-md-6 shadow p-4 card-blogpost-container">
+              <h2 class="card-title-article"><%=post.title%></h2>
+              <hr />
+              <p class="card-text text-justify "><%-post.subtitle%></p>
+              
+           
+     
+            
+                <button class="button-blog-post mb-4">
+               <a  title="<%-post.title%>" href="/article/<%-post.slug%>">
+                   Tiếp tục đọc
+                  </a>
+                </button>
+
+            
           </div>
         </div>
-      <div class="mb-5"></div>
-      <% }) %>
+      </div>
+        <% }) %>
+  
     </div>
   </div>
 
@@ -207,18 +205,18 @@
             </div>
             <div class="card-body card-body-search mt-4">
               <h3 class="button-article"><a title="Thông Tin Về CSS" href="/article/css"><button type="button"
-                class="btn shadow-sm rounded btn-secondary m-1 pl-2 pr-2 hvr-shrink"><i class="fa fa-tag" aria-hidden="true"></i> CSS</button></a>
+                class="btn shadow-sm rounded btn-secondary m-1 pl-2 pr-2 hvr-shrink button-article-2"><i class="fa fa-tag" aria-hidden="true"></i> CSS</button></a>
                 <a href="/article/html" title="Thông Tin Về HTML"><button type="button"
-                class="btn shadow-sm rounded btn-secondary m-1 pl-2 pr-2 hvr-shrink"><i class="fa fa-tag" aria-hidden="true"></i> HTML</button></a>
+                class="btn shadow-sm rounded btn-secondary m-1 pl-2 pr-2 hvr-shrink button-article-2"><i class="fa fa-tag" aria-hidden="true"></i> HTML</button></a>
                 <a href="/article/Javascript" title="Thông Tin Về Javascript">
                 <button type="button"
-                class="btn shadow-sm rounded btn-secondary m-1 pl-2 pr-2 hvr-shrink"><i class="fa fa-tag" aria-hidden="true"></i> Javascript</button></a>
+                class="btn shadow-sm rounded btn-secondary m-1 pl-2 pr-2 hvr-shrink button-article-2"><i class="fa fa-tag" aria-hidden="true"></i> Javascript</button></a>
                 <a href="/article/Bootstrap" title="Thông Tin Về Bootstrap">
                   <button type="button"
-                  class="btn shadow-sm rounded m-1 pl-2 pr-2 hvr-shrink  btn-secondary "><i class="fa fa-tag" aria-hidden="true"></i> Bootstrap</button></a>
+                  class="btn shadow-sm rounded m-1 pl-2 pr-2 hvr-shrink  btn-secondary  button-article-2"><i class="fa fa-tag" aria-hidden="true"></i> Bootstrap</button></a>
                   <a href="/article/Resource" title="Nguồn Lập Trình">
                     <button type="button"
-                  class="btn shadow-sm rounded m-1 pl-2 pr-2 hvr-shrink  btn-secondary "><i class="fa fa-tag" aria-hidden="true"></i> Nguồn Lập Trình</button></a>
+                  class="btn shadow-sm rounded m-1 pl-2 pr-2 hvr-shrink  btn-secondary  button-article-2"><i class="fa fa-tag" aria-hidden="true"></i> Nguồn Lập Trình</button></a>
                 </h3>
             </div>
           </div>

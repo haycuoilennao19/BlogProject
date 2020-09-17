@@ -152,9 +152,17 @@
 <div class="container mt-5">
   <div class="row">
     <div class="col-md-12">
-      <h1 class="text-primary card-title-article text-center  p-2 mt-4 mb-4 shadow rounded h3"><%=article.title%></h1>
+     
+      <h1 class="article-title-blog-post text-center"><%=article.title%></h1>
+      <p class="text-center article-text-date-category">
+      <button type="button"
+        class="<%-article.category%>  button-card-category-article mt-2 mb-2 pl-2 pr-2"><%=article.category%></button><br/>
+        <i class="fa fa-clock-o" aria-hidden="true"></i> <%=article.date%>
+      </p>
+     
     </div>
   </div>
+
   <div class="row">
     
     <div class="col-md-2">
@@ -164,17 +172,21 @@
       
       <img src="<%-article.file%>" class="img-fluid"
       alt="<%-article.title%>">
-      <button type="button"
-        class="<%-article.category%> button-card-category btn  mt-2 mb-2 pl-2 pr-2"><%=article.category%></button>
-        <p class="text-date"><i class="fa fa-clock-o" aria-hidden="true"></i> <%=article.date%></p>
+
     </div>
       <div class="col-md-2">
         
        </div>
     </div>
+
     <div class="row mt-4">
       <div class="container">
-        <div class="card-text text-justify"><%-article.content%></div>
+        <div class="row">
+          <div class="col md-12">
+            <div class="card-text text-justify"><%-article.content%></div>
+          </div>
+        </div>
+    
       </div>
     </div>
   
