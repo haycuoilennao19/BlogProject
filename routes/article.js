@@ -297,7 +297,8 @@ router.get("/:slug", function(req, res) {
                 } else if( data.file.includes(".png")){
                     data.file =  data.file.replace(".png", ".webp");
                 }
-          
+                var arr = ((data.file).split("/"));
+                data.file = arr[arr.length-1]
             res.render("article", {article: data, dateModified: dateModified})
         }
         else{

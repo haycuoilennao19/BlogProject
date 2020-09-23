@@ -160,8 +160,18 @@
   <div class="row">
   
     <div class="col-lg-6">
-      <img src="<%-article.file%>" class="img-fluid image-article-blogpost"
-      alt="<%-article.title%>">
+      <div class="img-container-article">
+        <img class="img-fluid image-article-blogpost"
+        sizes="(min-width: 30em) 28em, 100vw"
+        srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_256/<%-article.file%> 256w,
+                https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_512/<%-article.file%> 512w,
+                https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_768/<%-article.file%> 768w,
+                https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_1024/<%-article.file%> 1024w,
+                https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_1280/<%-article.file%> 1280w"
+        src="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_512/<%-article.file%>"
+        alt="<%-article.title%>" />
+      </div>
+      
       
     </div>
     <div class="col-lg-6">
