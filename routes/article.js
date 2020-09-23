@@ -53,6 +53,9 @@ router.get("/css", function(req, res) {
                     }
                     var arr = ((product.file).split("/"));
                     product.file = arr[arr.length-1]
+
+                    var subtitle = (product.subtitle).replace(/^(.{130}[^\s]*).*/, "$1");
+                    product.subtitle = (subtitle + '...');
                 }); 
                 res.render('products-category',{posts: products, current:page, pages: Math.ceil(count / perpage), category: category})
             })
@@ -80,6 +83,9 @@ router.get('/css/:page', function(req, res, next) {
                     }
                     var arr = ((product.file).split("/"));
                     product.file = arr[arr.length-1]
+
+                    var subtitle = (product.subtitle).replace(/^(.{130}[^\s]*).*/, "$1");
+                    product.subtitle = (subtitle + '...');
                 }); 
                 res.render('products-category',{posts: products, current:parseInt(page), pages: Math.ceil(count / perpage), category: category})
             })
@@ -106,6 +112,9 @@ router.get("/html", function(req, res) {
                     }
                     var arr = ((product.file).split("/"));
                     product.file = arr[arr.length-1]
+
+                    var subtitle = (product.subtitle).replace(/^(.{130}[^\s]*).*/, "$1");
+                    product.subtitle = (subtitle + '...');
                 }); 
                 res.render('products-category',{posts: products, current:page, pages: Math.ceil(count / perpage), category: category})
             })
@@ -134,6 +143,9 @@ router.get('/html/:page', function(req, res, next) {
                     }
                     var arr = ((product.file).split("/"));
                     product.file = arr[arr.length-1]
+
+                    var subtitle = (product.subtitle).replace(/^(.{130}[^\s]*).*/, "$1");
+                    product.subtitle = (subtitle + '...');
                 }); 
                 res.render('products-category',{posts: products, current:parseInt(page), pages: Math.ceil(count / perpage), category: category})
             })
@@ -160,6 +172,9 @@ router.get("/Javascript", function(req, res) {
                     }
                     var arr = ((product.file).split("/"));
                     product.file = arr[arr.length-1]
+
+                    var subtitle = (product.subtitle).replace(/^(.{130}[^\s]*).*/, "$1");
+                    product.subtitle = (subtitle + '...');
                 }); 
                 res.render('products-category',{posts: products, current:page, pages: Math.ceil(count / perpage), category: category})
             })
@@ -189,6 +204,9 @@ router.get('/Javascript/:page', function(req, res, next) {
                     }
                     var arr = ((product.file).split("/"));
                     product.file = arr[arr.length-1]
+
+                    var subtitle = (product.subtitle).replace(/^(.{130}[^\s]*).*/, "$1");
+                    product.subtitle = (subtitle + '...');
                 }); 
                 res.render('products-category',{posts: products, current:parseInt(page), pages: Math.ceil(count / perpage), category: category})
             })
@@ -216,6 +234,9 @@ router.get("/Resource", function(req, res) {
                     }
                     var arr = ((product.file).split("/"));
                     product.file = arr[arr.length-1]
+
+                    var subtitle = (product.subtitle).replace(/^(.{130}[^\s]*).*/, "$1");
+                    product.subtitle = (subtitle + '...');
                 }); 
                 res.render('products-category',{posts: products, current:page, pages: Math.ceil(count / perpage), category: category})
             })
@@ -243,6 +264,9 @@ router.get('/Resource/:page', function(req, res, next) {
                     }
                     var arr = ((product.file).split("/"));
                     product.file = arr[arr.length-1]
+
+                    var subtitle = (product.subtitle).replace(/^(.{130}[^\s]*).*/, "$1");
+                    product.subtitle = (subtitle + '...');
                 }); 
                 res.render('products-category',{posts: products, current:page, pages: Math.ceil(count / perpage), category: category})
             })
