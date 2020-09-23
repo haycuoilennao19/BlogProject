@@ -453,7 +453,8 @@ pre {
     font-family: 'Open Sans', sans-serif !important;
     -webkit-box-shadow: 2px 2px 2px 2px #ccc;
     -moz-box-shadow: 2px 2px 2px 2px #ccc;
-    box-shadow: 2px 2px 2px 2px #ccc
+    box-shadow: 2px 2px 2px 2px #ccc;
+    overflow: auto;
 }
 
 @media screen and (max-width:768px) {
