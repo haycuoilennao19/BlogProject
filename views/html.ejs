@@ -35,7 +35,7 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i> Những Trang Web  Hay  Dành Cho Front-End Năm 2020</h2>
+                  aria-hidden="true"></i> Tạo 3D Navigation Bằng HTML, CSS Và Javascript</h2>
             </div>
           </div>
           <div class="article-title">
@@ -44,269 +44,244 @@
             </div>
           </div>
           <div class="text-content-article mt-5">
-            <p><i> Với sự phát triển nhanh chóng của kỹ thuật web thì ngày càng có nhiều trang web bổ ích ra đời để giúp
-                chúng ta có thể học tập cũng như có thể nâng cao kỹ
-                năng lập trình thông qua các bài viết hữu ích. Nào bây giờ bạn hãy cùng mình đi vào tìm hiểu nhé!</i>
+            <p><i> Ngày hôm nay chúng ta sẽ đi vào tìm hiểu cách tạo 3D Navigation(thanh tiêu đề) trong trang
+                web bằng HTML, CSS và Javascript nhé!</i>
             </p>
           </div>
 
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">CSS Animation</h3>
+            <h3 class="text-primary ml-4 title-article-size">Tạo Cấu Trúc Phần Tử HTML</h3>
+          </div>
+          <p> Trước tiên chúng ta sẽ cần tạo hai file chính là <code>index.html</code> (Lưu trữ phần tử HTML) và
+            <code>style.css</code> (Lưu trữ các thuộc tính CSS). Sau đó liên kết chúng lại với nhau thông qua đoạn mã
+            bên dưới:</p>
+
+          <h4 class="text-primary">
+            HTML:
+          </h4>
+          <pre><code class="html">&#60;!DOCTYPE&nbsp;html&#62;<br/> &#60;html&nbsp;lang="en"&#62;<br/> &#60;head&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;charset="UTF-8"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;name="viewport"&nbsp;content="width=device-width,&nbsp;initial-scale=1.0"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;title&#62;Tạo&nbsp;3D&nbsp;Navbar&#60;/title&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;1,700&display=swap"&nbsp;rel="stylesheet"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="style.css"&#62;<br/> &#60;/head&#62;<br/> &#60;body&#62;<br/>&#60;/body&#62;<br/> &#60;/html&#62;<br/></code></pre>
+
+     
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Thêm Các Phần Tử HTML</h3>
+          </div>
+
+          <p>
+            Trong phần này chúng ta sẽ đi vào thêm các cấu trúc phần tử HTML cần thiết để tạo ra thanh tiêu đề 3D thông qua đoạn mã sau nhé:
+          </p>
+          <h4 class="text-primary">
+            HTML
+          </h4>
+          <pre><code class="html">&#60;div&nbsp;class="container"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="navbar"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="menu"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h3&nbsp;class="logo"&#62;Niềm&nbsp;Vui&nbsp;Lập&nbsp;Trình&#60;/h3&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="hamburger-menu"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="bar"&#62;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &#60;/div&#62;<br/></code></pre>
+
+         
+          <!-- <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1600782322/Hieu_Ung_Hover_Menu/Hover_Cho_Thanh_Menu_B%E1%BA%B1ng_HTML_CSS_JS_1_tvcvvs.png"
+            alt="Hiệu Ứng Hover Menu 1"
+           > -->
+
+           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">
+              Xác Định Vị Trí Và Thiết Lập Font Cho Menu 3D
+            </h3>
           </div>
           <p>
-
-            Các bài báo, thủ thuật và hướng dẫn về animation trong CSS.
-            Nâng cao kỹ năng animation CSS của bạn thông qua các bài viết được đăng lên trang web hàng tuần.
+           Phần tiếp theo chúng ta sẽ sử dụng các thuộc tính CSS để thiết lập font chữ cho nội dung trong trang web và xác định vị trí của thanh 
+           tiêu đề thông qua đoạn mã CSS sau nhé:
           </p>
+          <h4 class="text-primary">
+            CSS
+          </h4>
+          <pre><code class="css"> *&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;box-sizing:&nbsp;border-box;<br/> }<br/>body{<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-family:&nbsp;'Epilogue',&nbsp;sans-serif;<br/> }<br/>.container&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;min-height:&nbsp;100vh;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-color:&nbsp;#485461;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-image:&nbsp;linear-gradient(135deg,&nbsp;#485461,&nbsp;#28313b&nbsp;74%);<br/> &nbsp;&nbsp;&nbsp;&nbsp;overflow:&nbsp;hidden;<br/> }<br/>.navbar{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;fixed;<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;left:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;z-index:&nbsp;10;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;3rem;<br/> }<br/></code></pre>
 
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1600743687/trang_web_huu_ich_cho_lap_trinh_front_end/css_animation_u6jmco.png"
-            alt="CSS Animation">
-          <button type="button " class="btn btn-outline-dark btn-md mt-4"><a href="https://cssanimation.rocks/"
-              target="_blank">Nguồn</a></button>
+          <p class="mt-4">
+            Và kết quả bạn xem hình ảnh bên dưới nhé:
+          </p>
+        <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1600842671/3D_Navbar/3D_Menu_1_lr8hz4.png"
+            alt="3D Menu 1"
+           > 
 
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Learn to Code HTML & CSS</h3>
+            <h3 class="text-primary ml-4 title-article-size">
+              Thiết Lập Style Cho 3D Navbar
+            </h3>
           </div>
+
           <p>
-            Trang web hướng dẫn mọi người cách xây dựng các trang web đẹp và trực quan
-            bằng các bài học rõ ràng và có tổ chức thông qua việc sử dụng HTML, CSS. Các bài giảng bao gồm nhiều chủ đề
-            thiết kế và phát triển web, từ cấp độ
-            kỹ năng mới bắt đầu đến nâng cao.
+            Trong phần này mình và bạn sẽ đi vào thiết kế icon đóng mở cho thanh tiêu đề cũng như thiết lập style cho thẻ <code>div</code> 
+            với class <code>logo</code> thông qua đoạn code sau nhé:
           </p>
+          <h4 class="text-primary">
+           CSS
+          </h4>
+         <pre><code class="css">/*Thiết&nbsp;lập&nbsp;style&nbsp;thanh&nbsp;tiêu&nbsp;đề*/<br/> .menu&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;max-width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;0&nbsp;2rem;<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;flex;<br/> &nbsp;&nbsp;&nbsp;&nbsp;justify-content:&nbsp;space-between;<br/> &nbsp;&nbsp;&nbsp;&nbsp;align-items:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#fff;<br/> }<br/> /*Thiết&nbsp;lập&nbsp;style&nbsp;cho&nbsp;div&nbsp;có&nbsp;class&nbsp;là&nbsp;logo*/<br/> .logo{<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;1.1rem;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-weight:&nbsp;700;<br/> &nbsp;&nbsp;&nbsp;&nbsp;text-transform:&nbsp;uppercase;<br/> &nbsp;&nbsp;&nbsp;&nbsp;letter-spacing:&nbsp;2px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;line-height:&nbsp;4rem;<br/> }<br/>/*Tạo&nbsp;Icon&nbsp;Menu*/<br/> .hamburger-menu{<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;4rem;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;3rem;<br/> &nbsp;&nbsp;&nbsp;&nbsp;cursor:&nbsp;pointer;<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;flex;<br/> &nbsp;&nbsp;&nbsp;&nbsp;align-items:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;justify-content:&nbsp;flex-end;<br/> }<br/>.bar{<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;1.9rem;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;1.5px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;2px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-color:&nbsp;#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;0.5s;<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;<br/> }<br/>.bar::before,<br/> .bar::after&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;content:&nbsp;'';<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;inherit;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;inherit;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-color:&nbsp;#eee;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;0.5s;<br/> }<br/>.bar::before{<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;translateY(-9px)<br/> }<br/>.bar::after{<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;translateY(9px)<br/> }<br/></code></pre>
+         <p class="mt-4">
+          Và kết quả bạn xem hình ảnh bên dưới nhé:
+        </p>
+      <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1600843151/3D_Navbar/3D_Menu_2_ewomqh.png"
+          alt="3D Menu 2"
+         > 
+         
+         <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+          <h3 class="text-primary ml-4 title-article-size">
+            Thêm Nội Dung Và Tiêu Đề Cho Trang Web
+          </h3>
+        </div>
+        <p>
+          Phần này chúng ta sẽ thêm các phần tử HTML và  các thuộc tính CSS để giúp làm nổi bật  tiêu đề và nội dung ở trong  trang web thông qua đoạn mã sau nhé:
+        </p>
+        <h4 class="text-primary">
+          HTML
+        </h4>
+        <pre><code class="html">&#60;!--Nội&nbsp;Dung&nbsp;Cũ--&#62;<br/> &#60;div&nbsp;class="container"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="navbar"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="menu"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h3&nbsp;class="logo"&#62;Niềm&nbsp;Vui&nbsp;Lập&nbsp;Trình&#60;/h3&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="hamburger-menu"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="bar"&#62;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &#60;!--&nbsp;Kết&nbsp;Thúc&nbsp;Nội&nbsp;Dung&nbsp;Cũ--&#62;<br/> &#60;!--Thêm&nbsp;Phần&nbsp;Tử&nbsp;Mới--&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="main-container"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="main"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;header&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="overlay"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="inner"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h2&nbsp;class="title"&#62;Xin&nbsp;Chào&nbsp;Các&nbsp;Bạn&#60;/h2&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p&#62;Lorem&nbsp;ipsum&nbsp;dolor,&nbsp;sit&nbsp;amet&nbsp;consectetur&nbsp;adipisicing&nbsp;elit.&nbsp;Non,&nbsp;debitis&nbsp;vel&nbsp;obcaecati&nbsp;amet&nbsp;recusandae&nbsp;magnam&nbsp;perferendis&nbsp;ad.&#60;/p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p&nbsp;class="btn-container"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;a&nbsp;href="https://www.niemvuilaptrinh.com/"&nbsp;class="btn"&#62;Xem&nbsp;Thêm&#60;/a&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/p&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/header&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="shadow&nbsp;shadow1"&#62;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="shadow&nbsp;shadow2"&#62;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &#60;!--Kết&nbsp;Thúc&nbsp;Thêm&nbsp;Phần&nbsp;Tử&nbsp;Mới--&#62;<br/> &#60;/div&#62;<br/></code></pre>
+        <p class="mt-4">
+          Như bạn thấy thì phần nội dung mới mà mình thêm  thì vẫn thuộc class cha <code>.container</code> nhé!
+        </p>
+        <p >
+          Và kết quả bạn xem hình ảnh bên dưới nhé:
+        </p>
+      <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1600843921/3D_Navbar/3D_Menu_3_khtb1j.png"
+          alt="3D Menu 3"
+         > 
+         <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+          <h3 class="text-primary ml-4 title-article-size">
+            Thiết Lập Style Cho Nội Dung Và Tiêu Đề 
+          </h3>
+        </div>
+        <p>
+          Phần này ngoài việc thiết lập style cho nội dung và tiêu đề trong trang web thì chúng ta sẽ thực hiện xây dựng background  hình ảnh 
+          cho toàn bộ website thông qua đoạn mã sau nhé:
+        </p>
+        <h4 class="text-primary">
+          CSS
+        </h4>
+        <pre><code class="css">.main{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;left:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;z-index:&nbsp;5;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-color:&nbsp;white;<br/> &nbsp;&nbsp;&nbsp;&nbsp;overflow:&nbsp;hidden;<br/> }<br/>header{<br/> &nbsp;&nbsp;&nbsp;&nbsp;min-height:&nbsp;100vh;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;url(https://images.pexels.com/photos/2693529/pexels-photo-2693529.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)&nbsp;no-repeat&nbsp;top&nbsp;center&nbsp;/&nbsp;cover;<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;<br/> }<br/>.overlay{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;left:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-color:&nbsp;rgba(43,51,59,0.7);<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;flex;<br/> &nbsp;&nbsp;&nbsp;&nbsp;justify-content:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;align-items:&nbsp;center;<br/> }<br/>.inner{<br/> &nbsp;&nbsp;&nbsp;&nbsp;max-width:&nbsp;35rem;<br/> &nbsp;&nbsp;&nbsp;&nbsp;text-align:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;0&nbsp;2rem;<br/> }<br/>.title{<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;3rem;<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:&nbsp;1rem;<br/> }<br/>.btn-container{<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin-top:&nbsp;1.5rem;<br/> }<br/> .btn{<br/> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;0.6rem&nbsp;1.8rem;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-color:&nbsp;#1179e7;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border:&nbsp;none;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;25px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;text-transform:&nbsp;uppercase;<br/> &nbsp;&nbsp;&nbsp;&nbsp;cursor:&nbsp;pointer;<br/> &nbsp;&nbsp;&nbsp;&nbsp;text-decoration:&nbsp;none;<br/> }<br/></code></pre>
+        <p >
+          Và kết quả bạn xem hình ảnh bên dưới nhé:
+        </p>
+      <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1600844563/3D_Navbar/3D_Menu_4_cordeh.png"
+          alt="3D Menu 4"
+         > 
+         <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+          <h3 class="text-primary ml-4 title-article-size">
+            Thiết Lập Javascript Cho 3D Navbar
+          </h3>
+        </div>
 
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1600743996/trang_web_huu_ich_cho_lap_trinh_front_end/Learn_to_Code_HTML_CSS_nafe6b.png"
-            alt="Learn to Code HTML & CSS">
-          <button type="button " class="btn btn-outline-dark btn-md mt-4"><a href="https://learn.shayhowe.com/"
-              target="_blank">Nguồn</a></button>
+        <p>
+         Trong phần này chúng ta sẽ sử dụng Javascript để thiết lập class <code>.active</code> cho thẻ div <code>container</code> khi người dùng nhấn vào <b>icon ở góc phải trên cùng</b> thông qua đoạn mã 
+         sau đây nhé:
+        </p>
 
+        <h4 class="text-primary">
+          Javascript
+        </h4>
+        <pre><code class="javascript"> const&nbsp;hambuger_menu&nbsp;=&nbsp;document.querySelector(".hamburger-menu");<br/> const&nbsp;container&nbsp;=&nbsp;document.querySelector(".container");<br/> hambuger_menu.addEventListener("click",&nbsp;()&nbsp;=>&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;container.classList.toggle("active");<br/> })<br/></code></pre>
+        <p class="mt-4">
+          Và kết quả bạn xem ở video bên dưới nhé:
+        </p>
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1600845382/3D_Navbar/Untitled__Sep_23_2020_2_14_PM_e67iql.mp4"></iframe>
+        </div>
 
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Grid by Example</h3>
-          </div>
-          <p>
-            Nơi giúp bạn có thể dễ dàng tìm hiểu về mọi thứ của grid trong CSS một cách đầy đủ nhất. Và nó cũng cung cấp
-            nhiều ví dụ minh họa
-            khác nhau để giúp bạn có thể dễ dàng xây dựng hệ thống lưới cho trang web ở trong thực tế.
-          </p>
+        <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+          <h3 class="text-primary ml-4 title-article-size">
+            Tạo Hiệu Ứng Chuyển Động Icon
+          </h3>
+        </div>
+        <p>
+          Trong phần này chúng ta sẽ sử dụng animation để chuyển đổi  <b>từ icon 3 gạch ngang sang icon đóng (X)</b> khi  người dùng kích hoạt class <code>active</code> (nhấn vào icon)
+          bằng đoạn mã CSS dưới đây nhé:
+        </p>
+        <h4 class="text-primary">
+          CSS
+        </h4>
+        <pre><code class="css">.container.active&nbsp;.bar{<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;rotate(360deg);<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-color:&nbsp;transparent;<br/> }<br/>.container.active&nbsp;.bar::before{<br/> &nbsp;&nbsp;&nbsp;transform:&nbsp;translateY(0)&nbsp;rotate(45deg);<br/> }<br/>.container.active&nbsp;.bar::after{<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;translateY(0)&nbsp;rotate(-45deg);<br/> }<br/></code></pre>
+        <p class="mt-4">
+          Và kết quả bạn xem ở video bên dưới nhé:
+        </p>
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1600845877/3D_Navbar/3D_Navbar_ux132b.mp4"></iframe>
+        </div>
 
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1600744463/trang_web_huu_ich_cho_lap_trinh_front_end/Grid_by_Example_qpcw6t.png"
-            alt="Grid by Example">
-          <button type="button " class="btn btn-outline-dark btn-md mt-4"><a href="https://gridbyexample.com/"
-              target="_blank">Nguồn</a></button>
+        <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+          <h3 class="text-primary ml-4 title-article-size">
+            Tạo Hiệu Ứng Chuyển Động 3D Cho Trang Web
+          </h3>
+        </div>
 
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">General Assembly Dash</h3>
-          </div>
-          <p>
-            Nơi giúp bạn có thể học HTML, CSS và Javascript ngay trên trình duyệt và có thể thấy được kết quả của đoạn
-            mã mình viết thông qua
-            những bài học ở trong chương trình.
-          </p>
+        <p>
+          Phần này chúng ta sẽ đi vào tạo hiệu ứng chuyển động 3D cho trang web thông qua đoạn mã sau nhé:
+        </p>
+        <h4 class="text-primary">
+          CSS
+        </h4>
+        <pre><code class="css">.main{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform-origin:&nbsp;left;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform-style:&nbsp;preserve-3d;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;0.5s;<br/> &nbsp;}<br/>.container{<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform-style:&nbsp;preserve-3d;&nbsp;<br/> &nbsp;}<br/>&nbsp; .container.active&nbsp;.main{<br/> &nbsp;&nbsp;&nbsp;&nbsp;animation:&nbsp;main-animation&nbsp;0.5s&nbsp;ease;<br/> &nbsp;&nbsp;&nbsp;&nbsp;cursor:&nbsp;pointer;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;perspective(1300px)&nbsp;rotateY(20deg)&nbsp;&nbsp;translateZ(310px)&nbsp;scale(0.5);<br/> }<br/>@keyframes&nbsp;main-animation{<br/> &nbsp;&nbsp;&nbsp;&nbsp;from{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;translate(0);<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;&nbsp;&nbsp;&nbsp;to{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;perspective(1300px)&nbsp;rotateY(20deg)&nbsp;&nbsp;translateZ(310px)&nbsp;scale(0.5);<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> }<br/></code></pre>
 
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1600745414/trang_web_huu_ich_cho_lap_trinh_front_end/General_Assembly_Dash_opdokk.png"
-            alt="General Assembly Dash">
-          <button type="button " class="btn btn-outline-dark btn-md mt-4"><a href="https://dash.generalassemb.ly/"
-              target="_blank">Nguồn</a></button>
-
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">30 SECONDS OF INTERVIEWS</h3>
-          </div>
-          <p>
-            Đây là trang web tổng hợp những câu hỏi hay gặp trong quá trình phỏng vấn. Đồng thời nó cũng đưa ra các gợi
-            ý để bạn có thể trả lời những câu hỏi đó
-            một cách hợp lý nhất.
-          </p>
-
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1600745611/trang_web_huu_ich_cho_lap_trinh_front_end/30_SECONDS_OF_INTERVIEWS_uejpgj.png"
-            alt="30 SECONDS OF INTERVIEWS">
-          <button type="button " class="btn btn-outline-dark btn-md mt-4"><a href="https://30secondsofinterviews.org/"
-              target="_blank">Nguồn</a></button>
-
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">CSS In Real Life</h3>
-          </div>
-          <p>
-            CSS In Real Life là một blog bao gồm các chủ đề CSS và các đoạn trích hữu ích trên ngôn ngữ đẹp nhất của
-            web.
-          </p>
-
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1600746158/trang_web_huu_ich_cho_lap_trinh_front_end/CSS_In_Real_Life_hx3voo.png"
-            alt=" CSS In Real Life">
-          <button type="button " class="btn btn-outline-dark btn-md mt-4"><a href="https://css-irl.info/"
-              target="_blank">Nguồn</a></button>
-
-
-
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Codrops </h3>
-          </div>
-          <p>
-            Codrops là một blog phát triển và thiết kế web xuất bản các bài báo và hướng dẫn về các xu hướng web mới
-            nhất, các kỹ thuật và các skill mới. Nhóm Codrops luôn tận tâm cung cấp nội dung hữu ích, truyền cảm hứng và
-            sáng tạo miễn phí.
-          </p>
-
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1600747932/trang_web_huu_ich_cho_lap_trinh_front_end/Codrops_1_ufglvh.png"
-            alt="Codrops">
-          <button type="button " class="btn btn-outline-dark btn-md mt-4"><a href="https://tympanus.net/codrops/"
-              target="_blank">Nguồn</a></button>
-
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Smashing Magazine </h3>
-          </div>
-          <p>
-            Tạp chí Smashing cung cấp các bài báo đáng tin cậy, hữu ích nhưng quan trọng nhất là thực tế cho các nhà
-            thiết kế và nhà phát triển web.
-          </p>
-
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1600748090/trang_web_huu_ich_cho_lap_trinh_front_end/Smashing_Magazine_pncw8e.png"
-            alt="Smashing Magazine">
-          <button type="button " class="btn btn-outline-dark btn-md mt-4"><a href="https://www.smashingmagazine.com/"
-              target="_blank">Nguồn</a></button>
-
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">CodeNewbie </h3>
-          </div>
-          <p>
-            CodeNewbie là nơi giúp bạn có thể trao đổi cũng như học tập thêm kinh nghiệm từ các bạn lập trình viên khác
-            ở trên thế giới.
-          </p>
-
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1600748285/trang_web_huu_ich_cho_lap_trinh_front_end/CodeNewbie_xchywn.png"
-            alt="CodeNewbie">
-          <button type="button " class="btn btn-outline-dark btn-md mt-4"><a href="https://www.codenewbie.org/"
-              target="_blank">Nguồn</a></button>
-
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">CSS-TRICKS </h3>
-          </div>
-          <p>
-            CSS-TRICKS là trang web chuyên chia sẻ các bài viết hay về Front-end như CSS, SVG, React, Vue... Và nó luôn
-            được cập nhật thường xuyên.
-          </p>
-
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1600757492/trang_web_huu_ich_cho_lap_trinh_front_end/CSS-TRICKS_egqmtr.png"
-            alt="CSS-TRICKS">
-          <button type="button " class="btn btn-outline-dark btn-md mt-4"><a href="https://css-tricks.com/"
-              target="_blank">Nguồn</a></button>
+        <p class="mt-4">
+          Và kết quả bạn xem ở video bên dưới nhé:
+        </p>
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1600846163/3D_Navbar/3D_Navbar_1_czl9rm.mp4"></iframe>
+        </div>
 
 
+        <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+          <h3 class="text-primary ml-4 title-article-size">
+            Thêm Đường Dẫn Cho 3D Navbar
+          </h3>
+        </div>
+        <p>
+          Trong phần này chúng ta sẽ thêm các đường dẫn vào thanh tiêu đề 3D thông qua đoạn code sau nhé (Đoạn mã sẽ được dặt trong class <code>container</code> 
+          ):
+        </p>
+        <h4 class="text-primary">
+          HTML
+        </h4>
+        <pre><code class="html">&#60;div&nbsp;class="container"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="navbar"&#62;...&#60;/div&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="main-container"&#62;...&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;!--Thêm&nbsp;Phần&nbsp;Tử&nbsp;Mới--&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="links"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;ul&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;a&nbsp;href="#"&#62;Trang&nbsp;Chủ&#60;/a&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;a&nbsp;href="#"&#62;Liên&nbsp;Hệ&#60;/a&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;a&nbsp;href="#"&#62;Về&nbsp;Chúng&nbsp;Tôi&#60;/a&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;a&nbsp;href="#"&#62;Dự&nbsp;Án&#60;/a&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;a&nbsp;href="#"&#62;Dịch&nbsp;Vụ&#60;/a&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;a&nbsp;href="#"&#62;Blog&#60;/a&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/ul&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&#60;!--Kết&nbsp;Thúc&nbsp;Thêm&nbsp;Phần&nbsp;Tử&nbsp;Mới--&#62;<br/> &#60;/div&#62;<br/></code></pre>
 
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">DEV </h3>
-          </div>
-          <p>
-            DEV là một cộng đồng các nhà phát triển phần mềm cùng nhau giúp đỡ lẫn nhau. Bạn có thể tìm kiếm ở đầy nhiều
-            bài viết hữu ích trong lĩnh vực của mình thông qua
-            những kinh ngiệm được đúc kết trong quá trình làm việc của các bạn developer.
-          </p>
+        <h4 class="text-primary mt-4">
+          CSS
+        </h4>
+        <pre><code class="css">.links{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;30%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;right:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;100vh;<br/> &nbsp;&nbsp;&nbsp;&nbsp;z-index:&nbsp;2;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;eee;<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;flex;<br/> &nbsp;&nbsp;&nbsp;&nbsp;justify-content:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;align-items:&nbsp;center;<br/> }<br/>ul{<br/> &nbsp;&nbsp;&nbsp;&nbsp;list-style:&nbsp;none;<br/> }<br/>.links&nbsp;a{<br/> &nbsp;&nbsp;&nbsp;&nbsp;text-decoration:&nbsp;none;<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#eee;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;0.7rem&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;inline-block;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;2rem;<br/> &nbsp;&nbsp;&nbsp;&nbsp;letter-spacing:&nbsp;2px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;0.3s;<br/> &nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;translateY(10px);<br/> &nbsp;&nbsp;&nbsp;&nbsp; }<br/>.links&nbsp;a:hover{<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#fff;<br/> }<br/>/*Hiệu&nbsp;Ứng&nbsp;Hiển&nbsp;Thị&nbsp;3D&nbsp;Nabar*/<br/> .container.active&nbsp;.links&nbsp;a{<br/> &nbsp;&nbsp;&nbsp;&nbsp;animation:&nbsp;appear&nbsp;0.5s&nbsp;forwards&nbsp;ease-in-out&nbsp;0.5s;<br/> }<br/>@keyframes&nbsp;appear{<br/> &nbsp;&nbsp;&nbsp;&nbsp;from{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;translateY(10px);<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;&nbsp;&nbsp;&nbsp;to&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;1;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;translateY(0px);<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> }<br/> /*Hiệu&nbsp;Ứng&nbsp;Ẩn&nbsp;3D&nbsp;Nabar*/<br/> .links&nbsp;a{<br/> &nbsp;&nbsp;&nbsp;&nbsp;animation:&nbsp;hide&nbsp;0.5s&nbsp;forwards&nbsp;ease;<br/> }<br/>@keyframes&nbsp;hide{<br/> &nbsp;&nbsp;&nbsp;&nbsp;from&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;1;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;translateY(0px);<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;&nbsp;&nbsp;&nbsp;to{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;translateY(10px);<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> }<br/></code></pre>
 
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1600757848/trang_web_huu_ich_cho_lap_trinh_front_end/DEV_qihfd1.png"
-            alt="DEV">
-          <button type="button " class="btn btn-outline-dark btn-md mt-4"><a href="https://dev.to/"
-              target="_blank">Nguồn</a></button>
+        <p class="mt-4">
+          Và kết quả bạn xem ở video bên dưới nhé:
+        </p>
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1600847498/3D_Navbar/3D_Navbar_2_sq3vgx.mp4"></iframe>
+        </div>
 
+        <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+          <h3 class="text-primary ml-4 title-article-size">
+           Thiết Lập Shadow Cho 3D Navbar
+          </h3>
+        </div>
 
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">SitePoint </h3>
-          </div>
-          <p>
-            SitePoint là trung tâm dành cho các nhà phát triển web chia sẻ niềm đam mê của họ trong việc xây dựng những
-            thứ tuyệt vời trên Internet. Được thành lập bởi Mark Harbottle và Matt Mickiewicz vào năm 1999. SitePoint
-            dành cho các chuyên gia web, nhà thiết kế, lập trình viên, người tạo
-            sản phẩm...
-          </p>
-
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1600758397/trang_web_huu_ich_cho_lap_trinh_front_end/SitePoint_ungiuu.png"
-            alt="SitePoint">
-          <button type="button " class="btn btn-outline-dark btn-md mt-4"><a href="https://www.sitepoint.com/blog/"
-              target="_blank">Nguồn</a></button>
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Superhero.js </h3>
-          </div>
-          <p>
-            Superhero.js là một trang web tổng hợp tất cả các bài viết, video liên quan đến việc chúng ta chạy và duy
-            trì các dự án lớn
-            khi sử dụng Javascript. Tuy vậy các bài viết này sẽ được sắp xếp từ cơ bạn đến nâng cao để bạn có thể dễ
-            dàng theo dõi và nắm bắt hơn.
-
-          </p>
-
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1600758731/trang_web_huu_ich_cho_lap_trinh_front_end/Superherojs_zioqvk.png"
-            alt="Superhero.js ">
-          <button type="button " class="btn btn-outline-dark btn-md mt-4"><a href="http://superherojs.com/"
-              target="_blank">Nguồn</a></button>
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Scotch </h3>
-          </div>
-          <p>
-            Chris on Code và Nick Cerminara đã tạo ra Scotch như một nơi mà các developer có thể giúp các nhà phát
-            triển khác bằng cách chia sẻ kiến thức, mẹo và kiến thức để giúp họ có thể dễ dàng hoàn thiện hơn trong công việc của mình.
-          </p>
-
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1600759180/trang_web_huu_ich_cho_lap_trinh_front_end/screenshot-scotch.io-2020.09.22-14_19_19_v5kwdy.png"
-            alt="Scotch ">
-          <button type="button " class="btn btn-outline-dark btn-md mt-4"><a href="https://scotch.io/"
-              target="_blank">Nguồn</a></button>
-
-
-              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">freeCodeCamp News </h3>
-              </div>
-              <p>
-                freeCodeCamp News là một trang web tổng hợp nhiều bài viết hữu ích cho quá trình thiết kế cũng như phát triển web.
-              </p>
-    
-              <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1600759374/trang_web_huu_ich_cho_lap_trinh_front_end/freeCodeCamp_News_ejizkl.png"
-                alt="freeCodeCamp News  ">
-              <button type="button " class="btn btn-outline-dark btn-md mt-4"><a href="https://www.freecodecamp.org/news/"
-                  target="_blank">Nguồn</a></button>
-
-
-                  <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-                    <h3 class="text-primary ml-4 title-article-size">HONGKIAT</h3>
-                  </div>
-                  <p>
-                    HONGKIAT là một trang web tổng hợp những bài viết chia sẻ về việc sử dụng thư viện trong thiết kế web, 
-                    các mẹo hay để giải quyết các vấn đề thường gặp trong quá trình phát triển web...
-                  </p>
-        
-                  <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-                    data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1600759848/trang_web_huu_ich_cho_lap_trinh_front_end/HONGKIAT_d7gflw.png"
-                    alt="HONGKIAT ">
-                  <button type="button " class="btn btn-outline-dark btn-md mt-4"><a href="https://www.hongkiat.com/blog/"
-                      target="_blank">Nguồn</a></button>
-
-
-
-
-
+        <p>
+          Phần cuối cùng chúng ta cần thực hiện là thiết kế  trang web khi chuyển sang chế độ 3D có thể trông thật nhất có thể thông qua đoạn mã CSS sau nhé:
+        </p>
+        <h4 class="text-primary">
+          CSS
+        </h4>
+        <pre><code class="css">.shadow{<br/> &nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;height:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;top:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;left:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;transform-style:&nbsp;preserve-3d;<br/> &nbsp;&nbsp;&nbsp;transform-origin:&nbsp;left;<br/> }<br/>.shadow.shadow1{<br/> &nbsp;&nbsp;&nbsp;&nbsp;z-index:&nbsp;-1;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-color:&nbsp;#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;0.15;<br/> }<br/>.container.active&nbsp;.shadow.shadow1{<br/> &nbsp;&nbsp;&nbsp;&nbsp;animation:&nbsp;shadow-one&nbsp;0.6s&nbsp;ease-out;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;perspective(1300px)&nbsp;rotateY(20deg)&nbsp;&nbsp;translateZ(215px)&nbsp;scale(0.5);<br/> }<br/>@keyframes&nbsp;shadow-one{<br/> &nbsp;&nbsp;&nbsp;&nbsp;0%{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;translate(0);<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;&nbsp;&nbsp;&nbsp;50%{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;perspective(1300px)&nbsp;rotateY(20deg)&nbsp;&nbsp;translateZ(310px)&nbsp;scale(0.5);<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;&nbsp;&nbsp;&nbsp;100%{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;perspective(1300px)&nbsp;rotateY(20deg)&nbsp;&nbsp;translateZ(215px)&nbsp;scale(0.5);<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> }<br/>.shadow.shadow2{<br/> &nbsp;&nbsp;&nbsp;&nbsp;z-index:&nbsp;-2;<br/> &nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;0.1;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-color:&nbsp;#fff;<br/> }<br/>.container.active&nbsp;.shadow.shadow2{<br/> &nbsp;&nbsp;&nbsp;&nbsp;animation:&nbsp;shadow-two&nbsp;0.6s&nbsp;ease-out;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;perspective(1300px)&nbsp;rotateY(20deg)&nbsp;&nbsp;translateZ(120px)&nbsp;scale(0.5);<br/> }<br/>@keyframes&nbsp;shadow-two{<br/> &nbsp;&nbsp;&nbsp;&nbsp;0%{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;translate(0);<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;&nbsp;&nbsp;&nbsp;50%{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;perspective(1300px)&nbsp;rotateY(20deg)&nbsp;&nbsp;translateZ(310px)&nbsp;scale(0.5); &nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;&nbsp;&nbsp;&nbsp;100%{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;perspective(1300px)&nbsp;rotateY(20deg)&nbsp;&nbsp;translateZ(120px)&nbsp;scale(0.5);<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> }<br/>.container.active&nbsp;.main:hover&nbsp;+&nbsp;.shadow.shadow1{<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;perspective(1300px)&nbsp;rotateY(20deg)&nbsp;&nbsp;translateZ(230px)&nbsp;scale(0.5);<br/> }<br/>.container.active&nbsp;.main:hover&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;perspective(1300px)&nbsp;rotateY(20deg)&nbsp;&nbsp;translateZ(340px)&nbsp;scale(0.5);<br/> }<br/></code></pre>
+        <p class="mt-4">
+          Và kết quả cuối cùng bạn xem ở video bên dưới nhé:
+        </p>
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1600848188/3D_Navbar/3D_Navbar_3_nju8kk.mp4"></iframe>
+        </div>
+        <p class="mt-4">
+          Ngoài ra bạn có thể xem trực tiếp trên Codepen ở <a href="https://codepen.io/haycuoilennao19/pen/abNPYGm" title="3D Navbar" target="_blank">đường dẫn này nhé!</a><br/>
+          Nguồn Tham Khảo: <a href="https://www.youtube.com/watch?v=nOcVOJw3Gfw&t=39s&ab_channel=TrueCoder" target="_blank">https://www.youtube.com/watch?v=nOcVOJw3Gfw&t=39s&ab_channel=TrueCoder</a>
+        </p>
 
           <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
-          <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những trang web
+          <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn kiến thức tạo 3D Navbar
             hữu ích
             dành cho việc phát triển, thiết kế web và nếu có thắc mắc gì cứ gửi email mình sẽ
             phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa

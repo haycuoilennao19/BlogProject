@@ -132,8 +132,15 @@
           <div class="col-md-12 mb-4 ">
         <div class="row mt-4 card-blogpost shadow">
           <div class="col-md-6 card-blogpost-image">
-            <img src="<%-post.file%>" class="img-fluid shadow"
-            alt="<%-post.title%>">
+            <img
+            sizes="(min-width: 30em) 28em, 100vw"
+            srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_256/<%-post.file%> 256w,
+                    https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_512/<%-post.file%> 512w,
+                    https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_768/<%-post.file%> 768w,
+                    https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_1024/<%-post.file%> 1024w,
+                    https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_1280/<%-post.file%> 1280w"
+            src="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_512/<%-post.file%>"
+            alt="<%-post.title%>" />
             <button type="button"
               class="<%-post.category%> button-card-category btn  mt-2 mb-2 pl-2 pr-2"><%=post.category%></button>
               <p class="text-date"><i class="fa fa-clock-o" aria-hidden="true"></i> <%=post.date%></p>

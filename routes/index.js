@@ -50,7 +50,11 @@ router.get('/', function(req, res, next) {
                     } else if( product.file.includes(".png")){
                         product.file =  product.file.replace(".png", ".webp");
                     }
+                    var arr = ((product.file).split("/"));
+                    product.file = arr[arr.length-1]
                 }); 
+
+        
                
                 res.render('products',{posts: products, current:page, pages: Math.ceil(count / perpage)})
             })
@@ -75,6 +79,8 @@ router.get('/:page', function(req, res, next) {
                     } else if( product.file.includes(".png")){
                         product.file =  product.file.replace(".png", ".webp");
                     }
+                    var arr = ((product.file).split("/"));
+                    product.file = arr[arr.length-1]
                 }); 
                 res.render('products',{posts: products, current:parseInt(page), pages: Math.ceil(count / perpage)})
             })
