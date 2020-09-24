@@ -35,7 +35,7 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i> Tạo 3D Navigation Bằng HTML, CSS Và Javascript</h2>
+                  aria-hidden="true"></i> Những Thiết Kế Material Design Đẹp Cho Trang Web (2020)</h2>
             </div>
           </div>
           <div class="article-title">
@@ -44,244 +44,493 @@
             </div>
           </div>
           <div class="text-content-article mt-5">
-            <p><i> Ngày hôm nay chúng ta sẽ đi vào tìm hiểu cách tạo 3D Navigation(thanh tiêu đề) trong trang
-                web bằng HTML, CSS và Javascript nhé!</i>
+            <p><i> Ngày hôm nay chúng ta sẽ đi vào tìm những thiết kế material design đẹp bằng HTML, CSS, Javascript cho
+                trang
+                web trong năm 2020 nhé!</i>
             </p>
           </div>
+          <p class="mt-4">Trước khi đi vào ví dụ thì mình có một số chú ý sau là để xem rõ kết quả hơn bạn chuyển sang
+            chế độ screen <b>0.5x, 0.25x</b> hay nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b>
+            trong Codepen mới xem được nhé. Nếu file là SCSS thì bạn có thể chuyển sang CSS ở đây nhé : <a
+              href="https://jsonformatter.org/scss-to-css" rel="external nofollow noopener noreferrer"
+              target="_blank">SCSS to CSS</a>. Nếu file là Pug thì bạn có thể chuyển sang HTML ở đây nhé : <a
+              href="https://pughtml.com/" rel="external nofollow noopener noreferrer" target="_blank">Pug to HTML</a>.
+            Nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ
+            <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.</p>
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Article Tiles</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="mkurapov"
+            data-slug-hash="qNQXxz" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Article Tiles">
+            <span>See the Pen <a href="https://codepen.io/mkurapov/pen/qNQXxz">
+                Article Tiles</a> by Max Kurapov (<a href="https://codepen.io/mkurapov">@mkurapov</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+
+          <button type="button " class="button-blog-post-article mt-4"><a
+              href="https://codepen.io/mkurapov/pen/qNQXxz" target="_blank" rel="noopener noreferrer">Nguồn</a></button>
 
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Tạo Cấu Trúc Phần Tử HTML</h3>
+            <h3 class="text-primary ml-4 title-article-size">Tabs Modal</h3>
           </div>
-          <p> Trước tiên chúng ta sẽ cần tạo hai file chính là <code>index.html</code> (Lưu trữ phần tử HTML) và
-            <code>style.css</code> (Lưu trữ các thuộc tính CSS). Sau đó liên kết chúng lại với nhau thông qua đoạn mã
-            bên dưới:</p>
-
-          <h4 class="text-primary">
-            HTML:
-          </h4>
-          <pre><code class="html">&#60;!DOCTYPE&nbsp;html&#62;<br/> &#60;html&nbsp;lang="en"&#62;<br/> &#60;head&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;charset="UTF-8"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;name="viewport"&nbsp;content="width=device-width,&nbsp;initial-scale=1.0"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;title&#62;Tạo&nbsp;3D&nbsp;Navbar&#60;/title&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;1,700&display=swap"&nbsp;rel="stylesheet"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="style.css"&#62;<br/> &#60;/head&#62;<br/> &#60;body&#62;<br/>&#60;/body&#62;<br/> &#60;/html&#62;<br/></code></pre>
-
-     
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Thêm Các Phần Tử HTML</h3>
-          </div>
-
-          <p>
-            Trong phần này chúng ta sẽ đi vào thêm các cấu trúc phần tử HTML cần thiết để tạo ra thanh tiêu đề 3D thông qua đoạn mã sau nhé:
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="andytran"
+            data-slug-hash="zvMGXr" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Tabs Modal">
+            <span>See the Pen <a href="https://codepen.io/andytran/pen/zvMGXr">
+                Tabs Modal</a> by Andy Tran (<a href="https://codepen.io/andytran">@andytran</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
-          <h4 class="text-primary">
-            HTML
-          </h4>
-          <pre><code class="html">&#60;div&nbsp;class="container"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="navbar"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="menu"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h3&nbsp;class="logo"&#62;Niềm&nbsp;Vui&nbsp;Lập&nbsp;Trình&#60;/h3&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="hamburger-menu"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="bar"&#62;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &#60;/div&#62;<br/></code></pre>
 
-         
-          <!-- <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1600782322/Hieu_Ung_Hover_Menu/Hover_Cho_Thanh_Menu_B%E1%BA%B1ng_HTML_CSS_JS_1_tvcvvs.png"
-            alt="Hiệu Ứng Hover Menu 1"
-           > -->
+          <button type="button " class="button-blog-post-article mt-4">
+            <a href="https://codepen.io/andytran/pen/zvMGXr" target="_blank"
+              rel="noopener noreferrer">Nguồn</a></button>
 
-           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">
-              Xác Định Vị Trí Và Thiết Lập Font Cho Menu 3D
-            </h3>
-          </div>
-          <p>
-           Phần tiếp theo chúng ta sẽ sử dụng các thuộc tính CSS để thiết lập font chữ cho nội dung trong trang web và xác định vị trí của thanh 
-           tiêu đề thông qua đoạn mã CSS sau nhé:
-          </p>
-          <h4 class="text-primary">
-            CSS
-          </h4>
-          <pre><code class="css"> *&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;box-sizing:&nbsp;border-box;<br/> }<br/>body{<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-family:&nbsp;'Epilogue',&nbsp;sans-serif;<br/> }<br/>.container&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;min-height:&nbsp;100vh;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-color:&nbsp;#485461;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-image:&nbsp;linear-gradient(135deg,&nbsp;#485461,&nbsp;#28313b&nbsp;74%);<br/> &nbsp;&nbsp;&nbsp;&nbsp;overflow:&nbsp;hidden;<br/> }<br/>.navbar{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;fixed;<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;left:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;z-index:&nbsp;10;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;3rem;<br/> }<br/></code></pre>
 
-          <p class="mt-4">
-            Và kết quả bạn xem hình ảnh bên dưới nhé:
-          </p>
-        <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1600842671/3D_Navbar/3D_Menu_1_lr8hz4.png"
-            alt="3D Menu 1"
-           > 
+
 
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">
-              Thiết Lập Style Cho 3D Navbar
-            </h3>
+            <h3 class="text-primary ml-4 title-article-size">Material Compact Login Animation</h3>
           </div>
-
-          <p>
-            Trong phần này mình và bạn sẽ đi vào thiết kế icon đóng mở cho thanh tiêu đề cũng như thiết lập style cho thẻ <code>div</code> 
-            với class <code>logo</code> thông qua đoạn code sau nhé:
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="yusufbkr"
+            data-slug-hash="RPBQqg" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Material Compact Login Animation">
+            <span>See the Pen <a href="https://codepen.io/yusufbkr/pen/RPBQqg">
+                Material Compact Login Animation</a> by Yusuf Bakır (<a
+                href="https://codepen.io/yusufbkr">@yusufbkr</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
-          <h4 class="text-primary">
-           CSS
-          </h4>
-         <pre><code class="css">/*Thiết&nbsp;lập&nbsp;style&nbsp;thanh&nbsp;tiêu&nbsp;đề*/<br/> .menu&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;max-width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;0&nbsp;2rem;<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;flex;<br/> &nbsp;&nbsp;&nbsp;&nbsp;justify-content:&nbsp;space-between;<br/> &nbsp;&nbsp;&nbsp;&nbsp;align-items:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#fff;<br/> }<br/> /*Thiết&nbsp;lập&nbsp;style&nbsp;cho&nbsp;div&nbsp;có&nbsp;class&nbsp;là&nbsp;logo*/<br/> .logo{<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;1.1rem;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-weight:&nbsp;700;<br/> &nbsp;&nbsp;&nbsp;&nbsp;text-transform:&nbsp;uppercase;<br/> &nbsp;&nbsp;&nbsp;&nbsp;letter-spacing:&nbsp;2px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;line-height:&nbsp;4rem;<br/> }<br/>/*Tạo&nbsp;Icon&nbsp;Menu*/<br/> .hamburger-menu{<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;4rem;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;3rem;<br/> &nbsp;&nbsp;&nbsp;&nbsp;cursor:&nbsp;pointer;<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;flex;<br/> &nbsp;&nbsp;&nbsp;&nbsp;align-items:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;justify-content:&nbsp;flex-end;<br/> }<br/>.bar{<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;1.9rem;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;1.5px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;2px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-color:&nbsp;#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;0.5s;<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;<br/> }<br/>.bar::before,<br/> .bar::after&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;content:&nbsp;'';<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;inherit;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;inherit;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-color:&nbsp;#eee;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;0.5s;<br/> }<br/>.bar::before{<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;translateY(-9px)<br/> }<br/>.bar::after{<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;translateY(9px)<br/> }<br/></code></pre>
-         <p class="mt-4">
-          Và kết quả bạn xem hình ảnh bên dưới nhé:
-        </p>
-      <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1600843151/3D_Navbar/3D_Menu_2_ewomqh.png"
-          alt="3D Menu 2"
-         > 
-         
-         <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-          <h3 class="text-primary ml-4 title-article-size">
-            Thêm Nội Dung Và Tiêu Đề Cho Trang Web
-          </h3>
-        </div>
-        <p>
-          Phần này chúng ta sẽ thêm các phần tử HTML và  các thuộc tính CSS để giúp làm nổi bật  tiêu đề và nội dung ở trong  trang web thông qua đoạn mã sau nhé:
-        </p>
-        <h4 class="text-primary">
-          HTML
-        </h4>
-        <pre><code class="html">&#60;!--Nội&nbsp;Dung&nbsp;Cũ--&#62;<br/> &#60;div&nbsp;class="container"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="navbar"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="menu"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h3&nbsp;class="logo"&#62;Niềm&nbsp;Vui&nbsp;Lập&nbsp;Trình&#60;/h3&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="hamburger-menu"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="bar"&#62;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &#60;!--&nbsp;Kết&nbsp;Thúc&nbsp;Nội&nbsp;Dung&nbsp;Cũ--&#62;<br/> &#60;!--Thêm&nbsp;Phần&nbsp;Tử&nbsp;Mới--&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="main-container"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="main"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;header&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="overlay"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="inner"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h2&nbsp;class="title"&#62;Xin&nbsp;Chào&nbsp;Các&nbsp;Bạn&#60;/h2&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p&#62;Lorem&nbsp;ipsum&nbsp;dolor,&nbsp;sit&nbsp;amet&nbsp;consectetur&nbsp;adipisicing&nbsp;elit.&nbsp;Non,&nbsp;debitis&nbsp;vel&nbsp;obcaecati&nbsp;amet&nbsp;recusandae&nbsp;magnam&nbsp;perferendis&nbsp;ad.&#60;/p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p&nbsp;class="btn-container"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;a&nbsp;href="https://www.niemvuilaptrinh.com/"&nbsp;class="btn"&#62;Xem&nbsp;Thêm&#60;/a&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/p&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/header&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="shadow&nbsp;shadow1"&#62;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="shadow&nbsp;shadow2"&#62;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &#60;!--Kết&nbsp;Thúc&nbsp;Thêm&nbsp;Phần&nbsp;Tử&nbsp;Mới--&#62;<br/> &#60;/div&#62;<br/></code></pre>
-        <p class="mt-4">
-          Như bạn thấy thì phần nội dung mới mà mình thêm  thì vẫn thuộc class cha <code>.container</code> nhé!
-        </p>
-        <p >
-          Và kết quả bạn xem hình ảnh bên dưới nhé:
-        </p>
-      <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1600843921/3D_Navbar/3D_Menu_3_khtb1j.png"
-          alt="3D Menu 3"
-         > 
-         <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-          <h3 class="text-primary ml-4 title-article-size">
-            Thiết Lập Style Cho Nội Dung Và Tiêu Đề 
-          </h3>
-        </div>
-        <p>
-          Phần này ngoài việc thiết lập style cho nội dung và tiêu đề trong trang web thì chúng ta sẽ thực hiện xây dựng background  hình ảnh 
-          cho toàn bộ website thông qua đoạn mã sau nhé:
-        </p>
-        <h4 class="text-primary">
-          CSS
-        </h4>
-        <pre><code class="css">.main{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;left:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;z-index:&nbsp;5;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-color:&nbsp;white;<br/> &nbsp;&nbsp;&nbsp;&nbsp;overflow:&nbsp;hidden;<br/> }<br/>header{<br/> &nbsp;&nbsp;&nbsp;&nbsp;min-height:&nbsp;100vh;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;url(https://images.pexels.com/photos/2693529/pexels-photo-2693529.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)&nbsp;no-repeat&nbsp;top&nbsp;center&nbsp;/&nbsp;cover;<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;<br/> }<br/>.overlay{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;left:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-color:&nbsp;rgba(43,51,59,0.7);<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;flex;<br/> &nbsp;&nbsp;&nbsp;&nbsp;justify-content:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;align-items:&nbsp;center;<br/> }<br/>.inner{<br/> &nbsp;&nbsp;&nbsp;&nbsp;max-width:&nbsp;35rem;<br/> &nbsp;&nbsp;&nbsp;&nbsp;text-align:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;0&nbsp;2rem;<br/> }<br/>.title{<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;3rem;<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:&nbsp;1rem;<br/> }<br/>.btn-container{<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin-top:&nbsp;1.5rem;<br/> }<br/> .btn{<br/> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;0.6rem&nbsp;1.8rem;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-color:&nbsp;#1179e7;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border:&nbsp;none;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;25px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;text-transform:&nbsp;uppercase;<br/> &nbsp;&nbsp;&nbsp;&nbsp;cursor:&nbsp;pointer;<br/> &nbsp;&nbsp;&nbsp;&nbsp;text-decoration:&nbsp;none;<br/> }<br/></code></pre>
-        <p >
-          Và kết quả bạn xem hình ảnh bên dưới nhé:
-        </p>
-      <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1600844563/3D_Navbar/3D_Menu_4_cordeh.png"
-          alt="3D Menu 4"
-         > 
-         <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-          <h3 class="text-primary ml-4 title-article-size">
-            Thiết Lập Javascript Cho 3D Navbar
-          </h3>
-        </div>
 
-        <p>
-         Trong phần này chúng ta sẽ sử dụng Javascript để thiết lập class <code>.active</code> cho thẻ div <code>container</code> khi người dùng nhấn vào <b>icon ở góc phải trên cùng</b> thông qua đoạn mã 
-         sau đây nhé:
-        </p>
-
-        <h4 class="text-primary">
-          Javascript
-        </h4>
-        <pre><code class="javascript"> const&nbsp;hambuger_menu&nbsp;=&nbsp;document.querySelector(".hamburger-menu");<br/> const&nbsp;container&nbsp;=&nbsp;document.querySelector(".container");<br/> hambuger_menu.addEventListener("click",&nbsp;()&nbsp;=>&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;container.classList.toggle("active");<br/> })<br/></code></pre>
-        <p class="mt-4">
-          Và kết quả bạn xem ở video bên dưới nhé:
-        </p>
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1600845382/3D_Navbar/Untitled__Sep_23_2020_2_14_PM_e67iql.mp4"></iframe>
-        </div>
-
-        <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-          <h3 class="text-primary ml-4 title-article-size">
-            Tạo Hiệu Ứng Chuyển Động Icon
-          </h3>
-        </div>
-        <p>
-          Trong phần này chúng ta sẽ sử dụng animation để chuyển đổi  <b>từ icon 3 gạch ngang sang icon đóng (X)</b> khi  người dùng kích hoạt class <code>active</code> (nhấn vào icon)
-          bằng đoạn mã CSS dưới đây nhé:
-        </p>
-        <h4 class="text-primary">
-          CSS
-        </h4>
-        <pre><code class="css">.container.active&nbsp;.bar{<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;rotate(360deg);<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-color:&nbsp;transparent;<br/> }<br/>.container.active&nbsp;.bar::before{<br/> &nbsp;&nbsp;&nbsp;transform:&nbsp;translateY(0)&nbsp;rotate(45deg);<br/> }<br/>.container.active&nbsp;.bar::after{<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;translateY(0)&nbsp;rotate(-45deg);<br/> }<br/></code></pre>
-        <p class="mt-4">
-          Và kết quả bạn xem ở video bên dưới nhé:
-        </p>
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1600845877/3D_Navbar/3D_Navbar_ux132b.mp4"></iframe>
-        </div>
-
-        <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-          <h3 class="text-primary ml-4 title-article-size">
-            Tạo Hiệu Ứng Chuyển Động 3D Cho Trang Web
-          </h3>
-        </div>
-
-        <p>
-          Phần này chúng ta sẽ đi vào tạo hiệu ứng chuyển động 3D cho trang web thông qua đoạn mã sau nhé:
-        </p>
-        <h4 class="text-primary">
-          CSS
-        </h4>
-        <pre><code class="css">.main{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform-origin:&nbsp;left;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform-style:&nbsp;preserve-3d;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;0.5s;<br/> &nbsp;}<br/>.container{<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform-style:&nbsp;preserve-3d;&nbsp;<br/> &nbsp;}<br/>&nbsp; .container.active&nbsp;.main{<br/> &nbsp;&nbsp;&nbsp;&nbsp;animation:&nbsp;main-animation&nbsp;0.5s&nbsp;ease;<br/> &nbsp;&nbsp;&nbsp;&nbsp;cursor:&nbsp;pointer;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;perspective(1300px)&nbsp;rotateY(20deg)&nbsp;&nbsp;translateZ(310px)&nbsp;scale(0.5);<br/> }<br/>@keyframes&nbsp;main-animation{<br/> &nbsp;&nbsp;&nbsp;&nbsp;from{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;translate(0);<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;&nbsp;&nbsp;&nbsp;to{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;perspective(1300px)&nbsp;rotateY(20deg)&nbsp;&nbsp;translateZ(310px)&nbsp;scale(0.5);<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> }<br/></code></pre>
-
-        <p class="mt-4">
-          Và kết quả bạn xem ở video bên dưới nhé:
-        </p>
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1600846163/3D_Navbar/3D_Navbar_1_czl9rm.mp4"></iframe>
-        </div>
+          <button type="button " class="button-blog-post-article mt-4">
+            <a href="https://codepen.io/yusufbkr/pen/RPBQqg" target="_blank"
+              rel="noopener noreferrer">Nguồn</a></button>
 
 
-        <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-          <h3 class="text-primary ml-4 title-article-size">
-            Thêm Đường Dẫn Cho 3D Navbar
-          </h3>
-        </div>
-        <p>
-          Trong phần này chúng ta sẽ thêm các đường dẫn vào thanh tiêu đề 3D thông qua đoạn code sau nhé (Đoạn mã sẽ được dặt trong class <code>container</code> 
-          ):
-        </p>
-        <h4 class="text-primary">
-          HTML
-        </h4>
-        <pre><code class="html">&#60;div&nbsp;class="container"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="navbar"&#62;...&#60;/div&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="main-container"&#62;...&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;!--Thêm&nbsp;Phần&nbsp;Tử&nbsp;Mới--&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="links"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;ul&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;a&nbsp;href="#"&#62;Trang&nbsp;Chủ&#60;/a&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;a&nbsp;href="#"&#62;Liên&nbsp;Hệ&#60;/a&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;a&nbsp;href="#"&#62;Về&nbsp;Chúng&nbsp;Tôi&#60;/a&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;a&nbsp;href="#"&#62;Dự&nbsp;Án&#60;/a&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;a&nbsp;href="#"&#62;Dịch&nbsp;Vụ&#60;/a&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;a&nbsp;href="#"&#62;Blog&#60;/a&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/ul&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&#60;!--Kết&nbsp;Thúc&nbsp;Thêm&nbsp;Phần&nbsp;Tử&nbsp;Mới--&#62;<br/> &#60;/div&#62;<br/></code></pre>
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Recipe Card UI Snippet</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="iMax723"
+            data-slug-hash="aNKQyE" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Recipe Card">
+            <span>See the Pen <a href="https://codepen.io/iMax723/pen/aNKQyE">
+                Recipe Card</a> by Max (<a href="https://codepen.io/iMax723">@iMax723</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
 
-        <h4 class="text-primary mt-4">
-          CSS
-        </h4>
-        <pre><code class="css">.links{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;30%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;right:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;100vh;<br/> &nbsp;&nbsp;&nbsp;&nbsp;z-index:&nbsp;2;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;eee;<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;flex;<br/> &nbsp;&nbsp;&nbsp;&nbsp;justify-content:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;align-items:&nbsp;center;<br/> }<br/>ul{<br/> &nbsp;&nbsp;&nbsp;&nbsp;list-style:&nbsp;none;<br/> }<br/>.links&nbsp;a{<br/> &nbsp;&nbsp;&nbsp;&nbsp;text-decoration:&nbsp;none;<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#eee;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;0.7rem&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;inline-block;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;2rem;<br/> &nbsp;&nbsp;&nbsp;&nbsp;letter-spacing:&nbsp;2px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;0.3s;<br/> &nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;translateY(10px);<br/> &nbsp;&nbsp;&nbsp;&nbsp; }<br/>.links&nbsp;a:hover{<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#fff;<br/> }<br/>/*Hiệu&nbsp;Ứng&nbsp;Hiển&nbsp;Thị&nbsp;3D&nbsp;Nabar*/<br/> .container.active&nbsp;.links&nbsp;a{<br/> &nbsp;&nbsp;&nbsp;&nbsp;animation:&nbsp;appear&nbsp;0.5s&nbsp;forwards&nbsp;ease-in-out&nbsp;0.5s;<br/> }<br/>@keyframes&nbsp;appear{<br/> &nbsp;&nbsp;&nbsp;&nbsp;from{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;translateY(10px);<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;&nbsp;&nbsp;&nbsp;to&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;1;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;translateY(0px);<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> }<br/> /*Hiệu&nbsp;Ứng&nbsp;Ẩn&nbsp;3D&nbsp;Nabar*/<br/> .links&nbsp;a{<br/> &nbsp;&nbsp;&nbsp;&nbsp;animation:&nbsp;hide&nbsp;0.5s&nbsp;forwards&nbsp;ease;<br/> }<br/>@keyframes&nbsp;hide{<br/> &nbsp;&nbsp;&nbsp;&nbsp;from&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;1;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;translateY(0px);<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;&nbsp;&nbsp;&nbsp;to{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;translateY(10px);<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> }<br/></code></pre>
+          <button type="button " class="button-blog-post-article mt-4">
+            <a href="https://codepen.io/iMax723/pen/aNKQyE" target="_blank" rel="noopener noreferrer">Nguồn</a></button>
 
-        <p class="mt-4">
-          Và kết quả bạn xem ở video bên dưới nhé:
-        </p>
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1600847498/3D_Navbar/3D_Navbar_2_sq3vgx.mp4"></iframe>
-        </div>
 
-        <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-          <h3 class="text-primary ml-4 title-article-size">
-           Thiết Lập Shadow Cho 3D Navbar
-          </h3>
-        </div>
 
-        <p>
-          Phần cuối cùng chúng ta cần thực hiện là thiết kế  trang web khi chuyển sang chế độ 3D có thể trông thật nhất có thể thông qua đoạn mã CSS sau nhé:
-        </p>
-        <h4 class="text-primary">
-          CSS
-        </h4>
-        <pre><code class="css">.shadow{<br/> &nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;height:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;top:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;left:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;transform-style:&nbsp;preserve-3d;<br/> &nbsp;&nbsp;&nbsp;transform-origin:&nbsp;left;<br/> }<br/>.shadow.shadow1{<br/> &nbsp;&nbsp;&nbsp;&nbsp;z-index:&nbsp;-1;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-color:&nbsp;#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;0.15;<br/> }<br/>.container.active&nbsp;.shadow.shadow1{<br/> &nbsp;&nbsp;&nbsp;&nbsp;animation:&nbsp;shadow-one&nbsp;0.6s&nbsp;ease-out;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;perspective(1300px)&nbsp;rotateY(20deg)&nbsp;&nbsp;translateZ(215px)&nbsp;scale(0.5);<br/> }<br/>@keyframes&nbsp;shadow-one{<br/> &nbsp;&nbsp;&nbsp;&nbsp;0%{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;translate(0);<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;&nbsp;&nbsp;&nbsp;50%{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;perspective(1300px)&nbsp;rotateY(20deg)&nbsp;&nbsp;translateZ(310px)&nbsp;scale(0.5);<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;&nbsp;&nbsp;&nbsp;100%{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;perspective(1300px)&nbsp;rotateY(20deg)&nbsp;&nbsp;translateZ(215px)&nbsp;scale(0.5);<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> }<br/>.shadow.shadow2{<br/> &nbsp;&nbsp;&nbsp;&nbsp;z-index:&nbsp;-2;<br/> &nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;0.1;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-color:&nbsp;#fff;<br/> }<br/>.container.active&nbsp;.shadow.shadow2{<br/> &nbsp;&nbsp;&nbsp;&nbsp;animation:&nbsp;shadow-two&nbsp;0.6s&nbsp;ease-out;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;perspective(1300px)&nbsp;rotateY(20deg)&nbsp;&nbsp;translateZ(120px)&nbsp;scale(0.5);<br/> }<br/>@keyframes&nbsp;shadow-two{<br/> &nbsp;&nbsp;&nbsp;&nbsp;0%{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;translate(0);<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;&nbsp;&nbsp;&nbsp;50%{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;perspective(1300px)&nbsp;rotateY(20deg)&nbsp;&nbsp;translateZ(310px)&nbsp;scale(0.5); &nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;&nbsp;&nbsp;&nbsp;100%{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;perspective(1300px)&nbsp;rotateY(20deg)&nbsp;&nbsp;translateZ(120px)&nbsp;scale(0.5);<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> }<br/>.container.active&nbsp;.main:hover&nbsp;+&nbsp;.shadow.shadow1{<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;perspective(1300px)&nbsp;rotateY(20deg)&nbsp;&nbsp;translateZ(230px)&nbsp;scale(0.5);<br/> }<br/>.container.active&nbsp;.main:hover&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;perspective(1300px)&nbsp;rotateY(20deg)&nbsp;&nbsp;translateZ(340px)&nbsp;scale(0.5);<br/> }<br/></code></pre>
-        <p class="mt-4">
-          Và kết quả cuối cùng bạn xem ở video bên dưới nhé:
-        </p>
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1600848188/3D_Navbar/3D_Navbar_3_nju8kk.mp4"></iframe>
-        </div>
-        <p class="mt-4">
-          Ngoài ra bạn có thể xem trực tiếp trên Codepen ở <a href="https://codepen.io/haycuoilennao19/pen/abNPYGm" title="3D Navbar" target="_blank">đường dẫn này nhé!</a><br/>
-          Nguồn Tham Khảo: <a href="https://www.youtube.com/watch?v=nOcVOJw3Gfw&t=39s&ab_channel=TrueCoder" target="_blank">https://www.youtube.com/watch?v=nOcVOJw3Gfw&t=39s&ab_channel=TrueCoder</a>
-        </p>
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Material Inspired Checkboxes and Radio Groups</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="BuddyLReno"
+            data-slug-hash="boGRPO" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Material Inspired Checkboxes and Radio Groups">
+            <span>See the Pen <a href="https://codepen.io/BuddyLReno/pen/boGRPO">
+                Material Inspired Checkboxes and Radio Groups</a> by Buddy Reno (<a
+                href="https://codepen.io/BuddyLReno">@BuddyLReno</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+
+          <button type="button " class="button-blog-post-article mt-4">
+            <a href="https://codepen.io/BuddyLReno/pen/boGRPO" target="_blank"
+              rel="noopener noreferrer">Nguồn</a></button>
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Material Client Testimonial Snippet</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="asistapl"
+            data-slug-hash="GqqNLG" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Client Testimonial">
+            <span>See the Pen <a href="https://codepen.io/asistapl/pen/GqqNLG">
+                Client Testimonial</a> by Maciej Leszczyński (<a href="https://codepen.io/asistapl">@asistapl</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+
+          <button type="button " class="button-blog-post-article mt-4">
+            <a href="https://codepen.io/asistapl/pen/GqqNLG" target="_blank"
+              rel="noopener noreferrer">Nguồn</a></button>
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Material Card UI</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="choogoor"
+            data-slug-hash="YWBxAg" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="News Cards - CSS only">
+            <span>See the Pen <a href="https://codepen.io/choogoor/pen/YWBxAg">
+                News Cards - CSS only</a> by Aleksandar Čugurović (<a href="https://codepen.io/choogoor">@choogoor</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+
+          <button type="button " class="button-blog-post-article mt-4">
+            <a href="https://codepen.io/choogoor/pen/YWBxAg" target="_blank"
+              rel="noopener noreferrer">Nguồn</a></button>
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Expanding Card | Material Design</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="woodwoerk"
+            data-slug-hash="adbyvG" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Expanding Card | Material Design">
+            <span>See the Pen <a href="https://codepen.io/woodwoerk/pen/adbyvG">
+                Expanding Card | Material Design</a> by Joe Harry (<a
+                href="https://codepen.io/woodwoerk">@woodwoerk</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+
+          <button type="button " class="button-blog-post-article mt-4">
+            <a href="https://codepen.io/woodwoerk/pen/adbyvG" target="_blank"
+              rel="noopener noreferrer">Nguồn</a></button>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Material Design Input</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="atunnecliffe"
+            data-slug-hash="gpKzQw" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Nice, compliant input boxes">
+            <span>See the Pen <a href="https://codepen.io/atunnecliffe/pen/gpKzQw">
+                Nice, compliant input boxes</a> by Andrew Tunnecliffe (<a
+                href="https://codepen.io/atunnecliffe">@atunnecliffe</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+
+          <button type="button " class="button-blog-post-article mt-4">
+            <a href="https://codepen.io/atunnecliffe/pen/gpKzQw" target="_blank"
+              rel="noopener noreferrer">Nguồn</a></button>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">CSS MATERIAL DESIGN RADIO BUTTON</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="sajran"
+            data-slug-hash="wGXJQp" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Material Design radio button (CSS only)">
+            <span>See the Pen <a href="https://codepen.io/sajran/pen/wGXJQp">
+                Material Design radio button (CSS only)</a> by Bazyli Cyran (<a
+                href="https://codepen.io/sajran">@sajran</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+
+          <button type="button " class="button-blog-post-article mt-4">
+            <a href="https://codepen.io/sajran/pen/wGXJQp" target="_blank" rel="noopener noreferrer">Nguồn</a></button>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Full CSS Material design form</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="Alex-D"
+            data-slug-hash="ByZLeg" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Full CSS Material design form">
+            <span>See the Pen <a href="https://codepen.io/Alex-D/pen/ByZLeg">
+                Full CSS Material design form</a> by DEMODE Alexandre (<a href="https://codepen.io/Alex-D">@Alex-D</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+
+          <button type="button " class="button-blog-post-article mt-4">
+            <a href="https://codepen.io/Alex-D/pen/ByZLeg" target="_blank" rel="noopener noreferrer">Nguồn</a></button>
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Material Design Box Shadows</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="sdthornton"
+            data-slug-hash="wBZdXq" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Material Design Box Shadows">
+            <span>See the Pen <a href="https://codepen.io/sdthornton/pen/wBZdXq">
+                Material Design Box Shadows</a> by Samuel Thornton (<a
+                href="https://codepen.io/sdthornton">@sdthornton</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+
+          <button type="button " class="button-blog-post-article mt-4">
+            <a href="https://codepen.io/sdthornton/pen/wBZdXq" target="_blank"
+              rel="noopener noreferrer">Nguồn</a></button>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Burger Menu inspired by Material Design</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="victorfreire"
+            data-slug-hash="QywRNM" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="#1 Burger Menu inspired by Material Design">
+            <span>See the Pen <a href="https://codepen.io/victorfreire/pen/QywRNM">
+                #1 Burger Menu inspired by Material Design</a> by Victor Freire (<a
+                href="https://codepen.io/victorfreire">@victorfreire</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+
+          <button type="button " class="button-blog-post-article mt-4">
+            <a href="https://codepen.io/victorfreire/pen/QywRNM" target="_blank"
+              rel="noopener noreferrer">Nguồn</a></button>
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Material Design Ripple Transition</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="djmarland"
+            data-slug-hash="CxEbK" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Material design transition">
+            <span>See the Pen <a href="https://codepen.io/djmarland/pen/CxEbK">
+                Material design transition</a> by David Marland (<a href="https://codepen.io/djmarland">@djmarland</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+
+          <button type="button " class="button-blog-post-article mt-4">
+            <a href="https://codepen.io/djmarland/pen/CxEbK" target="_blank"
+              rel="noopener noreferrer">Nguồn</a></button>
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Material Design CSS Only Dropdown Menu</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="mildrenben"
+            data-slug-hash="RPwQEY" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Material Design CSS Only Dropdown Menu">
+            <span>See the Pen <a href="https://codepen.io/mildrenben/pen/RPwQEY">
+                Material Design CSS Only Dropdown Menu</a> by Ben Mildren (<a
+                href="https://codepen.io/mildrenben">@mildrenben</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+
+          <button type="button " class="button-blog-post-article mt-4">
+            <a href="https://codepen.io/mildrenben/pen/RPwQEY" target="_blank"
+              rel="noopener noreferrer">Nguồn</a></button>
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Material design navigation</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="Lewitje"
+            data-slug-hash="tyGdf" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Material design navigation">
+            <span>See the Pen <a href="https://codepen.io/Lewitje/pen/tyGdf">
+                Material design navigation</a> by Lewi Hussey (<a href="https://codepen.io/Lewitje">@Lewitje</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+
+          <button type="button " class="button-blog-post-article mt-4">
+            <a href="https://codepen.io/Lewitje/pen/tyGdf" target="_blank" rel="noopener noreferrer">Nguồn</a></button>
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Material design sign up form</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="KovJonas"
+            data-slug-hash="BoPOPY" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Material design sign up form">
+            <span>See the Pen <a href="https://codepen.io/KovJonas/pen/BoPOPY">
+                Material design sign up form</a> by KovJonas (<a href="https://codepen.io/KovJonas">@KovJonas</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+
+          <button type="button " class="button-blog-post-article mt-4">
+            <a href="https://codepen.io/KovJonas/pen/BoPOPY" target="_blank"
+              rel="noopener noreferrer">Nguồn</a></button>
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Materialize Button</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="legeoffrey"
+            data-slug-hash="PwYeGo" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Materialize Button">
+            <span>See the Pen <a href="https://codepen.io/legeoffrey/pen/PwYeGo">
+                Materialize Button</a> by g3offrey (<a href="https://codepen.io/legeoffrey">@legeoffrey</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <button type="button " class="button-blog-post-article mt-4">
+            <a href="https://codepen.io/legeoffrey/pen/PwYeGo" target="_blank"
+              rel="noopener noreferrer">Nguồn</a></button>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Material Design Color Scale</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="yusufbkr"
+            data-slug-hash="JdBxpj" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Material Design Color Scale">
+            <span>See the Pen <a href="https://codepen.io/yusufbkr/pen/JdBxpj">
+                Material Design Color Scale</a> by Yusuf Bakır (<a href="https://codepen.io/yusufbkr">@yusufbkr</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <button type="button " class="button-blog-post-article mt-4">
+            <a href="https://codepen.io/yusufbkr/pen/JdBxpj" target="_blank"
+              rel="noopener noreferrer">Nguồn</a></button>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Animated Material Design Button</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="MartijnBrands"
+            data-slug-hash="VvmmNe" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Animated Material Design Button">
+            <span>See the Pen <a href="https://codepen.io/MartijnBrands/pen/VvmmNe">
+                Animated Material Design Button</a> by Martijn Brands (<a
+                href="https://codepen.io/MartijnBrands">@MartijnBrands</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+
+          <button type="button " class="button-blog-post-article mt-4">
+            <a href="https://codepen.io/MartijnBrands/pen/VvmmNe" target="_blank"
+              rel="noopener noreferrer">Nguồn</a></button>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Responsive Material Design Timeline</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result"
+            data-user="haycuoilennao19" data-slug-hash="poyGNbr" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Responsive Material Design Timeline">
+            <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/poyGNbr">
+                Responsive Material Design Timeline</a> by haycuoilennao19 (<a
+                href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+
+
+          <button type="button " class="button-blog-post-article mt-4">
+            <a href="https://codepen.io/haycuoilennao19/pen/poyGNbr" target="_blank"
+              rel="noopener noreferrer">Nguồn</a></button>
+
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Material Design Popup</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="arcs"
+            data-slug-hash="BodWvJ" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Material Design Popup">
+            <span>See the Pen <a href="https://codepen.io/arcs/pen/BodWvJ">
+                Material Design Popup</a> by Patrick Stillhart (<a href="https://codepen.io/arcs">@arcs</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+
+
+
+          <button type="button " class="button-blog-post-article mt-4">
+            <a href="https://codepen.io/arcs/pen/BodWvJ" target="_blank" rel="noopener noreferrer">Nguồn</a></button>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Material Design Chips</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="moso"
+            data-slug-hash="EjEgQY" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Material Design Chips">
+            <span>See the Pen <a href="https://codepen.io/moso/pen/EjEgQY">
+                Material Design Chips</a> by Morten Sørensen (<a href="https://codepen.io/moso">@moso</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+
+
+
+
+          <button type="button " class="button-blog-post-article mt-4">
+            <a href="https://codepen.io/moso/pen/EjEgQY" target="_blank" rel="noopener noreferrer">Nguồn</a></button>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Material Design UI Audio Player</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="michael-zhigulin" data-slug-hash="NGZGma" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Material Design UI Audio Player">
+            <span>See the Pen <a href="https://codepen.io/michael-zhigulin/pen/NGZGma">
+            Material Design UI Audio Player</a> by Michael Zhigulin (<a href="https://codepen.io/michael-zhigulin">@michael-zhigulin</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+
+          <button type="button " class="button-blog-post-article mt-4">
+            <a href="https://codepen.io/michael-zhigulin/pen/NGZGma" target="_blank" rel="noopener noreferrer">Nguồn</a></button>
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">Material Design Cards</h3>
+            </div>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="vincebrown" data-slug-hash="emJoga" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Material Design Cards">
+              <span>See the Pen <a href="https://codepen.io/vincebrown/pen/emJoga">
+              Material Design Cards</a> by Vince Brown (<a href="https://codepen.io/vincebrown">@vincebrown</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+  
+            <button type="button " class="button-blog-post-article mt-4">
+              <a href="https://codepen.io/vincebrown/pen/emJoga" target="_blank" rel="noopener noreferrer">Nguồn</a></button>
+
+              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">Google Material Design Input File</h3>
+              </div>
+              <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="Josantonius" data-slug-hash="BzNwXz" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Google Material Design Input File">
+                <span>See the Pen <a href="https://codepen.io/Josantonius/pen/BzNwXz">
+                Google Material Design Input File</a> by Josantonius (<a href="https://codepen.io/Josantonius">@Josantonius</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+              </p>
+              
+    
+              <button type="button " class="button-blog-post-article mt-4">
+                <a href="https://codepen.io/Josantonius/pen/BzNwXz" target="_blank" rel="noopener noreferrer">Nguồn</a></button>
+                <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+                  <h3 class="text-primary ml-4 title-article-size">Material Design Blockquote</h3>
+                </div>
+                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="MichaelMammoliti" data-slug-hash="EjoyQz" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Material Design Blockquote">
+                  <span>See the Pen <a href="https://codepen.io/MichaelMammoliti/pen/EjoyQz">
+                  Material Design Blockquote</a> by Michael Mammoliti (<a href="https://codepen.io/MichaelMammoliti">@MichaelMammoliti</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+                
+      
+                <button type="button " class="button-blog-post-article mt-4">
+                  <a href="https://codepen.io/MichaelMammoliti/pen/EjoyQz" target="_blank" rel="noopener noreferrer">Nguồn</a></button>
+
+
+                  <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+                    <h3 class="text-primary ml-4 title-article-size">Material Design - Transformation</h3>
+                  </div>
+                  <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="ehellman" data-slug-hash="BLyoRE" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Material Design - Transformation">
+                    <span>See the Pen <a href="https://codepen.io/ehellman/pen/BLyoRE">
+                    Material Design - Transformation</a> by Erik Hellman (<a href="https://codepen.io/ehellman">@ehellman</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                  
+        
+                  <button type="button " class="button-blog-post-article mt-4">
+                    <a href="https://codepen.io/ehellman/pen/BLyoRE" target="_blank" rel="noopener noreferrer">Nguồn</a></button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
           <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
-          <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn kiến thức tạo 3D Navbar
+          <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những thiết kế material design  đẹp và
             hữu ích
             dành cho việc phát triển, thiết kế web và nếu có thắc mắc gì cứ gửi email mình sẽ
             phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa
