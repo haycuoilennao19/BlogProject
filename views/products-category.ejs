@@ -34,7 +34,8 @@
   <link href="https://fonts.googleapis.com/css?family=Crimson+Text&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:400,700,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -156,11 +157,11 @@
            
      
             
-                <button class="button-blog-post mb-4">
-               <a  title="<%-post.title%>" href="/article/<%-post.slug%>">
-                   Tiếp tục đọc
-                  </a>
-                </button>
+              <p class="mt-4 pt-4">
+                <a  title="<%-post.title%>" class="button-blog-post" href="/article/<%-post.slug%>">
+                  Tiếp tục đọc
+                 </a>
+              </p>
 
             
           </div>
@@ -214,19 +215,12 @@
               Từ Khóa
             </div>
             <div class="card-body card-body-search mt-4">
-              <h3 class="button-article"><a title="Thông Tin Về CSS" href="/article/css"><button type="button"
-                class="btn shadow-sm rounded btn-secondary m-1 pl-2 pr-2 hvr-shrink button-article-2"><i class="fa fa-tag" aria-hidden="true"></i> CSS</button></a>
-                <a href="/article/html" title="Thông Tin Về HTML"><button type="button"
-                class="btn shadow-sm rounded btn-secondary m-1 pl-2 pr-2 hvr-shrink button-article-2"><i class="fa fa-tag" aria-hidden="true"></i> HTML</button></a>
-                <a href="/article/Javascript" title="Thông Tin Về Javascript">
-                <button type="button"
-                class="btn shadow-sm rounded btn-secondary m-1 pl-2 pr-2 hvr-shrink button-article-2"><i class="fa fa-tag" aria-hidden="true"></i> Javascript</button></a>
-                <a href="/article/Bootstrap" title="Thông Tin Về Bootstrap">
-                  <button type="button"
-                  class="btn shadow-sm rounded m-1 pl-2 pr-2 hvr-shrink  btn-secondary  button-article-2"><i class="fa fa-tag" aria-hidden="true"></i> Bootstrap</button></a>
-                  <a href="/article/Resource" title="Nguồn Lập Trình">
-                    <button type="button"
-                  class="btn shadow-sm rounded m-1 pl-2 pr-2 hvr-shrink  btn-secondary  button-article-2"><i class="fa fa-tag" aria-hidden="true"></i> Nguồn Lập Trình</button></a>
+              <h3 class="button-article"><a title="Thông Tin Về CSS" class="btn shadow-sm rounded btn-secondary m-1 pl-2 pr-2 hvr-shrink button-article-2" href="/article/css"><i class="fa fa-tag" aria-hidden="true"></i> CSS</a>
+                <a href="/article/html" title="Thông Tin Về HTML"  class="btn shadow-sm rounded btn-secondary m-1 pl-2 pr-2 hvr-shrink button-article-2"><i class="fa fa-tag" aria-hidden="true"></i> HTML</a>
+                <a href="/article/Javascript" title="Thông Tin Về Javascript"  class="btn shadow-sm rounded btn-secondary m-1 pl-2 pr-2 hvr-shrink button-article-2">
+               <i class="fa fa-tag" aria-hidden="true"></i> Javascript</a>
+                <a href="article/Resource" title="Nguồn Lập Trình"  class="btn shadow-sm rounded m-1 pl-2 pr-2 hvr-shrink  btn-secondary button-article-2">
+                <i class="fa fa-tag" aria-hidden="true"></i> Nguồn Lập Trình</a>
                 </h3>
             </div>
           </div>
@@ -314,7 +308,7 @@
 
         <script src="/javascripts/lazysizes.min.js" async></script>
         <!-- Images End -->
-        <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+      
 </body>
 
 </html>
