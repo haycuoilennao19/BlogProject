@@ -127,10 +127,10 @@ body {
 .header-content {
     font-family: Montserrat, sans-serif;
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 400;
     border-top: 2px solid #bada55;
     border-bottom: 2px solid #bada55;
-    padding: .5rem
+    padding: .5rem;
 }
 
 .card {
@@ -560,7 +560,7 @@ img {
     background: #fff;
     color: #fff;
     border-radius: 5px 15px 5px;
-    background: #bada55
+    background: #bada55;
 }
 
 .text-date {
@@ -577,9 +577,9 @@ img {
 }
 
 .card-title-article {
-    color: #fff;
+    color: #bada55;
     font-family: Montserrat, Times, serif;
-    font-weight: 700
+    font-weight: 400;
 }
 
 .button-blog-post {
@@ -641,7 +641,7 @@ img {
 
 .article-title-blog-post {
     font-weight: 700;
-    font-family: Merriweather, Times, serif;
+    font-family: Montserrat, Times, serif;
     font-size: 1.6rem
 }
 
