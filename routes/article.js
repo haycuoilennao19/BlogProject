@@ -315,12 +315,15 @@ router.get("/:slug", function(req, res) {
     
             let dateCreate = (data.date.split(" "));
             let dateModified = dateCreate[6] + "-" + dateCreate[3] + "-" + dateCreate[1];
-           
+            
                 if(data.file.includes(".jpg")){
                     data.file =  data.file.replace(".jpg", ".webp");
                 } else if( data.file.includes(".png")){
                     data.file =  data.file.replace(".png", ".webp");
                 }
+              
+                data.file_image_facebook = data.file;
+                console.log(data.file_image_facebook)
                 var arr = ((data.file).split("/"));
                 data.file = arr[arr.length-1]
             res.render("article", {article: data, dateModified: dateModified})
