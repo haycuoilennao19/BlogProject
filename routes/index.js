@@ -33,6 +33,7 @@ router.get('/superplaceholer', function(req, res, next) {
 
 
 
+
 router.get('/', function(req, res, next) { 
     var perpage = 6;
     var page = req.params.page || 1

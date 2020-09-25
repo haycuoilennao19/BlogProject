@@ -60,7 +60,6 @@ app.use(function(req, res, next) {
 });
 
 
-
 mongoose.connect('mongodb+srv://admin:Nhatlk@241095@cluster0-nrygr.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true,  useUnifiedTopology:
 true });
 mongoose.Promise = global.Promise;
