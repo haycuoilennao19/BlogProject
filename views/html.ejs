@@ -35,528 +35,484 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i> Những Thủ Thuật CSS Giúp Bạn Thiết Kế Web Tốt Hơn (Phần 1)</h2>
+                  aria-hidden="true"></i> Những Thủ Thuật CSS Giúp Bạn Thiết Kế Web Tốt Hơn (Phần 2) </h2>
             </div>
           </div>
 
+           
           <div class="text-content-article mt-5">
-            <p><i> Ngày hôm nay chúng ta sẽ đi vào tìm những thủ thuật CSS giúp bạn có thể dễ dàng hơn trong việc phát
+            <p><i> Ngày hôm nay chúng ta sẽ tiếp tục  đi vào tìm hiểu những thủ thuật CSS (phần 2)  giúp bạn có thể dễ dàng hơn trong việc phát
                 triển và thiết kế web
-                trong năm 2020 nhé!
+                 nhé!
               </i>
             </p>
           </div>
-
           <p class="mt-4">
-
-            Việc sử dụng nhiều thư viện để thiết kế web thì phần nào sẽ làm tăng thời gian tải trang cũng như khó khăn
-            trong việc áp dụng cho nhiều dự án khác nhau.
-            Do đó ngày hôm nay mình sẽ giới thiệu đến bạn những component hay hiệu ứng được xây dựng bằng HTML và CSS
-            thuần. Nó sẽ giúp bạn có thể
-            sử dụng cho nhiều loại dự án web khác nhau cũng như làm tăng kỹ năng của bạn về HTML và CSS hơn. Và bây giờ
-            chúng ta hãy cùng nhau đi vào tìm hiểu nhé!
+            Nếu bạn muốn xem lại phần 1 thì có thể truy cập 
+            <a href="https://www.niemvuilaptrinh.com/article/Nhung-Thu-Thuat-CSS-Giup-Ban-Thiet-Ke-Web-Tot-Hon-Phan-1" title="Những Thủ Thuật CSS Giúp Bạn Thiết Kế Web Tốt Hơn (Phần 1)">
+            ở đây nhé!</a>
           </p>
+         
+          <p class="mt-4">Trước khi đi vào ví dụ thì mình có một số chú ý sau là để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> hay nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Nếu file là SCSS thì bạn có thể chuyển sang CSS ở đây nhé : <a href="https://jsonformatter.org/scss-to-css" rel="external nofollow noopener noreferrer" target="_blank">SCSS to CSS</a>. Nếu file là Pug thì bạn có thể chuyển sang HTML ở đây nhé : <a href="https://pughtml.com/" rel="external nofollow noopener noreferrer" target="_blank">Pug to HTML</a>. Nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.</p>
 
-
-          <p class="mt-4">Trước khi đi vào ví dụ thì mình có một số chú ý sau là để xem rõ kết quả hơn bạn chuyển sang
-            chế độ screen <b>0.5x, 0.25x</b> hay nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b>
-            trong Codepen mới xem được nhé. Nếu file là SCSS thì bạn có thể chuyển sang CSS ở đây nhé : <a
-              href="https://jsonformatter.org/scss-to-css" rel="external nofollow noopener noreferrer"
-              target="_blank">SCSS to CSS</a>. Nếu file là Pug thì bạn có thể chuyển sang HTML ở đây nhé : <a
-              href="https://pughtml.com/" rel="external nofollow noopener noreferrer" target="_blank">Pug to HTML</a>.
-            Nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ
-            <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.</p>
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">CSS radio buttons</h3>
+            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Chuyển Động Text</h3>
           </div>
-          <p>
-            Ví dụ này sẽ hướng dẫn bạn cách có thể thiết kế lại nút radio mặc định của trang web!
-          </p>
+         
           <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601003926/thu_thuat_CSS_phan_1/CSS_radio_buttons_ey34vh.png"
-            alt="Tạo CSS radio buttons"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601434103/Thu_thuat_CSS_phan_2/CSS_Text_animation_ppyzlc.png"
+            alt="CSS Text animation"
             >
-            <p class="mt-4">
-              Và phía dưới là đoạn mã trên Codepen nhé!
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="AngelaVelasquez" data-slug-hash="Eypnq" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS radio buttons">
-              <span>See the Pen <a href="https://codepen.io/AngelaVelasquez/pen/Eypnq">
-              CSS radio buttons</a> by Angela Velasquez (<a href="https://codepen.io/AngelaVelasquez">@AngelaVelasquez</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-
           <p class="mt-4">
-            <a class="button-blog-post-article" href="https://codepen.io/AngelaVelasquez/pen/Eypnq" target="_blank"
+            Và phía dưới là đoạn mã trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="kh-mamun" data-slug-hash="NdwZdW" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS Text animation">
+            <span>See the Pen <a href="https://codepen.io/kh-mamun/pen/NdwZdW">
+            Pure CSS Text animation</a> by Mamun Khandaker (<a href="https://codepen.io/kh-mamun">@kh-mamun</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+          <p class="mt-4 pt-2 pb-4">
+            <a class="button-blog-post-article" href="https://codepen.io/kh-mamun/pen/NdwZdW" target="_blank"
               rel="noopener noreferrer">Nguồn</a>
           </p>
      
 
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-5 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Hamburger Menu</h3>
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Hiệu ứng đánh chữ bằng CSS</h3>
           </div>
-          <p>
-            Ví dụ này sẽ hướng dẫn bạn cách có thể thiết kế một menu hiển thị trên mobile một cách đẹp mắt chỉ bằng HTML và CSS.
-          </p>
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601004379/thu_thuat_CSS_phan_1/Hamburger_Menu_rw1lkx.png"
-            alt="Tạo Hamburger Menu"
-            >
-            <p class="mt-4">
-              Và phía dưới là đoạn mã trên Codepen nhé!
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="erikterwan" data-slug-hash="EVzeRP" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS Hamburger fold-out menu">
-              <span>See the Pen <a href="https://codepen.io/erikterwan/pen/EVzeRP">
-              Pure CSS Hamburger fold-out menu</a> by Erik Terwan (<a href="https://codepen.io/erikterwan">@erikterwan</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
 
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601434318/Thu_thuat_CSS_phan_2/Hi%E1%BB%87u_%E1%BB%A8ng_Chuy%E1%BB%83n_%C4%90%E1%BB%99ng_Text_vqjmpm.png"
+            alt="CSS Text animation"
+            >
           <p class="mt-4">
-            <a class="button-blog-post-article" href="https://codepen.io/erikterwan/pen/EVzeRP" target="_blank"
+            Và phía dưới là đoạn mã trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="alewinski" data-slug-hash="grqgqx" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Text slider with typing animation in pure CSS">
+            <span>See the Pen <a href="https://codepen.io/alewinski/pen/grqgqx">
+            Text slider with typing animation in pure CSS</a> by Adam Lewiński (<a href="https://codepen.io/alewinski">@alewinski</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4">
+            <a class="button-blog-post-article" href="https://codepen.io/alewinski/pen/grqgqx" target="_blank"
               rel="noopener noreferrer">Nguồn</a>
           </p>
+     
 
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-5 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Custom Checkboxes</h3>
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">CSS Text Reveal</h3>
           </div>
-          <p>
-            Đây là một ví dụ về thiết kế ô checkbox cho trang web nhé!
-          </p>
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601004557/thu_thuat_CSS_phan_1/Custom_Checkboxes_jphrz0.png"
-            alt="Tạo Custom Checkboxes"
-            >
-            <p class="mt-4">
-              Và phía dưới là đoạn mã trên Codepen nhé!
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="Vestride" data-slug-hash="dABHx" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS custom checkboxes">
-              <span>See the Pen <a href="https://codepen.io/Vestride/pen/dABHx">
-              Pure CSS custom checkboxes</a> by Glen Cheney (<a href="https://codepen.io/Vestride">@Vestride</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
 
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601434497/Thu_thuat_CSS_phan_2/CSS_Text_Reveal_jzu7j0.png"
+            alt="CSS Text Reveal"
+            >
           <p class="mt-4">
-            <a class="button-blog-post-article" href="https://codepen.io/Vestride/pen/dABHx" target="_blank"
+            Và phía dưới là đoạn mã trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="equinusocio" data-slug-hash="KNYOxJ" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS Text Reveal">
+            <span>See the Pen <a href="https://codepen.io/equinusocio/pen/KNYOxJ">
+            Pure CSS Text Reveal</a> by Mattia Astorino (<a href="https://codepen.io/equinusocio">@equinusocio</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4">
+            <a class="button-blog-post-article" href="https://codepen.io/equinusocio/pen/KNYOxJ" target="_blank"
               rel="noopener noreferrer">Nguồn</a>
           </p>
+     
 
 
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-5 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Modal/Popup CSS</h3>
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Chuyển Động Cho Menu</h3>
           </div>
-          <p>
-            Đây là thiết kế của modal bằng HTML, CSS thuần dành cho trang web. Bạn hãy nhấn nút có border màu xanh để thấy thông báo hiện lên nha!
-          </p>
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601004774/thu_thuat_CSS_phan_1/Modal_Popup_CSS_lussci.png"
-            alt="Tạo Modal/Popup CSS"
-            >
-            <p class="mt-4">
-              Và phía dưới là đoạn mã trên Codepen nhé!
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="imprakash" data-slug-hash="GgNMXO" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure css popup box">
-              <span>See the Pen <a href="https://codepen.io/imprakash/pen/GgNMXO">
-              Pure css popup box</a> by Prakash (<a href="https://codepen.io/imprakash">@imprakash</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
 
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601434661/Thu_thuat_CSS_phan_2/Hi%E1%BB%87u_%E1%BB%A8ng_Chuy%E1%BB%83n_%C4%90%E1%BB%99ng_Cho_Menu_pamq9r.png"
+            alt="Hiệu Ứng Chuyển Động Cho Menu"
+            >
           <p class="mt-4">
-            <a class="button-blog-post-article" href="https://codepen.io/imprakash/pen/GgNMXO" target="_blank"
+            Và phía dưới là đoạn mã trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="joellesenne" data-slug-hash="qtLEG" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Animate menu CSS">
+            <span>See the Pen <a href="https://codepen.io/joellesenne/pen/qtLEG">
+            Animate menu CSS</a> by Joël Lesenne (<a href="https://codepen.io/joellesenne">@joellesenne</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4">
+            <a class="button-blog-post-article" href="https://codepen.io/joellesenne/pen/qtLEG" target="_blank"
               rel="noopener noreferrer">Nguồn</a>
           </p>
 
 
 
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-5 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Animated Gradient Ghost Button</h3>
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Thanh Tiêu Đề Overlay</h3>
           </div>
-          <p>
-           Ví dụ này giúp bạn có thể tạo hiệu ứng chuyển động màu cho border  đường dẫn và nội dung của nó ở trong trang web.
-          </p>
+
           <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601005059/thu_thuat_CSS_phan_1/Animated_Gradient_Ghost_Button_nqlfas.png"
-            alt="Tạo Animated Gradient Ghost Button"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601434789/Thu_thuat_CSS_phan_2/Thanh_Ti%C3%AAu_%C4%90%E1%BB%81_Overlay_dzwp8p.png"
+            alt="Thanh Tiêu Đề Overlay"
             >
-            <p class="mt-4">
-              Và phía dưới là đoạn mã trên Codepen nhé!
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="ARS" data-slug-hash="vEwEPP" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Animated Gradient Ghost Button Concept">
-              <span>See the Pen <a href="https://codepen.io/ARS/pen/vEwEPP">
-              Animated Gradient Ghost Button Concept</a> by Arsen Zbidniakov (<a href="https://codepen.io/ARS">@ARS</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
           <p class="mt-4">
-            <a class="button-blog-post-article" href="https://codepen.io/ARS/pen/vEwEPP" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
+            Và phía dưới là đoạn mã trên Codepen nhé!
           </p>
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-5 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">CSS Select</h3>
-          </div>
-          <p>
-           Đoạn mã dưới đây giúp chúng ta có thể thiết kế lại thẻ select mặc định ở trong HTML.
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="boxabrain" data-slug-hash="sdzcf" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS Navigation Overlay">
+            <span>See the Pen <a href="https://codepen.io/boxabrain/pen/sdzcf">
+            Pure CSS Navigation Overlay</a> by Alessandro Calvaresi (<a href="https://codepen.io/boxabrain">@boxabrain</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601005259/thu_thuat_CSS_phan_1/CSS_Select_wumutw.png"
-            alt="Tạo CSS Select"
-            >
-            <p class="mt-4">
-              Và phía dưới là đoạn mã trên Codepen nhé!
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="raubaca" data-slug-hash="VejpQP" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS Select">
-              <span>See the Pen <a href="https://codepen.io/raubaca/pen/VejpQP">
-              Pure CSS Select</a> by Raúl Barrera (<a href="https://codepen.io/raubaca">@raubaca</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-          <p class="mt-4">
-            <a class="button-blog-post-article" href="https://codepen.io/raubaca/pen/VejpQP" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
-          </p>
-
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-5 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">CSS TABS</h3>
-          </div>
-          <p>
-         Ví dụ này giúp bạn có thể tạo ra component tab bằng HTML và CSS. Bạn hãy nhấn vào 2 tiêu đề Tab ở phía trên 
-         Description hoặc Specification để thấy kết quả nhé!
-          </p>
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601005974/thu_thuat_CSS_phan_1/CSS_Tab_khr6dn.png"
-            alt="Tạo CSS TABS"
-            >
-            <p class="mt-4">
-              Và phía dưới là đoạn mã trên Codepen nhé!
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="wallaceerick" data-slug-hash="ojtal" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS Tabs">
-              <span>See the Pen <a href="https://codepen.io/wallaceerick/pen/ojtal">
-              Pure CSS Tabs</a> by Wallace Erick (<a href="https://codepen.io/wallaceerick">@wallaceerick</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-          <p class="mt-4">
-            <a class="button-blog-post-article" href="https://codepen.io/wallaceerick/pen/ojtal" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
-          </p>
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-5 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">DropDown Menu</h3>
-          </div>
-          <p>
-            Đoạn mã này giúp bạn có thể dễ dàng tạo ra dropdown menu component cho trang web chỉ bằng hai ngôn ngữ HTML và CSS.
-            Bạn hãy nhấn vào hai đường dẫn WordPress hoặc Web Design trong thanh tiêu đề để thấy kết quả nhé!
-          </p>
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601006207/thu_thuat_CSS_phan_1/DropDown_Menu_tttfjz.png"
-            alt="Tạo CSS TABS"
-            >
-            <p class="mt-4">
-              Và phía dưới là đoạn mã trên Codepen nhé!
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="andornagy" data-slug-hash="xhiJH" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS DropDown Menu">
-              <span>See the Pen <a href="https://codepen.io/andornagy/pen/xhiJH">
-              Pure CSS DropDown Menu</a> by Andor Nagy (<a href="https://codepen.io/andornagy">@andornagy</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-          <p class="mt-4">
-            <a class="button-blog-post-article" href="https://codepen.io/andornagy/pen/xhiJH" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
-          </p>
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-5 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Accordion CSS</h3>
-          </div>
-          <p>
-            Ví dụ này sẽ chỉ bạn cách tạo component Accordion cho trang web của mình!
-          </p>
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601006352/thu_thuat_CSS_phan_1/Accordion_CSS_ccmmyz.png"
-            alt="Tạo Accordion CSS"
-            >
-            <p class="mt-4">
-              Và phía dưới là đoạn mã trên Codepen nhé!
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="raubaca" data-slug-hash="PZzpVe" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS Accordion">
-              <span>See the Pen <a href="https://codepen.io/raubaca/pen/PZzpVe">
-              Pure CSS Accordion</a> by Raúl Barrera (<a href="https://codepen.io/raubaca">@raubaca</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-
-          <p class="mt-4">
-            <a class="button-blog-post-article" href="https://codepen.io/raubaca/pen/PZzpVe" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
-          </p>
-
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-5 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">CSS Image Slider</h3>
-          </div>
-          <p>
-            Ví dụ này sẽ chỉ ccho bạn cách tạo component Image Slider Cho Trang Web!
-          </p>
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601006558/thu_thuat_CSS_phan_1/CSS_Image_Slider_enuvar.png"
-            alt="Tạo CSS Image Slider"
-            >
-            <p class="mt-4">
-              Và phía dưới là đoạn mã trên Codepen nhé!
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="AMKohn" data-slug-hash="EKJHf" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS image slider w/ next/prev btns &amp;amp; nav dots">
-              <span>See the Pen <a href="https://codepen.io/AMKohn/pen/EKJHf">
-              CSS image slider w/ next/prev btns &amp; nav dots</a> by Avi Kohn (<a href="https://codepen.io/AMKohn">@AMKohn</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-              </p>
-
-          <p class="mt-4">
-            <a class="button-blog-post-article" href="https://codepen.io/AMKohn/pen/EKJHf" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
-          </p>
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-5 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">CSS Progress</h3>
-          </div>
-          <p>
-            Ví dụ này sẽ hướng dẫn bạn cách tạo thanh tiến trình với thiết kế đẹp mắt cho trang web của mình.
-          </p>
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601006990/thu_thuat_CSS_phan_1/CSS_Progress_ozcbnd.png"
-            alt="Tạo CSS Progress"
-            >
-            <p class="mt-4">
-              Và phía dưới là đoạn mã trên Codepen nhé!
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="rgg" data-slug-hash="QbRyOq" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS Progress">
-              <span>See the Pen <a href="https://codepen.io/rgg/pen/QbRyOq">
-              Pure CSS Progress</a> by Rafael González (<a href="https://codepen.io/rgg">@rgg</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-          <p class="mt-4">
-            <a class="button-blog-post-article" href="https://codepen.io/rgg/pen/QbRyOq" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
-          </p>
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-5 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">SIDEBAR MENU</h3>
-          </div>
-          <p>
-            Đây là một ví dụ về sildebar menu cho trang web bằng HTML và CSS.
-          </p>
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601007199/thu_thuat_CSS_phan_1/SIDEBAR_MENU_rshfkd.png"
-            alt="Tạo SIDEBAR MENU"
-            >
-            <p class="mt-4">
-              Và phía dưới là đoạn mã trên Codepen nhé!
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="plavookac" data-slug-hash="qomrMw" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="PURE CSS SIDEBAR TOGGLE MENU">
-              <span>See the Pen <a href="https://codepen.io/plavookac/pen/qomrMw">
-              PURE CSS SIDEBAR TOGGLE MENU</a> by Jelena Jovanovic (<a href="https://codepen.io/plavookac">@plavookac</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-          <p class="mt-4">
-            <a class="button-blog-post-article" href="https://codepen.io/plavookac/pen/qomrMw" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
-          </p>
-
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-5 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Loaders kit</h3>
-          </div>
-          <p>
-            Đây đoạn mã giúp bạn có thể xây dựng hiệu ứng Loader   cho trang web bằng HTML, CSS.
-          </p>
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601007432/thu_thuat_CSS_phan_1/Loaders_kit_mqqtgx.png"
-            alt="Tạo Loaders kit"
-            >
-            <p class="mt-4">
-              Và phía dưới là đoạn mã trên Codepen nhé!
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="viduthalai1947" data-slug-hash="JkhDK" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS Loaders kit">
-              <span>See the Pen <a href="https://codepen.io/viduthalai1947/pen/JkhDK">
-              Pure CSS Loaders kit</a> by Viduthalai Mani (<a href="https://codepen.io/viduthalai1947">@viduthalai1947</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-          <p class="mt-4">
-            <a class="button-blog-post-article" href="https://codepen.io/viduthalai1947/pen/JkhDK" target="_blank"
+          <p class="mt-4 pt-2 pb-4">
+            <a class="button-blog-post-article" href="https://codepen.io/boxabrain/pen/sdzcf" target="_blank"
               rel="noopener noreferrer">Nguồn</a>
           </p>
 
 
 
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-5 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Hover Button</h3>
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Tooltip CSS</h3>
           </div>
-          <p>
-            Đây là một ví dụ về hiệu ứng hover cho button nhé.
-          </p>
+
           <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601016254/thu_thuat_CSS_phan_1/Hover_Button_gzntca.png"
-            alt="Tạo Hover Button"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601434929/Thu_thuat_CSS_phan_2/Tooltip_CSS_ncbxd4.png"
+            alt="Tooltip CSS"
             >
-            <p class="mt-4">
-              Và phía dưới là đoạn mã trên Codepen nhé!
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="kathykato" data-slug-hash="rZRaNe" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Button Hover">
-              <span>See the Pen <a href="https://codepen.io/kathykato/pen/rZRaNe">
-              Button Hover</a> by Katherine Kato (<a href="https://codepen.io/kathykato">@kathykato</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
           <p class="mt-4">
-            <a class="button-blog-post-article" href="https://codepen.io/kathykato/pen/rZRaNe" target="_blank"
+            Và phía dưới là đoạn mã trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="cristina-silva" data-slug-hash="XXOpga" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS Tooltip">
+            <span>See the Pen <a href="https://codepen.io/cristina-silva/pen/XXOpga">
+            Pure CSS Tooltip</a> by Cristina Silva (<a href="https://codepen.io/cristina-silva">@cristina-silva</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4">
+            <a class="button-blog-post-article" href="https://codepen.io/cristina-silva/pen/XXOpga" target="_blank"
               rel="noopener noreferrer">Nguồn</a>
           </p>
 
 
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-5 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Animated Background</h3>
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Pure CSS Accordion</h3>
           </div>
-          <p>
-            Đây là một ví dụ về hiệu ứng chuyển động background cho trang web.
-          </p>
+
           <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601016460/thu_thuat_CSS_phan_1/Animated_Background_mzpm8h.png"
-            alt="Tạo Animated Background"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601435086/Thu_thuat_CSS_phan_2/Pure_CSS_Accordion_r91mbf.png"
+            alt="Pure CSS Accordion"
             >
-            <p class="mt-4">
-              Và phía dưới là đoạn mã trên Codepen nhé!
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="mohaiman" data-slug-hash="MQqMyo" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure Css Animated Background">
-              <span>See the Pen <a href="https://codepen.io/mohaiman/pen/MQqMyo">
-              Pure Css Animated Background</a> by Mohammad Abdul Mohaiman (<a href="https://codepen.io/mohaiman">@mohaiman</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
           <p class="mt-4">
-            <a class="button-blog-post-article" href="https://codepen.io/mohaiman/pen/MQqMyo" target="_blank"
+            Và phía dưới là đoạn mã trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="emoreno911" data-slug-hash="dOveoY" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS Accordion">
+            <span>See the Pen <a href="https://codepen.io/emoreno911/pen/dOveoY">
+            Pure CSS Accordion</a> by Eduardo Moreno (<a href="https://codepen.io/emoreno911">@emoreno911</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4">
+            <a class="button-blog-post-article" href="https://codepen.io/emoreno911/pen/dOveoY" target="_blank"
+              rel="noopener noreferrer">Nguồn</a>
+          </p>
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Thiết Kế Bảng CSS</h3>
+          </div>
+
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601435242/Thu_thuat_CSS_phan_2/Thi%E1%BA%BFt_K%E1%BA%BF_B%E1%BA%A3ng_CSS_zwbnij.png"
+            alt="Thiết Kế Bảng CSS"
+            >
+          <p class="mt-4">
+            Và phía dưới là đoạn mã trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="alexerlandsson" data-slug-hash="mPWgpO" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS Table Highlight (vertical &amp;amp; horizontal)">
+            <span>See the Pen <a href="https://codepen.io/alexerlandsson/pen/mPWgpO">
+            Pure CSS Table Highlight (vertical &amp; horizontal)</a> by Alexander Erlandsson (<a href="https://codepen.io/alexerlandsson">@alexerlandsson</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4">
+            <a class="button-blog-post-article" href="https://codepen.io/alexerlandsson/pen/mPWgpO" target="_blank"
               rel="noopener noreferrer">Nguồn</a>
           </p>
 
 
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-5 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Button Hover Effect</h3>
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Pop-up/Overlay</h3>
           </div>
-          <p>
-            Đây là một hiệu ứng hover khác cho button mà bạn có thể dễ dàng áp dùng vào trang web của mình.
-          </p>
+
           <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601016715/thu_thuat_CSS_phan_1/Button_Hover_Effect_wgd2mh.png"
-            alt="Tạo Button Hover Effect"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601435460/Thu_thuat_CSS_phan_2/Hi%E1%BB%87u_%E1%BB%A8ng_Pop-up_Overlay_q10ger.png"
+            alt="Hiệu Ứng Pop-up/Overlay"
             >
-            <p class="mt-4">
-              Và phía dưới là đoạn mã trên Codepen nhé!
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="sfoxy" data-slug-hash="XpOoJe" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS button hover effect">
-              <span>See the Pen <a href="https://codepen.io/sfoxy/pen/XpOoJe">
-              CSS button hover effect</a> by Julia (<a href="https://codepen.io/sfoxy">@sfoxy</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
           <p class="mt-4">
-            <a class="button-blog-post-article" href="https://codepen.io/sfoxy/pen/XpOoJe" target="_blank"
+            Và phía dưới là đoạn mã trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="juliepark" data-slug-hash="qKQzJL" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Daily UI #016 | Pop-up/Overlay">
+            <span>See the Pen <a href="https://codepen.io/juliepark/pen/qKQzJL">
+            Daily UI #016 | Pop-up/Overlay</a> by Julie Park (<a href="https://codepen.io/juliepark">@juliepark</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4">
+            <a class="button-blog-post-article" href="https://codepen.io/juliepark/pen/qKQzJL" target="_blank"
+              rel="noopener noreferrer">Nguồn</a>
+          </p>
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Thiết Kế Checkbox Bằng CSS</h3>
+          </div>
+
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601435554/Thu_thuat_CSS_phan_2/Thi%E1%BA%BFt_K%E1%BA%BF_Checkbox_B%E1%BA%B1ng_CSS_spswws.png"
+            alt="Thiết Kế Checkbox Bằng CSS"
+            >
+          <p class="mt-4">
+            Và phía dưới là đoạn mã trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="nikkz" data-slug-hash="BzVBJo" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS Custom Checkbox">
+            <span>See the Pen <a href="https://codepen.io/nikkz/pen/BzVBJo">
+            Pure CSS Custom Checkbox</a> by Nikko Aboy (<a href="https://codepen.io/nikkz">@nikkz</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4">
+            <a class="button-blog-post-article" href="https://codepen.io/nikkz/pen/BzVBJo" target="_blank"
+              rel="noopener noreferrer">Nguồn</a>
+          </p>
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Pure CSS Segmented Controls</h3>
+          </div>
+
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601435723/Thu_thuat_CSS_phan_2/Pure_CSS_Segmented_Controls_n3keil.png"
+            alt="Pure CSS Segmented Controls"
+            >
+          <p class="mt-4">
+            Và phía dưới là đoạn mã trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="fstgerm" data-slug-hash="Jafyj" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS Segmented Controls">
+            <span>See the Pen <a href="https://codepen.io/fstgerm/pen/Jafyj">
+            Pure CSS Segmented Controls</a> by François St-Germain (<a href="https://codepen.io/fstgerm">@fstgerm</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4">
+            <a class="button-blog-post-article" href="https://codepen.io/fstgerm/pen/Jafyj" target="_blank"
+              rel="noopener noreferrer">Nguồn</a>
+          </p>
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Hover Cho Chữ CSS</h3>
+          </div>
+
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601435953/Thu_thuat_CSS_phan_2/Hi%E1%BB%87u_%E1%BB%A8ng_Hover_Cho_Ch%E1%BB%AF_CSS_ruwmfe.png"
+            alt="Hiệu Ứng Hover Cho Chữ CSS"
+            >
+          <p class="mt-4">
+            Và phía dưới là đoạn mã trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="guuslieben" data-slug-hash="gabQWM" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Info on hover without JS">
+            <span>See the Pen <a href="https://codepen.io/guuslieben/pen/gabQWM">
+            Info on hover without JS</a> by Guus Lieben (<a href="https://codepen.io/guuslieben">@guuslieben</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4">
+            <a class="button-blog-post-article" href="https://codepen.io/guuslieben/pen/gabQWM" target="_blank"
+              rel="noopener noreferrer">Nguồn</a>
+          </p>
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Tạo tab Bằng CSS</h3>
+          </div>
+
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601436071/Thu_thuat_CSS_phan_2/T%E1%BA%A1o_tab_B%E1%BA%B1ng_CSS_jbpvch.png"
+            alt="Tạo tab Bằng CSS"
+            >
+          <p class="mt-4">
+            Và phía dưới là đoạn mã trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="Fallupko" data-slug-hash="ruLdg" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure css responsive tabs">
+            <span>See the Pen <a href="https://codepen.io/Fallupko/pen/ruLdg">
+            Pure css responsive tabs</a> by Martin Gajdičiar (<a href="https://codepen.io/Fallupko">@Fallupko</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4">
+            <a class="button-blog-post-article" href="https://codepen.io/Fallupko/pen/ruLdg" target="_blank"
               rel="noopener noreferrer">Nguồn</a>
           </p>
 
 
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-5 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size"> CSS Bars</h3>
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Chuyển Động Gradient Text</h3>
           </div>
-          <p>
-            Ví dụ này sẽ giúp bạn tìm hiểu cách tạo  CSS Bars cho trang web.
-          </p>
+
           <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601017145/thu_thuat_CSS_phan_1/CSS_Bars_edyz2q.png"
-            alt="Tạo CSS Bars"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601436216/Thu_thuat_CSS_phan_2/Hi%E1%BB%87u_%E1%BB%A8ng_Chuy%E1%BB%83n_%C4%90%E1%BB%99ng_Gradient_Text_tm8daf.png"
+            alt="Hiệu Ứng Chuyển Động Gradient Text"
             >
-            <p class="mt-4">
-              Và phía dưới là đoạn mã trên Codepen nhé!
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="rgg" data-slug-hash="rVgBEL" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS Bars">
-              <span>See the Pen <a href="https://codepen.io/rgg/pen/rVgBEL">
-              Pure CSS Bars</a> by Rafael González (<a href="https://codepen.io/rgg">@rgg</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
           <p class="mt-4">
-            <a class="button-blog-post-article" href="https://codepen.io/rgg/pen/rVgBEL" target="_blank"
+            Và phía dưới là đoạn mã trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="caseycallow" data-slug-hash="yMNqPY" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS Gradient Text Animation Effect">
+            <span>See the Pen <a href="https://codepen.io/caseycallow/pen/yMNqPY">
+            Pure CSS Gradient Text Animation Effect</a> by Casey Callow (<a href="https://codepen.io/caseycallow">@caseycallow</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4">
+            <a class="button-blog-post-article" href="https://codepen.io/caseycallow/pen/yMNqPY" target="_blank"
               rel="noopener noreferrer">Nguồn</a>
           </p>
 
 
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-5 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Toggle Buttons</h3>
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Hover Blur</h3>
           </div>
-          <p>
-           Đây là một ví dụ  về component toggle button bằng HTML, CSS. Để hiểu rõ hơn bạn xem đoạn mã sau đây nhé.
-          </p>
+
           <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601017461/thu_thuat_CSS_phan_1/Toggle_Buttons_ety878.png"
-            alt="Tạo Toggle Buttons"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601436326/Thu_thuat_CSS_phan_2/Hi%E1%BB%87u_%E1%BB%A8ng_Hover_Blur_rdytim.png"
+            alt="Hiệu Ứng Hover Blur"
             >
-            <p class="mt-4">
-              Và phía dưới là đoạn mã trên Codepen nhé!
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="himalayasingh" data-slug-hash="EdVzNL" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS Toggle Buttons | ON-OFF Switches">
-              <span>See the Pen <a href="https://codepen.io/himalayasingh/pen/EdVzNL">
-              Pure CSS Toggle Buttons | ON-OFF Switches</a> by Himalaya Singh (<a href="https://codepen.io/himalayasingh">@himalayasingh</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
           <p class="mt-4">
-            <a class="button-blog-post-article" href="https://codepen.io/himalayasingh/pen/EdVzNL" target="_blank"
+            Và phía dưới là đoạn mã trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="mcraig218" data-slug-hash="uqIae" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS Blur Hover Effect">
+            <span>See the Pen <a href="https://codepen.io/mcraig218/pen/uqIae">
+            Pure CSS Blur Hover Effect</a> by Matthew Craig (<a href="https://codepen.io/mcraig218">@mcraig218</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4">
+            <a class="button-blog-post-article" href="https://codepen.io/mcraig218/pen/uqIae" target="_blank"
               rel="noopener noreferrer">Nguồn</a>
           </p>
 
 
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-5 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Circle Menu</h3>
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Folded-corner</h3>
           </div>
-          <p>
-           Ví dụ này sẽ giúp bạn tìm hiểu cách tạo ra menu dưới dạng hình tròn cho trang web của mình.
-          </p>
+
           <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601017799/thu_thuat_CSS_phan_1/Circle_Menu_mxv5tp.png"
-            alt="Tạo Circle Menu"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601436582/Thu_thuat_CSS_phan_2/Hi%E1%BB%87u_%E1%BB%A8ng_Folded-corner_bzvqtj.png"
+            alt="Hiệu Ứng Folded-corner"
             >
-            <p class="mt-4">
-              Và phía dưới là đoạn mã trên Codepen nhé!
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="0guzhan" data-slug-hash="YvNmwJ" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="🌟 Circle Menu #PureCss 🌟">
-              <span>See the Pen <a href="https://codepen.io/0guzhan/pen/YvNmwJ">
-              🌟 Circle Menu #PureCss 🌟</a> by 0guzhan (<a href="https://codepen.io/0guzhan">@0guzhan</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
           <p class="mt-4">
-            <a class="button-blog-post-article" href="https://codepen.io/0guzhan/pen/YvNmwJ" target="_blank"
+            Và phía dưới là đoạn mã trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="ravinthranath" data-slug-hash="XJJWbr" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS folded-corner effect">
+            <span>See the Pen <a href="https://codepen.io/ravinthranath/pen/XJJWbr">
+            Pure CSS folded-corner effect</a> by Ravinthranath (<a href="https://codepen.io/ravinthranath">@ravinthranath</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4">
+            <a class="button-blog-post-article" href="https://codepen.io/ravinthranath/pen/XJJWbr" target="_blank"
               rel="noopener noreferrer">Nguồn</a>
           </p>
 
 
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-5 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Facebook Emoji Reactions</h3>
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">CSS Multi-Level Accordion</h3>
           </div>
-          <p>
-          Nếu như bạn muốn tạo hiệu ứng cảm xúc trên Facebook bằng HTML, CSS thì có thể xem đoạn mã bên dưới nhé!
-          </p>
+
           <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601017977/thu_thuat_CSS_phan_1/Facebook_Emoji_Reactions_peleqk.png"
-            alt="Tạo Facebook Emoji Reactions"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601436930/Thu_thuat_CSS_phan_2/CSS_Multi-Level_Accordion_zmimof.png"
+            alt="CSS Multi-Level Accordion"
             >
-            <p class="mt-4">
-              Và phía dưới là đoạn mã trên Codepen nhé!
-            </p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="AshBardhan" data-slug-hash="dNKwXz" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Facebook Emoji Reactions | Pure CSS">
-              <span>See the Pen <a href="https://codepen.io/AshBardhan/pen/dNKwXz">
-              Facebook Emoji Reactions | Pure CSS</a> by Ashish Bardhan (<a href="https://codepen.io/AshBardhan">@AshBardhan</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
           <p class="mt-4">
-            <a class="button-blog-post-article" href="https://codepen.io/AshBardhan/pen/dNKwXz" target="_blank"
+            Và phía dưới là đoạn mã trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="nathanlong" data-slug-hash="mBrvn" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS Multi-Level Accordion">
+            <span>See the Pen <a href="https://codepen.io/nathanlong/pen/mBrvn">
+            CSS Multi-Level Accordion</a> by Nathan Long (<a href="https://codepen.io/nathanlong">@nathanlong</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4">
+            <a class="button-blog-post-article" href="https://codepen.io/nathanlong/pen/mBrvn" target="_blank"
               rel="noopener noreferrer">Nguồn</a>
           </p>
 
-         
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Chuyển Động Select Box</h3>
+          </div>
+
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601437109/Thu_thuat_CSS_phan_2/Hi%E1%BB%87u_%E1%BB%A8ng_Chuy%E1%BB%83n_%C4%90%E1%BB%99ng_Select_Box_o8xrk6.png"
+            alt="Hiệu Ứng Chuyển Động Select Box"
+            >
+          <p class="mt-4">
+            Và phía dưới là đoạn mã trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="himalayasingh" data-slug-hash="pxKKgd" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS Select Box With Direction Aware Hover Effect">
+            <span>See the Pen <a href="https://codepen.io/himalayasingh/pen/pxKKgd">
+            Pure CSS Select Box With Direction Aware Hover Effect</a> by Himalaya Singh (<a href="https://codepen.io/himalayasingh">@himalayasingh</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4">
+            <a class="button-blog-post-article" href="https://codepen.io/himalayasingh/pen/pxKKgd" target="_blank"
+              rel="noopener noreferrer">Nguồn</a>
+          </p>
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Cho Menu Dropdown</h3>
+          </div>
+
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601437316/Thu_thuat_CSS_phan_2/Hi%E1%BB%87u_%E1%BB%A8ng_Cho_Menu_Dropdown_f2ezpe.png"
+            alt="Hiệu Ứng Cho Menu Dropdown"
+            >
+          <p class="mt-4">
+            Và phía dưới là đoạn mã trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="Moslim" data-slug-hash="gmzvQj" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title=" #CodePenChallenge: Menu">
+            <span>See the Pen <a href="https://codepen.io/Moslim/pen/gmzvQj">
+             #CodePenChallenge: Menu</a> by Hakkam Abdullah (<a href="https://codepen.io/Moslim">@Moslim</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4">
+            <a class="button-blog-post-article" href="https://codepen.io/Moslim/pen/gmzvQj" target="_blank"
+              rel="noopener noreferrer">Nguồn</a>
+          </p>
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Cho Đường Dẫn (Link)</h3>
+          </div>
+
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601437507/Thu_thuat_CSS_phan_2/Hi%E1%BB%87u_%E1%BB%A8ng_Cho_%C4%90%C6%B0%E1%BB%9Dng_D%E1%BA%ABn_Link_cal4nb.png"
+            alt="Hiệu Ứng Cho Đường Dẫn (Link)"
+            >
+          <p class="mt-4">
+            Và phía dưới là đoạn mã trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="RockStarwind" data-slug-hash="WmGwwp" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS Magic Line Navbar">
+            <span>See the Pen <a href="https://codepen.io/RockStarwind/pen/WmGwwp">
+            Pure CSS Magic Line Navbar</a> by Rock Starwind (<a href="https://codepen.io/RockStarwind">@RockStarwind</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4">
+            <a class="button-blog-post-article" href="https://codepen.io/RockStarwind/pen/WmGwwp" target="_blank"
+              rel="noopener noreferrer">Nguồn</a>
+          </p>
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Responsive Pure Css Tabs</h3>
+          </div>
+
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601437596/Thu_thuat_CSS_phan_2/Responsive_Pure_Css_Tabs_pl9qyq.png"
+            alt="Hiệu Ứng Cho Đường Dẫn (Link)"
+            >
+          <p class="mt-4">
+            Và phía dưới là đoạn mã trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="imprakash" data-slug-hash="epZvbQ" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Responsive pure css tabs">
+            <span>See the Pen <a href="https://codepen.io/imprakash/pen/epZvbQ">
+            Responsive pure css tabs</a> by Prakash (<a href="https://codepen.io/imprakash">@imprakash</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4">
+            <a class="button-blog-post-article" href="https://codepen.io/imprakash/pen/epZvbQ" target="_blank"
+              rel="noopener noreferrer">Nguồn</a>
+          </p>
 
 
 

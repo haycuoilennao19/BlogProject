@@ -198,7 +198,7 @@
                     <li class="disabled page-item"><a class="page-link">...</a></li>
                 <% } %>
             <% } %>
-            <% if (current == pages) { %>
+            <% if (current == pages || current == 1) { %>
                 <li class="disabled page-item"><a class="page-link">Cuối</a></li>
             <% } else { %>
                 <li class="page-item" ><a href="/article/<%-category-%>/<%= pages %>" class="page-link">Cuối</a></li>
