@@ -35,484 +35,315 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i> Những Thủ Thuật CSS Giúp Bạn Thiết Kế Web Tốt Hơn (Phần 2) </h2>
+                  aria-hidden="true"></i> Những Hiệu Ứng Scroll Cho Trang Web</h2>
             </div>
           </div>
 
-           
+
           <div class="text-content-article mt-5">
-            <p><i> Ngày hôm nay chúng ta sẽ tiếp tục  đi vào tìm hiểu những thủ thuật CSS (phần 2)  giúp bạn có thể dễ dàng hơn trong việc phát
-                triển và thiết kế web
-                 nhé!
+            <p><i> Bài viết hôm nay mình sẽ giới thiệu  đến bạn những hiệu ứng scroll được xây dựng bằng HTML, CSS, Javascript 
+              giúp thu hút sự chú ý của người dùng cũng như tạo ra cảm giác thú vị khi khách hàng sử dụng trang web nhé!
               </i>
             </p>
           </div>
-          <p class="mt-4">
-            Nếu bạn muốn xem lại phần 1 thì có thể truy cập 
-            <a href="https://www.niemvuilaptrinh.com/article/Nhung-Thu-Thuat-CSS-Giup-Ban-Thiet-Ke-Web-Tot-Hon-Phan-1" title="Những Thủ Thuật CSS Giúp Bạn Thiết Kế Web Tốt Hơn (Phần 1)">
-            ở đây nhé!</a>
-          </p>
-         
           <p class="mt-4">Trước khi đi vào ví dụ thì mình có một số chú ý sau là để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> hay nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Nếu file là SCSS thì bạn có thể chuyển sang CSS ở đây nhé : <a href="https://jsonformatter.org/scss-to-css" rel="external nofollow noopener noreferrer" target="_blank">SCSS to CSS</a>. Nếu file là Pug thì bạn có thể chuyển sang HTML ở đây nhé : <a href="https://pughtml.com/" rel="external nofollow noopener noreferrer" target="_blank">Pug to HTML</a>. Nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.</p>
 
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Chuyển Động Text</h3>
+            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Scroll Hiển Thị Hình Ảnh </h3>
           </div>
          
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601434103/Thu_thuat_CSS_phan_2/CSS_Text_animation_ppyzlc.png"
-            alt="CSS Text animation"
-            >
-          <p class="mt-4">
-            Và phía dưới là đoạn mã trên Codepen nhé!
-          </p>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="kh-mamun" data-slug-hash="NdwZdW" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS Text animation">
-            <span>See the Pen <a href="https://codepen.io/kh-mamun/pen/NdwZdW">
-            Pure CSS Text animation</a> by Mamun Khandaker (<a href="https://codepen.io/kh-mamun">@kh-mamun</a>)
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="joshuaward" data-slug-hash="GORKbX" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Slide in on Scroll | #JavaScript30">
+            <span>See the Pen <a href="https://codepen.io/joshuaward/pen/GORKbX">
+            Slide in on Scroll | #JavaScript30</a> by Joshua Ward (<a href="https://codepen.io/joshuaward">@joshuaward</a>)
             on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
           <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
           <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article" href="https://codepen.io/kh-mamun/pen/NdwZdW" target="_blank"
+            <a class="button-blog-post-article"
+              href="https://codepen.io/joshuaward/pen/GORKbX" target="_blank"
               rel="noopener noreferrer">Nguồn</a>
-          </p>
-     
-
+          </p>        
+          <hr>
+         
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Hiệu ứng đánh chữ bằng CSS</h3>
+            <h3 class="text-primary ml-4 title-article-size">Thay Đổi Background Gradient Khi Scroll</h3>
           </div>
-
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601434318/Thu_thuat_CSS_phan_2/Hi%E1%BB%87u_%E1%BB%A8ng_Chuy%E1%BB%83n_%C4%90%E1%BB%99ng_Text_vqjmpm.png"
-            alt="CSS Text animation"
-            >
-          <p class="mt-4">
-            Và phía dưới là đoạn mã trên Codepen nhé!
-          </p>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="alewinski" data-slug-hash="grqgqx" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Text slider with typing animation in pure CSS">
-            <span>See the Pen <a href="https://codepen.io/alewinski/pen/grqgqx">
-            Text slider with typing animation in pure CSS</a> by Adam Lewiński (<a href="https://codepen.io/alewinski">@alewinski</a>)
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="MadeByMike" data-slug-hash="eKPZZz" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Scrolling Gradient">
+            <span>See the Pen <a href="https://codepen.io/MadeByMike/pen/eKPZZz">
+            Scrolling Gradient</a> by Mike (<a href="https://codepen.io/MadeByMike">@MadeByMike</a>)
             on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
           <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article" href="https://codepen.io/alewinski/pen/grqgqx" target="_blank"
+            <a class="button-blog-post-article"
+              href="https://codepen.io/MadeByMike/pen/eKPZZz" target="_blank"
               rel="noopener noreferrer">Nguồn</a>
-          </p>
-     
-
+          </p>        
+          <hr>
+         
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">CSS Text Reveal</h3>
+            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Slide-out Scrolling Gallery</h3>
           </div>
-
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601434497/Thu_thuat_CSS_phan_2/CSS_Text_Reveal_jzu7j0.png"
-            alt="CSS Text Reveal"
-            >
-          <p class="mt-4">
-            Và phía dưới là đoạn mã trên Codepen nhé!
-          </p>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="equinusocio" data-slug-hash="KNYOxJ" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS Text Reveal">
-            <span>See the Pen <a href="https://codepen.io/equinusocio/pen/KNYOxJ">
-            Pure CSS Text Reveal</a> by Mattia Astorino (<a href="https://codepen.io/equinusocio">@equinusocio</a>)
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="teeganlincoln" data-slug-hash="MaNxBv" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Slide-out Scrolling Gallery">
+            <span>See the Pen <a href="https://codepen.io/teeganlincoln/pen/MaNxBv">
+            Slide-out Scrolling Gallery</a> by Teegan Lincoln (<a href="https://codepen.io/teeganlincoln">@teeganlincoln</a>)
             on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
           <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article" href="https://codepen.io/equinusocio/pen/KNYOxJ" target="_blank"
+            <a class="button-blog-post-article"
+              href="https://codepen.io/teeganlincoln/pen/MaNxBv" target="_blank"
               rel="noopener noreferrer">Nguồn</a>
-          </p>
-     
+          </p>        
+          <hr>
 
-
+  
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Chuyển Động Cho Menu</h3>
+            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Neat Parallax Hero Effect</h3>
           </div>
-
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601434661/Thu_thuat_CSS_phan_2/Hi%E1%BB%87u_%E1%BB%A8ng_Chuy%E1%BB%83n_%C4%90%E1%BB%99ng_Cho_Menu_pamq9r.png"
-            alt="Hiệu Ứng Chuyển Động Cho Menu"
-            >
-          <p class="mt-4">
-            Và phía dưới là đoạn mã trên Codepen nhé!
-          </p>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="joellesenne" data-slug-hash="qtLEG" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Animate menu CSS">
-            <span>See the Pen <a href="https://codepen.io/joellesenne/pen/qtLEG">
-            Animate menu CSS</a> by Joël Lesenne (<a href="https://codepen.io/joellesenne">@joellesenne</a>)
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="magnificode" data-slug-hash="GpqGOm" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Neat Parallax Hero Effect">
+            <span>See the Pen <a href="https://codepen.io/magnificode/pen/GpqGOm">
+            Neat Parallax Hero Effect</a> by magnificode (<a href="https://codepen.io/magnificode">@magnificode</a>)
             on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
           <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article" href="https://codepen.io/joellesenne/pen/qtLEG" target="_blank"
+            <a class="button-blog-post-article"
+              href="https://codepen.io/magnificode/pen/GpqGOm" target="_blank"
               rel="noopener noreferrer">Nguồn</a>
-          </p>
+          </p>        
+          <hr>
 
-
-
+ 
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Thanh Tiêu Đề Overlay</h3>
+            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Scroll Drawing</h3>
           </div>
-
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601434789/Thu_thuat_CSS_phan_2/Thanh_Ti%C3%AAu_%C4%90%E1%BB%81_Overlay_dzwp8p.png"
-            alt="Thanh Tiêu Đề Overlay"
-            >
-          <p class="mt-4">
-            Và phía dưới là đoạn mã trên Codepen nhé!
-          </p>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="boxabrain" data-slug-hash="sdzcf" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS Navigation Overlay">
-            <span>See the Pen <a href="https://codepen.io/boxabrain/pen/sdzcf">
-            Pure CSS Navigation Overlay</a> by Alessandro Calvaresi (<a href="https://codepen.io/boxabrain">@boxabrain</a>)
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="chriscoyier" data-slug-hash="YXgWam" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Scroll Drawing">
+            <span>See the Pen <a href="https://codepen.io/chriscoyier/pen/YXgWam">
+            Scroll Drawing</a> by Chris Coyier  (<a href="https://codepen.io/chriscoyier">@chriscoyier</a>)
             on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
           <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article" href="https://codepen.io/boxabrain/pen/sdzcf" target="_blank"
+            <a class="button-blog-post-article"
+              href="https://codepen.io/chriscoyier/pen/YXgWam" target="_blank"
               rel="noopener noreferrer">Nguồn</a>
-          </p>
-
-
+          </p>        
+          <hr>
 
 
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Tooltip CSS</h3>
+            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Thay Đổi Background Khi Scroll</h3>
           </div>
-
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601434929/Thu_thuat_CSS_phan_2/Tooltip_CSS_ncbxd4.png"
-            alt="Tooltip CSS"
-            >
-          <p class="mt-4">
-            Và phía dưới là đoạn mã trên Codepen nhé!
-          </p>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="cristina-silva" data-slug-hash="XXOpga" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS Tooltip">
-            <span>See the Pen <a href="https://codepen.io/cristina-silva/pen/XXOpga">
-            Pure CSS Tooltip</a> by Cristina Silva (<a href="https://codepen.io/cristina-silva">@cristina-silva</a>)
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="jackharner" data-slug-hash="bdPmQM" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Changing Background Color on Scroll">
+            <span>See the Pen <a href="https://codepen.io/jackharner/pen/bdPmQM">
+            Changing Background Color on Scroll</a> by Jack Harner (<a href="https://codepen.io/jackharner">@jackharner</a>)
             on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
           <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article" href="https://codepen.io/cristina-silva/pen/XXOpga" target="_blank"
+            <a class="button-blog-post-article"
+              href="https://codepen.io/jackharner/pen/bdPmQM" target="_blank"
               rel="noopener noreferrer">Nguồn</a>
+          </p>        
+          <hr>
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Scroll Based Animation</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="lmgonzalves" data-slug-hash="QPBPJe" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Scroll Based Animation">
+            <span>See the Pen <a href="https://codepen.io/lmgonzalves/pen/QPBPJe">
+            Scroll Based Animation</a> by lmgonzalves (<a href="https://codepen.io/lmgonzalves">@lmgonzalves</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
+          <p class="mt-4 pt-2 pb-4">
+            <a class="button-blog-post-article"
+              href="https://codepen.io/lmgonzalves/pen/QPBPJe" target="_blank"
+              rel="noopener noreferrer">Nguồn</a>
+          </p>        
+          <hr>
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Header Scroll Effect</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="igloude" data-slug-hash="jwuoc" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Header Scroll Effect">
+            <span>See the Pen <a href="https://codepen.io/igloude/pen/jwuoc">
+            Header Scroll Effect</a> by Ian Gloude (<a href="https://codepen.io/igloude">@igloude</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4">
+            <a class="button-blog-post-article"
+              href="https://codepen.io/igloude/pen/jwuoc" target="_blank"
+              rel="noopener noreferrer">Nguồn</a>
+          </p>        
+          <hr>
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Scroll Animations - Revealed Box</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="jlnljn" data-slug-hash="bgjbmB" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Scroll Animations - Revealed Box">
+            <span>See the Pen <a href="https://codepen.io/jlnljn/pen/bgjbmB">
+            Scroll Animations - Revealed Box</a> by Julien Lejeune (<a href="https://codepen.io/jlnljn">@jlnljn</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4">
+            <a class="button-blog-post-article"
+              href="https://codepen.io/jlnljn/pen/bgjbmB" target="_blank"
+              rel="noopener noreferrer">Nguồn</a>
+          </p>        
+          <hr>
 
 
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Pure CSS Accordion</h3>
+            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Cross Color Text Reveal</h3>
           </div>
-
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601435086/Thu_thuat_CSS_phan_2/Pure_CSS_Accordion_r91mbf.png"
-            alt="Pure CSS Accordion"
-            >
-          <p class="mt-4">
-            Và phía dưới là đoạn mã trên Codepen nhé!
-          </p>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="emoreno911" data-slug-hash="dOveoY" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS Accordion">
-            <span>See the Pen <a href="https://codepen.io/emoreno911/pen/dOveoY">
-            Pure CSS Accordion</a> by Eduardo Moreno (<a href="https://codepen.io/emoreno911">@emoreno911</a>)
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="ispykenny" data-slug-hash="BaaYqYZ" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Cross Color Text Reveal">
+            <span>See the Pen <a href="https://codepen.io/ispykenny/pen/BaaYqYZ">
+            Cross Color Text Reveal</a> by Kenny (<a href="https://codepen.io/ispykenny">@ispykenny</a>)
             on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
           <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article" href="https://codepen.io/emoreno911/pen/dOveoY" target="_blank"
+            <a class="button-blog-post-article"
+              href="https://codepen.io/ispykenny/pen/BaaYqYZ" target="_blank"
               rel="noopener noreferrer">Nguồn</a>
-          </p>
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Thiết Kế Bảng CSS</h3>
-          </div>
-
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601435242/Thu_thuat_CSS_phan_2/Thi%E1%BA%BFt_K%E1%BA%BF_B%E1%BA%A3ng_CSS_zwbnij.png"
-            alt="Thiết Kế Bảng CSS"
-            >
-          <p class="mt-4">
-            Và phía dưới là đoạn mã trên Codepen nhé!
-          </p>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="alexerlandsson" data-slug-hash="mPWgpO" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS Table Highlight (vertical &amp;amp; horizontal)">
-            <span>See the Pen <a href="https://codepen.io/alexerlandsson/pen/mPWgpO">
-            Pure CSS Table Highlight (vertical &amp; horizontal)</a> by Alexander Erlandsson (<a href="https://codepen.io/alexerlandsson">@alexerlandsson</a>)
-            on <a href="https://codepen.io">CodePen</a>.</span>
-          </p>
-          <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article" href="https://codepen.io/alexerlandsson/pen/mPWgpO" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
-          </p>
+          </p>        
+          <hr>
 
 
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Pop-up/Overlay</h3>
+            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng ScrollOut + Splitting.js</h3>
           </div>
-
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601435460/Thu_thuat_CSS_phan_2/Hi%E1%BB%87u_%E1%BB%A8ng_Pop-up_Overlay_q10ger.png"
-            alt="Hiệu Ứng Pop-up/Overlay"
-            >
-          <p class="mt-4">
-            Và phía dưới là đoạn mã trên Codepen nhé!
-          </p>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="juliepark" data-slug-hash="qKQzJL" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Daily UI #016 | Pop-up/Overlay">
-            <span>See the Pen <a href="https://codepen.io/juliepark/pen/qKQzJL">
-            Daily UI #016 | Pop-up/Overlay</a> by Julie Park (<a href="https://codepen.io/juliepark">@juliepark</a>)
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="shshaw" data-slug-hash="YOPqLb" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="ScrollOut + Splitting.js">
+            <span>See the Pen <a href="https://codepen.io/shshaw/pen/YOPqLb">
+            ScrollOut + Splitting.js</a> by Shaw (<a href="https://codepen.io/shshaw">@shshaw</a>)
             on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
           <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article" href="https://codepen.io/juliepark/pen/qKQzJL" target="_blank"
+            <a class="button-blog-post-article"
+              href="https://codepen.io/shshaw/pen/YOPqLb" target="_blank"
               rel="noopener noreferrer">Nguồn</a>
-          </p>
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Thiết Kế Checkbox Bằng CSS</h3>
-          </div>
-
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601435554/Thu_thuat_CSS_phan_2/Thi%E1%BA%BFt_K%E1%BA%BF_Checkbox_B%E1%BA%B1ng_CSS_spswws.png"
-            alt="Thiết Kế Checkbox Bằng CSS"
-            >
-          <p class="mt-4">
-            Và phía dưới là đoạn mã trên Codepen nhé!
-          </p>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="nikkz" data-slug-hash="BzVBJo" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS Custom Checkbox">
-            <span>See the Pen <a href="https://codepen.io/nikkz/pen/BzVBJo">
-            Pure CSS Custom Checkbox</a> by Nikko Aboy (<a href="https://codepen.io/nikkz">@nikkz</a>)
-            on <a href="https://codepen.io">CodePen</a>.</span>
-          </p>
-          <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article" href="https://codepen.io/nikkz/pen/BzVBJo" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
-          </p>
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Pure CSS Segmented Controls</h3>
-          </div>
-
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601435723/Thu_thuat_CSS_phan_2/Pure_CSS_Segmented_Controls_n3keil.png"
-            alt="Pure CSS Segmented Controls"
-            >
-          <p class="mt-4">
-            Và phía dưới là đoạn mã trên Codepen nhé!
-          </p>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="fstgerm" data-slug-hash="Jafyj" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS Segmented Controls">
-            <span>See the Pen <a href="https://codepen.io/fstgerm/pen/Jafyj">
-            Pure CSS Segmented Controls</a> by François St-Germain (<a href="https://codepen.io/fstgerm">@fstgerm</a>)
-            on <a href="https://codepen.io">CodePen</a>.</span>
-          </p>
-          <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article" href="https://codepen.io/fstgerm/pen/Jafyj" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
-          </p>
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Hover Cho Chữ CSS</h3>
-          </div>
-
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601435953/Thu_thuat_CSS_phan_2/Hi%E1%BB%87u_%E1%BB%A8ng_Hover_Cho_Ch%E1%BB%AF_CSS_ruwmfe.png"
-            alt="Hiệu Ứng Hover Cho Chữ CSS"
-            >
-          <p class="mt-4">
-            Và phía dưới là đoạn mã trên Codepen nhé!
-          </p>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="guuslieben" data-slug-hash="gabQWM" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Info on hover without JS">
-            <span>See the Pen <a href="https://codepen.io/guuslieben/pen/gabQWM">
-            Info on hover without JS</a> by Guus Lieben (<a href="https://codepen.io/guuslieben">@guuslieben</a>)
-            on <a href="https://codepen.io">CodePen</a>.</span>
-          </p>
-          <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article" href="https://codepen.io/guuslieben/pen/gabQWM" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
-          </p>
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Tạo tab Bằng CSS</h3>
-          </div>
-
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601436071/Thu_thuat_CSS_phan_2/T%E1%BA%A1o_tab_B%E1%BA%B1ng_CSS_jbpvch.png"
-            alt="Tạo tab Bằng CSS"
-            >
-          <p class="mt-4">
-            Và phía dưới là đoạn mã trên Codepen nhé!
-          </p>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="Fallupko" data-slug-hash="ruLdg" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure css responsive tabs">
-            <span>See the Pen <a href="https://codepen.io/Fallupko/pen/ruLdg">
-            Pure css responsive tabs</a> by Martin Gajdičiar (<a href="https://codepen.io/Fallupko">@Fallupko</a>)
-            on <a href="https://codepen.io">CodePen</a>.</span>
-          </p>
-          <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article" href="https://codepen.io/Fallupko/pen/ruLdg" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
-          </p>
+          </p>        
+          <hr>
 
 
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Chuyển Động Gradient Text</h3>
+            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Scroll Triggered Elements </h3>
           </div>
-
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601436216/Thu_thuat_CSS_phan_2/Hi%E1%BB%87u_%E1%BB%A8ng_Chuy%E1%BB%83n_%C4%90%E1%BB%99ng_Gradient_Text_tm8daf.png"
-            alt="Hiệu Ứng Chuyển Động Gradient Text"
-            >
-          <p class="mt-4">
-            Và phía dưới là đoạn mã trên Codepen nhé!
-          </p>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="caseycallow" data-slug-hash="yMNqPY" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS Gradient Text Animation Effect">
-            <span>See the Pen <a href="https://codepen.io/caseycallow/pen/yMNqPY">
-            Pure CSS Gradient Text Animation Effect</a> by Casey Callow (<a href="https://codepen.io/caseycallow">@caseycallow</a>)
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="notoriousb1t" data-slug-hash="zLbVEW" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Scroll Triggered Elements (Splitting + ScrollOut)">
+            <span>See the Pen <a href="https://codepen.io/notoriousb1t/pen/zLbVEW">
+            Scroll Triggered Elements (Splitting + ScrollOut)</a> by Christopher Wallis (<a href="https://codepen.io/notoriousb1t">@notoriousb1t</a>)
             on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
           <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article" href="https://codepen.io/caseycallow/pen/yMNqPY" target="_blank"
+            <a class="button-blog-post-article"
+              href="https://codepen.io/notoriousb1t/pen/zLbVEW" target="_blank"
               rel="noopener noreferrer">Nguồn</a>
-          </p>
-
+          </p>        
+          <hr>
 
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Hover Blur</h3>
+            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Efficient Scroll Zoom</h3>
           </div>
-
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601436326/Thu_thuat_CSS_phan_2/Hi%E1%BB%87u_%E1%BB%A8ng_Hover_Blur_rdytim.png"
-            alt="Hiệu Ứng Hover Blur"
-            >
-          <p class="mt-4">
-            Và phía dưới là đoạn mã trên Codepen nhé!
-          </p>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="mcraig218" data-slug-hash="uqIae" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS Blur Hover Effect">
-            <span>See the Pen <a href="https://codepen.io/mcraig218/pen/uqIae">
-            Pure CSS Blur Hover Effect</a> by Matthew Craig (<a href="https://codepen.io/mcraig218">@mcraig218</a>)
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="CAWeissen" data-slug-hash="rNNobpJ" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Efficient Scroll Zoom">
+            <span>See the Pen <a href="https://codepen.io/CAWeissen/pen/rNNobpJ">
+            Efficient Scroll Zoom</a> by Chris Weissenberger (<a href="https://codepen.io/CAWeissen">@CAWeissen</a>)
             on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
           <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article" href="https://codepen.io/mcraig218/pen/uqIae" target="_blank"
+            <a class="button-blog-post-article"
+              href="https://codepen.io/CAWeissen/pen/rNNobpJ" target="_blank"
               rel="noopener noreferrer">Nguồn</a>
-          </p>
-
+          </p>        
+          <hr>
 
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Folded-corner</h3>
+            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Full Page Parallax Scroll Effect</h3>
           </div>
-
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601436582/Thu_thuat_CSS_phan_2/Hi%E1%BB%87u_%E1%BB%A8ng_Folded-corner_bzvqtj.png"
-            alt="Hiệu Ứng Folded-corner"
-            >
-          <p class="mt-4">
-            Và phía dưới là đoạn mã trên Codepen nhé!
-          </p>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="ravinthranath" data-slug-hash="XJJWbr" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS folded-corner effect">
-            <span>See the Pen <a href="https://codepen.io/ravinthranath/pen/XJJWbr">
-            Pure CSS folded-corner effect</a> by Ravinthranath (<a href="https://codepen.io/ravinthranath">@ravinthranath</a>)
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="eehayman" data-slug-hash="qdGZJr" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Full Page Parallax Scroll Effect">
+            <span>See the Pen <a href="https://codepen.io/eehayman/pen/qdGZJr">
+            Full Page Parallax Scroll Effect</a> by Emily Hayman (<a href="https://codepen.io/eehayman">@eehayman</a>)
             on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
           <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article" href="https://codepen.io/ravinthranath/pen/XJJWbr" target="_blank"
+            <a class="button-blog-post-article"
+              href="https://codepen.io/eehayman/pen/qdGZJr" target="_blank"
               rel="noopener noreferrer">Nguồn</a>
-          </p>
-
+          </p>        
+          <hr>
 
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">CSS Multi-Level Accordion</h3>
+            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Thu Nhỏ Video Khi Scroll</h3>
           </div>
-
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601436930/Thu_thuat_CSS_phan_2/CSS_Multi-Level_Accordion_zmimof.png"
-            alt="CSS Multi-Level Accordion"
-            >
-          <p class="mt-4">
-            Và phía dưới là đoạn mã trên Codepen nhé!
-          </p>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="nathanlong" data-slug-hash="mBrvn" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS Multi-Level Accordion">
-            <span>See the Pen <a href="https://codepen.io/nathanlong/pen/mBrvn">
-            CSS Multi-Level Accordion</a> by Nathan Long (<a href="https://codepen.io/nathanlong">@nathanlong</a>)
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="carpenumidium" data-slug-hash="dYYwQp" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Unobtrusive Video">
+            <span>See the Pen <a href="https://codepen.io/carpenumidium/pen/dYYwQp">
+            Unobtrusive Video</a> by carpe numidium (<a href="https://codepen.io/carpenumidium">@carpenumidium</a>)
             on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
           <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article" href="https://codepen.io/nathanlong/pen/mBrvn" target="_blank"
+            <a class="button-blog-post-article"
+              href="https://codepen.io/carpenumidium/pen/dYYwQp" target="_blank"
               rel="noopener noreferrer">Nguồn</a>
+          </p>        
+          <hr>
+          
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Sticky header on scroll up</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="ingvi" data-slug-hash="ZVOqbP" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Sticky header on scroll up">
+            <span>See the Pen <a href="https://codepen.io/ingvi/pen/ZVOqbP">
+            Sticky header on scroll up</a> by Ingvi (<a href="https://codepen.io/ingvi">@ingvi</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
-
-
+          <p class="mt-4 pt-2 pb-4">
+            <a class="button-blog-post-article"
+              href="https://codepen.io/ingvi/pen/ZVOqbP" target="_blank"
+              rel="noopener noreferrer">Nguồn</a>
+          </p>        
+          <hr>
+          
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Gettin' Clippy</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="StephenScaff" data-slug-hash="WxoVBo" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Gettin' Clippy">
+            <span>See the Pen <a href="https://codepen.io/StephenScaff/pen/WxoVBo">
+            Gettin' Clippy</a> by Stephen Scaff (<a href="https://codepen.io/StephenScaff">@StephenScaff</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4">
+            <a class="button-blog-post-article"
+              href="https://codepen.io/StephenScaff/pen/WxoVBo" target="_blank"
+              rel="noopener noreferrer">Nguồn</a>
+          </p>        
+          <hr>
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Scroll Effect With Text</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="yashyash" data-slug-hash="EtAoF" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Scroll effect with text with help from Skrollr">
+            <span>See the Pen <a href="https://codepen.io/yashyash/pen/EtAoF">
+            Scroll effect with text with help from Skrollr</a> by Yash (<a href="https://codepen.io/yashyash">@yashyash</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4">
+            <a class="button-blog-post-article"
+              href="https://codepen.io/yashyash/pen/EtAoF" target="_blank"
+              rel="noopener noreferrer">Nguồn</a>
+          </p>        
+          <hr>
 
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Chuyển Động Select Box</h3>
+            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Intersection Observer Scroll Effect</h3>
           </div>
-
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601437109/Thu_thuat_CSS_phan_2/Hi%E1%BB%87u_%E1%BB%A8ng_Chuy%E1%BB%83n_%C4%90%E1%BB%99ng_Select_Box_o8xrk6.png"
-            alt="Hiệu Ứng Chuyển Động Select Box"
-            >
-          <p class="mt-4">
-            Và phía dưới là đoạn mã trên Codepen nhé!
-          </p>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="himalayasingh" data-slug-hash="pxKKgd" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS Select Box With Direction Aware Hover Effect">
-            <span>See the Pen <a href="https://codepen.io/himalayasingh/pen/pxKKgd">
-            Pure CSS Select Box With Direction Aware Hover Effect</a> by Himalaya Singh (<a href="https://codepen.io/himalayasingh">@himalayasingh</a>)
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="eehayman" data-slug-hash="aRLYeb" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Intersection Observer + CSS Vars Scroll Effect">
+            <span>See the Pen <a href="https://codepen.io/eehayman/pen/aRLYeb">
+            Intersection Observer + CSS Vars Scroll Effect</a> by Emily Hayman (<a href="https://codepen.io/eehayman">@eehayman</a>)
             on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
           <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article" href="https://codepen.io/himalayasingh/pen/pxKKgd" target="_blank"
+            <a class="button-blog-post-article"
+              href="https://codepen.io/eehayman/pen/aRLYeb" target="_blank"
               rel="noopener noreferrer">Nguồn</a>
-          </p>
+          </p>        
+          <hr>
 
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Cho Menu Dropdown</h3>
-          </div>
 
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601437316/Thu_thuat_CSS_phan_2/Hi%E1%BB%87u_%E1%BB%A8ng_Cho_Menu_Dropdown_f2ezpe.png"
-            alt="Hiệu Ứng Cho Menu Dropdown"
-            >
-          <p class="mt-4">
-            Và phía dưới là đoạn mã trên Codepen nhé!
-          </p>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="Moslim" data-slug-hash="gmzvQj" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title=" #CodePenChallenge: Menu">
-            <span>See the Pen <a href="https://codepen.io/Moslim/pen/gmzvQj">
-             #CodePenChallenge: Menu</a> by Hakkam Abdullah (<a href="https://codepen.io/Moslim">@Moslim</a>)
-            on <a href="https://codepen.io">CodePen</a>.</span>
-          </p>
-          <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article" href="https://codepen.io/Moslim/pen/gmzvQj" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
-          </p>
 
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Cho Đường Dẫn (Link)</h3>
-          </div>
 
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601437507/Thu_thuat_CSS_phan_2/Hi%E1%BB%87u_%E1%BB%A8ng_Cho_%C4%90%C6%B0%E1%BB%9Dng_D%E1%BA%ABn_Link_cal4nb.png"
-            alt="Hiệu Ứng Cho Đường Dẫn (Link)"
-            >
-          <p class="mt-4">
-            Và phía dưới là đoạn mã trên Codepen nhé!
-          </p>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="RockStarwind" data-slug-hash="WmGwwp" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS Magic Line Navbar">
-            <span>See the Pen <a href="https://codepen.io/RockStarwind/pen/WmGwwp">
-            Pure CSS Magic Line Navbar</a> by Rock Starwind (<a href="https://codepen.io/RockStarwind">@RockStarwind</a>)
-            on <a href="https://codepen.io">CodePen</a>.</span>
-          </p>
-          <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article" href="https://codepen.io/RockStarwind/pen/WmGwwp" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
-          </p>
 
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Responsive Pure Css Tabs</h3>
-          </div>
-
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1601437596/Thu_thuat_CSS_phan_2/Responsive_Pure_Css_Tabs_pl9qyq.png"
-            alt="Hiệu Ứng Cho Đường Dẫn (Link)"
-            >
-          <p class="mt-4">
-            Và phía dưới là đoạn mã trên Codepen nhé!
-          </p>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="imprakash" data-slug-hash="epZvbQ" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Responsive pure css tabs">
-            <span>See the Pen <a href="https://codepen.io/imprakash/pen/epZvbQ">
-            Responsive pure css tabs</a> by Prakash (<a href="https://codepen.io/imprakash">@imprakash</a>)
-            on <a href="https://codepen.io">CodePen</a>.</span>
-          </p>
-          <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article" href="https://codepen.io/imprakash/pen/epZvbQ" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
-          </p>
 
 
 
@@ -537,7 +368,7 @@
 
 
           <h4 class="mt-4 pt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
-          <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những thủ thuật CSS
+          <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những hiệu ứng scroll
             hữu ích
             dành cho việc phát triển, thiết kế web và nếu có thắc mắc gì cứ gửi email mình sẽ
             phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa
