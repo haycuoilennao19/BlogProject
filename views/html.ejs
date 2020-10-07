@@ -35,330 +35,412 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i> Những Hiệu Ứng Scroll Cho Trang Web</h2>
+                  aria-hidden="true"></i>Hiệu Ứng SVG Text ANimation Cho Trang Web</h2>
             </div>
           </div>
 
 
           <div class="text-content-article mt-5">
-            <p><i> Bài viết hôm nay mình sẽ giới thiệu  đến bạn những hiệu ứng scroll được xây dựng bằng HTML, CSS, Javascript 
-              giúp thu hút sự chú ý của người dùng cũng như tạo ra cảm giác thú vị khi khách hàng sử dụng trang web nhé!
+            <p><i>Ngày hôm nay chúng ta sẽ đi vào tìm hiểu những hiệu ứng animation svg text giúp cho trang web có thiết
+                kế đẹp và bắt mắt hơn nhé!
               </i>
             </p>
           </div>
-          <p class="mt-4">Trước khi đi vào ví dụ thì mình có một số chú ý sau là để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> hay nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Nếu file là SCSS thì bạn có thể chuyển sang CSS ở đây nhé : <a href="https://jsonformatter.org/scss-to-css" rel="external nofollow noopener noreferrer" target="_blank">SCSS to CSS</a>. Nếu file là Pug thì bạn có thể chuyển sang HTML ở đây nhé : <a href="https://pughtml.com/" rel="external nofollow noopener noreferrer" target="_blank">Pug to HTML</a>. Nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.</p>
 
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Scroll Hiển Thị Hình Ảnh </h3>
+            <h3 class="text-primary ml-4 title-article-size">Giới Thiệu Về SVG</h3>
           </div>
-         
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="joshuaward" data-slug-hash="GORKbX" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Slide in on Scroll | #JavaScript30">
-            <span>See the Pen <a href="https://codepen.io/joshuaward/pen/GORKbX">
-            Slide in on Scroll | #JavaScript30</a> by Joshua Ward (<a href="https://codepen.io/joshuaward">@joshuaward</a>)
+          <p>
+            Trước khi đi vào ví dụ thì mình xin giới thiệu qua một chút về SVG nha!<br />
+            SVG là cụm từ viết tắt của <b>Scalable Vector Graphics</b>, nó sử dụng cấu trúc XML để hiển thị hình ảnh
+            dưới dạng vector. Bạn có thể nhúng trực tiếp vào file HTML
+            để sử dụng bằng việc dùng thẻ <code>&#60;svg&#62;</code>. Một số lợi ích khi sử dụng SVG trong trang web là:
+            <ul>
+              <li>Kích thước nhỏ, khả năng nén tốt.</li>
+              <li>Dễ dàng hiển thị trên nhiều màn hình thiết bị mà không bị vỡ hình ảnh.</li>
+              <li>Dễ dàng mở rộng và chỉnh sửa.</li>
+              <li>Tốc độ tải trang sẽ nhanh hơn so cới các loại định dạng hình ảnh khác(JPG, GIF, PNG...)</li>
+            </ul>
+          </p>
+          <p>
+            Nếu bạn muốn tham khảo thêm các bài viết hướng dẫn sử dụng SVG thì có thể xem ở bên dưới nhé:
+            <ul>
+              <li><a href="https://viblo.asia/p/su-dung-svg-trong-html-css-the-nao-GrLZD892Zk0"
+                  title="Sử dụng SVG trong HTML CSS" target="_blank" rel="noopener noreferrer">Sử dụng SVG trong HTML
+                  CSS</a></li>
+              <li><a
+                  href="https://www.w3schools.com/html/html5_svg.asp#:~:text=SVG%20stands%20for%20Scalable%20Vector,define%20graphics%20for%20the%20Web"
+                  title="HTML SVG Graphics" target="_blank" rel="noopener noreferrer">HTML SVG Graphics</a></li>
+              <li><a href="https://css-tricks.com/using-svg/" title="Using SVG" target="_blank"
+                  rel="noopener noreferrer">Using SVG</a></li>
+            </ul>
+          </p>
+          <p class="mt-4">Trước khi đi vào ví dụ thì mình có một số chú ý sau là để xem rõ kết quả hơn bạn chuyển sang
+            chế độ screen <b>0.5x, 0.25x</b> hay nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b>
+            trong Codepen mới xem được nhé. Nếu file là SCSS thì bạn có thể chuyển sang CSS ở đây nhé : <a
+              href="https://jsonformatter.org/scss-to-css" rel="external nofollow noopener noreferrer"
+              target="_blank">SCSS to CSS</a>. Nếu file là Pug thì bạn có thể chuyển sang HTML ở đây nhé : <a
+              href="https://pughtml.com/" rel="external nofollow noopener noreferrer" target="_blank">Pug to HTML</a>.
+            Nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ
+            <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.</p>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">SVG Text Mask</h3>
+          </div>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1602041053/SVG_Text_Animation/SVG_Text_Mask_pcjhgi.png"
+            alt="SVG Text Mask">
+          <p class="mt-4">
+            Và bên dưới là dự án trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="fixcl" data-slug-hash="CHgrn" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="SVG text mask">
+            <span>See the Pen <a href="https://codepen.io/fixcl/pen/CHgrn">
+            SVG text mask</a> by Marco Barría (<a href="https://codepen.io/fixcl">@fixcl</a>)
             on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
           <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-          <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article"
-              href="https://codepen.io/joshuaward/pen/GORKbX" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
-          </p>        
-          <hr>
-         
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Thay Đổi Background Gradient Khi Scroll</h3>
-          </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="MadeByMike" data-slug-hash="eKPZZz" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Scrolling Gradient">
-            <span>See the Pen <a href="https://codepen.io/MadeByMike/pen/eKPZZz">
-            Scrolling Gradient</a> by Mike (<a href="https://codepen.io/MadeByMike">@MadeByMike</a>)
-            on <a href="https://codepen.io">CodePen</a>.</span>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article"
+              href="https://codepen.io/fixcl/pen/CHgrn" target="_blank" rel="noopener noreferrer">Nguồn</a>
           </p>
-          <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article"
-              href="https://codepen.io/MadeByMike/pen/eKPZZz" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
-          </p>        
-          <hr>
-         
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Slide-out Scrolling Gallery</h3>
-          </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="teeganlincoln" data-slug-hash="MaNxBv" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Slide-out Scrolling Gallery">
-            <span>See the Pen <a href="https://codepen.io/teeganlincoln/pen/MaNxBv">
-            Slide-out Scrolling Gallery</a> by Teegan Lincoln (<a href="https://codepen.io/teeganlincoln">@teeganlincoln</a>)
-            on <a href="https://codepen.io">CodePen</a>.</span>
-          </p>
-          <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article"
-              href="https://codepen.io/teeganlincoln/pen/MaNxBv" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
-          </p>        
-          <hr>
-
-  
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Neat Parallax Hero Effect</h3>
-          </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="magnificode" data-slug-hash="GpqGOm" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Neat Parallax Hero Effect">
-            <span>See the Pen <a href="https://codepen.io/magnificode/pen/GpqGOm">
-            Neat Parallax Hero Effect</a> by magnificode (<a href="https://codepen.io/magnificode">@magnificode</a>)
-            on <a href="https://codepen.io">CodePen</a>.</span>
-          </p>
-          <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article"
-              href="https://codepen.io/magnificode/pen/GpqGOm" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
-          </p>        
-          <hr>
-
- 
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Scroll Drawing</h3>
-          </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="chriscoyier" data-slug-hash="YXgWam" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Scroll Drawing">
-            <span>See the Pen <a href="https://codepen.io/chriscoyier/pen/YXgWam">
-            Scroll Drawing</a> by Chris Coyier  (<a href="https://codepen.io/chriscoyier">@chriscoyier</a>)
-            on <a href="https://codepen.io">CodePen</a>.</span>
-          </p>
-          <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article"
-              href="https://codepen.io/chriscoyier/pen/YXgWam" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
-          </p>        
-          <hr>
 
 
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Thay Đổi Background Khi Scroll</h3>
+            <h3 class="text-primary ml-4 title-article-size">SVG Text Animation</h3>
           </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="jackharner" data-slug-hash="bdPmQM" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Changing Background Color on Scroll">
-            <span>See the Pen <a href="https://codepen.io/jackharner/pen/bdPmQM">
-            Changing Background Color on Scroll</a> by Jack Harner (<a href="https://codepen.io/jackharner">@jackharner</a>)
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1602041248/SVG_Text_Animation/SVG_Text_aNimation_p01e9d.png"
+            alt="SVG Text Animation">
+          <p class="mt-4">
+            Và bên dưới là dự án trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="cassie-codes" data-slug-hash="GEaZVm" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="SVG text animation">
+            <span>See the Pen <a href="https://codepen.io/cassie-codes/pen/GEaZVm">
+            SVG text animation</a> by Cassie Evans (<a href="https://codepen.io/cassie-codes">@cassie-codes</a>)
             on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
-          <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article"
-              href="https://codepen.io/jackharner/pen/bdPmQM" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
-          </p>        
-          <hr>
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Scroll Based Animation</h3>
-          </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="lmgonzalves" data-slug-hash="QPBPJe" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Scroll Based Animation">
-            <span>See the Pen <a href="https://codepen.io/lmgonzalves/pen/QPBPJe">
-            Scroll Based Animation</a> by lmgonzalves (<a href="https://codepen.io/lmgonzalves">@lmgonzalves</a>)
-            on <a href="https://codepen.io">CodePen</a>.</span>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article"
+              href="https://codepen.io/cassie-codes/pen/GEaZVm" target="_blank" rel="noopener noreferrer">Nguồn</a>
           </p>
-          <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article"
-              href="https://codepen.io/lmgonzalves/pen/QPBPJe" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
-          </p>        
-          <hr>
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Header Scroll Effect</h3>
-          </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="igloude" data-slug-hash="jwuoc" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Header Scroll Effect">
-            <span>See the Pen <a href="https://codepen.io/igloude/pen/jwuoc">
-            Header Scroll Effect</a> by Ian Gloude (<a href="https://codepen.io/igloude">@igloude</a>)
-            on <a href="https://codepen.io">CodePen</a>.</span>
-          </p>
-          <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article"
-              href="https://codepen.io/igloude/pen/jwuoc" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
-          </p>        
-          <hr>
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Scroll Animations - Revealed Box</h3>
-          </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="jlnljn" data-slug-hash="bgjbmB" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Scroll Animations - Revealed Box">
-            <span>See the Pen <a href="https://codepen.io/jlnljn/pen/bgjbmB">
-            Scroll Animations - Revealed Box</a> by Julien Lejeune (<a href="https://codepen.io/jlnljn">@jlnljn</a>)
-            on <a href="https://codepen.io">CodePen</a>.</span>
-          </p>
-          <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article"
-              href="https://codepen.io/jlnljn/pen/bgjbmB" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
-          </p>        
-          <hr>
 
 
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Cross Color Text Reveal</h3>
+            <h3 class="text-primary ml-4 title-article-size">Hand written SVG text animation</h3>
           </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="ispykenny" data-slug-hash="BaaYqYZ" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Cross Color Text Reveal">
-            <span>See the Pen <a href="https://codepen.io/ispykenny/pen/BaaYqYZ">
-            Cross Color Text Reveal</a> by Kenny (<a href="https://codepen.io/ispykenny">@ispykenny</a>)
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1602041353/SVG_Text_Animation/Hand_written_SVG_text_animation_rlv2vd.png"
+            alt="Hand written SVG text animation">
+          <p class="mt-4">
+            Và bên dưới là dự án trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="mellis84" data-slug-hash="JpVZNw" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Hand written SVG text animation">
+            <span>See the Pen <a href="https://codepen.io/mellis84/pen/JpVZNw">
+            Hand written SVG text animation</a> by Matthew Ellis (<a href="https://codepen.io/mellis84">@mellis84</a>)
             on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
-          <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article"
-              href="https://codepen.io/ispykenny/pen/BaaYqYZ" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
-          </p>        
-          <hr>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article"
+              href="https://codepen.io/mellis84/pen/JpVZNw" target="_blank" rel="noopener noreferrer">Nguồn</a>
+          </p>
 
 
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng ScrollOut + Splitting.js</h3>
+            <h3 class="text-primary ml-4 title-article-size">SVG Text Portrait</h3>
           </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="shshaw" data-slug-hash="YOPqLb" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="ScrollOut + Splitting.js">
-            <span>See the Pen <a href="https://codepen.io/shshaw/pen/YOPqLb">
-            ScrollOut + Splitting.js</a> by Shaw (<a href="https://codepen.io/shshaw">@shshaw</a>)
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1602041504/SVG_Text_Animation/SVG_Text_Portrait_qiwbim.png"
+            alt="SVG Text Portrait">
+          <p class="mt-4">
+            Và bên dưới là dự án trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="lisilinhart" data-slug-hash="MQVgKG" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="SVG Text Portrait">
+            <span>See the Pen <a href="https://codepen.io/lisilinhart/pen/MQVgKG">
+            SVG Text Portrait</a> by Lisi (<a href="https://codepen.io/lisilinhart">@lisilinhart</a>)
             on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
-          <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article"
-              href="https://codepen.io/shshaw/pen/YOPqLb" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
-          </p>        
-          <hr>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article"
+              href="https://codepen.io/lisilinhart/pen/MQVgKG" target="_blank" rel="noopener noreferrer">Nguồn</a>
+          </p>
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">CSS3 - SVG Text Animation</h3>
+          </div>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1602041620/SVG_Text_Animation/CSS3_-_SVG_Text_Animation_ctckhz.png"
+            alt="CSS3 - SVG Text Animation">
+          <p class="mt-4">
+            Và bên dưới là dự án trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="hipe" data-slug-hash="OVdeBb" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS3 - SVG Text Animation">
+            <span>See the Pen <a href="https://codepen.io/hipe/pen/OVdeBb">
+            CSS3 - SVG Text Animation</a> by HIPE (<a href="https://codepen.io/hipe">@hipe</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article"
+              href="https://codepen.io/hipe/pen/OVdeBb" target="_blank" rel="noopener noreferrer">Nguồn</a>
+          </p>
 
 
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Scroll Triggered Elements </h3>
+            <h3 class="text-primary ml-4 title-article-size">SVG text with animated gradient fill</h3>
           </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="notoriousb1t" data-slug-hash="zLbVEW" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Scroll Triggered Elements (Splitting + ScrollOut)">
-            <span>See the Pen <a href="https://codepen.io/notoriousb1t/pen/zLbVEW">
-            Scroll Triggered Elements (Splitting + ScrollOut)</a> by Christopher Wallis (<a href="https://codepen.io/notoriousb1t">@notoriousb1t</a>)
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1602041756/SVG_Text_Animation/SVG_text_with_animated_gradient_fill_jkvixd.png"
+            alt="SVG text with animated gradient fill">
+          <p class="mt-4">
+            Và bên dưới là dự án trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="bradleyboy" data-slug-hash="lIqag" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="SVG text with animated gradient fill">
+            <span>See the Pen <a href="https://codepen.io/bradleyboy/pen/lIqag">
+            SVG text with animated gradient fill</a> by Brad Daily (<a href="https://codepen.io/bradleyboy">@bradleyboy</a>)
             on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
-          <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article"
-              href="https://codepen.io/notoriousb1t/pen/zLbVEW" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
-          </p>        
-          <hr>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article"
+              href="https://codepen.io/bradleyboy/pen/lIqag" target="_blank" rel="noopener noreferrer">Nguồn</a>
+          </p>
 
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Efficient Scroll Zoom</h3>
+            <h3 class="text-primary ml-4 title-article-size">Curved SVG Text</h3>
           </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="CAWeissen" data-slug-hash="rNNobpJ" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Efficient Scroll Zoom">
-            <span>See the Pen <a href="https://codepen.io/CAWeissen/pen/rNNobpJ">
-            Efficient Scroll Zoom</a> by Chris Weissenberger (<a href="https://codepen.io/CAWeissen">@CAWeissen</a>)
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1602041899/SVG_Text_Animation/Curved_SVG_Text_ytf2xj.png"
+            alt="Curved SVG Text">
+          <p class="mt-4">
+            Và bên dưới là dự án trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="grayghostvisuals" data-slug-hash="meJXag" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Curved SVG Text">
+            <span>See the Pen <a href="https://codepen.io/grayghostvisuals/pen/meJXag">
+            Curved SVG Text</a> by GRAY GHOST (<a href="https://codepen.io/grayghostvisuals">@grayghostvisuals</a>)
             on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
-          <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article"
-              href="https://codepen.io/CAWeissen/pen/rNNobpJ" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
-          </p>        
-          <hr>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article"
+              href="https://codepen.io/grayghostvisuals/pen/meJXag" target="_blank" rel="noopener noreferrer">Nguồn</a>
+          </p>
 
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Full Page Parallax Scroll Effect</h3>
+            <h3 class="text-primary ml-4 title-article-size">Animating SVG Text</h3>
           </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="eehayman" data-slug-hash="qdGZJr" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Full Page Parallax Scroll Effect">
-            <span>See the Pen <a href="https://codepen.io/eehayman/pen/qdGZJr">
-            Full Page Parallax Scroll Effect</a> by Emily Hayman (<a href="https://codepen.io/eehayman">@eehayman</a>)
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1602041991/SVG_Text_Animation/Animating_SVG_Text_jzl6h3.png"
+            alt="Animating SVG Text">
+          <p class="mt-4">
+            Và bên dưới là dự án trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="omarel" data-slug-hash="KJdepq" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Animating SVG Text">
+            <span>See the Pen <a href="https://codepen.io/omarel/pen/KJdepq">
+            Animating SVG Text</a> by Omar Elbaga (<a href="https://codepen.io/omarel">@omarel</a>)
             on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
-          <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article"
-              href="https://codepen.io/eehayman/pen/qdGZJr" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
-          </p>        
-          <hr>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article"
+              href="https://codepen.io/omarel/pen/KJdepq" target="_blank" rel="noopener noreferrer">Nguồn</a>
+          </p>
+
+
 
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Thu Nhỏ Video Khi Scroll</h3>
+            <h3 class="text-primary ml-4 title-article-size">SVG Text</h3>
           </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="carpenumidium" data-slug-hash="dYYwQp" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Unobtrusive Video">
-            <span>See the Pen <a href="https://codepen.io/carpenumidium/pen/dYYwQp">
-            Unobtrusive Video</a> by carpe numidium (<a href="https://codepen.io/carpenumidium">@carpenumidium</a>)
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1602042105/SVG_Text_Animation/SVG_Text_s4ixcy.png"
+            alt="SVG Text">
+          <p class="mt-4">
+            Và bên dưới là dự án trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="ANAMAFLA" data-slug-hash="eYJbGpd" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="SVG Text">
+            <span>See the Pen <a href="https://codepen.io/ANAMAFLA/pen/eYJbGpd">
+            SVG Text</a> by ANA MAFLA (<a href="https://codepen.io/ANAMAFLA">@ANAMAFLA</a>)
             on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
-          <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article"
-              href="https://codepen.io/carpenumidium/pen/dYYwQp" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
-          </p>        
-          <hr>
-          
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Sticky header on scroll up</h3>
-          </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="ingvi" data-slug-hash="ZVOqbP" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Sticky header on scroll up">
-            <span>See the Pen <a href="https://codepen.io/ingvi/pen/ZVOqbP">
-            Sticky header on scroll up</a> by Ingvi (<a href="https://codepen.io/ingvi">@ingvi</a>)
-            on <a href="https://codepen.io">CodePen</a>.</span>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article"
+              href="https://codepen.io/ANAMAFLA/pen/eYJbGpd" target="_blank" rel="noopener noreferrer">Nguồn</a>
           </p>
-          <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article"
-              href="https://codepen.io/ingvi/pen/ZVOqbP" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
-          </p>        
-          <hr>
-          
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Gettin' Clippy</h3>
-          </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="StephenScaff" data-slug-hash="WxoVBo" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Gettin' Clippy">
-            <span>See the Pen <a href="https://codepen.io/StephenScaff/pen/WxoVBo">
-            Gettin' Clippy</a> by Stephen Scaff (<a href="https://codepen.io/StephenScaff">@StephenScaff</a>)
-            on <a href="https://codepen.io">CodePen</a>.</span>
-          </p>
-          <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article"
-              href="https://codepen.io/StephenScaff/pen/WxoVBo" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
-          </p>        
-          <hr>
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Scroll Effect With Text</h3>
-          </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="yashyash" data-slug-hash="EtAoF" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Scroll effect with text with help from Skrollr">
-            <span>See the Pen <a href="https://codepen.io/yashyash/pen/EtAoF">
-            Scroll effect with text with help from Skrollr</a> by Yash (<a href="https://codepen.io/yashyash">@yashyash</a>)
-            on <a href="https://codepen.io">CodePen</a>.</span>
-          </p>
-          <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article"
-              href="https://codepen.io/yashyash/pen/EtAoF" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
-          </p>        
-          <hr>
+
 
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Intersection Observer Scroll Effect</h3>
+            <h3 class="text-primary ml-4 title-article-size">SVG Text Animation in CSS</h3>
           </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="eehayman" data-slug-hash="aRLYeb" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Intersection Observer + CSS Vars Scroll Effect">
-            <span>See the Pen <a href="https://codepen.io/eehayman/pen/aRLYeb">
-            Intersection Observer + CSS Vars Scroll Effect</a> by Emily Hayman (<a href="https://codepen.io/eehayman">@eehayman</a>)
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1602042320/SVG_Text_Animation/SVG_Text_Animation_in_CSS_vkig0b.png"
+            alt="SVG Text Animation in CSS">
+          <p class="mt-4">
+            Và bên dưới là dự án trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="asistapl" data-slug-hash="zqpepW" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="SVG Text Animation in CSS">
+            <span>See the Pen <a href="https://codepen.io/asistapl/pen/zqpepW">
+            SVG Text Animation in CSS</a> by Maciej Leszczyński (<a href="https://codepen.io/asistapl">@asistapl</a>)
             on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
-          <p class="mt-4 pt-2 pb-4">
-            <a class="button-blog-post-article"
-              href="https://codepen.io/eehayman/pen/aRLYeb" target="_blank"
-              rel="noopener noreferrer">Nguồn</a>
-          </p>        
-          <hr>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article"
+              href="https://codepen.io/asistapl/pen/zqpepW" target="_blank" rel="noopener noreferrer">Nguồn</a>
+          </p>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Universal SVG Glitch</h3>
+          </div>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1602042804/SVG_Text_Animation/Universal_SVG_Glitch_dfto5h.png"
+            alt="Universal SVG Glitch">
+          <p class="mt-4">
+            Và bên dưới là dự án trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="DirkWeber" data-slug-hash="eyxbmq" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Universal SVG Glitch">
+            <span>See the Pen <a href="https://codepen.io/DirkWeber/pen/eyxbmq">
+            Universal SVG Glitch</a> by Dirk Weber (<a href="https://codepen.io/DirkWeber">@DirkWeber</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article"
+              href="https://codepen.io/DirkWeber/pen/eyxbmq" target="_blank" rel="noopener noreferrer">Nguồn</a>
+          </p>
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">SVG Text Filling with Water</h3>
+          </div>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1602042894/SVG_Text_Animation/SVG_Text_Filling_with_Water_nkd9hz.png"
+            alt="SVG Text Filling with Water">
+          <p class="mt-4">
+            Và bên dưới là dự án trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="lbebber" data-slug-hash="MwZRdw" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="SVG Text Filling with Water">
+            <span>See the Pen <a href="https://codepen.io/lbebber/pen/MwZRdw">
+            SVG Text Filling with Water</a> by Lucas Bebber (<a href="https://codepen.io/lbebber">@lbebber</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article"
+              href="https://codepen.io/lbebber/pen/MwZRdw" target="_blank" rel="noopener noreferrer">Nguồn</a>
+          </p>
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Multi-line SVG text</h3>
+          </div>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1602043076/SVG_Text_Animation/Multi-line_SVG_text_mzepjk.png"
+            alt="Multi-line SVG text">
+          <p class="mt-4">
+            Và bên dưới là dự án trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="chrisgannon" data-slug-hash="YWgbYz" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Multi-line SVG text">
+            <span>See the Pen <a href="https://codepen.io/chrisgannon/pen/YWgbYz">
+            Multi-line SVG text</a> by Chris Gannon (<a href="https://codepen.io/chrisgannon">@chrisgannon</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article"
+              href="https://codepen.io/chrisgannon/pen/YWgbYz" target="_blank" rel="noopener noreferrer">Nguồn</a>
+          </p>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">SVG text on an interactive bezier path.</h3>
+          </div>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1602043215/SVG_Text_Animation/SVG_text_on_an_interactive_bezier_path._iwhn3o.png"
+            alt="SVG text on an interactive bezier path.">
+          <p class="mt-4">
+            Và bên dưới là dự án trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="gpyne" data-slug-hash="uJgkG" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="SVG text on an interactive bezier path.">
+            <span>See the Pen <a href="https://codepen.io/gpyne/pen/uJgkG">
+            SVG text on an interactive bezier path.</a> by Graham Pyne (<a href="https://codepen.io/gpyne">@gpyne</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article"
+              href="https://codepen.io/gpyne/pen/uJgkG" target="_blank" rel="noopener noreferrer">Nguồn</a>
+          </p>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Book cover - SVG text + Writing Mode</h3>
+          </div>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1602052483/SVG_Text_Animation/Book_cover_-_SVG_text_Writing_Mode_dfpqlt.png"
+            alt="Book cover - SVG text + Writing Mode">
+          <p class="mt-4">
+            Và bên dưới là dự án trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="CameronFitzwilliam" data-slug-hash="eQrKbg" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Book cover - SVG text + Writing Mode ">
+            <span>See the Pen <a href="https://codepen.io/CameronFitzwilliam/pen/eQrKbg">
+            Book cover - SVG text + Writing Mode </a> by Cameron Fitzwilliam (<a href="https://codepen.io/CameronFitzwilliam">@CameronFitzwilliam</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article"
+              href="https://codepen.io/CameronFitzwilliam/pen/eQrKbg" target="_blank" rel="noopener noreferrer">Nguồn</a>
+          </p>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">SVG text effect</h3>
+          </div>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1602052600/SVG_Text_Animation/SVG_text_effect_edcjlq.png"
+            alt="SVG text effect">
+          <p class="mt-4">
+            Và bên dưới là dự án trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="bleepbloop" data-slug-hash="sGECK" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="SVG text effect">
+            <span>See the Pen <a href="https://codepen.io/bleepbloop/pen/sGECK">
+            SVG text effect</a> by Max Gruson (<a href="https://codepen.io/bleepbloop">@bleepbloop</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article"
+              href="https://codepen.io/bleepbloop/pen/sGECK" target="_blank" rel="noopener noreferrer">Nguồn</a>
+          </p>
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">ShadedText</h3>
+          </div>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1602052675/SVG_Text_Animation/ShadedText_tzz1zb.png"
+            alt="ShadedText">
+          <p class="mt-4">
+            Và bên dưới là dự án trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="rgg" data-slug-hash="ozLzbz" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Shaded Text">
+            <span>See the Pen <a href="https://codepen.io/rgg/pen/ozLzbz">
+            Shaded Text</a> by Rafael González (<a href="https://codepen.io/rgg">@rgg</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article"
+              href="https://codepen.io/rgg/pen/ozLzbz" target="_blank" rel="noopener noreferrer">Nguồn</a>
+          </p>
 
 
 
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">SVG Text Animation 2</h3>
+          </div>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1602052816/SVG_Text_Animation/SVG_Text_Animation_2_egolcv.png"
+            alt="SVG Text Animation 2">
+          <p class="mt-4">
+            Và bên dưới là dự án trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="P3R0" data-slug-hash="zxabvb" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="SVG Text Animation #1.. animated dashed stroke pattern">
+            <span>See the Pen <a href="https://codepen.io/P3R0/pen/zxabvb">
+            SVG Text Animation #1.. animated dashed stroke pattern</a> by Ebram Marzouk (<a href="https://codepen.io/P3R0">@P3R0</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article"
+              href="https://codepen.io/P3R0/pen/zxabvb" target="_blank" rel="noopener noreferrer">Nguồn</a>
+          </p>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">SVG Gradient Filled Text</h3>
+          </div>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1602052915/SVG_Text_Animation/SVG_Gradient_Filled_Text_bepsdo.png"
+            alt="SVG Gradient Filled Text">
+          <p class="mt-4">
+            Và bên dưới là dự án trên Codepen nhé!
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="brenna" data-slug-hash="mybQVx" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="SVG Gradient Filled Text">
+            <span>See the Pen <a href="https://codepen.io/brenna/pen/mybQVx">
+            SVG Gradient Filled Text</a> by Brenna O'Brien (<a href="https://codepen.io/brenna">@brenna</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article"
+              href="https://codepen.io/brenna/pen/mybQVx" target="_blank" rel="noopener noreferrer">Nguồn</a>
+          </p>
 
 
 
@@ -368,7 +450,7 @@
 
 
           <h4 class="mt-4 pt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
-          <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những hiệu ứng scroll
+          <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những hiệu ứng hover animation svg text
             hữu ích
             dành cho việc phát triển, thiết kế web và nếu có thắc mắc gì cứ gửi email mình sẽ
             phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa
