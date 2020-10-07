@@ -33,7 +33,7 @@
 <meta property="og:description" content="<%-article.subtitle%>" />
 <meta property="og:image" content="<%-article.file_image_facebook%>" />
  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
   <meta name="google-site-verification" content="SXEFa5YhgCrmAOJhBwsuDms_fUALYxrM8ZUql8KHgNM" />
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163462128-1"></script>
@@ -45,7 +45,7 @@
 </style>
 
 <style>/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}</style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 <link rel='stylesheet' href='/stylesheets/style1.css' />
 <style>
@@ -68,35 +68,12 @@
 <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-163462128-1');
-</script>
 </head>
 
 <body>
   
-  <script>
-    window.fbAsyncInit = function() {
-      FB.init({
-        appId      : '2121975281235443',
-        xfbml      : true,
-        version    : 'v5.0'
-      });
-      FB.AppEvents.logPageView();
-    };
-  
-    (function(d, s, id){
-       var js, fjs = d.getElementsByTagName(s)[0];
-       if (d.getElementById(id)) {return;}
-       js = d.createElement(s); js.id = id;
-       js.src = "https://connect.facebook.net/en_US/sdk.js";
-       fjs.parentNode.insertBefore(js, fjs);
-     }(document, 'script', 'facebook-jssdk'));
-  </script>
+
   <!--Navbar-->
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary  fixed-top p-2">
@@ -241,7 +218,7 @@
     <style>
       @media (min-width:1025px){.content-image{background-image:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_1024/library-438389_1920_lcj3ro.webp)}}@media (min-width:481px) and (max-width:1024px){.content-image{background-image:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_512/library-438389_1920_lcj3ro.webp)}}@media (max-width:480px){.content-image{display:none !important; }}
     </style>
-
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
     var container = document.getElementById('content-box');
     
@@ -249,14 +226,12 @@
       windowsize = $(window).width();
       
       if((windowsize <= 992)  && (screen.height>=768)) {
-        container.classList.remove('container');
-        container.classList.add('container-fluid')
+     
   
         //navbar
         $('.nav-item').addClass('hvr-underline-from-left')
       } else{
-        container.classList.add('container');
-        container.classList.remove('container-fluid')
+     
   
         //navbar
         $('.nav-item').removeClass('hvr-underline-from-left')
@@ -267,29 +242,28 @@
   <script src='/javascripts/highlight.pack.js'></script>
   <script>hljs.initHighlightingOnLoad();</script>
   <script>
-    $(document).ready(function() {
-      const win = $(window);
-      const doc = $(document);
-      const progressBar = $('progress');
-      const progressLabel = $('.progress-label');
-      const setValue = () => win.scrollTop();
-      const setMax = () => doc.height() - win.height();
-      const setPercent = () => Math.round(win.scrollTop() / (doc.height() - win.height()) * 100);
-      
-      progressLabel.text(setPercent() + '%');
-      progressBar.attr({ value: setValue(), max: setMax() });
-    
-      doc.on('scroll', () => {
-        progressLabel.text(setPercent() + '%');
-        progressBar.attr({ value: setValue() });
-      });
-      
-      win.on('resize', () => {
-        progressLabel.text(setPercent() + '%');
-        progressBar.attr({ value: setValue(), max: setMax() });
-      })
-    });
-    
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
   
+    gtag('config', 'UA-163462128-1');
   </script>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '2121975281235443',
+          xfbml      : true,
+          version    : 'v5.0'
+        });
+        FB.AppEvents.logPageView();
+      };
+    
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
   <%- include('footer') -%>
