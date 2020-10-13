@@ -35,186 +35,125 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i> Tạo Hiệu Ứng Hover Đẹp Mắt Với Izmir</h2>
+                  aria-hidden="true"></i> Cách Tạo Action Button Theo Thiết Kế Material</h2>
             </div>
           </div>
 
 
           <div class="text-content-article mt-5">
-            <p><i>Ngày hôm nay chúng ta sẽ đi vào tìm hiểu cách tạo hiệu ứng hover cho trang web bằng việc kết hợp thư
-                viện
-                Izmir với HTML CSS nhé!
+            <p><i>Ngày hôm nay chúng ta sẽ đi vào tìm hiểu cách tạo action button theo phong cách thiết kế của material
+                bằng HTML, CSS và Javascript nhé!
               </i>
             </p>
           </div>
 
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Giới Thiệu Về Thư Viện Izmir </h3>
+            <h3 class="text-primary ml-4 title-article-size">Tạo Cấu Trúc Phần Tử HTML Cho Action Button </h3>
           </div>
-          <p>
-            <b>Izmir</b> là một thư viện CSS nhỏ gọn. Nó giúp bạn có thể nhanh chóng tạo ra các hiệu ứng hover đẹp mắt
-            cho phần tử trong trang web
-            bằng cách thêm class của hiệu ứng hover vào trong thẻ HTML.
-            Và điểm mình cảm thấy thích nhất ở nó là dễ dàng tinh chỉnh cũng như có thể áp dụng cho nhiều loại dự án web
-            khác nhau.
+          <p> Phần đầu tiên chúng ta sẽ đi vào tạo hai file là <code>index.html</code>(nơi lưu trữ HTML) và
+            <code>style.css</code>(nơi lưu trữ mã CSS). Sau đó liên kết chúng với Google Font và Font Awesome v4.7 thông
+            qua đoạn mã dưới đây nhé:
           </p>
-          <p>
-            Để sử dụng trực tiếp cho trang HTML thì bạn chỉ cần thêm CDN của thư viện ở bên dưới:
-          </p>
-          <pre><code class="html">&#60;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ciar4n/izmir@1.0.1/izmir.min.css"&#62;</code></pre>
 
+
+
+
+          <h4 class="text-primary">
+            HTML
+          </h4>
+          <pre><code class="html"> &#60;!DOCTYPE&nbsp;html&#62;<br/> &#60;html&nbsp;lang="en"&#62;<br/> &#60;head&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;charset="UTF-8"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;name="viewport"&nbsp;content="width=device-width,&nbsp;initial-scale=1.0"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;title&#62;Tạo&nbsp;animation&nbsp;button&nbsp;search&#60;/title&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"&nbsp;integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"&nbsp;crossorigin="anonymous"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"&nbsp;rel="stylesheet"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="style.css"&#62;<br/> &#60;/head&#62;<br/> &#60;body&#62;<br/> &#60;/body&#62;<br/> &#60;/html&#62;<br/></code></pre>
+
+
+      
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Tạo Hiệu Ứng Hover Cơ Bản Bằng Thư Viện Izmir</h3>
+            <h3 class="text-primary ml-4 title-article-size">Thêm Các Phần Tử HTML và CSS Cho Button</h3>
           </div>
           <p>
-            <p> Phần đầu tiên chúng ta sẽ đi vào tạo hai file là <code>index.html</code>(nơi lưu trữ HTML) và
-              <code>style.css</code>(nơi lưu trữ mã CSS). Sau đó liên kết chúng với thư viện Izmir và Google Font thông
-              qua đoạn mã dưới đây nhé:</p>
+            Phần tiếp theo chúng ta sẽ thêm các thẻ HTML cần thiết để tạo action button  thông qua đoạn mã dưới đây nhé:
           </p>
           <h4 class="text-primary">
             HTML
           </h4>
-          <pre><code class="html">&#60;!DOCTYPE&nbsp;html&#62;<br/> &#60;html&nbsp;lang="en"&#62;<br/> &#60;head&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;charset="UTF-8"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;name="viewport"&nbsp;content="width=device-width,&nbsp;initial-scale=1.0"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;title&#62;Tạo&nbsp;Hiệu&nbsp;Ứng&nbsp;Hover&nbsp;Với&nbsp;Thư&nbsp;Viện&nbsp;Izmir&#60;/title&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,600&display=swap"&nbsp;rel="stylesheet"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="https://cdn.jsdelivr.net/npm/@ciar4n/izmir@1.0.1/izmir.min.css"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="style.css"&#62;<br/> &#60;/head&#62;<br/> &#60;body&#62;<br/> &#60;/body&#62;<br/> &#60;/html&#62;<br/></code></pre>
+          <pre><code class="html">&#60;div&nbsp;class="action"&nbsp;onclick="menuToogle()"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;span&#62;+&#60;/span&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;ul&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;i&nbsp;class="fa&nbsp;fa-facebook"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&nbsp;Chia&nbsp;Sẻ&nbsp;Trên&nbsp;FaceBook&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;i&nbsp;class="fa&nbsp;fa-twitter"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&nbsp;Chia&nbsp;Sẻ&nbsp;Trên&nbsp;Twitter&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;i&nbsp;class="fa&nbsp;fa-youtube-play"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&nbsp;Chia&nbsp;Sẻ&nbsp;Trên&nbsp;Youtube&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;i&nbsp;class="fa&nbsp;fa-linkedin"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&nbsp;Chia&nbsp;Sẻ&nbsp;Trên&nbsp;Linkedin&nbsp;&nbsp;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;i&nbsp;class="fa&nbsp;fa-pinterest"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&nbsp;Chia&nbsp;Sẻ&nbsp;Trên&nbsp;Pinterest&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/ul&#62;<br/> &#60;/div&#62;<br/></code></pre>
           <p class="mt-4">
-            Bước tiếp theo chúng ta sẽ tạo cấu trúc phần tử HTML được hover bằng thẻ <code>figure</code> và
-            <code>figcaption</code> thông qua đoạn mã bên dưới nhé:
+            Đoạn mã  <code>onclick="menuToogle()</code> dùng để khởi động hàm khi người dùng nhấn vào action button (Cái này mình sẽ nói rõ hơn trong phần Javascript nhé).
+          </p>
+          
+           
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Thiết Lập Style Cho Action Button</h3>
+          </div>
+          <p>
+            Trong phần này chúng ta sẽ đi vào thiết kế style cho action button như là font chữ, vị trí, kích thước hiển thị... bằng đoạn CSS dưới đây nhé:
+          </p>
+          
+          <h4 class="text-primary">
+            CSS
+          </h4>
+          <pre><code class="css">*{<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;box-sizing:&nbsp;border-box;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-family:&nbsp;'Roboto',&nbsp;sans-serif;<br/> }<br/>body{<br/> &nbsp;&nbsp;&nbsp;&nbsp;min-height:&nbsp;100vh;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;linear-gradient(to&nbsp;right,&nbsp;#24243e,&nbsp;#302b63,&nbsp;#0f0c29);&nbsp;<br/> }<br/>.action{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;fixed;<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;50px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;left:&nbsp;50px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;50px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;50px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;50%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;box-shadow:&nbsp;0&nbsp;5px&nbsp;5px&nbsp;rgba(0,0,0,0.1);<br/> &nbsp;&nbsp;&nbsp;&nbsp;cursor:&nbsp;pointer;<br/> }<br/></code></pre>
+          <p class="mt-4">
+            Kết quả của đoạn mã trên bạn xem ở bên dưới nha:
+          </p>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1602489786/action_button_material_HTML_CSS/Action_Button_Material_1_eyg97g.png"
+            alt="Action Button  Material  1"
+          >
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size"> Hiển Thị Nội Dung Action Button Bằng Javascript </h3>
+          </div>
+          <p>
+            Trong phần này chúng ta sẽ sử dụng Javascript cùng với CSS để hiển thị nội dung khi người dùng click vào icon menu thông qua đoạn mã sau nhé:
           </p>
           <h4 class="text-primary">
-            HTML
+            Javascript
           </h4>
-          <pre><code class="html">&#60;h2&#62;Hiệu&nbsp;Ứng&nbsp;Hover&nbsp;Cơ&nbsp;Bản&nbsp;Bằng&nbsp;Thư&nbsp;Viện&nbsp;Izmir&#60;/h2&#62;<br/> &#60;div&nbsp;class="container"&#62;<br/> &nbsp;&nbsp;&#60;figure&nbsp;class="c4-izmir"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;img&nbsp;src="https://images.pexels.com/photos/1632790/pexels-photo-1632790.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=400"<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alt="Hình&nbsp;Ảnh&nbsp;Minh&nbsp;Họa"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;figcaption&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h3&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Niềm&nbsp;Vui&nbsp;Lập&nbsp;Trình<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/h3&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/figcaption&#62;<br/> &nbsp;&nbsp;&#60;/figure&#62;<br/> &#60;/div&#62;<br/></code></pre>
+          <pre><code class="javascript">function&nbsp;menuToogle()&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;action&nbsp;=&nbsp;document.querySelector('.action');<br/> &nbsp;&nbsp;&nbsp;&nbsp;action.classList.toggle('active');<br/> }<br/></code></pre>
+
           <p class="mt-4">
-            Chúng ta sử dụng class <code>c4-izmir</code> để khởi tạo hiệu ứng hover cơ bản của thư viện. Hiệu ứng này sẽ  hiển thị nội dung trong ô <code>figcaption</code>
-            khi người dùng hover vào ảnh. Tiếp theo chúng ta sẽ sử dụng các thuộc tính CSS cơ bản để thiết lập vị trí cũng như font chữ cho nó thông qua đoạn mã sau nhé:
+            Mình có một lưu ý một chút là đoạn mã trên sẽ chọn thẻ div có class là <code>.action</code>. Mỗi khi người dùng nhấn vào icon menu(class .action), nếu nó chưa có class <code>active</code>
+            thì được  sẽ tự động thêm và ngược lại. 
+          </p>
+          <p>
+            Tiếp Theo chúng ta sẽ sử dụng các thuộc tính CSS để hiển thị nội dung khi người dùng nhấn vào menu 
+            thông qua đoạn mã bên dưới nhé:
           </p>
           <h4 class="text-primary">
             CSS
           </h4>
-          <pre><code class="css">body{<br/> &nbsp;&nbsp;font-family:&nbsp;'Open&nbsp;Sans',&nbsp;sans-serif;<br/> }<br/> h2{<br/> &nbsp;&nbsp;text-align:center;<br/> &nbsp;&nbsp;text-shadow:&nbsp;0px&nbsp;10px&nbsp;10px&nbsp;#234D3C;<br/> }<br/>.container{<br/> &nbsp;&nbsp;display:flex;<br/> &nbsp;&nbsp;justify-content:center;<br/> &nbsp;&nbsp;align-items:center;<br/> }<br/> figure{<br/> &nbsp;&nbsp;box-shadow:&nbsp;0&nbsp;1px&nbsp;1px&nbsp;rgba(0,0,0,0.12),<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;2px&nbsp;2px&nbsp;rgba(0,0,0,0.12),<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;4px&nbsp;4px&nbsp;rgba(0,0,0,0.12),<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;8px&nbsp;8px&nbsp;rgba(0,0,0,0.12),<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;16px&nbsp;16px&nbsp;rgba(0,0,0,0.12);<br/> }<br/></code></pre>
+          <pre><code class="css">/*Thiết&nbsp;lập&nbsp;style&nbsp;cho&nbsp;icon&nbsp;menu&nbsp;(+)*/<br/> .action&nbsp;span{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;flex;<br/> &nbsp;&nbsp;&nbsp;&nbsp;justify-content:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;align-items:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#302b63;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;2em;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;0.2s&nbsp;ease-in-out;<br/> }<br/>/*Chuyển&nbsp;icon&nbsp;menu&nbsp;từ&nbsp;"+"&nbsp;sang&nbsp;"x"&nbsp;*/<br/> .action.active&nbsp;span{<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;rotate(-135deg);<br/> }<br/> /*Thiết&nbsp;lập&nbsp;style&nbsp;cho&nbsp;ul*/<br/> .action&nbsp;ul{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;55px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;min-width:&nbsp;250px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;20px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;20px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;visibility:&nbsp;hidden;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;0.4s;<br/> }<br/> /*Thiết&nbsp;lập&nbsp;style&nbsp;cho&nbsp;ul&nbsp;khi&nbsp;được&nbsp;active*/<br/> .action.active&nbsp;ul{<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;75px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;1;<br/> &nbsp;&nbsp;&nbsp;&nbsp;visibility:&nbsp;visible;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;0.4s;<br/> &nbsp;&nbsp;&nbsp;&nbsp;box-shadow:&nbsp;3px&nbsp;4px&nbsp;5px&nbsp;0px&nbsp;rgba(180,&nbsp;180,&nbsp;180,&nbsp;0.4);<br/> }<br/></code></pre>
           <p class="mt-4">
-            Và kết quả cuối cùng bạn xem Code ở dưới nhé:
+            Và kết quả bạn xem video bên dưới nhé:
           </p>
-          <p class="codepen" data-height="427" data-theme-id="light" data-default-tab="result" data-user="haycuoilennao19" data-slug-hash="abZzWbQ" style="height: 427px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Hiệu Ứng Hover Cơ Bản Bằng Thư Viện Izmir">
-            <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/abZzWbQ">
-            Hiệu Ứng Hover Cơ Bản Bằng Thư Viện Izmir</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1602490725/action_button_material_HTML_CSS/Action_Button_Theo_Thi%E1%BA%BFt_K%E1%BA%BF_Material_clbc9q.mp4" allowfullscreen></iframe>
+          </div>
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Thiết Kế Lại Nội Dung Trong Action Button </h3>
+          </div>
+          <p>
+            Phần cuối cùng chúng ta sẽ đi vào thiết kế lại nội dung trong action button như là tạo hiệu ứng hover cho từng thẻ <code>li</code>, 
+            tạo đường <code>hr</code> ngăn cách nội dung giữa các phần... Để hiểu rõ hơn bạn xem đoạn mã CSS dưới đây nhé:
+          </p>
+          <h4 class="text-primary">
+            CSS
+          </h4>
+          <pre><code class="css">/*Thiết&nbsp;kế&nbsp;lại&nbsp;style&nbsp;cho&nbsp;thẻ&nbsp;li*/<br/> .action&nbsp;ul&nbsp;li{<br/> &nbsp;&nbsp;&nbsp;&nbsp;list-style:&nbsp;none;<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;flex;<br/> &nbsp;&nbsp;&nbsp;&nbsp;justify-content:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;align-items:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;10px&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;0.2s;<br/> }<br/>/*Tạo&nbsp;ngăn&nbsp;cách&nbsp;giữa&nbsp;các&nbsp;phần(trừ&nbsp;thẻ&nbsp;li&nbsp;cuối&nbsp;cùng)*/<br/> .action&nbsp;ul&nbsp;li:not(:last-child)&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-bottom:&nbsp;1px&nbsp;solid&nbsp;rgba(0,0,0,0.1);<br/> }<br/> /*Thiết&nbsp;lập&nbsp;style&nbsp;cho&nbsp;icon*/<br/> .action&nbsp;ul&nbsp;li&nbsp;i{<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;20px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin-right:&nbsp;10px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;0.4;<br/> }<br/>/*Tạo&nbsp;hiệu&nbsp;ứng&nbsp;hover&nbsp;cho&nbsp;thẻ&nbsp;li*/<br/> .action&nbsp;ul&nbsp;li:hover{<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-weight:&nbsp;500;<br/> }<br/> .action&nbsp;ul&nbsp;li:hover&nbsp;i{<br/> &nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;0.8;<br/> }<br/> ul&nbsp;li:nth-child(1):hover&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#4267B2;<br/>}<br/> ul&nbsp;li:nth-child(2):hover&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#55acee;<br/> }<br/> ul&nbsp;li:nth-child(3):hover&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#cd201f;<br/> }<br/> ul&nbsp;li:nth-child(4):hover&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#0077B5;<br/> }<br/> ul&nbsp;li:nth-child(5):hover&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#bd081c;<br/> }<br/></code></pre>
+          <p class="mt-4">
+            Và kết quả cuối cùng bạn xem Codepen bên dưới nhé:
+          </p>
+          <p class="codepen" data-height="457" data-theme-id="light" data-default-tab="css,result" data-user="haycuoilennao19" data-slug-hash="xxOGaap" style="height: 457px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Action Button Theo Thiết Kế Material">
+            <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/xxOGaap">
+            Action Button Theo Thiết Kế Material</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
             on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
           <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-
           <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article"
-            href="https://codepen.io/haycuoilennao19/pen/abZzWbQ" target="_blank" rel="noopener noreferrer">Nguồn</a>
+            href="https://codepen.io/haycuoilennao19/pen/xxOGaap" target="_blank" rel="noopener noreferrer">Nguồn</a>
         </p>
-        <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-          <h3 class="text-primary ml-4 title-article-size">Tạo Hiệu Ứng Hover Với Border Bằng Thư Viện Izmir</h3>
-        </div>
-        <p>
-          Trong phần này chúng ta sẽ đi vào tạo hiệu ứng hover chuyển động cho border bằng thư viện này nha. 
-          Mình có một lưu ý là tất cả đoạn mã phía trên đều giống nhau nên mình sẽ không viết lại. Nó chỉ có một điểm khác biệt là 
-          chúng ta sẽ thêm class <code>c4-border-cc-1</code> vào trong thẻ <code>figure</code> như ở bên dưới đây:
-          <br>
-          <code>&#60;figure class="c4-izmir c4-border-cc-1"&#62;</code>. 
-      
-        </p>
-      
-        <p>
-          Để hiểu rõ hơn bạn cùng xem kết quả cũng như đoạn HTML, CSS trên Codepen nhé:
-        </p>
-        <p class="codepen" data-height="432" data-theme-id="light" data-default-tab="result" data-user="haycuoilennao19" data-slug-hash="yLJybKx" style="height: 432px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Hiệu Ứng Hover Animation Border Bằng Thư Viện Izmir">
-          <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/yLJybKx">
-          Hiệu Ứng Hover Animation Border Bằng Thư Viện Izmir</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-          on <a href="https://codepen.io">CodePen</a>.</span>
-        </p>
-
-        <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article"
-          href="https://codepen.io/haycuoilennao19/pen/yLJybKx" target="_blank" rel="noopener noreferrer">Nguồn</a>
-      </p>
-      <p>
-        Nếu bạn muốn xem nhiều hiệu ứng chuyển động border khác của thư viện thì có thể truy cập 
-        <a href="https://ciar4n.com/izmir/2B-border-animation.html" target="_blank" rel="noopener noreferrer">ở đây nhé!</a>
-      </p>
-
-      <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-        <h3 class="text-primary ml-4 title-article-size">Tạo Hiệu Ứng Hover Với Image Animation Bằng Thư Viện Izmir</h3>
-      </div>
-      <p>
-        Cũng giống như ở trên để tạo hiệu ứng với hình ảnh thì bạn chỉ cần lựa chọn tên class hiệu ứng hover image animation trong thư viện và gán như sau:
-
-      </p>
-      <p><code>&#60;figure class="c4-izmir c4-image-rotate-right"&#62;</code></p>
-      <p class="mt-4">
-        Để dễ hình dung bạn xem kết quả hiệu ứng image animation với class <code>c4-image-rotate-right</code> ở Codepen bên dưới nhé:
-      </p>
-      <p class="codepen" data-height="430" data-theme-id="light" data-default-tab="result" data-user="haycuoilennao19" data-slug-hash="MWeYmZZ" style="height: 430px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Hiệu Ứng Hover Animation Image Bằng Thư Viện Izmir">
-        <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/MWeYmZZ">
-        Hiệu Ứng Hover Animation Image Bằng Thư Viện Izmir</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-        on <a href="https://codepen.io">CodePen</a>.</span>
-      </p>
-      <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article"
-        href="https://codepen.io/haycuoilennao19/pen/MWeYmZZ" target="_blank" rel="noopener noreferrer">Nguồn</a>
-    </p>
-    <p>
-      Nếu bạn muốn xem nhiều hiệu ứng chuyển động image khác của thư viện thì có thể truy cập 
-      <a href="https://ciar4n.com/izmir/2C-image-animation.html" target="_blank" rel="noopener noreferrer">ở đây nhé!</a>
-    </p>
-
-    <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-      <h3 class="text-primary ml-4 title-article-size">Tạo Hiệu Ứng Hover Với Caption Layout Bằng Thư Viện Izmir</h3>
-    </div>
-    <p>
-      Với các ví dụ trên khi bạn hover vào hình ảnh thì đoạn caption sẽ hiển thị chính giữa của hình ảnh. 
-      Để thiết lập vị trí caption trong thư viện này thì bạn có thể sử dụng class <code>c4-layout-center-right</code>
-      (nằm ở chính giữa bên phải), <code>c4-layout-bottom-left</code> (nằm ở dưới cùng bên trái)...
-      Và cách thiết lập của nó sẽ như sau: 
-    </p>
-    <p><code>&#60;figcaption class="c4-layout-bottom-left"&#62;</code></p>
-    <p>
-      Để hiểu rõ hơn bạn xem ví dụ sau đây nhé:
-    </p>
-    <p class="codepen" data-height="363" data-theme-id="light" data-default-tab="result" data-user="haycuoilennao19" data-slug-hash="qBNEmwO" style="height: 363px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Hiệu Ứng Hover Caption Layout Bằng Thư Viện Izmir">
-      <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/qBNEmwO">
-      Hiệu Ứng Hover Caption Layout Bằng Thư Viện Izmir</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-      on <a href="https://codepen.io">CodePen</a>.</span>
-    </p>
-
-    <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article"
-      href="https://codepen.io/haycuoilennao19/pen/qBNEmwO" target="_blank" rel="noopener noreferrer">Nguồn</a>
-  </p>
-  <p>
-    Nếu bạn muốn xem nhiều hiệu ứng chuyển động image khác của thư viện thì có thể truy cập 
-    <a href="https://ciar4n.com/izmir/2G-caption-layout.html" target="_blank" rel="noopener noreferrer">ở đây nhé!</a>
-  </p>
-
-  <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-    <h3 class="text-primary ml-4 title-article-size">Cách Tỉnh Chỉnh Hiệu Ứng Hover Với Thư Viện Izmir</h3>
-  </div>
-  <p>
-    Đôi khi trong dự án thực tế thì bạn sẽ cần thay đổi một số thuộc tính như là  màu sắc, color , background hover... 
-    Vậy để tinh chỉnh như mong muốn thì bạn có thể dùng CSS để thiết lập lại thuộc tính cho class <code>.c4-izmir</code> như đoạn mã sau đây nhé:
-  </p>
-  <h4 class="text-primary">
-    CSS
-  </h4>
-  <pre><code class="css">.c4-izmir&nbsp;{<br/> &nbsp;&nbsp;--primary-color:&nbsp;#F6CD14;<br/> &nbsp;&nbsp;--secondary-color:&nbsp;#D0206E;<br/> &nbsp;&nbsp;--transition-duration:&nbsp;500ms;<br/> &nbsp;&nbsp;--border-width:&nbsp;6px;<br/> &nbsp;&nbsp;--overlay-opacity:&nbsp;.5;<br/> }<br/></code></pre>
-  <p class="mt-4">
-    Và kết quả bạn xem bên dưới nhé:
-  </p>
-  <p class="codepen" data-height="460" data-theme-id="light" data-default-tab="result" data-user="haycuoilennao19" data-slug-hash="oNLgWrL" style="height: 460px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Tinh Chỉnh Hiệu Ứng Hover  Thư Viện Izmir">
-    <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/oNLgWrL">
-    Tinh Chỉnh Hiệu Ứng Hover  Thư Viện Izmir</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-    on <a href="https://codepen.io">CodePen</a>.</span>
-  </p>
-
-  <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article"
-    href="https://codepen.io/haycuoilennao19/pen/oNLgWrL" target="_blank" rel="noopener noreferrer">Nguồn</a>
-</p>
-
-<p>
-  Nếu bạn muốn xem nhiều hiệu ứng hover khác của thư viện thì có thể truy cập 
-  <a href="https://ciar4n.com/izmir/" target="_blank" rel="noopener noreferrer">ở đây nhé!</a>
-</p>
+       
 
           <h4 class="mt-4 pt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
-          <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những kiến thức để tạo hover blur link
+          <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những kiến thức để tạo action button theo phong cách material
             hữu ích
             dành cho việc phát triển, thiết kế web và nếu có thắc mắc gì cứ gửi email mình sẽ
             phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa
