@@ -35,23 +35,26 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i> Cách Tạo Action Button Theo Thiết Kế Material</h2>
+                  aria-hidden="true"></i> Cách Tạo Hiệu Ứng Hover Cho Danh Sách Phần 2</h2>
             </div>
           </div>
 
 
           <div class="text-content-article mt-5">
-            <p><i>Ngày hôm nay chúng ta sẽ đi vào tìm hiểu cách tạo action button theo phong cách thiết kế của material
+            <p><i>Ngày hôm nay chúng ta sẽ đi vào tìm hiểu cách tạo hiệu ứng hover cho danh sách(phần 2)
                 bằng HTML, CSS và Javascript nhé!
               </i>
             </p>
           </div>
-
+          <p>
+            Nếu bạn muốn tham khảo phần 1 thì có thể truy cập đường dẫn bên dưới nha!<br/>
+            <a href="https://www.niemvuilaptrinh.com/article/Cach-Tao-Hieu-Ung-Hover-Cho-Danh-Sach" title="Cách Tạo Hiệu Ứng Hover Cho Danh Sách">Cách Tạo Hiệu Ứng Hover Cho Danh Sách</a>
+          </p>
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Tạo Cấu Trúc Phần Tử HTML Cho Action Button </h3>
+            <h3 class="text-primary ml-4 title-article-size">Tạo Cấu Trúc Phần Tử HTML Hiệu Ứng Hover </h3>
           </div>
           <p> Phần đầu tiên chúng ta sẽ đi vào tạo hai file là <code>index.html</code>(nơi lưu trữ HTML) và
-            <code>style.css</code>(nơi lưu trữ mã CSS). Sau đó liên kết chúng với Google Font và Font Awesome v4.7 thông
+            <code>style.css</code>(nơi lưu trữ mã CSS). Sau đó liên kết chúng với Google Font thông
             qua đoạn mã dưới đây nhé:
           </p>
 
@@ -61,99 +64,101 @@
           <h4 class="text-primary">
             HTML
           </h4>
-          <pre><code class="html"> &#60;!DOCTYPE&nbsp;html&#62;<br/> &#60;html&nbsp;lang="en"&#62;<br/> &#60;head&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;charset="UTF-8"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;name="viewport"&nbsp;content="width=device-width,&nbsp;initial-scale=1.0"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;title&#62;Tạo&nbsp;animation&nbsp;button&nbsp;search&#60;/title&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"&nbsp;integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"&nbsp;crossorigin="anonymous"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"&nbsp;rel="stylesheet"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="style.css"&#62;<br/> &#60;/head&#62;<br/> &#60;body&#62;<br/> &#60;/body&#62;<br/> &#60;/html&#62;<br/></code></pre>
+          <pre><code class="html"> &#60;!DOCTYPE&nbsp;html&#62;<br/> &#60;html&nbsp;lang="en"&#62;<br/> &#60;head&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;charset="UTF-8"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;name="viewport"&nbsp;content="width=device-width,&nbsp;initial-scale=1.0"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;title&#62;Tạo Hiệu Ứng Hover Cho Danh Sách Phần 2&#60;/title&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"&nbsp;rel="stylesheet"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="style.css"&#62;<br/> &#60;/head&#62;<br/> &#60;body&#62;<br/> &#60;/body&#62;<br/> &#60;/html&#62;<br/></code></pre>
 
 
       
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Thêm Các Phần Tử HTML và CSS Cho Button</h3>
+            <h3 class="text-primary ml-4 title-article-size">Thêm Các Phần Tử HTML và CSS Cho Hiệu Ứng</h3>
           </div>
           <p>
-            Phần tiếp theo chúng ta sẽ thêm các thẻ HTML cần thiết để tạo action button  thông qua đoạn mã dưới đây nhé:
+           Trong phần này chúng ta sẽ thêm các phần tử HTML cần thiết để tạo hiệu ứng này cho trang web thông qua đoạn mã bên dưới nhé:
           </p>
           <h4 class="text-primary">
             HTML
           </h4>
-          <pre><code class="html">&#60;div&nbsp;class="action"&nbsp;onclick="menuToogle()"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;span&#62;+&#60;/span&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;ul&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;i&nbsp;class="fa&nbsp;fa-facebook"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&nbsp;Chia&nbsp;Sẻ&nbsp;Trên&nbsp;FaceBook&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;i&nbsp;class="fa&nbsp;fa-twitter"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&nbsp;Chia&nbsp;Sẻ&nbsp;Trên&nbsp;Twitter&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;i&nbsp;class="fa&nbsp;fa-youtube-play"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&nbsp;Chia&nbsp;Sẻ&nbsp;Trên&nbsp;Youtube&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;i&nbsp;class="fa&nbsp;fa-linkedin"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&nbsp;Chia&nbsp;Sẻ&nbsp;Trên&nbsp;Linkedin&nbsp;&nbsp;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;i&nbsp;class="fa&nbsp;fa-pinterest"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&nbsp;Chia&nbsp;Sẻ&nbsp;Trên&nbsp;Pinterest&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/ul&#62;<br/> &#60;/div&#62;<br/></code></pre>
+          <pre><code class="html">&#60;div&nbsp;class="danh_sach"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;h1&#62;Hiệu&nbsp;Ứng&nbsp;Hover&nbsp;Cho&nbsp;Danh&nbsp;Sách&nbsp;Phần&nbsp;2&#60;/h1&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;ul&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;span&#62;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur&nbsp;adipisicing&nbsp;elit.&#60;/span&#62;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;span&#62;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur&nbsp;adipisicing&nbsp;elit.&#60;/span&#62;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;span&#62;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur&nbsp;adipisicing&nbsp;elit.&#60;/span&#62;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;span&#62;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur&nbsp;adipisicing&nbsp;elit.&#60;/span&#62;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;span&#62;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur&nbsp;adipisicing&nbsp;elit.&#60;/span&#62;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;span&#62;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur&nbsp;adipisicing&nbsp;elit.&#60;/span&#62;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/ul&#62;<br/> &#60;/div&#62;<br/></code></pre>
           <p class="mt-4">
-            Đoạn mã  <code>onclick="menuToogle()</code> dùng để khởi động hàm khi người dùng nhấn vào action button (Cái này mình sẽ nói rõ hơn trong phần Javascript nhé).
+            Bước tiếp theo chúng ta sẽ đi vào thiết lập vị trí, font chữ, màu sắc... cho nội dung của hiệu ứng này thông qua đoạn mã CSS bên dưới nha:
           </p>
-          
+          <h4 class="text-primary">
+            CSS
+          </h4>
+          <pre><code class="css">*{<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;box-sizing:&nbsp;border-box;<br/> }<br/>body{<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;flex;<br/> &nbsp;&nbsp;&nbsp;&nbsp;justify-content:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;align-items:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;min-height:&nbsp;100vh;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;#1b2a49;<br/> }<br/>.danh_sach{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;<br/> }<br/></code></pre>
+          <p class="mt-4">
+            Và kết quả bạn xem hình ảnh ở bên dưới nhé:
+          </p>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1602684012/hieu_ung_hover_danh_sach_2/hieu_ung_hover_danh_sach_phan_2_kn0ull.png"
+          alt="Hiệu Ứng Hover Danh Sách 1"
+        >
            
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Thiết Lập Style Cho Action Button</h3>
+            <h3 class="text-primary ml-4 title-article-size">Thiết Lập Style Cho Danh Sách</h3>
           </div>
           <p>
-            Trong phần này chúng ta sẽ đi vào thiết kế style cho action button như là font chữ, vị trí, kích thước hiển thị... bằng đoạn CSS dưới đây nhé:
+           Trong Phần này chúng ta sẽ đi vào thiết lập style cho nội dung trong danh sách như thẻ <code>ul</code>, <code>li</code>, <code>span</code>... bằng đoạn mã CSS bên dưới nhé:
           </p>
           
           <h4 class="text-primary">
             CSS
           </h4>
-          <pre><code class="css">*{<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;box-sizing:&nbsp;border-box;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-family:&nbsp;'Roboto',&nbsp;sans-serif;<br/> }<br/>body{<br/> &nbsp;&nbsp;&nbsp;&nbsp;min-height:&nbsp;100vh;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;linear-gradient(to&nbsp;right,&nbsp;#24243e,&nbsp;#302b63,&nbsp;#0f0c29);&nbsp;<br/> }<br/>.action{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;fixed;<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;50px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;left:&nbsp;50px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;50px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;50px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;50%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;box-shadow:&nbsp;0&nbsp;5px&nbsp;5px&nbsp;rgba(0,0,0,0.1);<br/> &nbsp;&nbsp;&nbsp;&nbsp;cursor:&nbsp;pointer;<br/> }<br/></code></pre>
+          <pre><code class="css">.danh_sach&nbsp;h1{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-weight:&nbsp;500;<br/> &nbsp;&nbsp;&nbsp;&nbsp;letter-spacing:&nbsp;1px;<br/> }<br/>.danh_sach&nbsp;ul{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;<br/> }<br/>.danh_sach&nbsp;ul&nbsp;li{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;<br/> &nbsp;&nbsp;&nbsp;&nbsp;left:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#999;<br/> &nbsp;&nbsp;&nbsp;&nbsp;list-style:&nbsp;none;<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;4px&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-left:&nbsp;2px&nbsp;solid&nbsp;#bada55;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;0.5s;<br/> &nbsp;&nbsp;&nbsp;&nbsp;cursor:&nbsp;pointer;<br/> }<br/>.danh_sach&nbsp;ul&nbsp;li&nbsp;span{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;8px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;inline-block;<br/> &nbsp;&nbsp;&nbsp;&nbsp;z-index:&nbsp;1;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;0.5s;<br/> }<br/> .danh_sach&nbsp;ul&nbsp;li::before{<br/> &nbsp;&nbsp;&nbsp;&nbsp;content:&nbsp;'';<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;#bada55;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;scaleX(0);<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform-origin:&nbsp;left;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;0.5s;<br/> }<br/></code></pre>
           <p class="mt-4">
             Kết quả của đoạn mã trên bạn xem ở bên dưới nha:
           </p>
           <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1602489786/action_button_material_HTML_CSS/Action_Button_Material_1_eyg97g.png"
-            alt="Action Button  Material  1"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1602684371/hieu_ung_hover_danh_sach_2/hieu_ung_hover_danh_sach_phan_2_2_cc8zod.png"
+            alt="Hiệu Ứng Hover Danh Sách 2"
           >
+
+    
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size"> Hiển Thị Nội Dung Action Button Bằng Javascript </h3>
+            <h3 class="text-primary ml-4 title-article-size">Tạo Hiệu Ứng Hover Cho Danh Sách</h3>
           </div>
           <p>
-            Trong phần này chúng ta sẽ sử dụng Javascript cùng với CSS để hiển thị nội dung khi người dùng click vào icon menu thông qua đoạn mã sau nhé:
+            Phần cuối cùng chúng ta sẽ sử dụng thuộc tính <code>transform: scaleX(0);</code> trong <code>li::before</code> của đoạn mã trên để làm hiệu ứng hover cho danh sách.
+            Để hiểu rõ hơn bạn xem đoạn mã sau nhé:
           </p>
           <h4 class="text-primary">
-            Javascript
+            CSS
           </h4>
-          <pre><code class="javascript">function&nbsp;menuToogle()&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;action&nbsp;=&nbsp;document.querySelector('.action');<br/> &nbsp;&nbsp;&nbsp;&nbsp;action.classList.toggle('active');<br/> }<br/></code></pre>
+          <pre><code class="css">.danh_sach&nbsp;ul&nbsp;li:hover::before{<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;scaleX(1);<br/> }<br/> .danh_sach&nbsp;ul&nbsp;li:hover{<br/> &nbsp;&nbsp;&nbsp;&nbsp;left:10px;<br/> }<br/>.danh_sach&nbsp;ul&nbsp;li:hover&nbsp;span{<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#fff;<br/> }<br/></code></pre>
+         
+
+         
+          <p class="mt-4">
+            Và kết quả cuối cùng của hiệu này bạn xem video bên dưới nhé:
+          </p>
+
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1602684853/hieu_ung_hover_danh_sach_2/tao-hieu-ung-hover-cho-danh-sach-phan-2_tJNdggpq_v7gq2r.mp4" allowfullscreen></iframe>
+          </div>
 
           <p class="mt-4">
-            Mình có một lưu ý một chút là đoạn mã trên sẽ chọn thẻ div có class là <code>.action</code>. Mỗi khi người dùng nhấn vào icon menu(class .action), nếu nó chưa có class <code>active</code>
-            thì được  sẽ tự động thêm và ngược lại. 
+            Và đây là dự án trên Codepen nhé: (Bạn phải chuyển sang chế độ screen 0.5x, 0.25x thì mới thấy rõ được hiệu ứng):
           </p>
-          <p>
-            Tiếp Theo chúng ta sẽ sử dụng các thuộc tính CSS để hiển thị nội dung khi người dùng nhấn vào menu 
-            thông qua đoạn mã bên dưới nhé:
-          </p>
-          <h4 class="text-primary">
-            CSS
-          </h4>
-          <pre><code class="css">/*Thiết&nbsp;lập&nbsp;style&nbsp;cho&nbsp;icon&nbsp;menu&nbsp;(+)*/<br/> .action&nbsp;span{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;flex;<br/> &nbsp;&nbsp;&nbsp;&nbsp;justify-content:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;align-items:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#302b63;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;2em;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;0.2s&nbsp;ease-in-out;<br/> }<br/>/*Chuyển&nbsp;icon&nbsp;menu&nbsp;từ&nbsp;"+"&nbsp;sang&nbsp;"x"&nbsp;*/<br/> .action.active&nbsp;span{<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;rotate(-135deg);<br/> }<br/> /*Thiết&nbsp;lập&nbsp;style&nbsp;cho&nbsp;ul*/<br/> .action&nbsp;ul{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;55px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;min-width:&nbsp;250px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;20px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;20px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;visibility:&nbsp;hidden;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;0.4s;<br/> }<br/> /*Thiết&nbsp;lập&nbsp;style&nbsp;cho&nbsp;ul&nbsp;khi&nbsp;được&nbsp;active*/<br/> .action.active&nbsp;ul{<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;75px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;1;<br/> &nbsp;&nbsp;&nbsp;&nbsp;visibility:&nbsp;visible;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;0.4s;<br/> &nbsp;&nbsp;&nbsp;&nbsp;box-shadow:&nbsp;3px&nbsp;4px&nbsp;5px&nbsp;0px&nbsp;rgba(180,&nbsp;180,&nbsp;180,&nbsp;0.4);<br/> }<br/></code></pre>
-          <p class="mt-4">
-            Và kết quả bạn xem video bên dưới nhé:
-          </p>
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1602490725/action_button_material_HTML_CSS/Action_Button_Theo_Thi%E1%BA%BFt_K%E1%BA%BF_Material_clbc9q.mp4" allowfullscreen></iframe>
-          </div>
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Thiết Kế Lại Nội Dung Trong Action Button </h3>
-          </div>
-          <p>
-            Phần cuối cùng chúng ta sẽ đi vào thiết kế lại nội dung trong action button như là tạo hiệu ứng hover cho từng thẻ <code>li</code>, 
-            tạo đường <code>hr</code> ngăn cách nội dung giữa các phần... Để hiểu rõ hơn bạn xem đoạn mã CSS dưới đây nhé:
-          </p>
-          <h4 class="text-primary">
-            CSS
-          </h4>
-          <pre><code class="css">/*Thiết&nbsp;kế&nbsp;lại&nbsp;style&nbsp;cho&nbsp;thẻ&nbsp;li*/<br/> .action&nbsp;ul&nbsp;li{<br/> &nbsp;&nbsp;&nbsp;&nbsp;list-style:&nbsp;none;<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;flex;<br/> &nbsp;&nbsp;&nbsp;&nbsp;justify-content:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;align-items:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;10px&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;0.2s;<br/> }<br/>/*Tạo&nbsp;ngăn&nbsp;cách&nbsp;giữa&nbsp;các&nbsp;phần(trừ&nbsp;thẻ&nbsp;li&nbsp;cuối&nbsp;cùng)*/<br/> .action&nbsp;ul&nbsp;li:not(:last-child)&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-bottom:&nbsp;1px&nbsp;solid&nbsp;rgba(0,0,0,0.1);<br/> }<br/> /*Thiết&nbsp;lập&nbsp;style&nbsp;cho&nbsp;icon*/<br/> .action&nbsp;ul&nbsp;li&nbsp;i{<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;20px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin-right:&nbsp;10px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;0.4;<br/> }<br/>/*Tạo&nbsp;hiệu&nbsp;ứng&nbsp;hover&nbsp;cho&nbsp;thẻ&nbsp;li*/<br/> .action&nbsp;ul&nbsp;li:hover{<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-weight:&nbsp;500;<br/> }<br/> .action&nbsp;ul&nbsp;li:hover&nbsp;i{<br/> &nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;0.8;<br/> }<br/> ul&nbsp;li:nth-child(1):hover&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#4267B2;<br/>}<br/> ul&nbsp;li:nth-child(2):hover&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#55acee;<br/> }<br/> ul&nbsp;li:nth-child(3):hover&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#cd201f;<br/> }<br/> ul&nbsp;li:nth-child(4):hover&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#0077B5;<br/> }<br/> ul&nbsp;li:nth-child(5):hover&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#bd081c;<br/> }<br/></code></pre>
-          <p class="mt-4">
-            Và kết quả cuối cùng bạn xem Codepen bên dưới nhé:
-          </p>
-          <p class="codepen" data-height="457" data-theme-id="light" data-default-tab="css,result" data-user="haycuoilennao19" data-slug-hash="xxOGaap" style="height: 457px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Action Button Theo Thiết Kế Material">
-            <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/xxOGaap">
-            Action Button Theo Thiết Kế Material</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="haycuoilennao19" data-slug-hash="wvWMaqa" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Tạo Hiệu Ứng Hover Cho Danh Sách Phần 2">
+            <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/wvWMaqa">
+            Tạo Hiệu Ứng Hover Cho Danh Sách Phần 2</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
             on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
           <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+
+
+
+
+
+
+
           <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article"
-            href="https://codepen.io/haycuoilennao19/pen/xxOGaap" target="_blank" rel="noopener noreferrer">Nguồn</a>
+            href="https://codepen.io/haycuoilennao19/pen/wvWMaqa" target="_blank" rel="noopener noreferrer">Nguồn</a>
         </p>
        
 
           <h4 class="mt-4 pt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
-          <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những kiến thức để tạo action button theo phong cách material
+          <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những kiến thức để tạo hiệu ứng hover cho danh sách
             hữu ích
             dành cho việc phát triển, thiết kế web và nếu có thắc mắc gì cứ gửi email mình sẽ
             phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa

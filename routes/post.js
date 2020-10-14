@@ -217,7 +217,8 @@ router.post('/addpost', upload.single('file'), function (req, res) {
     var subtitle = req.body.subtitle;
     var categoryID = req.body.category;
     var time = new Date();
-    var slugTitle = slug(title);
+    var slugTitle = (slug(title)).toLowerCase();
+    console.log(slugTitle)
     var date = `Ngày ${time.getDate().toString()} Tháng ${(time.getMonth() + 1).toString()}  Năm ${time.getFullYear().toString()}`
     var category;
    
