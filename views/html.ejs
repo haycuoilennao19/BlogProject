@@ -35,23 +35,20 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i> Cách Tạo Hiệu Ứng Hover Cho Danh Sách Phần 2</h2>
+                  aria-hidden="true"></i> Cách Tạo Vertical Timeline  Bằng HTML CSS</h2>
             </div>
           </div>
 
 
           <div class="text-content-article mt-5">
-            <p><i>Ngày hôm nay chúng ta sẽ đi vào tìm hiểu cách tạo hiệu ứng hover cho danh sách(phần 2)
-                bằng HTML, CSS và Javascript nhé!
+            <p><i>Ngày hôm nay chúng ta sẽ đi vào tìm hiểu cách tạo  vertical timeline(dòng thời gian dọc)
+                bằng HTML, CSS nhé!
               </i>
             </p>
           </div>
-          <p>
-            Nếu bạn muốn tham khảo phần 1 thì có thể truy cập đường dẫn bên dưới nha!<br/>
-            <a href="https://www.niemvuilaptrinh.com/article/Cach-Tao-Hieu-Ung-Hover-Cho-Danh-Sach" title="Cách Tạo Hiệu Ứng Hover Cho Danh Sách">Cách Tạo Hiệu Ứng Hover Cho Danh Sách</a>
-          </p>
+        
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Tạo Cấu Trúc Phần Tử HTML Hiệu Ứng Hover </h3>
+            <h3 class="text-primary ml-4 title-article-size">Tạo Cấu Trúc Phần Tử HTML Cho Vertical Timeline</h3>
           </div>
           <p> Phần đầu tiên chúng ta sẽ đi vào tạo hai file là <code>index.html</code>(nơi lưu trữ HTML) và
             <code>style.css</code>(nơi lưu trữ mã CSS). Sau đó liên kết chúng với Google Font thông
@@ -64,83 +61,102 @@
           <h4 class="text-primary">
             HTML
           </h4>
-          <pre><code class="html"> &#60;!DOCTYPE&nbsp;html&#62;<br/> &#60;html&nbsp;lang="en"&#62;<br/> &#60;head&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;charset="UTF-8"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;name="viewport"&nbsp;content="width=device-width,&nbsp;initial-scale=1.0"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;title&#62;Tạo Hiệu Ứng Hover Cho Danh Sách Phần 2&#60;/title&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"&nbsp;rel="stylesheet"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="style.css"&#62;<br/> &#60;/head&#62;<br/> &#60;body&#62;<br/> &#60;/body&#62;<br/> &#60;/html&#62;<br/></code></pre>
+          <pre><code class="html"> &#60;!DOCTYPE&nbsp;html&#62;<br/> &#60;html&nbsp;lang="en"&#62;<br/> &#60;head&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;charset="UTF-8"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;name="viewport"&nbsp;content="width=device-width,&nbsp;initial-scale=1.0"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;title&#62;Tạo Vertical Timeline&#60;/title&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"&nbsp;rel="stylesheet"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="style.css"&#62;<br/> &#60;/head&#62;<br/> &#60;body&#62;<br/> &#60;/body&#62;<br/> &#60;/html&#62;<br/></code></pre>
 
 
-      
+
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Thêm Các Phần Tử HTML và CSS Cho Hiệu Ứng</h3>
+            <h3 class="text-primary ml-4 title-article-size">Thêm Các Phần Tử HTML và CSS Cho Timeline</h3>
           </div>
           <p>
-           Trong phần này chúng ta sẽ thêm các phần tử HTML cần thiết để tạo hiệu ứng này cho trang web thông qua đoạn mã bên dưới nhé:
+          Bây giờ chúng ta sẽ đi vào thêm các phần tử HTML cần thiết cho timeline thông qua đoạn mã sau nhé:
           </p>
           <h4 class="text-primary">
             HTML
           </h4>
-          <pre><code class="html">&#60;div&nbsp;class="danh_sach"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;h1&#62;Hiệu&nbsp;Ứng&nbsp;Hover&nbsp;Cho&nbsp;Danh&nbsp;Sách&nbsp;Phần&nbsp;2&#60;/h1&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;ul&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;span&#62;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur&nbsp;adipisicing&nbsp;elit.&#60;/span&#62;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;span&#62;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur&nbsp;adipisicing&nbsp;elit.&#60;/span&#62;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;span&#62;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur&nbsp;adipisicing&nbsp;elit.&#60;/span&#62;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;span&#62;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur&nbsp;adipisicing&nbsp;elit.&#60;/span&#62;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;span&#62;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur&nbsp;adipisicing&nbsp;elit.&#60;/span&#62;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;span&#62;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur&nbsp;adipisicing&nbsp;elit.&#60;/span&#62;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/ul&#62;<br/> &#60;/div&#62;<br/></code></pre>
+          <pre><code class="html">&#60;div&nbsp;class="timeline"&#62;<br/> &nbsp;&nbsp;&nbsp;&#60;ul&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;!--Nội&nbsp;dung&nbsp;cho&nbsp;timeline&nbsp;thứ&nbsp;1--&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="noi_dung"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h3&#62;Thông&nbsp;Tin&nbsp;Timeline&nbsp;1&#60;/h3&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p&#62;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur&nbsp;dipisicing&nbsp;elit.&nbsp;Animi,&nbsp;illo&nbsp;ipsum&nbsp;accusamus&nbsp;mollitiaet,ipsam&nbsp;el&nbsp;eaque&nbsp;at&nbsp;quisquam&nbsp;magnam&nbsp;incidunt&nbsp;amet&nbsp;consectetur&nbsp;praesentium&nbsp;aperiam,reprehenderit&nbsp;quaerat&nbsp;iste&nbsp;nam&nbsp;porro.&#60;/p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="thoi_gian"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h4&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tháng&nbsp;1&nbsp;Năm&nbsp;2020<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/h4&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;!--&nbsp;Kết&nbsp;thúc&nbsp;nội&nbsp;dung&nbsp;cho&nbsp;timeline&nbsp;thứ&nbsp;1--&#62;<br/><br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;!--Nội&nbsp;dung&nbsp;cho&nbsp;timeline&nbsp;&nbsp;thứ&nbsp;2--&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="noi_dung"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h3&#62;Thông&nbsp;Tin&nbsp;Timeline&nbsp;2&#60;/h3&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p&#62;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur&nbsp;dipisicing&nbsp;elit.&nbsp;Animi,&nbsp;illo&nbsp;ipsum&nbsp;accusamus&nbsp;mollitiaet,ipsam&nbsp;el&nbsp;eaque&nbsp;at&nbsp;quisquam&nbsp;magnam&nbsp;incidunt&nbsp;amet&nbsp;consectetur&nbsp;praesentium&nbsp;eriam,reprehenderit&nbsp;quaerat&nbsp;iste&nbsp;nam&nbsp;porro.&#60;/p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="thoi_gian"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h4&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tháng&nbsp;2&nbsp;Năm&nbsp;2020<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/h4&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;!--&nbsp;Kết&nbsp;thúc&nbsp;nội&nbsp;dung&nbsp;cho&nbsp;timeline&nbsp;thứ&nbsp;2--&#62;<br/><br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;!--Nội&nbsp;dung&nbsp;cho&nbsp;timeline&nbsp;thứ&nbsp;3--&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="noi_dung"&#62;...&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;!--&nbsp;Kết&nbsp;thúc&nbsp;nội&nbsp;dung&nbsp;cho&nbsp;timeline&nbsp;thứ&nbsp;3--&#62;<br/><br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;!--Nội&nbsp;dung&nbsp;cho&nbsp;timeline&nbsp;thứ&nbsp;4--&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="noi_dung"&#62;...&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;!--&nbsp;Kết&nbsp;thúc&nbsp;nội&nbsp;dung&nbsp;cho&nbsp;timeline&nbsp;thứ&nbsp;4--&#62;<br/><br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;!--&nbsp;Nội&nbsp;dung&nbsp;cho&nbsp;timeline&nbsp;thứ&nbsp;5--&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="noi_dung"&#62;...&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;!--&nbsp;Kết&nbsp;thúc&nbsp;nội&nbsp;dung&nbsp;cho&nbsp;timeline&nbsp;thứ&nbsp;5--&#62;<br/><br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;style="clear:both"&#62;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&#60;/ul&#62;<br/> &nbsp;&#60;/div&#62;<br/></code></pre>
           <p class="mt-4">
-            Bước tiếp theo chúng ta sẽ đi vào thiết lập vị trí, font chữ, màu sắc... cho nội dung của hiệu ứng này thông qua đoạn mã CSS bên dưới nha:
+            Ở  đoạn mã trên mọi thành phần trong thẻ div có class <code>noi_dung</code>  đều giống nhau nên mình sẽ ghi tắt bằng dấu <code>...</code> Sau khi đã tạo xong bộ khung cho vertical timline thì
+            bước tiếp theo bạn và mình sẽ sử dụng một số thuộc tính CSS để xác định vị trí, font chữ... cho nó thông qua đoạn mã bên dưới nhé:
           </p>
           <h4 class="text-primary">
             CSS
           </h4>
-          <pre><code class="css">*{<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;box-sizing:&nbsp;border-box;<br/> }<br/>body{<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;flex;<br/> &nbsp;&nbsp;&nbsp;&nbsp;justify-content:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;align-items:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;min-height:&nbsp;100vh;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;#1b2a49;<br/> }<br/>.danh_sach{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;<br/> }<br/></code></pre>
+          <pre><code class="css">body{<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-family:&nbsp;'Roboto',&nbsp;sans-serif;<br/> }<br/>.timeline{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;50px&nbsp;auto;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;40px&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;1000px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;box-sizing:&nbsp;border-box;<br/> }<br/>.timeline&nbsp;ul&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;0;<br/> }<br/>.timeline&nbsp;ul&nbsp;li{<br/> &nbsp;&nbsp;&nbsp;&nbsp;line-height:&nbsp;normal;<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;50%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;20px&nbsp;40px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;box-sizing:&nbsp;border-box;<br/> &nbsp;&nbsp;&nbsp;&nbsp;list-style:&nbsp;none;<br/> }<br/></code></pre>
           <p class="mt-4">
             Và kết quả bạn xem hình ảnh ở bên dưới nhé:
           </p>
           <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1602684012/hieu_ung_hover_danh_sach_2/hieu_ung_hover_danh_sach_phan_2_kn0ull.png"
-          alt="Hiệu Ứng Hover Danh Sách 1"
+          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1602743578/vertical_timeline/vertical_timeline_1_nvs7xf.png"
+          alt="Vertical Timeline 1"
         >
            
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Thiết Lập Style Cho Danh Sách</h3>
+            <h3 class="text-primary ml-4 title-article-size">Thiết Kế Timeline Cơ Bản</h3>
           </div>
           <p>
-           Trong Phần này chúng ta sẽ đi vào thiết lập style cho nội dung trong danh sách như thẻ <code>ul</code>, <code>li</code>, <code>span</code>... bằng đoạn mã CSS bên dưới nhé:
+           Thông thường khi thiết kế  một timeline thì sẽ nó  sẽ có một đường thẳng để hiển thị  mốc thời gian với từng nội dung của sự kiện tương ứng.
+           Nội dung của từng thời gian cũng được sắp xếp xen kẽ để người dùng có thể dễ dàng đọc và nắm rõ hơn.
+
+          </p>
+          <p>
+            Trong phần này chúng ta sẽ đi vào thiết kế hai yêu cầu cơ bản phía trên của timeline bằng CSS nhé!
           </p>
           
           <h4 class="text-primary">
             CSS
           </h4>
-          <pre><code class="css">.danh_sach&nbsp;h1{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-weight:&nbsp;500;<br/> &nbsp;&nbsp;&nbsp;&nbsp;letter-spacing:&nbsp;1px;<br/> }<br/>.danh_sach&nbsp;ul{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;<br/> }<br/>.danh_sach&nbsp;ul&nbsp;li{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;<br/> &nbsp;&nbsp;&nbsp;&nbsp;left:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#999;<br/> &nbsp;&nbsp;&nbsp;&nbsp;list-style:&nbsp;none;<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;4px&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-left:&nbsp;2px&nbsp;solid&nbsp;#bada55;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;0.5s;<br/> &nbsp;&nbsp;&nbsp;&nbsp;cursor:&nbsp;pointer;<br/> }<br/>.danh_sach&nbsp;ul&nbsp;li&nbsp;span{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;8px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;inline-block;<br/> &nbsp;&nbsp;&nbsp;&nbsp;z-index:&nbsp;1;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;0.5s;<br/> }<br/> .danh_sach&nbsp;ul&nbsp;li::before{<br/> &nbsp;&nbsp;&nbsp;&nbsp;content:&nbsp;'';<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;#bada55;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;scaleX(0);<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform-origin:&nbsp;left;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;0.5s;<br/> }<br/></code></pre>
+          <pre><code class="css">/*Tạo&nbsp;đường&nbsp;thẳng&nbsp;cho&nbsp;mốc&nbsp;thời&nbsp;gian*/<br/> .timeline:before{<br/> &nbsp;&nbsp;&nbsp;&nbsp;content:&nbsp;'';<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;left:&nbsp;50%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;2px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;#c5c5c5;<br/> }<br/>/*Sắp&nbsp;xếp&nbsp;phần&nbsp;tử&nbsp;lẻ&nbsp;nằm&nbsp;bên&nbsp;trái*/<br/> .timeline&nbsp;ul&nbsp;li:nth-child(odd){<br/> &nbsp;&nbsp;&nbsp;&nbsp;float:&nbsp;left;<br/> &nbsp;&nbsp;&nbsp;&nbsp;text-align:&nbsp;right;<br/> &nbsp;&nbsp;&nbsp;&nbsp;clear:&nbsp;both;<br/> }<br/> /*Sắp&nbsp;xếp&nbsp;phần&nbsp;tử&nbsp;chẳn&nbsp;nằm&nbsp;bên&nbsp;phải*/<br/> .timeline&nbsp;ul&nbsp;li:nth-child(even){<br/> &nbsp;&nbsp;&nbsp;&nbsp;float:&nbsp;right;<br/> &nbsp;&nbsp;&nbsp;&nbsp;text-align:&nbsp;left;<br/> &nbsp;&nbsp;&nbsp;&nbsp;clear:&nbsp;both;<br/> }<br/>.noi_dung{<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding-bottom:&nbsp;20px;<br/> }<br/></code></pre>
           <p class="mt-4">
             Kết quả của đoạn mã trên bạn xem ở bên dưới nha:
           </p>
           <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1602684371/hieu_ung_hover_danh_sach_2/hieu_ung_hover_danh_sach_phan_2_2_cc8zod.png"
-            alt="Hiệu Ứng Hover Danh Sách 2"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1602744210/vertical_timeline/vertical_timeline_2_v7zj0u.png"
+            alt="Vertical Timeline 2"
           >
-
-    
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Tạo Hiệu Ứng Hover Cho Danh Sách</h3>
+            <h3 class="text-primary ml-4 title-article-size">Thiết Kế Mốc Thời Gian Timeline</h3>
           </div>
+    
+ 
           <p>
-            Phần cuối cùng chúng ta sẽ sử dụng thuộc tính <code>transform: scaleX(0);</code> trong <code>li::before</code> của đoạn mã trên để làm hiệu ứng hover cho danh sách.
-            Để hiểu rõ hơn bạn xem đoạn mã sau nhé:
+           Trong phần này chúng ta sẽ đi vào xây dựng biểu tượng cho từng mốc thời gian trên đường ngăn cách giữa các phần tử thông qua đoạn mã sau nhé:
           </p>
           <h4 class="text-primary">
             CSS
           </h4>
-          <pre><code class="css">.danh_sach&nbsp;ul&nbsp;li:hover::before{<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;scaleX(1);<br/> }<br/> .danh_sach&nbsp;ul&nbsp;li:hover{<br/> &nbsp;&nbsp;&nbsp;&nbsp;left:10px;<br/> }<br/>.danh_sach&nbsp;ul&nbsp;li:hover&nbsp;span{<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#fff;<br/> }<br/></code></pre>
-         
-
+          <pre><code class="css">.timeline&nbsp;ul&nbsp;li:nth-child(odd):before{<br/> &nbsp;&nbsp;&nbsp;&nbsp;content:&nbsp;'';<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;24px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;right:&nbsp;-6px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;10px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;10px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;rgba(97,&nbsp;123,&nbsp;227,&nbsp;1);<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;50%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;box-shadow:&nbsp;0&nbsp;0&nbsp;0&nbsp;3px&nbsp;rgba(97,&nbsp;123,&nbsp;227,&nbsp;0.2);<br/> }<br/>.timeline&nbsp;ul&nbsp;li:nth-child(even):before{<br/> &nbsp;&nbsp;&nbsp;&nbsp;content:&nbsp;'';<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;24px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;left:&nbsp;-4px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;10px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;10px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;rgba(97,&nbsp;123,&nbsp;227,&nbsp;1);<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;50%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;box-shadow:&nbsp;0&nbsp;0&nbsp;0&nbsp;3px&nbsp;rgba(97,&nbsp;123,&nbsp;227,&nbsp;0.2);<br/> }<br/></code></pre>
          
           <p class="mt-4">
-            Và kết quả cuối cùng của hiệu này bạn xem video bên dưới nhé:
+            Kết quả của đoạn mã trên bạn xem ở bên dưới nha:
           </p>
-
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1602684853/hieu_ung_hover_danh_sach_2/tao-hieu-ung-hover-cho-danh-sach-phan-2_tJNdggpq_v7gq2r.mp4" allowfullscreen></iframe>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1602744830/vertical_timeline/vertical_timeline_3_jl6muc.png"
+            alt="Vertical Timeline 3"
+          >
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Trang Trí Hiển Thị Thời Gian Trong Timeline</h3>
           </div>
-
+          <p>
+            Phần cuối cùng chúng ta sẽ đi vào thiết kế  cách hiển thị thời gian  trong timeline thông qua đoạn mã sau nhé:
+          </p>
+          <h4 class="text-primary">
+            CSS
+          </h4>
+          <pre><code class="css">.timeline&nbsp;ul&nbsp;li&nbsp;h3{<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-weight:&nbsp;500;<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;rgba(97,&nbsp;123,&nbsp;227,&nbsp;1);<br/> }<br/>.timeline&nbsp;ul&nbsp;li&nbsp;p{<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;10px&nbsp;0&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;0;<br/> }<br/> .timeline&nbsp;ul&nbsp;li&nbsp;.thoi_gian&nbsp;h4{<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;14px;<br/> }<br/> .timeline&nbsp;ul&nbsp;li:nth-child(odd)&nbsp;.thoi_gian{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;12px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;right:&nbsp;-165px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;8px&nbsp;16px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;rgba(97,&nbsp;123,&nbsp;227,&nbsp;1);<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;18px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;box-shadow:&nbsp;0&nbsp;0&nbsp;0&nbsp;3px&nbsp;rgba(97,&nbsp;123,&nbsp;227,&nbsp;0.4);<br/> }<br/>.timeline&nbsp;ul&nbsp;li:nth-child(even)&nbsp;.thoi_gian{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;12px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;left:&nbsp;-165px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;8px&nbsp;16px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;rgba(97,&nbsp;123,&nbsp;227,&nbsp;1);<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;18px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;box-shadow:&nbsp;0&nbsp;0&nbsp;0&nbsp;3px&nbsp;rgba(97,&nbsp;123,&nbsp;227,&nbsp;0.4);<br/> }<br/></code></pre>
+          <p class="mt-4">
+            Và kết quả cuối cùng bạn xem hình ảnh dưới nha:
+          </p>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+          data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1602745086/vertical_timeline/vertical_timeline_final_g9cy4m.png"
+          alt="Vertical Timeline Final"
+        >
           <p class="mt-4">
             Và đây là dự án trên Codepen nhé: (Bạn phải chuyển sang chế độ screen 0.5x, 0.25x thì mới thấy rõ được hiệu ứng):
           </p>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="haycuoilennao19" data-slug-hash="wvWMaqa" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Tạo Hiệu Ứng Hover Cho Danh Sách Phần 2">
-            <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/wvWMaqa">
-            Tạo Hiệu Ứng Hover Cho Danh Sách Phần 2</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="haycuoilennao19" data-slug-hash="KKMVvLw" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Tạo Vertical timline">
+            <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/KKMVvLw">
+            Tạo Vertical timline</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
             on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
           <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
@@ -152,13 +168,14 @@
 
 
 
+
           <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article"
-            href="https://codepen.io/haycuoilennao19/pen/wvWMaqa" target="_blank" rel="noopener noreferrer">Nguồn</a>
+            href="https://codepen.io/haycuoilennao19/pen/KKMVvLw" target="_blank" rel="noopener noreferrer">Nguồn</a>
         </p>
        
 
           <h4 class="mt-4 pt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
-          <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những kiến thức để tạo hiệu ứng hover cho danh sách
+          <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những kiến thức để tạo vertical timline bằng HTML, CSS
             hữu ích
             dành cho việc phát triển, thiết kế web và nếu có thắc mắc gì cứ gửi email mình sẽ
             phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa
