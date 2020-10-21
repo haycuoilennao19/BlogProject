@@ -35,168 +35,332 @@
           <div class="row">
             <div class="col-sm-12">
               <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"><i class="fa fa-cube"
-                  aria-hidden="true"></i> Tạo Thanh Điều Hướng Navigation Trong Suốt Bằng HTML CSS</h2>
+                  aria-hidden="true"></i> Những Công Cụ Tạo Logo Online, Miễn Phí Cho Website</h2>
             </div>
           </div>
 
 
           <div class="text-content-article mt-5">
-            <p><i>Ngày hôm nay chúng ta sẽ cùng nhau đi vào tìm hiểu cách tạo navagtion trong suốt (transparent) cho
-                trang web bằng HTML và CSS nhé!
+            <p><i>Ngày hôm nay chúng ta sẽ cùng nhau đi vào tìm hiểu những công cụ tạo logo online, miễn phí
+                được sử dụng phổ biến trong thiết kế cũng như được các nhà thiết kế web, designer tin tưởng dùng trong
+                phát triển website nhé!
+
               </i>
             </p>
           </div>
 
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Tạo Cấu Trúc Cho Thanh Tiêu Đề</h3>
-          </div>
-
-
-          <p> Phần đầu tiên chúng ta sẽ đi vào tạo hai file là <code>index.html</code>(nơi lưu trữ HTML) và
-            <code>style.css</code>(nơi lưu trữ mã CSS). Sau đó liên kết chúng với Google Font và Font Awesome v4.7 thông
-            qua đoạn mã dưới đây
-            nhé:</p>
-
-          <h4 class="text-primary">
-            HTML
-          </h4>
-          <pre><code class="html">&#60;!DOCTYPE&nbsp;html&#62;<br/>&#60;html&nbsp;lang="en"&#62;<br/> &#60;head&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;charset="UTF-8"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;name="viewport"&nbsp;content="width=device-width,&nbsp;initial-scale=1.0"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;title&#62;Tạo&nbsp;Navigation&nbsp;Trong&nbsp;Suốt&#60;/title&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"&nbsp;rel="stylesheet"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="style.css"&#62;<br/> &#60;/head&#62;<br/> &#60;body&#62;<br/> &#60;/body&#62;<br/>&#60;/html&#62;<br/></code></pre>
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Thêm Phần Tử HTML Cần Thiết Cho Navigation</h3>
+            <h3 class="text-primary ml-4 title-article-size">Logo Là Gì Và Tại Sao Chúng Ta Nên Sử Dụng Chúng Cho
+              Website?</h3>
           </div>
           <p>
-            Trong phần này chúng ta sẽ đi vào thêm các thẻ HTML cần thiết để tạo thanh tiêu đề trong suốt thông qua đoạn
-            mã bên dưới nhé:
+            <b>Logo</b> là một biểu tượng thương hiệu. Nó được tạo nên bằng sự kết hợp của nhiều thành phần như là văn
+            bản, hình ảnh, màu sắc, các ký
+            tự đặc biệt... Với nhiệm vụ chính là giúp khách hàng có thể phân biệt được thương hiệu website của bạn so
+            với các trang web khác.
           </p>
-          <h4 class="text-primary">
-            HTML
-          </h4>
-          <pre><code class="html">&#60;!--Bắt&nbsp;Đầu&nbsp;Navigation&nbsp;--&#62;<br/> &#60;nav&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="brand"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h2&#62;Niềm&nbsp;Vui&nbsp;Lập&nbsp;Trình&#60;/h2&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;ul&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;a&nbsp;href=""&#62;&#60;i&nbsp;class="fa&nbsp;fa-home"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&nbsp;Trang&nbsp;Chủ&#60;/a&#62;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;a&nbsp;href=""&#62;&#60;i&nbsp;class="fa&nbsp;fa-info"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&nbsp;Về&nbsp;Chúng&nbsp;Tôi&#60;/a&#62;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;a&nbsp;href=""&#62;&#60;i&nbsp;class="fa&nbsp;fa-truck"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&nbsp;Dịch&nbsp;Vụ&#60;/a&#62;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;a&nbsp;href=""&#62;&#60;i&nbsp;class="fa&nbsp;fa-telegram"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&nbsp;Thông&nbsp;Tin&#60;/a&#62;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;a&nbsp;href=""&#62;&#60;i&nbsp;class="fa&nbsp;fa-location-arrow"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&nbsp;Địa&nbsp;Chỉ&#60;/a&#62;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/ul&#62;<br/> &#60;/nav&#62;<br/> &#60;!--Kết&nbsp;Thúc&nbsp;Navigation&nbsp;--&#62;<br/> <br/> &#60;!--&nbsp;Dùng&nbsp;Để&nbsp;Chèn&nbsp;Hình&nbsp;Ảnh--&#62;<br/> &#60;section&nbsp;class="section1"&#62;&#60;/section&#62;<br/> &#60;!--&nbsp;Dùng&nbsp;Để&nbsp;Chèn&nbsp;Hình&nbsp;Ảnh--&#62;<br/><br/>&#60;!--Hiển&nbsp;Thị&nbsp;Nội&nbsp;Dung&nbsp;Văn&nbsp;Bản--&#62;<br/> &#60;section&nbsp;class="section2"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;h1&#62;What&nbsp;is&nbsp;Lorem&nbsp;Ipsum?&#60;/h1&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem&nbsp;Ipsum&nbsp;is&nbsp;...<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;h1&#62;Why&nbsp;do&nbsp;we&nbsp;use&nbsp;it?&#60;/h1&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem&nbsp;Ipsum&nbsp;is...<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/p&#62;<br/> &#60;/section&#62;<br/> &#60;!--Hiển&nbsp;Thị&nbsp;Nội&nbsp;Dung&nbsp;Văn&nbsp;Bản--&#62;<br/></code></pre>
-          <p class="mt-4">
-            Và đây là hình ảnh của kết quả khi ta thêm các thẻ HTML vào trang <code>index.html</code> nhé:
+          <p>
+            Dưới đây là một số lý do bạn nên sử dụng logo cho website của mình nhé:
           </p>
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603174237/navigation_trong_suot/navigation_trong_suot_1_g0tsvk.png"
-            alt="Navigation Trong Suốt 1 ">
+          <ul>
+            <li>Tạo ấn tượng đầu tiên khi người dùng sử dụng website của bạn.</li>
+            <li>Giúp người dùng có thể dễ dàng nhớ tới bạn hơn.</li>
+            <li>Giúp bạn có thể truyền tải thông điệp tới khách hàng một cách dễ dàng.</li>
+            <li>Tạo độ tin cậy cho website của bạn.</li>
+            <li>Tạo sự khác biệt so với các trang website khác.</li>
+          </ul>
+          <p>
+            Bây giờ chúng ta sẽ đi vào tìm hiểu các trang web, công cụ online giúp bạn có thể dễ dàng tạo logo cho
+            website một cách nhanh chóng dễ dàng và miễn phí nhé!
+          </p>
 
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size"> Chèn Hình Ảnh Và Xác Định Font Chữ Cho Navigation Bằng CSS
+            <h3 class="text-primary ml-4 title-article-size">
+              Trang Web Canva
             </h3>
           </div>
           <p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603253461/cong_cu_tao_logo/Trang_Web_Canva_cnvoqf.png"
+              alt="Trang Web Tạo Logo  Canva">
+          </p>
 
-            Để tạo hiệu ứng transparent cho thanh tiêu đề thì chúng ta cần phải có một hình ảnh nằm phía sau nó. Do đó
-            trong phần này
-            ta sẽ chèn hình ảnh cho thẻ <code>&#60;section class="section1"&#62;</code> và xác định font chữ cho toàn bộ
-            nội dung trang web.
-            Để nắm rõ hơn bạn xem đoạn mã sau nhé:
-          </p>
-          <h4 class="text-primary">
-            CSS
-          </h4>
-          <pre><code class="css">body{<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-family:&nbsp;'Roboto',&nbsp;sans-serif;<br/> }<br/>section.section1{<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;100vh;<br/> &nbsp;&nbsp;&nbsp;&nbsp;box-sizing:&nbsp;border-box;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;url(https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603170394/navigation_trong_suot/pexels-life-of-pix-7919_zydtt2.jpg);<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-size:&nbsp;cover;<br/> }<br/></code></pre>
-          <p class="mt-4">
-            Và bên dưới là kết quả của chúng ta nhé:
-          </p>
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603174282/navigation_trong_suot/navigation_trong_suot_2_1_ayikcu.png"
-            alt="Navigation Trong Suốt 2 ">
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://www.canva.com/create/logos/"
+              target="_blank">Nguồn Download</a></p>
 
 
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
             <h3 class="text-primary ml-4 title-article-size">
-              Xác định Vị Trí Cho Thanh Tiêu Đề Bằng CSS
+              Trang Web Squarespace
             </h3>
           </div>
           <p>
-            Trong phần này chúng ta sẽ thiết lập các thuộc tính CSS cơ bản để xác định vị trí của thanh tiêu đề trong
-            trang web thông qua thẻ
-            <code>&#60;nav&#62;</code> bằng đoạn mã sau nhé:
-          </p>
-          <h4 class="text-primary">
-            CSS
-          </h4>
-          <pre><code class="css">nav{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;fixed;<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;left:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;80px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;rgba(0,0,0,0.4);<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;0&nbsp;100px&nbsp;;<br/> &nbsp;&nbsp;&nbsp;&nbsp;box-sizing:&nbsp;border-box;<br/> &nbsp;&nbsp;&nbsp;&nbsp;box-shadow:&nbsp;0&nbsp;1px&nbsp;1px&nbsp;rgba(0,0,0,0.12),<br/> &nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;2px&nbsp;2px&nbsp;rgba(0,0,0,0.12),<br/> &nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;4px&nbsp;4px&nbsp;rgba(0,0,0,0.12),<br/> &nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;8px&nbsp;8px&nbsp;rgba(0,0,0,0.12),<br/> &nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;16px&nbsp;16px&nbsp;rgba(0,0,0,0.12);<br/> }<br/></code></pre>
-          <p>
-            Kết quả bạn xem bên dưới nhé:
-          </p>
-
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603174346/navigation_trong_suot/navigation_trong_suot_3_1_gh8yig.png"
-            alt="Navigation Trong Suốt 3 ">
-          <p class="mt-4">
-            Ở đây mình có  một lưu ý  là yếu tố quan trọng để thanh tiêu đề trong suốt 
-            trong đoạn mã trên là thuộc tính <code>background: rgba(0,0,0,0.4);</code>.  Nó sẽ xác định background của chúng ta là màu đen(rgba(0,0,0,))
-            và độ opacity sẽ bằng 0.4. Do đó bạn có thể vừa hiển thị được thanh tiêu đề vừa nhìn thấy được hình ảnh bên dưới .
-          </p>
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Căn Chỉnh Các Phần Tử Con Trong Navigation
-              </h3>
-            </div>
-            <p>
-              Trong phần này chúng ta sẽ đi vào căn chỉnh vị trí của các phần tử con. Việc làm này sẽ giúp  bố cục của thanh tiêu đề trông 
-               hài hòa và đẹp mắt hơn. Để hiểu rõ hơn bạn xem đoạn mã sau nhé: 
-              
-            </p>
-            <h4 class="text-primary">
-              CSS
-            </h4>
-            <pre><code class="css">nav&nbsp;.brand{<br/> &nbsp;&nbsp;&nbsp;&nbsp;float:&nbsp;left;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;line-height:&nbsp;80px;<br/> }<br/>nav&nbsp;.brand&nbsp;h2{<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#fff;<br/> }<br/>nav&nbsp;ul{<br/> &nbsp;&nbsp;&nbsp;&nbsp;float:&nbsp;right;<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;flex;<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;0;<br/> }<br/>nav&nbsp;ul&nbsp;li{<br/> &nbsp;&nbsp;&nbsp;&nbsp;list-style:&nbsp;none;<br/> }<br/>nav&nbsp;ul&nbsp;li&nbsp;a{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;block;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;80px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;line-height:&nbsp;80px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;0&nbsp;20px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;box-sizing:&nbsp;border-box;<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;text-decoration:&nbsp;none;<br/> &nbsp;&nbsp;&nbsp;&nbsp;text-transform:&nbsp;uppercase;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;0.5s<br/> }<br/></code></pre>
-
-            <p class="mt-4">
-              Bạn xem hình ảnh kết quả bên dưới nhé:
-            </p>
             <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603174488/navigation_trong_suot/navigation_trong_suot_4_eqd0mg.png"
-            alt="Navigation Trong Suốt 4 ">
-            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-              <h3 class="text-primary ml-4 title-article-size">
-                Tạo Hiệu Ứng Hover Cho Đường Dẫn Trong Thanh Tiêu Đề
-              </h3>
-            </div>
-            <p>
-              Phần cuối cùng chúng ta sẽ đi vào tạo hiệu ứng hover cho  đường dẫn trong navigation transparent thông qua đoạn code sau đây nhé:
-            </p>
-            <h4 class="text-primary">
-              CSS
-            </h4>
-            <pre><code class="css">nav&nbsp;ul&nbsp;li&nbsp;a:before{<br/> &nbsp;&nbsp;&nbsp;&nbsp;content:&nbsp;'';<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;left:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform-origin:&nbsp;right;<br/> &nbsp;&nbsp;&nbsp;&nbsp;z-index:&nbsp;-1;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;scaleX(0);<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;&nbsp;transform&nbsp;0.5s;<br/> }<br/>nav&nbsp;ul&nbsp;li&nbsp;a:hover:before{<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform-origin:&nbsp;left;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;scaleX(1);<br/> }<br/>nav&nbsp;ul&nbsp;li&nbsp;a:hover{<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#262626;<br/> }<br/>section.section2{<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;150px;<br/> }<br/></code></pre>
-
-            <p class="mt-4">
-              Và kết quả bạn xem video bên dưới nha!
-            </p>
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1603174901/navigation_trong_suot/navigation-trong-suot_Uzjelfs8_p6fntn.mp4" allowfullscreen></iframe>
-            </div>
-            <p class="mt-4">
-              Còn dưới đây là đường dẫn của dự án này trên codepen nhé!
-            </p>
-
-
-          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article"
-              href="https://codepen.io/haycuoilennao19/pen/rNLMamo"
-              target="_blank" rel="noopener noreferrer">Nguồn Codepen</a>
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603253687/cong_cu_tao_logo/Trang_Web_Squarespace_f6qnpy.png"
+              alt="Trang Web Tạo Logo  Squarespace">
           </p>
 
-          <p><mark>Nếu bạn muốn tham khảo thêm về các thiết kế navigation khác thì có thể truy cập ở đường dẫn bên dưới nhé!</mark></p>
-          <p><a href="https://www.niemvuilaptrinh.com/article/Snippet-Component-Navbar-Bootstrap-4" title="Snippet Component Navbar Bootstrap 4">Snippet Component Navbar Bootstrap 4</a></p>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://www.squarespace.com/logo"
+              target="_blank">Nguồn Download</a></p>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">
+              Trang Web Hatchful
+            </h3>
+          </div>
+          <p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603263228/cong_cu_tao_logo/Hatchful_xw6wcz.png"
+              alt="Trang Web Tạo Logo  Hatchful">
+          </p>
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://hatchful.shopify.com/"
+              target="_blank">Nguồn Download</a></p>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">
+              Trang Web Zyro
+            </h3>
+          </div>
+          <p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603263086/cong_cu_tao_logo/Trang_Web_Zyro_eetdt4.png"
+              alt="Trang Web Tạo Logo  Zyro">
+          </p>
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://zyro.com/logo-maker"
+              target="_blank">Nguồn Download</a></p>
 
 
 
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">
+              Trang Web Ucraft
+            </h3>
+          </div>
+          <p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603263468/cong_cu_tao_logo/Ucraft_rjx9st.png"
+              alt="Trang Web Tạo Logo  Ucraft">
+          </p>
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://www.ucraft.com/free-logo-maker"
+              target="_blank">Nguồn Download</a></p>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">
+              Trang Web Namecheap
+            </h3>
+          </div>
+          <p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603263697/cong_cu_tao_logo/Namecheap_izmz9l.png"
+              alt="Trang Web Tạo Logo  Namecheap">
+          </p>
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://www.namecheap.com/logo-maker/"
+              target="_blank">Nguồn Download</a></p>
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">
+              Trang Web Freelogodesign
+            </h3>
+          </div>
+          <p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603263937/cong_cu_tao_logo/Freelogodesign_e7mgnc.png"
+              alt="Trang Web Tạo Logo  Freelogodesign">
+          </p>
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://www.freelogodesign.org/"
+              target="_blank">Nguồn Download</a></p>
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">
+              Trang Web Designevo
+            </h3>
+          </div>
+          <p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603264059/cong_cu_tao_logo/Designevo_nhsbqn.png"
+              alt="Trang Web Tạo Logo  Designevo">
+          </p>
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://www.designevo.com/logo-maker/"
+              target="_blank">Nguồn Download</a></p>
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">
+              Trang Web Wix Logo Maker
+            </h3>
+          </div>
+          <p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603264299/cong_cu_tao_logo/Wix_Logo_Maker_fwjbqt.png"
+              alt="Trang Web Tạo Logo  Wix Logo Maker">
+          </p>
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://www.wix.com/logo/maker"
+              target="_blank">Nguồn Download</a></p>
 
 
 
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">
+              Trang Web Logogarden
+            </h3>
+          </div>
+          <p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603264514/cong_cu_tao_logo/Logogarden_pywx9b.png"
+              alt="Trang Web Tạo Logo  Logogarden">
+          </p>
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://www.logogarden.com/"
+              target="_blank">Nguồn Download</a></p>
 
 
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">
+              Trang Web MarkMaker
+            </h3>
+          </div>
+          <p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603264706/cong_cu_tao_logo/MarkMaker_oqyof5.png"
+              alt="Trang Web Tạo Logo  MarkMaker">
+          </p>
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="http://emblemmatic.org/markmaker/#/"
+              target="_blank">Nguồn Download</a></p>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">
+              Trang Web Onlinelogomaker
+            </h3>
+          </div>
+          <p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603264838/cong_cu_tao_logo/Onlinelogomaker_fiugwa.png"
+              alt="Trang Web Tạo Logo  Onlinelogomaker">
+          </p>
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://www.onlinelogomaker.com/"
+              target="_blank">Nguồn Download</a></p>
+
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">
+              Trang Web Looka
+            </h3>
+          </div>
+          <p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603265041/cong_cu_tao_logo/Looka_lonzdc.png"
+              alt="Trang Web Tạo Logo  Looka">
+          </p>
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://looka.com/logo-maker/"
+              target="_blank">Nguồn Download</a></p>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">
+              Trang Web Fiverr
+            </h3>
+          </div>
+          <p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603265180/cong_cu_tao_logo/Fiverr_hj18vr.png"
+              alt="Trang Web Tạo Logo  Fiverr">
+          </p>
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://www.fiverr.com/logo-maker"
+              target="_blank">Nguồn Download</a></p>
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">
+              Trang Web Fotojet
+            </h3>
+          </div>
+          <p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603265386/cong_cu_tao_logo/Fotojet_vwehcy.png"
+              alt="Trang Web Tạo Logo  Fotojet">
+          </p>
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://www.fotojet.com/features/logo/"
+              target="_blank">Nguồn Download</a></p>
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">
+              Trang Web Adobe Spark
+            </h3>
+          </div>
+          <p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603265605/cong_cu_tao_logo/Adobe_Spark_j7bda7.png"
+              alt="Trang Web Tạo Logo   Adobe Spark">
+          </p>
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://spark.adobe.com/make/logo-maker/"
+              target="_blank">Nguồn Download</a></p>
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">
+              Trang Web Logogenie
+            </h3>
+          </div>
+          <p>
+            <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603265696/cong_cu_tao_logo/Logogenie_tq0d4z.png"
+              alt="Trang Web Tạo Logo   Logogenie">
+          </p>
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://www.logogenie.net/"
+              target="_blank">Nguồn Download</a></p>
+
+
+              <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">
+                  Trang Web Logocrisp
+                </h3>
+              </div>
+              <p>
+                <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+                  data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603265794/cong_cu_tao_logo/Logocrisp_vvatrb.png"
+                  alt="Trang Web Tạo Logo   Logocrisp">
+              </p>
+    
+              <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://www.logocrisp.com/"
+                  target="_blank">Nguồn Download</a></p>
+
+                  <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+                    <h3 class="text-primary ml-4 title-article-size">
+                      Trang Web Tailor Brands
+                    </h3>
+                  </div>
+                  <p>
+                    <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+                      data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603266193/cong_cu_tao_logo/Tailor_Brands_vjhuin.png"
+                      alt="Trang Web Tạo Logo   Tailor Brands">
+                  </p>
+        
+                  <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://www.tailorbrands.com/"
+                      target="_blank">Nguồn Download</a></p>
+                     
 
 
 
 
 
           <h4 class="mt-4 pt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
-          <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những kiến thức tạo navigation trong suốt
+          <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những trang web tạo logo online miễn phí
             hữu ích
             dành cho việc phát triển, thiết kế web và nếu có thắc mắc gì cứ gửi email mình sẽ
             phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa
