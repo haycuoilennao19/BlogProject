@@ -36,140 +36,455 @@
             <div class="col-sm-12">
               <div class="text-content-article mt-5">
                 <p><b><i>
-                      Ngày hôm nay chúng ta sẽ cùng nhau đi vào tìm hiểu cách tạo count up (hiệu ứng động số tăng dần)
-                      cho trang web bằng HTML, CSS, Javascrip kết hợp với thư viện Counter-Up Jquery nhé !
+                      Ngày hôm nay chúng ta sẽ cùng nhau đi vào tìm hiểu những trang blog được nhiều bạn lập trình viên
+                      tin tưởng theo dõi, học tập
+                      để nâng cao kiến thức và kỹ năng
+                      viết mã của mình nhé!
                     </i></b>
                 </p>
               </div>
               <hr />
             </div>
           </div>
-          <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size"> Tạo Cấu Trúc HTML Cho Count Up
-          </h2>
-          <p> Phần đầu tiên chúng ta sẽ đi vào tạo hai file là <code>index.html</code>(nơi lưu trữ HTML) và
-            <code>style.css</code>(nơi lưu trữ mã CSS). Sau đó liên kết chúng với CDN Google Font, Bootstrap v4.5.3,
-            Font Awesome v4.7
-            và thư viện Counter-Up Jquery thông
-            qua đoạn mã dưới đây nhé:</p>
-          <h4 class="text-primary">
-            HTML
-          </h4>
-          <pre><code class="html">&#60;!DOCTYPE&nbsp;html&#62;<br/> &#60;html&nbsp;lang="en"&#62;<br/> &#60;head&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;charset="UTF-8"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;name="viewport"&nbsp;content="width=device-width,&nbsp;initial-scale=1.0"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;title&#62;Tạo&nbsp;Count&nbsp;up&nbsp;Cho&nbsp;Trang&nbsp;Web&#60;/title&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"&nbsp;rel="stylesheet"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="style.css"&#62;<br/> &#60;/head&#62;<br/> &#60;body&#62;<br/> &nbsp;&nbsp;&#60;script&nbsp;src="https://code.jquery.com/jquery-3.5.1.js"&#62;&#60;/script&#62;<br/> &nbsp;&nbsp;&#60;script&nbsp;src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js""&#62;&#60;/script&#62;<br/> &nbsp;&nbsp;&#60;script&nbsp;src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"&#62;&#60;/script&#62;<br/> &#60;/body&#62;<br/> &#60;/html&#62;<br/></code></pre>
-
-          <h2 class="bg-primary mt-4 mb-4 text-white rounded p-2 shadow title-article-size"> Thêm Các Thẻ HTML Cần Thiết Cho
-            Countup
-          </h2>
-
-          <p>
-            Trong phần này ngoài việc thêm các thẻ HTMl cần thiết thì mình cũng sử dụng một số class thông dụng trong
-            Bootstrap 4 để
-            chia cột cho bố cục trang web như là <code>container</code>, <code>row</code>, <code>col-lg-6</code>,
-            <code>col-lg-4</code>, <code>col-lg-2</code>...<br />
-            <mark>Nếu bạn muốn xem lại về phần chia bố cục cho trang web bằng Bootstrap 4 thì có thể truy cập <a
-                href="https://www.niemvuilaptrinh.com/article/Bootstrap-4-Phan-2"
-                title="Hệ thống lưới trong Bootstrap 4">ở đây nhé!</a></mark>
-          </p>
-          <h4 class="text-primary">
-            HTML
-          </h4>
-          <pre><code class="html">&#60;div&nbsp;class="about-section"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="container"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="row"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;!--Bắt&nbsp;Đầu&nbsp;Cột&nbsp;Thứ&nbsp;1--&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="col-lg-4"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="about-bg"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;img&nbsp;src="https://images.pexels.com/photos/2100063/pexels-photo-2100063.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"&nbsp;alt="Hình&nbsp;Ảnh&nbsp;Minh&nbsp;Họa"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;!--Kết&nbsp;Thúc&nbsp;Cột&nbsp;Thứ&nbsp;1--&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;!--Bắt&nbsp;Đầu&nbsp;Cột&nbsp;Thứ&nbsp;2--&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="col-lg-6"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="section-heading"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h2&#62;Giới&nbsp;Thiệu&nbsp;Về&nbsp;Tôi&#60;/h2&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;br&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="about-content"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p&#62;&nbsp;Lorem,&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur&nbsp;adipisicing&nbsp;elit.&nbsp;Est,&nbsp;repellendus&nbsp;obcaecati&nbsp;ducimus&nbsp;laborum&nbsp;porro&nbsp;eius&nbsp;qui&nbsp;consequuntur&nbsp;quae,&nbsp;itaque&nbsp;deleniti&nbsp;officia&nbsp;architecto&nbsp;sequi&nbsp;consectetur&nbsp;iusto&nbsp;cupiditate&nbsp;dicta&nbsp;accusamus&nbsp;impedit&nbsp;iure.&nbsp;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur&nbsp;adipisicing&nbsp;elit.&nbsp;Impedit&nbsp;rem&nbsp;sapiente&nbsp;aliquid&nbsp;aliquam&nbsp;cum&nbsp;pariatur&nbsp;itaque&nbsp;unde,&nbsp;accusamus,&nbsp;quam&nbsp;libero&nbsp;harum&nbsp;ipsa&nbsp;accusantium&nbsp;fugiat&nbsp;similique&nbsp;ullam&nbsp;officiis&nbsp;consequuntur&nbsp;officia&nbsp;quos.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;br&#62;&#60;br&#62;&#60;br&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;a&nbsp;href=""&nbsp;class="default-btn"&#62;Tải&nbsp;Thông&nbsp;Tin&nbsp;Của&nbsp;Tôi&#60;/a&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="social"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;i&nbsp;class="fa&nbsp;fa-facebook"&#62;&#60;/i&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;i&nbsp;class="fa&nbsp;fa-twitter"&#62;&#60;/i&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;i&nbsp;class="fa&nbsp;fa-linkedin"&#62;&#60;/i&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;i&nbsp;class="fa&nbsp;fa-pinterest"&#62;&#60;/i&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;i&nbsp;class="fa&nbsp;fa-youtube"&#62;&#60;/i&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;!--Kết&nbsp;Thúc&nbsp;Cột&nbsp;Thứ&nbsp;2--&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;br&nbsp;/&#62;&#60;br&nbsp;/&#62;&#60;br&nbsp;/&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;!--Bắt&nbsp;Đầu&nbsp;Cột&nbsp;Thứ&nbsp;3--&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="col-lg-2"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="counter-content"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="counter-item"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h3&#62;Dự&nbsp;Án&nbsp;&#60;span&nbsp;class="counter&nbsp;text-primary"&#62;600&#60;/span&#62;&#60;/h3&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="counter-item"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h3&#62;Khách&nbsp;Hàng&nbsp;&#60;span&nbsp;class="counter&nbsp;text-primary"&#62;1200&#60;/span&#62;&#60;/h3&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="counter-item"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h3&#62;Thời&nbsp;Gian&nbsp;Làm&nbsp;Việc&nbsp;&#60;span&nbsp;class="counter&nbsp;text-primary"&#62;1500&#60;/span&#62;&#60;/h3&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="counter-item"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h3&#62;Giải&nbsp;Thưởng&nbsp;&#60;span&nbsp;class="counter&nbsp;text-primary"&#62;150&#60;/span&#62;&#60;/h3&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;!--Kết&nbsp;Thúc&nbsp;Cột&nbsp;Thứ&nbsp;3--&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &#60;/div&#62;<br/></code></pre>
-
-          <p class="mt-4">
-            Và bây giờ chúng ta sẽ xem cách Bootstrap sẽ chia cột cho chúng ta thông qua hình ảnh dưới đây nhé:
-          </p>
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603630293/Count_up_HTML_CSS_JS/Count_up_1_xl8g42.png"
-            alt="Count_up_1"
-           >
-           <h2 class="bg-primary mb-4  mt-4 text-white rounded p-2 shadow title-article-size">
-             Thiết Lập Font Chữ, Màu Nền cho  Count up
+          <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+            CSS-TRICKS
           </h2>
           <p>
-           Trong phần này chúng ta sẽ đi vào thiết lập style (font chữ, màu nền, khoảng cách...)cho nội dung trang web 
-           thông qua thẻ <code>body</code> trong đoạn mã CSS sau nhé:
-          </p>
-          <h4 class="text-primary">
-            CSS
-          </h4>
-          <pre><code class="css">body{<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-color:&nbsp;#7f5a83;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-image:&nbsp;linear-gradient(315deg,&nbsp;#7f5a83&nbsp;0%,&nbsp;#0d324d&nbsp;74%);<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;&nbsp;100vh;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-family:&nbsp;'Roboto',&nbsp;sans-serif;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-weight:&nbsp;400;<br/> }<br/></code></pre>
-          <p class="mt-4">
-            Và kết quả bạn xem hình ảnh dưới đây nha:
+            <b>CSS-TRICKS</b> là một trang web được thành lập bởi <b>Chris Coyier</b> vào năm 2007. Với mục đích chính
+            là chia sẻ cho bạn các thủ thuật để giải quyết các
+            vấn đề hay gặp trong quá trình thiết kế trang web. Ngoài ra website này còn có rất nhiều chủ đề hay về việc
+            phát triển web như là animation, performance, responsive image...
+            Theo mình thấy thì mức độ cập nhật bài viết cũng rất thường xuyên do đó bạn hoàn toàn yên tâm để học hỏi
+            cũng như trau dồi được nhiều kiến thức đang hot hiện nay nha.
           </p>
           <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603630839/Count_up_HTML_CSS_JS/Count_up_2_lidil4.png"
-            alt="Count_up_2"
-           >
-           <h2 class="bg-primary mb-4  mt-4 text-white rounded p-2 shadow title-article-size">
-            Thiết Lập Lại Vị Trí Và Màu Sắc Cho Thành Phần Count up
-         </h2>
-  
-         <p>
-           Phần tiếp theo chúng ta sẽ đi vào sử dụng một số thuộc tính CSS cơ bản để thiết lập lại vị trí, khoảng cách giữa các cột trong thành phần count up
-           đồng thời thiết lập lại màu sắc cho chữ để giúp khách hàng dễ dàng đọc hơn nhé:
-         </p>
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603715332/Blog_Danh_Cho_Lap_Trinh_Vien/CSS-TRICKS_dhuhcs.png"
+            alt=" CSS-TRICKS">
 
-         <h4 class="text-primary">
-           CSS
-         </h4>
-         <pre><code class="css">.about-section{<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin-top:&nbsp;175px;<br/> &nbsp;&nbsp;&nbsp;&nbsp; }<br/>.section-heading&nbsp;h2{<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;white;<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:&nbsp;20px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;28px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-weight:&nbsp;400;<br/> &nbsp;&nbsp;&nbsp;&nbsp;text-transform:&nbsp;capitalize;<br/> &nbsp;&nbsp;&nbsp;&nbsp;letter-spacing:&nbsp;1px;<br/> }<br/>.about-bg&nbsp;img{<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin-left:&nbsp;-50px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;25px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;box-shadow:&nbsp;0&nbsp;1px&nbsp;1px&nbsp;rgba(0,0,0,0.12),<br/> &nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;2px&nbsp;2px&nbsp;rgba(0,0,0,0.12),<br/>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;4px&nbsp;4px&nbsp;rgba(0,0,0,0.12),<br/> &nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;8px&nbsp;8px&nbsp;rgba(0,0,0,0.12),<br/> &nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;16px&nbsp;16px&nbsp;rgba(0,0,0,0.12);<br/> }<br/>.about-content&nbsp;p{<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:&nbsp;30px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#fff;<br/> }<br/>.counter-content&nbsp;.counter-item:not(:last-of-type)&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:&nbsp;25px;<br/> }<br/>.counter-content&nbsp;h3{<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;22px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-weight:&nbsp;400;<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;block;<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#fff;<br/> }<br/>.counter-content&nbsp;span{<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;48px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-weight:&nbsp;400;<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;block;<br/> &nbsp;&nbsp;&nbsp;&nbsp;line-height:&nbsp;60px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin-left:&nbsp;40px;<br/> }<br/></code></pre>
-         <p class="mt-4">
-           Để dễ hình dung hơn bạn xem hình ảnh dưới đây nhé:
-         </p>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://css-tricks.com/"
+              title="CSS-TRICKS" target="_blank">Nguồn</a></p>
 
+
+          <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+            Smashing Magazine
+          </h2>
+          <p>
+            <b>Smashing Magazine</b> được thành lập vào năm 2006 tại Đức. Tuy nhiên bạn hoàn toàn yên tâm vì các bài
+            viết đều bằng tiếng anh hết nhé.
+            Nó là một trang blog chuyên viết về giải pháp cho các vấn đề hay gặp trong quá trình phát triển cũng như
+            thiết kế web.
+            Các bài viết được đúc kết từ kinh nghiệm làm việc thực tế của các bạn lập trình viên có chuyên môn cao trong
+            lĩnh vực do đó bạn có thể hoàn toàn yên tâm về chất lượng bài
+            viết nha. Một điểm mà mình cảm thấy thích ở website này là dù có nhiều bài viết đã cách đây 5 hay 6 năm
+            nhưng kiến thức của nó vẫn có thể hoàn toàn áp dụng
+            được cho trang web hiện tại.
+          </p>
           <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603631490/Count_up_HTML_CSS_JS/Count_up_3_mqwr2a.png"
-            alt="Count_up_3"
-           >
-           <h2 class="bg-primary mb-4  mt-4 text-white rounded p-2 shadow title-article-size">
-            Thiết Lập Style Cho Nút Và Icon Trong Count Up
-         </h2>
-         <p>
-           Tiếp theo chúng ta sẽ sử dụng thuộc tính một số thuộc tính  CSS cơ bản để thiết lập màu sắc, cở chữ, hiệu ứng hover... cho nút và icon 
-           thông qua đoạn mã bên dưới nhé:
-         </p>
-         <h4 class="text-primary">
-           CSS
-         </h4>
-         <pre><code class="css">.default-btn{<br/> &nbsp;&nbsp;&nbsp;&nbsp;border:&nbsp;2px&nbsp;solid&nbsp;#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;text-transform:&nbsp;capitalize;<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;15px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;50px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;line-height:&nbsp;50px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-weight:&nbsp;400;<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;inline-block;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;0&nbsp;35px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;letter-spacing:&nbsp;1px;<br/> }<br/>.default-btn:hover{<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;deepskyblue;<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;text-decoration:&nbsp;none;<br/> &nbsp;&nbsp;&nbsp;&nbsp;box-shadow:&nbsp;0px&nbsp;0px&nbsp;24px&nbsp;5px&nbsp;rgba(0,0,0,0.3);<br/> }<br/>.section-heading&nbsp;sspan{<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#fff;<br/> }<br/>.social&nbsp;.fa{<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;16px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin-right:&nbsp;2px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;42px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;42px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border:&nbsp;2px&nbsp;solid&nbsp;#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;text-align:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;line-height:&nbsp;40px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin-top:&nbsp;20px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;cursor:&nbsp;pointer;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;50px;<br/> }<br/></code></pre>
-         <p class="mt-4">
-           Và kết quả bạn xem bên dưới nhé:
-         </p>
-         <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-         data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603631763/Count_up_HTML_CSS_JS/Count_up_4_cspkgs.png"
-         alt="Count_up_4"
-        >
-        <h2 class="bg-primary mb-4  mt-4 text-white rounded p-2 shadow title-article-size">
-          Tạo Hiệu Ứng Động Số Tăng Dần Cho Count Up
-       </h2>
-       <p>
-         Phần cuối cùng chúng ta sẽ sử dụng đoạn mã Javascript để khởi tạo hiệu ứng chuyển động cho số liệu trong thư viện 
-         Counter-Up bằng đoạn mã bên dưới nhé:
-       </p>
-        <h4 class="text-primary">
-          Javascript
-        </h4>
-        <pre><code class="javascript">jQuery(document).ready(function&nbsp;($)&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;$('.counter').counterUp({<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delay:&nbsp;10,<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time:&nbsp;5000<br/> &nbsp;&nbsp;&nbsp;&nbsp;})<br/> })<br/></code></pre>
-        <p class="mt-4">
-          Lưu ý là bạn phải đặt đoạn mã nằm cuối cùng trong trang web (Sau các đường dẫn CDN của thư viện) nhé!. Và dưới đây là kết quả cuối cùng:
-        </p>
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1603632296/Count_up_HTML_CSS_JS/tao-count-up_lZLZ8oe1_wthosl.mp4" allowfullscreen></iframe>
-        </div>
-        <p class="mt-4">
-          Và dưới đây là dự án trên Codepen nhé!
-        </p>
-        <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="haycuoilennao19" data-slug-hash="LYZWPdV" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Tạo Count Up">
-          <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/LYZWPdV">
-          Tạo Count Up</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
-          on <a href="https://codepen.io">CodePen</a>.</span>
-        </p>
-        <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-        <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://codepen.io/haycuoilennao19/pen/LYZWPdV" target="_blank">Nguồn</a></p>
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603716211/Blog_Danh_Cho_Lap_Trinh_Vien/Smashing_Magazine_rmxtxu.png"
+            alt="Smashing Magazine">
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://www.smashingmagazine.com/"
+              title="Smashing Magazine" target="_blank">Nguồn</a></p>
+
+
+          <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+            Codrops
+          </h2>
+          <p>
+            <b>Codrops</b> là trang web giúp bạn có thể dễ dàng theo dõi những cách thiêt kế web đang thịnh hành hiện
+            nay với các
+            ví dụ và bài viết rất hay. Điểm mình cảm thấy thích ở trang này là chúng ta có thể thực hành viết mã và áp
+            dụng
+            các thư viện CSS thông dụng
+            để tạo hiệu ứng cho trang web của mình.<br />
+            Ngoài ra nó còn có bộ sưu tập các bài viết hay về thiết kế phát triển web từ cộng động lập trình viên trên
+            thế giới và thường được xuất bản mỗi tuần một lần
+            (bây giờ đã là collecttive #629 rồi nhé).
+          </p>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603717200/Blog_Danh_Cho_Lap_Trinh_Vien/Codrops_nmv0ze.png"
+            alt="Codrops">
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" title="Codrops"
+              href="https://tympanus.net/codrops/" target="_blank">Nguồn</a></p>
+
+
+          <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+            SitePoint
+          </h2>
+          <p>
+            <b>SitePoint </b> là một trang web được thành lập bởi Mark Harbottle và Matt Mickiewicz vào năm 1999.
+            Với mục đích chính là chia sẻ niềm đam mê và kiến thức cho tất cả lập trình viên trên toàn thế giới.
+            Trang web này có chủ đề rất đa dạng như là HTML, CSS, JavaScript, Wordpress, Mobile... do đó bạn có thể hoàn
+            toàn yên tâm sẽ tìm thấy bài viết phù hợp với mình nha. <br />
+            Ngoài ra nó còn có diễn đàn giúp bạn có giải đáp những thắc mắc của mình và một thư viện gới thiệu những
+            quyển sách hay dành cho lập trình viên nữa nhé!
+          </p>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603717851/Blog_Danh_Cho_Lap_Trinh_Vien/SitePoint_rfqiko.png"
+            alt="SitePoint ">
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" title="SitePoint"
+              href="https://www.sitepoint.com/blog/" target="_blank">Nguồn</a></p>
+
+
+
+          <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+            David Walsh
+          </h2>
+          <p>
+            <b>David Walsh</b> là một trang blog của tác giả David Walsh (một senior developer tại Mozilla) chuyên viết
+            về các thủ thuật dành cho ngôn ngữ HTML, CSS, Javascript...
+            Ở đây bạn có thể dễ dàng tìm thấy các đoạn mã hữu ích
+            giúp giảm thời gian cũng như công sức viết mã cho trang web (đặc biệt là Javascript). Theo mình thấy
+            thì những kiến thức từ tác giả có tính áp dụng rất cao vào thực tế thông qua việc đặt vấn đề, đưa ra đoạn mã
+            , lời giải thích và cuối cùng là đoạn demo cho đoạn code đó.
+          </p>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603718746/Blog_Danh_Cho_Lap_Trinh_Vien/David_Walsh_nx1nkr.png"
+            alt="David Walsh">
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" title="David Walsh"
+              href="https://davidwalsh.name/" target="_blank">Nguồn</a></p>
+
+
+          <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+            HONGKIAT
+          </h2>
+          <p>
+            <b>HONGKIAT</b> là một website tổng hợp hầu như tất cả các lĩnh vực về công nghệ như là lập trình, thiết kế,
+            marketing, thủ thuật...
+            Ở đây bạn có thể dễ dàng tìm kiếm được các bài viết tổng hợp các công cụ, thư viện hay dành cho thiết kế,
+            phát triển web hoặc các thủ thuật mẹo
+            giúp quá trình xây dựng trang web được nhanh chóng và dễ dàng hơn.
+          </p>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603719180/Blog_Danh_Cho_Lap_Trinh_Vien/HONGKIAT_im3ddl.png"
+            alt="HONGKIAT">
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" title="HONGKIAT"
+              href="https://www.hongkiat.com/blog/design-dev/" target="_blank">Nguồn</a></p>
+
+
+
+          <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+            Speckyboy
+          </h2>
+          <p>
+            <b>Speckyboy</b> được thành lập vào tháng 100 năm 2007 với mục đích chính là cung cấp các bài viết về xu
+            hướng thiết kế web đang hot hiện nay.
+            Thật sự ở đây có rất nhiều bài tổng hợp chất lượng về CSS và Javascript như là công cụ css, css grid, hiệu
+            ứng chuyển động,
+            hiệu ứng hình ảnh, thư viện javascript được sử dụng nhiều nhất...
+          </p>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603720136/Blog_Danh_Cho_Lap_Trinh_Vien/Speckyboy_qutlgx.png"
+            alt="Speckyboy">
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" title="Speckyboy" href="https://speckyboy.com/"
+              target="_blank">Nguồn</a></p>
+
+
+
+          <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+            Tutorialzine
+          </h2>
+          <p>
+            <b>Tutorialzine</b> là một website chuyên về các bài viết tổng hợp các thư viện, công cụ, thủ thuật hay dành
+            cho
+            lập trình, phát triển và thiết kế web. Thông thường một tháng sẽ có bài bài tổng hợp về các thư viện và công
+            cụ nhé!<br />
+            Dù đã lâu chưa cập nhật bài viết nhưng mình tin bạn sẽ có thể tìm kiếm được nhiều công cụ hay và miễn phí
+            cho công việc thiết kế web của mình.
+
+          </p>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603720573/Blog_Danh_Cho_Lap_Trinh_Vien/Tutorialzine_neprhw.png"
+            alt="Tutorialzine">
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" title="Tutorialzine"
+              href="https://tutorialzine.com/" target="_blank">Nguồn</a></p>
+
+
+          <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+            Scotch
+          </h2>
+          <p>
+            <b>Scotch</b> là trang web được thành lập bởi Chris on Code và Nick Cerminara với mục đích chia sẻ những
+            kiến thức hay về
+            phát triển web cho các bạn lập trình viên. Theo mình thấy, ở đây bài viết thường tập trung vào các công nghệ
+            đang được sử dụng
+            thịnh hành cho trang web hiện nay như là React, Vue, Angular, Node, Nextjs... Do đó đây sẽ là một trang web
+            rất hữu ích nếu bạn đang muốn học hỏi
+            những công nghệ mới để phát triển thêm cho trang web của mình.
+          </p>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603721148/Blog_Danh_Cho_Lap_Trinh_Vien/Scotch_zt5eva.png"
+            alt="Scotch">
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" title="Scotch" href="https://scotch.io/"
+              target="_blank">Nguồn</a></p>
+
+          <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+            CSS Weekly
+          </h2>
+          <p>
+            <b>CSS Weekly</b> là trang web tổng hợp bài viết về những công cụ, thông tin, kiến thức liên quan đến CSS
+            được phát triển bởi nhiều lập trình viên trên thế giới. Điểm đặc biệt mình thì ở website này là mức độ cập
+            nhật bài viết
+            rất tốt. Hầu như tất cả tuần nào cũng có một bài viết tổng hợp.
+          </p>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603721806/Blog_Danh_Cho_Lap_Trinh_Vien/CSS_Weekly_zkpbga.png"
+            alt="CSS Weekly">
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" title="CSS Weekly"
+              href="https://css-weekly.com/archives/" target="_blank">Nguồn</a></p>
+
+          <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+            Frontend Focus
+          </h2>
+          <p>
+            <b>Frontend Focus</b> là một trang web cũng giống như CSS Weekly, nó sẽ tổng hợp lại tất cả bài viết mới và
+            hay nhất về Front-end như
+            khóa học, code, nguồn lập trình, công cụ... HTML, CSS, Javascript. Ngoài ra bạn cũng có thể đăng ký email để
+            có thể luôn cập nhật các bài tổng hợp từ trang web này nha.
+          </p>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603722126/Blog_Danh_Cho_Lap_Trinh_Vien/Frontend_Focus_zk0vi6.png"
+            alt="Frontend Focus">
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" title="Frontend Focus"
+              href="https://frontendfoc.us/issues" target="_blank">Nguồn</a></p>
+
+          <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+            Creative Bloq
+          </h2>
+          <p>
+            <b>Creative Bloq </b> là một trang web chuyên về lĩnh vực design với mục đích chính là giúp bạn có thể tìm
+            được nhiều cảm hứng trong quá trình thiết kế
+            cũng như cập nhật những xu hướng design hot hiện nay.
+
+          </p>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603722600/Blog_Danh_Cho_Lap_Trinh_Vien/Creative_Bloq_ivkhmk.png"
+            alt="Creative Bloq ">
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" title="Creative Bloq "
+              href="https://www.creativebloq.com/tag/web-design" target="_blank">Nguồn</a></p>
+
+          <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+            CSS Author
+          </h2>
+          <p>
+            <b> CSS Author </b> được thành lập vào tháng 9 năm 2012. Với mục đích chính là cung cấp các tài nguyên hữu
+            ích dành cho
+            việc thiết kế và phát triển website như là các thiết kế PSD miễn phí, các bài viết hay, các khóa học cho
+            người mới bắt đầu,
+            xu hướng kỹ thuật web mới nhất... Đây được xem là một kho tài nguyên đồ sộ giúp bạn có thể tìm được nhiều
+            công cụ hay
+            cho công việc thiết kế và viết mã của mình.
+
+          </p>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603723135/Blog_Danh_Cho_Lap_Trinh_Vien/CSS_Author_uowxi5.png"
+            alt=" CSS Author ">
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" title=" CSS Author"
+              href="https://cssauthor.com/" target="_blank">Nguồn</a></p>
+
+          <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+            freeCodeCamp
+          </h2>
+          <p>
+            <b> freeCodeCamp </b> là một tổ chức phi lợi nhuận với mục tiêu là giúp bạn có thể học lập trình thông qua
+            những dự án thực tế
+            bằng cách tương tác với code. Theo mình thấy ngoài tính năng học code hữu ích thì ở đây còn là nơi chia sẻ
+            những kinh nghiệm rất hay
+            của chính các bạn đang học và trải nghiệm ở freeCodeCamp.<br />
+            Với hơn 6000 khóa học, có thể nói đây một kho tài liệu tri thức khổng lồ dành cho các bạn thích nghiên cứu
+            và học hỏi về việc phát triển web (đặc biệt dành cho các bạn mới bắt đầu).
+
+          </p>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603723904/Blog_Danh_Cho_Lap_Trinh_Vien/freeCodeCamp_sqwzb2.png"
+            alt="freeCodeCamp">
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" title="freeCodeCamp"
+              href="https://www.freecodecamp.org/news/" target="_blank">Nguồn</a></p>
+
+
+          <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+            Webdesigner News
+          </h2>
+          <p>
+            <b>Webdesigner News</b> là một trang web được thành lập với mục đích cung cấp nhiều bài viết hữu ích, cập
+            nhật xu hướng thiết kế và phát triển web từ các trang web, blog, mạng xã hội nổi tiếng về lập trình.
+            Nội dung của các bài viết thường tập trung về các đoạn code hữu ích, khóa học, tin tức, video, công cụ mới,
+            thủ thuật và mẹo thiết kế web…
+            Ngoài ra nếu bạn là một blogger thì cũng có thể chia sẻ bài viết của mình lên đây nhé!(Phải là tiếng anh thì
+            mới được chấp nhận nha)
+
+
+          </p>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603766198/Blog_Danh_Cho_Lap_Trinh_Vien/Webdesigner_News_rkc66k.png"
+            alt="Webdesigner News">
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" title="Webdesigner News"
+              href="https://www.webdesignernews.com/" target="_blank">Nguồn</a></p>
+
+
+          <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+            Codepen Blog
+          </h2>
+          <p>
+            Như bạn đã biết thì <b>Codepen</b> là nơi chúng ta có thể tìm thấy những đoạn mã hữu ích dành cho việc phát
+            triển web và là nơi để kiểm tra các đoạn mã của chương trình một cách nhanh chóng.
+            Ngoài ra nó cũng có một trang blog chuyên cung cấp các thông tin, sự kiện, mẹo , thủ thuật dành, những dự án
+            hay dành cho phát triển web.
+
+
+
+          </p>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603766363/Blog_Danh_Cho_Lap_Trinh_Vien/Codepen_Blog_vujmri.png"
+            alt="Codepen Blog">
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" title="Codepen Blog"
+              href="https://blog.codepen.io/" target="_blank">Nguồn</a></p>
+
+
+          <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+            Design Webkit
+          </h2>
+          <p>
+            <b>Design Webkit</b> là một website mình thường hay ghé thăm để tìm hiểu những xu hướng thiết kế hiện nay,.
+            Nó được chia ra thành nhiều chủ đề khác nhau do đó bạn có thể dễ dàng tìm thấy những thông tin mà mình mong
+            muốn như là WEB & TREND(Xu Hướng Web), FREEBIES(công cụ web), WEB DEVELOPMENT(Phát Triển Web)…
+
+
+          </p>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603766502/Blog_Danh_Cho_Lap_Trinh_Vien/Design_Webkit_lgnj7u.png"
+            alt="Design Webkit">
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" title="Design Webkit"
+              href="https://designwebkit.com/" target="_blank">Nguồn</a></p>
+
+          <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+            Webdesigner Depot
+          </h2>
+          <p>
+            <b>Webdesigner Depot</b> được thành lập từ năm 2008, với thời gian phát triển lâu đời trải qua nhiều sự biến
+            đổi không ngừng về công nghệ web. Do đó các bài viết ở đây thường được đúc kết từ các kinh nghiệm của các
+            nhà thiết kế web giàu kinh nghiệm và có độ tin cậy cao.
+            Điểm mình thích ở website này là ngoài vệc luôn cập nhật trend design thì nó còn có những bài viết tổng hợp
+            các công cụ hữu ích và miễn phí dành cho designer trong thiết kế web.
+
+
+
+          </p>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603766644/Blog_Danh_Cho_Lap_Trinh_Vien/Webdesigner_Depot_oytnox.png"
+            alt="Webdesigner Depot">
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" title="Webdesigner Depot"
+              href="https://www.webdesignerdepot.com/" target="_blank">Nguồn</a></p>
+
+
+
+          <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+            CodeCondo
+          </h2>
+          <p>
+            <b>CodeCondo</b> là một cộng đồng đầy khát vọng dành cho các nhà phát triển, nhà thiết kế và doanh nhân.
+            Codecondo nhằm mục đích khám phá, thu thập, cũng như chia sẻ tin tức hữu ích, hướng dẫn, thủ thuật, tài
+            nguyên và công cụ về thiết kế, phát triển và các chủ đề truyền cảm hứng khác.
+            Ngoài việc cung cấp các bài viết về kỹ thuật chuyên dành cho lập trình viên thì nó cũng có rất nhiều bài
+            viết về các vấn đề của developer hay gặp trong công việc, cuộc sống, các cách phát triển marketing bản thân,
+            các kinh nghiệm phát triển và kiếm tiền online từ web….
+
+
+
+          </p>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603766793/Blog_Danh_Cho_Lap_Trinh_Vien/CodeCondo_bdawuj.png"
+            alt="CodeCondo">
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" title="CodeCondo" href="https://codecondo.com/"
+              target="_blank">Nguồn</a></p>
+
+
+          <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+            A List Part
+          </h2>
+          <p>
+            <b>A List Part</b> được thành lập từ năm 1998, với các bài viết thường tập trung vào khám phá thiết kế, phát
+            triển và ý nghĩa của nội dung web, đặc biệt tập trung vào các tiêu chuẩn web và các phương pháp hay nhất.
+            Theo mình thấy các bài viết ở đây có tính chuyên môn rất cao giúp chúng ta có cái nhìn tổng quát hơn về các
+            vấn đề gặp phải trong quá trình lập trình và xây dựng trang web.
+
+
+
+          </p>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603766905/Blog_Danh_Cho_Lap_Trinh_Vien/A_List_Part_ecnm1f.png"
+            alt="A List Part">
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" title="A List Part"
+              href="https://alistapart.com/articles/" target="_blank">Nguồn</a></p>
+
+          <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+            Web Dev
+          </h2>
+          <p>
+            <b>Web Dev</b> là một trang blog được tạo bởi Google nên bạn cco1 thể hoàn toàn yên tâm về chất lượng nội
+            dung
+            ở đây nhé. Nó có rất nhiều thông tin hữu ích về các cách mà bạn có thể áp dụng những công nghệ mới cho
+            website của mình để tăng tốc độ tải trang, trải nghiệm người dùng, tăng khả năng seo cho trang web.
+
+
+
+          </p>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603767007/Blog_Danh_Cho_Lap_Trinh_Vien/Web_Dev_yq12ln.png"
+            alt="Web Dev">
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" title="Web Dev" href="https://web.dev/blog/"
+              target="_blank">Nguồn</a></p>
+
+
+          <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+            Web Design Tuts+
+          </h2>
+          <p>
+            <b>Web Design Tuts+</b> là một trang web mà bạn có thể tìm thấy
+            hướng dẫn miễn phí, hướng dẫn học tập và các khóa học trực tuyến để giúp bạn học thiết kế web, trải nghiệm người dùng, 
+            phát triển giao diện người dùng, thiết kế chuyển động cho trang web...
+            
+
+
+
+          </p>
+          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603767560/Blog_Danh_Cho_Lap_Trinh_Vien/Web_Design_Tuts_tzcbq7.png"
+            alt="Web Design Tuts+">
+
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" title="Web Design Tuts+"
+              href="https://webdesign.tutsplus.com/" target="_blank">Nguồn</a></p>
+
+
+
+
+
+
+
 
 
 
           <h4 class="mt-4 pt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
-          <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn kiến thức về việc tạo count up
+          <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những trang blog
             hữu ích
             dành cho việc phát triển, thiết kế web và nếu có thắc mắc gì cứ gửi email mình sẽ
             phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa
