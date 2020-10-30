@@ -40,24 +40,7 @@ app.use('/', indexRouter);
 app.use('/article', articlesRouter);
 app.use('/post', postsRouter);
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  // next(createError(404));
-  res.status(404);
-  if (req.accepts('html')) {
-    res.render('404page', { url: req.url });
-    return;
-  }
 
-  // respond with json
-  if (req.accepts('json')) {
-    res.send({ error: 'Not found' });
-    return;
-  }
-
-  // default to plain-text. send()
-  res.type('txt').send('Not found');
-});
 
 
 mongoose.connect('mongodb+srv://admin:Nhatlk@241095@cluster0-nrygr.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true,  useUnifiedTopology:
@@ -78,6 +61,23 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  // next(createError(404));
+  res.status(404);
+  if (req.accepts('html')) {
+    res.render('404page', { url: req.url });
+    return;
+  }
 
+  // respond with json
+  if (req.accepts('json')) {
+    res.send({ error: 'Not found' });
+    return;
+  }
+
+  // default to plain-text. send()
+  res.type('txt').send('Not found');
+});
 
 module.exports = app;

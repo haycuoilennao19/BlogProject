@@ -5,6 +5,7 @@ var Blog = require('../model/blog')
 var db = require('../model/mongo_connect');
 
 
+
 router.get('/0', function(req, res, next) {
     res.render('404page')
   })
@@ -30,7 +31,6 @@ router.get('/about', function(req, res, next) {
 router.get('/superplaceholer', function(req, res, next) {
     res.render('superplaceholer')
 })
-
 
 
 
@@ -70,6 +70,11 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/:page', function(req, res, next) {
+    if(isNaN(req.params.page)){
+        res.render('404page', { url: req.url });
+        return;
+    }
+  
     var perpage = 6;
     var page = req.params.page || 1
     Blog
@@ -79,6 +84,7 @@ router.get('/:page', function(req, res, next) {
         .limit(perpage)
         .exec(function(err, products) {
             Blog.countDocuments().exec(function(err, count) {
+               
                 if(err) return next(err)
                 products.forEach(function (product) { 
                     if(product.file.includes(".jpg")){
