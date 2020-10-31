@@ -65,8 +65,11 @@ router.get("/css", function(req, res) {
 
 router.get('/css/:page', function(req, res, next) {
     if(isNaN(req.params.page)){
-        res.render('404page', { url: req.url });
-        return;
+        res.status(404)
+        if (req.accepts('html')) {
+            res.render('404page', { url: req.url });
+            return;
+          }
     }
     var perpage = 6;
     var page = req.params.page || 1;
@@ -129,8 +132,11 @@ router.get("/html", function(req, res) {
 
 router.get('/html/:page', function(req, res, next) {
     if(isNaN(req.params.page)){
-        res.render('404page', { url: req.url });
-        return;
+        res.status(404)
+        if (req.accepts('html')) {
+            res.render('404page', { url: req.url });
+            return;
+          }
     }
     var perpage = 6;
     var page = req.params.page || 1;
@@ -194,8 +200,11 @@ router.get("/Javascript", function(req, res) {
 
 router.get('/Javascript/:page', function(req, res, next) {
     if(isNaN(req.params.page)){
-        res.render('404page', { url: req.url });
-        return;
+        res.status(404)
+        if (req.accepts('html')) {
+            res.render('404page', { url: req.url });
+            return;
+          }
     }
     var perpage = 6;
     var page = req.params.page || 1;
@@ -258,8 +267,11 @@ router.get("/Resource", function(req, res) {
 
 router.get('/Resource/:page', function(req, res, next) {
     if(isNaN(req.params.page)){
-        res.render('404page', { url: req.url });
-        return;
+        res.status(404)
+        if (req.accepts('html')) {
+            res.render('404page', { url: req.url });
+            return;
+          }
     }
     var perpage = 6;
     var page = req.params.page || 1

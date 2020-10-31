@@ -71,8 +71,11 @@ router.get('/', function(req, res, next) {
 
 router.get('/:page', function(req, res, next) {
     if(isNaN(req.params.page)){
-        res.render('404page', { url: req.url });
-        return;
+        res.status(404)
+        if (req.accepts('html')) {
+            res.render('404page', { url: req.url });
+            return;
+          }
     }
   
     var perpage = 6;
