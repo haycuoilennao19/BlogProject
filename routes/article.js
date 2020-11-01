@@ -357,6 +357,7 @@ router.get("/:slug", function(req, res) {
             res.render("article", {article: data, dateModified: dateModified})
         }
         else{
+            res.status(404)
             res.render('404page')
         }
     })
