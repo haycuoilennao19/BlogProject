@@ -17,19 +17,26 @@
   <meta name="description"     content="Nơi bạn có thể tìm thấy các nguồn lập trình cho việc phát triển web như là HTML, CSS, Javascript, Bootstrap, Nguồn Lập Trình, Thiết Kế Web." />
   <link rel="icon"  type="image/x-icon"
   href="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586594935/logo-via-logohub_2_a9ubsa.png">
-  <meta property="og:image"
-    content="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576511394/Niemvuilaptrinh_jgc0rn.png">
-  <meta property="og:description"
-    content="Nơi bạn có thể tìm thấy các nguồn lập trình cho việc phát triển web như là HTML, CSS, Javascript, Bootstrap, Nguồn Lập Trình, Thiết Kế Web.">
-  <meta property=" og:title" content="Niềm Vui Lập Trình">
+ 
+    <!--Twitter-->
 <meta name="twitter:card" content="Niềm Vui Lập Trình">
+<meta name="twitter:site" content="@ThiVitNht3" />
 <meta name="twitter:title" content="Niềm Vui Lập Trình - Chia Sẻ Kiến Thức HTML, CSS, Javascript">
 <meta name="twitter:description" content="HTML,CSS,JavaScript, Bootstrap 4, Front End Web">
 <meta name="twitter:image" content="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586594935/logo-via-logohub_2_a9ubsa.png">
+  <!--Twitter-->
 
-  <meta property="og:type" content="website" />
+  <!--Facebook-->
+<meta property="og:image"
+content="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576511394/Niemvuilaptrinh_jgc0rn.png">
+<meta property="og:description" content="HTML, CSS, Javascript, Bootstrap, Nguồn Lập Trình, Thiết Kế Web.">
+<meta property="og:title" content=" Nơi bạn có thể tìm thấy các nguồn lập trình cho phát triển và thiết kế web.">
+<meta property="og:site_name" content="Niềm Vui Lập Trình" />
+<meta property="og:url" content="https://www.niemvuilaptrinh.com/" />
+<meta property="og:type" content="website" /> 
+<!--Facebook-->
+
   <meta name="theme-color" content="#288cff">
-  <meta property="og:url" content="https://www.niemvuilaptrinh.com/" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <style>
     @media (min-width:1025px){.content-image{background-image:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_1024/library-438389_1920_lcj3ro.webp)}}@media (min-width:481px) and (max-width:1024px){.content-image{background-image:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_512/library-438389_1920_lcj3ro.webp)}}@media (max-width:480px){.content-image{display:none !important; }}
@@ -66,7 +73,7 @@ as="style" href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;
   <div class="jumbotron jumbotron-fluid image-slider"><div class="container-fluid"><div class="row"><div class="content-image"><div class="content"><blockquote class="blockquote"><div class="mb-2 title-article-size2">Tôi không có tài năng gì cả. Tôi chỉ đam mê hiểu biết</div> <footer class="blockquote-footer text-right text-white">Albert Einstein</footer></blockquote></div></div></div></div></div><div class="header-text text-center mt-5 "><div class="container-fluid"><div class="row"><div class="col-md-8"></div><div class="col-md-4"><div class="gcse-search"></div></div></div></div><h1><span class="header-content">Bài Viết Mới Nhất</span></h1></div>
     <!--Content-->
      <!--Content Main-->
-     <div class="container"><div class="row"> <% posts.forEach(function(post){ %><div class="col-md-12 mb-4 "><div class="row mt-4 card-blogpost shadow"><div class="col-md-6 card-blogpost-image"><div class="img-container"> <img sizes="(min-width: 30em) 28em, 100vw" srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_256/<%-post.file%> 256w, https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_512/<%-post.file%> 512w, https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_768/<%-post.file%> 768w, https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_1024/<%-post.file%> 1024w, https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_1280/<%-post.file%> 1280w" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_512/<%-post.file%>" alt="<%-post.title%>" /></div> <button type="button" class="<%-post.category%> button-card-category btn mt-2 mb-2 pl-2 pr-2"><%=post.category%></button><p class="text-date"><span class="icon-clock-o"></span> <%=post.date%></p></div><div class="col-md-6 shadow p-4 card-blogpost-container"><h2 class="card-title-article"><%=post.title%></h2><hr /><p class="card-text text-justify "><%-post.subtitle%></p><p class="mt-4 pt-4"> <a title="<%-post.title%>" class="button-blog-post" href="/article/<%-post.slug%>"> Tiếp tục đọc </a></p></div></div></div> <% }) %></div></div>
+     <div class="container"><div class="row"> <% posts.forEach(function(post){ %><div class="col-md-12 mb-4 "><div class="row mt-4 card-blogpost shadow"><div class="col-md-6 card-blogpost-image"><div class="img-container"> <img sizes="(min-width: 30em) 28em, 100vw" srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_256/<%-post.file%> 256w, https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_512/<%-post.file%> 512w, https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_768/<%-post.file%> 768w, https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_1024/<%-post.file%> 1024w, https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_1280/<%-post.file%> 1280w" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_512/<%-post.file%>" alt="<%-post.title%>" title="<%-post.title%>"/></div> <button type="button" class="<%-post.category%> button-card-category btn mt-2 mb-2 pl-2 pr-2"><%=post.category%></button><p class="text-date"><span class="icon-clock-o"></span> <%=post.date%></p></div><div class="col-md-6 shadow p-4 card-blogpost-container"><h2 class="card-title-article"><%=post.title%></h2><hr /><p class="card-text text-justify "><%-post.subtitle%></p><p class="mt-4 pt-4"> <a title="<%-post.title%>" class="button-blog-post" href="/article/<%-post.slug%>"> Tiếp tục đọc </a></p></div></div></div> <% }) %></div></div>
        <!--Content Main-->
 <div class="container">
 <div class="row justify-content-center">
