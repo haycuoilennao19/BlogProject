@@ -15,6 +15,9 @@ router.get('/0', function(req, res, next) {
 router.get('/sitemap.xml', function(req, res, next) {
     res.sendFile('/sitemap.xml');
  });
+ router.get('/ads.txt', function(req, res, next) {
+    res.sendFile('/ads.txt');
+ });
 
  router.get('/robots.txt', function(req, res, next) {
     res.sendFile('/robots.txt');
