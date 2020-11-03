@@ -36,42 +36,161 @@
             <div class="col-sm-12">
               <div class="text-content-article mt-5">
                 <p><b><i>
-                      Ngày hôm nay chúng ta sẽ cùng nhau đi vào tìm hiểu nhưng công cụ, thư viện hay và hữu ích dành cho việc  phát triển  và  thiết kế web (phần 1) nhé!
+                      Ngày hôm nay chúng ta sẽ cùng nhau đi vào tìm hiểu cách tạo sticky navigation (thanh tiêu đề) cho
+                      trang web bằng HTML, CSS và Javascript nhé!
                     </i></b>
                 </p>
                 <hr>
               </div>
             </div>
           </div>
-         
+
           <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
-            Day.js
+            Tạo Cấu Trúc HTML Cho Sticky Navigation
           </h2>
           <p>
-            <b>Day.js</b> là một thư viện Javascript được tối giản chỉ với dung lượng khoảng 2Kb.
-             Nó có thể làm việc được trên kể trình duyệt và NodeJs luôn nhé. 
-            Nó khá giống với moment js nên bạn hoàn toàn yên tâm khi chuyển sang sử dụng thư viẹn6 này nhé. 
-            Ngoài ra nó cũng có thể hạy hầu hết trên các trình duyệt phổ biến hiện nay nhưu là Chrome on Windows XP, IE 8, 9, and 10 on Windows 7, IE 11 on Windows 10, latest Firefox on Linux, and latest Safari on OSX 10.8 and 10.11.
-            
+            <p> Phần đầu tiên chúng ta sẽ đi vào tạo hai file là <code>index.html</code>(nơi lưu trữ HTML) và
+              <code>style.css</code>(nơi lưu trữ mã CSS). Sau đó liên kết chúng với CDN Google Font, 
+              Font Awesome v4.7, Jquery CDN  bằng  đoạn mã dưới đây nhé:</p>
+
           </p>
-        
+          <h3 class="text-primary">
+            HTML:
+          </h3>
+          <pre><code class="html">&#60;!DOCTYPE&nbsp;html&#62; &#60;html&nbsp;lang="en"&#62;<br/>&#60;head&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;charset="UTF-8"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;name="viewport"&nbsp;content="width=device-width,&nbsp;initial-scale=1.0"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;title&#62;Tạo&nbsp;Sticky&nbsp;Navbar&nbsp;Cho&nbsp;Trang&nbsp;Web&#60;/title&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;!--Liên&nbsp;Kết&nbsp;Font&nbsp;Awesome&nbsp;v4.7&nbsp;CDN--&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;!--Liên&nbsp;Kết&nbsp;Google&nbsp;Font&nbsp;Roboto--&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"&nbsp;rel="stylesheet"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;!--Liên&nbsp;Kết&nbsp;File&nbsp;style.css--&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="style.css"&#62;<br/> &#60;/head&#62;<br/>&#60;body&#62;<br/> &#60;!--Liên&nbsp;Kết&nbsp;CDN&nbsp;Jquery&nbsp;3.5.1--&#62;<br/> &#60;script&nbsp;src="https://code.jquery.com/jquery-3.5.1.min.js"&#62;&#60;/script&#62;<br/> &#60;/body&#62;<br/>&#60;/html&#62;<br/></code></pre>
 
-          <img class="img-thumbnail img-fluid shadow p-2 lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603939807/sach_khoa_hoc_lap_trinh_mien_phi/Learn_to_Code_HTML_CSS_uvogzh.png"
-            alt="Learn to Code HTML & CSS">
-          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://learn.shayhowe.com/html-css/"
-              title="Learn to Code HTML & CSS" target="_blank">Nguồn</a></p>
+          <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+            Thêm Các Thẻ HTML Cần Thiết Cho Sticky Navigation
+          </h2>
+          <p>
+            Sau khi đã thiết lập xong xuôi các thư viện cần thiết thì việc tiếp theo chúng ta sẽ đi vào tạo cấu trúc cho thanh tiêu đề  
+            thông qua các thẻ HTML cơ bản ở đoạn mã dưới đây nha:
+          </p>
+          <h3 class="text-primary">
+            HTML
+          </h3>
+          <pre><code class="html">&#60;div&nbsp;class="container"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;!--Header--&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;header&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;nav&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="logo"&#62;Niềm&nbsp;Vui&nbsp;Lập&nbsp;Trình&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="menu"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;ul&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;a&nbsp;href="#"&#62;&nbsp;&#60;i&nbsp;class="fa&nbsp;fa-home"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&nbsp;Trang&nbsp;Chủ&#60;/a&#62;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;a&nbsp;href="#"&#62;&#60;i&nbsp;class="fa&nbsp;fa-cogs"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&nbsp;Dịch&nbsp;Vụ&#60;/a&#62;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;a&nbsp;href="#"&#62;&#60;i&nbsp;class="fa&nbsp;fa-graduation-cap"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&nbsp;Dự&nbsp;Án&#60;/a&#62;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;a&nbsp;href="#"&#62;&nbsp;&#60;i&nbsp;class="fa&nbsp;fa-map"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&nbsp;Thông&nbsp;Tin&#60;/a&#62;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;a&nbsp;href="#"&#62;&#60;i&nbsp;class="fa&nbsp;fa-phone"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&nbsp;Liên&nbsp;Lạc&#60;/a&#62;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/ul&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/nav&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/header&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;!--Header--&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;!--Nội&nbsp;Dung--&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="noi_dung"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p&#62;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur...&#60;/p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p&#62;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur...&#60;/p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p&#62;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur...&#60;/p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p&#62;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur...&#60;/p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;!--Nội&nbsp;Dung--&#62;<br/> &#60;/div&#62;<br/></code></pre>
 
+          <p class="mt-4">
+            Và kết quả bạn xem hình ảnh bên dưới nhé:
+          </p>
 
+          <img class=" img-fluid  lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1604320803/cach_tao_sticky_navigation/sticky_navigation_1_1_pdcftf.png"
+            alt="Sticky Navigation 1">
          
 
+              <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+                Thiết Lập Các Style Cơ Bản Cho Thanh Tiêu Đề
+              </h2>
+              <p>
+                Trong phần này chúng ta sẽ sử dụng các thuộc tính CSS cơ bản để xác định vị trí, font chữ, hình nền... cho thanh tiêu đề 
+                bằng  đoạn mã dưới đây nhé:
+              </p>
+              <h3 class="text-primary">
+                CSS
+              </h3>
+              <pre><code class="css">html,&nbsp;body{<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> }<br/>body{<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-family:&nbsp;'Roboto',&nbsp;sans-serif;<br/> }<br/>header{<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;100vh;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;url(https://images.pexels.com/photos/142497/pexels-photo-142497.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)<br/> &nbsp;&nbsp;&nbsp;&nbsp;no-repeat&nbsp;50%&nbsp;50%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-size:&nbsp;cover;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-attachment:&nbsp;fixed;<br/> }<br/></code></pre>
+              <p class="mt-4">
+                Ở đoạn code trên mình có một lưu ý nhỏ là thuộc tính <code>background: url(...) no-repeat 50% 50%;</code> là cách viết tắt của:
+                <ul>
+                  <li><code>background-image: url(...);</code></li>
+                  <li><code>background-repeat: no-repeat;</code></li>
+                  <li><code>background-position: 50% 50%;</code></li>
+                </ul>
+              </p>
+              <p>
+                Ngoài ra còn có một  thuộc tính mà mình muốn nói tới là  <code> background-attachment: fixed;</code>. Nó  có nhiệm vụ cố định phần tử 
+                khi trang được scroll. Để hiểu rõ hơn bạn xem video sau nhé:
+              </p>
+
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1604322012/cach_tao_sticky_navigation/tao-sticky-navigation_ZxKLi3jv_p8gudq.mp4" allowfullscreen></iframe>
+              </div>
+
+              <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+                Thiết Lập Style Cho Header Và Logo Của Thanh Tiêu Đề
+              </h2>
+              <p>
+                Trong phần này chúng ta sẽ dùng CSS để chỉnh lại vị trí của thẻ <code>header</code> và trang trí lại logo trong navigation
+                bằng đoạn mã dưới đây nhé:
+              </p>
+
+              <h3 class="text-primary">
+                CSS
+              </h3>
+              <pre><code class="css">.noi_dung{<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;4em&nbsp;auto;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;20px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;line-height:&nbsp;30px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;text-align:justify;<br/> }<br/>.logo{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;fixed;<br/> &nbsp;&nbsp;&nbsp;&nbsp;float:&nbsp;left;<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;16px&nbsp;36px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-weight:&nbsp;bold;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;24px;<br/> }<br/>nav{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;fixed;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> }<br/>nav&nbsp;ul&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;list-style:&nbsp;none;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;rgba(0,0,0,&nbsp;0);<br/> &nbsp;&nbsp;&nbsp;&nbsp;overflow:&nbsp;hidden;<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;text-align:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;1s;<br/> }<br/></code></pre>
+
+              <p class="mt-4">
+                Và kết quả bạn xem hình ảnh bên dưới nhé:
+              </p>
+
+              <img class=" img-fluid  lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1604322444/cach_tao_sticky_navigation/sticky_navigation_2_2_faz8kw.png"
+              alt="Sticky Navigation 2">
 
 
+              <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+                Trang Trí Lại Đường Dẫn Trong Navigation
+              </h2>
+              <p class="mt-4">
+                Trong phần này chúng ta sẽ đi vào trang trí và thiết lập các đường dẫn hiển thị liền kề với nhau bằng thuộc tính <code>display: inline-block;</code> trong CSS
+                thông qua đoạn mã dưới đây nhé:
+              </p>
+              <h3 class="text-primary">
+                CSS
+              </h3>
+              <pre><code class="css">nav&nbsp;ul&nbsp;li{<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;inline-block;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;20px;<br/> }<br/>nav&nbsp;ul&nbsp;li&nbsp;a{<br/> &nbsp;&nbsp;&nbsp;&nbsp;text-decoration:&nbsp;none;<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;16px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;text-transform:&nbsp;uppercase;<br/> &nbsp;&nbsp;&nbsp;&nbsp;letter-spacing:&nbsp;&nbsp;2px;<br/> }<br/></code></pre>
+              <p class="mt-4">
+                Và kết quả bạn xem hình ảnh dưới đây nha:
+              </p>
 
+
+              <img class=" img-fluid  lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1604322897/cach_tao_sticky_navigation/sticky_navigation_3_2_cwcbmc.png"
+              alt="Sticky Navigation 3">
+              <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+                Thiết Lập Hiệu Ứng Cho Sticky Navigation
+              </h2>
+              <p>
+                Trong phần này chúng ta sẽ sử dụng Jquery để thay đổi background(màu nền) của sticky navigation khi người dùng scroll xuống trang nhé!
+              </p>
+              <h3 class="text-primary">
+                CSS:
+              </h3>
+              <pre><code class="css">nav.black&nbsp;ul{<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;#000;<br/> &nbsp;&nbsp;&nbsp;&nbsp;box-shadow:&nbsp;0&nbsp;1px&nbsp;1px&nbsp;rgba(0,0,0,0.12),<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;2px&nbsp;2px&nbsp;rgba(0,0,0,0.12),<br/>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;4px&nbsp;4px&nbsp;rgba(0,0,0,0.12),<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;8px&nbsp;8px&nbsp;rgba(0,0,0,0.12),<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;16px&nbsp;16px&nbsp;rgba(0,0,0,0.12);<br/> }<br/></code></pre>
+              <h3 class="text-primary mt-4">
+                Javascript
+              </h3>
+              <pre><code class="javascript">$(window).scroll(function&nbsp;()&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;($(window).scrollTop())&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$("nav").addClass("black");<br/> &nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;else&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$("nav").removeClass("black");<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> })<br/></code></pre>
+              <p class="mt-4">
+                Ở đây mình có một lưu ý nhỏ trong đoạn mã Jquery là:
+                <ul>
+                  <li>Khi người dùng scroll trang web xuống  thì class <code>.black</code> sẽ được tự động thêm vào phần tử <code>nav</code>. Ngược lại thì nó sẽ tự động xóa class <code>.black</code></li>
+                </ul>
+              </p>
+              <p>
+                Và kết quả cuối cùng bạn xem video dưới đây nhé:
+              </p>
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://res.cloudinary.com/dn4nxz7f0/video/upload/v1604323653/cach_tao_sticky_navigation/tao-sticky-navigation-1_DdxqFHdf_r7rzen.mp4" allowfullscreen></iframe>
+              </div>
+
+              <p class="mt-4">
+                Còn dưới đây là dự án trên Codepen nha:
+              </p>
+              <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="haycuoilennao19" data-slug-hash="jOrxvyW" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Tạo Sticky Navigation">
+                <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/jOrxvyW">
+                Tạo Sticky Navigation</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+              </p>
+              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+              <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://codepen.io/haycuoilennao19/pen/jOrxvyW"
+                title="Tạo Sticky Navigation" target="_blank">Nguồn</a></p>
 
           <h4 class="mt-4 pt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng
               kết: </b></h4>
-          <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những nơi học lập trình HTML, CSS, Javascript
+          <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn kiến thức tạo sticky navigation
             hữu ích
             dành cho việc phát triển, thiết kế web và nếu có thắc mắc gì cứ gửi email
             mình sẽ
