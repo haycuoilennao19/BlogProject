@@ -85,28 +85,246 @@
           </p>
 
           <img class="img-fluid lazyload"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1604375995/cach_viet_css_tot_hon/Normalizecss_npla4m.png"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1604383791/cach_viet_css_tot_hon/Normalizecss_2_xl4byg.png"
             alt="Normalize.css"
            >
-
-
-
-
-
-
-
-
-
-
-
+           
           <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article"
-              href="https://codepen.io/haycuoilennao19/pen/jOrxvyW" title="Tạo Sticky Navigation"
-              target="_blank">Nguồn</a></p>
+            href="http://necolas.github.io/normalize.css/" rel="noopener noreferrer" 
+            title="Normalize.css"
+            target="_blank">Nguồn</a></p>
+           <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+            Không Ghi Lại Các Thuộc Tính Trùng Lặp (Don't Repeat Yourself)
+          </h2>
+          <p>
+            Đây được xem là một yếu tố rất quan trọng và thường được sử dụng trong hầu hết trong các ngôn ngữ lập trình kể cả CSS. Với mục đích chính là làm giảm sự
+            lặp lại giữa các đoạn mã trong trang web. Để giúp bạn dễ hình dung thì mình sẽ tạo hai ví dụ về việc đặt thuộc tính CSS cho nút bằng   đoạn mã dưới đây nhé:
+          </p>
+
+          <h3 class="text-primary h5">
+            Đoạn Mã Chưa Tối Ưu
+          </h3>
+          <pre><code class="css">/*Thiết&nbsp;Lập&nbsp;Thuộc&nbsp;Tính&nbsp;Cho&nbsp;Nút&nbsp;Gửi*/<br/> .nut_gui&nbsp;{<br/> &nbsp;&nbsp;background:&nbsp;blue;<br/> &nbsp;&nbsp;color:&nbsp;white;<br/> &nbsp;&nbsp;border-radius:6px;<br/> &nbsp;&nbsp;padding:&nbsp;8px&nbsp;16px;<br/> &nbsp;&nbsp;font-size:&nbsp;16px;<br/> &nbsp;&nbsp;text-align:&nbsp;center;<br/> }<br/> /*Thiết&nbsp;Lập&nbsp;Thuộc&nbsp;Tính&nbsp;Cho&nbsp;Nút&nbsp;Nhận*/<br/> .nut_nhan&nbsp;{<br/> &nbsp;&nbsp;background:&nbsp;green;<br/> &nbsp;&nbsp;color:&nbsp;white;<br/> &nbsp;&nbsp;border-radius:&nbsp;6px;<br/> &nbsp;&nbsp;padding:&nbsp;8px&nbsp;16px;<br/> &nbsp;&nbsp;font-size:&nbsp;16px;<br/> &nbsp;&nbsp;text-align:&nbsp;center;<br/> }<br/></code></pre>
+          <p class="mt-4">
+            Như bạn thấy  ở đoạn mã phía trên thì giữa hai class <code>.nut_gui</code> và <code>.nut_nhan</code> sẽ có một số thuộc tính giống và khác nhau là:
+            <ul>
+              <li>Giống nhau: <code>color, border-radius, padding, font-size và text-align</code>.</li>
+              <li>Khác nhau: <code>background</code>.</li>
+            </ul>
+          </p>
+          <p>
+            Do có  nhiều điểm giống nhau như vậy  nên chúng ta nên sẽ sử dụng một class <code>nut</code> để gom tất cả các thuộc tính trùng nhau giữa hai class.
+            Như vậy sẽ giúp đoạn code có thể dễ dàng chỉnh sửa cũng như không lặp lại thông tin trong đoạn mã CSS. Để dễ hình dung hơn bạn xem đoạn mã sau khi đã được tối ưu nhé:
+          </p>
+          <h3 class="text-primary h5">
+            Đoạn Mã Đã Được Tối Ưu
+          </h3>
+          <pre><code class="css">/*Thiết&nbsp;lập&nbsp;thuộc&nbsp;tính&nbsp;cho&nbsp;nút&nbsp;tổng&nbsp;quát*/<br/> &nbsp;.nut{<br/> &nbsp;&nbsp;&nbsp;color:&nbsp;white;<br/> &nbsp;&nbsp;&nbsp;border-radius:&nbsp;6px;<br/> &nbsp;&nbsp;&nbsp;padding:&nbsp;8px&nbsp;16px;<br/> &nbsp;&nbsp;&nbsp;font-size:&nbsp;16px;<br/> &nbsp;&nbsp;&nbsp;text-align:&nbsp;center;<br/> &nbsp;}<br/>/*Thiết&nbsp;Lập&nbsp;Thuộc&nbsp;Tính&nbsp;Cho&nbsp;Nút&nbsp;Gửi*/<br/> &nbsp;.nut_gui&nbsp;{<br/> &nbsp;&nbsp;&nbsp;background:&nbsp;blue;<br/> &nbsp;}<br/>/*Thiết&nbsp;Lập&nbsp;Thuộc&nbsp;Tính&nbsp;Cho&nbsp;Nút&nbsp;Nhận*/<br/> &nbsp;.nut_nhan&nbsp;{<br/> &nbsp;&nbsp;&nbsp;background:&nbsp;green;<br/> &nbsp;}<br/></code></pre>
+          <p class="mt-4">
+            Và khi bạn muốn sử dụng cho phần tử html thì chỉ cần gọi  <code>&#60;button class="nut nut_gui"&#62;</code>.<br/> Tuy nhiên trong thực tế thì  sẽ 
+            có nhiều yếu tố phức tạp hơn do đó bạn nên kiểm tra thật kỹ các mối liên hệ, độ tương quan giữa các thuộc tính CSS của phần tử trước khi thực hiện việc tối ưu hóa nhé!
+          </p>
+
+          <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+            Tổ Chức Code CSS Rõ Ràng
+          </h2>
+          <p>
+          Thông thường khi chúng ta cần thiết lập style cho phần từ nào đó trong trang web 
+          thì ta sẽ thêm thuộc tính đó vào vị trí cuối cùng trong file CSS . Và tất nhiên  đoạn mã của bạn vẫn chạy 
+          hoàn toàn bình thường. <br/>
+          Tuy nhiên ở đây sẽ xảy ra một vấn đề nghiêm trọng là một thời gian sau khi bạn muốn tìm lại các thuộc tính CSS này thực sự rất khó khăn, tốn thời gian
+          vì không thể xác định được vị trí của thuộc tính đó. 
+   
+          </p>
+          <p>
+            Do đó bạn cần phải chia file CSS ra nhiều thành phần khác nhau thì sẽ dễ dàng quản lý hơn  như là:
+            <ul>
+              <li>Reset: Chỉ chứa các thuộc tính CSS  định dạng lại kiểu cho trình duyệt.</li>
+              <li>Header: Chỉ chứa các thuộc tính CSS cho header, logo, menu, màu sắc...</li>
+              <li>Body: Chỉ chứa các thuộc tính CSS cho nội dung, hình ảnh, video, độ rộng...</li>
+              <li>Footer: Chỉ chứa các thuộc tính CSS cho footer, đường dẫn liên kết...</li>
+              <li>Các phần khác của trang web...</li>
+            </ul>
+          </p>
+          <p>
+            Để bạn dễ hình dùng thì hãy xem đoạn mã dưới đây nhé:
+          </p>
+          <h3 class="text-primary h5">
+            Tổ Chức Code CSS:
+          </h3>
+          <pre><code class="css">/*Màu&nbsp;sắc*/<br/> .mau_den{<br/> &nbsp;&nbsp;color:&nbsp;#000;<br/> }<br/> .mau_trang{<br/> &nbsp;&nbsp;color:&nbsp;#fff;<br/> }<br/><br/> /*Font&nbsp;Chữ*/<br/> h1,h2,h3{<br/> &nbsp;&nbsp;font-family:&nbsp;'Roboto',&nbsp;sans-serif;<br/> }<br/> p{<br/> &nbsp;&nbsp;font-family:&nbsp;'Open&nbsp;Sans',&nbsp;sans-serif;<br/> }<br/></code></pre>
+
+          <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+            Sử Dụng  Shorthands Trong CSS
+          </h2>
+          <p>
+            Đây là một yếu tố giúp bạn có thể  giảm số lượng  dòng của đoạn mã CSS một cách hiệu quả cũng như làm giảm dung lượng của file xuống một cách đáng kể.
+            Shorthands là cách mà chúng ta ghi gộp nhiều thuộc tính CSS thành một dòng. Nó thường được áp dụng nhiều cho thuộc tính <code>margin, padding, 
+              background, border... 
+            </code>ở trong CSS. Để hiểu rõ hơn bạn xem đoạn mã  dưới đây nhé:
+          </p>
+
+        <h3 class="text-primary h5">
+          Cách Viết Thông Thường Của Thuộc Tính Border:
+        </h3>
+        <pre><code class="css">.doi_tuong{<br/> &nbsp;&nbsp;border-width:&nbsp;1px;<br/> &nbsp;&nbsp;border-style:&nbsp;solid:<br/> &nbsp;&nbsp;border-color:&nbsp;black;<br/> }<br/></code></pre>
+        <h3 class="text-primary mt-4 h5">
+          Cách Viết Tắt Của Thuộc Tính Border:
+        </h3>
+        <pre><code class="css">.doi_tuong{<br/> &nbsp;&nbsp;&nbsp;border:&nbsp;1px&nbsp;solid&nbsp;black;<br/> }<br/></code></pre>
+        <p class="mt-4">
+          Như bạn thấy thì code của hai đoạn mã trên vẫn chạy bình thường nhưng ở đoạn code thứ hai thì được viết ngắn gọn hơn. Nếu bạn muốn tìm hiểu 
+          thêm về phương pháp shorthands thì có thể truy cập <a href="https://www.htmldog.com/guides/css/intermediate/shorthand/" title="Shorthand Properties" target="_blank" rel="noopener noreferrer">ở đây nhé.</a>
+        </p>
+
+        <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+          Cách Đặt Trên Cho Class, Id Trong CSS
+        </h2>
+        <p>
+          Thông thường chúng ta sẽ đặt tên class và id tùy theo vào ý muốn của mình, miễn là nó khớp với tên class hay id trong phần tử HTML.
+          Tuy nhiên theo mình thấy thì tên trong CSS thì cần phải hội tụ được hai yếu tố là  gần giống với chữ viết con người (có thể hiểu được) và bao quát 
+          được chức năng của class hay id trong trang web.
+          <br/>
+          Để dễ hình dung chúng ta hãy đi vào ví dụ sau nhé:
+        </p>
+        <h3 class="text-primary h5">
+          Không Nên Đặt Tên Theo Dạng Này
+        </h3>
+        <pre><code class="css">.p&nbsp;{<br/> &nbsp;&nbsp;/*Thiết&nbsp;lập&nbsp;style...*/<br/> }<br/> .formThuNhat&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;/*Thiết&nbsp;lập&nbsp;style...*/<br/> }<br/></code></pre>
+        <p class="mt-4">
+          Chúng ta không nên dùng <b>tên của thẻ HTMLM</b> để đặt tên cho class hay id trong CSS nhé. Vì nó không nói lên được chức năng cũng như nhiệm vụ ở trong trang web.
+          Đồng thời có thể gây ra nhầm lẫn khi chúng ta gọi thẻ <code>&#60;p&#62;</code> trong CSS.<br/>
+          Tên class <code>formThuNhat</code> được viết theo dạng  <b>camel case</b>, thường được dùng để đặt tên cho các hàm ở trong ngôn ngữ lập trình.
+          Tuy nhiên khi ta đặt tên class hay id  dưới dạng này  trong CSS sẽ gây ra hiệu ứng  khó đọc do đó mình không khuyến khích sử dụng nha.
+        </p>
+        <p>
+          Nếu tên class hay id của bạn <b>có nhiều từ</b> thì có thể sử dụng dấu <b><code>-</code></b>  để ngăn cách như ví dụ dưới đây nha:
+        </p>
+        <h3 class="text-primary h5">
+           Nên Đặt Tên Theo Dạng Này
+        </h3>
+        <pre><code class="css">.noi-dung-tieu-de&nbsp;{<br/> &nbsp;&nbsp;/*Thiết&nbsp;lập&nbsp;style...*/<br/> }</code></pre>
+
+        <p class="mt-4">
+          Nếu bạn làm việc trên các dự án web lớn thì người ta thường sẽ đặt tên class theo một quy tắc đặt tên phổ biến được gọi là BEM (Block-Element-Modifier).
+          Nó giúp mọi người khi làm chung một dự án  có thể hiểu được quy tắc đặt tên CSS và nhiệm vụ của từng component trên trang web. Từ đó tạo ra sự nhất quán 
+          cho dự án.<br/>
+          Dưới đây là một ví dụ đặt tên theo BEM nhé:
+        </p>
+        <img class="img-fluid lazyload"
+        data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1604408431/cach_viet_css_tot_hon/bem_wmj0ym.png"
+        alt="Ví Dụ Bem"
+       >
+        <p class="mt-4">
+          Nếu bạn muốn tham khảo thêm về cách đặt tên theo quy tắc BEM thì có thể truy cập <a href="https://css-tricks.com/bem-101/" target="_blank" rel="noopener noreferrer" title="BEM">ở đây nha</a>.
+        </p>
+
+
+        <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+          Không Nên Sử Dụng Quá Nhiều <code>!important</code> tag
+        </h2>
+        <p>
+          Trong đoạn mã CSS, khi bạn thiết lập một thuộc tính nào đó mà nó <b>không chạy</b> thì chúng ta sẽ thường ngay lập tức gán vào thuộc tính đó 
+         tag  <code>!important</code>. Và thường kết quả sẽ thay đổi ngay lập tức. <br/>
+          Tuy nhiên khi bạn sử dụng quá nhiều <code>!important</code> tag cho thuộc tính CSS thì sẽ gây ra tình trạng khó bảo trì cho trang web đồng thời cũng phá vỡ 
+          quy tắc flow(dòng chảy) của các phần tử website. Do đó mình khuyên bạn nên hạn chế sử dụng tag <code>!important</code> ít nhất có thể.
+        </p>
+        <p>
+          Nếu bạn muốn tham khảo thêm trường hợp nào <b>nên và không nên sử dụng <code>!important</code> tag </b> thì có thể truy cập <a href="https://www.smashingmagazine.com/2010/11/the-important-css-declaration-how-and-when-to-use-it/" target="_blank" title="!important CSS Declarations" rel="noopener noreferrer">ở đây nhé!</a>
+        </p>
+
+        <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+          Thêm Comment Vào File CSS
+        </h2>
+        <p>
+          Sẽ thật dễ dàng hiểu được đoạn mã CSS khi bạn vừa mới viết và thiết lập cho trang web. Tuy nhiên sau một khoảng thời gian bạn quay lại và chợt nhận ra là 
+          mình thật sự không nhớ những thuộc tính này có nhiệm vụ gì ở trong trang web (mình rất hay bị như vậy).<br/>
+          Do đó mình đã tìm trên mạng và phát hiện ra một cách khá là hay đó là <b>hãy comment vào  mã CSS</b>. Việc làm này sẽ giúp bạn có thể tiết kiệm 
+          một khoảng thời gian sau này đấy. Đồng thời việc làm này sẽ giúp người khác khi duy trì hay chỉnh sửa dự án của bạn có thể 
+          hiểu rõ đoạn mã hơn từ đó cũng rút ngắn thời gian và công sức cho việc code hơn.
+        </p>
+        <h3 class="text-primary h5">
+          Cách Viết Comment Cho Code
+       </h3>
+        <pre><code class="css"> /*Comment&nbsp;trong&nbsp;CSS*/<br/> .ten-class&nbsp;{<br/> &nbsp;&nbsp;/*Thiết&nbsp;lập&nbsp;style&nbsp;CSS...*/<br/> }<br/></code></pre>
+
+       <p class="mt-4">
+        Ngoài việc miêu tả chức năng của class hay id nào đó thì cũng có một số trường hợp bạn nên viết comment CSS là:
+         <ul>
+           <li>Các bản sửa lỗi: Khi làm chung dự án, nếu bạn sửa chữa một thuộc tính nào đó thì chúng ta nên comment lại lý do và cách sửa ngay trên đoạn mã đó. (Để người khác khi nhìn vào đoạn mã sẽ hiểu hơn)</li>
+           <li>Nhắc nhở: Nhiều khi bạn chưa fix xong bug (do quá giờ làm việc) thì ta có thể comment ngay trên file để nhắc nhở chúng ta những việc cần phải làm vào ngày hôm sau.</li>
+          </ul>
+       </p>
+
+
+       <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+        Xác Định Thuộc Tính CSS Được Trình Duyệt Hỗ Trợ
+      </h2>
+      <p>
+        Đây là một yếu tố cũng quan trọng không kém khi bạn bắt đầu  thiết kế và phát triển dự án web. Hầu hết các trình duyệt sẽ hỗ trợ những thuộc tính 
+        CSS cơ bản và thông dụng.<br/>
+        Tuy nhiên cũng có một số thuộc tính thì chưa được các trình duyệt hỗ trợ hoặc nếu muốn sử dụng thì phải có tiền tố đi kèm. Do đó  bạn sẽ thấy thuộc tính 
+        CSS chạy được trên trình duyệt này nhưng lại không hiển thị trên trình duyệt kia.
+      </p>
+      <p>
+        Để giải quyết vấn đề trên thì bạn có thể kiểm tra thuộc tính CSS cho trình duyệt thông qua công cụ <b>Can Iuse</b>. Nó sẽ đưa ra tất cả thông tin về 
+        trình duyệt nào sẽ hỗ trợ và không hỗ trợ thuộc tính đó. Đồng thời cũng cấp thêm các giải pháp để bạn có thể sửa lỗi một cách nhanh chóng cho những trình duyệt không hỗ trợ thuộc tính đó.
+      </p>
+      <p>
+        Dưới đây là hình ảnh àm mình test về thuộc thuộc tính <code>CSS Grid Layout</code>:
+      </p>
+      <img class="img-fluid lazyload"
+      data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1604412418/cach_viet_css_tot_hon/caniuse_2_rjxbcr.png"
+      alt="Công Cụ Can I Use"
+     >
+
+     <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article"
+      href="https://caniuse.com/" rel="noopener noreferrer" 
+      title="Công Cụ Can I Use"
+      target="_blank">Nguồn</a></p>
+
+      <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+        Sử Dụng Flexbox và Grid Trong CSS
+      </h2>
+      <p>
+        Theo mình nghĩ thì chúng ta nên sử dụng flexbox hoặc grid để xây dựng bố cục trang web vì nó đã cung cấp rất nhiều tiện ích 
+        giúp bạn có thể responsive layout trên nhiều màn hình thiết bị khác nhau cũng như  đông thời giảm được 
+        sự phụ thuộc vào framework(Sử dụng framework sẽ gây ra tình trạng thời gian load website bị chậm).<br/>
+        Nếu bạn muốn tham khảo các nguồn học về flexbox  thì có thể truy cập <a href="https://www.niemvuilaptrinh.com/article/nhung-bai-viet-va-cong-cu-hay-danh-cho-flexbox-2020" title="flexbox" target="_blank" rel="noopener noreferrer">ở đây nhé!</a><br/>
+        Nếu bạn muốn tham khảo các nguồn học về grid  thì có thể truy cập <a href="https://www.niemvuilaptrinh.com/article/nhung-nguon-lap-trinh-giup-ban-hoc-css-grid-hieu-qua-va-de-dang-hon" title="grid" target="_blank" rel="noopener noreferrer">ở đây nhé!</a>
+      </p>
+      
+      <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+        Kiểm Tra Các Thuộc Tính CSS Không Sử Dụng
+      </h2>
+      <p>
+        Khi bạn phát triển trang web thì việc có nhiều thuộc tính CSS <b>không được sử dụng</b>  đến những vẫn được load ở trong file CSS của  trang web. Từ đó sẽ gây ra tình trạng 
+        làm chậm thời gian tải trang của bạn. <br/>
+        Do đó mình sẽ giới thiệu đến bạn một công cụ PurifyCSS giúp tối ưu đoạn mã CSS và loại bỏ những đoạn code CSS không được sử dụng đến trong trang web:
+      </p>
+
+  <img class="img-fluid lazyload"
+      data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1604413776/cach_viet_css_tot_hon/PurifyCSS_sc1ffq.png"
+      alt="PurifyCSS"
+     >
+
+     <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article"
+      href="https://purifycss.online/" rel="noopener noreferrer" 
+      title="Công Cụ PurifyCSS"
+      target="_blank">Nguồn</a></p>
+
+
+
+
+
+
+
+
 
           <h4 class="mt-4 pt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng
               kết: </b></h4>
-          <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn kiến thức tạo sticky navigation
-            hữu ích
+          <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn kiến thức giúp bạn viết CSS tốt hơn
+            
             dành cho việc phát triển, thiết kế web và nếu có thắc mắc gì cứ gửi email
             mình sẽ
             phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng hộ trang web để mình có
