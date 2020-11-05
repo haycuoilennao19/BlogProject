@@ -94,7 +94,7 @@ router.get('/css/:page', function(req, res, next) {
                     var subtitle = (product.subtitle).replace(/^(.{130}[^\s]*).*/, "$1");
                     product.subtitle = (subtitle + '...');
                 }); 
-                res.render('products-category',{posts: products, current:parseInt(page), pages: Math.ceil(count / perpage), category: category})
+                res.render('product-category-page',{posts: products, current:parseInt(page), pages: Math.ceil(count / perpage), category: category})
             })
         })
 })
@@ -161,7 +161,7 @@ router.get('/html/:page', function(req, res, next) {
                     var subtitle = (product.subtitle).replace(/^(.{130}[^\s]*).*/, "$1");
                     product.subtitle = (subtitle + '...');
                 }); 
-                res.render('products-category',{posts: products, current:parseInt(page), pages: Math.ceil(count / perpage), category: category})
+                res.render('product-category-page',{posts: products, current:parseInt(page), pages: Math.ceil(count / perpage), category: category})
             })
         })
 })
@@ -229,7 +229,7 @@ router.get('/Javascript/:page', function(req, res, next) {
                     var subtitle = (product.subtitle).replace(/^(.{130}[^\s]*).*/, "$1");
                     product.subtitle = (subtitle + '...');
                 }); 
-                res.render('products-category',{posts: products, current:parseInt(page), pages: Math.ceil(count / perpage), category: category})
+                res.render('product-category-page',{posts: products, current:parseInt(page), pages: Math.ceil(count / perpage), category: category})
             })
         })
 })
@@ -296,7 +296,7 @@ router.get('/Resource/:page', function(req, res, next) {
                     var subtitle = (product.subtitle).replace(/^(.{130}[^\s]*).*/, "$1");
                     product.subtitle = (subtitle + '...');
                 }); 
-                res.render('products-category',{posts: products, current:page, pages: Math.ceil(count / perpage), category: category})
+                res.render('product-category-page',{posts: products, current:page, pages: Math.ceil(count / perpage), category: category})
             })
         })
 })

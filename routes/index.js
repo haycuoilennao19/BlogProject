@@ -107,7 +107,7 @@ router.get('/:page', function(req, res, next) {
                     var subtitle = (product.subtitle).replace(/^(.{130}[^\s]*).*/, "$1");
                     product.subtitle = (subtitle + '...');
                 }); 
-                res.render('products',{posts: products, current:parseInt(page), pages: Math.ceil(count / perpage)})
+                res.render('product-page',{posts: products, current:parseInt(page), pages: Math.ceil(count / perpage)})
             })
         })
 })
