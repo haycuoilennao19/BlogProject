@@ -86,9 +86,44 @@ as="style" href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;
   <div class="jumbotron jumbotron-fluid image-slider"><div class="container-fluid"><div class="row"><div class="content-image"><div class="content"><blockquote class="blockquote"><div class="mb-2 title-article-size2">Tôi không có tài năng gì cả. Tôi chỉ đam mê hiểu biết</div> <footer class="blockquote-footer text-right text-white">Albert Einstein</footer></blockquote></div></div></div></div></div><div class="header-text text-center mt-5 "><div class="container-fluid"><div class="row"><div class="col-md-8"></div><div class="col-md-4"><div class="gcse-search"></div></div></div></div><h1><span class="header-content">Bài Viết Mới Nhất Về <%-category%></span></h1></div>
     <!--Content-->
 
-       <!--Main Content-->
-       <div class="container"><div class="row"> <% posts.forEach(function(post){ %><div class="col-md-12 mb-4 "><div class="row mt-4 card-blogpost shadow"><div class="col-md-6 card-blogpost-image"><div class="img-container"> <img sizes="(min-width: 30em) 28em, 100vw" srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_256/<%-post.file%> 256w, https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_512/<%-post.file%> 512w, https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_768/<%-post.file%> 768w, https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_1024/<%-post.file%> 1024w, https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_1280/<%-post.file%> 1280w" src="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_512/<%-post.file%>" alt="<%-post.title%>" title="<%-post.title%>" /></div> <button type="button" class="<%-post.category%> button-card-category btn mt-2 mb-2 pl-2 pr-2"><%=post.category%></button><p class="text-date"><span class="icon-clock-o"></span> <%=post.date%></p></div><div class="col-md-6 shadow p-4 card-blogpost-container"><h2 class="card-title-article"><%=post.title%></h2><hr /><p class="card-text text-justify "><%-post.subtitle%></p><p class="mt-4 pt-4"> <a title="<%-post.title%>" class="button-blog-post" href="/article/<%-post.slug%>"> Tiếp tục đọc </a></p></div></div></div> <% }) %></div></div>
- <!--Main Content-->
+       
+<!--Main Content-->
+<div class="container">
+	<div class="row"><% posts.forEach(function(post){ %>
+		<div class="col-md-12 mb-4 ">
+			<div class="row mt-4 card-blogpost shadow">
+				<div class="col-md-6 card-blogpost-image">
+					<div class="img-container">
+            <picture class="img-fluid image-article-blogpost lazyload">
+              <source srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_1024/<%-post.file%>" type="image/webp"" media="(min-width: 1024px)" />
+              <source srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_768/<%-post.file%>" type="image/webp"" media="(min-width: 768px)" />
+              <source srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_512/<%-post.file%>" type="image/webp"" media="(min-width: 512px)" />
+              <source srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_256/<%-post.file%>" type="image/webp"" media="(min-width: 256px)" />
+              <img srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_512/<%-post.file%>" type="image/webp""  alt="<%-post.title%>" title="<%-post.title%>"  />
+            </picture>
+						</div>
+						<button type="button" class="<%-post.category%> button-card-category btn mt-2 mb-2 pl-2 pr-2"><%=post.category%>
+						</button>
+						<p class="text-date">
+							<span class="icon-clock-o"></span><%=post.date%>
+						</p>
+					</div>
+					<div class="col-md-6 shadow p-4 card-blogpost-container">
+						<h2 class="card-title-article"><%=post.title%>
+						</h2>
+						<hr />
+						<p class="card-text text-justify "><%-post.subtitle%>
+						</p>
+						<p class="mt-4 pt-4">
+							<a title="<%-post.title%>" class="button-blog-post" href="/article/<%-post.slug%>"> Tiếp tục đọc 
+							</a>
+						</p>
+					</div>
+				</div>
+			</div><% }) %>
+		</div>
+	</div>
+	<!--Main Content-->
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-sm-6">

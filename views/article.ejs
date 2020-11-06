@@ -2,7 +2,7 @@
 <html  lang="vi">
 
 <head>
-  <link rel="preload" as="image" href="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_512/<%-article.file%>">
+ 
   <meta name="p:domain_verify" content="442f069b8455d6ba2c5b37e95431709b"/>
   <title><%=article.title%></title>
   <link rel="stylesheet" href="/stylesheets/bootstrap/bootstrap.min.css">
@@ -79,11 +79,15 @@ as="style" href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;
   <div class="container mt-5">
     <div class="row">
       <div class="col-lg-6">
-        <div class="img-container-article"> <img class="img-fluid image-article-blogpost lazyload"
-            sizes="(min-width: 30em) 28em, 100vw"
-            srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_256/<%-article.file%> 256w, https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_512/<%-article.file%> 512w, https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_768/<%-article.file%> 768w, https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_1024/<%-article.file%> 1024w, https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_1280/<%-article.file%> 1280w"
-            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_512/<%-article.file%>"
-            alt="<%-article.title%>" title="<%-article.title%>" /></div>
+        <div class="img-container-article"> 
+          <picture class="img-fluid image-article-blogpost lazyload">
+            <source srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_1024/<%-article.file%>" type="image/webp"" media="(min-width: 1024px)" />
+            <source srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_768/<%-article.file%>" type="image/webp"" media="(min-width: 768px)" />
+            <source srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_512/<%-article.file%>" type="image/webp"" media="(min-width: 512px)" />
+            <source srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_256/<%-article.file%>" type="image/webp"" media="(min-width: 256px)" />
+            <img srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_512/<%-article.file%>" type="image/webp"" alt="<%-article.title%>" title="<%-article.title%>" />
+          </picture>
+          </div>
       </div>
       <div class="col-lg-6">
         <h1 class="article-title-blog-post text-left pl-4 pr-4 pt-4"> <%=article.title%></h1>
