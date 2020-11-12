@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+  <link rel="preconnect" href="https://res.cloudinary.com">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link rel="preconnect" href="https://www.googleadservices.com">
+<link rel="preconnect" href="https://www.gstatic.com">
+<link rel="preconnect" href="https://connect.facebook.net">
+<link rel="preconnect" href="https://www.google-analytics.com">
   <meta name="p:domain_verify" content="442f069b8455d6ba2c5b37e95431709b"/>
   <link rel="canonical" href="https://www.niemvuilaptrinh.com/<%-current%>">
   <meta name="robots" content="index,follow" />
@@ -57,9 +63,9 @@ content="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576511394/Niemvuila
       href="https://fonts.gstatic.com"
       crossorigin />
 <link rel="preload"
-as="style" href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&family=Lato&family=Merriweather:wght@400;700&family=Montserrat:wght@400;500&family=Open+Sans:wght@400;600&family=Roboto:wght@400;500&display=swap">
+as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@400;500&display=swap">
 <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&family=Lato&family=Merriweather:wght@400;700&family=Montserrat:wght@400;500&family=Open+Sans:wght@400;600&family=Roboto:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@400;500&display=swap"
       media="print" onload="this.media='all'" />
       <script data-ad-client="ca-pub-8657971062505795" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
@@ -78,11 +84,11 @@ as="style" href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;
         <div class="row mt-4 card-blogpost shadow">
           <div class="col-md-6 card-blogpost-image">
             <div class="img-container">     <picture class="img-fluid image-article-blogpost lazyload">
-              <source srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_1024/<%-post.file%>" type="image/webp"" media="(min-width: 1024px)" />
-              <source srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_768/<%-post.file%>" type="image/webp"" media="(min-width: 768px)" />
-              <source srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_512/<%-post.file%>" type="image/webp"" media="(min-width: 512px)" />
+              <source srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_auto,w_1024/<%-post.file%>" type="image/webp" media="(min-width: 1024px)" />
+              <source srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_auto,w_768/<%-post.file%>" type="image/webp" media="(min-width: 768px)" />
+              <source srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_auto,w_512/<%-post.file%>" type="image/webp" media="(min-width: 512px)" />
 
-              <img srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_512/<%-post.file%>" type="image/webp""  alt="<%-post.title%>" title="<%-post.title%>"  />
+              <img srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_auto,w_512/<%-post.file%>" type="image/webp"  alt="<%-post.title%>" title="<%-post.title%>"  />
             </picture>
           </div> <button type="button"
               class="<%-post.category%> button-card-category btn mt-2 mb-2 pl-2 pr-2"><%=post.category%></button>

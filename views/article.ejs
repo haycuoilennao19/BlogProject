@@ -2,7 +2,12 @@
 <html  lang="vi">
 
 <head>
- 
+  <link rel="preconnect" href="https://res.cloudinary.com">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://www.googleadservices.com">
+  <link rel="preconnect" href="https://www.gstatic.com">
+  <link rel="preconnect" href="https://connect.facebook.net">
+  <link rel="preconnect" href="https://www.google-analytics.com">
   <meta name="p:domain_verify" content="442f069b8455d6ba2c5b37e95431709b"/>
   <title><%=article.title%></title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css" integrity="sha512-oc9+XSs1H243/FRN9Rw62Fn8EtxjEYWHXRvjS43YtueEewbS6ObfXcJNyohjHqVKFPoXXUxwc+q1K7Dee6vv9g==" crossorigin="anonymous" />
@@ -59,9 +64,9 @@
       href="https://fonts.gstatic.com"
       crossorigin />
 <link rel="preload"
-as="style" href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&family=Lato&family=Merriweather:wght@400;700&family=Montserrat:wght@400;500&family=Open+Sans:wght@400;600&family=Roboto:wght@400;500&display=swap">
+as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@400;500&display=swap">
 <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&family=Lato&family=Merriweather:wght@400;700&family=Montserrat:wght@400;500&family=Open+Sans:wght@400;600&family=Roboto:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@400;500&display=swap"
       media="print" onload="this.media='all'" />
       <script data-ad-client="ca-pub-8657971062505795" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
@@ -79,11 +84,11 @@ as="style" href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;
       <div class="col-lg-6">
         <div class="img-container-article"> 
           <picture class="img-fluid image-article-blogpost lazyload">
-            <source srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_1024/<%-article.file%>" type="image/webp"" media="(min-width: 1024px)" />
-            <source srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_768/<%-article.file%>" type="image/webp"" media="(min-width: 768px)" />
-            <source srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_512/<%-article.file%>" type="image/webp"" media="(min-width: 512px)" />
+            <source srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_auto,w_1024/<%-article.file%>" type="image/webp" media="(min-width: 1024px)" />
+            <source srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_auto,w_768/<%-article.file%>" type="image/webp" media="(min-width: 768px)" />
+            <source srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_auto,w_512/<%-article.file%>" type="image/webp" media="(min-width: 512px)" />
            
-            <img srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_70,w_512/<%-article.file%>" type="image/webp"" alt="<%-article.title%>" title="<%-article.title%>" />
+            <img srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_auto,w_512/<%-article.file%>" type="image/webp" alt="<%-article.title%>" title="<%-article.title%>" />
           </picture>
           </div>
       </div>
