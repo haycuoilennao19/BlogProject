@@ -36,9 +36,8 @@
             <div class="col-sm-12">
               <div class="text-content-article mt-5">
                 <p><b><i>
-                      Ngày hôm nay chúng ta sẽ cùng nhau đi vào tìm hiểu những web hosting miễn phí dành cho front-end
-                      và
-                      backend được sử phổ biến trong phát triển website nhé!
+                      Ngày hôm nay chúng ta sẽ cùng nhau đi vào tìm hiểu cách tạo trang đăng nhập cho trang web bằng
+                      HTML CSS nhé!
                     </i></b>
                 </p>
                 <hr>
@@ -48,212 +47,168 @@
 
 
           <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
-            Web Hosting Là Gì?
+            Tạo Cấu Trúc Cho Login Page
+          </h2>
+          <p> Phần đầu tiên chúng ta sẽ đi vào tạo hai file là <code>index.html</code>(nơi lưu trữ HTML) và
+            <code>style.css</code>(nơi lưu trữ mã CSS). Sau đó liên kết chúng với Font Awesome v4.7 và
+            Google Font thông qua đoạn mã dưới đây nhé:</p>
+          <h3 class="text-primary">
+            HTML
+          </h3>
+          <pre><code class="html">&#60;!DOCTYPE&nbsp;html&#62;<br/> &#60;html&nbsp;lang="en"&#62;<br/> &#60;head&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;charset="UTF-8"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;name="viewport"&nbsp;content="width=device-width,&nbsp;initial-scale=1.0"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;title&#62;Tạo&nbsp;Trang&nbsp;Login&#60;/title&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="style.css"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="preconnect"&nbsp;href="https://fonts.gstatic.com"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"&nbsp;rel="stylesheet"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"&#62;<br/>&#60;/head&#62;<br/>&#60;body&#62;<br/>&#60;/body&#62;<br/>&#60;/html&#62;<br/></code></pre>
+
+          <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+            Thêm Các Thẻ Cần Thiết Cho Trang Đăng Nhập
           </h2>
           <p>
-            <b>Web Hosting</b> là một dịch vụ cho phép bạn có thể đăng trang web của mình lên trên Internet.
-            Khi người dùng muốn xem trang web của bạn thì họ chỉ cần gõ địa chỉ của trang(domain name) trên trình duyệt.
-            Lúc này máy chủ sẽ tiếp nhận thông tin, xử lý và trả lại kết quả cho người dùng.
+            Trong phần này chúng ta sẽ thêm các thẻ HTML cần thiết để tạo trang login bằng đoạn mã dưới đây nhé:
           </p>
-          <div class="text-center">
-            <img class="lazyload w-75"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/web_hosting_mien_phi/vi_du_web_hosting.jpg"
-            alt="Ví Dụ Về Web Hosting">
-          </div>
-        
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Những Loại Web Hosting Phổ Biến</h3>
-          </div>
-          <p>
-            Thông thường  các dự án web sẽ thường khác nhau về quy mô, số lượng khách hàng truy cập, mức độ yêu cầu khả năng xử lý của máy chủ... 
-            do đó người ta sẽ <b>chia web hosting thành 6 dạng chính</b> để phù hợp với mục đích, nhu cầu của khách hàng :
+          <h3 class="text-primary">
+            HTML
+          </h3>
+          <pre><code class="html">&#60;section&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;!--Bắt&nbsp;Đầu&nbsp;Phần&nbsp;Hình&nbsp;Ảnh--&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="img-bg"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;img&nbsp;src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/tao_trang_dang_nhap/hinh_anh_minh_hoa.jpg"&nbsp;alt="Hình&nbsp;Ảnh&nbsp;Minh&nbsp;Họa"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;!--Kết&nbsp;Thúc&nbsp;Phần&nbsp;Hình&nbsp;Ảnh--&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;!--Bắt&nbsp;Đầu&nbsp;Phần&nbsp;Nội&nbsp;Dung--&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="noi-dung"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="form"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h2&#62;Trang&nbsp;Đăng&nbsp;Nhập&#60;/h2&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;form&nbsp;action=""&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="input-form"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;span&#62;Tên&nbsp;Người&nbsp;Dùng&#60;/span&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;input&nbsp;type="text"&nbsp;name=""&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="input-form"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;span&#62;Mật&nbsp;Khẩu&#60;/span&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;input&nbsp;type="password"&nbsp;name=""&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="nho-dang-nhap"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;label&#62;&#60;input&nbsp;type="checkbox"&nbsp;name=""&#62;&nbsp;Nhớ&nbsp;Đăng&nbsp;Nhập&#60;/label&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="input-form"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;input&nbsp;type="submit"&nbsp;value="Đăng&nbsp;Nhập"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="input-form"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p&#62;Bạn&nbsp;Chưa&nbsp;Có&nbsp;Tài&nbsp;Khoản?&nbsp;&#60;a&nbsp;href="#"&#62;Đăng&nbsp;Ký&#60;/a&#62;&#60;/p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/form&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h3&#62;Đăng&nbsp;Nhập&nbsp;Bằng&nbsp;Mạng&nbsp;Xã&nbsp;Hội&#60;/h3&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;ul&nbsp;class="icon-dang-nhap"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;i&nbsp;class="fa&nbsp;fa-facebook"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;i&nbsp;class="fa&nbsp;fa-google"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;li&#62;&#60;i&nbsp;class="fa&nbsp;fa-twitter"&nbsp;aria-hidden="true"&#62;&#60;/i&#62;&#60;/li&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/ul&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;!--Kết&nbsp;Thúc&nbsp;Phần&nbsp;Nội&nbsp;Dung--&#62;<br/> &#60;/section&#62;<br/></code></pre>
+          <p class="mt-4">
+            Kết quả bạn xem hình ảnh dưới đây nhé:
           </p>
-          <ul>
-            <li><b>Shared Web Hosting</b>: Trang web của bạn được <b>lưu trữ trên cùng một máy chủ với các website khác</b>. Điểm mạnh của loại này 
-            là chi phí rẻ thường phù hợp với các blog cá nhân, doanh nghiệp vừa và nhỏ.</li>
-            <li><b>Virtual private servers (VPS)</b>: Cũng dùng chung một máy chủ nhưng nó sẽ cung cấp thêm cho bạn  máy chủ ảo riêng  
-              với toàn quyền truy cập để cấu hình cho trang web. Theo mình thấy thì loại này bảo mật tốt hơn so với <b>Shared Web Hosting</b>. 
-            Nếu website của bạn đã phát triển đủ lớn và nhiều lượng truy cập thì mình khuyên nên sử dụng VPS để làm hosting cho website.</li>
-            <li>
-              <b>Dedicated Hosting</b>: Nó cung cấp cho bạn máy chủ chuyên dụng mà <b>không chia sẻ máy chủ</b> với các trang web khác.
-              Bạn có toàn quyền kiểm soát như tích hợp những ứng dụng thích hợp mà bạn thích, thực hiện thay đổi với các hệ điều hành, 
-              cấu hình lại máy chủ... Tuy nhiên giá thành để sử dụng thì hơi cao  và cần phải kiến thức tốt để thiết lập dịch vụ cho máy chủ.
-            </li>
-            <li>
-              <b>Cloud Hosting</b>: là máy chủ ảo được chạy trong môi trường <b>điện toán đám mây</b> và giải pháp có thể nói là đang <b>hot</b>
-              ở thời điểm hiện tại. Điểm mình cực kỳ thích ở dịch vụ này là nếu máy chủ gặp sự cố thì sẽ được tự động chuyển sang máy chủ khác 
-              ngay lập tức, nó giúp người dùng lúc nào  có thể truy cập trang web của bạn bất kỳ thời điểm nào. Đồng thời <b>chi phí</ sẽ được tính dựa trên những gì mà 
-              <b>trang web  sử dụng</b>.
-   
-            </li>
-          </ul>
-          <div class="text-center">
-            <img class="lazyload w-75"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/web_hosting_mien_phi/web_hosting_pho_bien.jpg"
-            alt="Những Loại Web Hosting Miễn Phí">
-          </div>
+          <img class="img-fluid lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/tao_trang_dang_nhap/trang_login_%281%29.png"
+            alt="Trang Login 1">
 
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Những Điều Cần Lưu Ý Khi Chọn Hosting</h3>
-          </div>
-          <p>
-            Mình cũng đã từng rất đắn đo suy nghĩ khi phải lựa chọn hosting nào để sử dụng cho website vì nó sẽ ảnh hướng rất lớn đến 
-            sự phát triển của trang web sau này. Do đó mình cũng có tìm hiểu trên mạng và rút ra được các yếu tố bạn nên cân nhắc để đánh giá 
-            có nên sử dụng hosting của dịch vụ nào đó hay không:
-            
-          </p>
-            <h4 class="text-white bg-success p-2 h6">
-              <b>Tốc Độ</b>
-            </h4>
-            <p>
-              Theo Google thì tốc độ tải trang web cũng được xem là một yếu tố <b>tác động đến SEO</b> vì nó sẽ tác động trực tiếp tới trải nghiệm của người dùng.
-              Theo báo cáo thì nếu thời gian tải của trang web <b>lớn hơn 2s</b> thì sẽ khiến khách hàng dễ dàng rời đi. Do đó bạn nên cân nhắc kỹ về tốc độ của 
-              dịch vụ máy chủ đang cung cấp.
-            </p>
-            <p>
-              Để ước lượng tốc độ của dịch vụ thì bạn nên xem qua  các website đánh giá (review) về loại hosting mà bạn đang muốn sử dụng. 
-              Ở đây  có rất nhiều người đã sử dụng  và sẽ có những nhận xét chân thực nhất về hosting mà bạn đang định sử dụng.
-              Tuy nhiên bạn cũng nên chú ý tìm các trang review thật sự tin tưởng nhé vì nhiều khi người ta đánh giá chỉ dựa vào hoa hồng nhận được từ tiếp thị liên kết cho sản phẩm
-              đó.
-            </p>
-            <div class="text-center">
-              <img class="lazyload w-50"
-              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/web_hosting_mien_phi/toc_do_hosting.jpg"
-              alt="Yếu Tố Tốc Độ Hosting">
-            </div>
-            <h4 class="text-white bg-success mt-4 p-2 h6">
-              <b>Hỗ Trợ (Support)</b>
-            </h4>
-            <p>
-              Theo mình thấy thì nên ưu tiên chọn những web hosting có dịch vụ hỗ trợ khách hàng tốt như là hỗ trợ 24/7, 
-              có thể liên lạc qua nhiều phương tiện như điện thoại, email, tin nhắn cho nhóm hỗ trợ, hỗ trợ viên có chuyên môn cao và nhiệt tình...
-              Ngoài ra bạn cũng có đánh giá thông qua cách mà nhân viên hỗ trợ trả lời  câu hỏi thắc mắc từ khách hàng trên trang support
-              hoặc các bài viết cung cấp kiến thức để sử dụng dịch vụ được viết từ nhân viên của dịch vụ....
-
-            </p>
-
-            <div class="text-center">
-              <img class="lazyload w-50"
-              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/web_hosting_mien_phi/dich_vu_ho_tro_hosting.jpg"
-              alt="Dịch Vụ Hỗ Trợ Hosting">
-            </div>
-            <h4 class="text-white bg-success mt-4 p-2 h6">
-              <b>Các Tiện Ích Của Dịch Vụ Hosting</b>
-            </h4>
-
-            <p>
-              Thông thường khi bạn chọn cân nhắc giữa các hosting thì thường sẽ tập trung vào các tiện ích đi kèm mà dịch vụ cung cấp như là:
-              <ul>
-                <li><b>Bandwidth</b> (Băng Thông): khối lượng dữ liệu mà trang web gửi tới người dùng. Thông thường thì các dịch vụ hosting sẽ cung cấp 
-                  gói không giới, hạn tuy nhiên cũng có những dịch vụ sẽ tính phí nếu băng thông vượt qua ngưỡng cho phép.
-                </li>
-                <li>
-                  <b>Storage</b>: Bộ nhớ lưu trữ cho trang web (Dùng để lưu hình ảnh, HTML, CSS, Javascript...) có bị giới hạn hay không.
-                </li>
-                <li>
-                  <b>Free Domain Registration</b>: Miễn phí đăng ký domaind cho website.
-                </li>
-                <li>
-                  Số lượng website có thể sử dụng trên hosting.
-                </li>
-                <li>
-                  Có bao gồm CDN cho website hay không?
-                </li>
-                <li>...</li>
-              </ul>
-            </p>
-            <p>
-              Như bạn thấy thì  mỗi  dịch vụ cung cấp hosting sẽ cung cấp những tiện ích khác nhau. Do đó bạn nên <b>xác định rõ dạng website</b>
-              mà bạn muốn xây dựng là thuộc thể loại nào, lượng lữu trữ, traffic có lớn hay không?... Để từ đó chúng ta có thể chọn web hosting mà cung cấp tiện ích phù hợp 
-              nhất dành cho trang web nhé!
-            </p>
-
-            <div class="text-center">
-              <img class="lazyload w-50"
-              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/web_hosting_mien_phi/tien_ich_dich_vu_hosting.jpg"
-              alt="Tiện Ích Dịch Vụ Hosting">
-            </div>
-
-            <h4 class="text-white bg-success mt-4 p-2 h6">
-              <b>Nơi Chứa Máy Chủ Của Dịch Vụ</b>
-            </h4>
-            <p>
-              Thời gian truyền dữ liệu từ máy chủ đến người dùng sẽ phụ thuộc rất nhiều vào <b>vị trí máy chủ của dịch vụ</b>.
-              Đó đó khi chọn hosting bạn nên cần quan tâm đến nhưng nơi đặt máy chủ của dịch vụ đó. Ví dụ khi chúng ta ở Việt Nam thì nên chọn máy chủ 
-              ở Việt Nam là tốt nhất còn nếu không có thì bạn nên lựa chọn những hosting có cung cấp máy chủ ở trong Châu Á như là Singapore, Tokyo...
-            </p>
-
-            <div class="text-center">
-              <img class="lazyload w-50"
-              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/web_hosting_mien_phi/noi_chua_may_chu_hosting.jpg"
-              alt="Vị Trí Đặt Máy Chủ">
-            </div>
-            <h4 class="text-white bg-success mt-4 p-2 h6">
-              <b>Khả Năng Mở Rộng</b>
-            </h4>
-            <p>
-              Đối với trường hợp của mình cũng từng là người mới bắt đầu tạo website, do đó sẽ <b>không thể tính toán chi tiết</b>  
-              lượng băng thông, lưu trữ, tốc độ... mà trang web cần dùng. Vì vây khi chọn dịch vụ hosting thì mình cũng sẽ rất chú trọng vào việc  
-              khả năng nâng cấp của hosting có dễ dàng không?<br/>
-              Ngoài ra còn một trường hợp mình cần lưu ý đến bạn là khả năng <b>giảm xuống các gói thấp hơn</b>. Vì trong thực tế trang web của chúng ta 
-               sẽ không sử dụng hết các tiện ích mà gói cung cấp. Lúc này bạn nên suy nghĩ hạ xuống các gói hấp hơn để giảm chi phí phải trả cho máy chủ. 
-            </p>
-            <div class="text-center">
-              <img class="lazyload w-50"
-              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/web_hosting_mien_phi/kha_nang_mo_rong_hosting.jpg"
-              alt="Khả Năng Mở Rộng  Máy Chủ">
-              </div>
-              <h4 class="text-white bg-success mt-4 p-2 h6">
-                <b>Độ Bảo Mật (Security)</b>
-              </h4>
-              <p>
-                Đây được xem là một yếu tố cực kỳ quan trọng dành cho website khi chúng ta lựa chọn web hosting.
-                Một số tiêu chỉ để đánh giá độ bảo mật của một hosting là:
-                <ul>
-                  <li>Có cung cấp chứng chỉ SSL cho trang web hay không?</li>
-                  <li>Mức độ bảo mật của tường lửa có tốt không?</li>
-                  <li>Có thường xuyên cập nhật các phiên bản quản lý web không?</li>
-                  <li>Có hay backup lại dữ liệu của website không?</li>
-                  <li>Có khả năng phát hiện các malware (phần mềm độc hại) được nhúng vào website hay không?</li>
-                  <li>....</li>
-                </ul>
-              </p>
-              <div class="text-center">
-                <img class="lazyload w-50"
-                data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/web_hosting_mien_phi/do_bao_mat_may_chu.jpg"
-                alt="Độ Bảo Mật Của  Máy Chủ">
-              </div>
-              <h4 class="text-white bg-success mt-4 p-2 h6">
-                <b>Giá Cả Của Hosting</b>
-              </h4>
-              <p>
-                Đây được xem là tiêu chí cuối cùng mà mình đánh giá một hosting.
-                Thông thường giá trung bình để đăng ký cho một máy chủ lưu trữ website thường sẽ rơi vào khoảng từ <b>5$</b> đến <b>10$</b>.</p>
-              <p>
-                Tuy nhiên ngày nay trên thị trường có rất nhiều nhà cung cấp 
-                dịch vụ hosting với giá <b>rẻ đến khó tin</b>. Vậy với những mức giá này thì bạn có nên lựa chọn cho trang web hay không?<br/>
-    
-                Thật sự theo mình thì còn tùy, không phải nhà dịch vụ cung cấp hosting với giá thành  rẻ đều là không tốt.
-                Tuy nhiên mình có một số  lưu ý khi bạn quyết định chọn những hosting này là:
-                <ul>
-                  <li><b>Chú ý đến chương trình khuyến mãi</b>: Các hosting sẽ cung cấp giá khuyến mãi cho chúng ta trong một đến hai năm đầu 
-                  tiên sử dụng. Tuy nhiên sau đó họ sẽ tính lên phí tiêu chuẩn(thường khá cao). Do đó bạn nên <b>đọc kỹ</b> thông tin trước khi mua nhé!</li>
-                  <li><b>Các chi phí phát sinh</b>: Nhiều nhà cung cấp hosting sẽ để giá gói thật rẻ nhưng khi chúng ta thanh toán thì sẽ có rất nhiều dịch vụ  và chi phí phát sinh đi kèm. </li>
-                  <li><b>Giới hạn một số  tiện ích</b>: Thật sự khi sử dụng các hosting miễn phí thì <b>thường</b> sẽ có các quảng cáo được nhúng vào trang web hay 
-                  giới hạn băng thông, lưu trữ,  độ trễ của website. Do đó bạn nên chú ý đọc thật kỹ phần tiện ích mà dịch vụ cung cấp nhé! </li>
-                </ul>
-              </p>
-              <div class="text-center">
-                <img class="lazyload w-50"
-                data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/web_hosting_mien_phi/chi_phi_hosting.jpg"
-                alt="Chi Phí Hosting">
-              </div>
-
-
-         <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
-            Các Dịch Vụ Hosting Miễn Phí (Không Quảng Cáo)
+          <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+            Thiết Lập Vị Trí Hình Ảnh Và Nội Dung Trong Trang Web
           </h2>
-          
+          <p>
+            Trong phần này chúng ta sẽ thiết lập lại vị trí, độ rộng, chiều cao của phần hình ảnh và nội dung trong
+            trang web bằng đoạn mã CSS sau đây nhé:
+          </p>
+          <h3 class="text-primary">
+            CSS
+          </h3>
+          <pre><code class="css">*{<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;box-sizing:&nbsp;border-box;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-family:&nbsp;'Roboto',&nbsp;sans-serif;<br/> }<br/>section{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;100vh;<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;flex;<br/> }<br/>section&nbsp;.img-bg{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;50%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;100%;<br/> }<br/>section&nbsp;.img-bg&nbsp;img{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;left:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;object-fit:&nbsp;cover;<br/> }<br/></code></pre>
+          <p class="mt-4">
+            Và kết quả bạn xem hình dưới đây nhé:
+          </p>
+          <img class="img-fluid lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/tao_trang_dang_nhap/trang_login_2.png"
+            alt="Trang Login 2">
+
+          <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+            Thiết Lập Vị Trí Phần Tử Trong Phần Nội Dung
+          </h2>
+          <p>
+            Trong phần này chúng ta sẽ đi vào thiết lập vị trí của form <b>nằm chính giữa trong phần nội dung</b> và
+            trang trí lại tiêu đề <code>h2</code> cho trang login bằng đoạn mã dưới đây nhé:
+          </p>
+          <h3 class="text-primary">
+            CSS
+          </h3>
+          <pre><code class="css">section&nbsp;.noi-dung{<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;flex;<br/> &nbsp;&nbsp;&nbsp;&nbsp;justify-content:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;align-items:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;50%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;100%;<br/> }<br/>section&nbsp;.noi-dung&nbsp;.form{<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;50%;<br/> }<br/>section&nbsp;.noi-dung&nbsp;.form&nbsp;h2{<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#607d8b;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-weight:&nbsp;500;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;1.5em;<br/> &nbsp;&nbsp;&nbsp;&nbsp;text-transform:&nbsp;uppercase;<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:&nbsp;20px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-bottom:&nbsp;4px&nbsp;solid&nbsp;#ff4584;<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;inline-block;<br/> &nbsp;&nbsp;&nbsp;&nbsp;letter-spacing:&nbsp;1px;<br/> }<br/></code></pre>
+          <p class="mt-4">
+            Và kết quả bạn xem hình bên dưới nhé:
+          </p>
+          <img class="img-fluid lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/tao_trang_dang_nhap/trang_login_3.png"
+            alt="Trang Login 3">
+
+          <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+            Thiết Lập Style Cho Các Ô Input
+          </h2>
+          <p>
+            Trong phần tiếp theo này chúng ta sẽ cùng nhau đi vào thiết lập style cho các ô input để nó trong cuốn hút
+            và
+            hấp dẫn hơn nhé:
+          </p>
+          <h3 class="text-primary">
+            CSS
+          </h3>
+          <pre><code class="css">section&nbsp;.noi-dung&nbsp;.form&nbsp;.input-form{<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:&nbsp;20px;<br/> }<br/>section&nbsp;.noi-dung&nbsp;.form&nbsp;.input-form&nbsp;span{<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;16px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:&nbsp;5px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;inline-block;<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#607db8;<br/> &nbsp;&nbsp;&nbsp;&nbsp;letter-spacing:&nbsp;1px;<br/> &nbsp;&nbsp;&nbsp;&nbsp; }<br/>section&nbsp;.noi-dung&nbsp;.form&nbsp;.input-form&nbsp;input{<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;10px&nbsp;20px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;outline:&nbsp;none;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border:&nbsp;1px&nbsp;solid&nbsp;#607d8b;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;16px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;letter-spacing:&nbsp;1px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#607d8b;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;transparent;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;30px;<br/>&nbsp;&nbsp;&nbsp;&nbsp; }<br/> section&nbsp;.noi-dung&nbsp;.form&nbsp;.input-form&nbsp;input[type="submit"]{<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;#ff4584;<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;outline:&nbsp;none;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border:&nbsp;none;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-weight:&nbsp;500;<br/> &nbsp;&nbsp;&nbsp;&nbsp;cursor:&nbsp;pointer;<br/> &nbsp;&nbsp;&nbsp;&nbsp;box-shadow:&nbsp;0&nbsp;1px&nbsp;1px&nbsp;rgba(0,0,0,0.12),<br/>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;2px&nbsp;2px&nbsp;rgba(0,0,0,0.12),<br/>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;4px&nbsp;4px&nbsp;rgba(0,0,0,0.12),<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;8px&nbsp;8px&nbsp;rgba(0,0,0,0.12),<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;16px&nbsp;16px&nbsp;rgba(0,0,0,0.12);<br/> }<br/>section&nbsp;.noi-dung&nbsp;.form&nbsp;.input-form&nbsp;input[type="submit"]:hover{<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;#f53677;<br/> }<br/> section&nbsp;.noi-dung&nbsp;.form&nbsp;.nho-dang-nhap{<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:&nbsp;10px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#607d8b;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;14px;<br/> }<br/> section&nbsp;.noi-dung&nbsp;.form&nbsp;.input-form&nbsp;p{<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#607d8b;<br/> }<br/>section&nbsp;.noi-dung&nbsp;.form&nbsp;.input-form&nbsp;p&nbsp;a{<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#ff4584;<br/> }<br/></code></pre>
+          <p class="mt-4">
+            Kết quả bạn xem bên dưới nha:
+          </p>
+          <img class="img-fluid lazyload shadow"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/tao_trang_dang_nhap/trang_login_4.png"
+            alt="Trang Login 4">
+         
+
+          <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+            Thiết Lập Style Cho Icon Trong Login Page
+          </h2>
+
+          <p>
+            Trong phần này chúng ta sẽ đi vào thiết lập style cho phần <code>icon-dang-nhap</code> như vị trí, màu sắc cho từng icon, kích thước icon...
+            Và để hiểu rõ hơn bạn xem đoạn mã sau nhé:
+          </p>
+
+          <h3 class="text-primary">
+            CSS
+          </h3>
+          <pre><code class="css">section&nbsp;.noi-dung&nbsp;.form&nbsp;h3{<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#607d8b;<br/> &nbsp;&nbsp;&nbsp;&nbsp;text-align:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;80px&nbsp;0&nbsp;10px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-weight:&nbsp;500;<br/> }<br/>section&nbsp;.noi-dung&nbsp;.form&nbsp;.icon-dang-nhap{<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;flex;<br/> &nbsp;&nbsp;&nbsp;&nbsp;justify-content:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;align-items:&nbsp;center;<br/> }<br/>section&nbsp;.noi-dung&nbsp;.form&nbsp;.icon-dang-nhap&nbsp;li{<br/> &nbsp;&nbsp;&nbsp;&nbsp;list-style:&nbsp;none;<br/> &nbsp;&nbsp;&nbsp;&nbsp;cursor:&nbsp;pointer;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;50px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;50px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;flex;<br/> &nbsp;&nbsp;&nbsp;&nbsp;justify-content:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;align-items:&nbsp;center;<br/> }<br/> section&nbsp;.noi-dung&nbsp;.form&nbsp;.icon-dang-nhap&nbsp;li:nth-child(1){<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#3b5999;<br/> }<br/> section&nbsp;.noi-dung&nbsp;.form&nbsp;.icon-dang-nhap&nbsp;li:nth-child(2){<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#dd4b39;<br/> }<br/> section&nbsp;.noi-dung&nbsp;.form&nbsp;.icon-dang-nhap&nbsp;li:nth-child(3){<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#55acee;<br/> }<br/> section&nbsp;.noi-dung&nbsp;.form&nbsp;.icon-dang-nhap&nbsp;li&nbsp;i{<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;24px;<br/> }<br/></code></pre>
+          <p class="mt-4">
+            Kết quả bạn xem hình ảnh bên dưới nhé:
+          </p>
+          <img class="img-fluid lazyload shadow"
+          data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/tao_trang_dang_nhap/trang_login_5.png"
+          alt="Trang Login 5">
+      
+          <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+           Reponsive Cho Trang Login Page
+          </h2>
+          <p>
+            Trong phần cuối cùng chúng ta sẽ dử dụng <code>@media</code> để responsive trang đăng nhập giúp nó hiển thị tốt hơn trên màn hình điện thoại nhé:
+          </p>
+          <h3 class="text-primary">
+            CSS
+          </h3>
+          <pre><code class="css">@media&nbsp;(max-width:&nbsp;768px){<br/> &nbsp;&nbsp;&nbsp;&nbsp;section&nbsp;.img-bg{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;left:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;&nbsp;&nbsp;&nbsp;section&nbsp;.noi-dung{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;flex;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;justify-content:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;align-items:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;z-index:&nbsp;1;<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;&nbsp;&nbsp;&nbsp;section&nbsp;.noi-dung&nbsp;.form{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;40px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;rgba(255&nbsp;255&nbsp;255&nbsp;/&nbsp;0.9);<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;50px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> &nbsp;&nbsp;&nbsp;&nbsp;section&nbsp;.noi-dung&nbsp;.form&nbsp;h3{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#607d8b;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-align:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;30px&nbsp;0&nbsp;10px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-weight:&nbsp;500;<br/> &nbsp;&nbsp;&nbsp;&nbsp;}<br/> }<br/></code></pre>
+          <p class="mt-4">
+            Kết quả bạn xem hình ảnh bên dưới nhé:
+          </p>
+          <img class="img-fluid lazyload shadow"
+          data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/tao_trang_dang_nhap/trang_login_6%20%281%29.png"
+          alt="Trang Login 6">
+          <p class="mt-4">
+           Nếu bạn muốn xem dự án trên Codepen thì có thể truy cập đường dẫn bên dưới nha:
+          </p>
+
+          <p class="mt-4 pb-4"> <a class="button-blog-post-article" href="https://codepen.io/haycuoilennao19/full/MWedwvG"
+          target="_blank">Nguồn Codepen</a></p>
+
+          Nếu bạn muốn tải dự án  thì có thể truy cập đường dẫn bên dưới nhé:
+        </p>
+
+        <p class="mt-4 pb-4"> <a class="button-blog-post-article" href="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/tao_trang_dang_nhap/tao%20trang%20login.rar"
+       download>Nguồn Source</a></p>
+
+       <p>
+         <mark>Nếu bạn muốn xem thêm các ví dụ khác về login page thì hãy truy cập đường dẫn sau nhé: </mark><br/>
+
+       </p>
+ <a href="https://www.niemvuilaptrinh.com/article/Form-Dang-Ky-Dang-Nhap-Snippet-trong-Bootstrap"
+       >Form Đăng Ký Đăng Nhập Snippet trong Bootstrap</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -261,8 +216,7 @@
 
           <h4 class="mt-4 pt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng
               kết: </b></h4>
-          <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những kiến thức tạo landingpage và hiệu ứng di chuyển
-            chuột
+          <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn kiến thức tạo login page
 
             dành cho việc phát triển, thiết kế web và nếu có thắc mắc gì cứ gửi email
             mình sẽ
