@@ -164,10 +164,14 @@ as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;50
       }
     }));
   </script>
-  <script  src='https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/highlight.pack.js'></script>
+  <script async src='https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/highlight.pack.js'></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163462128-1"></script>
-  <script defer>hljs.initHighlightingOnLoad();</script>
+  <script defer>
+  $(document).ready(function() {
+    hljs.initHighlightingOnLoad();
+});
+ </script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
