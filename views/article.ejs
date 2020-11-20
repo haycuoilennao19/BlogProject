@@ -81,13 +81,9 @@ as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;50
     <div class="row">
       <div class="col-lg-6">
         <div class="img-container-article"> 
-          <picture class="img-fluid image-article-blogpost lazyload">
-            <source srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_auto,w_512/<%-article.file%>" type="image/webp" media="(min-width: 1024px)" />
-            <source srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_auto,w_512/<%-article.file%>" type="image/webp" media="(min-width: 768px)" />
-            <source srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_auto,w_512/<%-article.file%>" type="image/webp" media="(min-width: 512px)" />
-           
+          <div class="img-fluid image-article-blogpost lazyload">
             <img srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_auto,w_512/<%-article.file%>" type="image/webp" alt="<%-article.title%>" title="<%-article.title%>" />
-          </picture>
+          </div>
           </div>
       </div>
       <div class="col-lg-6">
@@ -156,7 +152,7 @@ as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;50
   <!--Footer-->
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+  <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
   <script>
     var container = document.getElementById('content-box');
     $(window).on('load resize', (function() {
