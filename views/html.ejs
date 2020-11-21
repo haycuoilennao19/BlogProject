@@ -31,54 +31,45 @@
 
 
       <div class="card-text text-justify">
+
+
+
         <article>
           <div class="row">
             <div class="col-sm-12">
-              <div class="text-content-article mt-5">
-                <p><b><i>Xin chào các bạn quay lại blog của mình. Hôm nay chúng ta sẽ đi tìm hiểu cách xây dựng Breadcrumb snippet bằng cách
-                 sử dụng HTML, CSS, Javascript và Bootstrap  nhé!</i></b></p>
-                <hr>
-              </div>
+              <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size">Gallery Image Trong Thiết Kế Web (Phần 2)</h2>
             </div>
           </div>
-          <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">Breadcrumb Là Gì?</h2>
-
+         
           <div class="text-content-article mt-5">
-           
-            <p class="mt-4"> <b>Breadcrumb</b> là một loại sơ đồ điều hướng thứ cấp trong cấp trong trang web để giúp người
-              dùng cải thiện các thao tác tìm kiếm và hiểu hơn về sơ đồ, các thành phần mà bạn phân bổ trong trang web.
-              Ví dụ như trang web bán hàng của bạn có nhiều sản phẩm và được chia thành nhiều loại sản phẩm khác nhau
-              thì bạn nên sử dụng component này. Chúng ta nên sử dụng Breadcrumb như một tiện ích bổ sung chứ không nên
-              thay thế thanh điều hướng chính (thường là component navbar) trong trang web.</p>
-            <p>Để hiểu rõ hơn bạn xem ví dụ về trang tìm kiếm của Google dưới đây nha:</p> <img
-              class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587126691/BreadCrumb/Vi-du-ve-breadcrumb-html-css-bootstrap-javascript_i544ij.png"
-              alt="Ví dụ về breadcrumb bằng trang web Dell">
-            <p class="mt-4"> Ở ví dụ trên, mình có cần một số lưu ý nhỏ là các biểu tượng (icon) thường được sử dụng
-              trong breadcrumb vì nó dễ dàng nhận biết để phân biết các danh mục trong component này như <code>danh mục
-                cha <b>></b> danh mục con</code> hay <code>danh mục cha <b>/</b> danh mục con</code>... Do nó chỉ là
-              tính năng hỗ trợ nên kích thước không nên quá lớn và phải ít nổi bật hơn so với thanh điều hướng chính
-              (component navbar). Vị trí mà bạn nên đặt breadcrumb là phần trên của trang nằm bên dưới so với thanh điều
-              hướng chính và thường được bố trí theo hướng nằm ngang.</p>
-            <p class="mt-4">Bây giờ mình sẽ giới thiệu tiếp một số component Breadcrumb được thiết kế sẵn bằng HTML,
-              CSS, Bootstrap và Javascript giúp bạn có thể đa dạng lựa chọn phù hợp với bố cục cũng như thiết kế của
-              trang web.</p>
-            <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4 title-article-size">Flat CSS3 Breadcrumb:</h4>
-            </div> <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587133227/BreadCrumb/breadcrumb-html-css-bootstrap-phan-1_jjjnyb.png"
-              alt="BreadCrumb xây dựng bằng HTML, CSS và Bootstrap Phần 1">
-            <p class="mt-4"> Breadcrumb này được thiết kế theo phong cách Flat. Nó là xu hướng thiết kế sử dụng các hình
-              dạng và biểu tượng phẳng như hình chữ nhật, hình tròn, hình tam giác... mà không sử dụng đến các yếu tố
-              không cần thiêt như gradients, shadow... Việc kết hợp thêm icon vào mỗi liên kết giúp làm rõ nội dung và
-              mục đích của liên kết hơn. Do chỉ sử dụng HTML, CSS nên bạn có thể áp dụng rộng rãi cho nhiều loại trang
-              web khác nhau. Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi breadcrum này được hiển thị trên web ở dưới
-              đây nhé:</p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
-              data-user="firatcftc" data-slug-hash="sHlnK"
+            <p><i>Hôm nay chúng ta sẽ đi tìm hiểu cách thiết kế gallery bằng cách kết hợp HTML, CSS, Javascript nhé.</i>
+            </p>
+            <p class="mt-4"><b>Gallery</b> là bộ sưu tập để hiển thị hình ảnh của bạn trên trang web. Việc đưa nó vào trang
+              web giúp làm nổi bật các sản phẩm một cách sáng tạo để thu hút, giữ chân khách hàng lâu hơn ở trang của
+              bạn. Mình thường sử dụng hình ảnh theo châm ngôn <b>Hình ảnh nhiều hơn ngàn lời nói</b>. Nó cũng làm khách
+              hàng ghi nhớ thương hiệu cũng như sản phẩm của bạn hơn và ngoài ra nó cũng tốt trong việc SEO webite trên
+              các công cụ tìm kiếm như Google hoặc Bing... Tuy vậy bạn cần một số lưu ý là bạn nên chỉ chọn sản phầm
+              thực tế để sử dụng trong gallery giúp tăng khả năng tin tưởng của khách hàng, hình ảnh của bạn nên được
+              tối ưu để giảm kích thước nhằm tăng tốc độ tải trang trên cả máy tính và điện thoại.Để hiểu rõ hơn bạn xem
+              ví dụ sau đây nhé:</p> <img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587651751/Gallery/Vi-du-Gallery-trong-web_vkt5mb.png"
+              alt="Ví Dụ Gallery Trong Trang Web">
+            <p class="mt-4"> Sau khi hiểu sơ lược về gallery thì sau đây mình sẽ giới thiệu một số component này giúp
+              bạn có sự lựa chọn tốt nhất để phù hợp với mục đích cũng như thiết kế, bố cục trang web của bạn.</p>
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">Pop-up/Overlay:</h3>
+              </div>
+            </div><img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587652155/Gallery/Vi-Du-Gallery-Phan-1_pf9mwy.png"
+              alt="Xây dựng bộ sưu tập hình ảnh phần 1 html,css, js">
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component gallery này nhé:</p>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result"
+              data-user="juliepark" data-slug-hash="qKQzJL"
               style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Flat CSS3 Breadcrumb"> <span>See the Pen <a href="https://codepen.io/firatcftc/pen/sHlnK">
-                  Flat CSS3 Breadcrumb</a> by Fırat çiftçi (<a href="https://codepen.io/firatcftc">@firatcftc</a>) on <a
+              data-pen-title="Daily UI #016 | Pop-up/Overlay"> <span>See the Pen <a
+                  href="https://codepen.io/juliepark/pen/qKQzJL"> Daily UI #016 | Pop-up/Overlay</a> by Julie Park (<a
+                  href="https://codepen.io/juliepark">@juliepark</a>) on <a
                   href="https://codepen.io">CodePen</a>.</span></p>
             <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
             <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
@@ -87,123 +78,40 @@
                 href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. Và nếu chúng ta muốn xem
               các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
               dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/firatcftc/pen/sHlnK" target="_blank">Flat CSS3 Breadcrumb</a>.</p>
-            <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4 title-article-size">Breadcrumbs:</h4>
-            </div> <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587135512/BreadCrumb/breadcrumb-html-css-bootstrap-phan-2_iyrcdd.png"
-              alt="BreadCrumb xây dựng bằng HTML, CSS và Bootstrap Phần 2">
-            <p class="mt-4"> Theo mình thấy điều mà giúp breadcrumb này nổi bật là việc kết hợp hài hòa màu sắc vào
-              trong bố cục và nó cũng được dùng để phân biệt các mục trong breadcrumb. Component này nên được sử dụng
-              trong các trang bán hàng thương mại điện tử hay trang web công ty mà việc sử dụng màu sắc để làm nổi bật
-              nội dung cũng như khuyến khích tăng sự tương tác của người dùng. Bây giờ để hiểu rõ hơn bạn xem đoạn code
-              và khi breadcrum này được hiển thị trên web ở dưới đây nhé:</p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
-              data-user="tomek8899" data-slug-hash="obJsu"
+                href="https://codepen.io/juliepark/pen/qKQzJL" target="_blank">Pop-up/Overlay</a>.</p>
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">Responsive CSS Grid Masonry Gallery:</h3>
+              </div>
+            </div><img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587652516/Gallery/Vi-Du-Gallery-Phan-2_y5j3wf.png"
+              alt="Xây dựng bộ sưu tập hình ảnh phần 2 html,css, js">
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component gallery này nhé:</p>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="vhanla"
+              data-slug-hash="PxjZvj"
               style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Breadcrumbs"> <span>See the Pen <a href="https://codepen.io/tomek8899/pen/obJsu">
-                  Breadcrumbs</a> by tomek8899 (<a href="https://codepen.io/tomek8899">@tomek8899</a>) on <a
-                  href="https://codepen.io">CodePen</a>.</span></p>
+              data-pen-title="Responsive CSS Grid Masonry Gallery"> <span>See the Pen <a
+                  href="https://codepen.io/vhanla/pen/PxjZvj"> Responsive CSS Grid Masonry Gallery</a> by vhanla (<a
+                  href="https://codepen.io/vhanla">@vhanla</a>) on <a href="https://codepen.io">CodePen</a>.</span></p>
             <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
               thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Và nếu chúng ta muốn xem
               các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
               dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/tomek8899/pen/obJsu" target="_blank">Breadcrumbs</a>.</p>
-            <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4 title-article-size">Force Framework Breadcrumb:</h4>
-            </div> <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587136134/BreadCrumb/breadcrumb-html-css-bootstrap-phan-3_jqe8ol.png"
-              alt="BreadCrumb xây dựng bằng HTML, CSS và Bootstrap Phần 3">
-            <p class="mt-4"> Đây là một tập hợp các loại breadcrumbs được xây dựng bằng HTML, CSS giúp bạn có thể đa
-              dạng, phong phú trong việc lựa chọn sử dụng vào bố cục cũng như thiết kế của trang web. Bây giờ để hiểu rõ
-              hơn bạn xem đoạn code và khi breadcrum này được hiển thị trên web ở dưới đây nhé:</p>
+                href="https://codepen.io/vhanla/pen/PxjZvj" target="_blank">Responsive CSS Grid Masonry Gallery</a>.</p>
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">Responsive Image Gallery with jQuery Lightbox:</h3>
+              </div>
+            </div><img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587652758/Gallery/Vi-Du-Gallery-Phan-3_xv7qch.png"
+              alt="Xây dựng bộ sưu tập hình ảnh phần 3 html,css, js">
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component gallery này nhé:</p>
             <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result"
-              data-user="mrdogra007" data-slug-hash="JONzgy"
+              data-user="mmgolden" data-slug-hash="YrGddm"
               style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Force Framework breadcrumb style modified CSS"> <span>See the Pen <a
-                  href="https://codepen.io/mrdogra007/pen/JONzgy"> Force Framework breadcrumb style modified CSS</a> by
-                Nishant Dogra (<a href="https://codepen.io/mrdogra007">@mrdogra007</a>) on <a
-                  href="https://codepen.io">CodePen</a>.</span></p>
-            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
-              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Và nếu chúng ta muốn xem
-              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
-              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/mrdogra007/pen/JONzgy" target="_blank">Force Framework Breadcrumb</a>.</p>
-            <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4 title-article-size">Snippet Breadcrumbs:</h4>
-            </div> <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587136848/BreadCrumb/breadcrumb-html-css-bootstrap-phan-4_f7wfnx.png"
-              alt="BreadCrumb xây dựng bằng HTML, CSS và Bootstrap Phần 4">
-            <p class="mt-4"> Đây là một tập hợp các loại breadcrumbs khác được xây dựng bằng HTML, CSS và Bootstrap 4
-              giúp bạn vừa có thể tìm hiểu thêm về component này cũng như áp dụng vào thực tế để xây dựng trang web. Bây
-              giờ để hiểu rõ hơn bạn xem đoạn code và khi breadcrum này được hiển thị trên web ở dưới đây nhé:</p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result"
-              data-user="haycuoilennao19" data-slug-hash="RwWaEmZ"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Snippet Breadcrumbs(source from bootstrapious)"> <span>See the Pen <a
-                  href="https://codepen.io/haycuoilennao19/pen/RwWaEmZ"> Snippet Breadcrumbs(source from
-                  bootstrapious)</a> by haycuoilennao19 (<a
-                  href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>) on <a
-                  href="https://codepen.io">CodePen</a>.</span></p>
-            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
-              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Và nếu chúng ta muốn xem
-              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
-              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/haycuoilennao19/pen/RwWaEmZ" target="_blank">Snippet Breadcrumbs</a>.</p>
-            <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4 title-article-size">Breadcrumbs 2:</h4>
-            </div> <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587138153/BreadCrumb/breadcrumb-html-css-bootstrap-phan-5_mhdimc.png"
-              alt="BreadCrumb xây dựng bằng HTML, CSS và Bootstrap Phần 5">
-            <p class="mt-4"> Breadcrumb này được thiết kế theo phong cách đơn giản với mục đích là miêu tả các bước hành
-              động thường được sử dụng trong các trang thương mại điện tử như khi đặt hàng thì bạn nhập thông tin cá
-              nhân rồi chuyển sang bước chọn phương thức thanh toán... Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi
-              breadcrum này được hiển thị trên web ở dưới đây nhé:</p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
-              data-user="axelaredz" data-slug-hash="dqxjb"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Крошки | Breadcrumbs"> <span>See the Pen <a href="https://codepen.io/axelaredz/pen/dqxjb">
-                  Крошки | Breadcrumbs</a> by Axelaredz (<a href="https://codepen.io/axelaredz">@axelaredz</a>) on <a
-                  href="https://codepen.io">CodePen</a>.</span></p>
-            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
-              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Và nếu chúng ta muốn xem
-              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
-              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/axelaredz/pen/dqxjb" target="_blank">Breadcrumbs 2</a>.</p>
-            <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4 title-article-size">EXPANDABLE BREADCRUMBS:</h4>
-            </div> <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587139096/BreadCrumb/breadcrumb-html-css-bootstrap-phan-6_rl6kbx.png"
-              alt="BreadCrumb xây dựng bằng HTML, CSS và Bootstrap Phần 6">
-            <p class="mt-4"> Breadcrumb này cũng được thiết kế giống ở trên nhưng điểm khác biệt là bạn có thể ẩn nội
-              dung để giảm diện tích trang đặc biệt là trên môi trường mobile và nó chỉ xuất hiện khi người dùng hover
-              vào từng danh mục.Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi breadcrum này được hiển thị trên web ở
-              dưới đây nhé:</p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
-              data-user="phemestre" data-slug-hash="zglJf"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="zglJf"> <span>See the Pen <a href="https://codepen.io/phemestre/pen/zglJf"> zglJf</a> by
-                Phelipe M Peres (<a href="https://codepen.io/phemestre">@phemestre</a>) on <a
-                  href="https://codepen.io">CodePen</a>.</span></p>
-            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
-              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Và nếu chúng ta muốn xem
-              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
-              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/phemestre/pen/zglJf" target="_blank">EXPANDABLE BREADCRUMBS</a>.</p>
-            <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4 title-article-size">Cutup #6 Breadcrumbs:</h4>
-            </div> <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587140042/BreadCrumb/breadcrumb-html-css-bootstrap-phan-7_jeahgh.png"
-              alt="BreadCrumb xây dựng bằng HTML, CSS và Bootstrap Phần 7">
-            <p class="mt-4"> Breadcrumb này thiết kế đơn giản được xây dựng bằng HTML, CSS với cấu trúc code dễ hiểu
-              giúp bạn có thể tinh chỉnh tùy theo ý muốn của mình. Điểm đặc biệt của component này là sử dụng font chữ
-              độc đáo và hiệu ứng chuyển màu khi người dùng hover vào từng danh mục. Bây giờ để hiểu rõ hơn bạn xem đoạn
-              code và khi breadcrum này được hiển thị trên web ở dưới đây nhé:</p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="nana8"
-              data-slug-hash="VEeoPW"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Cutup #6 Breadcrumbs"> <span>See the Pen <a href="https://codepen.io/nana8/pen/VEeoPW">
-                  Cutup #6 Breadcrumbs</a> by nana (<a href="https://codepen.io/nana8">@nana8</a>) on <a
+              data-pen-title="Responsive Image Gallery with jQuery Lightbox"> <span>See the Pen <a
+                  href="https://codepen.io/mmgolden/pen/YrGddm"> Responsive Image Gallery with jQuery Lightbox</a> by
+                Melinda Golden (<a href="https://codepen.io/mmgolden">@mmgolden</a>) on <a
                   href="https://codepen.io">CodePen</a>.</span></p>
             <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
               thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Do đây sử dụng
@@ -211,42 +119,41 @@
                 href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. Và nếu chúng ta muốn xem
               các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
               dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/nana8/pen/VEeoPW" target="_blank">Cutup #6 Breadcrumbs</a>.</p>
-            <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4 title-article-size">Breadcrumbs 3:</h4>
-            </div> <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587140869/BreadCrumb/breadcrumb-html-css-bootstrap-phan-8_elingu.png"
-              alt="BreadCrumb xây dựng bằng HTML, CSS Phần 8">
-            <p class="mt-4"> Breadcrumb này thiết kế đơn giản lấy màu trắng làm chủ đạo và điểm nổi bật cúa nó sử dụng
-              hiệu ứng đổ bóng(shadow) và chuyển màu khi người dùng hover. Do được xây dựng bằng HTML, CSS nên bạn có
-              thể áp dụng cho nhiều loại bố cục, thiết kế web khác nhau. Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi
-              breadcrum này được hiển thị trên web ở dưới đây nhé:</p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
-              data-user="brampeirs" data-slug-hash="LJzyBy"
+                href="https://codepen.io/mmgolden/pen/YrGddm" target="_blank">Responsive Image Gallery with jQuery
+                Lightbox</a>.</p>
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">Photo Gallery:</h3>
+              </div>
+            </div><img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587653070/Gallery/Vi-Du-Gallery-Phan-4_scibig.png"
+              alt="Xây dựng bộ sưu tập hình ảnh phần 4 html,css, js">
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component gallery này nhé:</p>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result"
+              data-user="mglissmann" data-slug-hash="zxXvpq"
               style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="breadcrumb"> <span>See the Pen <a href="https://codepen.io/brampeirs/pen/LJzyBy">
-                  breadcrumb</a> by Bram (<a href="https://codepen.io/brampeirs">@brampeirs</a>) on <a
+              data-pen-title="Photo Gallery"> <span>See the Pen <a href="https://codepen.io/mglissmann/pen/zxXvpq">
+                  Photo Gallery</a> by Mark Glissmann (<a href="https://codepen.io/mglissmann">@mglissmann</a>) on <a
                   href="https://codepen.io">CodePen</a>.</span></p>
             <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
               thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Và nếu chúng ta muốn xem
               các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
               dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/brampeirs/pen/LJzyBy" target="_blank">Breadcrumbs 3</a>.</p>
-            <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4 title-article-size">Tiny CSS3 Round Breadcrumb:</h4>
-            </div> <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587141830/BreadCrumb/breadcrumb-html-css-bootstrap-phan-9_jlotf7.png"
-              alt="BreadCrumb xây dựng bằng HTML, CSS Phần 9">
-            <p class="mt-4"> Nếu bạn thích thiết kế theo phong cách mới lạ và mang lai cảm giác thú vị cho người dùng
-              thì bạn nên sử dụng component này. Nó sử dụng hình dạng tròn giúp người dùng tập trung nội dung hơn và
-              hiệu ứng mở rộng danh mục khi người dùng hover giúp tiết kiệm diện tích cho trang web. Bây giờ để hiểu rõ
-              hơn bạn xem đoạn code và khi breadcrum này được hiển thị trên web ở dưới đây nhé:</p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
-              data-user="renaudtertrais" data-slug-hash="GfaCE"
+                href="https://codepen.io/mglissmann/pen/zxXvpq" target="_blank">Photo Gallery</a>.</p>
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">Slide-out Scrolling Gallery:</h3>
+              </div>
+            </div><img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587655122/Gallery/Vi-Du-Gallery-Phan-5_ss3df8.png"
+              alt="Xây dựng bộ sưu tập hình ảnh phần 5 html,css, js">
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component gallery này nhé:</p>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result"
+              data-user="teeganlincoln" data-slug-hash="MaNxBv"
               style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Tiny CSS3 Round Breadcrumb"> <span>See the Pen <a
-                  href="https://codepen.io/renaudtertrais/pen/GfaCE"> Tiny CSS3 Round Breadcrumb</a> by Renaud Tertrais
-                (<a href="https://codepen.io/renaudtertrais">@renaudtertrais</a>) on <a
+              data-pen-title="Slide-out Scrolling Gallery"> <span>See the Pen <a
+                  href="https://codepen.io/teeganlincoln/pen/MaNxBv"> Slide-out Scrolling Gallery</a> by Teegan Lincoln
+                (<a href="https://codepen.io/teeganlincoln">@teeganlincoln</a>) on <a
                   href="https://codepen.io">CodePen</a>.</span></p>
             <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
               thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Do đây sử dụng
@@ -254,32 +161,196 @@
                 href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. Và nếu chúng ta muốn xem
               các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
               dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/renaudtertrais/pen/GfaCE" target="_blank">Tiny CSS3 Round Breadcrumb</a>.</p>
-            <div class="bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4 title-article-size">Awesome Bootstrap Button Extension:</h4>
-            </div> <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587142348/BreadCrumb/breadcrumb-html-css-bootstrap-phan-10_iyqsar.png"
-              alt="BreadCrumb xây dựng bằng HTML, CSS Phần 10">
-            <p class="mt-4"> Breadcrum này được thiết kế bằng component button trong Bootstrap với vài chi tiết thay đổi
-              nhỏ trong CSS giúp bạn có thể áp dụng hầu như đa số các thiết kế và bố cục trang web có hỗ trợ Bootstrap.
-              Bây giờ để hiểu rõ hơn bạn xem đoạn code và khi breadcrum này được hiển thị trên web ở dưới đây nhé:</p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
-              data-user="picoboero" data-slug-hash="mpoyG"
+                href="https://codepen.io/teeganlincoln/pen/MaNxBv/" target="_blank">Slide-out Scrolling Gallery</a>.</p>
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">Gallery:</h3>
+              </div>
+            </div><img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587655563/Gallery/Vi-Du-Gallery-Phan-6_l6oeet.png"
+              alt="Xây dựng bộ sưu tập hình ảnh phần 6 html,css, js">
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component gallery này nhé:</p>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result"
+              data-user="kathykato" data-slug-hash="KRQOKY"
               style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Awesome bootstrap button extension"> <span>See the Pen <a
-                  href="https://codepen.io/picoboero/pen/mpoyG"> Awesome bootstrap button extension</a> by Pico Boero
-                (<a href="https://codepen.io/picoboero">@picoboero</a>) on <a
+              data-pen-title="Gallery"> <span>See the Pen <a href="https://codepen.io/kathykato/pen/KRQOKY"> Gallery</a>
+                by Katherine Kato (<a href="https://codepen.io/kathykato">@kathykato</a>) on <a
+                  href="https://codepen.io">CodePen</a>.</span></p>
+            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Do đây sử dụng
+              <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
+                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. Và nếu chúng ta muốn xem
+              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
+              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
+                href="https://codepen.io/kathykato/pen/KRQOKY" target="_blank">Gallery</a>.</p>
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">Scrolling & Looping Gallery:</h3>
+              </div>
+            </div><img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587655695/Gallery/Vi-Du-Gallery-Phan-7_fmbqpi.png"
+              alt="Xây dựng bộ sưu tập hình ảnh phần 7 html,css, js">
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component gallery này nhé:</p>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result"
+              data-user="phileflanagan" data-slug-hash="QgPdwz"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Scrolling &amp;amp; Looping Gallery - Vanilla HTML/CSS/JS - ES5 - No Touch Events">
+              <span>See the Pen <a href="https://codepen.io/phileflanagan/pen/QgPdwz"> Scrolling &amp; Looping Gallery -
+                  Vanilla HTML/CSS/JS - ES5 - No Touch Events</a> by Phil Flanagan (<a
+                  href="https://codepen.io/phileflanagan">@phileflanagan</a>) on <a
                   href="https://codepen.io">CodePen</a>.</span></p>
             <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
               thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Và nếu chúng ta muốn xem
               các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
               dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/picoboero/pen/mpoyG" target="_blank">Awesome Bootstrap Button Extension</a>.
-            </p>
-            <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
-            <p>Qua đây mình mong bài viết sẽ giúp bạn rút ngắn thời gian trong việc thiết kế giao diện Breadcrumb cho
-              trang web và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng
-              hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
+                href="https://codepen.io/phileflanagan/pen/QgPdwz" target="_blank">Scrolling & Looping Gallery</a>.</p>
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">Accessible Off-canvas Grid Gallery:</h3>
+              </div>
+            </div><img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587655880/Gallery/Vi-Du-Gallery-Phan-8_iqfghs.png"
+              alt="Xây dựng bộ sưu tập hình ảnh phần 8 html,css, js">
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component gallery này nhé:</p>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result"
+              data-user="joe-watkins" data-slug-hash="RPZbrW"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Accessible off-canvas grid gallery"> <span>See the Pen <a
+                  href="https://codepen.io/joe-watkins/pen/RPZbrW"> Accessible off-canvas grid gallery</a> by Joe
+                Watkins (<a href="https://codepen.io/joe-watkins">@joe-watkins</a>) on <a
+                  href="https://codepen.io">CodePen</a>.</span></p>
+            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Do đây sử dụng
+              <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
+                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. Và nếu chúng ta muốn xem
+              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
+              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
+                href="https://codepen.io/joe-watkins/pen/RPZbrW/" target="_blank">Accessible Off-canvas Grid
+                Gallery</a>.</p>
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">LightGallery:</h3>
+              </div>
+            </div><img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587656140/Gallery/Vi-Du-Gallery-Phan-9_icqxgu.png"
+              alt="Xây dựng bộ sưu tập hình ảnh phần 9 html,css, js">
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component gallery này nhé:</p>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
+              data-user="sachinchoolur" data-slug-hash="QjLNMM"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="lightGallery"> <span>See the Pen <a href="https://codepen.io/sachinchoolur/pen/QjLNMM">
+                  lightGallery</a> by Sachin choolur (<a href="https://codepen.io/sachinchoolur">@sachinchoolur</a>) on
+                <a href="https://codepen.io">CodePen</a>.</span></p>
+            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Và nếu chúng ta muốn xem
+              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
+              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
+                href="https://codepen.io/sachinchoolur/pen/QjLNMM" target="_blank">LightGallery</a>.</p>
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">Bootstrap 4 Lightbox Gallery:</h3>
+              </div>
+            </div><img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587656328/Gallery/Vi-Du-Gallery-Phan-10_cwjo0o.png"
+              alt="Xây dựng bộ sưu tập hình ảnh phần 10 html,css, js">
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component gallery này nhé:</p>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="nsom"
+              data-slug-hash="VbqLew"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Bootstrap 4 Lightbox Gallery"> <span>See the Pen <a
+                  href="https://codepen.io/nsom/pen/VbqLew"> Bootstrap 4 Lightbox Gallery</a> by Som Nayak (<a
+                  href="https://codepen.io/nsom">@nsom</a>) on <a href="https://codepen.io">CodePen</a>.</span></p>
+            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Do đây sử dụng
+              <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
+                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. Và nếu chúng ta muốn xem
+              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
+              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
+                href="https://codepen.io/nsom/pen/VbqLew" target="_blank">Bootstrap 4 Lightbox Gallery</a>.</p>
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">Accordion Image Gallery:</h3>
+              </div>
+            </div><img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587656535/Gallery/Vi-Du-Gallery-Phan-11_oghtbw.png"
+              alt="Xây dựng bộ sưu tập hình ảnh phần 11 html,css, js">
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component gallery này nhé:</p>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
+              data-user="stefcharle" data-slug-hash="Gydvbx"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Accordion Image Gallery"> <span>See the Pen <a
+                  href="https://codepen.io/stefcharle/pen/Gydvbx"> Accordion Image Gallery</a> by Stefan C. (<a
+                  href="https://codepen.io/stefcharle">@stefcharle</a>) on <a
+                  href="https://codepen.io">CodePen</a>.</span></p>
+            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Do đây sử dụng
+              <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
+                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. Và nếu chúng ta muốn xem
+              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
+              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
+                href="https://codepen.io/stefcharle/pen/Gydvbx" target="_blank">Accordion Image Gallery</a>.</p>
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">Hexagon Gallery:</h3>
+              </div>
+            </div><img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587657102/Gallery/Vi-Du-Gallery-Phan-12_kuoh3y.png"
+              alt="Xây dựng bộ sưu tập hình ảnh phần 12 html,css, js">
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component gallery này nhé:</p>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
+              data-user="gabrielajohnson" data-slug-hash="EMVxEL"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Hexagon Gallery"> <span>See the Pen <a
+                  href="https://codepen.io/gabrielajohnson/pen/EMVxEL"> Hexagon Gallery</a> by Gabriela Johnson (<a
+                  href="https://codepen.io/gabrielajohnson">@gabrielajohnson</a>) on <a
+                  href="https://codepen.io">CodePen</a>.</span></p>
+            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Và nếu chúng ta muốn xem
+              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
+              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
+                href="https://codepen.io/gabrielajohnson/pen/EMVxEL" target="_blank">Hexagon Gallery</a>.</p>
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">Simple Image Gallery:</h3>
+              </div>
+            </div><img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587659390/Gallery/Vi-Du-Gallery-Phan-13_ogryfm.png"
+              alt="Xây dựng bộ sưu tập hình ảnh phần 13 html,css, js">
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component gallery này nhé:</p>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="JiiB"
+              data-slug-hash="xgdOjw"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Simple Image Gallery with magnific-popup.js"> <span>See the Pen <a
+                  href="https://codepen.io/JiiB/pen/xgdOjw"> Simple Image Gallery with magnific-popup.js</a> by Nino (<a
+                  href="https://codepen.io/JiiB">@JiiB</a>) on <a href="https://codepen.io">CodePen</a>.</span></p>
+            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Và nếu chúng ta muốn xem
+              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
+              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
+                href="https://codepen.io/JiiB/pen/xgdOjw" target="_blank">Simple Image Gallery</a>.</p>
+            <div class="row">
+              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
+                <h3 class="text-primary ml-4 title-article-size">CSS Gallery:</h3>
+              </div>
+            </div><img class="img-thumbnail shadow p-2 lazyload"
+              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587660082/Gallery/Vi-Du-Gallery-Phan-14_mxvahs.png"
+              alt="Xây dựng bộ sưu tập hình ảnh phần 14 html,css, js">
+            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component gallery này nhé:</p>
+            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result"
+              data-user="heyDante" data-slug-hash="bxEYOw"
+              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="CSS Gallery"> <span>See the Pen <a href="https://codepen.io/heyDante/pen/bxEYOw"> CSS
+                  Gallery</a> by badalsaibo (<a href="https://codepen.io/heyDante">@heyDante</a>) on <a
+                  href="https://codepen.io">CodePen</a>.</span></p>
+            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
+              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Và nếu chúng ta muốn xem
+              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
+              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
+                href="https://codepen.io/heyDante/pen/bxEYOw" target="_blank">CSS Gallery</a>.</p>
+            <h3 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h3>
+            <p>Qua đây mình mong bài viết sẽ giúp bạn rút ngắn thời gian thiết kế Gallery trong việc phát triển trang
+              web và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng hộ
+              trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
           </div>
         </article>
 
@@ -308,33 +379,20 @@
 
 
 
-
-
-        <h4 class="mt-4 pt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng
-            kết: </b></h4>
-        <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn kiến thức tạo login page
-
-          dành cho việc phát triển, thiết kế web và nếu có thắc mắc gì cứ gửi email
-          mình sẽ
-          phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng hộ trang web để mình có
-          thể viết nhiều bài hay hơn nữa
-          nhé. Chúc bạn có một ngày vui vẻ!</p>
       </div>
-      </article>
     </div>
+
+
+
+
+    <div class="mb-5"></div>
   </div>
+  <div class="col-lg-12 col-md-12 col-xs-12">
+    <div class="mt-5"></div>
 
 
 
-
-  <div class="mb-5"></div>
-</div>
-<div class="col-lg-12 col-md-12 col-xs-12">
-  <div class="mt-5"></div>
-
-
-
-</div>
+  </div>
 </div>
 </div>
 

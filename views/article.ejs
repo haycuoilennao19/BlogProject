@@ -81,8 +81,8 @@ as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;50
     <div class="row">
       <div class="col-lg-6">
         <div class="img-container-article"> 
-          <div class="img-fluid image-article-blogpost lazyload">
-            <img srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_auto,w_512/<%-article.file%>" type="image/webp" alt="<%-article.title%>" title="<%-article.title%>" />
+          <div class="img-fluid image-article-blogpost">
+            <img class="lazyload" data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_auto,w_512/<%-article.file%>" type="image/webp" alt="<%-article.title%>" title="<%-article.title%>" />
           </div>
           </div>
       </div>
@@ -195,5 +195,5 @@ as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;50
          fjs.parentNode.insertBefore(js, fjs);
        }(document, 'script', 'facebook-jssdk'));
     </script>
-        <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/2fb95c6d0ad5d9329eee431eb/fe7019a68dad0c2b257c5d958.js");</script>
+       
   <%- include('footer') -%>
