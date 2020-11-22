@@ -11,6 +11,7 @@
   <link rel="preconnect"
       href="https://fonts.gstatic.com"
       crossorigin />
+      <style>article{content-visibility: auto; contain-intrinsic-size: 1000px;} .fb-comments{content-visibility: auto; contain-intrinsic-size: 1000px;}</style>
   <meta name="p:domain_verify" content="442f069b8455d6ba2c5b37e95431709b"/>
 
   <title><%=article.title%></title>
@@ -62,7 +63,7 @@
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" media="print" onload="this.media='all'" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 <style>.bg-secondary{background-color:#6c757d!important}.icon-th-menu:before{color:#fff}p{font-size:1rem}</style>
-<style>article{content-visibility: auto;}</style>
+
 <link rel="preload"
 as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@400;500&display=swap">
 <link rel="stylesheet"
@@ -154,9 +155,11 @@ as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;50
   <!--Footer-->
 
 
-  <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+  
+  
   <script>
-    var container = document.getElementById('content-box');
+    document.addEventListener("DOMContentLoaded", function(){
+      var container = document.getElementById('content-box');
     $(window).on('load resize', (function() {
       windowsize = $(window).width();
       if((windowsize <= 992)  && (screen.height>=768)) {
@@ -165,13 +168,29 @@ as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;50
         $('.nav-item').removeClass('hvr-underline-from-left')
       }
     }));
-  </script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.0/highlight.min.js"></script>
+});
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163462128-1"></script>
   <script >
-    hljs.initHighlightingOnLoad();
- </script>
+    document.addEventListener("DOMContentLoaded", function(){
+      hljs.initHighlightingOnLoad();
+      $(function () {
+          $(window).on('scroll', function () {
+            if ($(window).scrollTop() > 10) {
+              $('.navbar').addClass('active shadow');
+            } else {
+              $('.navbar').removeClass('active shadow')
+            }
+          })
+        })
+    });
+  </script>
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.0/highlight.min.js"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -179,7 +198,8 @@ as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;50
   
     gtag('config', 'UA-163462128-1');
   </script>
-    <script>
+   <script >
+  
       window.fbAsyncInit = function() {
         FB.init({
           appId      : '2121975281235443',
@@ -196,7 +216,9 @@ as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;50
          js.src = "https://connect.facebook.net/en_US/sdk.js";
          fjs.parentNode.insertBefore(js, fjs);
        }(document, 'script', 'facebook-jssdk'));
-    </script>
+  
+      </script>
+
        
        <div class="container-fluid footer">
         <div class="row">
@@ -216,25 +238,14 @@ as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;50
           </div>
         </div>
       </div>
-      <script>
-        $(function () {
-          $(window).on('scroll', function () {
-            if ($(window).scrollTop() > 10) {
-              $('.navbar').addClass('active shadow');
-            } else {
-              $('.navbar').removeClass('active shadow')
-            }
-          })
-        })
-      </script>
+
+       
       
       
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-      </script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js" integrity="sha512-8qmis31OQi6hIRgvkht0s6mCOittjMa9GMqtK9hes5iEQBQE/Ca6yGE5FsW36vyipGoWQswBj/QBm2JR086Rkw==" crossorigin="anonymous"></script>
       
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous"></script>
+      <script async src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js" integrity="sha512-8qmis31OQi6hIRgvkht0s6mCOittjMa9GMqtK9hes5iEQBQE/Ca6yGE5FsW36vyipGoWQswBj/QBm2JR086Rkw==" crossorigin="anonymous"></script>
+      
+      <script async src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous"></script>
       <script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
       </body>
       
