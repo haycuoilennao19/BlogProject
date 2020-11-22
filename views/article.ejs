@@ -15,7 +15,7 @@
   <meta property="og:locale" content="vi_VN">
   <link rel="alternate" href="https://www.niemvuilaptrinh.com/article/<%-article.slug%>" hreflang="vi" />
   <link rel="alternate" href="https://www.niemvuilaptrinh.com/article/<%-article.slug%>" hreflang="x-default" />
-  <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1586594935/logo-via-logohub_2_a9ubsa.png">
+  <link rel="icon" type="image/svg+xml" href="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1605961780/favicon_c4pttx.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="canonical" href="https://www.niemvuilaptrinh.com/article/<%-article.slug%>">
   <!-- <meta property="og:image" content="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1576511394/Niemvuilaptrinh_jgc0rn.png"> -->
@@ -82,7 +82,7 @@ as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;50
       <div class="col-lg-6">
         <div class="img-container-article"> 
           <div class="img-fluid image-article-blogpost">
-            <img class="lazyload" data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_auto,w_512/<%-article.file%>" type="image/webp" alt="<%-article.title%>" title="<%-article.title%>" />
+            <img  srcset="https://res.cloudinary.com/dn4nxz7f0/image/upload/f_auto,q_auto,w_512/<%-article.file%>" type="image/webp" alt="<%-article.title%>" title="<%-article.title%>" />
           </div>
           </div>
       </div>
@@ -196,4 +196,44 @@ as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;50
        }(document, 'script', 'facebook-jssdk'));
     </script>
        
-  <%- include('footer') -%>
+       <div class="container-fluid footer">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-xs-12">
+            <div class="content-footer">
+              <h5>Góc trả lời</h5>
+              <p>Nếu các bạn có gì thắc mắc thì liên hệ mình qua những mạng xã hội sau đây nhé!</p>
+              <ul class="social-meadia-icon">
+                <li class="social-meadia-icon-item"><a title="Trang Facebook"
+                    href="https://www.facebook.com/Ni%E1%BB%81m-Vui-L%E1%BA%ADp-Tr%C3%ACnh-103123311194043/">  <i class="fab fa-facebook-f"></i></a></li>
+                <li class="social-meadia-icon-item"><a title="Trang Twitter" href="https://twitter.com/ThiVitNht3"><i class="fab fa-twitter"></i></a></li>
+                <li class="social-meadia-icon-item"><a title="Địa Chỉ Gmail" href="mailto:niemvuilaptrinh2410@gmail.com"><i class="fab fa-google-plus-g"></i></a></li>
+              </ul>
+              <hr />
+              <p> © 2020 Copyright: Niềm Vui Lập Trình (Thái Viết Nhật).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        $(function () {
+          $(window).on('scroll', function () {
+            if ($(window).scrollTop() > 10) {
+              $('.navbar').addClass('active shadow');
+            } else {
+              $('.navbar').removeClass('active shadow')
+            }
+          })
+        })
+      </script>
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js" integrity="sha512-8qmis31OQi6hIRgvkht0s6mCOittjMa9GMqtK9hes5iEQBQE/Ca6yGE5FsW36vyipGoWQswBj/QBm2JR086Rkw==" crossorigin="anonymous"></script>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous"></script>
+      <script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+      </body>
+      
+      </html>

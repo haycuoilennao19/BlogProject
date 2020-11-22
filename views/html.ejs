@@ -37,321 +37,322 @@
         <article>
           <div class="row">
             <div class="col-sm-12">
-              <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size">Gallery Image Trong Thiết Kế Web (Phần 2)</h2>
+              <div class="text-content-article mt-5">
+                <p><b><i> Ngày hôm nay chúng ta sẽ cùng nhau đi vào tìm hiểu nhưng công cụ, thư viện hay và hữu ích dành
+                      cho việc phát triển và thiết kế web (phần 4) nhé! </i></b></p>
+                <hr>
+              </div>
             </div>
           </div>
-         
-          <div class="text-content-article mt-5">
-            <p><i>Hôm nay chúng ta sẽ đi tìm hiểu cách thiết kế gallery bằng cách kết hợp HTML, CSS, Javascript nhé.</i>
+          <p> <mark>Nếu bạn muốn tham khảo các công cụ và thư viện phát triển web phần 3 thì truy cập đường dẫn bên dưới
+              nhé!</mark><br> <a
+              href="http://localhost:3000/article/thu-vien-va-cong-cu-phat-trien-web-phan-3"
+              title="Thư Viện Và Công Cụ Phát Triển Web (Phần 3) ">Thư Viện Và Công Cụ Phát Triển Web (Phần 3)</a></p>
+
+          <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+            Free Favicon Maker
+          </h2>
+         <p>
+          
+           Favicon là một <b>logo nhỏ</b> được hiển thị trên tab trình duyệt khi người dùng truy cập trang web của bạn.
+           Và nó thường được đặt trong thẻ <code>head</code> với định dạng là:
+         </p>
+     
+         <pre><code class="html"> &#60;link rel="icon" href="http://www.yourwebsite.com/favicon.png"&#62;</code></pre>
+         <p class="mt-4">
+          Ngoài ra bạn có thể sử dụng định dạng khác như svg... Ở đây mình muốn giới thiệu đến bạn một công cụ 
+          giúp tạo ra favicon dễ dàng, thiết kế đẹp mắt và hoàn toàn miễn phí là <b>  Free Favicon Maker</b>.
+         </p>
+          <img class="img-fluid lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/thu_vien_cong_cu_web/Free%20Favicon%20Maker.png"
+            alt="Free Favicon Maker">
+
+          <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Free Favicon Maker" target="_blank"
+              href="https://formito.com/tools/favicon"
+             >Nguồn</a></p>
+
+             <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+              The good line-height
+            </h2>
+            <p>
+              <b>The good line-height</b> giúp bạn có cái nhìn trực quan hơn về việc sử dụng thuộc tính <code>line-height</code>
+              cho các đoạn văn bản trong trang web. Nó cung cấp 3 thuộc tính chính để bạn chỉnh sửa là 
+              <ul>
+                <li>Font size: Kích thước chữ.</li>
+                <li>Multiplier: Khoảng cách giữa các dòng.</li>
+                <li>Grid row height: Xác định đường kẻ trong grid.</li>
+              </ul>
             </p>
-            <p class="mt-4"><b>Gallery</b> là bộ sưu tập để hiển thị hình ảnh của bạn trên trang web. Việc đưa nó vào trang
-              web giúp làm nổi bật các sản phẩm một cách sáng tạo để thu hút, giữ chân khách hàng lâu hơn ở trang của
-              bạn. Mình thường sử dụng hình ảnh theo châm ngôn <b>Hình ảnh nhiều hơn ngàn lời nói</b>. Nó cũng làm khách
-              hàng ghi nhớ thương hiệu cũng như sản phẩm của bạn hơn và ngoài ra nó cũng tốt trong việc SEO webite trên
-              các công cụ tìm kiếm như Google hoặc Bing... Tuy vậy bạn cần một số lưu ý là bạn nên chỉ chọn sản phầm
-              thực tế để sử dụng trong gallery giúp tăng khả năng tin tưởng của khách hàng, hình ảnh của bạn nên được
-              tối ưu để giảm kích thước nhằm tăng tốc độ tải trang trên cả máy tính và điện thoại.Để hiểu rõ hơn bạn xem
-              ví dụ sau đây nhé:</p> <img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587651751/Gallery/Vi-du-Gallery-trong-web_vkt5mb.png"
-              alt="Ví Dụ Gallery Trong Trang Web">
-            <p class="mt-4"> Sau khi hiểu sơ lược về gallery thì sau đây mình sẽ giới thiệu một số component này giúp
-              bạn có sự lựa chọn tốt nhất để phù hợp với mục đích cũng như thiết kế, bố cục trang web của bạn.</p>
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">Pop-up/Overlay:</h3>
-              </div>
-            </div><img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587652155/Gallery/Vi-Du-Gallery-Phan-1_pf9mwy.png"
-              alt="Xây dựng bộ sưu tập hình ảnh phần 1 html,css, js">
-            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component gallery này nhé:</p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result"
-              data-user="juliepark" data-slug-hash="qKQzJL"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Daily UI #016 | Pop-up/Overlay"> <span>See the Pen <a
-                  href="https://codepen.io/juliepark/pen/qKQzJL"> Daily UI #016 | Pop-up/Overlay</a> by Julie Park (<a
-                  href="https://codepen.io/juliepark">@juliepark</a>) on <a
-                  href="https://codepen.io">CodePen</a>.</span></p>
-            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
-              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Do đây sử dụng
-              <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
-                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. Và nếu chúng ta muốn xem
-              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
-              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/juliepark/pen/qKQzJL" target="_blank">Pop-up/Overlay</a>.</p>
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">Responsive CSS Grid Masonry Gallery:</h3>
-              </div>
-            </div><img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587652516/Gallery/Vi-Du-Gallery-Phan-2_y5j3wf.png"
-              alt="Xây dựng bộ sưu tập hình ảnh phần 2 html,css, js">
-            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component gallery này nhé:</p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="vhanla"
-              data-slug-hash="PxjZvj"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Responsive CSS Grid Masonry Gallery"> <span>See the Pen <a
-                  href="https://codepen.io/vhanla/pen/PxjZvj"> Responsive CSS Grid Masonry Gallery</a> by vhanla (<a
-                  href="https://codepen.io/vhanla">@vhanla</a>) on <a href="https://codepen.io">CodePen</a>.</span></p>
-            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
-              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Và nếu chúng ta muốn xem
-              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
-              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/vhanla/pen/PxjZvj" target="_blank">Responsive CSS Grid Masonry Gallery</a>.</p>
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">Responsive Image Gallery with jQuery Lightbox:</h3>
-              </div>
-            </div><img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587652758/Gallery/Vi-Du-Gallery-Phan-3_xv7qch.png"
-              alt="Xây dựng bộ sưu tập hình ảnh phần 3 html,css, js">
-            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component gallery này nhé:</p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result"
-              data-user="mmgolden" data-slug-hash="YrGddm"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Responsive Image Gallery with jQuery Lightbox"> <span>See the Pen <a
-                  href="https://codepen.io/mmgolden/pen/YrGddm"> Responsive Image Gallery with jQuery Lightbox</a> by
-                Melinda Golden (<a href="https://codepen.io/mmgolden">@mmgolden</a>) on <a
-                  href="https://codepen.io">CodePen</a>.</span></p>
-            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
-              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Do đây sử dụng
-              <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
-                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. Và nếu chúng ta muốn xem
-              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
-              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/mmgolden/pen/YrGddm" target="_blank">Responsive Image Gallery with jQuery
-                Lightbox</a>.</p>
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">Photo Gallery:</h3>
-              </div>
-            </div><img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587653070/Gallery/Vi-Du-Gallery-Phan-4_scibig.png"
-              alt="Xây dựng bộ sưu tập hình ảnh phần 4 html,css, js">
-            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component gallery này nhé:</p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result"
-              data-user="mglissmann" data-slug-hash="zxXvpq"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Photo Gallery"> <span>See the Pen <a href="https://codepen.io/mglissmann/pen/zxXvpq">
-                  Photo Gallery</a> by Mark Glissmann (<a href="https://codepen.io/mglissmann">@mglissmann</a>) on <a
-                  href="https://codepen.io">CodePen</a>.</span></p>
-            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
-              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Và nếu chúng ta muốn xem
-              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
-              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/mglissmann/pen/zxXvpq" target="_blank">Photo Gallery</a>.</p>
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">Slide-out Scrolling Gallery:</h3>
-              </div>
-            </div><img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587655122/Gallery/Vi-Du-Gallery-Phan-5_ss3df8.png"
-              alt="Xây dựng bộ sưu tập hình ảnh phần 5 html,css, js">
-            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component gallery này nhé:</p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result"
-              data-user="teeganlincoln" data-slug-hash="MaNxBv"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Slide-out Scrolling Gallery"> <span>See the Pen <a
-                  href="https://codepen.io/teeganlincoln/pen/MaNxBv"> Slide-out Scrolling Gallery</a> by Teegan Lincoln
-                (<a href="https://codepen.io/teeganlincoln">@teeganlincoln</a>) on <a
-                  href="https://codepen.io">CodePen</a>.</span></p>
-            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
-              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Do đây sử dụng
-              <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
-                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. Và nếu chúng ta muốn xem
-              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
-              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/teeganlincoln/pen/MaNxBv/" target="_blank">Slide-out Scrolling Gallery</a>.</p>
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">Gallery:</h3>
-              </div>
-            </div><img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587655563/Gallery/Vi-Du-Gallery-Phan-6_l6oeet.png"
-              alt="Xây dựng bộ sưu tập hình ảnh phần 6 html,css, js">
-            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component gallery này nhé:</p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result"
-              data-user="kathykato" data-slug-hash="KRQOKY"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Gallery"> <span>See the Pen <a href="https://codepen.io/kathykato/pen/KRQOKY"> Gallery</a>
-                by Katherine Kato (<a href="https://codepen.io/kathykato">@kathykato</a>) on <a
-                  href="https://codepen.io">CodePen</a>.</span></p>
-            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
-              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Do đây sử dụng
-              <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
-                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. Và nếu chúng ta muốn xem
-              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
-              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/kathykato/pen/KRQOKY" target="_blank">Gallery</a>.</p>
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">Scrolling & Looping Gallery:</h3>
-              </div>
-            </div><img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587655695/Gallery/Vi-Du-Gallery-Phan-7_fmbqpi.png"
-              alt="Xây dựng bộ sưu tập hình ảnh phần 7 html,css, js">
-            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component gallery này nhé:</p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result"
-              data-user="phileflanagan" data-slug-hash="QgPdwz"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Scrolling &amp;amp; Looping Gallery - Vanilla HTML/CSS/JS - ES5 - No Touch Events">
-              <span>See the Pen <a href="https://codepen.io/phileflanagan/pen/QgPdwz"> Scrolling &amp; Looping Gallery -
-                  Vanilla HTML/CSS/JS - ES5 - No Touch Events</a> by Phil Flanagan (<a
-                  href="https://codepen.io/phileflanagan">@phileflanagan</a>) on <a
-                  href="https://codepen.io">CodePen</a>.</span></p>
-            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
-              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Và nếu chúng ta muốn xem
-              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
-              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/phileflanagan/pen/QgPdwz" target="_blank">Scrolling & Looping Gallery</a>.</p>
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">Accessible Off-canvas Grid Gallery:</h3>
-              </div>
-            </div><img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587655880/Gallery/Vi-Du-Gallery-Phan-8_iqfghs.png"
-              alt="Xây dựng bộ sưu tập hình ảnh phần 8 html,css, js">
-            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component gallery này nhé:</p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result"
-              data-user="joe-watkins" data-slug-hash="RPZbrW"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Accessible off-canvas grid gallery"> <span>See the Pen <a
-                  href="https://codepen.io/joe-watkins/pen/RPZbrW"> Accessible off-canvas grid gallery</a> by Joe
-                Watkins (<a href="https://codepen.io/joe-watkins">@joe-watkins</a>) on <a
-                  href="https://codepen.io">CodePen</a>.</span></p>
-            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
-              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Do đây sử dụng
-              <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
-                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. Và nếu chúng ta muốn xem
-              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
-              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/joe-watkins/pen/RPZbrW/" target="_blank">Accessible Off-canvas Grid
-                Gallery</a>.</p>
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">LightGallery:</h3>
-              </div>
-            </div><img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587656140/Gallery/Vi-Du-Gallery-Phan-9_icqxgu.png"
-              alt="Xây dựng bộ sưu tập hình ảnh phần 9 html,css, js">
-            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component gallery này nhé:</p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
-              data-user="sachinchoolur" data-slug-hash="QjLNMM"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="lightGallery"> <span>See the Pen <a href="https://codepen.io/sachinchoolur/pen/QjLNMM">
-                  lightGallery</a> by Sachin choolur (<a href="https://codepen.io/sachinchoolur">@sachinchoolur</a>) on
-                <a href="https://codepen.io">CodePen</a>.</span></p>
-            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
-              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Và nếu chúng ta muốn xem
-              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
-              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/sachinchoolur/pen/QjLNMM" target="_blank">LightGallery</a>.</p>
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">Bootstrap 4 Lightbox Gallery:</h3>
-              </div>
-            </div><img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587656328/Gallery/Vi-Du-Gallery-Phan-10_cwjo0o.png"
-              alt="Xây dựng bộ sưu tập hình ảnh phần 10 html,css, js">
-            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component gallery này nhé:</p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="nsom"
-              data-slug-hash="VbqLew"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Bootstrap 4 Lightbox Gallery"> <span>See the Pen <a
-                  href="https://codepen.io/nsom/pen/VbqLew"> Bootstrap 4 Lightbox Gallery</a> by Som Nayak (<a
-                  href="https://codepen.io/nsom">@nsom</a>) on <a href="https://codepen.io">CodePen</a>.</span></p>
-            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
-              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Do đây sử dụng
-              <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
-                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. Và nếu chúng ta muốn xem
-              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
-              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/nsom/pen/VbqLew" target="_blank">Bootstrap 4 Lightbox Gallery</a>.</p>
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">Accordion Image Gallery:</h3>
-              </div>
-            </div><img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587656535/Gallery/Vi-Du-Gallery-Phan-11_oghtbw.png"
-              alt="Xây dựng bộ sưu tập hình ảnh phần 11 html,css, js">
-            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component gallery này nhé:</p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
-              data-user="stefcharle" data-slug-hash="Gydvbx"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Accordion Image Gallery"> <span>See the Pen <a
-                  href="https://codepen.io/stefcharle/pen/Gydvbx"> Accordion Image Gallery</a> by Stefan C. (<a
-                  href="https://codepen.io/stefcharle">@stefcharle</a>) on <a
-                  href="https://codepen.io">CodePen</a>.</span></p>
-            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
-              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Do đây sử dụng
-              <b>SCSS</b> nếu bạn muốn sử dụng CSS thì có thể xem tại đây nha : <a
-                href="https://jsonformatter.org/scss-to-css" target="_blank">SCSS to CSS</a>. Và nếu chúng ta muốn xem
-              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
-              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/stefcharle/pen/Gydvbx" target="_blank">Accordion Image Gallery</a>.</p>
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">Hexagon Gallery:</h3>
-              </div>
-            </div><img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587657102/Gallery/Vi-Du-Gallery-Phan-12_kuoh3y.png"
-              alt="Xây dựng bộ sưu tập hình ảnh phần 12 html,css, js">
-            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component gallery này nhé:</p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
-              data-user="gabrielajohnson" data-slug-hash="EMVxEL"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Hexagon Gallery"> <span>See the Pen <a
-                  href="https://codepen.io/gabrielajohnson/pen/EMVxEL"> Hexagon Gallery</a> by Gabriela Johnson (<a
-                  href="https://codepen.io/gabrielajohnson">@gabrielajohnson</a>) on <a
-                  href="https://codepen.io">CodePen</a>.</span></p>
-            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
-              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Và nếu chúng ta muốn xem
-              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
-              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/gabrielajohnson/pen/EMVxEL" target="_blank">Hexagon Gallery</a>.</p>
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">Simple Image Gallery:</h3>
-              </div>
-            </div><img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587659390/Gallery/Vi-Du-Gallery-Phan-13_ogryfm.png"
-              alt="Xây dựng bộ sưu tập hình ảnh phần 13 html,css, js">
-            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component gallery này nhé:</p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="JiiB"
-              data-slug-hash="xgdOjw"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="Simple Image Gallery with magnific-popup.js"> <span>See the Pen <a
-                  href="https://codepen.io/JiiB/pen/xgdOjw"> Simple Image Gallery with magnific-popup.js</a> by Nino (<a
-                  href="https://codepen.io/JiiB">@JiiB</a>) on <a href="https://codepen.io">CodePen</a>.</span></p>
-            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
-              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Và nếu chúng ta muốn xem
-              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
-              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/JiiB/pen/xgdOjw" target="_blank">Simple Image Gallery</a>.</p>
-            <div class="row">
-              <div class="col-sm-12 bg-light p-2 mt-4 mb-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">CSS Gallery:</h3>
-              </div>
-            </div><img class="img-thumbnail shadow p-2 lazyload"
-              data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1587660082/Gallery/Vi-Du-Gallery-Phan-14_mxvahs.png"
-              alt="Xây dựng bộ sưu tập hình ảnh phần 14 html,css, js">
-            <p class="mt-4"> Đây là đoạn code và khi hiển thị trên web của component gallery này nhé:</p>
-            <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result"
-              data-user="heyDante" data-slug-hash="bxEYOw"
-              style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-              data-pen-title="CSS Gallery"> <span>See the Pen <a href="https://codepen.io/heyDante/pen/bxEYOw"> CSS
-                  Gallery</a> by badalsaibo (<a href="https://codepen.io/heyDante">@heyDante</a>) on <a
-                  href="https://codepen.io">CodePen</a>.</span></p>
-            <p class="mt-4"> Để xem rõ kết quả hơn bạn chuyển sang chế độ screen <b>0.5x, 0.25x</b> và nếu nó không hiển
-              thị thì bạn nhớ <b>xác minh mình là con người</b> trong Codepen mới xem được nhé. Và nếu chúng ta muốn xem
-              các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ <b>Resources</b> ở
-              dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha. Còn đây là nguồn mình sao chép: <a
-                href="https://codepen.io/heyDante/pen/bxEYOw" target="_blank">CSS Gallery</a>.</p>
-            <h3 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h3>
-            <p>Qua đây mình mong bài viết sẽ giúp bạn rút ngắn thời gian thiết kế Gallery trong việc phát triển trang
-              web và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng hộ
-              trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
-          </div>
+            <img class="img-fluid lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/thu_vien_cong_cu_web/The%20good%20line-height.png"
+            alt="The good line-height">
+
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="The good line-height" target="_blank"
+              href="https://www.thegoodlineheight.com/"
+             >Nguồn</a></p>
+
+             <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+              CSS 3D Transform
+            </h2>
+            <p>
+              Đây là một bộ sưu tập về những cách sử dụng thuộc tính <b><code>perspective</code></b> để tạo ra các đối tượng 3D cho trang web.
+              Phần mình cảm thấy thích nhất ở đây là mỗi đoạn mã đề có ví dụ cụ thể kế bên. Việc này sẽ giúp bạn có thể dễ dàng hình dung 
+              đối tượng hơn cũng như xem cái nào phù hợp để áp dụng cho trang web của mình.
+            </p>
+            <img class="img-fluid lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/thu_vien_cong_cu_web/CSS%203D%20Transform.png"
+            alt=" CSS 3D Transform">
+
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="CSS 3D Transform" target="_blank"
+              href="https://polypane.app/css-3d-transform-examples/"
+             >Nguồn</a></p>
+
+
+             <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+              Good Web Design
+            </h2>
+            <p>
+              <b>Good Web Design</b> là một website tập hợp nhiều thiết kế đẹp mắt dành cho <b>landing page</b> và được chia thành nhiều phần như là 
+              CTA(Call to action), navbar, footer, case study...
+            </p>
+            <img class="img-fluid lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/thu_vien_cong_cu_web/Good%20Web%20Design.png"
+            alt=" Good Web Design">
+
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Good Web Design" target="_blank"
+              href="https://www.goodweb.design/"
+             >Nguồn</a></p>
+
+
+          
+
+
+             <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+              BGJar
+            </h2>
+            <p>
+              <b>  BGJar</b> là một công cụ online giúp bạn có thể tạo ra các background SVG dễ dàng và nhanh chóng cho trang web.
+              Bạn chỉ cần chỉnh sửa các thông tin cần thiết thì web app sẽ tự động xuất hình ảnh hoặc đoạn mã cho bạn để áp dụng vào website.
+            </p>
+            <img class="img-fluid lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/thu_vien_cong_cu_web/BGJar.png"
+            alt="BGJar">
+
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="BGJar" target="_blank"
+              href="https://bgjar.com/"
+             >Nguồn</a></p>
+
+             <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+              Bootstrap Icons
+            </h2>
+            <p>
+             Lúc trước <b>Bootstrap Icons</b> ra đời để phục vụ nhu cầu xây dựng  các component, documentation.. của Bootstrap.
+             Tuy nhiên ngày nay thì nó cũng có thể sử dụng cho nhiều dự án khác thông qua việc các icon được định dạng theo kiểu <b>SVG</b>.
+             Nó sẽ giúp bạn có thể dễ dàng thiết lập style cho icon thông qua CSS và không sợ bị tình trang vỡ ảnh.
+
+
+            </p>
+            <img class="img-fluid lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/thu_vien_cong_cu_web/Bootstrap%20Icons.png"
+            alt="Bootstrap Icons">
+
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Bootstrap Icons" target="_blank"
+              href="https://icons.getbootstrap.com/"
+             >Nguồn</a></p>
+
+
+
+             <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+              Squircley
+            </h2>
+            <p>
+           <b>Squircley</b> giúp bạn tạo các hình dạng đẹp mắt cho đối tượng ở trong web  như là background, icon, logo...
+
+
+            </p>
+            <img class="img-fluid lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/thu_vien_cong_cu_web/Squircley.png"
+            alt="Squircley">
+
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Squircley" target="_blank"
+              href="https://squircley.app/"
+             >Nguồn</a></p>
+
+
+             <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+              mailgo
+            </h2>
+            <p>
+           Thông thường khi bạn mở đường dẫn <b>mail</b>  thì trình duyệt sẽ sử dụng <b>ứng dụng mặc định</b> để mở trình soạn thảo gửi email.
+           Còn đối  với <b>mailgo</b> thì bạn có thiết lập các lựa chọn giúp người dùng có thể mở các trình soạn thảo email khác như Gmail, Outlook... hay mở mặc định.
+           Ngoài sử dụng cho thẻ  <code>a href="mailto:"</code> thì nó cũng có thể sử dụng với <code>href="tel:"</code> nữa nhé!
+           
+
+
+            </p>
+            <img class="img-fluid lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/thu_vien_cong_cu_web/mailgo.png"
+            alt="mailgo">
+
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="mailgo" target="_blank"
+              href="https://mailgo.dev/"
+             >Nguồn</a></p>
+
+
+             <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+              Forge Icon
+            </h2>
+            <p>
+          <b>Forge Icon</b> là nơi kết kết hợp nhiều loại icon khác nhau dành cho dự án web của bạn như là thương mại điện tử, du lịch, mạng xã hội, 
+          thiết kế app...
+
+            </p>
+            <img class="img-fluid lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/thu_vien_cong_cu_web/Forge%20Icon.png"
+            alt="Forge Icon">
+
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Forge Icon" target="_blank"
+              href="https://icons.theforgesmith.com/"
+             >Nguồn</a></p>
+
+
+             <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+             GooFonts
+            </h2>
+            <p>
+            Đối với Font thì mình hay sử dụng nhất là Google Font. Vừa miễn phí và vừa có rất nhiều font đẹp.
+            Tuy nhiên với số lượng Font khổng lồ như vậy thì việc bạn có thể tìm ra được một font ưng ý cho 
+            trang web  sẽ thật sự rất khó khăn đấy.<br/>
+            Do đó mình muốn giới thiệu đến bạn một công cụ tên là <b>GooFonts</b>. Nó sẽ có nhiệm vụ chia các loại font của Google Font 
+            thành nhiều mảng nhỏ như là font dành cho báo chí, trường học,  hoạt hình, logo...
+
+            </p>
+            <img class="img-fluid lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/thu_vien_cong_cu_web/GooFonts.png"
+            alt="GooFonts">
+
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="GooFonts" target="_blank"
+              href="https://goofonts.com/"
+             >Nguồn</a></p>
+
+
+             <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+              CSS Spider
+             </h2>
+             <p>
+            <b>
+              CSS Spider</b> là tiện ích dành cho Google Chrome, Firefox với nhiệm vụ chính là giúp bạn có thể xem thuộc tính và 
+              lấy mã CSS của bất kỳ đối tượng nào trong trang web.
+ 
+             </p>
+             <img class="img-fluid lazyload"
+             data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/thu_vien_cong_cu_web/CSS%20Spider.png"
+             alt="CSS Spider">
+ 
+             <p class="mt-4 pb-4"> <a class="button-blog-post-article"  target="_blank"
+               href="https://cssspider.fresalabs.com/home"
+              >Nguồn</a></p>
+ 
+              <h2 class="bg-primary mb-4 mt-4 text-white rounded p-2 shadow title-article-size">
+                Một Số Dự Án Codepen Đẹp Mắt
+               </h2>
+               <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill"><h3 class="text-primary ml-4 title-article-size">
+                Profile Card Hover Effect
+                </h3></div>
+                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="petegarvin1" data-slug-hash="YzWBbRx" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Profile Card Hover Effect">
+                  <span>See the Pen <a href="https://codepen.io/petegarvin1/pen/YzWBbRx">
+                  Profile Card Hover Effect</a> by P (<a href="https://codepen.io/petegarvin1">@petegarvin1</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+               <p class="mt-4 pb-4"> <a class="button-blog-post-article" target="_blank"
+                href="https://codepen.io/petegarvin1/pen/YzWBbRx"  rel="noopener noreferrer"
+               >Nguồn</a></p>
+
+               <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill"><h3 class="text-primary ml-4 title-article-size">
+                Placeholders
+                </h3></div>
+                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="ainalem" data-slug-hash="GRqPwoz" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Placeholders">
+                  <span>See the Pen <a href="https://codepen.io/ainalem/pen/GRqPwoz">
+                  Placeholders</a> by Mikael Ainalem (<a href="https://codepen.io/ainalem">@ainalem</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+               <p class="mt-4 pb-4"> <a class="button-blog-post-article" target="_blank"
+                href="https://codepen.io/ainalem/pen/GRqPwoz"  rel="noopener noreferrer"
+               >Nguồn</a></p>
+
+               <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill"><h3 class="text-primary ml-4 title-article-size">
+                &#60;details&#62; Animation
+                </h3></div>
+                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="stoumann" data-slug-hash="ExydEYL" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="&amp;lt;details&amp;gt; Animation">
+                  <span>See the Pen <a href="https://codepen.io/stoumann/pen/ExydEYL">
+                  &lt;details&gt; Animation</a> by Mads Stoumann (<a href="https://codepen.io/stoumann">@stoumann</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+               <p class="mt-4 pb-4"> <a class="button-blog-post-article" target="_blank"
+                href="https://codepen.io/stoumann/pen/ExydEYL"  rel="noopener noreferrer"
+               >Nguồn</a></p>
+
+               <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill"><h3 class="text-primary ml-4 title-article-size">
+                Clock  JavaScript
+                </h3></div>
+                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="astronaut258" data-slug-hash="xxOBmRz" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="#Clock - JavaScript">
+                  <span>See the Pen <a href="https://codepen.io/astronaut258/pen/xxOBmRz">
+                  #Clock - JavaScript</a> by Tiến Đức (<a href="https://codepen.io/astronaut258">@astronaut258</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+               <p class="mt-4 pb-4"> <a class="button-blog-post-article" target="_blank"
+                href="https://codepen.io/astronaut258/pen/xxOBmRz"  rel="noopener noreferrer"
+               >Nguồn</a></p>
+
+               <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill"><h3 class="text-primary ml-4 title-article-size">
+                border animation
+                </h3></div>
+                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="michellebarker" data-slug-hash="gOMBPQj" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Houdini gradient border animation">
+                  <span>See the Pen <a href="https://codepen.io/michellebarker/pen/gOMBPQj">
+                  Houdini gradient border animation</a> by Michelle Barker (<a href="https://codepen.io/michellebarker">@michellebarker</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+               <p class="mt-4 pb-4"> <a class="button-blog-post-article" target="_blank"
+                href="https://codepen.io/michellebarker/pen/gOMBPQj"  rel="noopener noreferrer"
+               >Nguồn</a></p>
+
+               <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill"><h3 class="text-primary ml-4 title-article-size">
+                TOASTS
+                </h3></div>
+                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="mrtrimble" data-slug-hash="mdEgzzR" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="🍞 TOASTS 🍞">
+                  <span>See the Pen <a href="https://codepen.io/mrtrimble/pen/mdEgzzR">
+                  🍞 TOASTS 🍞</a> by Ryan Trimble (<a href="https://codepen.io/mrtrimble">@mrtrimble</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+               <p class="mt-4 pb-4"> <a class="button-blog-post-article" target="_blank"
+                href="https://codepen.io/mrtrimble/pen/mdEgzzR"  rel="noopener noreferrer"
+               >Nguồn</a></p>
+
+
+               <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill"><h3 class="text-primary ml-4 title-article-size">
+                CSS clip-path Editor
+                </h3></div>
+                <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="stoumann" data-slug-hash="abZxoOM" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS clip-path Editor">
+                  <span>See the Pen <a href="https://codepen.io/stoumann/pen/abZxoOM">
+                  CSS clip-path Editor</a> by Mads Stoumann (<a href="https://codepen.io/stoumann">@stoumann</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+               <p class="mt-4 pb-4"> <a class="button-blog-post-article" target="_blank"
+                href="https://codepen.io/stoumann/pen/abZxoOM"  rel="noopener noreferrer"
+               >Nguồn</a></p>
+
+
+
+
+
+
+
+
+          <h4 class="mt-4 pt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
+          <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những công cụ (phần 4) phát triển, thiết
+            kế web và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng hộ
+            trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
         </article>
 
 
