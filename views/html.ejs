@@ -34,292 +34,130 @@
         <article>
 
           <div class="text-content-article mt-5">
-            <p><i> Thông thường khi bạn học xong HTML CSS thì sẽ muốn tìm các trang web để thực hành viết code nhằm nâng
-                cao kỹ năng hơn.
-                Do đó hôm này mình xin giới thiệu đến bạn một số trang web tải HTML5 Template miễn phí để lấy ý tưởng
-                thiết kế cũng như
-                học hỏi thêm các skill từ các lập trình viên khác. Bây giờ chúng ta hãy cùng nhau tìm hiểu nhé!
+            <p><i> Ngày hôm nay chúng ta sẽ đi vào tìm hiểu cách tạo thẻ tab và thêm hiệu ứng animation cho nó bằng HTML CSS và Javascript nhé!
               </i></p>
             <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size">
-              W3Layouts
+              Tạo Cấu Trúc Cho Component Tab
+            </h2>
+            <p> Phần đầu tiên chúng ta sẽ đi vào tạo hai file là <code>index.html</code>(nơi lưu trữ HTML) và <code>style.css</code>(nơi lưu trữ mã CSS). Sau đó liên kết chúng với Font Awesome v4.7 và Google Font thông qua đoạn mã dưới đây nhé:</p>
+            <h3 class="text-primary">
+              HTML
+            </h3>
+            <pre><code class="html">&#60;!DOCTYPE&nbsp;html&#62;<br/> &nbsp;&nbsp;&#60;html&nbsp;lang="en"&#62;<br/> &nbsp;&nbsp;&#60;head&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;charset="UTF-8"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;name="viewport"&nbsp;content="width=device-width,&nbsp;initial-scale=1.0"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;title&#62;Tạo&nbsp;Component&nbsp;Tab&#60;/title&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="style.css"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="preconnect"&nbsp;href="https://fonts.gstatic.com"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"&nbsp;rel="stylesheet"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"&#62;<br/> &nbsp;&#60;/head&#62;<br/> &nbsp;&#60;body&#62;<br/> &nbsp;&#60;/body&#62;<br/> &nbsp;&#60;/html&#62;<br/></code></pre>
+            
+            <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size">
+              Tạo Cấu Trúc Cho Component Tab
             </h2>
             <p>
-              <b>W3Layouts</b> là một nơi sưu tập rất nhiều các mẫu cho trang web với nhiều thể loại khác nhau như là
-              giáo dục, Blog,
-              nghành nhà hàng khách sạn, du lịch, spa... Khi dùng phiên bản miễn phí thì bạn phải chấp nhận để link
-              quảng cáo của chương trình
-              trên trang web. Còn nếu bạn muốn xóa nó thì sẽ tùy vào template mà chúng ta chi trả (thông thường từ 10
-              đến 25$).
+              Trong phần này chúng ta sẽ đi vào thêm các thẻ HTML cần thiết để tạo component tab thông qua đoạn mã sau nhé:
+            </p>
+            <h3 class="text-primary">
+              HTML
+            </h3>
+            <pre><code class="html">&#60;div&nbsp;class="tab"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;!--Bắt&nbsp;Đầu&nbsp;Phần&nbsp;Tab&nbsp;Header--&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="tab-header"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="active"&#62;&#60;i&nbsp;class="fa&nbsp;fa-code"&#62;&#60;/i&#62;&nbsp;Trang&nbsp;Chủ&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&#62;&#60;i&nbsp;class="fa&nbsp;fa-pencil-square-o"&#62;&#60;/i&#62;&nbsp;Về&nbsp;Chúng&nbsp;Tôi&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&#62;&#60;i&nbsp;class="fa&nbsp;fa-bar-chart"&#62;&#60;/i&#62;&nbsp;Dịch&nbsp;Vụ&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&#62;&#60;i&nbsp;class="fa&nbsp;fa-envelope-o"&#62;&#60;/i&#62;&nbsp;Liên&nbsp;Hệ&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;!--Kết&nbsp;Thúc&nbsp;Phần&nbsp;Tab&nbsp;Header--&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="tab-indicator"&#62;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;!--Bắt&nbsp;Đầu&nbsp;Phần&nbsp;Tab&nbsp;Body--&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="tab-body"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="active"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h2&#62;Phần&nbsp;Tab&nbsp;Thể&nbsp;Hiện&nbsp;Trang&nbsp;Chủ&#60;/h2&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p&#62;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur...&#60;/p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h2&#62;Phần&nbsp;Tab&nbsp;Thể&nbsp;Hiện&nbsp;Về&nbsp;Chúng&nbsp;Tôi&#60;/h2&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p&#62;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur...&#60;/p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h2&#62;Phần&nbsp;Tab&nbsp;Thể&nbsp;Hiện&nbsp;Về&nbsp;Dịch&nbsp;Vụ&#60;/h2&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p&#62;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur...&#60;/p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h2&#62;Phần&nbsp;Tab&nbsp;Thể&nbsp;Hiện&nbsp;Về&nbsp;Liên&nbsp;Hệ&#60;/h2&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p&#62;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur...&#60;/p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;!--Kết&nbsp;Thúc&nbsp;Phần&nbsp;Tab&nbsp;Body--&#62;<br/> &#60;/div&#62;<br/></code></pre>
+            <p class="mt-4">
+              Và kết quả bạn xem hình ảnh bên dưới nha:
             </p>
             <img class="img-fluid  lazyload"
-              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/trang_web_tai_html_template/W3Layouts.png"
-              alt="W3Layouts">
-
-            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="W3Layouts" target="_blank"
-                href="https://w3layouts.com/">Nguồn</a></p>
-
-
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Tao_Component_Tab_HTML_CSS/tab1.png"
+            alt="tab phần 1">
+            
+            <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size">
+             Thiết Lập Vị Trí Cho Tab
+            </h2>
+            <p>
+              Trong phần này chúng ta sẽ đi vào thiết lập một số thuộc tính CSS tổng quát cho component tab như là font chữ, vị trí trong trang web,
+              padding, độ bo góc... Để hiểu rõ hơn bạn xem đoạn code sau nhé:
+            </p>
+            <h3 class="text-primary">
+              CSS
+            </h3>
+            <pre><code class="css">body{<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;#ddd;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-family:&nbsp;Roboto;<br/> }<br/>.tab{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;50%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;left:&nbsp;50%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;translate(-50%,&nbsp;-50%);<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;500px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;250px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;#f5f5f5;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;20px&nbsp;30px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;overflow:&nbsp;hidden;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;50px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;box-shadow:&nbsp;0&nbsp;1px&nbsp;1px&nbsp;rgba(0,0,0,0.12),<br/> &nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;2px&nbsp;2px&nbsp;rgba(0,0,0,0.12),<br/>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;4px&nbsp;4px&nbsp;rgba(0,0,0,0.12),<br/> &nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;8px&nbsp;8px&nbsp;rgba(0,0,0,0.12),<br/> &nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;16px&nbsp;16px&nbsp;rgba(0,0,0,0.12);<br/> }<br/></code></pre>
+            <p class="mt-4">
+              Và kết quả bạn xem hình ảnh bên dưới nhé:
+            </p>
+            <img class="img-fluid  lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Tao_Component_Tab_HTML_CSS/tab2.png"
+            alt="tab phần 2">
+            
+            <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size">
+              Thiết Lập Style Cho Tab Header
+             </h2> 
+             <p>
+               Trong phần tiếp theo bạn hãy cùng mình đi vào thiết lập lại style cho tab header để các thành phần trong nó có thể nằm thẳng hàng với nhau  và 
+               nhìn có tính thẩm mỹ hơn nhé :
+             </p>
+             <h3 class="text-primary">
+              CSS
+            </h3>
+            <pre><code class="css">.tab&nbsp;.tab-header{<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;60px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;flex;<br/> &nbsp;&nbsp;&nbsp;&nbsp;align-items:&nbsp;center;<br/> }<br/>.tab&nbsp;.tab-header&nbsp;>&nbsp;div{<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;calc(100%&nbsp;/&nbsp;4);<br/> &nbsp;&nbsp;&nbsp;&nbsp;text-align:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#888;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-weight:&nbsp;500;<br/> &nbsp;&nbsp;&nbsp;&nbsp;cursor:&nbsp;pointer;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;16px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;text-transform:&nbsp;uppercase;<br/> &nbsp;&nbsp;&nbsp;&nbsp;outline:&nbsp;none;<br/> }<br/>.tab&nbsp;.tab-header&nbsp;>&nbsp;div&nbsp;>&nbsp;i&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;block;<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:&nbsp;5px;<br/> }<br/>.tab&nbsp;.tab-header&nbsp;>&nbsp;div.active{<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#00acee;<br/> }<br/></code></pre>
+            <p class="mt-4">
+              Và kết quả bạn xem hình bên dưới nha:
+            </p>
+            <img class="img-fluid  lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Tao_Component_Tab_HTML_CSS/tab3.png"
+            alt="tab phần 3">
+            <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size">
+              Thêm CSS cho Thẻ Tab Body
+             </h2> 
+             <p>
+               Trong phần này chúng ta sẽ đi vào thiết lập CSS cho hai thành  phần  <code>.tab-indicator</code>(Thanh Tiến Trình Cho Tab) và <code>.tab-body</code>(Nội Dung Của Thẻ Tab)
+               thông qua  đoạn code dưới đây nhé:
+             </p>
+             <h3 class="text-primary">
+              CSS
+            </h3>
+            <pre><code class="css">.tab&nbsp;.tab-indicator&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;25%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;5px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;#00acee;<br/> &nbsp;&nbsp;&nbsp;&nbsp;left:&nbsp;0px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;5px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;all&nbsp;500ms&nbsp;ease-in-out;<br/> }<br/>.tab&nbsp;.tab-body{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;calc(100%&nbsp;-&nbsp;60px);<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;10px&nbsp;5px;<br/> }<br/>.tab&nbsp;.tab-body&nbsp;>&nbsp;div{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;-200%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin-top:&nbsp;5px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;scale(0.9);<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;opacity&nbsp;500ms&nbsp;ease-in-out&nbsp;0ms,<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform&nbsp;500ms&nbsp;ease-in-out&nbsp;0ms;<br/> }<br/>.tab&nbsp;.tab-body&nbsp;>&nbsp;div.active{<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;0px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;1;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;scale(1);<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin-top:&nbsp;0px;<br/> }<br/></code></pre>
+            <p class="mt-4">
+              Và kết quả bạn xem dưới đây nha:
+            </p>
+            <img class="img-fluid  lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Tao_Component_Tab_HTML_CSS/tab4.png"
+            alt="tab phần 4">
 
             <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size">
-              HTML5 UP
-            </h2>
-            <p>
-              <b>HTML5 UP</b> là website giúp bạn tải các HTML Template miễn phí với responsive đầy đủ trên các màn hình
-              thiết bị,
-              được xây dựng nởi hai ngôn ngữ cơ bản HTML và CSS, dễ dàng chỉnh sửa.
+              Thêm Chức Năng Cho Tab Bằng Javascript
+             </h2> 
+             <p>
+               Sau khi đã thiết kế xong phần giao diện thì bước tiếp theo chúng ta sẽ thêm chức năng cho component tab thông qua đoạn mã Javascript 
+               sau nhé:
+             </p>
+             <h3 class="text-primary">
+              Javascript
+            </h3>
+            <pre><code class="javascript">/*Lấy&nbsp;Các&nbsp;Phần&nbsp;Tử&nbsp;Trong&nbsp;Thẻ&nbsp;DOM*/<br/> let&nbsp;tabHeader&nbsp;=&nbsp;document.getElementsByClassName("tab-header")[0];<br/> let&nbsp;tabIndicator&nbsp;=&nbsp;document.getElementsByClassName("tab-indicator")[0];<br/> let&nbsp;tabBody&nbsp;=&nbsp;document.getElementsByClassName("tab-body")[0];<br/> let&nbsp;tabsPane&nbsp;=&nbsp;tabHeader.getElementsByTagName("div");<br/>/*Thực&nbsp;Hiện&nbsp;Vòng&nbsp;Lặp*/<br/> for&nbsp;(let&nbsp;i&nbsp;=&nbsp;0;&nbsp;i&nbsp;<&nbsp;tabsPane.length;&nbsp;i++)&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;tabsPane[i].addEventListener("click",&nbsp;function&nbsp;()&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tabHeader.getElementsByClassName("active")[0].classList.remove("active");<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tabsPane[i].classList.add("active");<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tabBody.getElementsByClassName("active")[0].classList.remove("active");<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tabBody.getElementsByTagName("div")[i].classList.add("active");<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tabIndicator.style.left&nbsp;=&nbsp;`calc(calc(100%&nbsp;/&nbsp;4)&nbsp;*&nbsp;${i})`;<br/> &nbsp;&nbsp;&nbsp;&nbsp;})<br/> }<br/></code></pre>
+
+            <p class="mt-4">
+              Ở đây mình sẽ giải thích từng phần code để giúp bạn dễ hình dung hơn nhé.
+              <br/>
+              Đầu tiên là chúng ta sẽ <b>thêm</b> class <code>active</code> khi người dùng nhấn vào các thẻ tab trên header như là 
+              trang chủ, về chúng tôi, dịch vụ, liên hệ và đồng thời cũng sẽ  <b>xóa</b> class <code>active</code> <b>của header tab trước đó</b>. Để dễ hình dung 
+              bạn xem đoạn mã :
             </p>
-            <img class="img-fluid  lazyload"
-              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/trang_web_tai_html_template/HTML5%20UP.png"
-              alt="HTML5 UP">
-
-            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="HTML5 UP" target="_blank"
-                href="https://html5up.net/">Nguồn</a></p>
-
-            <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size">
-              UIdeck
-            </h2>
-            <p>
-              <b>UIdeck</b> là nơi giúp bạn tải các trang landing page miễn phí được xây dựng chủ yếu bằng HTML và
-              Bootstrap.
-              Trnag web này thường code thuần chứ không dùng các phần mềm có sẵn để xây dựng template. Do đó
-              theo mình thấy các mẫu trang web ở đây thường được thiết kế rất chỉnh chu, phù hợp với thực tế,
-              dễ dàng chỉnh sửa và tùy chỉnh.
+            <pre><code class="javascript">/*Xóa class active trên thẻ tab header cũ*/<br/> tabHeader.getElementsByClassName("active")[0].classList.remove("active");<br/> /*Thêm class active vào thẻ tab header mới được nhấn*/<br/> tabsPane[i].classList.add("active");<br/></code></pre>
+            <p class="mt-4">
+              Và đây là video minh họa cho bạn dễ hình dung hơn nhé:
             </p>
-            <img class="img-fluid  lazyload"
-              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/trang_web_tai_html_template/UIdeck.png"
-              alt="UIdeck">
-
-            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="UIdeck" target="_blank"
-                href="https://uideck.com/">Nguồn</a></p>
-
-
-            <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size">
-              One Page Love
-            </h2>
-            <p>
-              <b>One Page Love</b> là trang web tập hợp hơn 79 mẫu HTML miễn phi với khả năng reponsive trên nhiều màn
-              hình,
-              website được thiết kế có tính thẩm mỹ cao, đa dạng các lĩnh vực khác nhau...
-            </p>
-            <img class="img-fluid  lazyload"
-              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/trang_web_tai_html_template/One%20Page%20Love.png"
-              alt="One Page Love">
-
-            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="One Page Love" target="_blank"
-                href="https://onepagelove.com/templates/free-templates">Nguồn</a></p>
-
-            <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size">
-              GRAY GRIDS
-            </h2>
-            <p>
-              <b>GRAY GRIDS</b> là website tổng hợp nhiều mẫu HTML Responsive với nhiều tiện ích được cung cấp như là
-              hoàn toàn responsive, thiết kế web chất lượng cao... Tuy nhiên đển hạn chế của nó là chỉ miễn phí cho
-              dự án cá nhân còn để dùng cho phiên bản thương mại thì bạn phải trả khoảng từ 0$ đến 14$.
-            </p>
-            <img class="img-fluid  lazyload"
-              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/trang_web_tai_html_template/GRAY%20GRIDS.png"
-              alt="GRAY GRIDS">
-
-            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="GRAY GRIDS" target="_blank"
-                href="https://graygrids.com/">Nguồn</a></p>
-
-
-            <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size">
-              templated.co
-            </h2>
-            <p>
-              <b> templated.co</b> tổng hợp hơn 867 CSS, HTML5 Và Responsive Template miễn phí.
-            </p>
-            <img class="img-fluid  lazyload"
-              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/trang_web_tai_html_template/templatedco.png"
-              alt="templated.co">
-
-            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="templated.co" target="_blank"
-                href="https://templated.co/">Nguồn</a></p>
-
-
-            <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size">
-              Creative Tim
-            </h2>
-            <p>
-              <b> Creative Tim</b> là nơi tổng hợp những mẫu và theme tốt nhất được phát triển bởi Creative Tim.
-              Các mẫu này thường được xây dựng bằng Bootstrap với nhiều thiết kế hiện đại và dễ dàng chỉnh sửa thông qua
-              các component được cung cấp sẵn.
-            </p>
-            <img class="img-fluid  lazyload"
-              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/trang_web_tai_html_template/Creative%20Tim.png"
-              alt=" Creative Tim">
-
-            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title=" Creative Tim" target="_blank"
-                href="https://www.creative-tim.com/templates/free">Nguồn</a></p>
-
-
-            <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size">
-              Templatemo
-            </h2>
-            <p>
-              <b> Templatemo</b> tổng hợp hơn 146 mẫu bootstrap template được hiển thị responsive trên nhiều màn hình
-              thiết bị.
-              Hơn 548+ template CSS được sử dụng hoàn toàn miễn phí cho trang web kể cả dự án cá nhân hoặc thương mại.
-            </p>
-            <img class="img-fluid  lazyload"
-              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/trang_web_tai_html_template/Templatemo.png"
-              alt="Templatemo">
-
-            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Templatemo" target="_blank"
-                href="https://templatemo.com/">Nguồn</a></p>
-
-
-            <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size">
-              FreeHTML5.CO
-            </h2>
-            <p>
-              <b> FreeHTML5.CO</b> là bộ sưu tập các mẫu HTML 5, Bootstrap miễn phí phù hợp cho nhà thiết kế,
-              lập trình viên, các blogger... với thiết kế theo xu hướng tối giản và gọn gàng. Nó cũng cung cấp các tiện
-              ích khác như là đáp ứng trên nhiều thiết bị,
-              dễ dàng chỉnh sửa, tinh chỉnh, kích thước file không quá lớn. Lĩnh vực mà trang web này cung cấp rất đa
-              dạng như là nhà hàng, nhiếp ảnh, công ty, du lịch, bất động sản...
-            </p>
-            <img class="img-fluid  lazyload"
-              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/trang_web_tai_html_template/FreeHTML5CO.png"
-              alt="FreeHTML5.CO">
-
-            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="FreeHTML5.CO" target="_blank"
-                href="https://freehtml5.co/">Nguồn</a></p>
-
-
-            <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size">
-              Styleshout
-            </h2>
-            <p>
-              <b>Styleshout</b> là bộ sưu tập tuyệt vời HTML5 Template đơn giản, gọn gàng và tải về hoàn toàn miễn phí.
-              Trang web cũng cho phép sử dụng các mẫu template này cho dự án cả cá nhân và thương mại.
-
-            </p>
-            <img class="img-fluid  lazyload"
-              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/trang_web_tai_html_template/Styleshout.png"
-              alt="Styleshout">
-
-            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Styleshout" target="_blank"
-                href="https://www.styleshout.com/free-templates/">Nguồn</a></p>
-
-
-            <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size">
-              HTML5xCSS3
-            </h2>
-            <p>
-              <b> HTML5xCSS3</b> tập hợp hơn 480 Website Template miễn phí với đầy đủ tiêu chuẩn W3 và responsive trên
-              nhiều thiết bị.
-
-
-            </p>
-            <img class="img-fluid  lazyload"
-              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/trang_web_tai_html_template/HTML5xCSS3.png"
-              alt="HTML5xCSS3">
-
-            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="HTML5xCSS3" target="_blank"
-                href="https://www.html5xcss3.com/c/free-website-templates">Nguồn</a></p>
-
-
-            <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size">
-              Themes For App
-            </h2>
-            <p>
-              <b>Themes For App</b> được sáng lập bởi Kantbtrue và Savydv với mục đích truyền cảm hứng design và tiết
-              kiệm thời gian cho
-              các lập trình viên khi phát triển giao diện website với nhiều mẫu template miễn phí.
-
-
-            </p>
-            <img class="img-fluid  lazyload"
-              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/trang_web_tai_html_template/Themes%20For%20App.png"
-              alt="Themes For App">
-
-            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Themes For App" target="_blank"
-                href="https://themesfor.app/all-themes/">Nguồn</a></p>
-
-
-            <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size">
-              Tooplate
-            </h2>
-            <p>
-              <b>Tooplate</b> cung cấp những mẫu HTML, CSS, Bootstrap mới nhất và hoàn toàn miễn phí sử dụng cho các dự
-              án cá nhân và thương mại.
-
-
-            </p>
-            <img class="img-fluid  lazyload"
-              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/trang_web_tai_html_template/Tooplate.png"
-              alt="Tooplate">
-
-            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Tooplate" target="_blank"
-                href="https://www.tooplate.com/">Nguồn</a></p>
-
-
-            <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size">
-              Startbootstrap
-            </h2>
-            <p>
-              <b>Startbootstrap</b> cung cấp các mẫu Bootstrap Template cơ bản và phổ biến dành cho trang web.
-
-
-            </p>
-            <img class="img-fluid  lazyload"
-              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/trang_web_tai_html_template/Startbootstrap%20%282%29.png"
-              alt="Startbootstrap">
-
-            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Startbootstrap" target="_blank"
-                href="https://startbootstrap.com/templates">Nguồn</a></p>
-
-
-            <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size">
-              BootstrapMade
-            </h2>
-            <p>
-              <b>BootstrapMade</b> cung cấp các template với thiết kế đơn giản, thiết kế đẹp mắt, gọn gàng, tối giản cho website 
-              bằng Bootstrap.
-
-
-            </p>
-            <img class="img-fluid  lazyload"
-              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/trang_web_tai_html_template/BootstrapMade.png"
-              alt="BootstrapMade">
-
-            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="BootstrapMade" target="_blank"
-                href="https://bootstrapmade.com/">Nguồn</a></p>
-
-                <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size">
-                  Themevault
-                </h2>
-                <p>
-                  <b>Themevault</b> cung cấp các responsive template miễn phí với đa dạng lĩnh vực như là nhà hàng khách sạn, thời trang, làm đẹp,
-                  kinh doanh...
-    
-    
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Tao_Component_Tab_HTML_CSS/vi_du_tab_javascript.mp4" allowfullscreen></iframe>
+            </div>
+            <p class="mt-4">
+              Đối với thẻ <code>tab-body</code> thì cách hoạt động cũng như vậy nha. Và kết quả cuối cùng của chúng là :
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Tao_Component_Tab_HTML_CSS/tao-component-tab_DTdB0cZa.mp4" allowfullscreen></iframe>
+              </div>
+              <p class="mt-4">
+                Nếu bạn muốn nguồn dự án trên Codepen thì có thể tham khảo đường dẫn bên dưới nha:
+              </p>
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Codepen Tab" target="_blank"
+                href="https://codepen.io/haycuoilennao19/full/XWjWyKz">Nguồn Codepen</a></p>
+                <p class="mt-4">
+                  Nếu bạn muốn tham khảo thêm các component tab khác dành cho trang web thì có thể truy cập đường dẫn dưới nhé:
                 </p>
-                <img class="img-fluid  lazyload"
-                  data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/trang_web_tai_html_template/Themevault.png"
-                  alt="Themevault">
-    
-                <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Themevault" target="_blank"
-                    href="https://www.themevault.net/free-responsive-website-templates">Nguồn</a></p>
+                <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Tab Component" target="_blank"
+                  href="https://www.niemvuilaptrinh.com/article/35-Tabs-Xay-Dung-Bang-CSS-Javascript-Cho-Website-Nam-2020">Nguồn Tab</a></p>
 
-
-                    <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size">
-                      Free CSS 
-                    </h2>
-                    <p>
-                      <b> Free CSS </b> theo mình thấy là ngoài cung cấp các mẫu template website đẹp thì nó cũng rất hay cập nhật các 
-                      mẫu website theo xu hướng dành cho thiết kế web.
-        
-        
-                    </p>
-                    <img class="img-fluid  lazyload"
-                      data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/trang_web_tai_html_template/Free%20CSS.png"
-                      alt=" Free CSS ">
-        
-                    <p class="mt-4 pb-4"> <a class="button-blog-post-article" title=" Free CSS " target="_blank"
-                        href="https://www.free-css.com/free-css-templates">Nguồn</a></p>
+          
 
 
 
@@ -328,8 +166,7 @@
 
 
             <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
-            <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những nơi cung cấp những trang web tải template miễn phí và
-              hữu ích dành cho
+            <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn kiến thức tạo component tab hữu ích
               việc phát triển, thiết kế web và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất
               mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui
               vẻ!</p>
