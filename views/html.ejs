@@ -34,141 +34,586 @@
         <article>
 
           <div class="text-content-article mt-5">
-            <p><i> Ngày hôm nay chúng ta sẽ đi vào tìm hiểu cách tạo thẻ tab và thêm hiệu ứng animation cho nó bằng HTML CSS và Javascript nhé!
+            <p><i> Ngày hôm nay chúng ta sẽ đi vào tìm hiểu những thư viện UI cho React, Vue và Angular được các lập
+                trình viên hay sử dụng
+                trong quá trình thiết kế và phát triển web nhé!
               </i></p>
             <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size">
-              Tạo Cấu Trúc Cho Component Tab
+              Thư Viện UI Cho React
             </h2>
-            <p> Phần đầu tiên chúng ta sẽ đi vào tạo hai file là <code>index.html</code>(nơi lưu trữ HTML) và <code>style.css</code>(nơi lưu trữ mã CSS). Sau đó liên kết chúng với Font Awesome v4.7 và Google Font thông qua đoạn mã dưới đây nhé:</p>
-            <h3 class="text-primary">
-              HTML
-            </h3>
-            <pre><code class="html">&#60;!DOCTYPE&nbsp;html&#62;<br/> &nbsp;&nbsp;&#60;html&nbsp;lang="en"&#62;<br/> &nbsp;&nbsp;&#60;head&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;charset="UTF-8"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;name="viewport"&nbsp;content="width=device-width,&nbsp;initial-scale=1.0"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;title&#62;Tạo&nbsp;Component&nbsp;Tab&#60;/title&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="style.css"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="preconnect"&nbsp;href="https://fonts.gstatic.com"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"&nbsp;rel="stylesheet"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"&#62;<br/> &nbsp;&#60;/head&#62;<br/> &nbsp;&#60;body&#62;<br/> &nbsp;&#60;/body&#62;<br/> &nbsp;&#60;/html&#62;<br/></code></pre>
-            
-            <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size">
-              Tạo Cấu Trúc Cho Component Tab
-            </h2>
-            <p>
-              Trong phần này chúng ta sẽ đi vào thêm các thẻ HTML cần thiết để tạo component tab thông qua đoạn mã sau nhé:
-            </p>
-            <h3 class="text-primary">
-              HTML
-            </h3>
-            <pre><code class="html">&#60;div&nbsp;class="tab"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;!--Bắt&nbsp;Đầu&nbsp;Phần&nbsp;Tab&nbsp;Header--&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="tab-header"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="active"&#62;&#60;i&nbsp;class="fa&nbsp;fa-code"&#62;&#60;/i&#62;&nbsp;Trang&nbsp;Chủ&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&#62;&#60;i&nbsp;class="fa&nbsp;fa-pencil-square-o"&#62;&#60;/i&#62;&nbsp;Về&nbsp;Chúng&nbsp;Tôi&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&#62;&#60;i&nbsp;class="fa&nbsp;fa-bar-chart"&#62;&#60;/i&#62;&nbsp;Dịch&nbsp;Vụ&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&#62;&#60;i&nbsp;class="fa&nbsp;fa-envelope-o"&#62;&#60;/i&#62;&nbsp;Liên&nbsp;Hệ&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;!--Kết&nbsp;Thúc&nbsp;Phần&nbsp;Tab&nbsp;Header--&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="tab-indicator"&#62;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;!--Bắt&nbsp;Đầu&nbsp;Phần&nbsp;Tab&nbsp;Body--&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="tab-body"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="active"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h2&#62;Phần&nbsp;Tab&nbsp;Thể&nbsp;Hiện&nbsp;Trang&nbsp;Chủ&#60;/h2&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p&#62;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur...&#60;/p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h2&#62;Phần&nbsp;Tab&nbsp;Thể&nbsp;Hiện&nbsp;Về&nbsp;Chúng&nbsp;Tôi&#60;/h2&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p&#62;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur...&#60;/p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h2&#62;Phần&nbsp;Tab&nbsp;Thể&nbsp;Hiện&nbsp;Về&nbsp;Dịch&nbsp;Vụ&#60;/h2&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p&#62;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur...&#60;/p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h2&#62;Phần&nbsp;Tab&nbsp;Thể&nbsp;Hiện&nbsp;Về&nbsp;Liên&nbsp;Hệ&#60;/h2&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p&#62;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet&nbsp;consectetur...&#60;/p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;!--Kết&nbsp;Thúc&nbsp;Phần&nbsp;Tab&nbsp;Body--&#62;<br/> &#60;/div&#62;<br/></code></pre>
-            <p class="mt-4">
-              Và kết quả bạn xem hình ảnh bên dưới nha:
-            </p>
-            <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Tao_Component_Tab_HTML_CSS/tab1.png"
-            alt="tab phần 1">
-            
-            <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size">
-             Thiết Lập Vị Trí Cho Tab
-            </h2>
-            <p>
-              Trong phần này chúng ta sẽ đi vào thiết lập một số thuộc tính CSS tổng quát cho component tab như là font chữ, vị trí trong trang web,
-              padding, độ bo góc... Để hiểu rõ hơn bạn xem đoạn code sau nhé:
-            </p>
-            <h3 class="text-primary">
-              CSS
-            </h3>
-            <pre><code class="css">body{<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;#ddd;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-family:&nbsp;Roboto;<br/> }<br/>.tab{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;50%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;left:&nbsp;50%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;translate(-50%,&nbsp;-50%);<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;500px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;250px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;#f5f5f5;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;20px&nbsp;30px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;overflow:&nbsp;hidden;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;50px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;box-shadow:&nbsp;0&nbsp;1px&nbsp;1px&nbsp;rgba(0,0,0,0.12),<br/> &nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;2px&nbsp;2px&nbsp;rgba(0,0,0,0.12),<br/>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;4px&nbsp;4px&nbsp;rgba(0,0,0,0.12),<br/> &nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;8px&nbsp;8px&nbsp;rgba(0,0,0,0.12),<br/> &nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;16px&nbsp;16px&nbsp;rgba(0,0,0,0.12);<br/> }<br/></code></pre>
-            <p class="mt-4">
-              Và kết quả bạn xem hình ảnh bên dưới nhé:
-            </p>
-            <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Tao_Component_Tab_HTML_CSS/tab2.png"
-            alt="tab phần 2">
-            
-            <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size">
-              Thiết Lập Style Cho Tab Header
-             </h2> 
-             <p>
-               Trong phần tiếp theo bạn hãy cùng mình đi vào thiết lập lại style cho tab header để các thành phần trong nó có thể nằm thẳng hàng với nhau  và 
-               nhìn có tính thẩm mỹ hơn nhé :
-             </p>
-             <h3 class="text-primary">
-              CSS
-            </h3>
-            <pre><code class="css">.tab&nbsp;.tab-header{<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;60px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;flex;<br/> &nbsp;&nbsp;&nbsp;&nbsp;align-items:&nbsp;center;<br/> }<br/>.tab&nbsp;.tab-header&nbsp;>&nbsp;div{<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;calc(100%&nbsp;/&nbsp;4);<br/> &nbsp;&nbsp;&nbsp;&nbsp;text-align:&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#888;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-weight:&nbsp;500;<br/> &nbsp;&nbsp;&nbsp;&nbsp;cursor:&nbsp;pointer;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;16px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;text-transform:&nbsp;uppercase;<br/> &nbsp;&nbsp;&nbsp;&nbsp;outline:&nbsp;none;<br/> }<br/>.tab&nbsp;.tab-header&nbsp;>&nbsp;div&nbsp;>&nbsp;i&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;block;<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:&nbsp;5px;<br/> }<br/>.tab&nbsp;.tab-header&nbsp;>&nbsp;div.active{<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#00acee;<br/> }<br/></code></pre>
-            <p class="mt-4">
-              Và kết quả bạn xem hình bên dưới nha:
-            </p>
-            <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Tao_Component_Tab_HTML_CSS/tab3.png"
-            alt="tab phần 3">
-            <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size">
-              Thêm CSS cho Thẻ Tab Body
-             </h2> 
-             <p>
-               Trong phần này chúng ta sẽ đi vào thiết lập CSS cho hai thành  phần  <code>.tab-indicator</code>(Thanh Tiến Trình Cho Tab) và <code>.tab-body</code>(Nội Dung Của Thẻ Tab)
-               thông qua  đoạn code dưới đây nhé:
-             </p>
-             <h3 class="text-primary">
-              CSS
-            </h3>
-            <pre><code class="css">.tab&nbsp;.tab-indicator&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;25%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;5px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;#00acee;<br/> &nbsp;&nbsp;&nbsp;&nbsp;left:&nbsp;0px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;5px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;all&nbsp;500ms&nbsp;ease-in-out;<br/> }<br/>.tab&nbsp;.tab-body{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;calc(100%&nbsp;-&nbsp;60px);<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;10px&nbsp;5px;<br/> }<br/>.tab&nbsp;.tab-body&nbsp;>&nbsp;div{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;-200%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin-top:&nbsp;5px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;scale(0.9);<br/> &nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;opacity&nbsp;500ms&nbsp;ease-in-out&nbsp;0ms,<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform&nbsp;500ms&nbsp;ease-in-out&nbsp;0ms;<br/> }<br/>.tab&nbsp;.tab-body&nbsp;>&nbsp;div.active{<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;0px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;1;<br/> &nbsp;&nbsp;&nbsp;&nbsp;transform:&nbsp;scale(1);<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin-top:&nbsp;0px;<br/> }<br/></code></pre>
-            <p class="mt-4">
-              Và kết quả bạn xem dưới đây nha:
-            </p>
-            <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Tao_Component_Tab_HTML_CSS/tab4.png"
-            alt="tab phần 4">
 
-            <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size">
-              Thêm Chức Năng Cho Tab Bằng Javascript
-             </h2> 
-             <p>
-               Sau khi đã thiết kế xong phần giao diện thì bước tiếp theo chúng ta sẽ thêm chức năng cho component tab thông qua đoạn mã Javascript 
-               sau nhé:
-             </p>
-             <h3 class="text-primary">
-              Javascript
-            </h3>
-            <pre><code class="javascript">/*Lấy&nbsp;Các&nbsp;Phần&nbsp;Tử&nbsp;Trong&nbsp;Thẻ&nbsp;DOM*/<br/> let&nbsp;tabHeader&nbsp;=&nbsp;document.getElementsByClassName("tab-header")[0];<br/> let&nbsp;tabIndicator&nbsp;=&nbsp;document.getElementsByClassName("tab-indicator")[0];<br/> let&nbsp;tabBody&nbsp;=&nbsp;document.getElementsByClassName("tab-body")[0];<br/> let&nbsp;tabsPane&nbsp;=&nbsp;tabHeader.getElementsByTagName("div");<br/>/*Thực&nbsp;Hiện&nbsp;Vòng&nbsp;Lặp*/<br/> for&nbsp;(let&nbsp;i&nbsp;=&nbsp;0;&nbsp;i&nbsp;<&nbsp;tabsPane.length;&nbsp;i++)&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;tabsPane[i].addEventListener("click",&nbsp;function&nbsp;()&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tabHeader.getElementsByClassName("active")[0].classList.remove("active");<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tabsPane[i].classList.add("active");<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tabBody.getElementsByClassName("active")[0].classList.remove("active");<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tabBody.getElementsByTagName("div")[i].classList.add("active");<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tabIndicator.style.left&nbsp;=&nbsp;`calc(calc(100%&nbsp;/&nbsp;4)&nbsp;*&nbsp;${i})`;<br/> &nbsp;&nbsp;&nbsp;&nbsp;})<br/> }<br/></code></pre>
-
-            <p class="mt-4">
-              Ở đây mình sẽ giải thích từng phần code để giúp bạn dễ hình dung hơn nhé.
-              <br/>
-              Đầu tiên là chúng ta sẽ <b>thêm</b> class <code>active</code> khi người dùng nhấn vào các thẻ tab trên header như là 
-              trang chủ, về chúng tôi, dịch vụ, liên hệ và đồng thời cũng sẽ  <b>xóa</b> class <code>active</code> <b>của header tab trước đó</b>. Để dễ hình dung 
-              bạn xem đoạn mã :
-            </p>
-            <pre><code class="javascript">/*Xóa class active trên thẻ tab header cũ*/<br/> tabHeader.getElementsByClassName("active")[0].classList.remove("active");<br/> /*Thêm class active vào thẻ tab header mới được nhấn*/<br/> tabsPane[i].classList.add("active");<br/></code></pre>
-            <p class="mt-4">
-              Và đây là video minh họa cho bạn dễ hình dung hơn nhé:
-            </p>
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Tao_Component_Tab_HTML_CSS/vi_du_tab_javascript.mp4" allowfullscreen></iframe>
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">MATERIAL-UI(React)</h3>
             </div>
-            <p class="mt-4">
-              Đối với thẻ <code>tab-body</code> thì cách hoạt động cũng như vậy nha. Và kết quả cuối cùng của chúng là :
-              <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Tao_Component_Tab_HTML_CSS/tao-component-tab_DTdB0cZa.mp4" allowfullscreen></iframe>
-              </div>
-              <p class="mt-4">
-                Nếu bạn muốn nguồn dự án trên Codepen thì có thể tham khảo đường dẫn bên dưới nha:
-              </p>
-            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Codepen Tab" target="_blank"
-                href="https://codepen.io/haycuoilennao19/full/XWjWyKz">Nguồn Codepen</a></p>
-                <p class="mt-4">
-                  Nếu bạn muốn tham khảo thêm các component tab khác dành cho trang web thì có thể truy cập đường dẫn dưới nhé:
-                </p>
-                <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Tab Component" target="_blank"
-                  href="https://www.niemvuilaptrinh.com/article/35-Tabs-Xay-Dung-Bang-CSS-Javascript-Cho-Website-Nam-2020">Nguồn Tab</a></p>
-
-          
+            <p>
+              <b>MATERIAL-UI(React)</b> component giúp bạn dễ dàng thiết lập và phát triển nhanh chóng cho trang web
+              theo phong cách thiết kế Material.
+            </p>
+            <img class="img-fluid  lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/UI_Cho_Javascript/React_UI/MATERIAL-UI%28React%29.png"
+              alt="MATERIAL-UI(React)">
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="MATERIAL-UI(React)" target="_blank"
+                href="https://material-ui.com/">Nguồn</a></p>
 
 
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">React Bootstrap</h3>
+            </div>
+            <p>
+              <b>React Bootstrap</b> là một trong những thư viện React lâu đời với hơn 18k sao trên github. Nó lấy
+              Bootstrap làm trọng tâm
+              và không cần phải phụ thuộc vào thư viện Jquery. Và nó có hai phiên bản chính là v0.33.1 cho Bootstrap3 và
+              v1.4.0 cho Bootstrap 4.5.
+            </p>
+            <img class="img-fluid  lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/UI_Cho_Javascript/React_UI/React%20Bootstrap.png"
+              alt="React Bootstrap">
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="React Bootstrap" target="_blank"
+                href="https://react-bootstrap.github.io/">Nguồn</a></p>
+
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">React Suite</h3>
+            </div>
+            <p>
+              <b>React Suite</b> là một tthư viện component cho react dành cho các doanh nghiệp vừa và nhỏ. Các điểm
+              mạnh của nó là thiết kế
+              giao diện thân thiện với người dùng, dễ dàng chỉnh sửa, đa dạng các loại component...
+            </p>
+            <img class="img-fluid  lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/UI_Cho_Javascript/React_UI/React%20Suite.png"
+              alt="React Suite">
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="React Suite" target="_blank"
+                href="https://rsuitejs.com/">Nguồn</a></p>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">Chakra UI</h3>
+            </div>
+            <p>
+              <b>Chakra UI</b> cung cấp các component cho React với khả năng truy cập dễ dàng (accessible), có thể sử
+              dụng lại (reusable),
+              kết hợp với các component khác. Ngoài ra nó còn có chế độ dark-mode cho bạn nào thích phồng nền đen cho
+              trang web.
+            </p>
+            <img class="img-fluid  lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/UI_Cho_Javascript/React_UI/Chakra%20UI.png"
+              alt="Chakra UI">
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Chakra UI" target="_blank"
+                href="https://chakra-ui.com/">Nguồn</a></p>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">Blueprint</h3>
+            </div>
+            <p>
+              <b>Blueprint</b> là một bộ công cụ xây dựng giao diện cho người dùng dựa trên React cho trang web. Nó được
+              tối ưu hóa
+              để xây dựng các trang web phức tạp với dữ liệu lớn và có thể chạy trên nhiều trình duyệt phổ biến ngày
+              nay.
+            </p>
+            <img class="img-fluid  lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/UI_Cho_Javascript/React_UI/Blueprint.png"
+              alt="Blueprint">
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Blueprint" target="_blank"
+                href="https://blueprintjs.com/docs/">Nguồn</a></p>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">PRIMEREACT</h3>
+            </div>
+            <p>
+              <b>PRIMEREACT</b> là một thư viện cung cấp hơn 70 component cho thiết kế web. Nó là mã nguồn mở nên bạn có
+              thể hoàn toàn sử dụng
+              cho dự án cá nhân và thương mại. Một điểm mạnh của nó mà mình thích nhất là cách tối ưu hóa các component
+              trên thiết bị điện thoại.
+            </p>
+            <img class="img-fluid  lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/UI_Cho_Javascript/React_UI/PRIMEREACT.png"
+              alt="PRIMEREACT">
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="PRIMEREACT" target="_blank"
+                href="https://primefaces.org/primereact/showcase/#/">Nguồn</a></p>
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">Treact</h3>
+            </div>
+            <p>
+              <b>Treact</b> là thư viện UI được xây dựng bởi sự kết hợp giữa React và TailwindCSS. Nó cung cấp hơn 52
+              component dành chuyên cho trang landing page,
+              7 ví dụ về landing page và 8 demo inner page. Ngoài ra nó cũng thiết kế các component để responsive trên
+              nhiều màn hình thiết bị khác nhau cho trang web.
+
+            </p>
+            <img class="img-fluid  lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/UI_Cho_Javascript/React_UI/Treact.png"
+              alt="Treact">
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Treact" target="_blank"
+                href="https://treact.owaiskhan.me/">Nguồn</a></p>
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">Carolina React Admin Dashboard</h3>
+            </div>
+            <p>
+              <b>Carolina React Admin Dashboard</b> là thư viện UI dành chuyên việc thiết kế bảng điều khiển dành cho
+              các quản trị viên web.
+              Nó được thiết kế theo phong cách tối giản và gọn gàng của Material Google. Ngoài ra nếu bạn muốn thêm
+              nhiều component khác thì có thể nâng cấp
+              lên gói pro với khoảng 59$/năm.
+
+
+            </p>
+            <img class="img-fluid  lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/UI_Cho_Javascript/React_UI/Carolina%20React%20Admin%20Dashboard.png"
+              alt="Carolina React Admin Dashboard">
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Carolina React Admin Dashboard"
+                target="_blank"
+                href="https://demo.uifort.com/carolina-react-admin-dashboard-material-ui-free-demo/LandingPage">Nguồn</a>
+            </p>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">Semantic UI React</h3>
+            </div>
+            <p>
+              <b>Semantic UI React</b> là thư viện UI dành cho React với hơn 50 component được thiết kế responsive trên nhiều màn hình thiết bị khác nhau.
+              Do nó là mã nguồn mở nên bạn có thể hoàn toàn sử dụng cho nhiều dự án khác nhau từ cá nhân cho đến thương mại...
+
+
+            </p>
+            <img class="img-fluid  lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/UI_Cho_Javascript/React_UI/Semantic%20UI%20Reac.png"
+              alt="Semantic UI React">
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Semantic UI React"
+                target="_blank"
+                href="https://react.semantic-ui.com/">Nguồn</a>
+            </p>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">React Toolbox</h3>
+            </div>
+            <p>
+              <b>React Toolbox</b> là nơi tập hợp các component React được thiết kế theo phong cách Material. Nó được xây dựng 
+              dựa trên một số đề xuất xu hướng như là mô-đun CSS (được viết bằng SASS), webpack và ES6. Theo mình thấy nó có phần  hướng dẫn rất chi 
+              tiết cho việc áp dụng các đoạn mã của thư viện vào việc phát triển web.
+
+
+            </p>
+            <img class="img-fluid  lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/UI_Cho_Javascript/React_UI/React%20Toolbox.png"
+              alt="React Toolbox">
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="React Toolbox"
+                target="_blank"
+                href="http://react-toolbox.io/#/">Nguồn</a>
+            </p>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">Elastic UI</h3>
+            </div>
+            <p>
+              <b>Elastic UI</b> là  thư viện UI React Component cho việc xây dựng và phát triển web. Nó có một số điểm mạnh như 
+              là sử dụng bảng màu đa dạng, độ tương phản cao, dễ dàng thay đổi chủ đề cho trang web, đáp ứng được cho nhiều loại dự án web 
+              khác nhau, các đoạn mã dễ dàng sử dụng cho người mới...
+
+
+            </p>
+            <img class="img-fluid  lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/UI_Cho_Javascript/React_UI/Elastic%20UI.png"
+              alt="Elastic UI">
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Elastic UI"
+                target="_blank"
+                href="https://elastic.github.io/eui/#/">Nguồn</a>
+            </p>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">Evergreen</h3>
+            </div>
+            <p>
+              <b>Evergreen</b> là   React UI Framework để xây dựng các sản phẩm  với thiết kế đẹp mắt và cng cấp đầy đủ tính năng cho trang web.
+              Ngoài ra nó cũng cho bạn toàn quyền kiểm soát và tùy chỉnh các component khi cần thiết. Do là mã nguồn mở nên bạn có thể sử dụng cho nhiều dự án khác nhau 
+              mà không cần phải quan tâm đến vấn đề bản quyền nhé!
+
+
+            </p>
+            <img class="img-fluid  lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/UI_Cho_Javascript/React_UI/Evergreen.png"
+              alt="Evergreen">
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Evergreen"
+                target="_blank"
+                href="https://evergreen.segment.com/">Nguồn</a>
+            </p>
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">Bumbag</h3>
+            </div>
+            <p>
+              <b>Bumbag</b> là  một Ract UI Kit thân thiện  phù hợp với các MVP hoặc các ứng dụng có quy mô lớn. Một số tiện ích của thư viện này là 
+              tuân theo tiêu chuẩn WAI-ARIA, có khả năng tự kiểm soát và tùy chỉnh bất kỳ component nào trong trang web, linh hoạt xây dựng và phát triển các 
+              component khác...
+
+
+            </p>
+            <img class="img-fluid  lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/UI_Cho_Javascript/React_UI/Bumbag.png"
+              alt="Bumbag">
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Bumbag"
+                target="_blank"
+                href="https://bumbag.style/">Nguồn</a>
+            </p>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">Bumbag</h3>
+            </div>
+            <p>
+              <b>Bumbag</b> là  một Ract UI Kit thân thiện  phù hợp với các MVP hoặc các ứng dụng có quy mô lớn. Một số tiện ích của thư viện này là 
+              tuân theo tiêu chuẩn WAI-ARIA, có khả năng tự kiểm soát và tùy chỉnh bất kỳ component nào trong trang web, linh hoạt xây dựng và phát triển các 
+              component khác...
+
+
+            </p>
+            <img class="img-fluid  lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/UI_Cho_Javascript/React_UI/Bumbag.png"
+              alt="Bumbag">
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Bumbag"
+                target="_blank"
+                href="https://bumbag.style/">Nguồn</a>
+            </p>
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">Rimble</h3>
+            </div>
+            <p>
+              <b>Rimble</b> là thư viện mã nguồn mở dành cho React Component với các  hướng dẫn chi tiết dành cho việc thiết kế và phát triển trang web.
+
+
+
+            </p>
+            <img class="img-fluid  lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/UI_Cho_Javascript/React_UI/Rimble.png"
+              alt="Rimble">
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Rimble"
+                target="_blank"
+                href="https://rimble.consensys.design/">Nguồn</a>
+            </p>
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">Grommet</h3>
+            </div>
+            <p>
+              <b>Grommet</b> là trang web tập hợp nhiều component React hữu ích dành cho trang web với tiêu chí là xây dựng và thiết kế responsive cho thiết bị 
+              điện thoại trước.
+
+
+
+            </p>
+            <img class="img-fluid  lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/UI_Cho_Javascript/React_UI/Grommet.png"
+              alt="Grommet">
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Grommet"
+                target="_blank"
+                href="https://v2.grommet.io/">Nguồn</a>
+            </p>
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">ReactAdmin</h3>
+            </div>
+            <p>
+              <b>ReactAdmin</b> là thư viện mã nguồn mở chuyên cung cấp các component dành cho việc phát triển giao diện quản trị web 
+              với nhiều tiện ích như là cung cấp chức năng quản lý dữ liệu, hỗ trợ việc tạo liên hệ giữa các bảng, cung cấp bộ lọc, 
+              trình soạn thảo văn bản...
+            </p>
+            <img class="img-fluid  lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/UI_Cho_Javascript/React_UI/ReactAdmin.png"
+              alt="ReactAdmin">
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="ReactAdmin"
+                target="_blank"
+                href="https://marmelab.com/react-admin/">Nguồn</a>
+            </p>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">Primer</h3>
+            </div>
+            <p>
+              <b>Primer</b> là thư viện component dành cho React với nhiều tính năng như là dễ dàng áp dụng cho nhiều loại dự án web khác nhau, 
+              tối giản độ phức tạp component đến múc ít nhất có thể, dễ dàng mở rộng và tinh chỉnh component...
+            </p>
+            <img class="img-fluid  lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/UI_Cho_Javascript/React_UI/Primer.png"
+              alt="Primer">
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Primer"
+                target="_blank"
+                href="https://primer.style/components/">Nguồn</a>
+            </p>
+
+            <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size">
+              Thư Viện UI Cho Vue
+            </h2>
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">Vuetify </h3>
+            </div>
+            <p>
+              <b>Vuetify </b> là thư viện UI component dành cho VueJs với thiết kế đẹp mắt với mục đích là 
+              dễ dàng sử dụng cho người mới bắt đầu với hàng trăm component được xây dựng và thiết kế tỉ mỷ. 
+              Ngoài ra nó cũng có một số điểm mạnh khác như là ưu tiên cho việc hiển thị trên thiết bị mobile trước,
+              hỗ trợ lâu dài...
+            </p>
+            <img class="img-fluid  lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/UI_Cho_Javascript/Vue_UI/Vuetify.png"
+              alt="Vuetify">
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Vuetify"
+                target="_blank"
+                href="https://vuetifyjs.com/en/">Nguồn</a>
+            </p>
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">Buefy </h3>
+            </div>
+            <p>
+              <b>Buefy </b> là thư viện mã nguồn mở được xây dựng dựa trên Vue.js và Bulma. Tất cả các component đều được responsive trên nhiều màn hình thiết bị 
+              và không phụ thuộc vào các thư viện khác.
+            </p>
+            <img class="img-fluid  lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/UI_Cho_Javascript/Vue_UI/Buefy.png"
+              alt="Buefy">
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Buefy"
+                target="_blank"
+                href="https://buefy.org/">Nguồn</a>
+            </p>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">Quasar </h3>
+            </div>
+            <p>
+              <b>Quasar </b> là framework mã nguồn mở giúp việc xây dựng giao diện bằng Vuejs được dễ dàng và nhanh chóng hơn.
+              Ngoài việc dành cho trang web thì nó còn có thể xây dựng ứng dụng SSR, PWA, tiện ích mở rộng cho trình duyệt, 
+              ứng dụng mobile...
+            </p>
+            <img class="img-fluid  lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/UI_Cho_Javascript/Vue_UI/Quasar.png"
+              alt="Quasar">
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Quasar"
+                target="_blank"
+                href="https://quasar.dev/vue-components">Nguồn</a>
+            </p>
+
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">BootstrapVue </h3>
+            </div>
+            <p>
+              <b>BootstrapVue </b> là thư viện được xây dựng dựa trên sự kết hợp của Vue và Bootstrap với các điểm nổi bật như là 
+              xây dựng trên thiết bị điện thoại trước, có thể truy cập ARIA, cung cấp hơn 85 component và 45 plugin, 
+              hơn 1100 icon... Do là mã nguồn mở nên bạn có thể hoàn toàn sử dụng cho tất cả các loại dự án khác nhau.
+            </p>
+            <img class="img-fluid  lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/UI_Cho_Javascript/Vue_UI/BootstrapVue.png"
+              alt="BootstrapVue">
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="BootstrapVue"
+                target="_blank"
+                href="https://bootstrap-vue.org/">Nguồn</a>
+            </p>
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">VueJS Example </h3>
+            </div>
+            <p>
+              <b>VueJS Example </b> là nơi tập hợp nhiều ví dụ component sử dụng cho Vue như là danh sách, bảng, card, layout, timline...
+            </p>
+            <img class="img-fluid  lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/UI_Cho_Javascript/Vue_UI/VueJS%20Example.png"
+              alt="VueJS Example">
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="VueJS Example"
+                target="_blank"
+                href="https://vuejsexamples.com/">Nguồn</a>
+            </p>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">KeenUI </h3>
+            </div>
+            <p>
+              <b>KeenUI </b> là thư viện UI Vue.js theo thiết kế Google Material cho trang web.
+            </p>
+            <img class="img-fluid  lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/UI_Cho_Javascript/Vue_UI/KeenUI.png"
+              alt="KeenUI">
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="KeenUI"
+                target="_blank"
+                href="https://josephuspaye.github.io/Keen-UI/#/ui-icon-button">Nguồn</a>
+            </p>
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">Vuesax  </h3>
+            </div>
+            <p>
+              <b>Vuesax</b> là thư viện mã nguồn mở dành cho Vue Js Component với một số tính năng nổi bật như là dễ dàng tái sử dụng, 
+              khả năng tùy biến cao, hỗ trợ thích ứng trên nhiều thiết bị, dễ dàng triển giao diện từ đơn giản đến phức tạp...
+            </p>
+            <img class="img-fluid  lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/UI_Cho_Javascript/Vue_UI/Vuesax.png"
+              alt="Vuesax">
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Vuesax"
+                target="_blank"
+                href="https://vuesax.com/">Nguồn</a>
+            </p>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">TC Component  </h3>
+            </div>
+            <p>
+              <b>TC Component </b> là thư viện giao diện được xây dựng dựa trên VueJS giúp cải thiện quá trình và thời gian xây dựng 
+              phát triển web.
+            </p>
+            <img class="img-fluid  lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/UI_Cho_Javascript/Vue_UI/TC%20Component.png"
+              alt="TC Component ">
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="TC Component "
+                target="_blank"
+                href="https://components.timos.design/">Nguồn</a>
+            </p>
+
+
+
+            <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size">
+              Thư Viện UI Cho Angular
+            </h2>
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">Angular Material </h3>
+            </div>
+            <p>
+              <b>Angular Material </b> là thư viện UI component Angular với nhiều component được thiết kế đẹp mắt và hiệu suất cao cho trang web.
+              Nó cung cấp API đơn giản có tính nhất quán cao, cung cấp các công cụ giúp các lập trình viên có thể phát triển component dành riêng cho mình.
+            </p>
+            <img class="img-fluid  lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/UI_Cho_Javascript/Angular_UI/Angular%20Material.png"
+              alt="Angular Material">
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Angular Material"
+                target="_blank"
+                href="https://material.angular.io/">Nguồn</a>
+            </p>
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">PRIMENG </h3>
+            </div>
+            <p>
+              <b>PRIMENG</b> là thư viện mã nguồn mở cung cấp hơn 80 component cho Angular, đa dạng sự lụa chọn mẫu thiết kế như là Bootstrap và Material, 
+              khả năng tùy biến cao, được cộng đồng hỗ trợ đông đảo, dễ dàng xử lý các giao diện người dùng phức tạp, nâng cao trải nghiệm người dùng cho thiết bị di động...
+            </p>
+            <img class="img-fluid  lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/UI_Cho_Javascript/Angular_UI/PRIMENG.png"
+              alt="PRIMENG">
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="PRIMENG"
+                target="_blank"
+                href="https://www.primefaces.org/primeng/showcase/#/">Nguồn</a>
+            </p>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">Ng-Bootstrap </h3>
+            </div>
+            <p>
+              <b>Ng-Bootstrap</b> là thư viện UI Angular được xây dựng dựa trên việc lấy giao diện Bootstrap làm cốt lõi
+              với nhiều component như là carousel, modal, popover, tooltip... 
+
+            </p>
+            <img class="img-fluid  lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/UI_Cho_Javascript/Angular_UI/Ng-Bootstrap.png"
+              alt="Ng-Bootstrap">
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Ng-Bootstrap"
+                target="_blank"
+                href="https://ng-bootstrap.github.io/#/home">Nguồn</a>
+            </p>
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">Nebular </h3>
+            </div>
+            <p>
+              <b>Nebular</b> là thư viện giúp bạn dễ dàng tạo ra các component cho Angular với tính tùy chỉnh cao, độ bảo mật cao, 
+               tốc độ nhanh... Do là mã nguồn mở nên bạn hoàn toàn yên tâm sử dụng cho nhiều loại dự án web khác nhau nha.
+
+            </p>
+            <img class="img-fluid  lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/UI_Cho_Javascript/Angular_UI/Nebular.png"
+              alt="Nebular">
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Nebular"
+                target="_blank"
+                href="https://akveo.github.io/nebular/">Nguồn</a>
+            </p>
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">Clarity </h3>
+            </div>
+            <p>
+              <b>Clarity</b> là sự kết hợp giữa việc sử dụng framwork HTML, CSS cho thiết kế dữ liệu và Angular cho các thành phần liên kết dữ liệu,
+              hiệu suất cho trang web.
+
+            </p>
+            <img class="img-fluid  lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/UI_Cho_Javascript/Angular_UI/Clarity.png"
+              alt="Clarity">
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Clarity"
+                target="_blank"
+                href="https://clarity.design/">Nguồn</a>
+            </p>
+
+            <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size">
+              Một Số UI Khác 
+            </h2>
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">Ant Design  </h3>
+            </div>
+           
+            <img class="img-fluid  lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/UI_Cho_Javascript/Ant%20Design.png"
+              alt="Ant Design ">
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Ant Design"
+                target="_blank"
+                href="https://ant.design/">Nguồn</a>
+            </p>
+
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">Onsen UI  </h3>
+            </div>
+           
+            <img class="img-fluid  lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/UI_Cho_Javascript/Onsen%20UI.png"
+              alt="Onsen UI">
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Onsen UI"
+                target="_blank"
+                href="https://onsen.io/">Nguồn</a>
+            </p>
+
+            <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+              <h3 class="text-primary ml-4 title-article-size">Shard </h3>
+            </div>
+           
+            <img class="img-fluid  lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/UI_Cho_Javascript/Shard.png"
+              alt="Shard">
+            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Shard"
+                target="_blank"
+                href="https://designrevision.com/">Nguồn</a>
+            </p>
 
 
 
 
 
             <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
-            <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn kiến thức tạo component tab hữu ích
+            <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những thư viện UI  hữu ích
               việc phát triển, thiết kế web và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất
-              mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui
+              mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày
+              vui
               vẻ!</p>
           </div>
         </article>
