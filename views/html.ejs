@@ -32,137 +32,33 @@
 
       <div class="card-text text-justify">
         <article>
-
-          <div class="text-content-article mt-5">
-            <p><i> Ngày hôm nay chúng ta sẽ đi vào tìm hiểu cách tạo component card cho trang web bằng HTML và CSS nhé!
-              </i></p>
-              
-            <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size">
-              Tạo Cấu Trúc Cho Card Trong Trang Web
-            </h2>
-            <p> Phần đầu tiên chúng ta sẽ đi vào tạo hai file là <code>index.html</code>(nơi lưu trữ HTML) và <code>style.css</code>(nơi lưu trữ mã CSS). Sau đó liên kết chúng với  Google Font thông qua đoạn mã dưới đây nhé:</p>
-            <h3 class="text-primary">
-              HTML
-            </h3>
-            <pre><code class="html">&#60;!DOCTYPE&nbsp;html&#62;<br/> &#60;html&nbsp;lang="en"&#62;<br/> &#60;head&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;charset="UTF-8"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;meta&nbsp;name="viewport"&nbsp;content="width=device-width,&nbsp;initial-scale=1.0"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="preconnect"&nbsp;href="https://fonts.gstatic.com"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"&nbsp;rel="stylesheet"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;link&nbsp;rel="stylesheet"&nbsp;href="style.css"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;title&#62;Tạo&nbsp;Card&nbsp;HTML&nbsp;CSS&#60;/title&#62;<br/> &#60;/head&#62;<br/> &#60;body&#62;<br/> &#60;/body&#62;<br/> &#60;/html&#62;<br/></code></pre>
-
-            <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size">
-              Thêm Các Phần Tử HTML Cần Thiết Cho Card
-            </h2>
-            <p>
-             Trong phần này chúng ta sẽ đi vào thêm các thẻ HTML cần thiết cho component card để chứa nội dung, tiêu đề và hình ảnh bằng  đoạn code sau đây nhé:
-            </p>
-            <h3 class="text-primary">
-              HTML
-            </h3>
-            <pre><code class="html">&#60;div&nbsp;class="cards"&#62;<br/> &#60;div&nbsp;class="card&nbsp;card1"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="container"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;img&nbsp;src="https://images.pexels.com/photos/980221/pexels-photo-980221.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"&nbsp;alt="Ảnh&nbsp;1"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="noi-dung"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h3&#62;Việt&nbsp;Nam&#60;/h3&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p&#62;unde&nbsp;tempore&nbsp;dolores&nbsp;asperiores...&#60;/p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;button&nbsp;class="btn1"&#62;Tìm&nbsp;Hiểu&nbsp;Thêm&#60;/button&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &#60;/div&#62;<br/>&#60;div&nbsp;class="card&nbsp;card2"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="container"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;img&nbsp;src="https://images.pexels.com/photos/2067048/pexels-photo-2067048.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"&nbsp;alt="Ảnh&nbsp;2"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="noi-dung"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h3&#62;Nhật&nbsp;Bản&#60;/h3&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p&#62;unde&nbsp;tempore&nbsp;dolores&nbsp;asperiores...&#60;/p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;button&nbsp;class="btn2"&#62;Tìm&nbsp;Hiểu&nbsp;Thêm&#60;/button&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &#60;/div&#62;<br/>&#60;div&nbsp;class="card&nbsp;card3"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="container"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;img&nbsp;src="https://images.pexels.com/photos/777059/pexels-photo-777059.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"&nbsp;alt="Ảnh&nbsp;3"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;div&nbsp;class="noi-dung"&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;h3&#62;Singapore&#60;/h3&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;p&#62;unde&nbsp;tempore&nbsp;dolores&nbsp;asperiores...&#60;/p&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;button&nbsp;class="btn3"&#62;Tìm&nbsp;Hiểu&nbsp;Thêm&#60;/button&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;/div&#62;<br/> &#60;/div&#62;<br/> &#60;/div&#62;<br/></code></pre>
-            <p class="mt-4">
-              Và kết quả bạn xem video bên dưới nhé:
-            </p>
-            <div class="embed-responsive embed-responsive-16by9 ">
-              <iframe class="embed-responsive-item" src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/card_html_css/tao-card-html-css_Cy2uSZZQ.mp4" allowfullscreen></iframe>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="text-content-article mt-5">
+                <p><b><i> Ngày hôm nay chúng ta sẽ đi vào tìm hiểu những nguồn lập trình (bài viết hướng dẫn, công cụ,
+                      framework cho flexbox) giúp chúng ta có thể xây dựng Flexbox Layout được đơn giản và dễ dàng hơn
+                      trong thiết kế web nhé! </i></b></p>
+              </div>
+              <hr />
             </div>
-
-            <h2 class="bg-primary mt-4 mb-4 text-white rounded p-2 shadow title-article-size">
-              Chỉnh Vị Trí  Nội Dung Trong Trang Web
-            </h2>
-            <p>
-              Trong phần này chúng ta sẽ sử dụng <code>display: grid;</code> để căn chỉnh vị trí các phần tử card sao cho chúng  cân đối ở  trong trang web nhé:
-            </p>
-
-            <h3 class="text-primary">
-              CSS
-            </h3>
-            <pre><code class="css">*{<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;box-sizing:&nbsp;border-box;<br/> }<br/>body{<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-color:&nbsp;#151320;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;100vh;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-family:&nbsp;Roboto;<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;grid;<br/> &nbsp;&nbsp;&nbsp;&nbsp;place-items:&nbsp;center&nbsp;center;<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#fff;<br/> }<br/>.cards{<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;grid;<br/> &nbsp;&nbsp;&nbsp;&nbsp;grid-template-columns:&nbsp;repeat(auto-fit,&nbsp;minmax(400px,&nbsp;1fr));<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;20px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;grid-gap:&nbsp;40px;<br/> }<br/> .card{<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-color:&nbsp;#1c1b29;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;20px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;box-shadow:&nbsp;0&nbsp;0&nbsp;30px&nbsp;rgba(0,&nbsp;0,&nbsp;0,&nbsp;0.2);<br/> }<br/> .container{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;<br/> &nbsp;&nbsp;&nbsp;&nbsp;clip-path:&nbsp;polygon(0&nbsp;0,&nbsp;100%&nbsp;0,&nbsp;100%&nbsp;85%,&nbsp;0&nbsp;100%);<br/> }<br/> .cards&nbsp;.card&nbsp;.container&nbsp;img{<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;block;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;20px&nbsp;20px&nbsp;0&nbsp;0;<br/> }<br/></code></pre>
-            <p class="mt-4">
-              Ở đây mình có một lưu ý nhỏ là về thuộc tính clip path. Nó là  thuộc tính giúp chúng ta có thể xác định hình ảnh sẽ hiển thị như thế nào trong trang web như là hình tròn, ellipse, polygon...
-               Và nếu bạn muốn tìm hiểu các ví dụ về clip path thì có thể tham khảo <a href="https://www.niemvuilaptrinh.com/article/20-Thu-thuat-CSS-Huu-ich-Danh-Cho-Ban-Nam-2020" title="clip path">ở đây nhé</a>.
-               Còn dưới đầy là hình ảnh kết quả của đoạn mã trên nhé:
-            </p>
-
-            <img class="img-fluid  lazyload"
-              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/card_html_css/card1.png"
-              alt="card1">
-              <h2 class="bg-primary mt-4 mb-4 text-white rounded p-2 shadow title-article-size">
-               Thiết Lập Hiệu Ứng Background 
-              </h2>
-              <p>
-                Trong phần tiếp theo chúng ta sẽ đi vào tạo các background <code>linear-gradient</code> cho từng hình ảnh trong  component 
-                card để giúp nó trông bắt mắt và thu hút người dùng   hơn nhé:
-              </p>
-
-              <h3 class="text-primary">
-                CSS
-              </h3>
-              <pre><code class="css">.container::after{<br/> &nbsp;&nbsp;&nbsp;&nbsp;content:&nbsp;"";<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;left:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;20px&nbsp;20px&nbsp;0&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;0.6;<br/> }<br/> .card1>.container:after{<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-image:&nbsp;linear-gradient(135deg,&nbsp;#48c6ef,&nbsp;#6f86d6);<br/> }<br/> .card2>.container:after{<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-image:&nbsp;linear-gradient(135deg,&nbsp;#2bdce3,&nbsp;#42ffdb);<br/> }<br/>.card3>.container:after{<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-image:&nbsp;linear-gradient(135deg,&nbsp;#ff758c&nbsp;,&nbsp;#ff7eb3);<br/> }<br/></code></pre>
-              <p class="mt-4">
-                Và kết quả bạn xem hình ảnh bên dưới nhé:
-              </p>
-              <img class="img-fluid  lazyload"
-              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/card_html_css/card2.png"
-              alt="card2">
-
-              <h2 class="bg-primary mt-4 mb-4 text-white rounded p-2 shadow title-article-size">
-                Thiết Lập Stye Cho Nội Dung Card
-               </h2>
-               <p>
-                 Trong phần này chúng ta sẽ đi vào sử dụng các thuộc tính CSS cơ bản để thiết lập style cho nội dung trong component card 
-                 thông qua đoạn mã bên dưới nhé:
-               </p>
-               <h3 class="text-primary">
-                 CSS
-               </h3>
-               <pre><code class="css">.noi-dung{<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;20px&nbsp;10px;<br/> }<br/>.noi-dung&nbsp;h3{<br/> &nbsp;&nbsp;&nbsp;font-size:&nbsp;24px;<br/> &nbsp;&nbsp;&nbsp;margin:&nbsp;10px&nbsp;0&nbsp;15px&nbsp;0;<br/> }<br/>.noi-dung&nbsp;p{<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#a0a0a0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;16px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;line-height:&nbsp;30px;<br/> }<br/></code></pre>
-               <p class="mt-4">
-                 Và kết quả bạn xem bên dưới nha:
-               </p>
-               <img class="img-fluid  lazyload"
-               data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/card_html_css/card3.png"
-               alt="card3">
-               <h2 class="bg-primary mt-4 mb-4 text-white rounded p-2 shadow title-article-size">
-                Thiết Lập CSS Cho Button
-               </h2>
-               <p>
-                 Trong phần cuối cùng này chúng ta sẽ đi vào thiết lập style cho thành cuối cùng là button. Và để nắm rõ hơn bạn xem đoạn mã sau nhé:
-               </p>
-               <h3 class="text-primary">
-                CSS
-              </h3>
-              <pre><code class="css">button&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;block;<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin-top:&nbsp;20px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;float:&nbsp;right;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border:&nbsp;none;<br/> &nbsp;&nbsp;&nbsp;&nbsp;outline:&nbsp;none;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;10px&nbsp;20px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;border-radius:&nbsp;50px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;#fff;<br/> &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:&nbsp;20px;<br/> &nbsp;&nbsp;&nbsp;&nbsp;box-shadow:&nbsp;0&nbsp;3px&nbsp;20px&nbsp;0&nbsp;#0000003b;<br/> }<br/> button:hover{<br/> cursor:&nbsp;pointer;<br/> }<br/> .btn1{<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-image:&nbsp;linear-gradient(135deg,&nbsp;#48c6ef&nbsp;,&nbsp;#6f86d6);<br/> }<br/> .btn2{<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-image:&nbsp;linear-gradient(135deg,&nbsp;#2bdce3,&nbsp;#42ffdb);<br/> }<br/> .btn3{<br/> &nbsp;&nbsp;&nbsp;&nbsp;background-image:&nbsp;linear-gradient(135deg,&nbsp;#ff758c&nbsp;,&nbsp;#ff7eb3);<br/> }<br/></code></pre>
-              <p class="mt-4">
-                Và kết quả bạn xem bên dưới nha:
-              </p>
-              <img class="img-fluid  lazyload"
-              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/card_html_css/card4.png"
-              alt="card3">
-              <p class="mt-4">
-
-                Bên dưới là đường dẫn dự án trên Codepen nhé!
-              </p>
-
-
-
-            <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Tạo Card Cho Trang Web" target="_blank"
-                href="https://codepen.io/haycuoilennao19/full/qBaOmaE">Nguồn Codepen</a></p>
-
-              <p>
-                <mark>Nếu bạn muốn tham khảo thêm các thiết kế khác về component card thì hãy truy cập đường dẫn bên dưới nhé!</mark>
-              </p>
-              <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Các Thiết Kế Component Card" target="_blank"
-                href="https://www.niemvuilaptrinh.com/article/Nhung-Blog-Card-Dep-Cho-Trang-Web2020">Nguồn Tham Khảo</a></p>
-
-
-
-
-
-            <h4 class="mt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
-            <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những kiến thức tạo card bằng html css  hữu ích
-              việc phát triển, thiết kế web và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất
-              mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày
-              vui
-              vẻ!</p>
           </div>
-        </article>
+          <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"> Flexbox Là Gì?</h2>
+          <p> <b>Flexbox</b> là một dạng layout mới được ra mắt trong CSS3 với mục đích giúp bạn có thể linh hoạt hơn
+            trong việc sắp xếp, bố trí, căn chỉnh các phần tử trong trang web. Điểm mạnh của nó là có thể dựa vào màn
+            hình hiển thị mà điều chỉnh kích thước, vị trí của phần tử sao cho phù hợp nhất mà không cần phải sử dụng
+            đến thuộc tính <code>float</code> hay <code>position</code>.</p>
+          <h2 class="bg-primary mb-4 text-white rounded p-2 shadow title-article-size"> Những Bài Viết Hay Về Flexbox
+          </h2>
+          <p> Trong phần này chúng ta sẽ đi vào tìm hiểu những bài viết hay về Flexbox Layout trong CSS được nhiều lập
+            trình viên tin tưởng và học tập nhé!</p>
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">A Complete Guide to Flexbox (CSS-Tricks)</h3>
+          </div><img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603594939/flexbox_css_layout/A_Complete_Guide_to_Flexbox_CSS-Tricks_pwtmcu.png"
+            alt="A Complete Guide to Flexbox (CSS-Tricks)">
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article"
+              href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">Nguồn</a></p>
+         
 
 
 
@@ -171,35 +67,44 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+              
+          <h4 class="mt-4 pt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
+          <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn kiến thức về flexbox hữu ích dành cho việc phát triển,
+            thiết kế web và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng
+            hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
       </div>
+      </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
-
-
-
-
-    <div class="mb-5"></div>
   </div>
-  <div class="col-lg-12 col-md-12 col-xs-12">
-    <div class="mt-5"></div>
 
 
 
-  </div>
+
+  <div class="mb-5"></div>
+</div>
+<div class="col-lg-12 col-md-12 col-xs-12">
+  <div class="mt-5"></div>
+
+
+
+</div>
 </div>
 </div>
 
