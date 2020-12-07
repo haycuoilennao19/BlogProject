@@ -71,6 +71,13 @@ as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;50
       media="print" onload="this.media='all'" />
       <script data-ad-client="ca-pub-8657971062505795" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
       <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5fcb84e026aad80012330f75&product=sop' async='async'></script>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-8657971062505795",
+          enable_page_level_ads: true,
+          overlays: {bottom: true}
+        });
+      </script>
     </head>
 
 <body>
@@ -91,12 +98,16 @@ as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;50
           </div>
       </div>
       <div class="col-lg-6">
-        <h1 class="article-title-blog-post text-left pl-4 pr-4 pt-4"> <%=article.title%></h1>
+    
+          <h1 class="article-title-blog-post text-left pl-4 pr-4 pt-4 title-border-bottom"> <%=article.title%></h1>
+      
+      
         <p class=" pl-4 pr-4 pt-lg-4"> <button type="button"
             class="<%-article.category%> button-card-category-article mt-2 mb-2 pl-2 pr-2"><%=article.category%></button><br />
             <i class="far fa-clock"></i> <%=article.date%></p>
       </div>
     </div>
+  
     <div class="row mt-4">
       <div class="col md-12">
         <div class="card-text text-justify"><%-article.content%></div>
