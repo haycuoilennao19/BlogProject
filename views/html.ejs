@@ -33,224 +33,309 @@
 
       <div class="card-text text-justify">
         <article>
-
           <div class="text-content-article mt-5">
-            <p><b><i> Ngày hôm nay chúng ta sẽ cùng nhau đi vào tìm hiểu các phần tử có trong thẻ head HTML cũng như
-                  cách sử dụng nó
-                  sao cho hiệu quả trong quá trình thiết kế và phát triển web nhé!
-                </i></b></p>
+            <p><b><i> Ngày hôm nay chúng ta sẽ cùng nhau đi vào tìm hiểu các công cụ giúp chọn domain(tên miền)
+                  phù hợp cho website nhé! </i></b></p>
           </div>
           <hr />
 
-
           <div class="col-sm-12 bg-primary p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h2 class=" ml-4 card-title-article">Các Phần Tử Trong Thẻ <code>&#60;Head&#62;</code> HTML</h2>
+            <h2 class=" ml-4 card-title-article">Tên Miền (Domain Name) Là Gì?</h2>
           </div>
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Các Thẻ Bắt Buộc Phải Có Trong <code>&#60;Head&#62;</code>
-            </h3>
-          </div>
-
-          <img class=" img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/phan_tu_head_HTML/phan-tu-bat-buoc-trong-head.png"
-            alt="Phần tử bắt buộc trong head">
+          <p>
+            <b>Domain Name</b> có thể hiểu đơn giản là tên đại diện cho trang web của bạn. Bạn có thể tưởng tưởng là nếu
+            trang web là ngôi nhà thì
+            tên miền chính là địa chỉ của ngôi nhà đó.<br />
+            Còn về phương diện kỹ thuật, mỗi máy tính hoạt động trên Internet thì sẽ được cung cấp một địa chỉ IP cụ thể
+            ví dụ như là 123.45.678.9.
+            Và khách hàng sẽ phải nhớ mã số IP này mỗi khi muốn truy cập vào trang web của bạn. Nhưng các con số này
+            thực sự rất khó nhớ và dễ dàng bị nhập sai
+            do đó họ đã tạo ra <strong>domain name</strong> với nhiệm vụ chính là làm tên đại diện cho dãy số IP đó. Và
+            để giúp minh họa rõ hơn thì bạn hãy xem hình ảnh sau nhé!
+          </p>
+          <img class="img-fluid shadow lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/vi_du_minh_hoa_domain_name.png"
+            alt="Ví Dụ Về Tên Miền">
           <p class="mt-4">
-            Mình giải thích sơ qua một tí về thuộc tính của nó nhé:
+            Thông thường thì chúng ta sẽ có nhiều loại tên miền với đuôi khác nhau như là <strong>.com</strong>(được sử
+            dụng phổ biến nhất),
+            <strong>.org</strong>, <strong>.net</strong>, <strong>.edu</strong>, <strong>.info</strong>... Và nó sẽ được
+            chia thành những nhóm chính sau đây:
             <ul>
-              <li><strong>meta charset</strong>: Xác định mã hóa của trang web(utf-8 được xem là tiêu chuẩn chung)</li>
-              <li><strong>meta name="viewport"</strong>: Thiết lập khả năng responsive(thích ứng) trên thiết bị điện
-                thoại.</li>
-              <li><strong>width=device-width</strong>: Thiết lập chiều rộng của trang tuân theo chiều rộng của màn hình
-                thiết bị.</li>
-              <li><strong>initial-scale=1</strong>: thiết lập initial zoom(1 nghĩa là không thu phóng)</li>
+              <li>
+                <strong>Top Level Domains(TLD)</strong>: Đây là loại tên miền cao cấp nhất của hệ thống Internet với các
+                đuôi phổ biến là .com, .org, .edu, và .net.
+              </li>
+              <li>
+                <strong>Country Code Top Level Domain(ccTLD)</strong>: Đây là loại tên miền cao cấp nhất dành cho quốc
+                gia trên thế giới và thường chỉ sử dụng hai chữ cái cho phần mở rộng
+                domain name như là Việt Nam(.vi), Nước Anh(.uk), Nước Mỹ(.us)...
+              </li>
+              <li>
+                <strong> Sponsored Top Level Domain</strong>: Đây là loại tên miền cao cấp nhất dành cho mục đích sử
+                dụng cụ thể như là
+                .gov(chính phủ), .edu(giáo dục), .org(Tổ chức và chương trình phi lợi nhuận)...
+              </li>
             </ul>
           </p>
           <p>
-            Nếu bạn muốn tìm hiểu thêm về thuộc tính này thì có thể tham khảo <a
-              href="https://www.w3schools.com/css/css_rwd_viewport.asp" target="_blank" title="Viewport"
-              rel="noopener noreferrer">ở đây nhé.</a>
+            Nếu bạn muốn tham khảo thêm về domain thì có thể xem <a
+              href="https://www.wpbeginner.com/beginners-guide/beginners-guide-what-is-a-domain-name-and-how-do-domains-work/"
+              target="_blank" rel="noopener noreferrer" title="domain">ở đây nhé!</a>.
           </p>
-          <p class=" pt-2  pb-4">
-            <a class="button-blog-post-article" title="Các Thẻ Bắt Buộc Phải Có Trong Trong Head" data-toggle="collapse"
-              href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"
-              target="_blank">
-              Đoạn mã của hình ảnh phía trên</a>
+
+          <div class="col-sm-12 bg-primary p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
+            <h2 class=" ml-4 card-title-article">Cách Chọn Domain Name Cho Website?</h2>
+          </div>
+          <p>
+            Trong phần này mình sẽ giới thiệu một số yếu tố giúp bạn có thể dễ dàng lựa chọn tên miền:
+            <ul>
+              <li>
+                <strong>Lựa chọn đúng đuôi dành cho website:</strong> Theo chỉ số thống kế thì 43% sử dụng đuôi
+                <b>.com</b>, điều này cho thấy
+                việc sử dụng <b>.com</b> cho tên miền của bạn vẫn là tốt nhất. Tuy nhiên nếu <strong>không thể</strong>
+                chọn tên miền với <strong>.com</strong>(do người khác đã mua)
+                thì bạn có thể cân nhắc sử dụng các đuôi phổ biến khác như <strong>.net</strong>,
+                <strong>.org</strong>...
+              </li>
+              <li>
+                <strong>Độ dài:</strong> Tên miền có độ dài càng ngắn các tốt vì nó sẽ giúp người dùng có thể dễ dàng
+                nhớ và nhập hơn (khoảng từ 6 -> 14 ký tự là hợp lý).
+              </li>
+              <li>
+                <strong>Từ khóa:</strong> Bạn nên lựa chọn tên miền có thể bao quát được lĩnh vực, dịch vụ, chủ đề mà
+                trang web đang hướng tới.
+                Việc làm này sẽ giúp Google có thể hiểu được website hơn từ đó tăng thứ hạng SEO trên lĩnh vực mà bạn
+                đang muốn xây dựng.
+              </li>
+              <li>
+                <strong>Từ khóa:</strong> Bạn nên lựa chọn tên miền có thể bao quát được lĩnh vực, dịch vụ, chủ đề mà
+                trang web đang hướng tới.
+                Việc làm này sẽ giúp Google có thể hiểu được website hơn từ đó tăng thứ hạng SEO trên lĩnh vực mà bạn
+                đang muốn xây dựng.
+              </li>
+            </ul>
           </p>
-          <div class="collapse" id="collapseExample">
-            <pre><code class="html"> &#60;meta&nbsp;charset="utf-8"&#62;<br/> &#60;meta&nbsp;name="viewport"&nbsp;content="width=device-width,&nbsp;initial-scale=1"&#62;<br/> &#60;!--<br/> &nbsp;&nbsp;Đây&nbsp;là&nbsp;Hai&nbsp;Thẻ&nbsp;Bạn&nbsp;Phải&nbsp;Bắt&nbsp;Buộc&nbsp;Phải&nbsp;Có&nbsp;Trong&nbsp;Bất&nbsp;Kỳ&nbsp;Trang&nbsp;Web&nbsp;Nào&nbsp;nhé!<br/> &nbsp;--&#62;<br/> &#60;title&#62;Tiêu&nbsp;Đề&nbsp;Trang&#60;/title&#62;<br/></code></pre>
+          <div class="text-center"> <img class="w-50 lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/C%C3%A1ch%20ch%E1%BB%8Dn%20domain.jpg"
+              alt="Cách Chọn Domain Name">
+          </div>
+          <p>
+            Một số lưu ý <strong>nên tránh</strong> khi chọn tên miền:
+            <ul>
+              <li>Không sử dụng số hay các ký tự đặc biệt.</li>
+              <li>Không viết sai chính tả và sử dụng các từ dễ gây khó hiểu trong tên miền</li>
+              <li>Không nên sử dụng các tên hay thương hiệu đã được sử dụng.</li>
+
+            </ul>
+          </p>
+          <p>
+            Nếu bạn muốn tham khảo thêm về việc chọn domain thì có thể xem <a
+              href="https://domains.google/learning-center/how-to-come-up-with-a-good-domain-name/" target="_blank"
+              rel="noopener noreferrer" title="Cách chọn domain">ở đây nhé!</a>.
+          </p>
+
+
+          <div class="col-sm-12 bg-primary p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
+            <h2 class=" ml-4 card-title-article">Các Công Cụ Gợi Ý Giúp Bạn Chọn Domain Name Tốt Hơn</h2>
+          </div>
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Nameboy</h3>
           </div>
 
+          <img class="img-fluid  lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/Nameboy.png" alt="Nameboy">
+          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="Nameboy" href="https://www.nameboy.com/"
+              target="_blank">Nguồn</a></p>
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Namemesh</h3>
+          </div>
+
+          <img class="img-fluid  lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/Namemesh.png"
+            alt="Namemesh">
+          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="Namemesh" href="https://www.namemesh.com/"
+              target="_blank">Nguồn</a></p>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Panabee</h3>
+          </div>
+
+          <img class="img-fluid  lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/Panabee.png" alt="Panabee">
+          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="Panabee" href="https://www.panabee.com/"
+              target="_blank">Nguồn</a></p>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Domain Wheel</h3>
+          </div>
+
+          <img class="img-fluid  lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/Domain%20Wheel.png"
+            alt="Domain Wheel">
+          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="Domain Wheel" href="https://domainwheel.com/"
+              target="_blank">Nguồn</a></p>
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Name Station</h3>
+          </div>
+
+          <img class="img-fluid  lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/Name%20Station.png"
+            alt="Name Station">
+          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="Name Station" href="https://namestation.com/"
+              target="_blank">Nguồn</a></p>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Lean Domain Search</h3>
+          </div>
+
+          <img class="img-fluid  lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/Lean%20Domain%20Search.png"
+            alt="Lean Domain Search">
+          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="Lean Domain Search"
+              href="https://leandomainsearch.com/" target="_blank">Nguồn</a></p>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Domain Typer</h3>
+          </div>
+
+          <img class="img-fluid  lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/Domain%20Typer.png"
+            alt="Domain Typer">
+          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="Domain Typer" href="https://domaintyper.com/"
+              target="_blank">Nguồn</a></p>
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Bust A Name</h3>
+          </div>
+
+          <img class="img-fluid  lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/Bust%20A%20Name.png"
+            alt="Bust A Name">
+          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="Bust A Name"
+              href="http://www.bustaname.com/word_maker" target="_blank">Nguồn</a></p>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Business name generator</h3>
+          </div>
+
+          <img class="img-fluid  lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/Business%20name%20generator.png"
+            alt="Business name generator">
+          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="Business name generator"
+              href="https://www.shopify.com/tools/business-name-generator" target="_blank">Nguồn</a></p>
 
 
 
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Các Phần Tử Trong <code>&#60;Head&#62;</code> HTML
-            </h3>
+            <h3 class="text-primary ml-4 title-article-size">Instant Domain Search</h3>
           </div>
 
-          <img class=" img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/phan_tu_head_HTML/cac-thanh-phan-trong-head-HTML.svg"
-            alt="Các Thành Phần Trong Head HTML">
-
-          <p class="mt-4">
-            Nếu bạn muốn tìm hiểu thêm về thuộc tính <code>&#60;noscript&#62;</code> thì có thể tham khảo <a
-              href="https://www.w3schools.com/tags/tag_noscript.asp" target="_blank" title="noscript tag"
-              rel="noopener noreferrer">ở đây nhé.</a>
-          </p>
-          <p class=" pt-2  pb-4">
-            <a class="button-blog-post-article" data-toggle="collapse" href="#collapseExample2" role="button"
-              aria-expanded="false" aria-controls="collapseExample2" target="_blank">
-              Đoạn mã của hình ảnh phía trên</a>
-          </p>
-          <div class="collapse" id="collapseExample2">
-            <pre><code class="html"> &#60;!--&nbsp;Niềm&nbsp;Vui&nbsp;Lập&nbsp;Trình&nbsp;--&#62;<br/> &#60;!--&nbsp;Đặt&nbsp;URL&nbsp;cơ&nbsp;sở&nbsp;cho&nbsp;tất&nbsp;cả&nbsp;các&nbsp;URL&nbsp;tương&nbsp;đối&nbsp;trong&nbsp;tài&nbsp;liệu&nbsp;--&#62;<br/> &#60;base&nbsp;href="https://example.com/page.html"&#62;<br/>&#60;!--&nbsp;Liên&nbsp;kết&nbsp;đến&nbsp;tệp&nbsp;CSS&nbsp;nằm&nbsp;ở&nbsp;&nbsp;bên&nbsp;ngoài&nbsp;--&#62;<br/> &#60;link&nbsp;rel="stylesheet"&nbsp;href="styles.css"&#62;<br/>&#60;!--&nbsp;Sử&nbsp;dụng&nbsp;để&nbsp;thêm&nbsp;trực&nbsp;tiếp&nbsp;CSS&nbsp;vào&nbsp;trang&nbsp;web&nbsp;--&#62;<br/> &#60;style&#62;<br/> &nbsp;&nbsp;/*&nbsp;...&nbsp;*/<br/> &#60;/style&#62;<br/>&#60;!--&nbsp;Liên&nbsp;kết&nbsp;file&nbsp;Javascript&nbsp;bên&nbsp;ngoài&nbsp;hoăc&nbsp;áp&nbsp;dụng&nbsp;trực&nbsp;tiếp&nbsp;vào&nbsp;trang&nbsp;web&nbsp;--&#62;<br/> &#60;script&nbsp;src="script.js"&#62;&#60;/script&#62;<br/> &#60;script&#62;<br/> &nbsp;&nbsp;//Hàm&nbsp;Sẽ&nbsp;được&nbsp;thực&nbsp;thi<br/> &#60;/script&#62;<br/> &#60;!--&nbsp;xác&nbsp;định&nbsp;một&nbsp;nội&nbsp;dung&nbsp;thay&nbsp;thế&nbsp;sẽ&nbsp;được&nbsp;hiển&nbsp;thị&nbsp;cho&nbsp;những&nbsp;người&nbsp;dùng&nbsp;đã&nbsp;disable&nbsp;script&nbsp;trong&nbsp;trình&nbsp;duyệt&nbsp;của&nbsp;họ&nbsp;hoặc&nbsp;các&nbsp;trình&nbsp;duyệt&nbsp;không&nbsp;hỗ&nbsp;trợ&nbsp;script.&nbsp;--&#62;<br/> &#60;noscript&#62;<br/> &nbsp;&nbsp;&#60;!--&nbsp;No&nbsp;JS&nbsp;alternative&nbsp;--&#62;<br/> &#60;/noscript&#62;<br/></code></pre>
-          </div>
+          <img class="img-fluid  lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/Instant%20Domain%20Search.png"
+            alt="Instant Domain Search">
+          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="Instant Domain Search"
+              href="https://instantdomainsearch.com/" target="_blank">Nguồn</a></p>
 
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size"> Thẻ Meta
-            </h3>
+            <h3 class="text-primary ml-4 title-article-size">Domain Name Soup</h3>
           </div>
 
-          <img class=" img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/phan_tu_head_HTML/the-meta-head-html.svg"
-            alt="Các Meta Head HTML">
-
-          <p class="mt-4">
-            Nếu bạn muốn sao chép code thì bạn hãy nhấn nút ở bên dưới để hiển thị đoạn mã nhé!
-          </p>
-          <p class=" pt-2  pb-4">
-            <a class="button-blog-post-article" data-toggle="collapse" href="#collapseExample3" role="button"
-              aria-expanded="false" aria-controls="collapseExample3" target="_blank">
-              Đoạn mã của hình ảnh phía trên</a>
-          </p>
-          <div class="collapse" id="collapseExample3">
-            <pre><code class="html"> &#60;!--<br/> &nbsp;&nbsp;2&nbsp;Thẻ&nbsp;meta&nbsp;bắt&nbsp;buộc&nbsp;phải&nbsp;có<br/> --&#62;<br/> &#60;meta&nbsp;charset="utf-8"&#62;<br/> &#60;meta&nbsp;name="viewport"&nbsp;content="width=device-width,&nbsp;initial-scale=1"&#62;<br/>&#60;!--<br/> &nbsp;Cho&nbsp;phép&nbsp;kiểm&nbsp;soát&nbsp;nguồn&nbsp;tài&nbsp;nguyên&nbsp;được&nbsp;tải&nbsp;từ&nbsp;đâu.<br/><br/> &nbsp;Đặt&nbsp;càng&nbsp;sớm&nbsp;trong&nbsp;thẻ&nbsp;&#60;head&#62;&nbsp;càng&nbsp;tốt,&nbsp;và&nbsp;thẻ &nbsp;chỉ&nbsp;áp&nbsp;dụng&nbsp;cho&nbsp;các&nbsp;tài&nbsp;nguyên&nbsp;được&nbsp;khai&nbsp;báo&nbsp;sau&nbsp;nó.<br/> --&#62;<br/> &#60;meta&nbsp;http-equiv="Content-Security-Policy"&nbsp;content="default-src&nbsp;'self'"&#62;<br/>&#60;!--tên&nbsp;của&nbsp;ứng&nbsp;dụng&nbsp;web&nbsp;(chỉ&nbsp;nên&nbsp;được&nbsp;sử&nbsp;dụng&nbsp;nếu&nbsp;trang&nbsp;web&nbsp;được&nbsp;sử&nbsp;dụng&nbsp;làm&nbsp;ứng&nbsp;dụng)--&#62;<br/> &#60;meta&nbsp;name="application-name"&nbsp;content="Tên&nbsp;Ứng&nbsp;Dụng"&#62;<br/>&#60;!--&nbsp;Theme&nbsp;Color&nbsp;for&nbsp;Chrome,&nbsp;Firefox&nbsp;OS&nbsp;và&nbsp;Opera&nbsp;--&#62;<br/> &#60;meta&nbsp;name="theme-color"&nbsp;content="#4285f4"&#62;<br/>&#60;!--&nbsp;Giới&nbsp;thiệu&nbsp;ngắn&nbsp;về&nbsp;trang&nbsp;web&nbsp;(thường&nbsp;giới&nbsp;hạn&nbsp;150&nbsp;ký&nbsp;tự)&nbsp;--&#62;<br/> &#60;!--&nbsp;Nội&nbsp;dung&nbsp;cũng&nbsp;sẽ&nbsp;được&nbsp;hiển&nbsp;thị&nbsp;cùng&nbsp;với&nbsp;title&nbsp;trong&nbsp;kết&nbsp;quả&nbsp;tìm&nbsp;kiếm&nbsp;&nbsp;--&#62;<br/> &#60;meta&nbsp;name="description"&nbsp;content="Giới&nbsp;Thiệu&nbsp;về&nbsp;trang"&#62;<br/>&#60;!--&nbsp;Kiểm&nbsp;soát&nbsp;hành&nbsp;vi&nbsp;thu&nbsp;thập&nbsp;thông&nbsp;tin&nbsp;và&nbsp;lập&nbsp;chỉ&nbsp;mục&nbsp;của&nbsp;công&nbsp;cụ&nbsp;tìm&nbsp;kiếm&nbsp;--&#62;<br/> &#60;meta&nbsp;name="robots"&nbsp;content="index,follow"&#62;&#60;!--&nbsp;Tất&nbsp;cả&nbsp;công&nbsp;cụ&nbsp;tìm&nbsp;kiếm&nbsp;--&#62;<br/> &#60;meta&nbsp;name="googlebot"&nbsp;content="index,follow"&#62;&#60;!--&nbsp;Chỉ&nbsp;Google&nbsp;--&#62;<br/>&#60;!--&nbsp;Yêu&nbsp;cầu&nbsp;Google&nbsp;không&nbsp;hiển&nbsp;thị&nbsp;liên&nbsp;kết&nbsp;trang&nbsp;web&nbsp;trong&nbsp;&nbsp;hộp&nbsp;tìm&nbsp;kiếm&nbsp;&nbsp;--&#62;<br/> &#60;meta&nbsp;name="google"&nbsp;content="nositelinkssearchbox"&#62;<br/>&#60;!--&nbsp;Yêu&nbsp;cầu&nbsp;Google&nbsp;không&nbsp;cung&nbsp;cấp&nbsp;bản&nbsp;dịch&nbsp;cho&nbsp;tài&nbsp;liệu&nbsp;này&nbsp;--&#62;<br/> &#60;meta&nbsp;name="google"&nbsp;content="notranslate"&#62;<br/>&#60;!--&nbsp;Xác&nbsp;minh&nbsp;quyền&nbsp;sở&nbsp;hữu&nbsp;trang&nbsp;web&nbsp;--&#62;<br/> &#60;meta&nbsp;name="google-site-verification"&nbsp;content="verification_token"&#62;&#60;!--&nbsp;Google&nbsp;Search&nbsp;Console&nbsp;--&#62;<br/> &#60;meta&nbsp;name="yandex-verification"&nbsp;content="verification_token"&#62;&#60;!--&nbsp;Yandex&nbsp;Webmasters&nbsp;--&#62;<br/> &#60;meta&nbsp;name="msvalidate.01"&nbsp;content="verification_token"&#62;&#60;!--&nbsp;Bing&nbsp;Webmaster&nbsp;Center&nbsp;--&#62;<br/> &#60;meta&nbsp;name="alexaVerifyID"&nbsp;content="verification_token"&#62;&#60;!--&nbsp;Alexa&nbsp;Console&nbsp;--&#62;<br/> &#60;meta&nbsp;name="p:domain_verify"&nbsp;content="code_from_pinterest"&#62;&#60;!--&nbsp;Pinterest&nbsp;Console--&#62;<br/> &#60;meta&nbsp;name="norton-safeweb-site-verification"&nbsp;content="norton_code"&#62;&#60;!--&nbsp;Norton&nbsp;Safe&nbsp;Web&nbsp;--&#62;<br/>&#60;!--&nbsp;Xác&nbsp;định&nbsp;phần&nbsp;mềm&nbsp;được&nbsp;sử&nbsp;dụng&nbsp;để&nbsp;tạo&nbsp;trang&nbsp;web&nbsp;(như&nbsp;là&nbsp;-&nbsp;WordPress,&nbsp;Dreamweaver)&nbsp;--&#62;<br/> &#60;meta&nbsp;name="generator"&nbsp;content="program"&#62;<br/>&#60;!--&nbsp;Mô&nbsp;tả&nbsp;ngắn&nbsp;gọn&nbsp;về&nbsp;chủ&nbsp;đề&nbsp;tài&nbsp;liệu&nbsp;của&nbsp;bạn&nbsp;--&#62;<br/> &#60;meta&nbsp;name="subject"&nbsp;content="Chủ&nbsp;Đề&nbsp;Của&nbsp;Trang&nbsp;Web"&#62;<br/>&#60;!--&nbsp;Đưa&nbsp;ra&nbsp;xếp&nbsp;hạng&nbsp;độ&nbsp;tuổi&nbsp;chung&nbsp;dựa&nbsp;trên&nbsp;nội&nbsp;dung&nbsp;của&nbsp;tài&nbsp;liệu&nbsp;--&#62;<br/> &#60;meta&nbsp;name="rating"&nbsp;content="General"&#62;<br/>&#60;!--&nbsp;Cho&nbsp;phép&nbsp;kiểm&nbsp;soát&nbsp;cách&nbsp;thông&nbsp;tin&nbsp;liên&nbsp;kết&nbsp;giới&nbsp;thiệu&nbsp;được&nbsp;chuyển&nbsp;--&#62;<br/> &#60;meta&nbsp;name="referrer"&nbsp;content="no-referrer"&#62;<br/>&#60;!--&nbsp;Tắt&nbsp;tính&nbsp;năng&nbsp;tự&nbsp;động&nbsp;phát&nbsp;hiện&nbsp;và&nbsp;định&nbsp;dạng&nbsp;các&nbsp;số&nbsp;điện&nbsp;thoại&nbsp;có&nbsp;thể&nbsp;có&nbsp;ở&nbsp;trong&nbsp;trang&nbsp;web&nbsp;--&#62;<br/> &#60;meta&nbsp;name="format-detection"&nbsp;content="telephone=no"&#62;<br/>&#60;!--Không&nbsp;&nbsp;tìm&nbsp;nạp&nbsp;trước&nbsp;DNS&nbsp;bằng&nbsp;cách&nbsp;đặt&nbsp;content&nbsp;thành&nbsp;off("tắt")&nbsp;--&#62;<br/> &#60;meta&nbsp;http-equiv="x-dns-prefetch-control"&nbsp;content="off"&#62;<br/>&#60;!--&nbsp;Chỉ&nbsp;định&nbsp;tài&nbsp;liệu&nbsp;xuất&nbsp;hiện&nbsp;trong&nbsp;iframe&nbsp;cụ&nbsp;thể&nbsp;--&#62;<br/> &#60;meta&nbsp;http-equiv="Window-Target"&nbsp;content="_value"&#62;<br/>&#60;!--&nbsp;Geo&nbsp;tags&nbsp;(Thẻ&nbsp;Địa&nbsp;Lý)&nbsp;--&#62;<br/> &#60;meta&nbsp;name="ICBM"&nbsp;content="latitude,&nbsp;longitude"&#62;<br/> &#60;meta&nbsp;name="geo.position"&nbsp;content="latitude;longitude"&#62;<br/> &#60;meta&nbsp;name="geo.region"&nbsp;content="country[-state]"&#62;&#60;!--&nbsp;Country&nbsp;code&nbsp;(ISO&nbsp;3166-1):&nbsp;mandatory,&nbsp;state&nbsp;code&nbsp;(ISO&nbsp;3166-2):&nbsp;optional;&nbsp;eg.&nbsp;content="US"&nbsp;/&nbsp;content="US-NY"&nbsp;--&#62;<br/> &#60;meta&nbsp;name="geo.placename"&nbsp;content="city/town"&#62;&#60;!--&nbsp;eg.&nbsp;content="New&nbsp;York&nbsp;City"&nbsp;--&#62;<br/></code></pre>
-          </div>
+          <img class="img-fluid  lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/Domain%20Name%20Soup.png"
+            alt="Domain Name Soup">
+          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="Domain Name Soup"
+              href="https://www.domainnamesoup.com/" target="_blank">Nguồn</a></p>
 
 
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size"> Đường Dẫn Phần 1
-            </h3>
+            <h3 class="text-primary ml-4 title-article-size">Impossibility</h3>
           </div>
 
-          <img class=" img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/phan_tu_head_HTML/duong-dan-trong-head-phan-1.svg"
-            alt="Các Đường Dẫn Trong Head HTML Phần 1">
+          <img class="img-fluid  lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/Impossibility.png"
+            alt="Impossibility">
+          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="Impossibility"
+              href="http://impossibility.org/" target="_blank">Nguồn</a></p>
 
-          <p class="mt-4">
-            Nếu bạn muốn sao chép code thì bạn hãy nhấn nút ở bên dưới để hiển thị đoạn mã nhé!
-          </p>
-          <p class=" pt-2  pb-4">
-            <a class="button-blog-post-article" data-toggle="collapse" href="#collapseExample4" role="button"
-              aria-expanded="false" aria-controls="collapseExample4" target="_blank">
-              Đoạn mã của hình ảnh phía trên</a>
-          </p>
-          <div class="collapse" id="collapseExample4">
-            <pre><code class="html"> &#60;!--&nbsp;Đường&nbsp;dẫn&nbsp;đến&nbsp;file&nbsp;CSS&nbsp;ở&nbsp;bên&nbsp;ngoài&nbsp;trang&nbsp;web&nbsp;--&#62;<br/> &#60;link&nbsp;rel="stylesheet"&nbsp;href="https://example.com/styles.css"&#62;<br/> <br/> &#60;!--&nbsp;Ngăn&nbsp;ngừa&nbsp;các&nbsp;vấn&nbsp;đề&nbsp;về&nbsp;nội&nbsp;dung&nbsp;trùng&nbsp;lặp&nbsp;--&#62;<br/> &#60;link&nbsp;rel="canonical"&nbsp;href="https://example.com/article/?page=2"&#62;<br/> <br/> &#60;!--&nbsp;Liên&nbsp;kết&nbsp;đến&nbsp;phiên&nbsp;bản&nbsp;HTML&nbsp;AMP&nbsp;của&nbsp;trang&nbsp;web&nbsp;hiện&nbsp;tại&nbsp;--&#62;<br/> &#60;link&nbsp;rel="amphtml"&nbsp;href="https://example.com/path/to/amp-version.html"&#62;<br/> <br/> &#60;!--&nbsp;Liên&nbsp;kết&nbsp;đến&nbsp;tệp&nbsp;JSON&nbsp;lấy&nbsp;thông&nbsp;tin&nbsp;"cài&nbsp;đặt"&nbsp;cho&nbsp;ứng&nbsp;dụng&nbsp;web&nbsp;--&#62;<br/> &#60;link&nbsp;rel="manifest"&nbsp;href="manifest.json"&#62;<br/> <br/> &#60;!--&nbsp;Liên&nbsp;kết&nbsp;đến&nbsp;thông&nbsp;tin&nbsp;về&nbsp;(các)&nbsp;tác&nbsp;giả&nbsp;của&nbsp;trang&nbsp;web&nbsp;--&#62;<br/> &#60;link&nbsp;rel="author"&nbsp;href="humans.txt"&#62;<br/> <br/> &#60;!--Đề&nbsp;cập&nbsp;đến&nbsp;tuyên&nbsp;bố&nbsp;bản&nbsp;quyền&nbsp;áp&nbsp;dụng&nbsp;trang&nbsp;web&nbsp;bằng&nbsp;liên&nbsp;kết&nbsp;--&#62;<br/> &#60;link&nbsp;rel="license"&nbsp;href="copyright.html"&#62;<br/> <br/> &#60;!--&nbsp;Xác&nbsp;minh&nbsp;ngôn&nbsp;ngữ&nbsp;hiện&nbsp;tại&nbsp;theo&nbsp;vị&nbsp;trị&nbsp;địa&nbsp;lý&nbsp;dành&nbsp;cho&nbsp;trang&nbsp;web--&#62;<br/> &#60;link&nbsp;rel="alternate"&nbsp;href="https://es.example.com/"&nbsp;hreflang="es"&#62;<br/> <br/> &#60;!--&nbsp;Cung&nbsp;cấp&nbsp;thông&nbsp;tin&nbsp;về&nbsp;tác&nbsp;giả&nbsp;trang&nbsp;web--&#62;<br/> &#60;link&nbsp;rel="me"&nbsp;href="https://google.com/profiles/thenextweb"&nbsp;type="text/html"&#62;<br/> &#60;link&nbsp;rel="me"&nbsp;href="mailto:name@example.com"&#62;<br/> &#60;link&nbsp;rel="me"&nbsp;href="sms:+15035550125"&#62;<br/> <br/> &#60;!--&nbsp;Cung&nbsp;cấp&nbsp;liên&nbsp;kết&nbsp;đến&nbsp;bộ&nbsp;sưu&nbsp;tập&nbsp;hồ&nbsp;sơ,&nbsp;tài&nbsp;liệu&nbsp;hoặc&nbsp;các&nbsp;tài&nbsp;liệu&nbsp;lịch&nbsp;sử&nbsp;khác&nbsp;được&nbsp;quan&nbsp;tâm&nbsp;--&#62;<br/> &#60;link&nbsp;rel="archives"&nbsp;href="https://example.com/archives/"&#62;<br/> <br/> &#60;!--&nbsp;Liên&nbsp;kết&nbsp;đến&nbsp;tài&nbsp;nguyên&nbsp;cấp&nbsp;cao&nbsp;nhất&nbsp;trong&nbsp;cấu&nbsp;trúc&nbsp;phân&nbsp;cấp&nbsp;--&#62;<br/> &#60;link&nbsp;rel="index"&nbsp;href="https://example.com/article/"&#62;<br/> <br/> &#60;!--&nbsp;Cung&nbsp;cấp&nbsp;tài&nbsp;liệu&nbsp;tham&nbsp;khảo&nbsp;-&nbsp;hữu&nbsp;ích&nbsp;khi&nbsp;tài&nbsp;liệu&nbsp;có&nbsp;nhiều&nbsp;tài&nbsp;liệu&nbsp;tham&nbsp;khảo&nbsp;--&#62;<br/> &#60;link&nbsp;rel="self"&nbsp;type="application/atom+xml"&nbsp;href="https://example.com/atom.xml"&#62;</code></pre>
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">WebHostingGeeks Name Idea </h3>
+          </div>
+
+          <img class="img-fluid  lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/WebHostingGeeks%20Name%20Idea.png"
+            alt="WebHostingGeeks Name Idea">
+          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="WebHostingGeeks Name Idea"
+              href="https://webhostinggeeks.com/nameideas/" target="_blank">Nguồn</a></p>
+
+
+
+
+          <div class="col-sm-12 bg-primary p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
+            <h2 class=" ml-4 card-title-article">Những Nơi Tốt Nhất Để Bạn Đăng Ký Tên Miền</h2>
           </div>
 
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size"> Đường Dẫn Phần 2
-            </h3>
+            <h3 class="text-primary ml-4 title-article-size">Google Domain</h3>
           </div>
 
-          <img class=" img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/phan_tu_head_HTML/duong-dan-trong-head-phan-2.svg"
-            alt="Các Đường Dẫn Trong Head HTML Phần 2">
+          <img class="img-fluid  lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/Google%20Domain.png"
+            alt="Google Domain">
+          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="Google Domain" href="https://domains.google/"
+              target="_blank">Nguồn</a></p>
 
-          <p class="mt-4">
-            Nếu bạn muốn sao chép code thì bạn hãy nhấn nút ở bên dưới để hiển thị đoạn mã nhé!
-          </p>
-          <p class=" pt-2  pb-4">
-            <a class="button-blog-post-article" data-toggle="collapse" href="#collapseExample5" role="button"
-              aria-expanded="false" aria-controls="collapseExample5" target="_blank">
-              Đoạn mã của hình ảnh phía trên</a>
-          </p>
-          <div class="collapse" id="collapseExample5">
-            <pre><code class="html"> &#60;!--&nbsp;Các&nbsp;tài&nbsp;liệu&nbsp;đầu&nbsp;tiên,&nbsp;cuối&nbsp;cùng,&nbsp;trước&nbsp;đó&nbsp;và&nbsp;tiếp&nbsp;theo&nbsp;trong&nbsp;một&nbsp;loạt&nbsp;trang&nbsp;web&nbsp;tương&nbsp;ứng&nbsp;--&#62;<br/> &#60;link&nbsp;rel="first"&nbsp;href="https://example.com/article/"&#62;<br/> &#60;link&nbsp;rel="last"&nbsp;href="https://example.com/article/?page=42"&#62;<br/> &#60;link&nbsp;rel="prev"&nbsp;href="https://example.com/article/?page=1"&#62;<br/> &#60;link&nbsp;rel="next"&nbsp;href="https://example.com/article/?page=3"&#62;<br/> <br/> &#60;!--&nbsp;Được&nbsp;sử&nbsp;dụng&nbsp;khi&nbsp;dịch&nbsp;vụ&nbsp;của&nbsp;bên&nbsp;thứ&nbsp;3&nbsp;được&nbsp;dùng&nbsp;để&nbsp;duy&nbsp;trì&nbsp;blog&nbsp;--&#62;<br/> &#60;link&nbsp;rel="EditURI"&nbsp;href="https://example.com/xmlrpc.php?rsd"&nbsp;type="application/rsd+xml"&nbsp;title="RSD"&#62;<br/> <br/> &#60;!--&nbsp;Tạo&nbsp;nhận&nbsp;xét&nbsp;tự&nbsp;động&nbsp;khi&nbsp;một&nbsp;blog&nbsp;WordPress&nbsp;khác&nbsp;liên&nbsp;kết&nbsp;đến&nbsp;blog&nbsp;hoặc&nbsp;bài&nbsp;đăng&nbsp;WordPress&nbsp;của&nbsp;bạn&nbsp;--&#62;<br/> &#60;link&nbsp;rel="pingback"&nbsp;href="https://example.com/xmlrpc.php"&#62;<br/> <br/> &#60;!--&nbsp;Thông&nbsp;báo&nbsp;cho&nbsp;một&nbsp;URL&nbsp;khi&nbsp;bạn&nbsp;liên&nbsp;kết&nbsp;đến&nbsp;nó&nbsp;trên&nbsp;tài&nbsp;liệu&nbsp;của&nbsp;mình&nbsp;--&#62;<br/> &#60;link&nbsp;rel="webmention"&nbsp;href="https://example.com/webmention"&#62;<br/> <br/> &#60;!--&nbsp;Cho&nbsp;phép&nbsp;đăng&nbsp;lên&nbsp;miền&nbsp;của&nbsp;riêng&nbsp;bạn&nbsp;bằng&nbsp;ứng&nbsp;dụng&nbsp;khách&nbsp;Micropub&nbsp;--&#62;<br/> &#60;link&nbsp;rel="micropub"&nbsp;href="https://example.com/micropub"&#62;<br/> <br/> &#60;!--&nbsp;Open&nbsp;Search&nbsp;--&#62;<br/> &#60;link&nbsp;rel="search"&nbsp;href="/open-search.xml"&nbsp;type="application/opensearchdescription+xml"&nbsp;title="Search&nbsp;Title"&#62;<br/> <br/> &#60;!--&nbsp;Feeds&nbsp;--&#62;<br/> &#60;link&nbsp;rel="alternate"&nbsp;href="https://feeds.feedburner.com/example"&nbsp;type="application/rss+xml"&nbsp;title="RSS"&#62;<br/> &#60;link&nbsp;rel="alternate"&nbsp;href="https://example.com/feed.atom"&nbsp;type="application/atom+xml"&nbsp;title="Atom&nbsp;0.3"&#62;<br/> <br/> &#60;!--&nbsp;Prefetching,&nbsp;preloading,&nbsp;prebrowsing&nbsp;--&#62;<br/> &#60;link&nbsp;rel="dns-prefetch"&nbsp;href="//example.com/"&#62;<br/> &#60;link&nbsp;rel="preconnect"&nbsp;href="https://www.example.com/"&#62;<br/> &#60;link&nbsp;rel="prefetch"&nbsp;href="https://www.example.com/"&#62;<br/> &#60;link&nbsp;rel="prerender"&nbsp;href="https://example.com/"&#62;<br/> &#60;link&nbsp;rel="preload"&nbsp;href="image.png"&nbsp;as="image"&#62;<br/></code></pre>
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Namecheap</h3>
           </div>
+
+          <img class="img-fluid  lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/Namecheap.png"
+            alt="Namecheap">
+          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="Namecheap" href="https://www.namecheap.com/"
+              target="_blank">Nguồn</a></p>
 
 
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size"> Icon
-            </h3>
+            <h3 class="text-primary ml-4 title-article-size">GoDaddy</h3>
           </div>
 
-          <img class=" img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/phan_tu_head_HTML/icon-head-html.svg"
-            alt="Các Loại Icon Trong Head HTML">
+          <img class="img-fluid  lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/GoDaddy.png" alt="GoDaddy">
+          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="GoDaddy" href="https://vn.godaddy.com/"
+              target="_blank">Nguồn</a></p>
 
-          <p class="mt-4">
-            Nếu bạn muốn sao chép code thì bạn hãy nhấn nút ở bên dưới để hiển thị đoạn mã nhé!
-          </p>
-          <p class=" pt-2  pb-4">
-            <a class="button-blog-post-article" data-toggle="collapse" href="#collapseExample6" role="button"
-              aria-expanded="false" aria-controls="collapseExample6" target="_blank">
-              Đoạn mã của hình ảnh phía trên</a>
-          </p>
-          <div class="collapse" id="collapseExample6">
-            <pre><code class="html"> &#60;!--&nbsp;Icon&nbsp;ở&nbsp;độ&nbsp;phân&nbsp;giải&nbsp;cao&nbsp;nhất&nbsp;mà&nbsp;chúng&nbsp;ta&nbsp;cần&nbsp;--&#62;<br/> &#60;link&nbsp;rel="icon"&nbsp;sizes="192x192"&nbsp;href="/path/to/icon.png"&#62;<br/> <br/> &#60;!--&nbsp;Apple&nbsp;Touch&nbsp;Icon&nbsp;--&#62;<br/> &#60;link&nbsp;rel="apple-touch-icon"&nbsp;href="/path/to/apple-touch-icon.png"&#62;<br/> <br/> &#60;!--&nbsp;Safari&nbsp;Pinned&nbsp;Tab&nbsp;Icon&nbsp;--&#62;<br/> &#60;link&nbsp;rel="mask-icon"&nbsp;href="/path/to/icon.svg"&nbsp;color="blue"&#62;<br/></code></pre>
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Domain.com</h3>
           </div>
 
+          <img class="img-fluid  lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/Domain.com.png"
+            alt="Domain.com">
+          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="Domain.com" href="https://www.domain.com/"
+              target="_blank">Nguồn</a></p>
 
 
           <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size"> Mạng Xã Hội
-            </h3>
-          </div>
-          <h4 class="text-primary">
-            Facebook
-          </h4>
-
-          <img class=" img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/phan_tu_head_HTML/facebook-head-html.svg"
-            alt="Các Thành Phần Facebook Trong Head HTML">
-          <p class="mt-4">
-            Nếu bạn muốn sao chép code thì bạn hãy nhấn nút ở bên dưới để hiển thị đoạn mã nhé!
-          </p>
-          <p class=" pt-2  pb-4">
-            <a class="button-blog-post-article" data-toggle="collapse" href="#collapseExample7" role="button"
-              aria-expanded="false" aria-controls="collapseExample7" target="_blank">
-              Đoạn mã của hình ảnh phía trên</a>
-          </p>
-          <div class="collapse" id="collapseExample7">
-            <pre><code class="html"> &#60;meta&nbsp;property="fb:app_id"&nbsp;content="123456789"&#62;<br/> &#60;meta&nbsp;property="og:url"&nbsp;content="https://example.com/page.html"&#62;<br/> &#60;meta&nbsp;property="og:type"&nbsp;content="website"&#62;<br/> &#60;meta&nbsp;property="og:title"&nbsp;content="Content&nbsp;Title"&#62;<br/> &#60;meta&nbsp;property="og:image"&nbsp;content="https://example.com/image.jpg"&#62;<br/> &#60;meta&nbsp;property="og:image:alt"&nbsp;content="A&nbsp;description&nbsp;of&nbsp;what&nbsp;is&nbsp;in&nbsp;the&nbsp;image&nbsp;(not&nbsp;a&nbsp;caption)"&#62;<br/> &#60;meta&nbsp;property="og:description"&nbsp;content="Description&nbsp;Here"&#62;<br/> &#60;meta&nbsp;property="og:site_name"&nbsp;content="Site&nbsp;Name"&#62;<br/> &#60;meta&nbsp;property="og:locale"&nbsp;content="en_US"&#62;<br/> &#60;meta&nbsp;property="article:author"&nbsp;content=""&#62;<br/></code></pre>
+            <h3 class="text-primary ml-4 title-article-size">Hostgator</h3>
           </div>
 
-          <h4 class="text-primary">
-            Twitter
-          </h4>
-
-          <img class=" img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/phan_tu_head_HTML/twitter-head-html.svg"
-            alt="Các Thành Phần Twitter Trong Head HTML">
-          <p class="mt-4">
-            Nếu bạn muốn sao chép code thì bạn hãy nhấn nút ở bên dưới để hiển thị đoạn mã nhé!
-          </p>
-          <p class=" pt-2  pb-4">
-            <a class="button-blog-post-article" data-toggle="collapse" href="#collapseExample8" role="button"
-              aria-expanded="false" aria-controls="collapseExample8" target="_blank">
-              Đoạn mã của hình ảnh phía trên</a>
-          </p>
-          <div class="collapse" id="collapseExample8">
-            <pre><code class="html"> &#60;meta&nbsp;name="twitter:card"&nbsp;content="summary"&#62;<br/> &#60;meta&nbsp;name="twitter:site"&nbsp;content="@site_account"&#62;<br/> &#60;meta&nbsp;name="twitter:creator"&nbsp;content="@individual_account"&#62;<br/> &#60;meta&nbsp;name="twitter:url"&nbsp;content="https://example.com/page.html"&#62;<br/> &#60;meta&nbsp;name="twitter:title"&nbsp;content="Content&nbsp;Title"&#62;<br/> &#60;meta&nbsp;name="twitter:description"&nbsp;content="Content&nbsp;description&nbsp;less&nbsp;than&nbsp;200&nbsp;characters"&#62;<br/> &#60;meta&nbsp;name="twitter:image"&nbsp;content="https://example.com/image.jpg"&#62;<br/> &#60;meta&nbsp;name="twitter:image:alt"&nbsp;content="A&nbsp;text&nbsp;description&nbsp;of&nbsp;the&nbsp;image&nbsp;conveying&nbsp;the&nbsp;essential&nbsp;nature&nbsp;of&nbsp;an&nbsp;image&nbsp;to&nbsp;users&nbsp;who&nbsp;are&nbsp;visually&nbsp;impaired.&nbsp;Maximum&nbsp;420&nbsp;characters."&#62;<br/></code></pre>
-          </div>
+          <img class="img-fluid  lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/Hostgator.png"
+            alt="Hostgator">
+          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="Hostgator" href="https://www.hostgator.com/domains"
+              target="_blank">Nguồn</a></p>
 
 
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size"> Công Cụ Tạo Các Thẻ Meta Cho Trang Web
-            </h3>
-          </div>
 
-          <img class=" img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/phan_tu_head_HTML/metatag.png"
-            alt="Công cụ meta tags">
-          <p class=" pt-2 pb-4"> <a class="button-blog-post-article" title="Công Cụ Meta Tags"
-              href="https://metatags.io/" target="_blank">Nguồn</a></p>
-            <p>
-              <mark>Nguồn tham khảo: <a href="https://htmlhead.dev/" target="_blank" rel="noopener noreferrer">https://htmlhead.dev/</a></mark>
-            </p>
+
 
 
 
@@ -265,12 +350,12 @@
 
 
           <h4 class="mt-4 pt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
-          <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn các kiến thức về các thành phần trong thẻ Head HTML hữu ích dành cho việc phát triển,
-            thiết kế web và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất mong bạn tiếp tục ủng
-            hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui vẻ!</p>
+          <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những công cụ chọn domain hữu
+            ích dành cho việc phát triển, thiết kế web và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có
+            thể. Rất mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một
+            ngày vui vẻ!</p>
       </div>
       </article>
-
 
 
 
