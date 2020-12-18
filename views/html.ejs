@@ -34,323 +34,154 @@
       <div class="card-text text-justify">
         <article>
           <div class="text-content-article mt-5">
-            <p><b><i> Ngày hôm nay chúng ta sẽ cùng nhau đi vào tìm hiểu các công cụ giúp chọn domain(tên miền)
-                  phù hợp cho website nhé! </i></b></p>
+            <p><b><i>Trong quá trình phát triển ngày nay thì video ngày càng được sử dụng rộng rãi và phổ biến mà điển
+                  hình nhất là mạng xã hội video Youtube.
+                  Vì vậy để bắt kịp xu hướng thì mình nghĩ trang web của chúng ta cũng nên sử dụng thêm loại nội dung
+                  video để nâng cao trải nghiệm người dùng cũng như
+                  mang đến tính đa dạng phong phú cho website. Do đó ngày hôm nay chúng ta sẽ cùng nhau đi vào tìm hiểu
+                  HTML5 Video là gì và cách nhúng video vào trang web nhé!</i></b></p>
           </div>
           <hr />
 
+
           <div class="col-sm-12 bg-primary p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h2 class=" ml-4 card-title-article">Tên Miền (Domain Name) Là Gì?</h2>
+            <h2 class=" ml-4 card-title-article">HTML5 Video Là Gì?</h2>
           </div>
           <p>
-            <b>Domain Name</b> có thể hiểu đơn giản là tên đại diện cho trang web của bạn. Bạn có thể tưởng tưởng là nếu
-            trang web là ngôi nhà thì
-            tên miền chính là địa chỉ của ngôi nhà đó.<br />
-            Còn về phương diện kỹ thuật, mỗi máy tính hoạt động trên Internet thì sẽ được cung cấp một địa chỉ IP cụ thể
-            ví dụ như là 123.45.678.9.
-            Và khách hàng sẽ phải nhớ mã số IP này mỗi khi muốn truy cập vào trang web của bạn. Nhưng các con số này
-            thực sự rất khó nhớ và dễ dàng bị nhập sai
-            do đó họ đã tạo ra <strong>domain name</strong> với nhiệm vụ chính là làm tên đại diện cho dãy số IP đó. Và
-            để giúp minh họa rõ hơn thì bạn hãy xem hình ảnh sau nhé!
+            Trước đây khi để sử dụng video cho trang web thì chúng ta thường hay sử dụng Adobe Flash Player. Tuy nhiên
+            khi phiên bản HTML5
+            được phát hành thì bạn có thể dễ dàng nhúng video vào website thông qua thẻ <code>video</code>.<br />
+            Những lợi ích khi chúng ta sử dụng tính năng video của HTML là:
+            <ul>
+              <li>Tốc độ website được cải thiện, trình duyệt ít gặp sự cố hơn.</li>
+              <li>Chúng ta có thể cung cấp nhiều loại định dạng video khác nhau cho từng trình duyệt(webm, mp4, ogv...)
+              </li>
+              <li>Hiển thị các thành phần điều khiển video như là dừng(pause), chơi(play), điều chỉnh âm thanh...</li>
+              <li>Cho phép video có tự động phát(autoplay) trong website hay không.</li>
+              <li>Cho phép thiết lập poster(hình ảnh của video) khi video đang được load hoặc tải xuống.</li>
+              <li>Hỗ trợ cho việc cung cấp các phụ đề chú thích với nhiều loại ngôn ngữ khác nhau.</li>
+            </ul>
           </p>
-          <img class="img-fluid shadow lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/vi_du_minh_hoa_domain_name.png"
-            alt="Ví Dụ Về Tên Miền">
+
+          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Cách Sử Dụng Thẻ <code>video</code> Cho Website</h3>
+          </div>
+          <p>
+            Để thêm video vào cho trang web thì bạn hãy xem cấu trúc tổng quát sau nhé:
+          </p>
+          <h4 class="text-primary">
+            HTML
+          </h4>
+          <pre><code class="html">&#60;video&nbsp;width="640"&nbsp;height="480"&nbsp;poster="poster-video.jpg"&nbsp;controls&nbsp;autoplay&nbsp;preload&#62;<br/> &nbsp;&#60;source&nbsp;src="video.webm"&nbsp;type="video/webm"&#62;<br/> &nbsp;&#60;source&nbsp;src="video.ogv"&nbsp;type="video/ogg"&#62;<br/> &nbsp;&#60;source&nbsp;src="video.mp4"&nbsp;type="video/mp4"&#62;<br/> &nbsp;&#60;track&nbsp;src="subtitles-en.vtt"&nbsp;kind="subtitles"&nbsp;srclang="en"&nbsp;label="English"&nbsp;default&#62;<br/> &#60;/video&#62;<br/></code></pre>
           <p class="mt-4">
-            Thông thường thì chúng ta sẽ có nhiều loại tên miền với đuôi khác nhau như là <strong>.com</strong>(được sử
-            dụng phổ biến nhất),
-            <strong>.org</strong>, <strong>.net</strong>, <strong>.edu</strong>, <strong>.info</strong>... Và nó sẽ được
-            chia thành những nhóm chính sau đây:
-            <ul>
-              <li>
-                <strong>Top Level Domains(TLD)</strong>: Đây là loại tên miền cao cấp nhất của hệ thống Internet với các
-                đuôi phổ biến là .com, .org, .edu, và .net.
-              </li>
-              <li>
-                <strong>Country Code Top Level Domain(ccTLD)</strong>: Đây là loại tên miền cao cấp nhất dành cho quốc
-                gia trên thế giới và thường chỉ sử dụng hai chữ cái cho phần mở rộng
-                domain name như là Việt Nam(.vi), Nước Anh(.uk), Nước Mỹ(.us)...
-              </li>
-              <li>
-                <strong> Sponsored Top Level Domain</strong>: Đây là loại tên miền cao cấp nhất dành cho mục đích sử
-                dụng cụ thể như là
-                .gov(chính phủ), .edu(giáo dục), .org(Tổ chức và chương trình phi lợi nhuận)...
-              </li>
-            </ul>
+            Ở đây mình xin giải thích một tí nhé:
+          </p>
+          <ul>
+            <li><strong>width</strong>: độ rộng của đối tượng video trong trang web.</li>
+            <li><strong>height</strong>: độ cao của đối tượng video trong trang web.</li>
+            <li><strong>poster</strong>: hiển thị hình ảnh khi video đang được load hay tải xuống.</li>
+            <li><strong>controls</strong>: hiển thị các nút điều khiển mặc định cho video.</li>
+            <li><strong>autoplay</strong>: tự động phát video hoặc không.</li>
+            <li><strong>preload</strong>: cho phép tải trước video.</li>
+            <li><strong>source</strong>: cho phép bạn thiết lập nhiều định dạng của video để đề phòng một số trình duyệt không hỗ trợ định dạng video chính.</li>
+            <li><strong>track</strong>: cung cấp phụ đề cho video.</li>
+          </ul>
+
+
+          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Ví dụ HTML5 Video Cơ Bản</h3>
+          </div>  
+          <h4 class="text-primary">
+            HTML
+          </h4>
+          <pre><code class="html"> &#60;video&nbsp;width="400"&nbsp;height="250"&nbsp;controls&#62;<br/> &nbsp;&nbsp;&#60;source&nbsp;src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/HTML5_video/video_vi_du.mp4"&nbsp;type="video/mp4"&#62;<br/> &#60;/video&#62;<br/></code></pre>
+          <p class="mt-4">
+            Và kết quả bạn xem dự án Codepen bên dưới nhé:
+          </p>
+          <p class="codepen" data-height="357" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="GRjEpab" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="video_html5_coban">
+            <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/GRjEpab">
+            video_html5_coban</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Xác định thời gian bắt đầu và kết thúc của video</h3>
+          </div>  
+          <p>
+            Thông thường thời gian của video sẽ bắt đầu từ 0 giây. Nhưng nếu như bạn muốn bắt đầu video ở thời gian khác thì chúng ta có thể
+            sử dụng cấu trúc dưới đây:<br/>
+            <b><code>#t=[thời gian bắt đầu],[thời gian kết thúc]</code></b>
           </p>
           <p>
-            Nếu bạn muốn tham khảo thêm về domain thì có thể xem <a
-              href="https://www.wpbeginner.com/beginners-guide/beginners-guide-what-is-a-domain-name-and-how-do-domains-work/"
-              target="_blank" rel="noopener noreferrer" title="domain">ở đây nhé!</a>.
+            Lưu ý bạn sẽ thêm cái này ngay sau đường dẫn video ở trong source nhé. Để hiểu rõ hơn bạn xem ví dụ cho
+            video  bắt đầu vào giây thứ 5 và kết thúc vào giây thứ 15 ở dự án dưới đây nha:
+          </p>
+          <h4 class="text-primary">
+            HTML
+          </h4>
+          <pre><code class="html">&nbsp;&#60;video&nbsp;width="400"&nbsp;height="250"&nbsp;controls&#62;<br/> &nbsp;&nbsp;&nbsp;&#60;source&nbsp;src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/HTML5_video/video_vi_du.mp4#t=5,15"&nbsp;type="video/mp4"&#62;<br/> &nbsp;&#60;/video&#62;<br/></code></pre>
+          <p class="mt-4">
+            Và kết quả bạn xem dưới đây nhé:
           </p>
 
+          <p class="codepen" data-height="357" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="BaLZjNN" data-preview="true" style="height: 357px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="xac dinh thoi gian bat dau ket thuc cua video">
+            <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/BaLZjNN">
+            xac dinh thoi gian bat dau ket thuc cua video</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Cách sử dụng poster cho video</h3>
+          </div>  
+          <p>
+            Trong ví dụ này chúng ta sẽ sử dụng poster để hiện thị hình ảnh của video trước khi phát
+            thông qua đoạn mã sau nhé:
+          </p>
+          <h4 class="text-primary">
+            HTML
+          </h4>
+          <pre><code class="html"> &#60;video&nbsp;width="400"&nbsp;height="250"&nbsp;poster="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/HTML5_video/Poster%20Video.png"&nbsp;controls&#62;<br/> &nbsp;&nbsp;&nbsp;&nbsp;&#60;source&nbsp;src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/HTML5_video/video_vi_du.mp4"&nbsp;type="video/mp4"&#62;<br/> &nbsp;&#60;/video&#62;<br/></code></pre>
+          <p class="mt-4">
+            Và kết quả bạn xem dự án bên dưới nhé:
+          </p>
+          <p class="codepen" data-height="357" data-theme-id="light" data-default-tab="html,result" data-user="haycuoilennao19" data-slug-hash="XWjgXdE" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="su dung poster trong video html5">
+            <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/XWjgXdE">
+            su dung poster trong video html5</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+      
           <div class="col-sm-12 bg-primary p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h2 class=" ml-4 card-title-article">Cách Chọn Domain Name Cho Website?</h2>
+            <h2 class=" ml-4 card-title-article">Cách Nhúng Video Youtube Vào Trang Web</h2>
           </div>
           <p>
-            Trong phần này mình sẽ giới thiệu một số yếu tố giúp bạn có thể dễ dàng lựa chọn tên miền:
-            <ul>
-              <li>
-                <strong>Lựa chọn đúng đuôi dành cho website:</strong> Theo chỉ số thống kế thì 43% sử dụng đuôi
-                <b>.com</b>, điều này cho thấy
-                việc sử dụng <b>.com</b> cho tên miền của bạn vẫn là tốt nhất. Tuy nhiên nếu <strong>không thể</strong>
-                chọn tên miền với <strong>.com</strong>(do người khác đã mua)
-                thì bạn có thể cân nhắc sử dụng các đuôi phổ biến khác như <strong>.net</strong>,
-                <strong>.org</strong>...
-              </li>
-              <li>
-                <strong>Độ dài:</strong> Tên miền có độ dài càng ngắn các tốt vì nó sẽ giúp người dùng có thể dễ dàng
-                nhớ và nhập hơn (khoảng từ 6 -> 14 ký tự là hợp lý).
-              </li>
-              <li>
-                <strong>Từ khóa:</strong> Bạn nên lựa chọn tên miền có thể bao quát được lĩnh vực, dịch vụ, chủ đề mà
-                trang web đang hướng tới.
-                Việc làm này sẽ giúp Google có thể hiểu được website hơn từ đó tăng thứ hạng SEO trên lĩnh vực mà bạn
-                đang muốn xây dựng.
-              </li>
-              <li>
-                <strong>Từ khóa:</strong> Bạn nên lựa chọn tên miền có thể bao quát được lĩnh vực, dịch vụ, chủ đề mà
-                trang web đang hướng tới.
-                Việc làm này sẽ giúp Google có thể hiểu được website hơn từ đó tăng thứ hạng SEO trên lĩnh vực mà bạn
-                đang muốn xây dựng.
-              </li>
-            </ul>
+            Trong phần này chúng ta sẽ đi vào ví dụ cách nhúng video youtube cho trang web
+            cũng như hiển thị responsive trên nhiều màn hình thiết bị thông qua đoạn code sau nhé:
           </p>
-          <div class="text-center"> <img class="w-50 lazyload"
-              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/C%C3%A1ch%20ch%E1%BB%8Dn%20domain.jpg"
-              alt="Cách Chọn Domain Name">
-          </div>
-          <p>
-            Một số lưu ý <strong>nên tránh</strong> khi chọn tên miền:
-            <ul>
-              <li>Không sử dụng số hay các ký tự đặc biệt.</li>
-              <li>Không viết sai chính tả và sử dụng các từ dễ gây khó hiểu trong tên miền</li>
-              <li>Không nên sử dụng các tên hay thương hiệu đã được sử dụng.</li>
-
-            </ul>
+          <h4 class="text-primary">
+            HTML
+          </h4>
+          <pre><code class="html">&#60;h2&#62;Cách&nbsp;Hiển&nbsp;Thị&nbsp;responsive&nbsp;video&nbsp;Youtube&#60;h2&#62;<br/> &#60;div&nbsp;class="video-container"&#62;<br/> &nbsp;&nbsp;&#60;iframe&nbsp;src="https://www.youtube.com/embed/SV4lbsaBLuI"<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frameborder="0"&nbsp;width="560"&nbsp;height="315"&#62;<br/> &nbsp;&nbsp;&#60;/iframe&#62;<br/> &#60;/div&#62;<br/></code></pre>
+          <h4 class="text-primary mt-4">
+            CSS
+          </h4>
+          <pre><code class="css">.video-container&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;relative;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding-bottom:&nbsp;56.25%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;padding-top:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;overflow:&nbsp;hidden;<br/> }<br/>.video-container&nbsp;iframe,<br/> .video-container&nbsp;object,<br/> .video-container&nbsp;embed&nbsp;{<br/> &nbsp;&nbsp;&nbsp;&nbsp;position:&nbsp;absolute;<br/> &nbsp;&nbsp;&nbsp;&nbsp;top:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;left:&nbsp;0;<br/> &nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/> &nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;100%;<br/> }<br/></code></pre>
+          <p class="mt-4">
+            Và kết quả cuối cùng bạn xem bên dưới nhé:
+          </p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="haycuoilennao19" data-slug-hash="abmwdJa" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Nhúng Video Youtube Vào Trang Web">
+            <span>See the Pen <a href="https://codepen.io/haycuoilennao19/pen/abmwdJa">
+            Nhúng Video Youtube Vào Trang Web</a> by haycuoilennao19 (<a href="https://codepen.io/haycuoilennao19">@haycuoilennao19</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          
+          <p class="mt-4">
+            Đây là đường dẫn tham  khảo: <a href="https://web.dev/video-and-source-tags/" target="_blank" rel="noopener noreferrer">The &#60;video&#62; and &#60;source&#62; tags</a>
           </p>
           <p>
-            Nếu bạn muốn tham khảo thêm về việc chọn domain thì có thể xem <a
-              href="https://domains.google/learning-center/how-to-come-up-with-a-good-domain-name/" target="_blank"
-              rel="noopener noreferrer" title="Cách chọn domain">ở đây nhé!</a>.
+            Nếu bạn muốn tham khảo các thư viện hỗ trợ tạo HTML5 Video thì có thể truy cập đường dẫn: <a href="https://www.niemvuilaptrinh.com/article/Thu-Vien-Tao-HTML5-Video-Tot-Nhat-Cho-Phat-Trien-Web2020">Thư Viện Tạo HTML5 Video Tốt Nhất Dành Cho Website</a>.
           </p>
-
-
-          <div class="col-sm-12 bg-primary p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h2 class=" ml-4 card-title-article">Các Công Cụ Gợi Ý Giúp Bạn Chọn Domain Name Tốt Hơn</h2>
-          </div>
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Nameboy</h3>
-          </div>
-
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/Nameboy.png" alt="Nameboy">
-          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="Nameboy" href="https://www.nameboy.com/"
-              target="_blank">Nguồn</a></p>
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Namemesh</h3>
-          </div>
-
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/Namemesh.png"
-            alt="Namemesh">
-          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="Namemesh" href="https://www.namemesh.com/"
-              target="_blank">Nguồn</a></p>
-
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Panabee</h3>
-          </div>
-
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/Panabee.png" alt="Panabee">
-          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="Panabee" href="https://www.panabee.com/"
-              target="_blank">Nguồn</a></p>
-
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Domain Wheel</h3>
-          </div>
-
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/Domain%20Wheel.png"
-            alt="Domain Wheel">
-          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="Domain Wheel" href="https://domainwheel.com/"
-              target="_blank">Nguồn</a></p>
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Name Station</h3>
-          </div>
-
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/Name%20Station.png"
-            alt="Name Station">
-          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="Name Station" href="https://namestation.com/"
-              target="_blank">Nguồn</a></p>
-
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Lean Domain Search</h3>
-          </div>
-
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/Lean%20Domain%20Search.png"
-            alt="Lean Domain Search">
-          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="Lean Domain Search"
-              href="https://leandomainsearch.com/" target="_blank">Nguồn</a></p>
-
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Domain Typer</h3>
-          </div>
-
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/Domain%20Typer.png"
-            alt="Domain Typer">
-          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="Domain Typer" href="https://domaintyper.com/"
-              target="_blank">Nguồn</a></p>
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Bust A Name</h3>
-          </div>
-
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/Bust%20A%20Name.png"
-            alt="Bust A Name">
-          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="Bust A Name"
-              href="http://www.bustaname.com/word_maker" target="_blank">Nguồn</a></p>
-
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Business name generator</h3>
-          </div>
-
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/Business%20name%20generator.png"
-            alt="Business name generator">
-          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="Business name generator"
-              href="https://www.shopify.com/tools/business-name-generator" target="_blank">Nguồn</a></p>
-
-
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Instant Domain Search</h3>
-          </div>
-
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/Instant%20Domain%20Search.png"
-            alt="Instant Domain Search">
-          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="Instant Domain Search"
-              href="https://instantdomainsearch.com/" target="_blank">Nguồn</a></p>
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Domain Name Soup</h3>
-          </div>
-
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/Domain%20Name%20Soup.png"
-            alt="Domain Name Soup">
-          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="Domain Name Soup"
-              href="https://www.domainnamesoup.com/" target="_blank">Nguồn</a></p>
-
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Impossibility</h3>
-          </div>
-
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/Impossibility.png"
-            alt="Impossibility">
-          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="Impossibility"
-              href="http://impossibility.org/" target="_blank">Nguồn</a></p>
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">WebHostingGeeks Name Idea </h3>
-          </div>
-
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/WebHostingGeeks%20Name%20Idea.png"
-            alt="WebHostingGeeks Name Idea">
-          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="WebHostingGeeks Name Idea"
-              href="https://webhostinggeeks.com/nameideas/" target="_blank">Nguồn</a></p>
-
-
-
-
-          <div class="col-sm-12 bg-primary p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h2 class=" ml-4 card-title-article">Những Nơi Tốt Nhất Để Bạn Đăng Ký Tên Miền</h2>
-          </div>
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Google Domain</h3>
-          </div>
-
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/Google%20Domain.png"
-            alt="Google Domain">
-          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="Google Domain" href="https://domains.google/"
-              target="_blank">Nguồn</a></p>
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Namecheap</h3>
-          </div>
-
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/Namecheap.png"
-            alt="Namecheap">
-          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="Namecheap" href="https://www.namecheap.com/"
-              target="_blank">Nguồn</a></p>
-
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">GoDaddy</h3>
-          </div>
-
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/GoDaddy.png" alt="GoDaddy">
-          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="GoDaddy" href="https://vn.godaddy.com/"
-              target="_blank">Nguồn</a></p>
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Domain.com</h3>
-          </div>
-
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/Domain.com.png"
-            alt="Domain.com">
-          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="Domain.com" href="https://www.domain.com/"
-              target="_blank">Nguồn</a></p>
-
-
-          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Hostgator</h3>
-          </div>
-
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/ten_mien_tool/Hostgator.png"
-            alt="Hostgator">
-          <p class="pt-2 pb-4"> <a class="button-blog-post-article" title="Hostgator" href="https://www.hostgator.com/domains"
-              target="_blank">Nguồn</a></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           <h4 class="mt-4 pt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
-          <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những công cụ chọn domain hữu
+          <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những kiến thức tìm hiểu về SEO hữu
             ích dành cho việc phát triển, thiết kế web và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có
             thể. Rất mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một
             ngày vui vẻ!</p>
