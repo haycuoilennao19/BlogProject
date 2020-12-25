@@ -34,427 +34,443 @@
       <div class="card-text text-justify">
         <article>
           <div class="text-content-article mt-5">
-            <p><b><i>Trong bài viết hôm nay mình sẽ giới thiệu đến bạn làm thế nào để có thể nghiên cứu từ khóa, các lợi
-                  ích của nó
-                  cũng như các công cụ chuyên dùng cho keyword research để tối ưu cho công cụ tìm kiếm được tốt hơn nhé!
+            <p><b><i>Ngày hôm nay chúng ta sẽ đi vào tìm hiểu cách sử dụng position trong CSS để căn chỉnh các phần tử
+                  trong website
+                  được dễ dàng và tiện lợi hơn nhé!
                 </i></b></p>
           </div>
           <hr />
-
-
           <div class="col-sm-12 bg-primary p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h2 class=" ml-4 card-title-article">Nghiên Cứu từ Khóa Là Gì?</h2>
+            <h2 class=" ml-4 card-title-article">Lazy Loading Là Gì?</h2>
           </div>
           <p>
-            <strong>Nghiên cứu từ khóa</strong> được xem là một yếu tố cực kỳ quan trọng mà bạn cần quan tâm trước khi
-            đi vào viết nội dung cho website.<br />
-            Trước khi đi vào chi tiết thì mình xin giới thiệu sơ qua cho bạn khái niệm về <strong>từ
-              khóa(keyword)</strong> nhé. Nó là <strong>các từ và cụm từ</strong> mà mọi người thường hay sử dụng để tìm
-            kiếm thông tin trên
-            các công cụ tìm kiếm như là Google,
-            Bing, Youtube...
+            Thông thường khi chúng ta truy cập vào một trang web
+            thì nó sẽ <strong>tải tất cả</strong> các thành phần trên trang web rồi sau đó mới hiển thị nội dung ra
+            ngoài trình duyệt.
+            Việc load trang như vậy sẽ làm ảnh hưởng rất nhiều tới tốc độ tải trang cho website.<br />
+            <img class="img-fluid lazyload"
+              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/thu-vien-lazy-load/trang-web-tai-binh-thuong.png"
+              alt="Trang Web Được Tải Bình Thường">
+            Do đó <strong>Lazy Loading</strong> ra đời để giúp bạn có thể cải thiện và tối ưu hiệu suất cho các thành
+            phần
+            ảnh hưởng đến quá trình tải trang như là video, hình ảnh... bằng cách chỉ <strong>tải trước các nội dung
+              được yêu cầu</strong> và
+            <strong>sau đó sẽ tải các thành phần khác khi người dùng thật sự cần tới.</strong> Và để hiểu rõ hơn bạn xem
+            hình ảnh sau nhé!
           </p>
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Nghien_cuu_tu_khoa/dinh_nghia_tu_khoa_trong_SEO.png"
-            alt="Khái niệm về từ khóa trong SEO">
-          <p class="mt-4">
-            <strong>Nghiên cứu từ khóa</strong> là quá trình tìm hiểu, phân tích các từ khóa được khách hàng hay sử dụng
-            để tìm kiếm dịch vụ,
-            sản phẩm hay nội dung mà chủ đề website của bạn đang hướng tới.
-          </p>
+          <img class="img-fluid lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/thu-vien-lazy-load/trang-web-su-dung-lazy-load.png"
+            alt="Trang Web Được Sử dụng lazy loading">
+
           <div class="col-sm-12 bg-primary p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h2 class=" ml-4 card-title-article">Tại Sao Nghiên Cứu Từ Khóa Lại Quan Trọng Trong SEO?</h2>
+            <h2 class=" ml-4 card-title-article">Lợi Ích Của Việc Sử Dụng Lazy Loading?</h2>
           </div>
           <p>
-            Như ở phía trên mình đã nói thì nghiên cứu từ khóa là bước đi đầu tiên cần thực hiện khi bạn muốn tạo nội
-            dung website.
-            Nó cung cấp thêm cho bạn nhiều thông tin để xác định và chọn từ khóa trước khi viết bài như là:
+            Có hai lợi ích chính khi chúng ta ssử dụng lazy loading là:
             <ul>
-              <li>Hiện tại mọi người đang quan tâm đến chủ đề nào?</li>
-              <li>Mức độ cạnh tranh từ khóa như thế nào?</li>
-              <li>Nên tạo loại nội dung nào cho từ khóa này?</li>
-              <li>Trang web có thể nhận bao nhiêu lượt truy cập từ khóa được xếp hạng cao?</li>
-              <li>Khả năng xếp hạng của từ khóa này có khó hay không?</li>
-              <li>Sẽ có bao nhiêu lượt khách hàng sẽ mua dịch vụ hay sản phẩm với từ khóa này?</li>
+              <li><strong>Cải thiện hiệu suất</strong>: Bạn sẽ giảm được số lượng thành phần cần phải tải trong trang
+                web. Từ đó thời gian mà trình duyệt
+                xử lý và phân tích sẽ được cải thiện hơn. Do đó nội dung website đến với người dùng sẽ nhanh hơn.
+              </li>
+              <li>
+                <strong>Giảm Chi phí</strong>: Có một số hosting lưu trữ hình ảnh thì sẽ tính chi phí dựa trên số byte
+                mà bạn sử dụng.
+                Do đó kỹ thuật này sẽ giúp bạn tránh được tình trạng tải các thành phần trên website mà người dùng không
+                bao giờ dùng tới.
+              </li>
             </ul>
           </p>
           <p>
-            Và dưới đây là hình minh họa các bước để chúng ta nghiên cứu từ khóa nhé!
+            Và để giúp bạn dễ hình dung thì mình sẽ lấy một ví dụ trong thức tế nhé!
           </p>
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Nghien_cuu_tu_khoa/c%C3%A1c_buoc_nghien_cuu_tu_khoa.png"
-            alt="Các bước nghiên cứu từ khóa">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item"
+              src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/thu-vien-lazy-load/video-minh-hoa-lazy-load.mp4"
+              allowfullscreen></iframe>
+          </div>
+
+
           <div class="col-sm-12 bg-primary p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h2 class=" ml-4 card-title-article">Cách Tìm Ý Tưởng Từ Khóa</h2>
+            <h2 class=" ml-4 card-title-article">Các Dự Án Lazy Loading Cho Website</h2>
           </div>
-          <p>
-            Sau đây mình sẽ hướng dẫn các bước để tìm các ý tưởng từ khóa cho chủ đề cho trang web nhé!
+          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Lazy Loading cho Hình Ảnh</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="derekmorash"
+            data-slug-hash="NjBvdX" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Lazy Load Images">
+            <span>See the Pen <a href="https://codepen.io/derekmorash/pen/NjBvdX">
+                Lazy Load Images</a> by Derek Morash (<a href="https://codepen.io/derekmorash">@derekmorash</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
+          <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Lazy Loading cho Hình Ảnh"
+              href="https://codepen.io/derekmorash/pen/NjBvdX" target="_blank">Nguồn</a></p>
+
+          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Lazy Loading Cho Hình Ảnh Theo Kiểu Medium</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="logico-ar"
+            data-slug-hash="povXPPa" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Medium image lazy load effect">
+            <span>See the Pen <a href="https://codepen.io/logico-ar/pen/povXPPa">
+                Medium image lazy load effect</a> by Lógico (<a href="https://codepen.io/logico-ar">@logico-ar</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article"
+              title="Hiệu Ứng Lazy Loading Cho Hình Ảnh Theo Kiểu Medium"
+              href="https://codepen.io/logico-ar/pen/povXPPa" target="_blank">Nguồn</a></p>
+
+
+          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Ví Dụ Về Lazy Load</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="yednap"
+            data-slug-hash="NxBLMK" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Lazy Load Example">
+            <span>See the Pen <a href="https://codepen.io/yednap/pen/NxBLMK">
+                Lazy Load Example</a> by Sanjeev Pandey (<a href="https://codepen.io/yednap">@yednap</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+
+          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Ví Dụ Về Lazy Load"
+              href="https://codepen.io/yednap/pen/NxBLMK" target="_blank">Nguồn</a></p>
+
+
+          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Tạo Lazy Load Với SVG</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="ainalem"
+            data-slug-hash="aLKxjm" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Lazy loading with inline SVG">
+            <span>See the Pen <a href="https://codepen.io/ainalem/pen/aLKxjm">
+                Lazy loading with inline SVG</a> by Mikael Ainalem (<a href="https://codepen.io/ainalem">@ainalem</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+
+
+          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Tạo Lazy Load Với SVG"
+              href="https://codepen.io/ainalem/pen/aLKxjm" target="_blank">Nguồn</a></p>
+
+
+          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Tạo Lazy Load Với Hiệu Ứng Scrollout</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="notoriousb1t"
+            data-slug-hash="ERrPwG" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Lazy-Load images with ScrollOut">
+            <span>See the Pen <a href="https://codepen.io/notoriousb1t/pen/ERrPwG">
+                Lazy-Load images with ScrollOut</a> by Christopher Wallis (<a
+                href="https://codepen.io/notoriousb1t">@notoriousb1t</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Tạo Lazy Load Với Hiệu Ứng Scrollout"
+              href="https://codepen.io/notoriousb1t/pen/ERrPwG" target="_blank">Nguồn</a></p>
+
+          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Tạo Lazy Load Với Javascript Thuần</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="imagekit_io"
+            data-slug-hash="MBNwKB" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Lazy loading images using event handlers - example code">
+            <span>See the Pen <a href="https://codepen.io/imagekit_io/pen/MBNwKB">
+                Lazy loading images using event handlers - example code</a> by ImageKit.io (<a
+                href="https://codepen.io/imagekit_io">@imagekit_io</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Tạo Lazy Load Với Javascript Thuần"
+              href="https://codepen.io/imagekit_io/pen/MBNwKB" target="_blank">Nguồn</a></p>
+
+          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Tạo Lazy Loading Hình Ảnh Với Chú Thích</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="alex_paul"
+            data-slug-hash="eKyZYw" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Lazy Loading Fig+Figcaption &amp;amp; Flipping Card">
+            <span>See the Pen <a href="https://codepen.io/alex_paul/pen/eKyZYw">
+                Lazy Loading Fig+Figcaption &amp; Flipping Card</a> by Alex Paul (<a
+                href="https://codepen.io/alex_paul">@alex_paul</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+
+          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Tạo Lazy Loading Hình Ảnh Với Chú Thích"
+              href="https://codepen.io/alex_paul/pen/eKyZYw" target="_blank">Nguồn</a></p>
+
+          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size"> Lazy Load Với Thư Viện Slick</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="jasondavis"
+            data-slug-hash="clfik" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Slick Slide">
+            <span>See the Pen <a href="https://codepen.io/jasondavis/pen/clfik">
+                Slick Slide</a> by Jason Davis (<a href="https://codepen.io/jasondavis">@jasondavis</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+
+          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Lazy Load Với Thư Viện Slick"
+              href="https://codepen.io/jasondavis/pen/clfik" target="_blank">Nguồn</a></p>
+
+          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size"> Lazy Load Cho Danh Sách</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="kvzivn"
+            data-slug-hash="MYKMVG" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Lazy loading list items">
+            <span>See the Pen <a href="https://codepen.io/kvzivn/pen/MYKMVG">
+                Lazy loading list items</a> by Kevin Ivan (<a href="https://codepen.io/kvzivn">@kvzivn</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+
+          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Lazy Load Cho Danh Sách"
+              href="https://codepen.io/kvzivn/pen/MYKMVG" target="_blank">Nguồn</a></p>
+
+
+          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size"> Lazy Load Cho Hình Ảnh Background Trong CSS</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="imagekit_io"
+            data-slug-hash="RBXVrW" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Lazy Loading background images in CSS">
+            <span>See the Pen <a href="https://codepen.io/imagekit_io/pen/RBXVrW">
+                Lazy Loading background images in CSS</a> by ImageKit.io (<a
+                href="https://codepen.io/imagekit_io">@imagekit_io</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+
+
+          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article"
+              title="Lazy Load Cho Hình Ảnh Background Trong CSS" href="https://codepen.io/imagekit_io/pen/RBXVrW"
+              target="_blank">Nguồn</a></p>
+
+
+          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size"> Lazy Load Cho Gallery</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="magnificode"
+            data-slug-hash="oEbGWE" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Grid Fade and Intersection Observer Lazyload">
+            <span>See the Pen <a href="https://codepen.io/magnificode/pen/oEbGWE">
+                Grid Fade and Intersection Observer Lazyload</a> by magnificode (<a
+                href="https://codepen.io/magnificode">@magnificode</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+
+          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title=" Lazy Load Cho Gallery"
+              href="https://codepen.io/magnificode/pen/oEbGWE" target="_blank">Nguồn</a></p>
 
 
 
           <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Phân tích danh sách của các từ khóa chính</h3>
+            <h3 class="text-primary ml-4 title-article-size"> Lazy Load Hình Ảnh Bằng Vuejs</h3>
           </div>
-          <p>
-            <strong>Từ khóa chính</strong>(seed keywords) là bước đầu tiên trong quá trình nghiên cứu từ khóa. Và
-            để tìm ra nó thì bạn
-            cần giải quyết 3 câu hỏi cơ bản sau đây:
-            <ul>
-              <li>Nội dung trang web của bạn đang nói về cái gì?</li>
-              <li>Bạn muốn xếp hạng cho những từ khóa nào?</li>
-              <li>Các trang web đối thủ cạnh tranh đang sử dụng những từ khóa chính nào?</li>
-            </ul>
-          </p>
-          <p>
-            Để bạn dễ hiểu thì mình lấy trang web của mình làm ví dụ thực tế nhé. Với chủ đề chính là
-            <strong>kiến thức về phát triển web Front-end</strong> và các từ khóa chính đi theo là:
-            <ul>
-              <li>Ngôn ngữ HTML</li>
-              <li>Ngôn ngữ CSS</li>
-              <li>Ngôn ngữ Javascript</li>
-              <li>Thư viện phát triển web</li>
-            </ul>
-          </p>
-          <p>
-            Sau đây mình sẽ giới thiệu đến bạn <strong>các cách tìm ý tưởng từ khóa </strong> cho trang web của
-            mình nhé!
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="erikterwan"
+            data-slug-hash="bGNeRMr" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="ScrollTrigger Vue.js - lazy load images">
+            <span>See the Pen <a href="https://codepen.io/erikterwan/pen/bGNeRMr">
+                ScrollTrigger Vue.js - lazy load images</a> by Erik Terwan (<a
+                href="https://codepen.io/erikterwan">@erikterwan</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
 
-          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h4 class="text-primary ml-4 title-article-size">1) Google related searches</h4>
-          </div>
-          <p>
-            Khi bạn tìm kiếm thông tin gì đó trên Google thì <strong>ở dưới cùng trang</strong> thường sẽ xuất hiện thêm
-            các
-            từ khóa liên quan được Google đề xuất.<br />
-            Ví dụ mình tìm thông tin về <strong>lập trình</strong> thì các kết quả của Google related searches sẽ là:
-          </p>
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Nghien_cuu_tu_khoa/Su_dung_google_related_searches.png"
-            alt="Sử dụng Google related  searches">
 
-          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h4 class="text-primary ml-4 title-article-size">2) Sử dụng đề xuất của Google và Youtube</h4>
-          </div>
-          <p>
-            Đây là một cách thông dụng và nhanh nhất bạn có thể tìm thấy các từ khóa tốt cho trang web của mình.
-          </p>
-          <p class="text-primary">
-            Đề Xuất Của Google
-          </p>
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Nghien_cuu_tu_khoa/S%E1%BB%AD%20d%E1%BB%A5ng%20%C4%91%E1%BB%81%20xu%E1%BA%A5t%20c%E1%BB%A7a%20Google.png"
-            alt="Sử dụng đề xuất của Google">
-          <p class="text-primary">
-            Đề Xuất Của Youtube
-          </p>
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Nghien_cuu_tu_khoa/su_dung_de_xuat_cua_Youtube.png"
-            alt="Sử dụng đề xuất của Youtube">
-          <p class="mt-4">
-            Ngoài ra bạn cũng có thể sử dụng đề xuất của công cụ tìm kiếm Bing nhé!
-          </p>
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Nghien_cuu_tu_khoa/su_dung_de_xuat_cua_Bing%20%281%29.png"
-            alt="Sử dụng đề xuất của Bing">
-
-          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h4 class="text-primary ml-4 title-article-size">3) Sử dụng Quora để tìm kiếm từ khóa</h4>
-          </div>
-          <p>
-            Bước đầu tiên bạn cần là truy cập vào trang Quora và nhập vào phần tìm kiếm mà chủ đề bạn đang muốn viết cho
-            nội dung của website.
-            Hình ảnh dưới đây là ví dụ mình nhập vào chủ đề <strong>web development</strong>:
-          </p>
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Nghien_cuu_tu_khoa/su_dung_quora_tim_tu_khoa_1.png"
-            alt="Sử dụng đề xuất của Quora phần 1">
-          <p class="mt-4">
-            Sau đó bạn sẽ nhấp vào phần <strong>Topics: Webdevelopment</strong> để hiện ra các câu hỏi hay gặp
-            trong chủ đề của mình nhé.
-          </p>
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Nghien_cuu_tu_khoa/su_dung_de_xuat_quora_phan_2%20%281%29.png"
-            alt="Sử dụng đề xuất của Quora phần 2">
-          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h4 class="text-primary ml-4 title-article-size">4) Sử dụng Amazon để tìm kiếm từ khóa</h4>
-          </div>
-          <p>
-            Khi bạn muốn tìm kiếm thông tin từ khóa về các sản phẩm đang bán chạy trên thị trường thì mình nghĩ Amazon
-            là một
-            công cụ tìm kiếm thích hợp nhất. Nó thu thập hàng triệu lượt tìm kiếm từ khách hàng ở mọi nơi trên thế giới
-            và sau đó sẽ sử dụng thuật toán để phân tích
-            các sản phẩm liên quan đến từ khóa. Từ đó bạn có thể dễ dàng tìm được từ khóa chính và các chủ đề liên quan
-            cho nội dung website của mình.
-          </p>
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Nghien_cuu_tu_khoa/su_dung_de_xuat_cua_amazon.png"
-            alt="Sử dụng đề xuất của Amazon">
+          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Lazy Load Hình Ảnh Bằng Vuejs"
+              href="https://codepen.io/erikterwan/pen/bGNeRMr" target="_blank">Nguồn</a></p>
 
 
           <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Sử dụng công cụ để nghiên cứu từ khóa</h3>
+            <h3 class="text-primary ml-4 title-article-size"> Lazy Load Hình Ảnh Bằng Angularjs</h3>
           </div>
-          <p>
-            Trong phần này chúng ta sẽ đi vào tìm hiểu các công cụ(tool) để hỗ trợ quá trình tìm kiếm từ khóa và các chủ
-            để liên quan được đơn giản và
-            nhanh chóng hơn nhé!
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="yaoyi"
+            data-slug-hash="qfpdC" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Lazy Loading Image With AngularJS from Ben Nadel">
+            <span>See the Pen <a href="https://codepen.io/yaoyi/pen/qfpdC">
+                Lazy Loading Image With AngularJS from Ben Nadel</a> by yaoyi (<a
+                href="https://codepen.io/yaoyi">@yaoyi</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
-          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h4 class="text-primary ml-4 title-article-size">1) Sử dụng Answer The Public</h4>
-          </div>
-          <p>
-            <strong>Answer The Public</strong> là công cụ giúp bạn phân tích các cụm từ hay câu hỏi liên quan cho từ
-            khóa chính.
-            Bạn chỉ cần nhập chủ đề mình muốn vào ô tìm kiếm trong trang chủ thì sau đó nó sẽ tự động phân tích và đưa
-            ra kết quả cho bạn.
-            Thật đơn giản phải không nào. Hình ảnh bên dưới là kết quả các từ khóa và câu hỏi khi mình nhập chủ đề
-            <strong>computer</strong> nha.
-          </p>
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Nghien_cuu_tu_khoa/su_dung_cong_cu_answer_the_public%20%281%29.png"
-            alt="Sử dụng công cụ Answer The Public">
-          <p class=" pt-2 pb-4"> <a class="button-blog-post-article" title="Answer The Public"
-              href="https://answerthepublic.com/" target="_blank">Nguồn</a></p>
+          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title=" Lazy Load Hình Ảnh Bằng Angularjs"
+              href="https://codepen.io/yaoyi/pen/qfpdC" target="_blank">Nguồn</a></p>
 
           <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h4 class="text-primary ml-4 title-article-size">2) Sử dụng The Google Keyword Planner</h4>
+            <h3 class="text-primary ml-4 title-article-size"> Lazy Load Hình Ảnh Bằng Reactjs</h3>
           </div>
-          <p>
-            <strong>The Google Keyword Planner</strong> là công cụ giúp bạn có thể trực tiếp tìm kiếm các từ khóa từ
-            dữ liệu của Google. Nó cung cấp cho bạn rất nhiều thông tin hữu ích như là lượt tìm kiếm hàng tháng của từ
-            khóa,
-            mức độ cạnh tranh...<br />
-            Đầu tiên bạn sẽ cần truy cập vào trang chủ của Google Ads và đăng ký tài khoản. Sau đó chọn phần công cụ lập
-            kế hoạch từ khóa như hình dưới đây nhé:
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="stothelios"
+            data-slug-hash="gzoZLZ" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="React Preload Image">
+            <span>See the Pen <a href="https://codepen.io/stothelios/pen/gzoZLZ">
+                React Preload Image</a> by Stelios Constantinides (<a
+                href="https://codepen.io/stothelios">@stothelios</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Nghien_cuu_tu_khoa/Google%20Keyword%20Planner.png"
-            alt="Nghiên cứu từ khóa với google ads phần 1">
-          <p class="mt-4">
-            Sau đó bạn chọn <strong>khám phá các từ khóa mới</strong> và nhập vào chủ đề nội dung cho trang web như hình
-            dưới đây nhé:
-          </p>
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Nghien_cuu_tu_khoa/Google%20Keyword%20Planner%202.png"
-            alt="Nghiên cứu từ khóa với google ads phần 2">
-          <p class="mt-4">
-            Bước cuối cùng bạn chọn là <strong>xem kết quả</strong> và sẽ thấy toàn bộ các chủ đề liên quan đến từ khóa
-            chính như hình bên dưới nhé:
-          </p>
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Nghien_cuu_tu_khoa/google%20keyword%20planner%203.png"
-            alt="Nghiên cứu từ khóa với google ads phần 3">
-          <p class=" pt-2 pb-4"> <a class="button-blog-post-article" title="Google Keyword Planner"
-              href="https://ads.google.com" target="_blank">Nguồn</a></p>
+          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Lazy Load Hình Ảnh Bằng Reactjs"
+              href="https://codepen.io/stothelios/pen/gzoZLZ" target="_blank">Nguồn</a></p>
+
+
 
 
           <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h4 class="text-primary ml-4 title-article-size">3) Sử dụng Exploding Topics</h4>
+            <h3 class="text-primary ml-4 title-article-size"> Lazy Load Video Iframe</h3>
           </div>
-          <p>
-            <strong>Exploding topic</strong> là công cụ giúp bạn có thể tìm hiểu các xu hướng phát triển
-            của nhiều chủ đề khác nhau như là giáo dục, sức khỏa, làm đẹp, marketing, lối sống, nhà cửa...
-            Để hiểu rõ hơn bạn xem ví dụ dưới đây khi mình chọn lĩnh vực <strong>giáo dục</strong> trong công cụ này
-            nhé:
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="vincentorback"
+            data-slug-hash="KaqbLK" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Lazy loading video iframe with placeholder">
+            <span>See the Pen <a href="https://codepen.io/vincentorback/pen/KaqbLK">
+                Lazy loading video iframe with placeholder</a> by Vincent Orback (<a
+                href="https://codepen.io/vincentorback">@vincentorback</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Nghien_cuu_tu_khoa/C%C3%B4ng%20C%E1%BB%A5%20Exploding%20Topics.png"
-            alt="Nghiên cứu từ khóa với Exploding Topics">
-          <p class=" pt-2 pb-4"> <a class="button-blog-post-article" title="Exploding Topics"
-              href="https://explodingtopics.com/" target="_blank">Nguồn</a></p>
+          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Lazy Load Video Iframe"
+              href="https://codepen.io/vincentorback/pen/KaqbLK" target="_blank">Nguồn</a></p>
+
+
+
 
           <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h4 class="text-primary ml-4 title-article-size">4) Sử dụng Google Trends</h4>
+            <h3 class="text-primary ml-4 title-article-size"> Tạo Lazy Load Cho Masonry layout</h3>
           </div>
-          <p>
-            <strong>Google Trends</strong> cũng là công cụ giúp bạn có thể biết được các xu hướng tìm kiếm dựa trên dữ
-            liệu
-            của Google.
-            Để hiểu rõ hơn bạn xem ví dụ dưới đây khi mình chọn từ khóa <strong>lập trình</strong> trong công cụ này
-            nhé:
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="Kseso"
+            data-slug-hash="prjavK" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Masonry layout Pure #CSS Grid + lazy-load v.2 by @kseso">
+            <span>See the Pen <a href="https://codepen.io/Kseso/pen/prjavK">
+                Masonry layout Pure #CSS Grid + lazy-load v.2 by @kseso</a> by Kseso (<a
+                href="https://codepen.io/Kseso">@Kseso</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Nghien_cuu_tu_khoa/Google-Trends.png"
-            alt="Nghiên cứu từ khóa với Google Trends">
-          <p class=" pt-2 pb-4"> <a class="button-blog-post-article" title="Google Trends"
-              href="https://trends.google.com/trends/?geo=VN" target="_blank">Nguồn</a></p>
+
+          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Tạo Lazy Load Cho Masonry layout"
+              href="https://codepen.io/Kseso/pen/prjavK" target="_blank">Nguồn</a></p>
+
 
           <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h4 class="text-primary ml-4 title-article-size">5) Sử dụng Reddit Keyword Research</h4>
+            <h3 class="text-primary ml-4 title-article-size"> Tạo Lazy Load Bằng Jquery</h3>
           </div>
-          <p>
-            <strong>Reddit Keyword Research</strong> là công cụ miễn phí giúp bạn có thể
-            biết được các từ khóa được tìm kiếm phổ biến trong lĩnh vực của mình trên trang Reddit.
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="NaSymbol"
+            data-slug-hash="gPNRPW" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="jquery lazy loading images">
+            <span>See the Pen <a href="https://codepen.io/NaSymbol/pen/gPNRPW">
+                jquery lazy loading images</a> by andy (<a href="https://codepen.io/NaSymbol">@NaSymbol</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Nghien_cuu_tu_khoa/Reddit%20Keyword%20Research.png"
-            alt="Nghiên cứu từ khóa với Reddit Keyword Research">
-          <p class=" pt-2 pb-4"> <a class="button-blog-post-article" title="Reddit Keyword Research"
-              href="https://www.highervisibility.com/free-seo-tools/keyworddit/" target="_blank">Nguồn</a></p>
-          <p>
-            Bạn có thể tham khảo thêm các công cụ nghiên cứu từ khóa khác ở : <a
-              href="https://www.niemvuilaptrinh.com/article/cong-cu-seo">Công Cụ SEO Website Miễn Phí</a>.
+
+          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Tạo Lazy Load Bằng Jquery"
+              href="https://codepen.io/NaSymbol/pen/gPNRPW" target="_blank">Nguồn</a></p>
+
+
+
+          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size"> Hiệu Ứng chuyển Động Cho Lazy Load</h3>
+          </div>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="0xfa1l"
+            data-slug-hash="zyOGGy" data-preview="true"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Animated image placeholder">
+            <span>See the Pen <a href="https://codepen.io/0xfa1l/pen/zyOGGy">
+                Animated image placeholder</a> by Abhisek Dutta (<a href="https://codepen.io/0xfa1l">@0xfa1l</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
+          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title=" Hiệu Ứng chuyển Động Cho Lazy Load"
+              href="https://codepen.io/0xfa1l/pen/zyOGGy" target="_blank">Nguồn</a></p>
+
+
           <div class="col-sm-12 bg-primary p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h2 class=" ml-4 card-title-article">Phân Tích Từ Khóa</h2>
+            <h2 class=" ml-4 card-title-article">Các Thư Viện Lazy Loading</h2>
           </div>
-          <p>
-            Sau khi đã có các danh sách từ khóa quan trọng thì bước tiếp theo chúng ta sẽ cần phân tích các từ khóa này
-            để có thể lựa chọn
-            keyword tốt nhất dành cho website nhé!
-          </p>
+          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Thư Viện LOZAD.JS</h3>
+          </div>
+
+          <img class="img-fluid lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/thu-vien-lazy-load/Th%C6%B0%20Vi%E1%BB%87n%20LOZADJS.png"
+            alt="Thư Viện LOZAD.JS">
+          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Thư Viện LOZAD.JS"
+              href="https://github.com/ApoorvSaxena/lozad.js" target="_blank">Nguồn</a></p>
 
           <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">1) Mức cạnh tranh của từ khóa</h3>
+            <h3 class="text-primary ml-4 title-article-size">Thư Viện Lazysizes</h3>
           </div>
-          <p>
-            <strong>Mức cạnh tranh của từ khóa</strong> là chỉ số quan trọng trong việc lựa chọn từ khóa. Nếu như độ
-            cạnh tranh
-            cao thì bài viết của bạn sẽ khó lên được top vì đây là chủ đề được rất nhiều người lựa chọn để viết.
-            Thông thường độ khó của từ khóa sẽ được xác định bởi nhiều yếu tố như là:
-            <ul>
-             
-              <li>Số lượng và chất lượng của backlink.</li>
-              <li>Chất lượng nội dung của trang web.</li>
-              <li>Mức độ tin cậy của trang web.</li>
-              <li>Mục đích tìm kiếm.</li>
-         
-            </ul>
-          </p>
-          <p>
-            Tùy vào các công cụ thì mức độ từ khóa sẽ được xếp theo hạng từ 0 đến 100 với từng khoảng khác nhau.
-            Nhưng theo mình thấy thì chỉ số cơ bản sẽ được chia như hình ảnh dưới đây nhé:
 
-          </p>
-          <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Nghien_cuu_tu_khoa/bieu_do_canh_tranh_tu_khoa.png"
-            alt="Biểu đồ mức độ cạnh tranh của từ khóa">
+          <img class="img-fluid lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/thu-vien-lazy-load/Th%C6%B0%20Vi%E1%BB%87n%20Lazysizes.png"
+            alt="Thư Viện Lazysizes">
+          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Thư Viện Lazysizes"
+              href="https://github.com/aFarkas/lazysizes" target="_blank">Nguồn</a></p>
 
 
-            <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-              <h4 class="text-primary ml-4 title-article-size">Các Công Cụ Kiểm Tra Độ Khó Từ Khóa</h4>
-            </div>
-            <p>
-              Trong phần này mình sẽ giới thiệu đến bạn một số công cụ hữu ích để kiểm tra mức độ cạnh tranh của từ khóa cho website nhé!
-              (Có rất nhiều công cụ trả phí rất tốt để kiểm tra  nhưng mình xin chỉ liệt kê các tool kiểm tra miễn phí thôi nha)
-            </p>
-            <h5 class="text-primary">
-              1) Keyword Difficulty Checker(Ahref)
-            </h5>
-            <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Nghien_cuu_tu_khoa/Keyword%20Difficulty%20Checker%28Ahref%29.png"
-            alt="Keyword Difficulty Checker(Ahref)">
-            <p class=" pt-2 pb-4"> <a class="button-blog-post-article" title="Keyword Difficulty Checker(Ahref)"
-              href="https://ahrefs.com/keyword-difficulty" target="_blank">Nguồn</a></p>
-          <p>
-
-            <h5 class="text-primary">
-              2) Semrush
-            </h5>
-            <img class="img-fluid  lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Nghien_cuu_tu_khoa/Semrush.png"
-            alt="Semrush">
-            <p class=" pt-2 pb-4"> <a class="button-blog-post-article" title="Semrush"
-              href="https://www.semrush.com/" target="_blank">Nguồn</a></p>
-       
               <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">2) Mức độ phổ biến của từ khóa</h3>
+                <h3 class="text-primary ml-4 title-article-size">Thư Viện Layzr.js</h3>
               </div>
-              <p>
-                Múc độ phổ biến của từ khóa thường được viết tắt dưới dạng <strong>search volume</strong>(giá trị tìm kiếm).
-                Nó là chỉ sổ để biểu thị mức độ tìm kiếm của người dùng đối với từ khóa nào đó trong khoảng thời gian nhất định(thường được phân tích trong thời gian  12 tháng).
-                Để hiểu rõ hơn bạn xem hình bên dưới nhé:
-              </p>
-              <img class="img-fluid  lazyload"
-              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Nghien_cuu_tu_khoa/search-volume.png"
-              alt="Mức độ phổ biến của từ khóa">
-              <p class="mt-4">
-                Tuy nhiên có ba điều bạn cần lưu ý về thuộc tính này là:
-                <ul>
-                  <li>Ví dụ: bạn thấy search volume của từ khóa <strong>học lập trình</strong> là 1 ngàn đến 10 ngàn lượt tìm kiếm trong một tháng.
-                    Thì đây không phải là <strong>số lượng người dùng tìm kiếm</strong> trên Google mà nó là <strong>số lần tìm kiếm</strong> với từ khóa đó.
-                    Bởi vì một người có thể tìm kiếm nhiều lần với từ khóa này.
-                  </li>
-                  <li>
-                    Mức độ phổ biến của từ khóa sẽ không nói lên traffic mà bạn sẽ nhận được về cho trang web. Thông thường nếu bạn đứng top 1 trên google của từ khóa nào đó 
-                    thì lượng người dùng truy cập website  mà bạn nhận được chỉ chiếm từ <strong>20 đến 30% của giá trị tìm kiếm</strong>.<br/>
-                    Ví dụ bạn đứng đầu về từ khóa học lập trình với search volume là 10.000 thì lượng traffic bạn nhận được sẽ rơi vào khoảng 2000 đến 3000 một tháng.
-                  </li>
-                  <li>
-                    Search Volume thì thường là <strong>giá trị tìm kiếm trung bình</strong> của 30 ngày hoặc 12 tháng. Do đó  khi phân tích từ khóa thì bạn nên xem xét kỹ vấn đề 
-                    thời gian.<br/>
-                    Ví dụ từ khóa "áo lạnh" sẽ có lượt tìm kiếm rất cao vào mùa đông nhưng lại rất thấp vào các mùa còn lại.
-                  </li>
-                </ul>
-              </p>
-              <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">3) Tỉ lệ Click vào từ khóa </h3>
-              </div>
-              <p>
-                Dù từ khóa có nhiều giá trị tìm kiếm nhưng một vấn đề bạn cần phải xem xét đó là việc người dùng có click nhiều vào các kết quả nằm ở top đầu hay không?
-                Để  dễ hiểu thì bạn xem ví dụ sau đây nhé:<br/>
-                Mình sẽ thử tìm kiếm trong Google với từ khóa là "máy tính" để xem kết quả sao nha: 
-              </p>
-              <img class="img-fluid  lazyload"
-              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Nghien_cuu_tu_khoa/ti_le_click_tu_khoa.png"
-              alt="Yếu tố ảnh hưởng tới lượt click">
-              <p class="mt-4">
-                Ngoài ra các <strong>feature snippets</strong> cũng sẽ ảnh hưởng đến lượt nhấp vào các trang top đầu trong tìm kiếm (Vì người dùng 
-                không cần phải nhấn vào trực tiếp đường dẫn để có thể thấy câu trả lời). Để hiểu rõ hơn bạn xem hình ảnh sau nhé:
-              </p>
-              <img class="img-fluid  lazyload"
-              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Nghien_cuu_tu_khoa/ti_le_click_tu_khoa_2%20%281%29.png"
-              alt="Yếu tố ảnh hưởng tới lượt click 2">
-              <p class="mt-4">
-                Còn một yếu tố quan trọng nữa ảnh hưởng đến lượt click đó chính là quảng cáo. Khi nghiên cứu từ khóa thì bạn nên chọn những từ khóa 
-                có ít cạnh tranh với các bài được trả tiền để quảng cáo. Và để giúp bạn dễ hình dung hơn thì mình sẽ đưa ra một ví dụ chi tiết bên dưới nhé:
-              </p>
-              <img class="img-fluid  lazyload"
-              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/Nghien_cuu_tu_khoa/ti_le_click_tu_khoa_3.png"
-              alt="Yếu tố ảnh hưởng tới lượt click 3">
-              <div class="col-sm-12 bg-primary p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-                <h2 class=" ml-4 card-title-article">Sử Dụng Từ Khóa</h2>
-              </div>
-              <p>
-                Sau khi đã phân tích và chọn ra các từ khóa tốt nhất cho nội dung website của mình. Thì việc tiếp theo chúng ta 
-                cần phải làm là sử dụng các từ khóa này một cách hợp lý và tối ưu nhất cho công cụ tìm kiếm.
-              </p>
-              <p>
-                <strong>Đầu tiên</strong>, bạn cần xác định các chủ đề chính cho website của mình (thường có mức độ cạnh tranh cao)
-                sau đó viết bài liên quan đến các từ khóa chính trong trang web để tăng sự liên kết và mức độ liên quan giữa các
-                chủ đề trong website. 
-              </p>
-              <p>
-                <strong>Thứ hai</strong>, bạn cần xác định loại nội dung  phù hợp cho từ khóa như bài viết trên blog, sản phẩm, chủ đề,
-                landing page hoặc video.
-              </p>
-              <p>
-                <strong>Thứ ba</strong>, Dựa vào từ khóa để có thể chọn nội dung viết bài cho phù hợp ví dụ như là hướng dẫn chi tiết, 
-                bài viết phân tích, danh sách sản phẩm, trình bày quan điểm cá nhân, review sản phẩm...
-              </p>
-              <p>
-                <strong>Thứ tư</strong>, Xem các đối thủ cạnh tranh đang sử dụng các dạng từ khóa chính nào để chúng ta có thể phân tích và học hỏi.
-              </p>
-             <p>
-               Do bài viết hơi dài nên nếu có thời gian mình sẽ phân tích sâu hơn nữa vào các yếu tố này nhé!
-             </p>
-             <p>
-               Nguồn tham khảo:<br/>
-               <a href="https://backlinko.com/keyword-research" target="_blank" rel="noopener noreferrer">Backlinko Blog</a><br/>
-               <a href="https://ahrefs.com/blog/keyword-research/" target="_blank" rel="noopener noreferrer">Ahref Blog</a><br/>
-               <a href="https://blog.alexa.com/how-to-do-keyword-research/" target="_blank" rel="noopener noreferrer">Alexa Blog</a><br/>
-             </p>
+    
+              <img class="img-fluid lazyload"
+                data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/thu-vien-lazy-load/Th%C6%B0%20Vi%E1%BB%87n%20Layzrjs.png"
+                alt="Thư Viện Layzr.js">
+              <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Thư Viện Layzr.js"
+                  href="http://callmecavs.com/layzr.js/" target="_blank">Nguồn</a></p>
+
+
+
+
+                  <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
+                    <h3 class="text-primary ml-4 title-article-size">Thư Viện Lazy Load Remastered</h3>
+                  </div>
+        
+                  <img class="img-fluid lazyload"
+                    data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/thu-vien-lazy-load/Th%C6%B0%20Vi%E1%BB%87n%20Lazy%20Load%20Remastered.png"
+                    alt="Thư Viện Lazy Load Remastered">
+                  <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Thư Viện Lazy Load Remastered"
+                      href="https://appelsiini.net/projects/lazyload/" target="_blank">Nguồn</a></p>
+
+
+
+                      <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
+                        <h3 class="text-primary ml-4 title-article-size">Thư Viện Responsively Lazy</h3>
+                      </div>
+            
+                      <img class="img-fluid lazyload"
+                        data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/thu-vien-lazy-load/Responsively%20Lazy.png"
+                        alt="Thư Viện Responsively Lazy">
+                      <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Thư Viện Responsively Lazy"
+                          href="https://ivopetkov.com/b/lazy-load-responsive-images/" target="_blank">Nguồn</a></p>
+
+                          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
+                            <h3 class="text-primary ml-4 title-article-size">Thư Viện Blazy</h3>
+                          </div>
+                
+                          <img class="img-fluid lazyload"
+                            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/thu-vien-lazy-load/Th%C6%B0%20Vi%E1%BB%87n%20Blazy.png"
+                            alt="Thư Viện Blazy">
+                          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Thư Viện Blazy"
+                              href="https://dinbror.dk/blazy/" target="_blank">Nguồn</a></p>
+
+
+
+
+
+
 
           <h4 class="mt-4 pt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
-          <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những kiến thức để nghiên cứu từ khóa hữu
-            ích dành cho việc phát triển, thiết kế web và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có
-            thể. Rất mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một
-            ngày vui vẻ!</p>
+          <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những kiến thức tạo lazy loading hữu ích dành
+            cho việc phát triển, thiết kế web và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất
+            mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui
+            vẻ!</p>
       </div>
       </article>
-
 
 
 
