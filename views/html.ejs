@@ -30,433 +30,410 @@
   <div class="row">
     <div class="col-lg-12 col-md-12 col-xs-12">
 
-
       <div class="card-text text-justify">
         <article>
-          <div class="text-content-article mt-5">
-            <p><b><i>Ngày hôm nay chúng ta sẽ đi vào tìm hiểu cách sử dụng position trong CSS để căn chỉnh các phần tử
-                  trong website
-                  được dễ dàng và tiện lợi hơn nhé!
-                </i></b></p>
-          </div>
-          <hr />
-          <div class="col-sm-12 bg-primary p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h2 class=" ml-4 card-title-article">Lazy Loading Là Gì?</h2>
-          </div>
-          <p>
-            Thông thường khi chúng ta truy cập vào một trang web
-            thì nó sẽ <strong>tải tất cả</strong> các thành phần trên trang web rồi sau đó mới hiển thị nội dung ra
-            ngoài trình duyệt.
-            Việc load trang như vậy sẽ làm ảnh hưởng rất nhiều tới tốc độ tải trang cho website.<br />
-            <img class="img-fluid lazyload"
-              data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/thu-vien-lazy-load/trang-web-tai-binh-thuong.png"
-              alt="Trang Web Được Tải Bình Thường">
-            Do đó <strong>Lazy Loading</strong> ra đời để giúp bạn có thể cải thiện và tối ưu hiệu suất cho các thành
-            phần
-            ảnh hưởng đến quá trình tải trang như là video, hình ảnh... bằng cách chỉ <strong>tải trước các nội dung
-              được yêu cầu</strong> và
-            <strong>sau đó sẽ tải các thành phần khác khi người dùng thật sự cần tới.</strong> Và để hiểu rõ hơn bạn xem
-            hình ảnh sau nhé!
-          </p>
-          <img class="img-fluid lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/thu-vien-lazy-load/trang-web-su-dung-lazy-load.png"
-            alt="Trang Web Được Sử dụng lazy loading">
 
-          <div class="col-sm-12 bg-primary p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h2 class=" ml-4 card-title-article">Lợi Ích Của Việc Sử Dụng Lazy Loading?</h2>
+          <div class="text-content-article mt-5">
+            <p><i>Ngày hôm nay chúng ta sẽ đi vào tìm hiểu những ví dụ header đẹp được xây dựng bằng HTML, CSS,
+                Javascript
+                cho quá trình thiết kế và phát triển web nhé! </i></p>
           </div>
+          <div class="col-sm-12 bg-primary p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
+            <h2 class=" ml-4 card-title-article">Header Là Gì?</h2>
+          </div>
+          <p> <strong>Header Website</strong>(Tiêu đề Trang Web) là thành phần nằm trên cùng của một trang web.
+            Đây là nơi mà người dùng nhìn thấy đầu tiên khi truy cập website. Do đó bạn nên cần thiết kế header một cách
+            cẩn thận và rõ ràng để có thể tạo ấn tượng tốt
+            cũng như dễ dàng truyền đạt thông điệp mà bạn muốn tới người dùng.
+          </p>
           <p>
-            Có hai lợi ích chính khi chúng ta ssử dụng lazy loading là:
+            Trong Header thì thường sẽ có các thành phần sau đây:
             <ul>
-              <li><strong>Cải thiện hiệu suất</strong>: Bạn sẽ giảm được số lượng thành phần cần phải tải trong trang
-                web. Từ đó thời gian mà trình duyệt
-                xử lý và phân tích sẽ được cải thiện hơn. Do đó nội dung website đến với người dùng sẽ nhanh hơn.
-              </li>
-              <li>
-                <strong>Giảm Chi phí</strong>: Có một số hosting lưu trữ hình ảnh thì sẽ tính chi phí dựa trên số byte
-                mà bạn sử dụng.
-                Do đó kỹ thuật này sẽ giúp bạn tránh được tình trạng tải các thành phần trên website mà người dùng không
-                bao giờ dùng tới.
-              </li>
+              <li>Logo của trang web.</li>
+              <li>Thanh điều hướng tới các đường dẫn quan trọng.</li>
+              <li>Công cụ tìm kiếm thông tin trên website.</li>
+              <li>Nội dung giới thiệu sơ lược về website.</li>
+              <li>Các nút kêu gọi hànhđộng như đăng ký email...</li>
+              <li>Các hình ảnh về sản phẩm phổ biến của trang web.</li>
             </ul>
           </p>
           <p>
-            Và để giúp bạn dễ hình dung thì mình sẽ lấy một ví dụ trong thức tế nhé!
+            Để dễ hình dung hơn bạn xem ví dụ header sau đây nhé:
           </p>
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item"
-              src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/thu-vien-lazy-load/video-minh-hoa-lazy-load.mp4"
-              allowfullscreen></iframe>
-          </div>
-
+          <img class="img-fluid shadow rounded lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/header-website/vi-du-header-website.png"
+            alt="Ví Dụ Header Trong Website"
+          >
 
           <div class="col-sm-12 bg-primary p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h2 class=" ml-4 card-title-article">Các Dự Án Lazy Loading Cho Website</h2>
+            <h2 class=" ml-4 card-title-article">Các Ví Dụ Về Header Website</h2>
           </div>
-          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Lazy Loading cho Hình Ảnh</h3>
-          </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="derekmorash"
-            data-slug-hash="NjBvdX" data-preview="true"
-            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-            data-pen-title="Lazy Load Images">
-            <span>See the Pen <a href="https://codepen.io/derekmorash/pen/NjBvdX">
-                Lazy Load Images</a> by Derek Morash (<a href="https://codepen.io/derekmorash">@derekmorash</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
+          <p class="mt-4">Trước khi đi vào ví dụ về các header trong website thì mình có một số chú ý sau là để xem rõ kết quả hơn bạn chuyển sang
+            chế độ screen <b>0.5x, 0.25x</b> hay nếu nó không hiển thị thì bạn nhớ <b>xác minh mình là con người</b>
+            trong Codepen mới xem được nhé. Nếu file là SCSS thì bạn có thể chuyển sang CSS ở đây nhé : <a
+              href="https://jsonformatter.org/scss-to-css" rel="external nofollow noopener noreferrer"
+              target="_blank">SCSS to CSS</a>. Nếu file là Pug thì bạn có thể chuyển sang HTML ở đây nhé : <a
+              href="https://pughtml.com/" rel="external nofollow noopener noreferrer" target="_blank">Pug to HTML</a>.
+            Nếu chúng ta muốn xem các nguồn được sử dụng trong Codepen để bạn thiết lập ở dưới máy tính thì nhấp vào chữ
+            <b>Resources</b> ở dưới cùng bên trái của Codepen để xem các đường dẫn CDN nha.</p>
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Thiết Kế Sticky Header Bằng CSS Javascript</h3>
+          </div> <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/header-website/Sticky%20Header.png"
+            alt="Thiết Kế Sticky Header Bằng CSS Javascript">
+          <p class="mt-4"> Và bên dưới là dự án trên Codepen nhé!</p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="soulrider911" data-slug-hash="dGuEn" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Sticky Header CSS Transition">
+            <span>See the Pen <a href="https://codepen.io/soulrider911/pen/dGuEn">
+            Sticky Header CSS Transition</a> by Brady Sammons (<a href="https://codepen.io/soulrider911">@soulrider911</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
-          <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Lazy Loading cho Hình Ảnh"
-              href="https://codepen.io/derekmorash/pen/NjBvdX" target="_blank">Nguồn</a></p>
-
-          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Lazy Loading Cho Hình Ảnh Theo Kiểu Medium</h3>
-          </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="logico-ar"
-            data-slug-hash="povXPPa" data-preview="true"
-            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-            data-pen-title="Medium image lazy load effect">
-            <span>See the Pen <a href="https://codepen.io/logico-ar/pen/povXPPa">
-                Medium image lazy load effect</a> by Lógico (<a href="https://codepen.io/logico-ar">@logico-ar</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
+          <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://codepen.io/soulrider911/pen/dGuEn"
+              target="_blank" title="Thiết Kế Sticky Header Bằng CSS Javascript">Nguồn</a>
           </p>
-          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article"
-              title="Hiệu Ứng Lazy Loading Cho Hình Ảnh Theo Kiểu Medium"
-              href="https://codepen.io/logico-ar/pen/povXPPa" target="_blank">Nguồn</a></p>
-
-
-          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Ví Dụ Về Lazy Load</h3>
-          </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="yednap"
-            data-slug-hash="NxBLMK" data-preview="true"
-            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-            data-pen-title="Lazy Load Example">
-            <span>See the Pen <a href="https://codepen.io/yednap/pen/NxBLMK">
-                Lazy Load Example</a> by Sanjeev Pandey (<a href="https://codepen.io/yednap">@yednap</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-          </p>
-
-          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Ví Dụ Về Lazy Load"
-              href="https://codepen.io/yednap/pen/NxBLMK" target="_blank">Nguồn</a></p>
-
-
-          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Tạo Lazy Load Với SVG</h3>
-          </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="ainalem"
-            data-slug-hash="aLKxjm" data-preview="true"
-            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-            data-pen-title="Lazy loading with inline SVG">
-            <span>See the Pen <a href="https://codepen.io/ainalem/pen/aLKxjm">
-                Lazy loading with inline SVG</a> by Mikael Ainalem (<a href="https://codepen.io/ainalem">@ainalem</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-          </p>
-
-
-          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Tạo Lazy Load Với SVG"
-              href="https://codepen.io/ainalem/pen/aLKxjm" target="_blank">Nguồn</a></p>
-
-
-          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Tạo Lazy Load Với Hiệu Ứng Scrollout</h3>
-          </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="notoriousb1t"
-            data-slug-hash="ERrPwG" data-preview="true"
-            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-            data-pen-title="Lazy-Load images with ScrollOut">
-            <span>See the Pen <a href="https://codepen.io/notoriousb1t/pen/ERrPwG">
-                Lazy-Load images with ScrollOut</a> by Christopher Wallis (<a
-                href="https://codepen.io/notoriousb1t">@notoriousb1t</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-          </p>
-          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Tạo Lazy Load Với Hiệu Ứng Scrollout"
-              href="https://codepen.io/notoriousb1t/pen/ERrPwG" target="_blank">Nguồn</a></p>
-
-          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Tạo Lazy Load Với Javascript Thuần</h3>
-          </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="imagekit_io"
-            data-slug-hash="MBNwKB" data-preview="true"
-            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-            data-pen-title="Lazy loading images using event handlers - example code">
-            <span>See the Pen <a href="https://codepen.io/imagekit_io/pen/MBNwKB">
-                Lazy loading images using event handlers - example code</a> by ImageKit.io (<a
-                href="https://codepen.io/imagekit_io">@imagekit_io</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-          </p>
-          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Tạo Lazy Load Với Javascript Thuần"
-              href="https://codepen.io/imagekit_io/pen/MBNwKB" target="_blank">Nguồn</a></p>
-
-          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Tạo Lazy Loading Hình Ảnh Với Chú Thích</h3>
-          </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="alex_paul"
-            data-slug-hash="eKyZYw" data-preview="true"
-            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-            data-pen-title="Lazy Loading Fig+Figcaption &amp;amp; Flipping Card">
-            <span>See the Pen <a href="https://codepen.io/alex_paul/pen/eKyZYw">
-                Lazy Loading Fig+Figcaption &amp; Flipping Card</a> by Alex Paul (<a
-                href="https://codepen.io/alex_paul">@alex_paul</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-          </p>
-
-          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Tạo Lazy Loading Hình Ảnh Với Chú Thích"
-              href="https://codepen.io/alex_paul/pen/eKyZYw" target="_blank">Nguồn</a></p>
-
-          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size"> Lazy Load Với Thư Viện Slick</h3>
-          </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="jasondavis"
-            data-slug-hash="clfik" data-preview="true"
-            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-            data-pen-title="Slick Slide">
-            <span>See the Pen <a href="https://codepen.io/jasondavis/pen/clfik">
-                Slick Slide</a> by Jason Davis (<a href="https://codepen.io/jasondavis">@jasondavis</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-          </p>
-
-          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Lazy Load Với Thư Viện Slick"
-              href="https://codepen.io/jasondavis/pen/clfik" target="_blank">Nguồn</a></p>
-
-          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size"> Lazy Load Cho Danh Sách</h3>
-          </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="kvzivn"
-            data-slug-hash="MYKMVG" data-preview="true"
-            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-            data-pen-title="Lazy loading list items">
-            <span>See the Pen <a href="https://codepen.io/kvzivn/pen/MYKMVG">
-                Lazy loading list items</a> by Kevin Ivan (<a href="https://codepen.io/kvzivn">@kvzivn</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-          </p>
-
-          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Lazy Load Cho Danh Sách"
-              href="https://codepen.io/kvzivn/pen/MYKMVG" target="_blank">Nguồn</a></p>
-
-
-          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size"> Lazy Load Cho Hình Ảnh Background Trong CSS</h3>
-          </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="imagekit_io"
-            data-slug-hash="RBXVrW" data-preview="true"
-            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-            data-pen-title="Lazy Loading background images in CSS">
-            <span>See the Pen <a href="https://codepen.io/imagekit_io/pen/RBXVrW">
-                Lazy Loading background images in CSS</a> by ImageKit.io (<a
-                href="https://codepen.io/imagekit_io">@imagekit_io</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-          </p>
-
-
-          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article"
-              title="Lazy Load Cho Hình Ảnh Background Trong CSS" href="https://codepen.io/imagekit_io/pen/RBXVrW"
-              target="_blank">Nguồn</a></p>
-
-
-          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size"> Lazy Load Cho Gallery</h3>
-          </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="magnificode"
-            data-slug-hash="oEbGWE" data-preview="true"
-            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-            data-pen-title="Grid Fade and Intersection Observer Lazyload">
-            <span>See the Pen <a href="https://codepen.io/magnificode/pen/oEbGWE">
-                Grid Fade and Intersection Observer Lazyload</a> by magnificode (<a
-                href="https://codepen.io/magnificode">@magnificode</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-          </p>
-
-          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title=" Lazy Load Cho Gallery"
-              href="https://codepen.io/magnificode/pen/oEbGWE" target="_blank">Nguồn</a></p>
-
-
-
-          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size"> Lazy Load Hình Ảnh Bằng Vuejs</h3>
-          </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="erikterwan"
-            data-slug-hash="bGNeRMr" data-preview="true"
-            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-            data-pen-title="ScrollTrigger Vue.js - lazy load images">
-            <span>See the Pen <a href="https://codepen.io/erikterwan/pen/bGNeRMr">
-                ScrollTrigger Vue.js - lazy load images</a> by Erik Terwan (<a
-                href="https://codepen.io/erikterwan">@erikterwan</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-          </p>
-
-
-          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Lazy Load Hình Ảnh Bằng Vuejs"
-              href="https://codepen.io/erikterwan/pen/bGNeRMr" target="_blank">Nguồn</a></p>
-
-
-          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size"> Lazy Load Hình Ảnh Bằng Angularjs</h3>
-          </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="yaoyi"
-            data-slug-hash="qfpdC" data-preview="true"
-            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-            data-pen-title="Lazy Loading Image With AngularJS from Ben Nadel">
-            <span>See the Pen <a href="https://codepen.io/yaoyi/pen/qfpdC">
-                Lazy Loading Image With AngularJS from Ben Nadel</a> by yaoyi (<a
-                href="https://codepen.io/yaoyi">@yaoyi</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-          </p>
-          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title=" Lazy Load Hình Ảnh Bằng Angularjs"
-              href="https://codepen.io/yaoyi/pen/qfpdC" target="_blank">Nguồn</a></p>
-
-          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size"> Lazy Load Hình Ảnh Bằng Reactjs</h3>
-          </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="stothelios"
-            data-slug-hash="gzoZLZ" data-preview="true"
-            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-            data-pen-title="React Preload Image">
-            <span>See the Pen <a href="https://codepen.io/stothelios/pen/gzoZLZ">
-                React Preload Image</a> by Stelios Constantinides (<a
-                href="https://codepen.io/stothelios">@stothelios</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-          </p>
-          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Lazy Load Hình Ảnh Bằng Reactjs"
-              href="https://codepen.io/stothelios/pen/gzoZLZ" target="_blank">Nguồn</a></p>
-
-
-
-
-          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size"> Lazy Load Video Iframe</h3>
-          </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="vincentorback"
-            data-slug-hash="KaqbLK" data-preview="true"
-            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-            data-pen-title="Lazy loading video iframe with placeholder">
-            <span>See the Pen <a href="https://codepen.io/vincentorback/pen/KaqbLK">
-                Lazy loading video iframe with placeholder</a> by Vincent Orback (<a
-                href="https://codepen.io/vincentorback">@vincentorback</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-          </p>
-          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Lazy Load Video Iframe"
-              href="https://codepen.io/vincentorback/pen/KaqbLK" target="_blank">Nguồn</a></p>
-
-
-
-
-          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size"> Tạo Lazy Load Cho Masonry layout</h3>
-          </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="Kseso"
-            data-slug-hash="prjavK" data-preview="true"
-            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-            data-pen-title="Masonry layout Pure #CSS Grid + lazy-load v.2 by @kseso">
-            <span>See the Pen <a href="https://codepen.io/Kseso/pen/prjavK">
-                Masonry layout Pure #CSS Grid + lazy-load v.2 by @kseso</a> by Kseso (<a
-                href="https://codepen.io/Kseso">@Kseso</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-          </p>
-
-          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Tạo Lazy Load Cho Masonry layout"
-              href="https://codepen.io/Kseso/pen/prjavK" target="_blank">Nguồn</a></p>
-
-
-          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size"> Tạo Lazy Load Bằng Jquery</h3>
-          </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="NaSymbol"
-            data-slug-hash="gPNRPW" data-preview="true"
-            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-            data-pen-title="jquery lazy loading images">
-            <span>See the Pen <a href="https://codepen.io/NaSymbol/pen/gPNRPW">
-                jquery lazy loading images</a> by andy (<a href="https://codepen.io/NaSymbol">@NaSymbol</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-          </p>
-
-          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Tạo Lazy Load Bằng Jquery"
-              href="https://codepen.io/NaSymbol/pen/gPNRPW" target="_blank">Nguồn</a></p>
-
-
-
-          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size"> Hiệu Ứng chuyển Động Cho Lazy Load</h3>
-          </div>
-          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="0xfa1l"
-            data-slug-hash="zyOGGy" data-preview="true"
-            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-            data-pen-title="Animated image placeholder">
-            <span>See the Pen <a href="https://codepen.io/0xfa1l/pen/zyOGGy">
-                Animated image placeholder</a> by Abhisek Dutta (<a href="https://codepen.io/0xfa1l">@0xfa1l</a>)
-              on <a href="https://codepen.io">CodePen</a>.</span>
-          </p>
-          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title=" Hiệu Ứng chuyển Động Cho Lazy Load"
-              href="https://codepen.io/0xfa1l/pen/zyOGGy" target="_blank">Nguồn</a></p>
-
-
-          <div class="col-sm-12 bg-primary p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h2 class=" ml-4 card-title-article">Các Thư Viện Lazy Loading</h2>
-          </div>
-          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Thư Viện LOZAD.JS</h3>
-          </div>
-
-          <img class="img-fluid lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/thu-vien-lazy-load/Th%C6%B0%20Vi%E1%BB%87n%20LOZADJS.png"
-            alt="Thư Viện LOZAD.JS">
-          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Thư Viện LOZAD.JS"
-              href="https://github.com/ApoorvSaxena/lozad.js" target="_blank">Nguồn</a></p>
-
-          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-            <h3 class="text-primary ml-4 title-article-size">Thư Viện Lazysizes</h3>
-          </div>
-
-          <img class="img-fluid lazyload"
-            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/thu-vien-lazy-load/Th%C6%B0%20Vi%E1%BB%87n%20Lazysizes.png"
-            alt="Thư Viện Lazysizes">
-          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Thư Viện Lazysizes"
-              href="https://github.com/aFarkas/lazysizes" target="_blank">Nguồn</a></p>
-
-
-              <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-                <h3 class="text-primary ml-4 title-article-size">Thư Viện Layzr.js</h3>
-              </div>
-    
-              <img class="img-fluid lazyload"
-                data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/thu-vien-lazy-load/Th%C6%B0%20Vi%E1%BB%87n%20Layzrjs.png"
-                alt="Thư Viện Layzr.js">
-              <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Thư Viện Layzr.js"
-                  href="http://callmecavs.com/layzr.js/" target="_blank">Nguồn</a></p>
-
-
-
-
-                  <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-                    <h3 class="text-primary ml-4 title-article-size">Thư Viện Lazy Load Remastered</h3>
-                  </div>
         
-                  <img class="img-fluid lazyload"
-                    data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/thu-vien-lazy-load/Th%C6%B0%20Vi%E1%BB%87n%20Lazy%20Load%20Remastered.png"
-                    alt="Thư Viện Lazy Load Remastered">
-                  <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Thư Viện Lazy Load Remastered"
-                      href="https://appelsiini.net/projects/lazyload/" target="_blank">Nguồn</a></p>
+          
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Cách Tạo Header Image Cho Website</h3>
+          </div> <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/header-website/Header%20Image%20Cho%20Website.png"
+            alt="Cách Tạo Header Image Cho Website">
+          <p class="mt-4"> Và bên dưới là dự án trên Codepen nhé!</p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="webmadewell" data-slug-hash="zppMBX" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Header Image Parallax Scrolling Effect with CSS">
+            <span>See the Pen <a href="https://codepen.io/webmadewell/pen/zppMBX">
+            Header Image Parallax Scrolling Effect with CSS</a> by WebMadeWell (<a href="https://codepen.io/webmadewell">@webmadewell</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://codepen.io/webmadewell/pen/zppMBX"
+              target="_blank" title="Cách Tạo Header Image Cho Website">Nguồn</a>
+          </p>
+        
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Cách Tạo Hiệu Ứng Chuyển Động Cho Header CSS</h3>
+          </div> <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/header-website/animation-header-css.png"
+            alt="Cách Tạo Hiệu Ứng Chuyển Động Cho Header CSS">
+          <p class="mt-4"> Và bên dưới là dự án trên Codepen nhé!</p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="nodws" data-slug-hash="aWgMMQ" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS Animated Header">
+            <span>See the Pen <a href="https://codepen.io/nodws/pen/aWgMMQ">
+            CSS Animated Header</a> by Nodws (<a href="https://codepen.io/nodws">@nodws</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://codepen.io/nodws/pen/aWgMMQ"
+              target="_blank" title="Cách Tạo Hiệu Ứng Chuyển Động Cho Header CSS">Nguồn</a>
+          </p>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Cách Tạo Header HTML5</h3>
+          </div> <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/header-website/Header%20HTML5.png"
+            alt="Cách Tạo Header HTML5">
+          <p class="mt-4"> Và bên dưới là dự án trên Codepen nhé!</p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="nodws" data-slug-hash="ugFcC" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Parallax + Blur + Fixed menu">
+            <span>See the Pen <a href="https://codepen.io/nodws/pen/ugFcC">
+            Parallax + Blur + Fixed menu</a> by Nodws (<a href="https://codepen.io/nodws">@nodws</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://codepen.io/nodws/pen/ugFcC"
+              target="_blank" title="Cách Tạo Header HTML5">Nguồn</a>
+          </p>
 
 
 
-                      <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-                        <h3 class="text-primary ml-4 title-article-size">Thư Viện Responsively Lazy</h3>
-                      </div>
-            
-                      <img class="img-fluid lazyload"
-                        data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/thu-vien-lazy-load/Responsively%20Lazy.png"
-                        alt="Thư Viện Responsively Lazy">
-                      <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Thư Viện Responsively Lazy"
-                          href="https://ivopetkov.com/b/lazy-load-responsive-images/" target="_blank">Nguồn</a></p>
 
-                          <div class="col-sm-12 bg-light p-2 pt-3 mb-4 mt-4 shadow rounded-pill">
-                            <h3 class="text-primary ml-4 title-article-size">Thư Viện Blazy</h3>
-                          </div>
-                
-                          <img class="img-fluid lazyload"
-                            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/thu-vien-lazy-load/Th%C6%B0%20Vi%E1%BB%87n%20Blazy.png"
-                            alt="Thư Viện Blazy">
-                          <p class="pt-2 pb-4 mt-4"> <a class="button-blog-post-article" title="Thư Viện Blazy"
-                              href="https://dinbror.dk/blazy/" target="_blank">Nguồn</a></p>
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Cách Tạo Responsive Header CSS</h3>
+          </div> <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/header-website/Responsive%20Header%20CSS.png"
+            alt="Cách Tạo Responsive Header CSS">
+          <p class="mt-4"> Và bên dưới là dự án trên Codepen nhé!</p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="abergin" data-slug-hash="qEGyJa" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Header Layout">
+            <span>See the Pen <a href="https://codepen.io/abergin/pen/qEGyJa">
+            Header Layout</a> by Alex Bergin (<a href="https://codepen.io/abergin">@abergin</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://codepen.io/abergin/pen/qEGyJa"
+              target="_blank" title="Cách Tạo Responsive Header CSS">Nguồn</a>
+          </p>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Cách Thiết Kế Website Header</h3>
+          </div> <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/header-website/Website%20Header.png"
+            alt="Cách Thiết Kế Website Header">
+          <p class="mt-4"> Và bên dưới là dự án trên Codepen nhé!</p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="ionlyseespots" data-slug-hash="pvaPwq" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="answer for layout question from css tricks question">
+            <span>See the Pen <a href="https://codepen.io/ionlyseespots/pen/pvaPwq">
+            answer for layout question from css tricks question</a> by I only see spots (<a href="https://codepen.io/ionlyseespots">@ionlyseespots</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://codepen.io/ionlyseespots/pen/pvaPwq"
+              target="_blank" title="Cách Thiết Kế Website Header">Nguồn</a>
+          </p>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Hiệu Ứng Scroll Cho Header</h3>
+          </div> <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/header-website/Scroll%20Cho%20Header.png"
+            alt="Hiệu Ứng Scroll Cho Header">
+          <p class="mt-4"> Và bên dưới là dự án trên Codepen nhé!</p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="osublake" data-slug-hash="NdEONL" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Scroll Header">
+            <span>See the Pen <a href="https://codepen.io/osublake/pen/NdEONL">
+            Scroll Header</a> by Blake Bowen (<a href="https://codepen.io/osublake">@osublake</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://codepen.io/osublake/pen/NdEONL"
+              target="_blank" title="Hiệu Ứng Scroll Cho Header">Nguồn</a>
+          </p>
+
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Thiết Kế Header Website Bằng HTML CSS</h3>
+          </div> <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/header-website/Header%20Website%20B%E1%BA%B1ng%20HTML%20CSS.png"
+            alt="Thiết Kế Header Website Bằng HTML CSS">
+          <p class="mt-4"> Và bên dưới là dự án trên Codepen nhé!</p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="imreyesjorge" data-slug-hash="qgYLLz" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Software Company Header/About">
+            <span>See the Pen <a href="https://codepen.io/imreyesjorge/pen/qgYLLz">
+            Software Company Header/About</a> by Jorge Reyes (<a href="https://codepen.io/imreyesjorge">@imreyesjorge</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://codepen.io/imreyesjorge/pen/qgYLLz"
+              target="_blank" title="Thiết Kế Header Website Bằng HTML CSS">Nguồn</a>
+          </p>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Cách Tạo Slider Header Javascript</h3>
+          </div> <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/header-website/Slider%20Header%20Javascript.png"
+            alt="Cách Tạo Slider Header Javascript">
+          <p class="mt-4"> Và bên dưới là dự án trên Codepen nhé!</p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="johnmotyljr" data-slug-hash="cDpEH" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Attempt #1 CSS3 Clickable Slider">
+            <span>See the Pen <a href="https://codepen.io/johnmotyljr/pen/cDpEH">
+            Attempt #1 CSS3 Clickable Slider</a> by John Motyl Jr (<a href="https://codepen.io/johnmotyljr">@johnmotyljr</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://codepen.io/johnmotyljr/pen/cDpEH"
+              target="_blank" title="Cách Tạo Slider Header Javascript">Nguồn</a>
+          </p>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Cách Tạo Jquery Header Animation</h3>
+          </div> <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/header-website/Jquery%20Header%20Animation.png"
+            alt="Cách Tạo Jquery Header Animation">
+          <p class="mt-4"> Và bên dưới là dự án trên Codepen nhé!</p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="ashthornton" data-slug-hash="KRQbMO" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="WebGL Distortion Slider">
+            <span>See the Pen <a href="https://codepen.io/ashthornton/pen/KRQbMO">
+            WebGL Distortion Slider</a> by Ash Thornton (<a href="https://codepen.io/ashthornton">@ashthornton</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://codepen.io/ashthornton/pen/KRQbMO"
+              target="_blank" title="Cách Tạo Jquery Header Animation">Nguồn</a>
+          </p>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Thiết Kế Wave Header Bằng CSS</h3>
+          </div> <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/header-website/Wave%20Header%20CSS.png"
+            alt="Thiết Kế Wave Header Bằng CSS">
+          <p class="mt-4"> Và bên dưới là dự án trên Codepen nhé!</p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="goodkatz" data-slug-hash="LYPGxQz" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Simple CSS Waves | Mobile &amp;amp; Full width">
+            <span>See the Pen <a href="https://codepen.io/goodkatz/pen/LYPGxQz">
+            Simple CSS Waves | Mobile &amp; Full width</a> by Goodkatz (<a href="https://codepen.io/goodkatz">@goodkatz</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://codepen.io/goodkatz/pen/LYPGxQz"
+              target="_blank" title="Thiết Kế Wave Header Bằng CSS">Nguồn</a>
+          </p>
+
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Thiết Kế Header Với Hiệu Ứng Đánh Chữ</h3>
+          </div> <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/header-website/Thi%E1%BA%BFt%20K%E1%BA%BF%20Header%20V%E1%BB%9Bi%20Hi%E1%BB%87u%20%E1%BB%A8ng%20%C4%90%C3%A1nh%20Ch%E1%BB%AF.png"
+            alt="Thiết Kế Header Với Hiệu Ứng Đánh Chữ">
+          <p class="mt-4"> Và bên dưới là dự án trên Codepen nhé!</p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="SquishyAndroid" data-slug-hash="XjRPVV" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Personal Webpage">
+            <span>See the Pen <a href="https://codepen.io/SquishyAndroid/pen/XjRPVV">
+            Personal Webpage</a> by Bradley Engelhardt (<a href="https://codepen.io/SquishyAndroid">@SquishyAndroid</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://codepen.io/SquishyAndroid/pen/XjRPVV"
+              target="_blank" title="Thiết Kế Header Với Hiệu Ứng Đánh Chữ">Nguồn</a>
+          </p>
+
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Cách Tạo Bootstrap Header</h3>
+          </div> <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/header-website/Bootstrap%20Header.png"
+            alt="Cách Tạo Bootstrap Header">
+          <p class="mt-4"> Và bên dưới là dự án trên Codepen nhé!</p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="ig_design" data-slug-hash="omQXoQ" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Responsive Bootstrap 4 menu - light/dark">
+            <span>See the Pen <a href="https://codepen.io/ig_design/pen/omQXoQ">
+            Responsive Bootstrap 4 menu - light/dark</a> by Ivan Grozdic (<a href="https://codepen.io/ig_design">@ig_design</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://codepen.io/ig_design/pen/omQXoQ"
+              target="_blank" title="Cách Tạo Bootstrap Header">Nguồn</a>
+          </p>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Cách Tạo Header Background Image CSS</h3>
+          </div> <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/header-website/Header%20Background%20Image%20CSS.png"
+            alt="Cách Tạo Header Background Image CSS">
+          <p class="mt-4"> Và bên dưới là dự án trên Codepen nhé!</p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="celincky" data-slug-hash="zdqso" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="zdqso">
+            <span>See the Pen <a href="https://codepen.io/celincky/pen/zdqso">
+            zdqso</a> by Celine (<a href="https://codepen.io/celincky">@celincky</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://codepen.io/celincky/pen/zdqso"
+              target="_blank" title="Cách Tạo Header Background Image CSS">Nguồn</a>
+          </p>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Cách Tạo Header Website Với Bootstrap Carousel</h3>
+          </div> <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/header-website/Header%20Website%20V%E1%BB%9Bi%20Bootstrap%20Carousel.png"
+            alt="Cách Tạo Header Website Với Bootstrap Carousel">
+          <p class="mt-4"> Và bên dưới là dự án trên Codepen nhé!</p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="billyhalim" data-slug-hash="GZbZvO" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Website Header with Bootstrap Carousel">
+            <span>See the Pen <a href="https://codepen.io/billyhalim/pen/GZbZvO">
+            Website Header with Bootstrap Carousel</a> by Billy Halim (<a href="https://codepen.io/billyhalim">@billyhalim</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://codepen.io/billyhalim/pen/GZbZvO"
+              target="_blank" title="Cách Tạo Header Website Với Bootstrap Carousel">Nguồn</a>
+          </p>
+
+
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Cách Tạo Header Với Scroll Icon</h3>
+          </div> <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/header-website/Header%20V%E1%BB%9Bi%20Scroll%20Icon.png"
+            alt="Cách Tạo Header Với Scroll Icon">
+          <p class="mt-4"> Và bên dưới là dự án trên Codepen nhé!</p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="CodeBoomer" data-slug-hash="dXgyPq" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Scrollspy with animated scroll and focus">
+            <span>See the Pen <a href="https://codepen.io/CodeBoomer/pen/dXgyPq">
+            Scrollspy with animated scroll and focus</a> by Boomer (<a href="https://codepen.io/CodeBoomer">@CodeBoomer</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://codepen.io/CodeBoomer/pen/dXgyPq"
+              target="_blank" title="Cách Tạo Header Với Scroll Icon">Nguồn</a>
+          </p>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Cách Tạo Header Với Flexbox CSS</h3>
+          </div> <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/header-website/Header%20Flexbox%20CSS.png"
+            alt="Cách Tạo Header Với Flexbox CSS">
+          <p class="mt-4"> Và bên dưới là dự án trên Codepen nhé!</p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="anavicente" data-slug-hash="pydWeW" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Flexbox Hero Header">
+            <span>See the Pen <a href="https://codepen.io/anavicente/pen/pydWeW">
+            Flexbox Hero Header</a> by Ana Vicente (<a href="https://codepen.io/anavicente">@anavicente</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://codepen.io/anavicente/pen/pydWeW"
+              target="_blank" title="Cách Tạo Header Với Flexbox CSS">Nguồn</a>
+          </p>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Cách Tạo Video Header Javascript</h3>
+          </div> <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/header-website/Video%20Header%20Javascript.png"
+            alt="Cách Tạo Video Header Javascript">
+          <p class="mt-4"> Và bên dưới là dự án trên Codepen nhé!</p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="rizer" data-slug-hash="KaeZwL" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="video header">
+            <span>See the Pen <a href="https://codepen.io/rizer/pen/KaeZwL">
+            video header</a> by Alex (<a href="https://codepen.io/rizer">@rizer</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://codepen.io/rizer/pen/KaeZwL"
+              target="_blank" title="Cách Tạo Video Header Javascript">Nguồn</a>
+          </p>
+
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Cách Tạo Header Bằng Clip Path CSS</h3>
+          </div> <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/header-website/Header%20Clip%20Path%20CSS.png"
+            alt="Cách Tạo Header Bằng Clip Path CSS">
+          <p class="mt-4"> Và bên dưới là dự án trên Codepen nhé!</p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="grardovr" data-slug-hash="rJQWLN" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Header for landing page using clip path.">
+            <span>See the Pen <a href="https://codepen.io/grardovr/pen/rJQWLN">
+            Header for landing page using clip path.</a> by Gerardo Valencia (<a href="https://codepen.io/grardovr">@grardovr</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://codepen.io/grardovr/pen/rJQWLN"
+              target="_blank" title="Cách Tạo Header Bằng Clip Path CSS">Nguồn</a>
+          </p>
+
+
+          <div class="col-sm-12 bg-light p-2 mb-4 mt-4 shadow rounded-pill">
+            <h3 class="text-primary ml-4 title-article-size">Thiết Kế Curve Header</h3>
+          </div> <img class="img-thumbnail img-fluid shadow p-2 lazyload"
+            data-src="https://niemvuilaptrinh.ams3.cdn.digitaloceanspaces.com/header-website/Curve%20Header.png"
+            alt="Thiết Kế Curve Header">
+          <p class="mt-4"> Và bên dưới là dự án trên Codepen nhé!</p>
+          <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="linux" data-slug-hash="aEQKWP" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="curve  header">
+            <span>See the Pen <a href="https://codepen.io/linux/pen/aEQKWP">
+            curve  header</a> by Omar Dsooky (<a href="https://codepen.io/linux">@linux</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <p class="mt-4 pt-2 pb-4"> <a class="button-blog-post-article" href="https://codepen.io/linux/pen/aEQKWP"
+              target="_blank" title="Thiết Kế Curve Header">Nguồn</a>
+          </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -465,15 +442,12 @@
 
 
           <h4 class="mt-4 pt-4"> <b><i class="fa fa-tasks" aria-hidden="true"></i> Tổng kết: </b></h4>
-          <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những kiến thức tạo lazy loading hữu ích dành
+          <p>Qua đây mình mong bài viết sẽ cung cấp thêm cho bạn những ví dụ header hữu ích dành
             cho việc phát triển, thiết kế web và nếu có thắc mắc gì cứ gửi email mình sẽ phản hồi sớm nhất có thể. Rất
             mong bạn tiếp tục ủng hộ trang web để mình có thể viết nhiều bài hay hơn nữa nhé. Chúc bạn có một ngày vui
             vẻ!</p>
       </div>
       </article>
-
-
-
 
 
 
