@@ -33,7 +33,7 @@
   <meta property="fb:app_id" content="2121975281235443" />
   <meta name="keywords" content="<%-article.title%>">
   <meta name="author" content="Thái Viết Nhật">
-  <meta name="copyright" content="Niềm Vui Lập Trình" />
+  <meta name="copyright" content="NiemVuiLapTrinh" />
   <meta name="robots" content="index,follow" />
   <meta name="theme-color" content="#288cff">
   <!--Twitter-->
@@ -81,11 +81,57 @@ as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;50
     </head>
 
 <body>
-  <!--Navbar-->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top p-2"> <a class="navbar-brand" title="Niềm Vui Lập Trình" href="/">Niềm Vui Lập Trình</a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button><div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="navbar-nav ml-auto"><li class="nav-item active"> <a class="nav-link mr-5 hvr-underline-from-left" title="Trang Chủ" href="/">Trang Chủ <span class="sr-only">(current)</span></a></li><li class="nav-item active"><a class="nav-link mr-5 hvr-underline-from-left" title="Nguồn Lập Trình" href="/article/Resource/">Nguồn Lập Trình</a></li><li class="nav-item dropdown active"> <a class="nav-link dropdown-toggle mr-5 hvr-underline-from-left" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Xem Khóa Học">Ngôn Ngữ</a><div class="dropdown-menu mt-2"> <a class="dropdown-item" title="Hướng Dẫn Về HTML" href="/article/html/">HTML</a> <a class="dropdown-item" title="Hướng Dẫn Về CSS" href="/article/css/">CSS</a> <a class="dropdown-item" title="Hướng Dẫn Về Javascript" href="/article/Javascript/">Javascript</a></div></li><li class="nav-item active"><a class="nav-link hvr-underline-from-left mr-5" title="Giới Thiệu Bản Thân" href="/about">Giới Thiệu</a></li></ul></div> </nav>
+ <!--Navbar-->
+ <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top p-2"> <a class="navbar-brand"
+  title="NiemVuiLapTrinh" href="/">NiemVuiLapTrinh</a> <button class="navbar-toggler" type="button"
+  data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+  aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item active"> <a class="nav-link mr-5 hvr-underline-from-left" title="Home" href="/">Home <span class="sr-only">(current)</span></a></li>
+    <li class="nav-item active"><a class="nav-link mr-5 hvr-underline-from-left" title="Resource"
+        href="/article/Resource/">Resource</a></li>
+    <li class="nav-item dropdown active"> <a class="nav-link dropdown-toggle mr-5 hvr-underline-from-left"
+        data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"
+        title="Xem Khóa Học">Programming Language</a>
+      <div class="dropdown-menu mt-2"> <a class="dropdown-item" title="HTML"
+          href="/article/html/">HTML</a> <a class="dropdown-item" title="CSS"
+          href="/article/css/">CSS</a> <a class="dropdown-item" title="Javascript"
+          href="/article/Javascript/">Javascript</a></div>
+    </li>
+    <li class="nav-item active"><a class="nav-link hvr-underline-from-left mr-5" title="About"
+        href="/about">About</a></li>
+  </ul>
+</div>
+</nav>
 <!--Navbar-->
-  <!--Content-->
-  <div class="jumbotron jumbotron-fluid image-slider"><div class="container-fluid"><div class="row"><div class="content-image"><div class="content"><blockquote class="blockquote"><div class="mb-2 title-article-size2">Tôi không có tài năng gì cả. Tôi chỉ đam mê hiểu biết</div> <footer class="blockquote-footer text-right text-white">Albert Einstein</footer></blockquote></div></div></div></div></div>
+   <!--Content-->
+   <div class="jumbotron jumbotron-fluid image-slider">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="content-image">
+          <div class="content">
+            <blockquote class="blockquote">
+              <div class="mb-2 title-article-size2">
+                I have no talent at all. I am only passionate about understanding</div>
+              <footer class="blockquote-footer text-right text-white">Albert Einstein</footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-text text-center mt-5 ">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-8"></div>
+        <div class="col-md-4">
+          <div class="gcse-search"></div>
+        </div>
+      </div>
+    </div>
+    <h1><span class="header-content">Article</span></h1>
+  </div>
   <!--Content-->
      <!--Main Content-->
   <div class="container mt-5">
@@ -132,7 +178,7 @@ as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;50
     <div class="row">
       <div class="col-md-12">
         <div class="mb-5"></div>
-        <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Hiển Thị Bình Luận" onClick="showComments();">Hiển Thị Comment</a></p>
+        <p class="mt-4 pb-4"> <a class="button-blog-post-article" title="Comment" onClick="showComments();">Comment</a></p>
         <div class="fb-comments" data-mobile="true" data-href="https://www.niemvuilaptrinh.com/article/<%-article.slug%>" data-width="100%"
           data-numposts="5"></div>
           <div class="fb-root"></div>
@@ -173,7 +219,7 @@ as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;50
               title="Thông Tin Về HTML"
               class="btn shadow-sm rounded btn-secondary m-1 pl-2 pr-2 hvr-shrink button-article-2"><i class="fas fa-tag"></i> HTML</a> <a href="/article/Javascript/" title="Thông Tin Về Javascript"
               class="btn shadow-sm rounded btn-secondary m-1 pl-2 pr-2 hvr-shrink button-article-2"><i class="fas fa-tag"></i> Javascript</a> <a href="/article/Resource/" title="Nguồn Lập Trình"
-              class="btn shadow-sm rounded m-1 pl-2 pr-2 hvr-shrink btn-secondary button-article-2"> <i class="fas fa-tag"></i> Nguồn Lập Trình</a></h3>
+              class="btn shadow-sm rounded m-1 pl-2 pr-2 hvr-shrink btn-secondary button-article-2"> <i class="fas fa-tag"></i> Resource</a></h3>
         </div>
       </div>
     </div>
@@ -255,25 +301,33 @@ as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;50
       </script>
 
        
-       <div class="container-fluid footer">
-        <div class="row">
-          <div class="col-lg-6 col-md-6 col-xs-12">
-            <div class="content-footer">
-              <h5>Góc trả lời</h5>
-              <p>Nếu các bạn có gì thắc mắc thì liên hệ mình qua những mạng xã hội sau đây nhé!</p>
-              <ul class="social-meadia-icon">
-                <li class="social-meadia-icon-item"><a title="Trang Facebook"
-                    href="https://www.facebook.com/Ni%E1%BB%81m-Vui-L%E1%BA%ADp-Tr%C3%ACnh-103123311194043/">  <i class="fab fa-facebook-f"></i></a></li>
-                <li class="social-meadia-icon-item"><a title="Trang Twitter" href="https://twitter.com/ThiVitNht3"><i class="fab fa-twitter"></i></a></li>
-                <li class="social-meadia-icon-item"><a title="Địa Chỉ Gmail" href="mailto:niemvuilaptrinh2410@gmail.com"><i class="fab fa-google-plus-g"></i></a></li>
-              </ul>
-              <hr />
-              <p> © 2020 Copyright: Niềm Vui Lập Trình (Thái Viết Nhật).</p>
-            </div>
-          </div>
-        </div>
+<div class="container-fluid footer">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-xs-12">
+      <div class="content-footer">
+        <h3>FAQ</h3>
+        <p>If you have any questions, please contact me through the following social networks!</p>
+        <ul class="social-meadia-icon">
+          <li class="social-meadia-icon-item">
+            <a title="Trang Facebook"
+              href="https://www.facebook.com/Ni%E1%BB%81m-Vui-L%E1%BA%ADp-Tr%C3%ACnh-103123311194043/">
+              <i class="fab fa-facebook-f"></i></a>
+            </li>
+          <li class="social-meadia-icon-item">
+            <a title="Trang Twitter" href="https://twitter.com/ThiVitNht3">
+            <i class="fab fa-twitter"></i></a>
+          </li>
+          <li class="social-meadia-icon-item">
+            <a title="Địa Chỉ Gmail"
+              href="mailto:niemvuilaptrinh2410@gmail.com"><i class="fab fa-google-plus-g"></i></a>
+            </li>
+        </ul>
+        <hr />
+        <p> © 2020 Copyright: NiemVuiLapTrinh (Thai Nhat).</p>
       </div>
-
+    </div>
+  </div>
+</div>
        
       
      
