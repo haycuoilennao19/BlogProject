@@ -327,65 +327,7 @@ as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;50
   </div>
 </div>
        
-<div class="modal fade" id="adBlockerPopup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-      <div class="modal-content">
-          <div class="modal-header bg-danger text-white">
-              <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
-              <h4 class="modal-title text-center " id="myModalLabel">Please Disable Adblock</h4>
-          </div>
-          <div class="modal-body">
-              <div>
-                  <p>
-                    I apologize for this inconvenience. But to maintain the website, I hope you can turn it off adblock in browser to support Niem Vui Lap Trinh.Thanks.
-                  </p>
-                  <p>
-                    This is link how to turn off adblock in website.<br/>
-                       <a href="https://www.wikihow.com/Disable-AdBlock" target="_blank">How to Disable AdBlock</a>
-                  </p>
-              </div>
-          </div>
-          <div class="modal-footer">
-              <button type="button" class="btn btn-primary" id="adBlockerPopupRefresh">
-                Refresh
-              </button>
-          </div>
-      </div>
-  </div>
-</div>
 
-
-<script>
-$(document).ready(function(){
-(function(){
-var adBlockFlag = document.createElement('div');
-adBlockFlag.innerHTML = '&nbsp;';
-adBlockFlag.className = 'adsbox';
-$('body').append(adBlockFlag);
-window.setTimeout(function() {
-  if (adBlockFlag.offsetHeight === 0) {
-    showAdBlockPopUp();
-    $('body').addClass('adblock');
-  }
-  adBlockFlag.remove();
-}, 100);
-
-function showAdBlockPopUp(){
-    var adBlockerPopup = $('#adBlockerPopup');
-    adBlockerPopup.modal({
-        backdrop: 'static',
-        keyboard: false
-    });
-    adBlockerPopup.modal('show');
-}
-
-$(document).on('click', '#adBlockerPopupRefresh', function(){
-    location.reload();
-});
-
-})();
-});
-</script>
      
       
       <script async src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js" integrity="sha512-8qmis31OQi6hIRgvkht0s6mCOittjMa9GMqtK9hes5iEQBQE/Ca6yGE5FsW36vyipGoWQswBj/QBm2JR086Rkw==" crossorigin="anonymous"></script>
